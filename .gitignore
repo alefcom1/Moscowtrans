@@ -1,5 +1,32 @@
+# macOS
 .DS_Store
-cache/
-uploads/
+
+# Secrets / configs
 wp-config.php
+.env
+.env.*
+*.pem
+*.key
+*.crt
+
+# WordPress generated / user content
+wp-content/uploads/
+uploads/
+cache/
+wflogs/
+
+# Backups / database dumps
+*.sql
+*.sql.gz
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+backup*
+*backup*
+
+# Logs / temp
 error_log
+*.log
+*.tmp

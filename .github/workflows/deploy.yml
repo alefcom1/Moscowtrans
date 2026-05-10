@@ -1,9 +1,10 @@
-name: Deploy to REG.RU
+name: Deploy test to REG.RU
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   ftp-deploy:
@@ -13,12 +14,31 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: FTP Deploy
+      - name: Deploy test file via FTPS to REG.RU moscowtrans.ru
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
-          local-dir: ./
-          server-dir: /www/
+          port: 21
+          local-dir: ./deploy/
+          server-dir: /www/moscowtrans.ru/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            workflows/**
+            **/node_modules/**
+            wp-config.php
+            .env
+            .env.*
+            wp-content/uploads/**
+            uploads/**
+            cache/**
+            wflogs/**
+            *.sql
+            *.sql.gz
+            *.zip
+            *.tar.gz
+            .DS_Store

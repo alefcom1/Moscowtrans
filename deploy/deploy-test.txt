@@ -1,0 +1,3 @@
+Moscowtrans deployment test
+Generated locally by Massimo on 2026-05-10T17:56:55Z
+Target: /www/moscowtrans.ru/deploy-test.txt
