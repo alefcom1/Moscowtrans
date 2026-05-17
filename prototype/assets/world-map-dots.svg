@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 720"
+     width="1440" height="720" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <pattern id="ocean" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="7" cy="7" r="1.4" fill="rgba(80,140,230,0.18)"/>
+    </pattern>
+    <pattern id="land" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="7" cy="7" r="1.9" fill="rgba(110,185,255,0.88)"/>
+    </pattern>
+  </defs>
+
+  <!-- Ocean dot grid -->
+  <rect width="1440" height="720" fill="url(#ocean)"/>
+
+  <!-- North America -->
+  <path fill="url(#land)" d="M48,72 200,80 360,68 500,160 456,184 420,220 380,300 340,280 288,272 240,232 220,208 200,140 140,120Z"/>
+  <!-- South America -->
+  <path fill="url(#land)" d="M400,312 520,328 580,380 568,452 460,580 420,528 440,440 448,380 408,352 400,328Z"/>
+  <!-- Greenland -->
+  <path fill="url(#land)" d="M640,32 660,40 640,56 600,72 540,88 488,88 480,60 520,32 600,24Z"/>
+  <!-- Iceland -->
+  <ellipse fill="url(#land)" cx="648" cy="100" rx="24" ry="10"/>
+  <!-- Europe -->
+  <path fill="url(#land)" d="M672,216 688,208 684,184 720,188 752,180 760,136 792,128 824,112 832,80 792,80 760,108 720,160 680,184Z"/>
+  <!-- British Isles -->
+  <path fill="url(#land)" d="M700,160 726,156 728,132 714,128 700,136Z"/>
+  <!-- Africa -->
+  <path fill="url(#land)" d="M652,300 672,340 720,368 760,368 800,380 860,372 880,312 872,280 860,212 780,212 720,224 656,280Z"/>
+  <!-- Madagascar -->
+  <path fill="url(#land)" d="M896,408 916,420 918,458 900,458 896,432Z"/>
+  <!-- Asia (Eurasia mainland) -->
+  <path fill="url(#land)" d="M860,80 960,88 1040,72 1160,68 1260,88 1300,180 1260,228 1220,272 1160,288 1140,340 1112,300 1080,260 1040,232 1000,208 940,176 920,192 880,208 860,216 860,180 824,100Z"/>
+  <!-- Indian subcontinent -->
+  <path fill="url(#land)" d="M992,272 1040,328 1060,320 1088,272 1040,248 1008,264Z"/>
+  <!-- Sri Lanka -->
+  <circle fill="url(#land)" cx="1044" cy="338" r="7"/>
+  <!-- Japan -->
+  <path fill="url(#land)" d="M1248,228 1262,222 1282,216 1290,206 1280,192 1264,188 1244,202 1240,218Z"/>
+  <!-- Philippines -->
+  <ellipse fill="url(#land)" cx="1216" cy="330" rx="14" ry="22"/>
+  <!-- SE Asia / Indonesia -->
+  <path fill="url(#land)" d="M1100,360 1140,356 1168,348 1200,344 1240,340 1236,328 1200,332 1168,336 1140,340 1108,348Z"/>
+  <!-- Australia -->
+  <path fill="url(#land)" d="M1176,448 1208,416 1240,408 1280,416 1312,440 1340,488 1320,520 1280,512 1240,500 1184,488Z"/>
+  <!-- New Zealand -->
+  <path fill="url(#land)" d="M1388,544 1416,520 1412,504 1400,530Z"/>
+  <!-- Taiwan -->
+  <ellipse fill="url(#land)" cx="1248" cy="284" rx="8" ry="14"/>
+</svg>

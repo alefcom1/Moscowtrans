@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ремарка — Профессиональные переводы и локализация</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ════════════════ HEADER ════════════════ -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="/" class="logo" aria-label="Ремарка">
+        <picture>
+          <source srcset="assets/logo-dark.png" media="(prefers-color-scheme: dark)">
+          <img src="assets/logo-light.png" alt="Remarka" id="logo-img">
+        </picture>
+      </a>
+
+      <nav class="main-nav" aria-label="Основное меню">
+        <a href="#services">Услуги</a>
+        <a href="#industries">Отрасли</a>
+        <a href="#languages">Языки</a>
+        <a href="#pricing">Цены</a>
+        <a href="#about">О нас</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#login" class="btn-link">Войти</a>
+        <a href="#start" class="btn-primary">
+          Начать
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 5l7 7-7 7"/>
+          </svg>
+        </a>
+
+        <div class="lang-switcher">
+          <button type="button" class="lang-switcher-btn" aria-haspopup="true" aria-expanded="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span>RU</span>
+            <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="lang-dropdown" role="menu">
+            <a href="#" class="is-active" role="menuitem">🇷🇺 Русский</a>
+            <a href="https://1russian.com" role="menuitem">🇬🇧 English</a>
+            <a href="https://traduzione.tech" role="menuitem">🇮🇹 Italiano</a>
+          </div>
+        </div>
+
+        <button class="theme-toggle" type="button" aria-label="Переключить тему">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <button class="mobile-toggle" type="button" aria-label="Открыть меню">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Мобильное выдвижное меню -->
+  <div class="mobile-drawer" aria-hidden="true">
+    <nav aria-label="Мобильное меню">
+      <a href="#services">Услуги</a>
+      <a href="#industries">Отрасли</a>
+      <a href="#languages">Языки</a>
+      <a href="#pricing">Цены</a>
+      <a href="#about">О нас</a>
+    </nav>
+    <div class="drawer-actions">
+      <a href="#login" class="btn-link">Войти</a>
+      <a href="#start" class="btn-primary">
+        Начать
+        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M13 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- ════════════════ HERO ════════════════ -->
+  <div class="hero-page">
+
+    <!-- Боковая панель (заглушка) -->
+    <aside class="chat-sidebar">
+      <button class="sb-item sb-active" title="Чат">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span>Чат</span>
+      </button>
+      <button class="sb-item" title="Загрузить файл">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
+        <span>Загрузить файл</span>
+      </button>
+      <button class="sb-item" title="Калькулятор стоимости">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
+        <span>Калькулятор стоимости</span>
+      </button>
+      <button class="sb-item" title="История заказов">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        <span>История заказов</span>
+      </button>
+      <button class="sb-item" title="Конфиденциальность">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Конфиден-циальность</span>
+      </button>
+    </aside>
+
+    <!-- Основная зона -->
+    <div class="hero-main">
+
+      <!-- Окно чата -->
+      <div class="chat-window">
+
+        <div class="cw-top-bar">
+          <div class="cw-dots">
+            <span class="cw-dot cw-dot-red"></span>
+            <span class="cw-dot cw-dot-yellow"></span>
+            <span class="cw-dot cw-dot-green"></span>
+          </div>
+          <button class="cw-close" aria-label="Закрыть">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+
+        <div class="cw-body">
+
+          <!-- Панель менеджера (слева) -->
+          <div class="cw-agent-panel">
+            <div class="agent-avatar-wrap">
+              <div class="agent-avatar"><img src="assets/olga.jpg" alt="Ольга"></div>
+              <div class="agent-online-dot"></div>
+            </div>
+            <div class="agent-name">Ольга</div>
+            <div class="agent-role">Менеджер<br>бюро переводов</div>
+            <div class="agent-langs">🇷🇺 🇬🇧 🇮🇹</div>
+            <hr class="agent-sep">
+            <ul class="agent-stats">
+              <li><span class="asl">Ответ</span><span class="asv">~1 мин</span></li>
+              <li><span class="asl">Рейтинг</span><span class="asv">4.98 ★</span></li>
+              <li><span class="asl">Заказов</span><span class="asv">2 400+</span></li>
+              <li><span class="asl">Языков</span><span class="asv">20+</span></li>
+            </ul>
+            <hr class="agent-sep">
+            <svg class="waveform-svg" id="waveformSvg" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="wg" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%"   stop-color="#00A0F0" stop-opacity="0.6"/>
+                  <stop offset="50%"  stop-color="#783CF0"/>
+                  <stop offset="100%" stop-color="#00A0F0" stop-opacity="0.6"/>
+                </linearGradient>
+              </defs>
+              <path class="wp wp1" stroke="url(#wg)" stroke-width="2.5" fill="none"
+                d="M0,60 C18,35 36,85 54,60 C72,35 90,15 108,60 C126,105 144,25 162,60 C180,95 200,40 220,60"/>
+              <path class="wp wp2" stroke="url(#wg)" stroke-width="1.5" fill="none" opacity="0.45"
+                d="M0,60 C20,45 40,75 60,60 C80,45 100,28 120,60 C140,92 160,32 180,60 C200,88 210,48 220,60"/>
+              <path class="wp wp3" stroke="url(#wg)" stroke-width="1" fill="none" opacity="0.25"
+                d="M0,60 C15,50 30,70 45,60 C60,50 75,38 90,60 C105,82 120,42 135,60 C150,78 165,50 180,60 C195,70 208,54 220,60"/>
+            </svg>
+            <button class="cw-mic-btn" id="cwMicBtn" aria-label="Голосовой ввод">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                <line x1="12" y1="19" x2="12" y2="23"/>
+                <line x1="8" y1="23" x2="16" y2="23"/>
+              </svg>
+              <span class="mic-tooltip">Голосовой ввод</span>
+            </button>
+          </div>
+
+          <!-- Сообщения чата (справа) -->
+          <div class="cw-msgs-col">
+            <div class="cw-msgs">
+              <div class="msg-bub">
+                <p>Здравствуйте! 👋</p>
+                <p>Я Ольга, менеджер бюро переводов «Ремарка».</p>
+                <p>Чем могу вам помочь сегодня?</p>
+                <span class="msg-ts">10:30</span>
+              </div>
+              <div class="msg-bub">
+                <p>Вы можете общаться со мной голосовыми сообщениями.</p>
+                <span class="msg-ts">10:30</span>
+              </div>
+              <div class="msg-bub">
+                <p>Кроме русского я понимаю английский и итальянский. 🇷🇺&nbsp;🇬🇧&nbsp;🇮🇹</p>
+                <span class="msg-ts">10:30</span>
+              </div>
+              <div class="typing-dots">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="cw-input-bar">
+          <input class="cw-input" type="text" placeholder="Опишите задачу или загрузите файл..." id="cwInput">
+          <div class="cw-btns">
+            <button class="cw-btn-icon" title="Прикрепить файл">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+            </button>
+            <button class="cw-btn-icon cw-btn-voice" id="cwVoiceBtn" title="Голосовой ввод">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+            </button>
+            <button class="cw-btn-send" title="Отправить">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /hero-main -->
+
+  </div><!-- /hero-page -->
+
+  <!-- Плавающая кнопка открытия чата -->
+  <button class="chat-float-btn" id="chatFloatBtn" aria-label="Открыть чат">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+
+  <!-- ════════════════ SERVICES ════════════════ -->
+  <section class="services-section">
+      <div class="services-row">
+
+        <div class="srv-card">
+          <div class="srv-icon-wrap srv-col-violet">
+            <!-- Технический: гаечный ключ + шестерёнка -->
+            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              <circle cx="4.5" cy="4.5" r="1.5"/>
+              <line x1="4.5" y1="2" x2="4.5" y2="3"/><line x1="4.5" y1="6" x2="4.5" y2="7"/>
+              <line x1="2" y1="4.5" x2="3" y2="4.5"/><line x1="6" y1="4.5" x2="7" y2="4.5"/>
+            </svg>
+          </div>
+          <div class="srv-text">
+            <h3>Технический перевод</h3>
+            <p>Инструкции, руководства, спецификации, чертежи</p>
+          </div>
+          <div class="srv-bottom">
+            <span class="srv-price">От 400 р/стр.</span>
+            <button class="srv-arrow srv-arr-violet">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="srv-card">
+          <div class="srv-icon-wrap srv-col-violet">
+            <!-- Юридический: весы правосудия в документе DOCX -->
+            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8L14 2z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="12" y1="11" x2="12" y2="18"/>
+              <line x1="9" y1="12" x2="15" y2="12"/>
+              <path d="M9 12 L8 15 Q9 16.5 10 15 L9 12"/>
+              <path d="M15 12 L14 15 Q15 16.5 16 15 L15 12"/>
+            </svg>
+          </div>
+          <div class="srv-text">
+            <h3>Юридический перевод</h3>
+            <p>Договоры, контракты, учредительные документы</p>
+          </div>
+          <div class="srv-bottom">
+            <span class="srv-price">От 400 р/стр.</span>
+            <button class="srv-arrow srv-arr-violet">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="srv-card">
+          <div class="srv-icon-wrap srv-col-teal">
+            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div class="srv-text">
+            <h3>Медицинский перевод</h3>
+            <p>Исследования, протоколы, заключения, инструкции</p>
+          </div>
+          <div class="srv-bottom">
+            <span class="srv-price">От 400 р/стр.</span>
+            <button class="srv-arrow srv-arr-teal">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="srv-card">
+          <div class="srv-icon-wrap srv-col-blue">
+            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div class="srv-text">
+            <h3>IT перевод</h3>
+            <p>Интерфейсы, документация, локализация ПО</p>
+          </div>
+          <div class="srv-bottom">
+            <span class="srv-price">От 300 р/стр.</span>
+            <button class="srv-arrow srv-arr-blue">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="srv-card">
+          <div class="srv-icon-wrap srv-col-blue">
+            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="srv-text">
+            <h3>Перевод сайтов</h3>
+            <p>Локализация, SEO адаптация, международный рынок</p>
+          </div>
+          <div class="srv-bottom">
+            <span class="srv-price">От 300 р/стр.</span>
+            <button class="srv-arrow srv-arr-blue">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+  </section>
+
+  <!-- ════════════════ FOOTER ════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <img src="assets/logo-light.png" alt="Remarka" id="footer-logo">
+          <p>
+            Профессиональные переводы и локализация для бизнеса.
+            Работаем удалённо с клиентами по всей России и за её пределами.
+          </p>
+          <h5 class="social-title">Мы в соцсетях</h5>
+          <div class="social-links">
+            <a href="#" aria-label="ВКонтакте">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.785 16.241s.288-.032.435-.193c.135-.148.13-.426.13-.426s-.018-1.302.582-1.495c.592-.19 1.352 1.262 2.158 1.821.61.422 1.073.33 1.073.33l2.157-.031s1.128-.071.593-.964c-.044-.073-.312-.66-1.602-1.86-1.35-1.257-1.169-1.054.456-3.232.99-1.327 1.387-2.137 1.263-2.485-.118-.331-.85-.244-.85-.244l-2.434.015s-.18-.025-.314.056c-.13.079-.215.262-.215.262s-.385 1.029-.899 1.904c-1.083 1.846-1.517 1.944-1.694 1.829-.412-.267-.31-1.071-.31-1.643 0-1.787.27-2.531-.526-2.724-.265-.064-.46-.106-1.136-.113-.867-.009-1.601.003-2.016.207-.276.135-.49.435-.36.453.16.022.523.099.715.362.249.34.24 1.103.24 1.103s.143 2.097-.333 2.358c-.327.179-.775-.186-1.74-1.86-.494-.858-.868-1.807-.868-1.807s-.072-.176-.2-.27c-.155-.114-.372-.15-.372-.15l-2.314.014s-.347.01-.475.16c-.114.135-.009.413-.009.413s1.813 4.242 3.866 6.38c1.882 1.96 4.02 1.832 4.02 1.832h.967z"/></svg>
+            </a>
+            <a href="#" aria-label="Telegram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.464.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="#" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Услуги</h4>
+          <ul>
+            <li><a href="#">Технический перевод</a></li>
+            <li><a href="#">Юридический перевод</a></li>
+            <li><a href="#">Медицинский перевод</a></li>
+            <li><a href="#">IT-перевод</a></li>
+            <li><a href="#">Локализация ПО</a></li>
+            <li><a href="#">Перевод сайтов</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Решения</h4>
+          <ul>
+            <li><a href="#">По отраслям</a></li>
+            <li><a href="#">Корпоративным клиентам</a></li>
+            <li><a href="#">Языки</a></li>
+            <li><a href="#">Для документов</a></li>
+            <li><a href="#">Регионы</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Компания</h4>
+          <ul>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Кейсы</a></li>
+            <li><a href="#">Цены</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Поддержка</h4>
+          <ul>
+            <li><a href="#">Связаться с нами</a></li>
+            <li><a href="#">Часто задаваемые вопросы</a></li>
+            <li><a href="#">Стать переводчиком</a></li>
+            <li><a href="#">Оставить отзыв</a></li>
+          </ul>
+          <a href="#start" class="btn-primary">
+            Начать
+            <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2001–2026 Бюро переводов «Ремарка»</p>
+        <nav class="footer-legal" aria-label="Юридические ссылки">
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Карта сайта</a>
+        </nav>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/hero.js"></script>
+  <script>
+    // Авто-подмена логотипов под тему
+    function updateLogos() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const src = isDark ? 'assets/logo-dark.png' : 'assets/logo-light.png';
+      document.querySelectorAll('#logo-img, #footer-logo').forEach(img => img.src = src);
+    }
+    updateLogos();
+    new MutationObserver(updateLogos).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  </script>
+
+</body>
+</html>
