@@ -8,27 +8,45 @@
   const inputEl     = document.getElementById('cwInput');
   const langFlags   = document.querySelectorAll('.lang-flag');
 
-  let recognition  = null;
-  let listening    = false;
-  let currentLang  = 'ru-RU';
+  let recognition    = null;
+  let listening      = false;
+  let currentLang    = 'ru-RU';
+  let manualStop     = false;  // true когда пользователь сам нажал стоп
+  let hasFinalResult = false;  // есть ли финальный результат для авто-отправки
 
   const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
 
   if (SpeechRec) {
     recognition = new SpeechRec();
-    recognition.continuous     = false;
+    recognition.continuous     = false; // остановится сам после паузы говорящего
     recognition.interimResults = true;
 
     recognition.onresult = function (e) {
-      const transcript = Array.from(e.results)
-        .map(function (r) { return r[0].transcript; })
-        .join('');
+      const results = Array.from(e.results);
+      const transcript = results.map(function (r) { return r[0].transcript; }).join('');
       if (inputEl) inputEl.value = transcript;
+      // Фиксируем финальный результат (пауза распознана)
+      hasFinalResult = results.some(function (r) { return r.isFinal; }) && !!transcript.trim();
     };
 
-    recognition.onend  = function () { setListening(false); };
+    recognition.onend = function () {
+      setListening(false);
+      // Авто-отправка после паузы, если не было ручной остановки
+      if (!manualStop && hasFinalResult && inputEl && inputEl.value.trim()) {
+        hasFinalResult = false;
+        setTimeout(function () {
+          const sendBtn = document.querySelector('.cw-btn-send');
+          if (sendBtn && !sendBtn.disabled) sendBtn.click();
+        }, 250);
+      }
+      hasFinalResult = false;
+      manualStop = false;
+    };
+
     recognition.onerror = function (e) {
-      console.warn('[voice]', e.error);
+      if (e.error !== 'no-speech') console.warn('[voice]', e.error);
+      hasFinalResult = false;
+      manualStop = false;
       setListening(false);
     };
   }
@@ -39,7 +57,10 @@
       langFlags.forEach(function (b) { b.classList.remove('lang-flag--active'); });
       btn.classList.add('lang-flag--active');
       currentLang = btn.dataset.lang;
-      if (listening && recognition) { recognition.stop(); }
+      if (listening && recognition) {
+        manualStop = true;
+        recognition.stop();
+      }
     });
   });
 
@@ -56,9 +77,12 @@
       return;
     }
     if (listening) {
+      manualStop = true; // не авто-отправлять при ручной остановке
       recognition.stop();
     } else {
       recognition.lang = currentLang;
+      manualStop     = false;
+      hasFinalResult = false;
       setListening(true);
       try { recognition.start(); }
       catch (err) { console.warn('[voice] start error', err); setListening(false); }
