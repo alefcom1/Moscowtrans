@@ -118,38 +118,76 @@ AI-ассистент «Ольга» ведёт диалог с клиентом
 ## Плагин remarka-chat (на сервере WordPress)
 
 > Плагин разрабатывался через чат (не через Claude Code) — отсюда сложности с дизайном.
+> Файлы: `deploy/wp-content/plugins/remarka-chat/`
+
+### Архитектура AI-движка (ai.js)
+
+**IntentService** — 11 паттернов (RU/EN/IT):
+- `translation_request`, `price_request`, `file_upload`, `nda_request`, `payment_question`
+- `deadline_request`, `quality_question`, `certified_request`, `b2b_request`, `feedback`, `greeting`
+
+**SlotExtractor** — извлекает из текста:
+- Языковая пара (Russian-English 1.0×, Chinese 1.55×, Japanese 1.6×...)
+- Домен (Technical 1.3×, Legal 1.45×, Medical 1.4×, Patent 1.55×, IT 1.25×)
+- Срочность (Standard 1.0×, Express 1.7×, Superexpress 2.2×)
+- Объём (символы / страницы, 1 стр = 1800 символов с пробелами)
+
+**StateMachine** — воронка состояний:
+`GREETING → INTENT → COLLECT_LANG → COLLECT_DOMAIN → COLLECT_VOLUME → COLLECT_URGENCY → PRICING → CTA → ORDER → DONE`
+
+**ResponseBuilder** — генерирует UI-блоки: price-card, file-result, CTA-button
+
+**Текущий AI-бэкенд:** `api/gpt.php` → OpenAI (слетел с настроек). В коде `ClaudeAPI = OpenAIAPI` — алиас, но реально OpenAI.
+
+### PricingEngine (pricing.js)
+
+Тарифы: MTPE 350₽/стр · Human 750₽ · Premium 1350₽  
+Объёмные скидки: 10+ стр −5% · 50+ стр −12% · 100+ стр −15%  
+Расчёт срока: 8 стр/день (стандарт), 14 стр/день (экспресс)
+
+### Обработка файлов
+
+Клиентская сторона через CDN-библиотеки:
+- DOCX → mammoth.js (текст + подсчёт символов)
+- PDF → pdf.js
+- XLSX → SheetJS (в CSV)
+- TXT/MD/HTML — нативно
+- PPT/изображения → +15–25% OCR-наценка, ручной ввод
 
 ### Что уже работает (переиспользовать)
 
-| Модуль | Описание |
-|--------|----------|
-| `ai.js` — IntentService | 11 интентов, паттерны RU/EN/IT |
-| `ai.js` — SlotExtractor | Язык, домен, срочность, объём |
-| `ai.js` — StateMachine | Воронка: GREETING→INTENT→COLLECT→PRICING→CTA→DONE |
-| `pricing.js` — PricingEngine | Ставки MTPE/Human/Premium, мультипликаторы, скидки, сроки |
-| File Reader | TXT, DOCX, PDF, XLSX (Mammoth.js / PDF.js / SheetJS) |
-| Модули | deadline-calendar, live-quote, proactive-discount, NDA-flow, B2B-flow |
-| WordPress | CPT `remarka_order`, шорткод `[remarka_chat context="..."]`, GEO |
-| Голос | Web Speech API подключён |
-| `context.js` | Контекст-aware приветствия (на разных страницах — разный старт) |
+| Модуль | Статус |
+|--------|--------|
+| StateMachine + воронка | ✅ работает |
+| PricingEngine (расчёт + скидки + сроки) | ✅ работает |
+| SlotExtractor (язык/домен/срочность/объём) | ✅ работает |
+| File Reader (DOCX/PDF/XLSX/TXT) | ✅ работает |
+| WordPress CPT `remarka_order` + email | ✅ работает |
+| Шорткод `[remarka_chat context="..."]` | ✅ работает |
+| PageContext (контекст страницы → слоты) | ✅ работает |
+| Голосовой ввод Web Speech API (RU/EN/IT) | ✅ подключён |
+| AJAX: save_session, load_session, save_order, geo | ✅ работают |
 
-### Что сломано / недоделано (исправить)
+### Что сломано / недоделано
 
 | Проблема | Последствие |
 |----------|-------------|
-| `_callProxy()` не определена | quality-checker, complexity-meter, document-checker не работают |
-| AJAX-эндпоинты `remarka_save_review`, `remarka_save_b2b`, `remarka_track_order` не реализованы | Отзывы, B2B, трекинг не сохраняются |
-| ChatGPT слетел с настроек | Чат не отвечает |
-| Waveform без привязки к звуку | Анимация декоративная, не функциональная |
+| `_callProxy()` не определена | quality-checker, complexity-meter, document-checker падают |
+| AJAX `remarka_save_review`, `remarka_save_b2b`, `remarka_track_order` не реализованы | Отзывы, B2B, трекинг не сохраняются |
+| OpenAI API слетел | Чат не отвечает |
+| Waveform-анимация без привязки к звуку | Декоративная, не функциональная |
 | Дублирование localStorage + БД | Рассинхрон слотов при reset |
-| Формула Flesch для русского | Неточная оценка сложности |
+| Формула Flesch для русского | Неточная оценка сложности текста |
+| 28 модулей в orchestrator — большинство заглушки | Только routing работает |
 
 ### Переход на Claude API
 
-Сейчас в коде: `api/gpt.php` → OpenAI. Нужно:
-1. Заменить PHP-прокси на вызов Anthropic API
-2. Адаптировать парсинг ответа (другая структура JSON)
-3. Переписать system prompt под Claude (строже, структурированнее)
+Нужно сделать:
+1. Создать `api/claude.php` — PHP-прокси к Anthropic API (`/v1/messages`)
+2. Адаптировать парсинг ответа: у Claude `content[0].text`, не `choices[0].message.content`
+3. Обновить system prompt под Claude (строже структурированный, XML-теги)
+4. Исправить `_callProxy()` — реализовать как вызов к Claude API
+5. Убрать нотариат из интентов и слотов; добавить IT-локализацию, перевод сайтов
 
 ---
 
