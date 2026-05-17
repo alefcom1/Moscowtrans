@@ -7,7 +7,7 @@
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -104,11 +104,6 @@
   <!-- ════════════════ HERO ════════════════ -->
   <div class="hero-page">
 
-    <!-- Глобус (абсолютный фон) -->
-    <div class="globe-wrap">
-      <canvas id="globeCanvas"></canvas>
-    </div>
-
     <!-- Боковая панель (заглушка) -->
     <aside class="chat-sidebar">
       <button class="sb-item sb-active" title="Чат">
@@ -135,6 +130,11 @@
 
     <!-- Основная зона -->
     <div class="hero-main">
+
+      <!-- Глобус по центру hero-main -->
+      <div class="globe-wrap">
+        <canvas id="globeCanvas"></canvas>
+      </div>
 
       <!-- Окно чата -->
       <div class="chat-window">

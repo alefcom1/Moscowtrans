@@ -888,6 +888,7 @@ img { max-width: 100%; display: block; }
   flex-direction: column;
   padding: 20px 20px 20px 0;
   min-height: 0;
+  overflow: visible;
 }
 
 /* ── Окно чата: занимает весь hero-main, стекло ── */
@@ -898,10 +899,10 @@ img { max-width: 100%; display: block; }
   width: 100%;
   border-radius: 18px;
   border: 1px solid rgba(100,140,255,.22);
-  background: rgba(5,9,28,.68);
-  backdrop-filter: blur(32px);
-  -webkit-backdrop-filter: blur(32px);
-  box-shadow: 0 0 60px rgba(60,100,255,.12), 0 24px 60px rgba(0,0,0,.55);
+  background: rgba(5,9,28,.22);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  box-shadow: 0 0 60px rgba(60,100,255,.10), 0 24px 60px rgba(0,0,0,.35);
   display: flex;
   flex-direction: column;
   /* Анимация сворачивания */
@@ -909,9 +910,9 @@ img { max-width: 100%; display: block; }
   transition: flex .45s cubic-bezier(.4,0,.2,1), opacity .35s ease;
 }
 :root[data-theme="light"] .chat-window {
-  background: rgba(255,255,255,.72);
+  background: rgba(255,255,255,.52);
   border-color: rgba(120,60,240,.18);
-  box-shadow: 0 0 60px rgba(120,60,240,.08), 0 24px 60px rgba(0,0,0,.15);
+  box-shadow: 0 0 60px rgba(120,60,240,.06), 0 24px 60px rgba(0,0,0,.10);
 }
 .chat-window.chat-minimized {
   flex: 0;
