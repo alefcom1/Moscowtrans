@@ -539,17 +539,6 @@ img { max-width: 100%; display: block; }
 /* Star-field moved to .hero-page::before in the glass layout section */
 .hero-main::before { display: none; }
 
-/* ── Глобус ── */
-.globe-wrap {
-  position: absolute;
-  bottom: -220px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 700px;
-  height: 700px;
-  pointer-events: none;
-}
-.globe-wrap canvas { width: 100%; height: 100%; }
 
 /* ── Окно чата ── */
 .chat-window {
@@ -826,41 +815,62 @@ img { max-width: 100%; display: block; }
 
 /* ── Hero page: фиксированная высота = viewport минус шапка ── */
 .hero-page {
-  background: #040a1e;
+  background-color: #040a1e;
+  background-image: url('../assets/world-map-dots.svg');
+  background-size: cover;
+  background-position: center;
   position: relative;
-  display: flex;            /* flex-row: sidebar + hero-main */
+  display: flex;
   height: calc(100vh - var(--header-h));
   overflow: hidden;
 }
-:root[data-theme="light"] .hero-page { background: #b8d4f0; }
+:root[data-theme="light"] .hero-page {
+  background-color: #ddeeff;
+  background-image: url('../assets/world-map-dots-light.svg');
+}
 
-/* Звёздное поле (тёмная тема) */
+/* Вигнетка + синее свечение к глобусу внизу */
 .hero-page::before {
   content: '';
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: radial-gradient(rgba(255,255,255,.10) 1px, transparent 1px);
-  background-size: 32px 32px;
+  background:
+    radial-gradient(ellipse at 50% 110%, rgba(0,100,255,.35) 0%, transparent 55%),
+    radial-gradient(ellipse at 50% 50%, transparent 40%, rgba(4,10,30,.55) 100%);
   pointer-events: none;
 }
-:root[data-theme="light"] .hero-page::before { opacity: 0; }
+:root[data-theme="light"] .hero-page::before {
+  background:
+    radial-gradient(ellipse at 50% 110%, rgba(0,80,200,.18) 0%, transparent 55%);
+}
 
-/* ── Глобус: по центру viewport ── */
-.globe-wrap {
+/* Глобус-дуга внизу */
+.hero-page::after {
+  content: '';
   position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: visible;
-}
-.globe-wrap canvas {
-  position: absolute;
-  top: 50%;
+  bottom: -240px;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 900px !important;
-  height: 900px !important;
+  transform: translateX(-50%);
+  width: 1800px;
+  height: 560px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(60,160,255,.30);
+  box-shadow:
+    0 0 0 1px rgba(40,120,255,.08),
+    0 0 30px rgba(40,140,255,.22),
+    0 0 80px rgba(20,100,255,.16),
+    0 0 160px rgba(10,80,255,.09);
+  background: radial-gradient(ellipse at 50% 18%, rgba(0,100,255,.12) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 1;
+}
+:root[data-theme="light"] .hero-page::after {
+  border-color: rgba(0,80,200,.18);
+  box-shadow:
+    0 0 30px rgba(0,80,200,.12),
+    0 0 80px rgba(0,60,180,.08);
+  background: radial-gradient(ellipse at 50% 18%, rgba(0,80,200,.08) 0%, transparent 65%);
 }
 
 /* Sidebar */
@@ -886,9 +896,8 @@ img { max-width: 100%; display: block; }
   z-index: 2;
   display: flex;
   flex-direction: column;
-  padding: 20px 20px 20px 0;
+  padding: 20px 30px 20px 30px;
   min-height: 0;
-  overflow: visible;
 }
 
 /* ── Окно чата: занимает весь hero-main, стекло ── */
