@@ -101,6 +101,9 @@
     </div>
   </div>
 
+  <!-- ════════════ HERO + SERVICES — единый фоновый блок ════════════ -->
+  <div class="hero-bg-block">
+
   <!-- ════════════════ HERO ════════════════ -->
   <div class="hero-page">
 
@@ -235,11 +238,6 @@
 
   </div><!-- /hero-page -->
 
-  <!-- Плавающая кнопка открытия чата -->
-  <button class="chat-float-btn" id="chatFloatBtn" aria-label="Открыть чат">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-  </button>
-
   <!-- ════════════════ SERVICES ════════════════ -->
   <section class="services-section">
       <div class="services-row">
@@ -341,6 +339,13 @@
       </div>
   </section>
 
+  </div><!-- /hero-bg-block -->
+
+  <!-- Плавающая кнопка открытия чата (fixed, вне потока) -->
+  <button class="chat-float-btn" id="chatFloatBtn" aria-label="Открыть чат">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+
   <!-- ════════════════ FOOTER ════════════════ -->
   <footer class="site-footer">
     <div class="container">
@@ -435,6 +440,7 @@
 
   <script src="js/main.js"></script>
   <script src="js/hero.js"></script>
+  <script src="js/chat.js"></script>
   <script>
     // Авто-подмена логотипов под тему
     function updateLogos() {
