@@ -7,7 +7,7 @@
 """
 import json
 import os
-from functools import partial
+import sys
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
 
@@ -33,6 +33,18 @@ DEMO_REPLIES = [
 _demo_idx = 0
 
 
+def check_deps():
+    """Проверяет зависимости и выводит инструкции если чего-то не хватает."""
+    try:
+        import anthropic  # noqa: F401
+        return True
+    except ImportError:
+        print("\n  ⚠️  Пакет 'anthropic' не установлен.")
+        print("  Установите: pip3 install anthropic")
+        print("  Сервер запустится в demo-режиме.\n")
+        return False
+
+
 class ChatHandler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(Path(__file__).parent), **kwargs)
@@ -53,9 +65,11 @@ class ChatHandler(SimpleHTTPRequestHandler):
         messages = body.get("messages", [])
 
         api_key = os.environ.get("ANTHROPIC_API_KEY", "")
-        if api_key:
+        if api_key and HAS_ANTHROPIC:
             reply = self._claude(messages, api_key)
         else:
+            if api_key and not HAS_ANTHROPIC:
+                print("[chat] ANTHROPIC_API_KEY задан, но пакет anthropic не установлен → demo-режим")
             reply = DEMO_REPLIES[_demo_idx % len(DEMO_REPLIES)]
             _demo_idx += 1
 
@@ -66,18 +80,27 @@ class ChatHandler(SimpleHTTPRequestHandler):
         self.wfile.write(json.dumps({"text": reply}, ensure_ascii=False).encode())
 
     def _claude(self, messages, api_key):
+        import anthropic
         try:
-            import anthropic
             client = anthropic.Anthropic(api_key=api_key)
             resp = client.messages.create(
-                model="claude-sonnet-4-6",
+                model="claude-sonnet-4-5",
                 max_tokens=512,
                 system=SYSTEM_PROMPT,
                 messages=messages,
             )
-            return resp.content[0].text
+            text = resp.content[0].text
+            print(f"[chat] Claude ответил ({len(text)} символов)")
+            return text
+        except anthropic.AuthenticationError:
+            print("[chat] ОШИБКА: неверный API-ключ. Проверьте ANTHROPIC_API_KEY.", file=sys.stderr)
+            return "⚠️ Ошибка авторизации. Проверьте ANTHROPIC_API_KEY."
+        except anthropic.RateLimitError:
+            print("[chat] ОШИБКА: превышен лимит запросов.", file=sys.stderr)
+            return "Слишком много запросов, попробуйте через минуту."
         except Exception as exc:
-            return f"Извините, произошла ошибка: {exc}"
+            print(f"[chat] ОШИБКА Claude API: {exc}", file=sys.stderr)
+            return "Произошла ошибка при обращении к AI. Подробности в консоли сервера."
 
     def _cors(self):
         self.send_header("Access-Control-Allow-Origin", "*")
@@ -87,17 +110,29 @@ class ChatHandler(SimpleHTTPRequestHandler):
     def log_message(self, fmt, *args):
         msg = args[0] if args else ""
         if "/api/chat" in msg:
-            print(f"[chat] {args[1]} {args[0][:60]}")
-        elif not any(x in msg for x in [".css", ".js", ".png", ".svg", ".jpg", ".ico"]):
+            return  # логируем сами в _claude/_demo
+        if not any(x in msg for x in [".css", ".js", ".png", ".svg", ".jpg", ".ico", ".woff"]):
             super().log_message(fmt, *args)
 
 
 if __name__ == "__main__":
+    HAS_ANTHROPIC = check_deps()
+
+    api_key = os.environ.get("ANTHROPIC_API_KEY", "")
+    if api_key:
+        mode = "Claude API ✓" if HAS_ANTHROPIC else "⚠️  ключ есть, но anthropic не установлен → demo"
+    else:
+        mode = "demo-режим  (задайте ANTHROPIC_API_KEY для реального AI)"
+
     port = int(os.environ.get("PORT", 8080))
+
+    # Передаём HAS_ANTHROPIC в пространство имён обработчика
+    ChatHandler.do_POST.__globals__["HAS_ANTHROPIC"] = HAS_ANTHROPIC
+
     server = HTTPServer(("", port), ChatHandler)
-    mode = "Claude API ✓" if os.environ.get("ANTHROPIC_API_KEY") else "demo-режим (нет ANTHROPIC_API_KEY)"
-    print(f"  Сервер: http://localhost:{port}/  [{mode}]")
-    print(f"  Прототип: http://localhost:{port}/")
+    print(f"  Сервер:    http://localhost:{port}/")
+    print(f"  Режим:     {mode}")
+    print(f"  Стоп:      Ctrl+C\n")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

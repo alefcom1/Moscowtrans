@@ -872,6 +872,8 @@ img { max-width: 100%; display: block; }
   z-index: 2;
   display: flex;
   flex-direction: column;
+  align-items: stretch;      /* сбрасываем center из базовых стилей */
+  justify-content: flex-start;
   padding: 20px 30px 20px 30px;
   min-height: 0;
 }
@@ -882,6 +884,7 @@ img { max-width: 100%; display: block; }
   position: relative;
   z-index: 5;
   width: 100%;
+  max-width: none;           /* сбрасываем 780px из базовых стилей */
   border-radius: 18px;
   border: 1px solid rgba(100,140,255,.22);
   background: rgba(5,9,28,.22);
