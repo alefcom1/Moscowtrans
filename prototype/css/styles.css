@@ -780,7 +780,7 @@ img { max-width: 100%; display: block; }
 }
 
 .srv-icon-wrap {
-  width: 48px; height: 48px; border-radius: 12px;
+  width: 80px; height: 80px; border-radius: 18px;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
 }
@@ -811,8 +811,9 @@ img { max-width: 100%; display: block; }
 
 /* ── Адаптив ── */
 @media (max-width: 900px) {
-  .cw-wave-col { display: none; }
-  .hero-main { padding: 24px 20px 100px; }
+  .cw-agent-panel { width: 160px; padding: 18px 12px; }
+  .waveform-svg   { display: none; }
+  .hero-main { padding: 24px 16px; }
 }
 @media (max-width: 640px) {
   .chat-sidebar { display: none; }
@@ -846,7 +847,7 @@ img { max-width: 100%; display: block; }
 }
 :root[data-theme="light"] .hero-page::before { opacity: 0; }
 
-/* ── Глобус: абсолютный фон, покрывает весь hero-page ── */
+/* ── Глобус: по центру hero-page ── */
 .globe-wrap {
   position: absolute;
   inset: 0;
@@ -856,9 +857,9 @@ img { max-width: 100%; display: block; }
 }
 .globe-wrap canvas {
   position: absolute;
-  top: -60px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   width: 900px !important;
   height: 900px !important;
 }
@@ -885,45 +886,71 @@ img { max-width: 100%; display: block; }
 .sb-item:hover { background: rgba(255,255,255,.08); color: rgba(255,255,255,.85); }
 :root[data-theme="light"] .sb-item:hover { background: rgba(10,14,39,.07); color: rgba(10,14,39,.85); }
 
-/* Hero main */
+/* Hero main: центрирует окно чата */
 .hero-main {
   flex: 1;
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  padding: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
   min-height: 0;
 }
 
-/* ── Окно чата: стекло поверх глобуса ── */
+/* ── Окно чата: закруглённое, по центру, стекло ── */
 .chat-window {
   position: relative;
   z-index: 5;
-  max-width: none;
-  border-radius: 0;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  border-bottom: 1px solid rgba(100,140,255,.15);
-  background: rgba(5,9,28,.62);
+  width: 100%;
+  max-width: 860px;
+  border-radius: 18px;
+  border: 1px solid rgba(100,140,255,.22);
+  background: rgba(5,9,28,.65);
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
-  box-shadow: 0 8px 40px rgba(0,0,0,.45);
+  box-shadow: 0 0 60px rgba(60,100,255,.12), 0 24px 60px rgba(0,0,0,.55);
   /* Анимация сворачивания */
   max-height: 800px;
   overflow: hidden;
   transition: max-height .45s cubic-bezier(.4,0,.2,1), opacity .35s ease;
 }
 :root[data-theme="light"] .chat-window {
-  background: rgba(255,255,255,.68);
-  border-bottom-color: rgba(0,0,0,.08);
-  box-shadow: 0 8px 40px rgba(0,0,0,.12);
+  background: rgba(255,255,255,.72);
+  border-color: rgba(120,60,240,.18);
+  box-shadow: 0 0 60px rgba(120,60,240,.08), 0 24px 60px rgba(0,0,0,.15);
 }
 .chat-window.chat-minimized {
   max-height: 0;
   opacity: 0;
 }
+
+/* Панель менеджера (левая колонка) */
+.cw-agent-panel {
+  width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+  gap: 6px;
+  border-right: 1px solid rgba(100,140,255,.10);
+}
+:root[data-theme="light"] .cw-agent-panel { border-right-color: rgba(0,0,0,.06); }
+
+/* Сообщения (правая колонка) */
+.cw-msgs-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 22px;
+  gap: 10px;
+  min-width: 0;
+}
+
+/* cw-body — без внутренних отступов (вынесены в колонки) */
+.cw-body { padding: 0; }
 
 /* Элементы чата */
 .cw-top-bar   { border-bottom-color: rgba(100,140,255,.12); }
@@ -959,11 +986,12 @@ img { max-width: 100%; display: block; }
 .cw-input-bar {
   border-top-color: rgba(100,140,255,.12);
   background: rgba(0,0,0,.18);
-  border-radius: 0;
+  border-radius: 0 0 18px 18px;
 }
 :root[data-theme="light"] .cw-input-bar {
   border-top-color: rgba(0,0,0,.07);
   background: rgba(255,255,255,.38);
+  border-radius: 0 0 18px 18px;
 }
 .cw-input { color: rgba(255,255,255,.85); }
 .cw-input::placeholder { color: rgba(255,255,255,.30); }
