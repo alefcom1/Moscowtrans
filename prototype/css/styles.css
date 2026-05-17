@@ -1124,3 +1124,37 @@ img { max-width: 100%; display: block; }
 .chat-float-btn:hover {
   box-shadow: 0 6px 32px rgba(120,60,240,.7), 0 0 0 8px rgba(120,60,240,.12);
 }
+
+/* ── Right col: сообщения + строка ввода ── */
+.cw-right-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* Строка ввода только под сообщениями (не под панелью Ольги) */
+.cw-input-bar { border-radius: 0 0 18px 0; flex-shrink: 0; }
+:root[data-theme="light"] .cw-input-bar { border-radius: 0 0 18px 0; }
+
+/* Sidebar поверх фонового изображения */
+.chat-sidebar { z-index: 10; }
+
+/* Аватар Ольги +30% (70px → 91px) */
+.cw-agent-panel .agent-avatar-wrap { width: 91px; height: 91px; margin-bottom: 12px; }
+.cw-agent-panel .agent-avatar      { width: 91px; height: 91px; }
+
+/* Шрифты в карточке Ольги */
+.cw-agent-panel .agent-name { font-size: 17px; }
+.cw-agent-panel .agent-role { font-size: 13px; }
+.cw-agent-panel .asl        { font-size: 13px; }
+.cw-agent-panel .asv        { font-size: 14px; }
+
+/* Шрифт в чате */
+.msg-bub  { font-size: 15px; max-width: 72%; }
+.cw-input { font-size: 15px; }
+
+/* Кнопки ввода крупнее */
+.cw-btn-icon { width: 44px; height: 44px; }
+.cw-btn-send { width: 48px; height: 48px; }
