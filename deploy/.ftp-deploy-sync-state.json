@@ -1,0 +1,37 @@
+{
+    "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
+    "version": "1.0.0",
+    "generatedTime": 1778444281279,
+    "data": [
+        {
+            "type": "file",
+            "name": "deploy-test.txt",
+            "size": 125,
+            "hash": "ea7094eee72e30924cc137c1b95128d0f39380f25f365d3935bf182cbd138e21"
+        },
+        {
+            "type": "folder",
+            "name": "wp-content"
+        },
+        {
+            "type": "folder",
+            "name": "wp-content/themes"
+        },
+        {
+            "type": "folder",
+            "name": "wp-content/themes/perevod"
+        },
+        {
+            "type": "file",
+            "name": "wp-content/themes/perevod/footer.php",
+            "size": 22226,
+            "hash": "6411a31a41665ec615b25d675e2153b54c8956b441c97f2211c78c5eb75047d8"
+        },
+        {
+            "type": "file",
+            "name": "wp-content/themes/perevod/header.php",
+            "size": 28895,
+            "hash": "9224a9e9a6b3aaed39e7ce51028b100ff82f643d80abaf9aca754798d0234c82"
+        }
+    ]
+}
