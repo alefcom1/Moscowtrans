@@ -810,67 +810,43 @@ img { max-width: 100%; display: block; }
 }
 
 /* ================================================================
-   HERO — чат на весь экран, глобус по центру позади
+   HERO + SERVICES — единый фоновый блок
    ================================================================ */
 
-/* ── Hero page: фиксированная высота = viewport минус шапка ── */
-.hero-page {
-  background-color: #040a1e;
-  background-image: url('../assets/world-map-dots.svg');
+/* ── Общий фон: hero-bg.png покрывает и чат, и карточки ── */
+.hero-bg-block {
+  background-color: #020c1e;
+  background-image: url('../assets/hero-bg.png');
   background-size: cover;
-  background-position: center;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+:root[data-theme="light"] .hero-bg-block {
+  background-color: #c8dff4;
+  /* для светлой темы — SVG-карта, т.к. hero-bg.png тёмный */
+  background-image: url('../assets/world-map-dots-light.svg');
+}
+
+/* ── Hero page: занимает высоту viewport ── */
+.hero-page {
+  background: transparent;
   position: relative;
   display: flex;
   height: calc(100vh - var(--header-h));
   overflow: hidden;
 }
-:root[data-theme="light"] .hero-page {
-  background-color: #ddeeff;
-  background-image: url('../assets/world-map-dots-light.svg');
-}
 
-/* Вигнетка + синее свечение к глобусу внизу */
+/* Тёмный overlay для читаемости чата */
 .hero-page::before {
   content: '';
   position: absolute;
   inset: 0;
   z-index: 0;
-  background:
-    radial-gradient(ellipse at 50% 110%, rgba(0,100,255,.35) 0%, transparent 55%),
-    radial-gradient(ellipse at 50% 50%, transparent 40%, rgba(4,10,30,.55) 100%);
+  background: rgba(0, 5, 20, .28);
   pointer-events: none;
 }
 :root[data-theme="light"] .hero-page::before {
-  background:
-    radial-gradient(ellipse at 50% 110%, rgba(0,80,200,.18) 0%, transparent 55%);
-}
-
-/* Глобус-дуга внизу */
-.hero-page::after {
-  content: '';
-  position: absolute;
-  bottom: -240px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1800px;
-  height: 560px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(60,160,255,.30);
-  box-shadow:
-    0 0 0 1px rgba(40,120,255,.08),
-    0 0 30px rgba(40,140,255,.22),
-    0 0 80px rgba(20,100,255,.16),
-    0 0 160px rgba(10,80,255,.09);
-  background: radial-gradient(ellipse at 50% 18%, rgba(0,100,255,.12) 0%, transparent 65%);
-  pointer-events: none;
-  z-index: 1;
-}
-:root[data-theme="light"] .hero-page::after {
-  border-color: rgba(0,80,200,.18);
-  box-shadow:
-    0 0 30px rgba(0,80,200,.12),
-    0 0 80px rgba(0,60,180,.08);
-  background: radial-gradient(ellipse at 50% 18%, rgba(0,80,200,.08) 0%, transparent 65%);
+  background: rgba(180, 210, 240, .10);
 }
 
 /* Sidebar */
@@ -1004,25 +980,47 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
 }
 
-/* ── Услуги: отдельный блок со своим фоном ── */
+/* ── Услуги: прозрачный блок поверх hero-bg.png ── */
 .services-section {
-  background: var(--bg-secondary);
+  background: transparent;
   padding-bottom: 60px;
+  padding-top: 10px;
 }
 .services-row { padding: 20px 40px 0; }
 
 .srv-card {
-  background: var(--bg-glass);
-  border: 1px solid var(--border-glass);
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  background: rgba(5,12,35,.55);
+  border: 1px solid rgba(80,140,255,.20);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 .srv-card:hover {
-  background: var(--bg-glass-strong);
-  border-color: rgba(120,60,240,.30);
+  background: rgba(10,20,55,.70);
+  border-color: rgba(120,60,240,.35);
 }
-.srv-text h3 { color: var(--text-primary); }
-.srv-text p  { color: var(--text-muted); }
+:root[data-theme="light"] .srv-card {
+  background: rgba(255,255,255,.72);
+  border-color: rgba(80,120,220,.18);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+:root[data-theme="light"] .srv-card:hover {
+  background: rgba(255,255,255,.88);
+  border-color: rgba(120,60,240,.28);
+}
+.srv-text h3 { color: #e8f0ff; }
+.srv-text p  { color: rgba(200,220,255,.65); }
+:root[data-theme="light"] .srv-text h3 { color: var(--text-primary); }
+:root[data-theme="light"] .srv-text p  { color: var(--text-muted); }
+
+/* ── Пузырь пользователя ── */
+.msg-bub--user {
+  align-self: flex-end;
+  background: rgba(0,130,240,.35) !important;
+  border-color: rgba(0,160,255,.35) !important;
+  color: #fff !important;
+  text-align: right;
+}
 
 /* Элементы чата */
 .cw-top-bar   { border-bottom-color: rgba(100,140,255,.12); }
