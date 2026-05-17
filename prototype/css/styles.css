@@ -1151,8 +1151,9 @@ img { max-width: 100%; display: block; }
 .cw-agent-panel .asl        { font-size: 13px; }
 .cw-agent-panel .asv        { font-size: 14px; }
 
-/* Шрифт в чате */
-.msg-bub  { font-size: 15px; max-width: 72%; }
+/* Шрифт в чате; ширина пузыря — по содержимому */
+.cw-msgs  { align-items: flex-start; }
+.msg-bub  { font-size: 15px; }
 .cw-input { font-size: 15px; }
 
 /* Кнопки ввода крупнее */
