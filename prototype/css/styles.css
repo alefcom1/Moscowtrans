@@ -822,9 +822,10 @@ img { max-width: 100%; display: block; }
   background-repeat: no-repeat;
 }
 :root[data-theme="light"] .hero-bg-block {
-  background-color: #c8dff4;
-  /* для светлой темы — SVG-карта, т.к. hero-bg.png тёмный */
-  background-image: url('../assets/world-map-dots-light.svg');
+  background-color: #ddeeff;
+  background-image: url('../assets/hero-bg-light.png');
+  background-size: cover;
+  background-position: center center;
 }
 
 /* ── Hero page: занимает высоту viewport ── */
@@ -846,7 +847,29 @@ img { max-width: 100%; display: block; }
   pointer-events: none;
 }
 :root[data-theme="light"] .hero-page::before {
-  background: rgba(235,242,255,.55);
+  background:
+    radial-gradient(ellipse 55% 70% at 15% 40%,  rgba(120,60,240,.14) 0%, transparent 65%),
+    radial-gradient(ellipse 45% 55% at 85% 25%,  rgba(0,160,240,.12)  0%, transparent 65%),
+    radial-gradient(ellipse 40% 50% at 55% 85%,  rgba(80,40,200,.09)  0%, transparent 60%),
+    rgba(220,235,255,.38);
+}
+
+/* Дополнительный слой — плавающие орбы (только светлая тема) */
+:root[data-theme="light"] .hero-page::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle 280px at 72% 60%, rgba(120,60,240,.10) 0%, transparent 70%),
+    radial-gradient(circle 200px at 28% 75%, rgba(0,160,240,.09)  0%, transparent 70%);
+  animation: lightOrbs 12s ease-in-out infinite alternate;
+}
+@keyframes lightOrbs {
+  0%   { opacity: .7; transform: scale(1)   translateY(0); }
+  50%  { opacity: 1;  transform: scale(1.06) translateY(-12px); }
+  100% { opacity: .8; transform: scale(.97) translateY(6px); }
 }
 
 /* Sidebar */
@@ -1177,11 +1200,30 @@ img { max-width: 100%; display: block; }
 .sec-link { font-size: 14px; color: #a78bfa; text-decoration: none; white-space: nowrap; font-family: var(--font-sans); }
 .sec-link:hover { color: #c4b5fd; }
 
-:root[data-theme="light"] .sec { background: #f2f5fd; }
-:root[data-theme="light"] .sec--alt { background: #fff; }
+:root[data-theme="light"] .sec {
+  background: linear-gradient(160deg, #f0f4ff 0%, #f6f0ff 50%, #f0f5ff 100%);
+}
+:root[data-theme="light"] .sec--alt {
+  background: #fff;
+  box-shadow: 0 -1px 0 0 rgba(120,60,240,.08), 0 1px 0 0 rgba(120,60,240,.08);
+}
 :root[data-theme="light"] .sec-title { color: #0A0E27; }
 :root[data-theme="light"] .sec-sub   { color: rgba(10,14,39,.50); }
 :root[data-theme="light"] .sec-link  { color: #6d28d9; }
+
+/* Градиентная плашка над заголовком блока в светлой теме */
+:root[data-theme="light"] .sec-head--center::before {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 4px;
+  border-radius: 100px;
+  background: linear-gradient(90deg, #00A0F0, #783CF0);
+  margin: 0 auto 20px;
+}
+/* Для тех блоков где уже есть отдельный элемент сверху — убираем дублирование */
+:root[data-theme="light"] .sec-langs .sec-head--center::before,
+:root[data-theme="light"] .sec-reviews .sec-head--center::before { display: none; }
 
 /* ================================================================
    LANGUAGES
@@ -1370,8 +1412,15 @@ img { max-width: 100%; display: block; }
 .btn-primary:hover { box-shadow: 0 6px 26px rgba(120,60,240,.6); transform: translateY(-2px); }
 .btn-outline { background: rgba(255,255,255,.08); color: rgba(255,255,255,.82); border: 1px solid rgba(255,255,255,.20); }
 .btn-outline:hover { background: rgba(255,255,255,.14); color: #fff; }
-:root[data-theme="light"] .sec-cta { background: linear-gradient(135deg,#e8f0ff 0%,#f0e8ff 50%,#e8f0ff 100%); }
-:root[data-theme="light"] .sec-cta::before { background: radial-gradient(ellipse 70% 80% at 50% 120%,rgba(120,60,240,.12) 0%,transparent 70%); }
+:root[data-theme="light"] .sec-cta {
+  background: linear-gradient(135deg, #dce8ff 0%, #ede3ff 40%, #d8eeff 80%, #e6d8ff 100%);
+}
+:root[data-theme="light"] .sec-cta::before {
+  background:
+    radial-gradient(ellipse 60% 70% at 20% 50%,  rgba(120,60,240,.16) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 60% at 80% 30%,  rgba(0,160,240,.14)  0%, transparent 65%),
+    radial-gradient(ellipse 70% 80% at 50% 120%, rgba(120,60,240,.10) 0%, transparent 70%);
+}
 :root[data-theme="light"] .cta-title { color: #0A0E27; }
 :root[data-theme="light"] .cta-sub   { color: rgba(10,14,39,.58); }
 :root[data-theme="light"] .btn-outline { background: rgba(10,14,39,.06); color: rgba(10,14,39,.72); border-color: rgba(10,14,39,.18); }
