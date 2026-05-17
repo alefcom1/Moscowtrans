@@ -6,17 +6,18 @@
   const cwMicBtn    = document.getElementById('cwMicBtn');
   const cwVoiceBtn  = document.getElementById('cwVoiceBtn');
   const inputEl     = document.getElementById('cwInput');
+  const langFlags   = document.querySelectorAll('.lang-flag');
 
-  let recognition = null;
+  let recognition  = null;
   let listening    = false;
+  let currentLang  = 'ru-RU';
 
   const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
 
   if (SpeechRec) {
     recognition = new SpeechRec();
-    recognition.lang            = 'ru-RU';
-    recognition.continuous      = false;
-    recognition.interimResults  = true;
+    recognition.continuous     = false;
+    recognition.interimResults = true;
 
     recognition.onresult = function (e) {
       const transcript = Array.from(e.results)
@@ -25,21 +26,28 @@
       if (inputEl) inputEl.value = transcript;
     };
 
-    recognition.onend = function () {
-      setListening(false);
-    };
-
+    recognition.onend  = function () { setListening(false); };
     recognition.onerror = function (e) {
       console.warn('[voice]', e.error);
       setListening(false);
     };
   }
 
+  /* Выбор языка по флагу */
+  langFlags.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      langFlags.forEach(function (b) { b.classList.remove('lang-flag--active'); });
+      btn.classList.add('lang-flag--active');
+      currentLang = btn.dataset.lang;
+      if (listening && recognition) { recognition.stop(); }
+    });
+  });
+
   function setListening(val) {
     listening = val;
-    if (waveformSvg) waveformSvg.classList.toggle('active',    val);
-    if (cwMicBtn)    cwMicBtn.classList.toggle('listening',     val);
-    if (cwVoiceBtn)  cwVoiceBtn.classList.toggle('listening',   val);
+    if (waveformSvg) waveformSvg.classList.toggle('active',   val);
+    if (cwMicBtn)    cwMicBtn.classList.toggle('listening',    val);
+    if (cwVoiceBtn)  cwVoiceBtn.classList.toggle('listening',  val);
   }
 
   function toggleVoice() {
@@ -50,6 +58,7 @@
     if (listening) {
       recognition.stop();
     } else {
+      recognition.lang = currentLang;
       setListening(true);
       try { recognition.start(); }
       catch (err) { console.warn('[voice] start error', err); setListening(false); }

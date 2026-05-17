@@ -1363,3 +1363,15 @@ img { max-width: 100%; display: block; }
 .cw-msgs-col::-webkit-scrollbar-thumb:hover { background: rgba(120,60,240,.70); }
 :root[data-theme="light"] .cw-msgs-col::-webkit-scrollbar-thumb { background: rgba(120,60,240,.25); }
 :root[data-theme="light"] .cw-msgs-col::-webkit-scrollbar-thumb:hover { background: rgba(120,60,240,.50); }
+
+/* ── Флаги языков (кнопки выбора языка распознавания) ── */
+.agent-langs { display: flex; gap: 6px; margin: 4px 0 2px; }
+.lang-flag {
+  background: none; border: none; cursor: pointer;
+  font-size: 20px; line-height: 1; padding: 4px 5px;
+  border-radius: 8px; opacity: 0.45;
+  transition: opacity .18s ease, transform .18s ease, background .18s ease;
+}
+.lang-flag:hover { opacity: 0.85; transform: scale(1.15); }
+.lang-flag--active { opacity: 1; background: rgba(120,60,240,.20); transform: scale(1.1); }
+:root[data-theme="light"] .lang-flag--active { background: rgba(120,60,240,.12); }
