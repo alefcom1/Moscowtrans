@@ -92,7 +92,7 @@ class RmqMobWalker extends Walker_Nav_Menu {
 <head>
 <meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="initial-scale=1.0, width=device-width">
-<link href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon.png" rel="icon" type="image/png">
+<link href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon.svg" rel="icon" type="image/svg+xml">
 <meta name="robots" content="index, follow">
 <meta name="ai" content="allow">
 <meta name="uri" content="<?php echo esc_attr( $_SERVER['REQUEST_URI'] ); ?>">
