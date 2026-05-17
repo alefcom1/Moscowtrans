@@ -536,15 +536,8 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
 }
 
-/* Star-field dot pattern */
-.hero-main::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(rgba(255,255,255,.12) 1px, transparent 1px);
-  background-size: 32px 32px;
-  pointer-events: none;
-}
+/* Star-field moved to .hero-page::before in the glass layout section */
+.hero-main::before { display: none; }
 
 /* ── Глобус ── */
 .globe-wrap {
@@ -824,4 +817,240 @@ img { max-width: 100%; display: block; }
 @media (max-width: 640px) {
   .chat-sidebar { display: none; }
   .services-row { padding: 0 16px; }
+}
+
+/* ================================================================
+   HERO + SERVICES — стеклянный слой над глобусом
+   ================================================================ */
+
+/* ── Hero page: тёмный фон, глобус абсолютно позиционирован ── */
+.hero-page {
+  background: #040a1e;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: calc(100vh - var(--header-h));
+}
+:root[data-theme="light"] .hero-page { background: #b8d4f0; }
+
+/* Звёздное поле (тёмная тема) */
+.hero-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: radial-gradient(rgba(255,255,255,.10) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+:root[data-theme="light"] .hero-page::before { opacity: 0; }
+
+/* ── Глобус: абсолютный фон, покрывает весь hero-page ── */
+.globe-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+.globe-wrap canvas {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px !important;
+  height: 900px !important;
+}
+
+/* ── Hero row: sidebar + main ── */
+.hero-row {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex: none;
+}
+
+/* Sidebar */
+.chat-sidebar {
+  background: rgba(4,10,30,.45);
+  border-right-color: rgba(100,140,255,.12);
+}
+:root[data-theme="light"] .chat-sidebar {
+  background: rgba(255,255,255,.30);
+  border-right-color: rgba(0,0,0,.08);
+}
+.sb-item { color: rgba(255,255,255,.40); }
+:root[data-theme="light"] .sb-item { color: rgba(10,14,39,.45); }
+.sb-item:hover { background: rgba(255,255,255,.08); color: rgba(255,255,255,.85); }
+:root[data-theme="light"] .sb-item:hover { background: rgba(10,14,39,.07); color: rgba(10,14,39,.85); }
+
+/* Hero main */
+.hero-main {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  min-height: 0;
+}
+
+/* ── Окно чата: стекло поверх глобуса ── */
+.chat-window {
+  position: relative;
+  z-index: 5;
+  max-width: none;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid rgba(100,140,255,.15);
+  background: rgba(5,9,28,.62);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  box-shadow: 0 8px 40px rgba(0,0,0,.45);
+  /* Анимация сворачивания */
+  max-height: 800px;
+  overflow: hidden;
+  transition: max-height .45s cubic-bezier(.4,0,.2,1), opacity .35s ease;
+}
+:root[data-theme="light"] .chat-window {
+  background: rgba(255,255,255,.68);
+  border-bottom-color: rgba(0,0,0,.08);
+  box-shadow: 0 8px 40px rgba(0,0,0,.12);
+}
+.chat-window.chat-minimized {
+  max-height: 0;
+  opacity: 0;
+}
+
+/* Элементы чата */
+.cw-top-bar   { border-bottom-color: rgba(100,140,255,.12); }
+:root[data-theme="light"] .cw-top-bar { border-bottom-color: rgba(0,0,0,.07); }
+.cw-close     { color: rgba(255,255,255,.35); }
+:root[data-theme="light"] .cw-close { color: rgba(10,14,39,.35); }
+.cw-close:hover { color: rgba(255,255,255,.85); background: rgba(255,255,255,.08); }
+:root[data-theme="light"] .cw-close:hover { color: rgba(10,14,39,.8); background: rgba(10,14,39,.06); }
+
+.agent-online-dot { border-color: rgba(5,9,28,.9); }
+:root[data-theme="light"] .agent-online-dot { border-color: rgba(255,255,255,.9); }
+.agent-name   { color: #fff; }
+:root[data-theme="light"] .agent-name { color: #0A0E27; }
+.agent-role   { color: rgba(255,255,255,.45); }
+:root[data-theme="light"] .agent-role { color: rgba(10,14,39,.5); }
+
+.msg-bub {
+  background: rgba(255,255,255,.07);
+  border-color: rgba(255,255,255,.10);
+  color: rgba(255,255,255,.9);
+}
+:root[data-theme="light"] .msg-bub {
+  background: rgba(10,14,39,.05);
+  border-color: rgba(10,14,39,.08);
+  color: #0A0E27;
+}
+.msg-ts { color: rgba(255,255,255,.30); }
+:root[data-theme="light"] .msg-ts { color: rgba(10,14,39,.40); }
+
+.typing-dots { background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.10); }
+:root[data-theme="light"] .typing-dots { background: rgba(10,14,39,.05); border-color: rgba(10,14,39,.08); }
+
+.cw-input-bar {
+  border-top-color: rgba(100,140,255,.12);
+  background: rgba(0,0,0,.18);
+  border-radius: 0;
+}
+:root[data-theme="light"] .cw-input-bar {
+  border-top-color: rgba(0,0,0,.07);
+  background: rgba(255,255,255,.38);
+}
+.cw-input { color: rgba(255,255,255,.85); }
+.cw-input::placeholder { color: rgba(255,255,255,.30); }
+:root[data-theme="light"] .cw-input { color: #0A0E27; }
+:root[data-theme="light"] .cw-input::placeholder { color: rgba(10,14,39,.40); }
+
+.cw-btn-icon { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.10); color: rgba(255,255,255,.45); }
+.cw-btn-icon:hover { background: rgba(255,255,255,.12); color: rgba(255,255,255,.9); }
+:root[data-theme="light"] .cw-btn-icon { background: rgba(10,14,39,.05); border-color: rgba(10,14,39,.10); color: rgba(10,14,39,.50); }
+:root[data-theme="light"] .cw-btn-icon:hover { background: rgba(10,14,39,.09); color: rgba(10,14,39,.9); }
+
+/* ── Услуги: прозрачный раздел над глобусом ── */
+.services-section {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+  padding-bottom: 60px;
+}
+.services-row { padding: 20px 40px 0; }
+
+.srv-card {
+  background: rgba(5,9,28,.55);
+  border: 1px solid rgba(100,140,255,.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.srv-card:hover {
+  background: rgba(10,16,50,.72);
+  border-color: rgba(120,60,240,.40);
+}
+:root[data-theme="light"] .srv-card {
+  background: rgba(255,255,255,.58);
+  border-color: rgba(0,0,0,.08);
+}
+:root[data-theme="light"] .srv-card:hover {
+  background: rgba(255,255,255,.78);
+  border-color: rgba(120,60,240,.28);
+}
+.srv-text h3 { color: #fff; }
+:root[data-theme="light"] .srv-text h3 { color: #0A0E27; }
+.srv-text p  { color: rgba(255,255,255,.45); }
+:root[data-theme="light"] .srv-text p { color: rgba(10,14,39,.55); }
+
+/* Нижняя строка карточки: цена + стрелка */
+.srv-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 4px;
+}
+.srv-price {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: rgba(160,120,255,.95);
+  font-family: var(--font-sans);
+  letter-spacing: .01em;
+}
+:root[data-theme="light"] .srv-price { color: rgba(90,40,200,.85); }
+
+/* ── Плавающая кнопка чата ── */
+.chat-float-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 1000;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00A0F0 0%, #783CF0 100%);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 24px rgba(120,60,240,.5);
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(.8) translateY(8px);
+  transition: opacity .3s ease, transform .3s ease, box-shadow .3s ease;
+}
+.chat-float-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1) translateY(0);
+}
+.chat-float-btn:hover {
+  box-shadow: 0 6px 32px rgba(120,60,240,.7), 0 0 0 8px rgba(120,60,240,.12);
 }
