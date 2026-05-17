@@ -64,7 +64,7 @@ img { max-width: 100%; display: block; }
   flex-shrink: 0;
 }
 .logo img {
-  height: 38px;
+  height: 48px;
   width: auto;
 }
 
@@ -430,7 +430,7 @@ img { max-width: 100%; display: block; }
     display: none;
   }
   .mobile-toggle { display: inline-flex; }
-  .logo img { height: 32px; }
+  .logo img { height: 40px; }
 
   .footer-grid {
     grid-template-columns: 1fr 1fr;
