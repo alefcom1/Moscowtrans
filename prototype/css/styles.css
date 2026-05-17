@@ -1138,8 +1138,10 @@ img { max-width: 100%; display: block; }
 .cw-input-bar { border-radius: 0 0 18px 0; flex-shrink: 0; }
 :root[data-theme="light"] .cw-input-bar { border-radius: 0 0 18px 0; }
 
-/* Sidebar поверх фонового изображения */
-.chat-sidebar { z-index: 10; }
+/* Sidebar поверх фонового изображения; текст и иконки +30% */
+.chat-sidebar { z-index: 10; width: 198px; }
+.chat-sidebar svg { width: 36px; height: 36px; }
+.sb-item { font-size: 14px; width: 177px; padding: 14px 10px; }
 
 /* Аватар Ольги +30% (70px → 91px) */
 .cw-agent-panel .agent-avatar-wrap { width: 91px; height: 91px; margin-bottom: 12px; }
