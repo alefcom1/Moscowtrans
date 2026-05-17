@@ -18,8 +18,8 @@
 
       <a href="/" class="logo" aria-label="Ремарка">
         <picture>
-          <source srcset="assets/logo-dark.png" media="(prefers-color-scheme: dark)">
-          <img src="assets/logo-light.png" alt="Remarka" id="logo-img">
+          <source srcset="assets/logo-light.png" media="(prefers-color-scheme: dark)">
+          <img src="assets/logo-dark.png" alt="Remarka" id="logo-img">
         </picture>
       </a>
 
@@ -442,7 +442,7 @@
     // Авто-подмена логотипов под тему
     function updateLogos() {
       const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      const src = isDark ? 'assets/logo-dark.png' : 'assets/logo-light.png';
+      const src = isDark ? 'assets/logo-light.png' : 'assets/logo-dark.png';
       document.querySelectorAll('#logo-img, #footer-logo').forEach(img => img.src = src);
     }
     updateLogos();
