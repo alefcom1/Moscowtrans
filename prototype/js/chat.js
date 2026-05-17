@@ -10,6 +10,41 @@
 
   const history = [];
 
+  /* ── Приветственные сообщения: появляются по одному ── */
+  (function showGreetings() {
+    const greetings = Array.from(msgsEl.querySelectorAll('.msg-bub[data-greeting]'));
+    if (!greetings.length) return;
+
+    /* Скрываем все сразу */
+    greetings.forEach(function (el) { el.style.visibility = 'hidden'; el.style.position = 'absolute'; });
+
+    let idx = 0;
+
+    function next() {
+      if (idx >= greetings.length) return;
+      const el = greetings[idx];
+      const charCount = (el.textContent || '').trim().length;
+      const typingMs  = Math.max(700, Math.min(charCount * 18, 2200));
+
+      const dot = appendTyping();
+
+      setTimeout(function () {
+        dot.remove();
+        /* Показываем сообщение */
+        el.style.position = '';
+        el.style.visibility = '';
+        el.removeAttribute('data-greeting');
+        el.classList.add('msg-bub--entering');
+        scrollBottom();
+        idx++;
+        if (idx < greetings.length) setTimeout(next, 380);
+      }, typingMs);
+    }
+
+    /* Первое сообщение — после небольшой паузы */
+    setTimeout(next, 500);
+  }());
+
   /* ── Helpers ── */
   function ts() {
     return new Date().toLocaleTimeString('ru', { hour: '2-digit', minute: '2-digit' });

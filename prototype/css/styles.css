@@ -880,14 +880,25 @@ img { max-width: 100%; display: block; }
   border-right-color: rgba(100,140,255,.12);
 }
 :root[data-theme="light"] .chat-sidebar {
-  background: rgba(248,250,252,.94);
-  border-right-color: rgba(120,60,240,.10);
+  background: linear-gradient(175deg,
+    rgba(228,236,255,.97) 0%,
+    rgba(236,224,255,.97) 50%,
+    rgba(220,235,255,.97) 100%);
+  border-right: 1px solid rgba(120,60,240,.16);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  box-shadow: inset -1px 0 0 rgba(255,255,255,.60);
   z-index: 10;
 }
 .sb-item { color: rgba(255,255,255,.40); }
-:root[data-theme="light"] .sb-item { color: rgba(10,14,39,.45); }
+:root[data-theme="light"] .sb-item { color: rgba(70,40,160,.52); }
 .sb-item:hover { background: rgba(255,255,255,.08); color: rgba(255,255,255,.85); }
-:root[data-theme="light"] .sb-item:hover { background: rgba(10,14,39,.07); color: rgba(10,14,39,.85); }
+:root[data-theme="light"] .sb-item:hover { background: rgba(120,60,240,.10); color: rgba(70,40,160,.90); }
+:root[data-theme="light"] .sb-item.sb-active {
+  background: linear-gradient(135deg, rgba(120,60,240,.22), rgba(0,160,240,.14));
+  color: #5b2bd0;
+  box-shadow: 0 2px 12px rgba(120,60,240,.15);
+}
 
 /* ── Hero main: заполняет оставшееся пространство ── */
 .hero-main {
@@ -1041,6 +1052,13 @@ img { max-width: 100%; display: block; }
 .srv-text p  { color: rgba(200,220,255,.65); }
 :root[data-theme="light"] .srv-text h3 { color: var(--text-primary); }
 :root[data-theme="light"] .srv-text p  { color: var(--text-muted); }
+
+/* ── Анимация появления пузыря ── */
+@keyframes bubbleIn {
+  from { opacity: 0; transform: translateY(10px) scale(.97); }
+  to   { opacity: 1; transform: translateY(0)    scale(1);   }
+}
+.msg-bub--entering { animation: bubbleIn .42s cubic-bezier(.22,1,.36,1) forwards; }
 
 /* ── Пузырь пользователя ── */
 .msg-bub--user {
@@ -1616,4 +1634,45 @@ img { max-width: 100%; display: block; }
   .faq-body { padding: 0 16px 15px; }
   .translators-grid { gap: 14px; }
   .cmp-badge { display: none; }
+}
+
+/* ================================================================
+   SCROLL ANIMATIONS  (управляются animations.js)
+   ================================================================ */
+
+/* Базовое скрытое состояние — только когда JS загружен */
+body.js-loaded .anim-fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .55s ease, transform .55s cubic-bezier(.22,1,.36,1);
+  will-change: opacity, transform;
+}
+body.js-loaded .anim-scale {
+  opacity: 0;
+  transform: scale(.88);
+  transition: opacity .55s ease, transform .55s cubic-bezier(.34,1.56,.64,1);
+  will-change: opacity, transform;
+}
+body.js-loaded .anim-fade {
+  opacity: 0;
+  transition: opacity .65s ease;
+  will-change: opacity;
+}
+
+/* Видимое состояние */
+body.js-loaded .anim-fade-up.is-visible,
+body.js-loaded .anim-scale.is-visible,
+body.js-loaded .anim-fade.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Уважаем prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  body.js-loaded .anim-fade-up,
+  body.js-loaded .anim-scale,
+  body.js-loaded .anim-fade {
+    transition: opacity .1s ease !important;
+    transform: none !important;
+  }
 }
