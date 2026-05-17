@@ -109,9 +109,6 @@
       <canvas id="globeCanvas"></canvas>
     </div>
 
-    <!-- Hero row: боковая панель + чат -->
-    <div class="hero-row">
-
     <!-- Боковая панель (заглушка) -->
     <aside class="chat-sidebar">
       <button class="sb-item sb-active" title="Чат">
@@ -162,7 +159,16 @@
               <div class="agent-online-dot"></div>
             </div>
             <div class="agent-name">Ольга</div>
-            <div class="agent-role">Менеджер бюро переводов</div>
+            <div class="agent-role">Менеджер<br>бюро переводов</div>
+            <div class="agent-langs">🇷🇺 🇬🇧 🇮🇹</div>
+            <hr class="agent-sep">
+            <ul class="agent-stats">
+              <li><span class="asl">Ответ</span><span class="asv">~1 мин</span></li>
+              <li><span class="asl">Рейтинг</span><span class="asv">4.98 ★</span></li>
+              <li><span class="asl">Заказов</span><span class="asv">2 400+</span></li>
+              <li><span class="asl">Языков</span><span class="asv">20+</span></li>
+            </ul>
+            <hr class="agent-sep">
             <svg class="waveform-svg" id="waveformSvg" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="wg" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -231,10 +237,16 @@
 
       </div>
     </div><!-- /hero-main -->
-    </div><!-- /hero-row -->
 
-    <!-- ════════════════ SERVICES ════════════════ -->
-    <section class="services-section">
+  </div><!-- /hero-page -->
+
+  <!-- Плавающая кнопка открытия чата -->
+  <button class="chat-float-btn" id="chatFloatBtn" aria-label="Открыть чат">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+
+  <!-- ════════════════ SERVICES ════════════════ -->
+  <section class="services-section">
       <div class="services-row">
 
         <div class="srv-card">
@@ -332,14 +344,7 @@
         </div>
 
       </div>
-    </section>
-
-    <!-- Плавающая кнопка открытия чата -->
-    <button class="chat-float-btn" id="chatFloatBtn" aria-label="Открыть чат">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-    </button>
-
-  </div><!-- /hero-page -->
+  </section>
 
   <!-- ════════════════ FOOTER ════════════════ -->
   <footer class="site-footer">

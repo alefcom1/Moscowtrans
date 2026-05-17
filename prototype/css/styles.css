@@ -821,17 +821,16 @@ img { max-width: 100%; display: block; }
 }
 
 /* ================================================================
-   HERO + SERVICES — стеклянный слой над глобусом
+   HERO — чат на весь экран, глобус по центру позади
    ================================================================ */
 
-/* ── Hero page: тёмный фон, глобус абсолютно позиционирован ── */
+/* ── Hero page: фиксированная высота = viewport минус шапка ── */
 .hero-page {
   background: #040a1e;
   position: relative;
-  display: flex;
-  flex-direction: column;
+  display: flex;            /* flex-row: sidebar + hero-main */
+  height: calc(100vh - var(--header-h));
   overflow: hidden;
-  min-height: calc(100vh - var(--header-h));
 }
 :root[data-theme="light"] .hero-page { background: #b8d4f0; }
 
@@ -847,7 +846,7 @@ img { max-width: 100%; display: block; }
 }
 :root[data-theme="light"] .hero-page::before { opacity: 0; }
 
-/* ── Глобус: по центру hero-page ── */
+/* ── Глобус: по центру viewport ── */
 .globe-wrap {
   position: absolute;
   inset: 0;
@@ -864,16 +863,10 @@ img { max-width: 100%; display: block; }
   height: 900px !important;
 }
 
-/* ── Hero row: sidebar + main ── */
-.hero-row {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex: none;
-}
-
 /* Sidebar */
 .chat-sidebar {
+  position: relative;
+  z-index: 2;
   background: rgba(4,10,30,.45);
   border-right-color: rgba(100,140,255,.12);
 }
@@ -886,35 +879,34 @@ img { max-width: 100%; display: block; }
 .sb-item:hover { background: rgba(255,255,255,.08); color: rgba(255,255,255,.85); }
 :root[data-theme="light"] .sb-item:hover { background: rgba(10,14,39,.07); color: rgba(10,14,39,.85); }
 
-/* Hero main: центрирует окно чата */
+/* ── Hero main: заполняет оставшееся пространство ── */
 .hero-main {
   flex: 1;
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 24px;
+  padding: 20px 20px 20px 0;
   min-height: 0;
 }
 
-/* ── Окно чата: закруглённое, по центру, стекло ── */
+/* ── Окно чата: занимает весь hero-main, стекло ── */
 .chat-window {
+  flex: 1;
   position: relative;
   z-index: 5;
   width: 100%;
-  max-width: 860px;
   border-radius: 18px;
   border: 1px solid rgba(100,140,255,.22);
-  background: rgba(5,9,28,.65);
-  backdrop-filter: blur(28px);
-  -webkit-backdrop-filter: blur(28px);
+  background: rgba(5,9,28,.68);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
   box-shadow: 0 0 60px rgba(60,100,255,.12), 0 24px 60px rgba(0,0,0,.55);
+  display: flex;
+  flex-direction: column;
   /* Анимация сворачивания */
-  max-height: 800px;
   overflow: hidden;
-  transition: max-height .45s cubic-bezier(.4,0,.2,1), opacity .35s ease;
+  transition: flex .45s cubic-bezier(.4,0,.2,1), opacity .35s ease;
 }
 :root[data-theme="light"] .chat-window {
   background: rgba(255,255,255,.72);
@@ -922,24 +914,69 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 0 60px rgba(120,60,240,.08), 0 24px 60px rgba(0,0,0,.15);
 }
 .chat-window.chat-minimized {
-  max-height: 0;
+  flex: 0;
   opacity: 0;
+  min-height: 0;
 }
 
-/* Панель менеджера (левая колонка) */
+/* ── Панель менеджера (левая колонка чата) ── */
 .cw-agent-panel {
-  width: 200px;
+  width: 220px;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 24px 16px;
-  gap: 6px;
+  padding: 22px 16px 18px;
+  gap: 5px;
   border-right: 1px solid rgba(100,140,255,.10);
 }
 :root[data-theme="light"] .cw-agent-panel { border-right-color: rgba(0,0,0,.06); }
 
-/* Сообщения (правая колонка) */
+.agent-role { text-align: center; line-height: 1.5; }
+
+.agent-langs {
+  font-size: 17px;
+  letter-spacing: 3px;
+  margin: 4px 0 2px;
+}
+
+.agent-sep {
+  width: 100%;
+  border: none;
+  border-top: 1px solid rgba(100,140,255,.12);
+  margin: 6px 0;
+}
+:root[data-theme="light"] .agent-sep { border-top-color: rgba(0,0,0,.07); }
+
+.agent-stats {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.agent-stats li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.asl {
+  font-size: 11px;
+  color: rgba(255,255,255,.45);
+  font-family: var(--font-sans);
+}
+.asv {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255,255,255,.92);
+  font-family: var(--font-sans);
+}
+:root[data-theme="light"] .asl { color: rgba(10,14,39,.50); }
+:root[data-theme="light"] .asv { color: #0A0E27; }
+
+/* ── Колонка сообщений ── */
 .cw-msgs-col {
   flex: 1;
   display: flex;
@@ -947,10 +984,35 @@ img { max-width: 100%; display: block; }
   padding: 20px 22px;
   gap: 10px;
   min-width: 0;
+  overflow-y: auto;
 }
 
-/* cw-body — без внутренних отступов (вынесены в колонки) */
-.cw-body { padding: 0; }
+/* cw-body — заполняет chat-window, без внешних отступов */
+.cw-body {
+  flex: 1;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* ── Услуги: отдельный блок со своим фоном ── */
+.services-section {
+  background: var(--bg-secondary);
+  padding-bottom: 60px;
+}
+.services-row { padding: 20px 40px 0; }
+
+.srv-card {
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.srv-card:hover {
+  background: var(--bg-glass-strong);
+  border-color: rgba(120,60,240,.30);
+}
+.srv-text h3 { color: var(--text-primary); }
+.srv-text p  { color: var(--text-muted); }
 
 /* Элементы чата */
 .cw-top-bar   { border-bottom-color: rgba(100,140,255,.12); }
@@ -1003,37 +1065,6 @@ img { max-width: 100%; display: block; }
 :root[data-theme="light"] .cw-btn-icon { background: rgba(10,14,39,.05); border-color: rgba(10,14,39,.10); color: rgba(10,14,39,.50); }
 :root[data-theme="light"] .cw-btn-icon:hover { background: rgba(10,14,39,.09); color: rgba(10,14,39,.9); }
 
-/* ── Услуги: прозрачный раздел над глобусом ── */
-.services-section {
-  position: relative;
-  z-index: 2;
-  background: transparent;
-  padding-bottom: 60px;
-}
-.services-row { padding: 20px 40px 0; }
-
-.srv-card {
-  background: rgba(5,9,28,.55);
-  border: 1px solid rgba(100,140,255,.15);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-}
-.srv-card:hover {
-  background: rgba(10,16,50,.72);
-  border-color: rgba(120,60,240,.40);
-}
-:root[data-theme="light"] .srv-card {
-  background: rgba(255,255,255,.58);
-  border-color: rgba(0,0,0,.08);
-}
-:root[data-theme="light"] .srv-card:hover {
-  background: rgba(255,255,255,.78);
-  border-color: rgba(120,60,240,.28);
-}
-.srv-text h3 { color: #fff; }
-:root[data-theme="light"] .srv-text h3 { color: #0A0E27; }
-.srv-text p  { color: rgba(255,255,255,.45); }
-:root[data-theme="light"] .srv-text p { color: rgba(10,14,39,.55); }
 
 /* Нижняя строка карточки: цена + стрелка */
 .srv-bottom {
