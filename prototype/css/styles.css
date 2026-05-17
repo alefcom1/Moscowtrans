@@ -492,7 +492,7 @@ img { max-width: 100%; display: block; }
 
 /* ── Боковая панель ── */
 .chat-sidebar {
-  width: 76px;
+  width: 152px;
   flex-shrink: 0;
   background: rgba(255,255,255,.025);
   border-right: 1px solid rgba(255,255,255,.06);
@@ -508,15 +508,15 @@ img { max-width: 100%; display: block; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
-  padding: 12px 6px;
-  width: 68px;
+  gap: 7px;
+  padding: 13px 10px;
+  width: 136px;
   border: none;
   background: none;
   color: rgba(255,255,255,.35);
   cursor: pointer;
   border-radius: 12px;
-  font-size: 9.5px;
+  font-size: 11px;
   line-height: 1.3;
   text-align: center;
   transition: all var(--t-base);
@@ -625,7 +625,7 @@ img { max-width: 100%; display: block; }
   border-radius: 4px 14px 14px 14px;
   padding: 11px 13px;
   font-size: 13px; color: rgba(255,255,255,.88);
-  line-height: 1.6; max-width: 400px;
+  line-height: 1.6; max-width: 100%;
 }
 .msg-bub p { margin: 0; }
 .msg-bub p + p { margin-top: 1px; }
@@ -800,7 +800,7 @@ img { max-width: 100%; display: block; }
 
 /* ── Адаптив ── */
 @media (max-width: 900px) {
-  .cw-agent-panel { width: 160px; padding: 18px 12px; }
+  .cw-agent-panel { width: 200px; padding: 18px 12px; }
   .waveform-svg   { display: none; }
   .hero-main { padding: 24px 16px; }
 }
@@ -910,12 +910,12 @@ img { max-width: 100%; display: block; }
 
 /* ── Панель менеджера (левая колонка чата) ── */
 .cw-agent-panel {
-  width: 220px;
+  width: 286px;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 22px 16px 18px;
+  padding: 22px 20px 18px;
   gap: 5px;
   border-right: 1px solid rgba(100,140,255,.10);
 }
