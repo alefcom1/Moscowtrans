@@ -675,18 +675,28 @@ img { max-width: 100%; display: block; }
 }
 
 /* Mobile drawer */
-/* ── Хлебные крошки ─────────────────────────────────────── */
-.breadcrumbs { padding: 10px 0 0; position: relative; z-index: 5; }
-.breadcrumbs-list { display: flex; align-items: center; flex-wrap: wrap; gap: 0; list-style: none; margin: 0; padding: 0; font-size: 12px; font-family: var(--font-sans); }
-.breadcrumbs-list li { display: flex; align-items: center; }
-.breadcrumbs-list a { color: rgba(255,255,255,.48); text-decoration: none; transition: color .2s; }
-.breadcrumbs-list a:hover { color: rgba(255,255,255,.85); }
-.bc-sep { color: rgba(255,255,255,.28); margin: 0 6px; font-size: 10px; }
-.bc-current { color: rgba(255,255,255,.78); }
-:root[data-theme="light"] .breadcrumbs-list a { color: rgba(10,14,39,.48); }
-:root[data-theme="light"] .breadcrumbs-list a:hover { color: rgba(10,14,39,.9); }
-:root[data-theme="light"] .bc-sep { color: rgba(10,14,39,.25); }
-:root[data-theme="light"] .bc-current { color: rgba(10,14,39,.72); }
+/* ── Хлебные крошки в топ-баре чата ─────────────────────── */
+.cw-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-family: var(--font-sans);
+}
+.cw-breadcrumbs a {
+  color: rgba(110,170,255,.72);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--t-fast);
+}
+.cw-breadcrumbs a:hover { color: rgba(160,210,255,.95); }
+.cw-bc-sep { color: rgba(255,255,255,.22); font-size: 10px; }
+.cw-bc-current { color: rgba(255,255,255,.55); font-weight: 500; }
+
+:root[data-theme="light"] .cw-breadcrumbs a { color: rgba(30,90,210,.7); }
+:root[data-theme="light"] .cw-breadcrumbs a:hover { color: rgba(20,60,180,.95); }
+:root[data-theme="light"] .cw-bc-sep { color: rgba(10,14,39,.22); }
+:root[data-theme="light"] .cw-bc-current { color: rgba(10,14,39,.52); }
 
 .mobile-drawer {
   position: fixed;
