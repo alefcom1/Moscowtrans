@@ -1999,9 +1999,9 @@ img { max-width: 100%; display: block; }
    COMPARISON TABLE — sec-comparison
    ================================================================ */
 .cmp-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-.cmp-table { width: 100%; border-collapse: collapse; font-family: var(--font-sans); min-width: 540px; }
-.cmp-table thead th { padding: 16px 16px 20px; font-size: 13px; font-weight: 600; color: rgba(255,255,255,.55); text-align: center; border-bottom: 1px solid rgba(255,255,255,.10); }
-.cmp-table thead th:first-child { text-align: left; min-width: 160px; }
+.cmp-table { width: 100%; border-collapse: collapse; font-family: var(--font-sans); min-width: 540px; table-layout: fixed; }
+.cmp-table thead th { padding: 16px 16px 20px; font-size: 13px; font-weight: 600; color: rgba(255,255,255,.55); text-align: center; border-bottom: 1px solid rgba(255,255,255,.10); width: 21.3%; }
+.cmp-table thead th:first-child { text-align: left; width: 36%; }
 .cmp-table th.cmp-featured { color: #e0d4ff; font-weight: 700; background: rgba(120,60,240,.12); border-radius: 12px 12px 0 0; border-top: 2px solid rgba(120,60,240,.55); }
 .cmp-badge { display: inline-block; padding: 2px 9px; border-radius: 100px; font-size: 10px; font-weight: 700; background: linear-gradient(135deg,#00A0F0,#783CF0); color: #fff; margin-left: 6px; vertical-align: middle; text-transform: uppercase; letter-spacing: .04em; }
 .cmp-table tbody td { padding: 12px 16px; font-size: 13.5px; color: rgba(255,255,255,.62); border-bottom: 1px solid rgba(255,255,255,.05); text-align: center; }
@@ -2104,3 +2104,74 @@ body.js-loaded .anim-fade.is-visible {
     transform: none !important;
   }
 }
+
+/* ================================================================
+   БЛОК ПЕРЕЛИНКОВКИ — sec-related
+   ================================================================ */
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 36px;
+}
+@media (max-width: 900px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .related-grid { grid-template-columns: 1fr; } }
+
+.related-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--r-lg);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color .22s, transform .22s, background .22s;
+}
+.related-card:hover {
+  border-color: rgba(120,60,240,.35);
+  background: rgba(120,60,240,.06);
+  transform: translateY(-2px);
+}
+.related-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(120,60,240,.12);
+  border: 1px solid rgba(120,60,240,.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #a78bfa;
+}
+.related-card-body { flex: 1; min-width: 0; }
+.related-card-body h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.related-card-body p {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.4;
+}
+.related-arrow {
+  flex-shrink: 0;
+  color: rgba(120,60,240,.50);
+  transition: color .2s, transform .2s;
+}
+.related-card:hover .related-arrow { color: #a78bfa; transform: translateX(3px); }
+.related-hub-link { text-align: center; }
+
+:root[data-theme="light"] .related-card-icon {
+  background: rgba(120,60,240,.08);
+  border-color: rgba(120,60,240,.14);
+}
+:root[data-theme="light"] .related-card:hover { background: rgba(120,60,240,.04); }
