@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Перевод документации для EdTech в Москве | Ремарка</title>
+  <meta name="description" content="Перевод документации для EdTech в Москве: e-learning платформы, LMS, педагогические материалы, SCORM. Переводчики с опытом в образовательных технологиях.">
+  <link rel="canonical" href="https://moscowtrans.ru/it-perevod/edtech/">
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .doc-ref-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:16px; margin-top:32px; }
+    .doc-ref-card { display:flex; flex-direction:column; gap:8px; padding:20px 18px; border:1px solid var(--border); border-radius:12px; background:var(--card-bg,var(--surface)); text-decoration:none; color:inherit; transition:box-shadow .18s,border-color .18s,transform .18s; }
+    .doc-ref-card:hover { border-color:var(--accent); box-shadow:0 4px 18px rgba(0,0,0,.08); transform:translateY(-2px); }
+    .doc-ref-card svg { color:var(--accent); flex-shrink:0; }
+    .doc-ref-card strong { font-size:15px; font-weight:600; line-height:1.3; }
+    .doc-ref-card span { font-size:13px; color:var(--text-muted); line-height:1.5; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:16px; margin-top:32px; }
+    .related-card { display:flex; align-items:flex-start; gap:14px; padding:20px 18px; border:1px solid var(--border); border-radius:12px; background:var(--card-bg,var(--surface)); text-decoration:none; color:inherit; transition:box-shadow .18s,border-color .18s,transform .18s; }
+    .related-card:hover { border-color:var(--accent); box-shadow:0 4px 18px rgba(0,0,0,.08); transform:translateY(-2px); }
+    .related-card-icon { flex-shrink:0; width:40px; height:40px; border-radius:10px; background:rgba(120,60,240,.10); display:flex; align-items:center; justify-content:center; color:var(--accent); }
+    .related-card-body { flex:1; }
+    .related-card-body h3 { font-size:15px; font-weight:600; margin:0 0 4px; }
+    .related-card-body p { font-size:13px; color:var(--text-muted); margin:0; line-height:1.5; }
+    .related-arrow { flex-shrink:0; color:var(--text-muted); margin-top:2px; }
+  </style>
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://moscowtrans.ru/" },
+        { "@type": "ListItem", "position": 2, "name": "IT-перевод", "item": "https://moscowtrans.ru/it-perevod/" },
+        { "@type": "ListItem", "position": 3, "name": "EdTech", "item": "https://moscowtrans.ru/it-perevod/edtech/" }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Перевод документации для EdTech",
+      "provider": { "@type": "LocalBusiness", "@id": "https://moscowtrans.ru/#organization", "name": "Бюро переводов Ремарка" },
+      "areaServed": { "@type": "City", "name": "Москва" },
+      "description": "Перевод документации для EdTech в Москве: e-learning платформы, LMS, педагогические материалы, SCORM. Переводчики с опытом в образовательных технологиях.",
+      "offers": { "@type": "Offer", "priceCurrency": "RUB", "price": "400", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "400", "priceCurrency": "RUB", "unitText": "стр." } }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Переводите ли документацию для LMS (Moodle, Canvas, Blackboard)?", "acceptedAnswer": { "@type": "Answer", "text": "Да. Переводим административные руководства, руководства для преподавателей и студентов, документацию по настройке курсов для всех основных LMS-платформ. Ведём глоссарий фирменной терминологии каждой системы." } },
+        { "@type": "Question", "name": "Переводите ли SCORM и xAPI спецификации?", "acceptedAnswer": { "@type": "Answer", "text": "Да. SCORM 1.2, SCORM 2004, xAPI (Tin Can), AICC — переводим технические стандарты e-learning. Также работаем с документацией авторских инструментов (Articulate, Captivate, iSpring)." } },
+        { "@type": "Question", "name": "Как работаете с педагогической терминологией?", "acceptedAnswer": { "@type": "Answer", "text": "Ведём глоссарий педагогических терминов — «formative/summative assessment», «learning outcome», «competency framework» — на основе академических стандартов и официальных переводов. Консистентность гарантирована по всей серии документов." } },
+        { "@type": "Question", "name": "Переводите ли корпоративные learning-системы (SAP SuccessFactors, Workday)?", "acceptedAnswer": { "@type": "Answer", "text": "Да. Документация корпоративных LMS-систем — SAP SuccessFactors, Oracle Learning, Workday Learning, Cornerstone OnDemand — переводим с сохранением корпоративной и HR-терминологии." } },
+        { "@type": "Question", "name": "Можно ли переводить только обновлённые части документации после релиза?", "acceptedAnswer": { "@type": "Answer", "text": "Да. Translation Memory сохраняет все переведённые сегменты. При обновлении платформы оплачиваете только новые и изменённые части." } },
+        { "@type": "Question", "name": "Где заказать перевод EdTech документации в Москве?", "acceptedAnswer": { "@type": "Answer", "text": "Бюро переводов «Ремарка» специализируется на IT-переводе, включая образовательные технологии. Пришлите документ — дадим стоимость за несколько минут." } }
+      ]
+    }
+  ]
+  </script>
+</head>
+<body>
+
+  <!-- ════════════════ HEADER ════════════════ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="Ремарка">
+        <img src="../assets/logo-dark.png" alt="Remarka" id="logo-img">
+      </a>
+      <nav class="main-nav" aria-label="Основное меню">
+        <a href="/#services">Услуги</a>
+        <a href="/#industries">Отрасли</a>
+        <a href="/#languages">Языки</a>
+        <a href="/#pricing">Цены</a>
+        <a href="/#about">О нас</a>
+      </nav>
+      <div class="header-actions">
+        <a href="#login" class="btn-link">Войти</a>
+        <a href="#start" class="btn-primary">
+          Начать
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <div class="lang-switcher">
+          <button type="button" class="lang-switcher-btn" aria-haspopup="true" aria-expanded="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span>RU</span>
+            <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="lang-dropdown" role="menu">
+            <a href="#" class="is-active" role="menuitem">🇷🇺 Русский</a>
+            <a href="https://1russian.com" role="menuitem">🇬🇧 English</a>
+            <a href="https://traduzione.tech" role="menuitem">🇮🇹 Italiano</a>
+          </div>
+        </div>
+        <button class="theme-toggle" type="button" aria-label="Переключить тему">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="mobile-toggle" type="button" aria-label="Открыть меню">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-drawer" aria-hidden="true">
+    <nav aria-label="Мобильное меню">
+      <a href="/#services">Услуги</a><a href="/#industries">Отрасли</a>
+      <a href="/#languages">Языки</a><a href="/#pricing">Цены</a><a href="/#about">О нас</a>
+    </nav>
+    <div class="drawer-actions">
+      <a href="#login" class="btn-link">Войти</a>
+      <a href="#start" class="btn-primary">Начать <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+
+  <!-- ════════ HERO ════════ -->
+  <div class="hero-bg-block">
+  <div class="hero-page">
+    <aside class="chat-sidebar">
+      <button class="sb-item sb-active" title="Чат">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span>Чат</span>
+      </button>
+      <button class="sb-item" title="Загрузить файл">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
+        <span>Загрузить файл</span>
+      </button>
+      <button class="sb-item" title="Калькулятор стоимости">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
+        <span>Калькулятор стоимости</span>
+      </button>
+      <button class="sb-item" title="История заказов">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        <span>История заказов</span>
+      </button>
+      <button class="sb-item" title="Конфиденциальность">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Конфиден-циальность</span>
+      </button>
+    </aside>
+
+    <div class="hero-main">
+      <div class="chat-window">
+        <div class="cw-top-bar">
+          <nav class="cw-breadcrumbs" aria-label="Хлебные крошки">
+            <a href="/">Главная</a>
+            <span class="cw-bc-sep" aria-hidden="true">›</span>
+            <a href="/it-perevod/">IT-перевод</a>
+            <span class="cw-bc-sep" aria-hidden="true">›</span>
+            <span class="cw-bc-current" aria-current="page">EdTech</span>
+          </nav>
+          <button class="cw-close" aria-label="Закрыть"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+        </div>
+        <div class="cw-body">
+          <div class="cw-agent-panel">
+            <div class="agent-avatar-wrap">
+              <div class="agent-avatar"><img src="../assets/olga.jpg" alt="Ольга"></div>
+              <div class="agent-online-dot"></div>
+            </div>
+            <div class="agent-name">Ольга</div>
+            <div class="agent-role">Менеджер<br>бюро переводов</div>
+            <div class="agent-langs">
+              <button class="lang-flag lang-flag--active" data-lang="ru-RU" title="Русский">🇷🇺</button>
+              <button class="lang-flag" data-lang="en-US" title="English">🇬🇧</button>
+              <button class="lang-flag" data-lang="it-IT" title="Italiano">🇮🇹</button>
+            </div>
+            <hr class="agent-sep">
+            <ul class="agent-stats">
+              <li><span class="asl">Ответ</span><span class="asv">~1 мин</span></li>
+              <li><span class="asl">Рейтинг</span><span class="asv">4.98 ★</span></li>
+              <li><span class="asl">Заказов</span><span class="asv">2 400+</span></li>
+              <li><span class="asl">Языков</span><span class="asv">20+</span></li>
+            </ul>
+            <hr class="agent-sep">
+            <svg class="waveform-svg" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="wg-et" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#00A0F0" stop-opacity="0.6"/><stop offset="50%" stop-color="#783CF0"/><stop offset="100%" stop-color="#00A0F0" stop-opacity="0.6"/></linearGradient></defs>
+              <path class="wp wp1" stroke="url(#wg-et)" stroke-width="2.5" fill="none" d="M0,60 C18,35 36,85 54,60 C72,35 90,15 108,60 C126,105 144,25 162,60 C180,95 200,40 220,60"/>
+              <path class="wp wp2" stroke="url(#wg-et)" stroke-width="1.5" fill="none" opacity="0.45" d="M0,60 C20,45 40,75 60,60 C80,45 100,28 120,60 C140,92 160,32 180,60 C200,88 210,48 220,60"/>
+              <path class="wp wp3" stroke="url(#wg-et)" stroke-width="1" fill="none" opacity="0.25" d="M0,60 C15,50 30,70 45,60 C60,50 75,38 90,60 C105,82 120,42 135,60 C150,78 165,50 180,60 C195,70 208,54 220,60"/>
+            </svg>
+            <button class="cw-mic-btn" aria-label="Голосовой ввод">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+              <span class="mic-tooltip">Голосовой ввод</span>
+            </button>
+          </div>
+          <div class="cw-right-col">
+            <div class="cw-msgs-col">
+              <div class="cw-msgs">
+                <div class="msg-bub" data-greeting="1">
+                  <p>Здравствуйте! 👋 Нужен перевод документации для образовательной платформы?</p>
+                  <span class="msg-ts">10:30</span>
+                </div>
+                <div class="msg-bub" data-greeting="2">
+                  <p>Работаем с LMS (Moodle, Canvas), SCORM/xAPI, корпоративными learning-системами.</p>
+                  <span class="msg-ts">10:30</span>
+                </div>
+                <div class="msg-bub" data-greeting="3">
+                  <p>Пришлите документ — дадим стоимость за несколько минут.</p>
+                  <span class="msg-ts">10:30</span>
+                </div>
+              </div>
+            </div>
+            <div class="cw-input-bar">
+              <input class="cw-input" type="text" placeholder="Опишите задачу или загрузите файл..." id="cwInput">
+              <div class="cw-btns">
+                <button class="cw-btn-icon" title="Прикрепить файл">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                </button>
+                <button class="cw-btn-icon cw-btn-voice" title="Голосовой ввод">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+                </button>
+                <button class="cw-btn-send" title="Отправить">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- ════════ ВВЕДЕНИЕ ════════ -->
+  <section class="sec sec-intro">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-text">
+          <p class="intro-label">Бюро переводов «Ремарка», Москва</p>
+          <h1 class="intro-title">Перевод документации для EdTech</h1>
+          <p class="intro-tagline">Образовательные технологии: от LMS до SCORM-контента</p>
+          <p class="intro-body">EdTech-платформа — это не просто контент. Это педагогический дизайн, интерактивные сценарии, система оценивания, LMS-интеграции. Перевод образовательных материалов требует понимания педагогики и технической архитектуры платформы одновременно.</p>
+          <p class="intro-body">Московское бюро «Ремарка» переводит документацию для EdTech: технические руководства для LMS (Moodle, Canvas, Blackboard), SCORM/xAPI спецификации, документацию образовательных платформ, административные руководства для преподавателей и студентов.</p>
+          <p class="intro-body">Работаем с корпоративными клиентами: e-learning компаниями, корпоративными учебными центрами, университетами, EdTech стартапами. Поддерживаем глоссарий платформы и локализационную базу.</p>
+        </div>
+        <div class="intro-visual">
+          <div class="intro-illus" aria-hidden="true">
+            <svg viewBox="0 0 480 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="20" width="140" height="168" rx="12" fill="rgba(120,60,240,.10)" stroke="rgba(120,60,240,.35)" stroke-width="1.5"/>
+              <rect x="10" y="20" width="140" height="38" rx="12" fill="rgba(120,60,240,.20)"/>
+              <rect x="10" y="43" width="140" height="15" fill="rgba(120,60,240,.20)"/>
+              <rect x="24" y="76" width="112" height="5" rx="2.5" fill="rgba(167,139,250,.45)"/>
+              <rect x="24" y="88" width="84" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
+              <rect x="24" y="100" width="102" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
+              <rect x="24" y="112" width="70" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
+              <rect x="24" y="124" width="110" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
+              <rect x="24" y="136" width="90" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
+              <rect x="24" y="148" width="98" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
+              <rect x="24" y="160" width="76" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
+              <rect x="330" y="20" width="140" height="168" rx="12" fill="rgba(0,160,240,.10)" stroke="rgba(0,160,240,.35)" stroke-width="1.5"/>
+              <rect x="330" y="20" width="140" height="38" rx="12" fill="rgba(0,160,240,.20)"/>
+              <rect x="330" y="43" width="140" height="15" fill="rgba(0,160,240,.20)"/>
+              <rect x="344" y="76" width="112" height="5" rx="2.5" fill="rgba(0,160,240,.45)"/>
+              <rect x="344" y="88" width="96" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
+              <rect x="344" y="100" width="86" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
+              <rect x="344" y="112" width="112" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
+              <rect x="344" y="124" width="74" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
+              <rect x="344" y="136" width="106" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
+              <rect x="344" y="148" width="88" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
+              <rect x="344" y="160" width="100" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
+              <circle cx="240" cy="104" r="46" fill="rgba(120,60,240,.12)" stroke="rgba(120,60,240,.30)" stroke-width="1.5"/>
+              <circle cx="240" cy="104" r="30" fill="rgba(120,60,240,.18)"/>
+              <path d="M152 104h56M288 104h40" stroke="rgba(120,60,240,.40)" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <path d="M224 104h32M246 96l10 8-10 8" stroke="rgba(167,139,250,.95)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="intro-features">
+            <div class="intro-feat">
+              <div class="intro-feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><<rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>/></svg></div>
+              <div><strong>LMS-платформы</strong><span>Moodle, Canvas, Blackboard — фирменная терминология каждой системы</span></div>
+            </div>
+            <div class="intro-feat">
+              <div class="intro-feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>/></svg></div>
+              <div><strong>SCORM и xAPI</strong><span>Технические стандарты e-learning — корректная передача спецификаций</span></div>
+            </div>
+            <div class="intro-feat">
+              <div class="intro-feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>/></svg></div>
+              <div><strong>Корпоративное обучение</strong><span>Документация для корпоративных learning систем и HR-платформ</span></div>
+            </div>
+            <div class="intro-feat">
+              <div class="intro-feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>/></svg></div>
+              <div><strong>Translation Memory</strong><span>Единая терминология для всей образовательной платформы</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-stats">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-item"><span class="stat-num">25<span class="stat-suffix">+</span></span><span class="stat-label">лет на рынке</span></div>
+        <div class="stat-item"><span class="stat-num">60<span class="stat-suffix">+</span></span><span class="stat-label">языков перевода</span></div>
+        <div class="stat-item"><span class="stat-num">2 400<span class="stat-suffix">+</span></span><span class="stat-label">выполненных заказов</span></div>
+        <div class="stat-item"><span class="stat-num">4.98<span class="stat-suffix">★</span></span><span class="stat-label">средний рейтинг</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ КАКИЕ ДОКУМЕНТЫ ════════ -->
+  <section class="sec sec--alt sec-docs">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Какие документы мы переводим</h2>
+        <p class="sec-sub">Полный спектр технической документации для образовательных платформ</p>
+      </div>
+      <div class="docs-accordion">
+
+        <details class="doc-item" open>
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><<rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>/></svg>
+            <span>Документация LMS-платформ</span>
+          </summary>
+          <div class="doc-body">
+            <p>Административные руководства Moodle, Canvas, Blackboard, Docebo. Руководства для преподавателей и студентов, настройка курсов, управление пользователями, отчётность.</p>
+          </div>
+        </details>
+
+        <details class="doc-item">
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>/></svg>
+            <span>SCORM, xAPI, AICC спецификации</span>
+          </summary>
+          <div class="doc-body">
+            <p>Технические стандарты e-learning: SCORM 1.2, SCORM 2004, xAPI (Tin Can), AICC. Документация для авторских инструментов (Articulate, Adobe Captivate, iSpring).</p>
+          </div>
+        </details>
+
+        <details class="doc-item">
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>/></svg>
+            <span>Корпоративное обучение и HR-платформы</span>
+          </summary>
+          <div class="doc-body">
+            <p>Документация корпоративных LMS, HR-систем обучения (SAP SuccessFactors, Oracle Learning, Workday Learning), онбординговые материалы для сотрудников.</p>
+          </div>
+        </details>
+
+        <details class="doc-item">
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>/></svg>
+            <span>Педагогический дизайн и assessment</span>
+          </summary>
+          <div class="doc-body">
+            <p>Документация по педагогическому дизайну, методические руководства, assessment guides, рубрики оценивания, технические требования к e-learning контенту.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ ДЛЯ КОГО ════════ -->
+  <section class="sec sec-audience">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Кому нужен перевод EdTech документации</h2>
+        <p class="sec-sub">Работаем только с юридическими лицами и ИП</p>
+      </div>
+      <div class="doc-ref-grid">
+        <div class="doc-ref-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><<rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>/></svg>
+          <strong>E-learning компании</strong>
+          <span>Перевод документации образовательных платформ при выходе на новые рынки или локализации для российских клиентов</span>
+        </div>
+        <div class="doc-ref-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>/></svg>
+          <strong>Корпоративные учебные центры</strong>
+          <span>Документация LMS, руководства для тьюторов, административные материалы для корпоративных образовательных систем</span>
+        </div>
+        <div class="doc-ref-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 0 3-3h7z"/>/></svg>
+          <strong>Университеты и колледжи</strong>
+          <span>Перевод технической документации для LMS, интеграционных руководств, академических регламентов</span>
+        </div>
+        <div class="doc-ref-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>/></svg>
+          <strong>EdTech стартапы</strong>
+          <span>Перевод продуктовой документации при международной экспансии: user guides, help center, API docs</span>
+        </div>
+        <div class="doc-ref-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>/></svg>
+          <strong>Поставщики авторских инструментов</strong>
+          <span>Документация Articulate, Adobe Captivate, iSpring, Lectora для русскоязычных разработчиков контента</span>
+        </div>
+        <div class="doc-ref-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/>/></svg>
+          <strong>HR и L&D департаменты</strong>
+          <span>Перевод learning journey документации, performance management системы, assessment frameworks для международных компаний</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ НАШИ ПЕРЕВОДЧИКИ ════════ -->
+  <section class="sec sec-translators">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Переводчики для EdTech</h2>
+        <p class="sec-sub">Специалисты с пониманием образовательных технологий и педагогики</p>
+      </div>
+      <div class="translators-grid">
+        <div class="translator-card">
+          <div class="translator-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><<rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>/></svg>
+          </div>
+          <h3>LMS-экспертиза</h3>
+          <p>Переводчики с опытом работы с Moodle, Canvas, Blackboard — знают педагогическую терминологию и архитектуру систем.</p>
+        </div>
+        <div class="translator-card">
+          <div class="translator-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>/></svg>
+          </div>
+          <h3>E-learning стандарты</h3>
+          <p>SCORM, xAPI, AICC — корректная передача технических спецификаций e-learning стандартов.</p>
+        </div>
+        <div class="translator-card">
+          <div class="translator-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>/></svg>
+          </div>
+          <h3>Глоссарий платформы</h3>
+          <p>Ведём глоссарий терминов LMS и педагогических концепций — единая база для всей серии документов.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-split">
+    <div class="container">
+      <div class="split-row split-row--rev">
+        <div class="split-text">
+          <p class="sec-label">EdTech-подход</p>
+          <h2>LMS-документация — это педагогика плюс технологии</h2>
+          <p>«Competency framework», «learning outcome», «formative assessment», «synchronous vs asynchronous learning» — педагогические концепции, которые нельзя переводить буквально. Переводчик должен понимать, что стоит за каждым термином.</p>
+          <p>Наши специалисты знают, как работают LMS, понимают разницу между SCORM и xAPI, умеют переводить pedagogical design документы так, чтобы они оставались функциональными для преподавателей и разработчиков курсов.</p>
+          <ul class="split-checklist">
+            <li>Переводчики с пониманием образовательных технологий</li>
+            <li>Глоссарий LMS-терминологии вашей платформы</li>
+            <li>Translation Memory для серии образовательных документов</li>
+            <li>Опыт с SCORM, xAPI, Moodle, Canvas</li>
+          </ul>
+        </div>
+        <div class="split-visual" aria-hidden="true">
+          <svg viewBox="0 0 380 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="sq-g1-et" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#783CF0"/><stop offset="100%" stop-color="#00A0F0"/></linearGradient>
+              <linearGradient id="sq-g2-et" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#783CF0" stop-opacity=".5"/><stop offset="100%" stop-color="#00A0F0" stop-opacity=".5"/></linearGradient>
+            </defs>
+            <circle cx="190" cy="160" r="130" fill="rgba(120,60,240,.07)"/>
+            <rect x="60" y="30" width="260" height="64" rx="16" fill="rgba(120,60,240,.12)" stroke="rgba(120,60,240,.30)" stroke-width="1.5"/>
+            <circle cx="96" cy="62" r="20" fill="url(#sq-g1-et)" opacity=".85"/>
+            <path d="M88 62l6 6 10-12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="126" y="50" width="170" height="9" rx="4" fill="rgba(167,139,250,.55)"/>
+            <rect x="126" y="66" width="120" height="7" rx="3" fill="rgba(167,139,250,.30)"/>
+            <line x1="190" y1="94" x2="190" y2="118" stroke="url(#sq-g2-et)" stroke-width="2" stroke-dasharray="4 3"/>
+            <rect x="60" y="118" width="260" height="64" rx="16" fill="rgba(0,160,240,.12)" stroke="rgba(0,160,240,.30)" stroke-width="1.5"/>
+            <circle cx="96" cy="150" r="20" fill="url(#sq-g1-et)" opacity=".85"/>
+            <path d="M88 150l6 6 10-12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="126" y="138" width="155" height="9" rx="4" fill="rgba(0,160,240,.55)"/>
+            <rect x="126" y="154" width="110" height="7" rx="3" fill="rgba(0,160,240,.30)"/>
+            <line x1="190" y1="182" x2="190" y2="206" stroke="url(#sq-g2-et)" stroke-width="2" stroke-dasharray="4 3"/>
+            <rect x="60" y="206" width="260" height="64" rx="16" fill="rgba(120,60,240,.12)" stroke="rgba(120,60,240,.30)" stroke-width="1.5"/>
+            <circle cx="96" cy="238" r="20" fill="url(#sq-g1-et)" opacity=".85"/>
+            <path d="M88 238l6 6 10-12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="126" y="226" width="175" height="9" rx="4" fill="rgba(167,139,250,.55)"/>
+            <rect x="126" y="242" width="130" height="7" rx="3" fill="rgba(167,139,250,.30)"/>
+            <circle cx="310" cy="290" r="26" fill="rgba(0,200,100,.12)" stroke="rgba(0,200,100,.35)" stroke-width="1.5"/>
+            <path d="M300 290l8 8 14-16" stroke="rgba(0,200,100,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ КАК ПРОХОДИТ РАБОТА ════════ -->
+  <section class="sec sec--alt sec-how-pro">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Как проходит работа</h2>
+        <p class="sec-sub">Шесть шагов от файла до готового перевода — с контролем качества на каждом этапе</p>
+      </div>
+      <div class="steps-row steps-row--6">
+        <div class="step-item">
+          <div class="step-num">01</div>
+          <h3>Загрузите файл</h3>
+          <p>Через сайт, мессенджер, email или напрямую в L10n-платформу</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">02</div>
+          <h3>Анализ документа</h3>
+          <p>Оцениваем объём, формат, контекст и технические требования</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">03</div>
+          <h3>Подбор специалиста</h3>
+          <p>Выбираем переводчика с нужной технической экспертизой</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">04</div>
+          <h3>Перевод</h3>
+          <p>Специалист работает с глоссарием и TM вашего продукта</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">05</div>
+          <h3>Контроль качества</h3>
+          <p>Проверяем терминологию, консистентность и технические детали</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">06</div>
+          <h3>Готовый перевод</h3>
+          <p>Отдаём файл в исходном формате или через вашу платформу</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ ГАРАНТИИ КАЧЕСТВА ════════ -->
+  <section class="sec sec-guarantees">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Наши гарантии</h2>
+        <p class="sec-sub">Мы отвечаем за результат — не только словами</p>
+      </div>
+      <div class="guarantees-grid">
+        <div class="guarantee-card">
+          <div class="guarantee-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.9"/></svg>
+          </div>
+          <h3>Бесплатная правка</h3>
+          <p>Исправим бесплатно в течение 7 дней, если перевод не соответствует заданию или содержит неточности</p>
+        </div>
+        <div class="guarantee-card">
+          <div class="guarantee-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3>Конфиденциальность</h3>
+          <p>NDA по запросу. Ваши файлы не передаются третьим лицам и не хранятся на внешних серверах</p>
+        </div>
+        <div class="guarantee-card">
+          <div class="guarantee-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Соблюдение сроков</h3>
+          <p>Если не уложились в оговорённый срок по нашей вине — возвращаем предоплату или делаем скидку</p>
+        </div>
+        <div class="guarantee-card">
+          <div class="guarantee-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Translation Memory</h3>
+          <p>Сохраняем глоссарий и TM вашего продукта — повторные строки переводятся быстрее и дешевле</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ СРОКИ И СТОИМОСТЬ ════════ -->
+  <section class="sec sec--alt sec-vol-pricing">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Сроки и стоимость</h2>
+        <p class="sec-sub">Цена зависит от объёма. Точный расчёт — бесплатно, за несколько минут</p>
+      </div>
+      <div class="vol-table-wrap">
+        <table class="vol-table">
+          <thead>
+            <tr><th>Объём</th><th>Срок</th><th>Стоимость</th><th></th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>До 1 000 слов</strong></td><td>1 рабочий день</td><td class="vol-price">от 3 000 ₽</td><td><a href="#" class="vol-btn">Заказать</a></td></tr>
+            <tr><td><strong>1 000–5 000 слов</strong></td><td>2–3 рабочих дня</td><td class="vol-price">от 3 ₽/слово</td><td><a href="#" class="vol-btn">Заказать</a></td></tr>
+            <tr><td><strong>5 000–20 000 слов</strong></td><td>3–7 рабочих дней</td><td class="vol-price">от 2,8 ₽/слово</td><td><a href="#" class="vol-btn">Заказать</a></td></tr>
+            <tr><td><strong>Свыше 20 000 слов</strong></td><td>по договорённости</td><td class="vol-price">от 2,5 ₽/слово</td><td><a href="#" class="vol-btn">Заказать</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="vol-note">Translation Memory снижает стоимость повторных строк. Для постоянных клиентов — скидки от объёма.</p>
+    </div>
+  </section>
+
+  <!-- ════════ СРАВНЕНИЕ ФОРМАТОВ ════════ -->
+  <section class="sec sec-comparison">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Какой формат вам подходит</h2>
+        <p class="sec-sub">Сравните три уровня сервиса и выберите оптимальный для вашей задачи</p>
+      </div>
+      <div class="cmp-table-wrap">
+        <table class="cmp-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Постредактирование ИИ</th>
+              <th class="cmp-featured">Профессиональный перевод</th>
+              <th>Премиум-перевод</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Перевод с нуля IT-специалистом</td><td class="cmp-no">✗</td><td class="cmp-yes cmp-featured">✓</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Знание профильной терминологии</td><td class="cmp-no">✗</td><td class="cmp-yes cmp-featured">✓</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Сохранение переменных и плейсхолдеров</td><td class="cmp-part">частичное</td><td class="cmp-yes cmp-featured">✓</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Localization QA</td><td class="cmp-no">✗</td><td class="cmp-no cmp-featured">✗</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Вычитка носителем языка</td><td class="cmp-no">✗</td><td class="cmp-no cmp-featured">✗</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Подходит для публичного релиза</td><td class="cmp-no">✗</td><td class="cmp-part cmp-featured">условно</td><td class="cmp-yes">✓</td></tr>
+            <tr class="cmp-meta"><td>Срок</td><td>от 1 дня</td><td class="cmp-featured">1–3 дня</td><td>2–5 дней</td></tr>
+            <tr class="cmp-meta cmp-price-row"><td>Стоимость</td><td>от 1,5 ₽/слово</td><td class="cmp-featured">от 3 ₽/слово</td><td>от 5 ₽/слово</td></tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td></td>
+              <td><a href="#" class="price-btn price-btn--outline">Выбрать</a></td>
+              <td class="cmp-featured"><a href="#" class="price-btn price-btn--primary">Выбрать</a></td>
+              <td><a href="#" class="price-btn price-btn--outline">Выбрать</a></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ ПЕРЕЛИНКОВКА ════════ -->
+  <section class="sec sec--alt sec-related">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Другие IT-переводы</h2>
+        <p class="sec-sub">Переводим техническую и программную документацию для любой платформы</p>
+      </div>
+      <div class="related-grid">
+        <a href="saas-oblachnye-servisy.html" class="related-card">
+          <div class="related-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><<path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/>/></svg>
+          </div>
+          <div class="related-card-body">
+            <h3>Перевод SaaS документации</h3>
+            <p>Облачные платформы, onboarding, help center</p>
+          </div>
+          <svg class="related-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="korporativnoe-po.html" class="related-card">
+          <div class="related-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/>/></svg>
+          </div>
+          <div class="related-card-body">
+            <h3>Перевод корпоративного ПО</h3>
+            <p>ERP/CRM системы, SAP/Salesforce документация</p>
+          </div>
+          <svg class="related-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="polzovatelskie-rukovodstva.html" class="related-card">
+          <div class="related-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 0 3-3h7z"/>/></svg>
+          </div>
+          <div class="related-card-body">
+            <h3>Перевод пользовательских руководств</h3>
+            <p>User manuals, help center, online help</p>
+          </div>
+          <svg class="related-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="ui-stroki.html" class="related-card">
+          <div class="related-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><<rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>/></svg>
+          </div>
+          <div class="related-card-body">
+            <h3>Перевод UI-строк</h3>
+            <p>.po/.xliff/.json/.resx, локализация интерфейсов</p>
+          </div>
+          <svg class="related-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="related-hub-link" style="text-align:center;margin-top:28px">
+        <a href="../it-perevod.html" class="btn-outline">Все виды IT-перевода <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ ОТЗЫВЫ ════════ -->
+  <section class="sec sec-reviews">
+    <div class="container">
+      <div class="reviews-head">
+        <div>
+          <h2 class="sec-title">Что говорят клиенты</h2>
+          <p class="sec-sub" style="margin-top:6px">Реальные отзывы о переводе</p>
+        </div>
+        <div class="review-rating-block">
+          <div class="review-rating-score">4.98</div>
+          <div class="review-stars-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="review-rating-label">средний рейтинг</div>
+        </div>
+        <div class="review-platform-links">
+          <a href="https://yandex.ru/maps/org/remarka/51867347382/reviews/" class="review-platform-link" target="_blank" rel="noopener">Яндекс</a>
+          <a href="https://maps.app.goo.gl/d8BKJYw81PqBHXvz7" class="review-platform-link" target="_blank" rel="noopener">Google</a>
+        </div>
+      </div>
+      <div class="reviews-grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="review-card">
+          <div class="review-card-top">
+            <div class="review-avatar">А</div>
+            <div class="review-meta"><div class="review-name">Антон Лазарев, CTO, «LearnSpace»</div><div class="review-src">Яндекс · декабрь 2024</div></div>
+          </div>
+          <div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p class="review-text">Перевели документацию LMS-платформы на русский. Переводчик понял архитектуру системы, педагогические термины переданы точно. Руководства готовы к публикации без правок.</p>
+        </div>
+        <div class="review-card">
+          <div class="review-card-top">
+            <div class="review-avatar">С</div>
+            <div class="review-meta"><div class="review-name">Светлана Миронова, L&D Manager</div><div class="review-src">Google · октябрь 2024</div></div>
+          </div>
+          <div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p class="review-text">Переводим материалы для корпоративной learning-системы ежеквартально. TM накопил хорошую базу педагогических терминов — скорость растёт.</p>
+        </div>
+        <div class="review-card">
+          <div class="review-card-top">
+            <div class="review-avatar">Ф</div>
+            <div class="review-meta"><div class="review-name">Фёдор Громов, EdTech Lead, «EduTech Pro»</div><div class="review-src">Яндекс · август 2024</div></div>
+          </div>
+          <div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p class="review-text">Перевели SCORM-спецификации для авторского инструмента. Технические стандарты переданы корректно, разработчики курсов работают с переводами без вопросов.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ FAQ ════════ -->
+  <section class="sec sec--alt sec-faq">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Часто задаваемые вопросы</h2>
+        <p class="sec-sub">Не нашли ответа — напишите Ольге в чат, ответим за минуту</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-summary">Переводите ли документацию для LMS (Moodle, Canvas, Blackboard)?</summary>
+          <div class="faq-body">
+            <p>Да. Переводим административные руководства, руководства для преподавателей и студентов, документацию по настройке курсов для всех основных LMS-платформ. Ведём глоссарий фирменной терминологии каждой системы.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-summary">Переводите ли SCORM и xAPI спецификации?</summary>
+          <div class="faq-body">
+            <p>Да. SCORM 1.2, SCORM 2004, xAPI (Tin Can), AICC — переводим технические стандарты e-learning. Также работаем с документацией авторских инструментов (Articulate, Captivate, iSpring).</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-summary">Как работаете с педагогической терминологией?</summary>
+          <div class="faq-body">
+            <p>Ведём глоссарий педагогических терминов — «formative/summative assessment», «learning outcome», «competency framework» — на основе академических стандартов и официальных переводов. Консистентность гарантирована по всей серии документов.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-summary">Переводите ли корпоративные learning-системы (SAP SuccessFactors, Workday)?</summary>
+          <div class="faq-body">
+            <p>Да. Документация корпоративных LMS-систем — SAP SuccessFactors, Oracle Learning, Workday Learning, Cornerstone OnDemand — переводим с сохранением корпоративной и HR-терминологии.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-summary">Можно ли переводить только обновлённые части документации после релиза?</summary>
+          <div class="faq-body">
+            <p>Да. Translation Memory сохраняет все переведённые сегменты. При обновлении платформы оплачиваете только новые и изменённые части.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-summary">Где заказать перевод EdTech документации в Москве?</summary>
+          <div class="faq-body">
+            <p>Бюро переводов «Ремарка» специализируется на IT-переводе, включая образовательные технологии. Пришлите документ — дадим стоимость за несколько минут.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ CTA ════════ -->
+  <section class="sec sec-cta">
+    <div class="container">
+      <h2 class="cta-title">Нужен перевод документации для EdTech в Москве?</h2>
+      <p class="cta-sub">Работаем с LMS, SCORM, xAPI и корпоративными learning-системами</p>
+      <div class="cta-btns">
+        <a href="#" class="btn btn-primary">Загрузить файл</a>
+        <a href="#" class="btn btn-outline">Написать Ольге</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ COMMENTS ════════ -->
+  <div id="comments" class="comments-area">
+    <div class="container">
+      <h2 class="comments-title">Комментарии (3)</h2>
+      <ol class="comment-list">
+        <li class="comment even thread-even depth-1" id="comment-1">
+          <article class="comment-body">
+            <footer class="comment-meta">
+              <div class="comment-author vcard">
+                <div class="wp-avatar">О</div>
+                <div class="fn"><b>Олег Сафонов, Product Lead, «EduPlatform»</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">Product Lead</span></div>
+              </div>
+              <div class="comment-metadata"><time datetime="2025-01-05">5 января 2025</time></div>
+            </footer>
+            <div class="comment-content">
+              <p>Перевели руководства для Moodle на русский. Педагогическая терминология передана точно, преподаватели приняли без вопросов.</p>
+            </div>
+            <div class="reply"><a class="comment-reply-link" href="#">Ответить</a></div>
+          </article>
+        </li>
+        <li class="comment odd alt thread-odd depth-1" id="comment-2">
+          <article class="comment-body">
+            <footer class="comment-meta">
+              <div class="comment-author vcard">
+                <div class="wp-avatar">Н</div>
+                <div class="fn"><b>Нина Захарова, Instructional Designer</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">Instructional Designer</span></div>
+              </div>
+              <div class="comment-metadata"><time datetime="2024-11-15">15 ноября 2024</time></div>
+            </footer>
+            <div class="comment-content">
+              <p>Переводим учебные материалы для корпоративной LMS. TM накапливает хорошую базу — повторяющиеся блоки работают автоматически.</p>
+            </div>
+            <div class="reply"><a class="comment-reply-link" href="#">Ответить</a></div>
+          </article>
+        </li>
+        <li class="comment even thread-even depth-1" id="comment-3">
+          <article class="comment-body">
+            <footer class="comment-meta">
+              <div class="comment-author vcard">
+                <div class="wp-avatar">В</div>
+                <div class="fn"><b>Вадим Петров, CTO, «TechLearn»</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">CTO, «TechLearn»</span></div>
+              </div>
+              <div class="comment-metadata"><time datetime="2024-09-20">20 сентября 2024</time></div>
+            </footer>
+            <div class="comment-content">
+              <p>Перевели xAPI документацию для интеграции с нашей платформой. Технические стандарты переданы корректно.</p>
+            </div>
+            <div class="reply"><a class="comment-reply-link" href="#">Ответить</a></div>
+          </article>
+        </li>
+      </ol>
+      <div id="respond" class="comment-respond">
+        <h3 id="reply-title" class="comment-reply-title">Оставить комментарий</h3>
+        <form action="#" method="post" id="commentform" class="comment-form" novalidate>
+          <p class="comment-notes">Ваш адрес email не будет опубликован. Обязательные поля помечены <span class="required">*</span></p>
+          <p class="comment-form-comment">
+            <label for="comment">Комментарий <span class="required">*</span></label>
+            <textarea id="comment" name="comment" cols="45" rows="6" required placeholder="Расскажите о вашем опыте работы с нами..."></textarea>
+          </p>
+          <div class="comment-form-fields">
+            <p class="comment-form-author">
+              <label for="author">Имя <span class="required">*</span></label>
+              <input id="author" name="author" type="text" size="30" required placeholder="Ваше имя">
+            </p>
+            <p class="comment-form-email">
+              <label for="email">Email <span class="required">*</span></label>
+              <input id="email" name="email" type="email" size="30" required placeholder="email@example.com">
+            </p>
+          </div>
+          <p class="comment-form-cookies-consent">
+            <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes">
+            <label for="wp-comment-cookies-consent">Сохранить моё имя и email для следующего комментария</label>
+          </p>
+          <p class="form-submit">
+            <input name="submit" type="submit" id="submit" class="submit" value="Отправить комментарий">
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <button class="chat-float-btn" aria-label="Открыть чат">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+
+  <!-- ════════════════ FOOTER ════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/logo-light.png" alt="Remarka" id="footer-logo">
+          <p>Профессиональные переводы и локализация для бизнеса. Работаем удалённо с клиентами по всей России и за её пределами.</p>
+          <h5 class="social-title">Мы в соцсетях</h5>
+          <div class="social-links">
+            <a href="#" aria-label="ВКонтакте"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.785 16.241s.288-.032.435-.193c.135-.148.13-.426.13-.426s-.018-1.302.582-1.495c.592-.19 1.352 1.262 2.158 1.821.61.422 1.073.33 1.073.33l2.157-.031s1.128-.071.593-.964c-.044-.073-.312-.66-1.602-1.86-1.35-1.257-1.169-1.054.456-3.232.99-1.327 1.387-2.137 1.263-2.485-.118-.331-.85-.244-.85-.244l-2.434.015s-.18-.025-.314.056c-.13.079-.215.262-.215.262s-.385 1.029-.899 1.904c-1.083 1.846-1.517 1.944-1.694 1.829-.412-.267-.31-1.071-.31-1.643 0-1.787.27-2.531-.526-2.724-.265-.064-.46-.106-1.136-.113-.867-.009-1.601.003-2.016.207-.276.135-.49.435-.36.453.16.022.523.099.715.362.249.34.24 1.103.24 1.103s.143 2.097-.333 2.358c-.327.179-.775-.186-1.74-1.86-.494-.858-.868-1.807-.868-1.807s-.072-.176-.2-.27c-.155-.114-.372-.15-.372-.15l-2.314.014s-.347.01-.475.16c-.114.135-.009.413-.009.413s1.813 4.242 3.866 6.38c1.882 1.96 4.02 1.832 4.02 1.832h.967z"/></svg></a>
+            <a href="#" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.464.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Услуги</h4>
+          <ul>
+            <li><a href="#">Технический перевод</a></li>
+            <li><a href="#">Юридический перевод</a></li>
+            <li><a href="#">Медицинский перевод</a></li>
+            <li><a href="#">IT-перевод</a></li>
+            <li><a href="#">Локализация ПО</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Компания</h4>
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Цены</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Поддержка</h4>
+          <ul>
+            <li><a href="#">Связаться с нами</a></li>
+            <li><a href="#">Часто задаваемые вопросы</a></li>
+            <li><a href="#">Стать переводчиком</a></li>
+          </ul>
+          <a href="#start" class="btn-primary" style="margin-top:16px">Начать <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2001–2026 Бюро переводов «Ремарка»</p>
+        <nav class="footer-legal"><a href="#">Политика конфиденциальности</a><a href="#">Карта сайта</a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/hero.js"></script>
+  <script src="../js/chat.js"></script>
+  <script src="../js/animations.js"></script>
+  <script>
+    function updateLogos() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const src = isDark ? '../assets/logo-dark.png' : '../assets/logo-light.png';
+      document.querySelectorAll('#logo-img, #footer-logo').forEach(function(img){ img.src = src; });
+    }
+    updateLogos();
+    new MutationObserver(updateLogos).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  </script>
+
+</body>
+</html>
