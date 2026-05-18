@@ -11,6 +11,53 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://moscowtrans.ru/" },
+        { "@type": "ListItem", "position": 2, "name": "Профессиональный перевод в Москве", "item": "https://moscowtrans.ru/professionalnyj-perevod/" }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Профессиональный перевод в Москве",
+      "provider": { "@type": "LocalBusiness", "@id": "https://moscowtrans.ru/#organization", "name": "Бюро переводов Ремарка" },
+      "areaServed": { "@type": "City", "name": "Москва" },
+      "description": "Профессиональный перевод документов дипломированными специалистами с отраслевым образованием. Юридические, технические, медицинские, IT-тексты. 60+ языков.",
+      "offers": { "@type": "Offer", "priceCurrency": "RUB", "price": "500", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "500", "priceCurrency": "RUB", "unitText": "стр." } }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Как вы обеспечиваете качество перевода?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Двухэтапный контроль: сначала перевод выполняет специалист с профильным образованием, затем независимый редактор проверяет точность терминологии, стиль и соответствие оригиналу. Если вас что-то не устраивает — правим бесплатно в течение 7 дней." }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько стоит срочный перевод?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Срочный перевод с выполнением в течение 24 часов выполняется с коэффициентом ×1,5 к базовой стоимости. Перевод «день в день» в рабочее время — без доплаты, если объём не превышает 5–7 страниц." }
+        },
+        {
+          "@type": "Question",
+          "name": "С какими языками вы работаете?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Работаем с 60+ языками: все основные европейские (английский, немецкий, французский, испанский, итальянский, португальский), азиатские (китайский, японский, корейский, арабский), а также украинский, белорусский, казахский, армянский, грузинский, иврит, персидский и другие." }
+        },
+        {
+          "@type": "Question",
+          "name": "Где заказать профессиональный перевод в Москве срочно?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Бюро переводов «Ремарка» работает с заказами из Москвы дистанционно — получаем файлы онлайн, работаем без выходных. Профессиональный перевод в Москве срочно: до 5 страниц — за 1 рабочий день. Отправьте файл через чат — ответим в течение нескольких минут." }
+        }
+      ]
+    }
+  ]
+  </script>
 </head>
 <body>
 
@@ -69,6 +116,21 @@
 
   <!-- ════════════ HERO ════════════ -->
   <div class="hero-bg-block">
+
+  <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <div class="container">
+      <ol class="breadcrumbs-list">
+        <li>
+          <a href="/">Главная</a>
+          <span class="bc-sep" aria-hidden="true">›</span>
+        </li>
+        <li>
+          <span class="bc-current" aria-current="page">Профессиональный перевод в Москве</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
   <div class="hero-page">
 
     <aside class="chat-sidebar">
