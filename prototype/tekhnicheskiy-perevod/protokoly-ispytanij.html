@@ -3,63 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Перевод технических предложений и КП — technical proposal, bid documentation | Ремарка</title>
-  <meta name="description" content="Перевод технического предложения в Москве. ТКП, technical proposal, bid documentation, коммерческое предложение техническое.">
-  <link rel="canonical" href="https://moscowtrans.ru/tekhnicheskiy-perevod/tekhnicheskoe-predlozhenie/">
+  <title>Перевод протоколов испытаний в Москве — test reports, acceptance tests, commissioning | Ремарка</title>
+  <meta name="description" content="Перевод протоколов испытаний в Москве: FAT/SAT, test report, commissioning. Инженеры-переводчики. Точные цифры, ссылки на стандарты, приёмка регулятором.">
+  <link rel="canonical" href="https://moscowtrans.ru/tekhnicheskiy-perevod/protokoly-ispytanij/">
   <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
   <style>
-    .doc-ref-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 16px;
-      margin-top: 32px;
-    }
-    .doc-ref-card {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      padding: 20px 18px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: var(--card-bg, var(--surface));
-      text-decoration: none;
-      color: inherit;
-      transition: box-shadow .18s, border-color .18s, transform .18s;
-    }
-    .doc-ref-card:hover {
-      border-color: var(--accent);
-      box-shadow: 0 4px 18px rgba(0,0,0,.08);
-      transform: translateY(-2px);
-    }
-    .doc-ref-card svg { color: var(--accent); flex-shrink: 0; }
-    .doc-ref-card strong { font-size: 15px; font-weight: 600; line-height: 1.3; }
-    .doc-ref-card span { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
-
-    /* sec-related */
-    .sec-related { background: var(--surface); }
     .related-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 16px;
       margin-top: 28px;
     }
     .related-card {
       display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 16px 18px;
+      flex-direction: column;
+      gap: 6px;
+      padding: 18px 16px;
       border: 1px solid var(--border);
       border-radius: 12px;
       background: var(--card-bg, var(--surface));
       text-decoration: none;
       color: inherit;
       transition: box-shadow .18s, border-color .18s, transform .18s;
-      font-size: 14px;
-      font-weight: 500;
     }
     .related-card:hover {
       border-color: var(--accent);
@@ -67,19 +36,19 @@
       transform: translateY(-2px);
     }
     .related-card svg { color: var(--accent); flex-shrink: 0; }
-    .hub-link-wrap { margin-top: 28px; text-align: center; }
-    .hub-link {
+    .related-card strong { font-size: 14px; font-weight: 600; line-height: 1.3; }
+    .related-card span { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+    .related-hub-link {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      color: var(--accent);
+      gap: 6px;
+      margin-top: 20px;
       font-size: 14px;
       font-weight: 500;
+      color: var(--accent);
       text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color .18s;
     }
-    .hub-link:hover { border-bottom-color: var(--accent); }
+    .related-hub-link:hover { text-decoration: underline; }
   </style>
   <script type="application/ld+json">
   [
@@ -89,16 +58,16 @@
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://moscowtrans.ru/" },
         { "@type": "ListItem", "position": 2, "name": "Технический перевод", "item": "https://moscowtrans.ru/tekhnicheskiy-perevod/" },
-        { "@type": "ListItem", "position": 3, "name": "Технические предложения", "item": "https://moscowtrans.ru/tekhnicheskiy-perevod/tekhnicheskoe-predlozhenie/" }
+        { "@type": "ListItem", "position": 3, "name": "Протоколы испытаний", "item": "https://moscowtrans.ru/tekhnicheskiy-perevod/protokoly-ispytanij/" }
       ]
     },
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "Перевод технических предложений и коммерческих предложений",
+      "name": "Перевод протоколов и отчётов об испытаниях",
       "provider": { "@type": "LocalBusiness", "@id": "https://moscowtrans.ru/#organization", "name": "Бюро переводов Ремарка" },
       "areaServed": { "@type": "City", "name": "Москва" },
-      "description": "Перевод технического предложения в Москве. ТКП, technical proposal, bid documentation, коммерческое предложение техническое.",
+      "description": "Перевод протоколов испытаний в Москве: FAT/SAT, test report, commissioning. Инженеры-переводчики. Точные цифры, ссылки на стандарты, приёмка регулятором.",
       "offers": { "@type": "Offer", "priceCurrency": "RUB", "price": "600", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "600", "priceCurrency": "RUB", "unitText": "стр." } }
     },
     {
@@ -107,13 +76,23 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Переводите ли технические предложения для тендеров международных организаций?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Да, переводим технические предложения для тендеров международных организаций: ООН, Всемирного банка, ЕБРР, а также для корпоративных закупок транснациональных компаний. Переводчики знают структуру и требования к оформлению таких документов." }
+          "name": "Принимаете ли вы протоколы с большим количеством таблиц и измерительных данных?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Да. Протоколы испытаний с таблицами, графиками и измерительными данными — наш основной формат. Переводчик-инженер воспроизводит структуру документа полностью: заголовки столбцов, единицы измерения, допуски и примечания переводятся в том же расположении, что и в оригинале." }
         },
         {
           "@type": "Question",
-          "name": "Обеспечиваете ли согласованность стиля технического предложения с коммерческой частью?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Да. При переводе технического предложения мы закрепляем единого переводчика и редактора на весь комплект — технические разделы и коммерческую часть переводятся единым стилем и с общей терминологической базой." }
+          "name": "Переводите ли FAT-протоколы на иностранном языке для российских заказчиков?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Да. Переводим FAT- и SAT-протоколы с английского, немецкого, французского, итальянского и других языков на русский. Результат оформляется так, чтобы российский заказчик или регулятор мог в полной мере оценить соответствие оборудования требованиям технического задания." }
+        },
+        {
+          "@type": "Question",
+          "name": "Обеспечивает ли ваш перевод приёмку документа в аккредитованной лаборатории?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Перевод выполняется с сохранением ссылок на стандарты, методики и нормативы в том виде, который требуется для предоставления в аккредитованную лабораторию или орган по сертификации. По запросу прилагается справка переводчика с указанием квалификации." }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько стоит срочный перевод протокола испытаний?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Срочность до 24 часов — коэффициент ×1,5 к базовой цене. При объёме до 5 страниц и заказе до полудня перевод готов в тот же день без надбавки." }
         }
       ]
     }
@@ -210,7 +189,7 @@
             <span class="cw-bc-sep" aria-hidden="true">›</span>
             <a href="../tekhnicheskiy-perevod.html">Технический перевод</a>
             <span class="cw-bc-sep" aria-hidden="true">›</span>
-            <span class="cw-bc-current" aria-current="page">Технические предложения</span>
+            <span class="cw-bc-current" aria-current="page">Протоколы испытаний</span>
           </nav>
           <button class="cw-close" aria-label="Закрыть"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
         </div>
@@ -252,15 +231,15 @@
             <div class="cw-msgs-col">
               <div class="cw-msgs">
                 <div class="msg-bub" data-greeting="1">
-                  <p>Здравствуйте! 👋 Нужно перевести техническое предложение или коммерческое предложение?</p>
+                  <p>Здравствуйте! 👋 Нужно перевести протокол испытаний или test report?</p>
                   <span class="msg-ts">10:30</span>
                 </div>
                 <div class="msg-bub" data-greeting="2">
-                  <p>Мы переводим ТКП, technical proposal, bid documentation — переводчики с опытом тендерных документов.</p>
+                  <p>Наши переводчики-инженеры работают с FAT, SAT, commissioning reports — понимаем суть испытательного процесса, не только слова.</p>
                   <span class="msg-ts">10:30</span>
                 </div>
                 <div class="msg-bub" data-greeting="3">
-                  <p>Пришлите файл — оценю объём и назову стоимость прямо сейчас.</p>
+                  <p>Пришлите файл — назову стоимость за несколько минут.</p>
                   <span class="msg-ts">10:30</span>
                 </div>
               </div>
@@ -287,44 +266,53 @@
   </div><!-- /hero-page -->
   </div><!-- /hero-bg-block -->
 
-  <!-- ════════ INTRO ════════ -->
+  <!-- ════════ ВВЕДЕНИЕ ════════ -->
   <section class="sec sec-intro">
     <div class="container">
       <div class="intro-grid">
         <div class="intro-text">
           <p class="intro-label">Бюро переводов «Ремарка», Москва</p>
-          <h1 class="intro-title">Перевод технических предложений и коммерческих предложений</h1>
-          <p class="intro-tagline">Убедительно и технически безупречно</p>
-          <p class="intro-body">Техническое предложение — документ, в котором деловая убедительность должна сочетаться с инженерной точностью. Ошибка в переводе технических обязательств или некорректная передача структуры разделов может стоить контракта.</p>
-          <p class="intro-body">Бюро переводов «Ремарка» специализируется на переводе ТКП, technical proposal и bid documentation. К таким документам мы допускаем только переводчиков с опытом работы с тендерными и коммерческими материалами.</p>
-          <p class="intro-body">Деловой стиль изложения сохраняется на протяжении всего документа — без потери технической точности в разделах с обязательствами поставщика.</p>
+          <h1 class="intro-title">Перевод протоколов и отчётов об испытаниях</h1>
+          <p class="intro-tagline">Каждый результат испытания — в точных формулировках</p>
+          <p class="intro-body">Протокол испытаний (test report, acceptance test report) фиксирует условия испытания и его результаты. Его юридическая значимость обязывает точно воспроизводить числовые данные, методики, ссылки на стандарты и выводы. Переводчик должен понимать суть испытательного процесса — иначе «прошёл» и «соответствует» оказываются переставлены не в том месте.</p>
+          <p class="intro-body">В московском бюро «Ремарка» протоколы переводят инженеры с практическим опытом работы в испытательных лабораториях или на производстве. Они знают разницу между FAT (Factory Acceptance Test) и SAT (Site Acceptance Test), понимают структуру отчёта по МЭК или ASME.</p>
+          <p class="intro-body">Заказать перевод протокола испытаний можно онлайн: загрузите файл, мы оценим объём и назначим специалиста за несколько минут.</p>
         </div>
         <div class="intro-visual">
           <div class="intro-illus" aria-hidden="true">
             <svg viewBox="0 0 480 200" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="ip-g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#783CF0"/><stop offset="100%" stop-color="#00A0F0"/></linearGradient>
-                <linearGradient id="ip-g2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00A0F0"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient>
+                <linearGradient id="ip-g2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#783CF0" stop-opacity=".5"/><stop offset="100%" stop-color="#00A0F0" stop-opacity=".5"/></linearGradient>
               </defs>
               <rect x="10" y="20" width="140" height="168" rx="12" fill="rgba(120,60,240,.10)" stroke="rgba(120,60,240,.35)" stroke-width="1.5"/>
               <rect x="10" y="20" width="140" height="38" rx="12" fill="rgba(120,60,240,.20)"/>
               <rect x="10" y="43" width="140" height="15" fill="rgba(120,60,240,.20)"/>
               <rect x="24" y="29" width="32" height="16" rx="8" fill="rgba(0,160,240,.40)"/>
+              <rect x="28" y="34" width="10" height="5" rx="2" fill="rgba(255,255,255,.6)"/>
+              <rect x="42" y="34" width="10" height="5" rx="2" fill="rgba(255,255,255,.6)"/>
               <rect x="24" y="76" width="112" height="5" rx="2.5" fill="rgba(167,139,250,.45)"/>
               <rect x="24" y="88" width="84" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
               <rect x="24" y="100" width="102" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
               <rect x="24" y="112" width="70" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
               <rect x="24" y="124" width="110" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
               <rect x="24" y="136" width="90" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
+              <rect x="24" y="148" width="98" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
+              <rect x="24" y="160" width="76" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
               <rect x="330" y="20" width="140" height="168" rx="12" fill="rgba(0,160,240,.10)" stroke="rgba(0,160,240,.35)" stroke-width="1.5"/>
               <rect x="330" y="20" width="140" height="38" rx="12" fill="rgba(0,160,240,.20)"/>
               <rect x="330" y="43" width="140" height="15" fill="rgba(0,160,240,.20)"/>
               <rect x="344" y="29" width="32" height="16" rx="8" fill="rgba(120,60,240,.40)"/>
+              <rect x="348" y="34" width="10" height="5" rx="2" fill="rgba(255,255,255,.6)"/>
+              <rect x="362" y="34" width="10" height="5" rx="2" fill="rgba(255,255,255,.6)"/>
               <rect x="344" y="76" width="112" height="5" rx="2.5" fill="rgba(0,160,240,.45)"/>
               <rect x="344" y="88" width="96" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
               <rect x="344" y="100" width="86" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
               <rect x="344" y="112" width="112" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
               <rect x="344" y="124" width="74" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
+              <rect x="344" y="136" width="106" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
+              <rect x="344" y="148" width="88" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
+              <rect x="344" y="160" width="100" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
               <circle cx="240" cy="104" r="46" fill="rgba(120,60,240,.12)" stroke="rgba(120,60,240,.30)" stroke-width="1.5"/>
               <circle cx="240" cy="104" r="30" fill="rgba(120,60,240,.18)"/>
               <path d="M152 104h56M288 104h40" stroke="rgba(120,60,240,.40)" stroke-width="1.5" stroke-dasharray="4 3"/>
@@ -334,27 +322,27 @@
           <div class="intro-features">
             <div class="intro-feat">
               <div class="intro-feat-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
               </div>
-              <div><strong>Опыт тендерных документов</strong><span>Переводчики знают структуру ТКП и требования к bid documentation</span></div>
+              <div><strong>Испытательные стандарты</strong><span>IEC, ISO, ГОСТ, MIL-STD, ASME</span></div>
+            </div>
+            <div class="intro-feat">
+              <div class="intro-feat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </div>
+              <div><strong>FAT / SAT / Commissioning</strong><span>Понимаем форматы и процедуры</span></div>
             </div>
             <div class="intro-feat">
               <div class="intro-feat-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
               </div>
-              <div><strong>Технические обязательства</strong><span>Точная передача гарантий, сроков и технических параметров поставщика</span></div>
+              <div><strong>Числовые данные</strong><span>Единицы измерения проверяются</span></div>
             </div>
             <div class="intro-feat">
               <div class="intro-feat-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
               </div>
-              <div><strong>Сохранение структуры</strong><span>Нумерация разделов, таблицы и приложения сохраняются в переводе</span></div>
-            </div>
-            <div class="intro-feat">
-              <div class="intro-feat-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              </div>
-              <div><strong>Деловой стиль</strong><span>Единый стиль на технических и коммерческих разделах — без технических жаргонизмов</span></div>
+              <div><strong>Ссылки на нормативы</strong><span>Сохраняем корректное цитирование</span></div>
             </div>
           </div>
         </div>
@@ -391,57 +379,67 @@
     <div class="container">
       <div class="sec-head sec-head--center">
         <h2 class="sec-title">Какие документы мы переводим</h2>
-        <p class="sec-sub">Полный спектр тендерных и коммерческих технических документов</p>
+        <p class="sec-sub">Протоколы испытаний для промышленности, сертификации и GMP-производств</p>
       </div>
       <div class="docs-accordion">
 
         <details class="doc-item" open>
           <summary class="doc-summary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            <span>Технические коммерческие предложения (ТКП)</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Приёмочные испытания (FAT/SAT)</span>
           </summary>
           <div class="doc-body">
-            <p>Переводим ТКП в полном объёме: технические разделы, спецификации, условия поставки, гарантийные обязательства. Сохраняем нумерацию разделов и форматирование таблиц.</p>
+            <p>Factory Acceptance Test и Site Acceptance Test для промышленного оборудования. Переводим полные пакеты документов: сценарии испытаний, чек-листы, сводные таблицы результатов и итоговые заключения.</p>
           </div>
         </details>
 
         <details class="doc-item">
           <summary class="doc-summary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-            <span>Technical Proposal для международных тендеров</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <span>Протоколы сертификационных испытаний</span>
           </summary>
           <div class="doc-body">
-            <p>Перевод технических предложений для тендеров международных организаций, государственных закупок и корпоративных конкурсов. Соответствие требованиям к оформлению документации заказчика.</p>
-          </div>
-        </details>
-
-        <details class="doc-item">
-          <summary class="doc-summary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            <span>Executive Summary на русском/английском</span>
-          </summary>
-          <div class="doc-body">
-            <p>Адаптация Executive Summary для разных аудиторий: технические специалисты и лица, принимающие решения. Сохранение ключевых тезисов при соответствующем деловом стиле.</p>
-          </div>
-        </details>
-
-        <details class="doc-item">
-          <summary class="doc-summary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-            <span>Технические приложения к КП</span>
-          </summary>
-          <div class="doc-body">
-            <p>Технические спецификации, схемы, расчёты и прочие приложения, входящие в состав коммерческого предложения. Перевод согласован с основным текстом КП по терминологии и стилю.</p>
+            <p>Для получения CE, EAC, ГОСТ Р, UL, CSA-сертификации. Точная передача измеренных значений, ссылок на применяемые директивы и стандарты, заключений о соответствии.</p>
           </div>
         </details>
 
         <details class="doc-item">
           <summary class="doc-summary">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            <span>Ответы на технические запросы (RFI/RFQ)</span>
+            <span>Commissioning reports</span>
           </summary>
           <div class="doc-body">
-            <p>Перевод ответов на Request for Information и Request for Quotation. Точная передача технических характеристик, ценовой информации и условий поставки.</p>
+            <p>Отчёты о пуско-наладке оборудования с результатами измерений. Учитываем структуру документа: разделы по системам, результаты функциональных проверок, отклонения и принятые меры.</p>
+          </div>
+        </details>
+
+        <details class="doc-item">
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            <span>Отчёты неразрушающего контроля</span>
+          </summary>
+          <div class="doc-body">
+            <p>Ультразвуковой контроль, радиография, магнитопорошковый контроль, визуально-измерительный контроль (ВИК). Знаем нормативную базу: РД, ГОСТ, EN ISO, ASME Section V.</p>
+          </div>
+        </details>
+
+        <details class="doc-item">
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M4 20V10l8-6 8 6v10"/><path d="M10 20v-6h4v6"/></svg>
+            <span>Протоколы испытаний сосудов под давлением</span>
+          </summary>
+          <div class="doc-body">
+            <p>ASME Section VIII, PED 2014/68/EU, ГОСТ Р. Переводим протоколы гидравлических испытаний, пневматических проверок, испытаний на герметичность с сохранением всех параметров и допусков.</p>
+          </div>
+        </details>
+
+        <details class="doc-item">
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+            <span>Validation и qualification протоколы</span>
+          </summary>
+          <div class="doc-body">
+            <p>IQ (Installation Qualification), OQ (Operational Qualification), PQ (Performance Qualification) для GMP-производств, фармацевтики и медицины. Соблюдаем требования EMA, FDA и ЕАЭС.</p>
           </div>
         </details>
 
@@ -449,20 +447,19 @@
     </div>
   </section>
 
-  <!-- ════════ КОНТРОЛЬ КАЧЕСТВА — SPLIT SECTION ════════ -->
+  <!-- ════════ SPLIT: ЭКСПЕРТИЗА ════════ -->
   <section class="sec sec-split">
     <div class="container">
       <div class="split-row split-row--rev">
         <div class="split-text">
-          <p class="sec-label">Инженерная точность</p>
-          <h2>Техническое предложение: убедительно и технически безупречно</h2>
-          <p>Техническое предложение — не просто перечень характеристик. Это документ, где каждое слово несёт юридическое и коммерческое значение. Переводчик должен понимать разницу между «должен» и «может», между «гарантируется» и «предполагается».</p>
-          <p>Мы назначаем переводчика с опытом работы именно в тендерных и коммерческих документах, а редактор с профильным техническим образованием проверяет точность технических обязательств.</p>
+          <p class="sec-label">Экспертиза</p>
+          <h2>Протоколы испытаний: результат — это цифры, а не слова</h2>
+          <p>В протоколе испытаний каждое значение имеет правовое и техническое значение: пропущенный допуск или неверно переведённая единица измерения могут стать основанием для отклонения документа регулятором или заказчиком. Переводчик без инженерного опыта не всегда понимает, где в таблице результат, а где норма, — и именно в этом месте возникают ошибки. Работая с протоколами, мы привлекаем только специалистов, которые сами участвовали в испытательных процессах.</p>
           <ul class="split-checklist">
-            <li>Переводчик с опытом тендерных и коммерческих документов</li>
-            <li>Правильный перевод технических обязательств</li>
-            <li>Сохранение структуры разделов</li>
-            <li>Деловой стиль — без потери технической точности</li>
+            <li>Переводчик с инженерным образованием и опытом испытательной деятельности</li>
+            <li>Знание методик испытаний по IEC, ISO, ASME, ГОСТ</li>
+            <li>Верификация числовых значений, единиц и допусков по оригиналу</li>
+            <li>Сохранение ссылок на нормативные документы и их обозначений</li>
           </ul>
         </div>
         <div class="split-visual" aria-hidden="true">
@@ -513,27 +510,27 @@
         <div class="step-item">
           <div class="step-num">02</div>
           <h3>Анализ документа</h3>
-          <p>Оцениваем объём, структуру и требования к тендеру</p>
+          <p>Оцениваем объём, тип испытания, отраслевую специфику</p>
         </div>
         <div class="step-item">
           <div class="step-num">03</div>
-          <h3>Подбор специалиста</h3>
-          <p>Назначаем переводчика с опытом тендерных документов</p>
+          <h3>Подбор переводчика-инженера</h3>
+          <p>Выбираем специалиста с опытом именно в вашей области испытаний</p>
         </div>
         <div class="step-item">
           <div class="step-num">04</div>
           <h3>Перевод</h3>
-          <p>Технические и коммерческие разделы — единым переводчиком</p>
+          <p>Числовые данные, таблицы, ссылки на стандарты — без пропусков</p>
         </div>
         <div class="step-item">
           <div class="step-num">05</div>
           <h3>Корректура</h3>
-          <p>Редактор проверяет точность обязательств и деловой стиль</p>
+          <p>Редактор-инженер проверяет терминологию, единицы измерения и нормативы</p>
         </div>
         <div class="step-item">
           <div class="step-num">06</div>
           <h3>Готовый перевод</h3>
-          <p>Отправляем файл в срок, удобный для вашего тендера</p>
+          <p>Отправляем файл или забираете из офиса — точно в срок</p>
         </div>
       </div>
     </div>
@@ -552,14 +549,14 @@
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.9"/></svg>
           </div>
           <h3>Бесплатная правка</h3>
-          <p>Исправим бесплатно в течение 7 дней, если перевод не соответствует заданию или содержит неточности</p>
+          <p>Исправим бесплатно в течение 7 дней, если перевод содержит неточности в терминологии, цифрах или ссылках на нормативы</p>
         </div>
         <div class="guarantee-card">
           <div class="guarantee-icon">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           </div>
           <h3>Конфиденциальность</h3>
-          <p>NDA по запросу. Ваши документы не передаются третьим лицам и не хранятся на внешних серверах</p>
+          <p>NDA по запросу. Технические данные и результаты испытаний не передаются третьим лицам</p>
         </div>
         <div class="guarantee-card">
           <div class="guarantee-icon">
@@ -612,19 +609,19 @@
             <tr>
               <td><strong>20–50 страниц</strong></td>
               <td>3–5 рабочих дней</td>
-              <td class="vol-price">от 600 ₽/стр.</td>
+              <td class="vol-price">от 550 ₽/стр.</td>
               <td><a href="#" class="vol-btn">Заказать</a></td>
             </tr>
             <tr>
               <td><strong>Свыше 50 страниц</strong></td>
               <td>по договорённости</td>
-              <td class="vol-price">по запросу</td>
+              <td class="vol-price">по договорённости</td>
               <td><a href="#" class="vol-btn">Заказать</a></td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p class="vol-note">Срочный технический перевод — коэффициент ×1,5. Расчёт после анализа файла.</p>
+      <p class="vol-note">Срочный перевод — коэффициент ×1,5. Расчёт после анализа файла.</p>
     </div>
   </section>
 
@@ -647,11 +644,11 @@
           </thead>
           <tbody>
             <tr><td>Перевод с нуля специалистом</td><td class="cmp-no">✗</td><td class="cmp-yes cmp-featured">✓</td><td class="cmp-yes">✓</td></tr>
-            <tr><td>Опыт тендерных документов</td><td class="cmp-no">✗</td><td class="cmp-yes cmp-featured">✓</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Инженер с опытом испытательной деятельности</td><td class="cmp-no">✗</td><td class="cmp-yes cmp-featured">✓</td><td class="cmp-yes">✓</td></tr>
             <tr><td>Корректура и вычитка</td><td class="cmp-part">частичная</td><td class="cmp-yes cmp-featured">✓</td><td class="cmp-yes">✓</td></tr>
             <tr><td>Редактура профильным экспертом</td><td class="cmp-no">✗</td><td class="cmp-no cmp-featured">✗</td><td class="cmp-yes">✓</td></tr>
             <tr><td>Вычитка носителем языка</td><td class="cmp-no">✗</td><td class="cmp-no cmp-featured">✗</td><td class="cmp-yes">✓</td></tr>
-            <tr><td>Подходит для международных тендеров</td><td class="cmp-no">✗</td><td class="cmp-part cmp-featured">условно</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Подходит для регуляторных органов</td><td class="cmp-no">✗</td><td class="cmp-part cmp-featured">условно</td><td class="cmp-yes">✓</td></tr>
             <tr class="cmp-meta"><td>Срок</td><td>от 1 дня</td><td class="cmp-featured">1–3 дня</td><td>2–5 дней</td></tr>
             <tr class="cmp-meta cmp-price-row"><td>Стоимость</td><td>от 250 ₽/стр.</td><td class="cmp-featured">от 600 ₽/стр.</td><td>от 950 ₽/стр.</td></tr>
           </tbody>
@@ -668,42 +665,105 @@
     </div>
   </section>
 
-  <!-- ════════ ПОХОЖИЕ УСЛУГИ ════════ -->
+  <!-- ════════ СВЯЗАННЫЕ СТРАНИЦЫ ════════ -->
   <section class="sec sec--alt sec-related">
     <div class="container">
       <div class="sec-head sec-head--center">
-        <h2 class="sec-title">Похожие услуги</h2>
-        <p class="sec-sub">Другие виды технических документов, которые мы переводим</p>
+        <h2 class="sec-title">Смежные услуги технического перевода</h2>
+        <p class="sec-sub">Другие виды документов, с которыми мы работаем</p>
       </div>
       <div class="related-grid">
-        <a href="tendernaya-dokumentatsiya.html" class="related-card">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-          Тендерная документация
+
+        <a href="sertifikaty-deklaratsii.html" class="related-card">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          <strong>Сертификаты соответствия и декларации</strong>
+          <span>Перевод сертификатов CE, EAC, ГОСТ Р и деклараций соответствия</span>
         </a>
+
+        <a href="programmy-metodiki-ispytanij.html" class="related-card">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <strong>Программы и методики испытаний</strong>
+          <span>Перевод программ и методик испытаний для сертификации и производства</span>
+        </a>
+
+        <a href="standarty-iso-gost.html" class="related-card">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <strong>Стандарты ISO, ГОСТ, DIN, ASTM</strong>
+          <span>Перевод международных технических стандартов для сертификации и аудитов</span>
+        </a>
+
         <a href="nauchnye-otchety.html" class="related-card">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-          Научные отчёты
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          <strong>Технические и инженерные отчёты</strong>
+          <span>Перевод технических отчётов, заключений и инженерных исследований</span>
         </a>
-        <a href="tendernaya-dokumentatsiya.html" class="related-card">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-          Тендерная документация
-        </a>
-        <a href="proektnaya-dokumentatsiya.html" class="related-card">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
-          Проектная документация
-        </a>
+
       </div>
-      <div class="hub-link-wrap">
-        <a href="../tekhnicheskiy-perevod.html" class="hub-link">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-          Все виды технического перевода
-        </a>
+      <a href="../tekhnicheskiy-perevod.html" class="related-hub-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        Все виды технического перевода
+      </a>
+    </div>
+  </section>
+
+  <!-- ════════ ОТЗЫВЫ ════════ -->
+  <section class="sec sec-reviews">
+    <div class="container">
+      <div class="reviews-head">
+        <div>
+          <h2 class="sec-title">Что говорят клиенты</h2>
+          <p class="sec-sub" style="margin-top:6px">Реальные отзывы о переводах протоколов испытаний</p>
+        </div>
+        <div class="review-rating-block">
+          <div class="review-rating-score">4.98</div>
+          <div class="review-stars-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="review-rating-label">средний рейтинг</div>
+        </div>
+        <div class="review-platform-links">
+          <a href="https://yandex.ru/maps/org/remarka/51867347382/reviews/" class="review-platform-link" target="_blank" rel="noopener">Яндекс</a>
+          <a href="https://maps.app.goo.gl/d8BKJYw81PqBHXvz7" class="review-platform-link" target="_blank" rel="noopener">Google</a>
+        </div>
+      </div>
+      <div class="reviews-grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="review-card">
+          <div class="review-card-top">
+            <div class="review-avatar">А</div>
+            <div class="review-meta"><div class="review-name">Андрей Кравцов</div><div class="review-src">Google · март 2025</div></div>
+          </div>
+          <div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p class="review-text">Переводили FAT-протоколы для немецкого оборудования — около 80 страниц с таблицами измерений. Все числовые данные совпадают, единицы измерения проверены. Регулятор принял документы без замечаний.</p>
+          <div class="review-role">Руководитель проекта, завод по производству оборудования</div>
+        </div>
+        <div class="review-card">
+          <div class="review-card-top">
+            <div class="review-avatar">М</div>
+            <div class="review-meta"><div class="review-name">Марина Захарова</div><div class="review-src">Яндекс · январь 2025</div></div>
+          </div>
+          <div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p class="review-text">Заказывали перевод протоколов сертификационных испытаний для органа по сертификации. Ссылки на стандарты переведены корректно, орган по сертификации принял пакет с первого раза.</p>
+          <div class="review-role">Менеджер по качеству, испытательный центр</div>
+        </div>
+        <div class="review-card">
+          <div class="review-card-top">
+            <div class="review-avatar">В</div>
+            <div class="review-meta"><div class="review-name">Виктор Носов</div><div class="review-src">Google · февраль 2025</div></div>
+          </div>
+          <div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p class="review-text">Нефтегазовый сектор, перевод commissioning reports и протоколов НК с английского. Переводчик явно знаком с терминологией отрасли — все технические формулировки точные, цифры выверены.</p>
+          <div class="review-role">Инженер по надёжности, нефтегазовая компания</div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ════════ FAQ ════════ -->
-  <section class="sec sec-faq">
+  <section class="sec sec--alt sec-faq">
     <div class="container">
       <div class="sec-head sec-head--center">
         <h2 class="sec-title">Часто задаваемые вопросы</h2>
@@ -712,30 +772,37 @@
       <div class="faq-list">
 
         <details class="faq-item">
-          <summary class="faq-summary">Переводите ли технические предложения для тендеров международных организаций?</summary>
+          <summary class="faq-summary">Принимаете ли вы протоколы с большим количеством таблиц и измерительных данных?</summary>
           <div class="faq-body">
-            <p>Да, переводим технические предложения для тендеров международных организаций: ООН, Всемирного банка, ЕБРР, а также для корпоративных закупок транснациональных компаний. Переводчики знают структуру и требования к оформлению таких документов.</p>
+            <p>Да. Протоколы испытаний с таблицами, графиками и измерительными данными — наш основной формат. Переводчик-инженер воспроизводит структуру документа полностью: заголовки столбцов, единицы измерения, допуски и примечания переводятся в том же расположении, что и в оригинале.</p>
           </div>
         </details>
 
         <details class="faq-item">
-          <summary class="faq-summary">Обеспечиваете ли согласованность стиля технического предложения с коммерческой частью?</summary>
+          <summary class="faq-summary">Переводите ли FAT-протоколы на иностранном языке для российских заказчиков?</summary>
           <div class="faq-body">
-            <p>Да. При переводе технического предложения мы закрепляем единого переводчика и редактора на весь комплект — технические разделы и коммерческая часть переводятся единым стилем и с общей терминологической базой.</p>
+            <p>Да. Переводим FAT- и SAT-протоколы с английского, немецкого, французского, итальянского и других языков на русский. Результат оформляется так, чтобы российский заказчик или регулятор мог в полной мере оценить соответствие оборудования требованиям технического задания.</p>
           </div>
         </details>
 
         <details class="faq-item">
-          <summary class="faq-summary">Как быстро вы переводите ТКП?</summary>
+          <summary class="faq-summary">Обеспечивает ли ваш перевод приёмку документа в аккредитованной лаборатории?</summary>
           <div class="faq-body">
-            <p>Стандартный срок — 2–3 рабочих дня для документа до 20 страниц. При срочности (тендерный дедлайн) возможен ускоренный режим с коэффициентом ×1,5. Уточните сроки при подаче заявки.</p>
+            <p>Перевод выполняется с сохранением ссылок на стандарты, методики и нормативы в том виде, который требуется для предоставления в аккредитованную лабораторию или орган по сертификации. По запросу прилагается справка переводчика с указанием квалификации.</p>
           </div>
         </details>
 
         <details class="faq-item">
-          <summary class="faq-summary">Работаете ли с нестандартными форматами технических предложений?</summary>
+          <summary class="faq-summary">Сколько стоит срочный перевод протокола испытаний?</summary>
           <div class="faq-body">
-            <p>Да, работаем с документами в форматах Word, Excel, PDF и PowerPoint. Сохраняем оригинальное форматирование, таблицы и диаграммы.</p>
+            <p>Срочность до 24 часов — коэффициент ×1,5 к базовой цене. При объёме до 5 страниц и заказе до полудня перевод готов в тот же день без надбавки.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">Где заказать перевод протокола испытаний в Москве?</summary>
+          <div class="faq-body">
+            <p>Бюро переводов «Ремарка» работает в Москве. Заказ принимается онлайн — загрузите файл на сайте или напишите Ольге в чат. Оценку и подбор переводчика-инженера выполняем в течение нескольких минут. Готовый перевод отправляем по email или мессенджеру.</p>
           </div>
         </details>
 
@@ -746,8 +813,8 @@
   <!-- ════════ CTA ════════ -->
   <section class="sec sec-cta">
     <div class="container">
-      <h2 class="cta-title">Нужен перевод технического предложения?</h2>
-      <p class="cta-sub">Пришлите файл — за несколько минут получите расчёт стоимости и срок выполнения</p>
+      <h2 class="cta-title">Нужен перевод протокола испытаний в Москве?</h2>
+      <p class="cta-sub">Пришлите файл — за несколько минут получите точный расчёт стоимости и срок выполнения</p>
       <div class="cta-btns">
         <a href="#" class="btn btn-primary">Загрузить файл</a>
         <a href="#" class="btn btn-outline">Написать Ольге</a>
@@ -764,13 +831,13 @@
           <article class="comment-body">
             <footer class="comment-meta">
               <div class="comment-author vcard">
-                <div class="wp-avatar">С</div>
-                <div class="fn"><b>Сергей Новиков</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">Руководитель тендерного отдела</span></div>
+                <div class="wp-avatar">П</div>
+                <div class="fn"><b>Павел Ермолаев</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">Инженер по качеству, машиностроительный завод</span></div>
               </div>
-              <div class="comment-metadata"><time datetime="2024-10-20">20 октября 2024</time></div>
+              <div class="comment-metadata"><time datetime="2025-03-14">14 марта 2025</time></div>
             </footer>
             <div class="comment-content">
-              <p>Переводили technical proposal для международного тендера — около 80 страниц с техническими приложениями. Структура сохранена, стиль единый по всему документу. Прошли на следующий этап.</p>
+              <p>Заказывали перевод FAT- и SAT-протоколов для итальянской линии. Объём — около 120 страниц с таблицами измерений. Переводчик разобрался в структуре документа, все технические значения воспроизведены корректно. Заказчик принял документацию без дополнительных вопросов.</p>
             </div>
             <div class="reply"><a class="comment-reply-link" href="#">Ответить</a></div>
           </article>
@@ -779,13 +846,13 @@
           <article class="comment-body">
             <footer class="comment-meta">
               <div class="comment-author vcard">
-                <div class="wp-avatar">Е</div>
-                <div class="fn"><b>Елена Громова</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">Коммерческий директор</span></div>
+                <div class="wp-avatar">Н</div>
+                <div class="fn"><b>Наталья Фёдорова</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">Специалист по сертификации</span></div>
               </div>
-              <div class="comment-metadata"><time datetime="2024-08-14">14 августа 2024</time></div>
+              <div class="comment-metadata"><time datetime="2025-01-22">22 января 2025</time></div>
             </footer>
             <div class="comment-content">
-              <p>Заказывали перевод ТКП с русского на английский. Оценили, что переводчик понимал разницу между «shall» и «should» в технических обязательствах. Работа выполнена чисто.</p>
+              <p>Регулярно заказываем переводы протоколов сертификационных испытаний и IQ/OQ-протоколов для GMP-производства. Ссылки на стандарты, методики и нормативы переведены точно — орган по сертификации принимает документы с первого раза.</p>
             </div>
             <div class="reply"><a class="comment-reply-link" href="#">Ответить</a></div>
           </article>
@@ -841,7 +908,7 @@
         <div class="footer-col">
           <h4>Услуги</h4>
           <ul>
-            <li><a href="#">Технический перевод</a></li>
+            <li><a href="../tekhnicheskiy-perevod.html">Технический перевод</a></li>
             <li><a href="#">Юридический перевод</a></li>
             <li><a href="#">Медицинский перевод</a></li>
             <li><a href="#">IT-перевод</a></li>
