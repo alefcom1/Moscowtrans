@@ -1175,11 +1175,16 @@ img { max-width: 100%; display: block; }
 
 /* ── Адаптив ── */
 @media (max-width: 900px) {
-  .cw-agent-panel { width: 200px; padding: 18px 12px; }
+  /* Колонка Ольги исчезает первой — окно чата расширяется */
+  .cw-agent-panel { display: none; }
   .waveform-svg   { display: none; }
   .hero-main { padding: 24px 16px; }
+  /* Скругляем нижний левый угол строки ввода */
+  .cw-input-bar,
+  :root[data-theme="light"] .cw-input-bar { border-radius: 0 0 18px 18px; }
 }
 @media (max-width: 640px) {
+  /* Боковая панель исчезает второй */
   .chat-sidebar { display: none; }
   .services-row { padding: 0 16px; }
 }
