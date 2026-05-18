@@ -3,14 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Профессиональный перевод документов в Москве — от 500 ₽/стр. | Ремарка</title>
-  <meta name="description" content="Профессиональный перевод в Москве — дипломированные специалисты с отраслевым образованием. Юридические, технические, медицинские документы. 60+ языков. Бесплатный расчёт за 5 минут.">
-  <link rel="canonical" href="https://moscowtrans.ru/professionalnyj-perevod/">
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <title>Перевод отчётов по фармаконадзору PSUR и PBRER — EMA, Минздрав РФ | Ремарка Москва</title>
+  <meta name="description" content="Перевод PSUR, PBRER, SUSAR, ICSR для EMA и Минздрав РФ в Москве. Переводчики-фармакологи с опытом в фармаконадзоре. Конфиденциально, в срок.">
+  <link rel="canonical" href="https://moscowtrans.ru/meditsinskiy-perevod/psur-otchety/">
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .doc-ref-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .doc-ref-card {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 20px 18px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--card-bg, var(--surface));
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow .18s, border-color .18s, transform .18s;
+    }
+    .doc-ref-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 18px rgba(0,0,0,.08);
+      transform: translateY(-2px);
+    }
+    .doc-ref-card svg { color: var(--accent); flex-shrink: 0; }
+    .doc-ref-card strong { font-size: 15px; font-weight: 600; line-height: 1.3; }
+    .doc-ref-card span { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+  </style>
   <script type="application/ld+json">
   [
     {
@@ -18,17 +46,18 @@
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://moscowtrans.ru/" },
-        { "@type": "ListItem", "position": 2, "name": "Профессиональный перевод в Москве", "item": "https://moscowtrans.ru/professionalnyj-perevod/" }
+        { "@type": "ListItem", "position": 2, "name": "Медицинский перевод", "item": "https://moscowtrans.ru/meditsinskiy-perevod/" },
+        { "@type": "ListItem", "position": 3, "name": "Перевод отчётов по фармаконадзору", "item": "https://moscowtrans.ru/meditsinskiy-perevod/psur-otchety/" }
       ]
     },
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "Профессиональный перевод в Москве",
+      "name": "Перевод отчётов по фармаконадзору PSUR и PBRER",
       "provider": { "@type": "LocalBusiness", "@id": "https://moscowtrans.ru/#organization", "name": "Бюро переводов Ремарка" },
       "areaServed": { "@type": "City", "name": "Москва" },
-      "description": "Профессиональный перевод документов дипломированными специалистами с отраслевым образованием. Юридические, технические, медицинские, IT-тексты. 60+ языков.",
-      "offers": { "@type": "Offer", "priceCurrency": "RUB", "price": "500", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "500", "priceCurrency": "RUB", "unitText": "стр." } }
+      "description": "Перевод PSUR, PBRER, SUSAR, ICSR для EMA и Минздрав РФ в Москве. Переводчики с опытом в фармаконадзоре и клинической фармакологии.",
+      "offers": { "@type": "Offer", "priceCurrency": "RUB", "price": "550", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "550", "priceCurrency": "RUB", "unitText": "стр." } }
     },
     {
       "@context": "https://schema.org",
@@ -36,23 +65,23 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Как вы обеспечиваете качество перевода?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Двухэтапный контроль: сначала перевод выполняет специалист с профильным образованием, затем независимый редактор проверяет точность терминологии, стиль и соответствие оригиналу. Если вас что-то не устраивает — правим бесплатно в течение 7 дней." }
+          "name": "Что такое PSUR и чем он отличается от PBRER?",
+          "acceptedAnswer": { "@type": "Answer", "text": "PSUR (Periodic Safety Update Report) — периодический отчёт о безопасности, применявшийся до перехода на формат ICH E2C(R2). PBRER (Periodic Benefit-Risk Evaluation Report) — его преемник, принятый EMA и FDA. Основное отличие — PBRER включает комплексную оценку соотношения польза/риск, а не только накопленные данные по безопасности. Мы переводим оба формата." }
         },
         {
           "@type": "Question",
-          "name": "Сколько стоит срочный перевод?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Срочный перевод с выполнением в течение 24 часов выполняется с коэффициентом ×1,5 к базовой стоимости. Перевод «день в день» в рабочее время — без доплаты, если объём не превышает 5–7 страниц." }
+          "name": "Переводите ли вы индивидуальные отчёты о случаях нежелательных реакций (ICSR)?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Да. Переводим ICSR (Individual Case Safety Reports) для подачи в EudraVigilance, VigiBase и национальные базы данных, включая систему «Фармаконадзор» Минздрава РФ. Переводчики знают MedDRA-кодирование и стандартные формулировки нежелательных реакций." }
         },
         {
           "@type": "Question",
-          "name": "С какими языками вы работаете?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Работаем с 60+ языками: все основные европейские (английский, немецкий, французский, испанский, итальянский, португальский), азиатские (китайский, японский, корейский, арабский), а также украинский, белорусский, казахский, армянский, грузинский, иврит, персидский и другие." }
+          "name": "Как быстро вы переводите SUSAR-уведомления?",
+          "acceptedAnswer": { "@type": "Answer", "text": "SUSAR (Suspected Unexpected Serious Adverse Reaction) требуют срочной подачи — 7 или 15 календарных дней в зависимости от исхода. Мы выполняем перевод SUSAR в режиме срочного заказа за 24–48 часов. Принимаем задачу в любой день недели." }
         },
         {
           "@type": "Question",
-          "name": "Где заказать профессиональный перевод в Москве срочно?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Бюро переводов «Ремарка» работает с заказами из Москвы дистанционно — получаем файлы онлайн, работаем без выходных. Профессиональный перевод в Москве срочно: до 5 страниц — за 1 рабочий день. Отправьте файл через чат — ответим в течение нескольких минут." }
+          "name": "Обеспечиваете ли вы единообразие терминологии MedDRA в переводе?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Да. Используем актуальный русскоязычный словарь MedDRA и ведём терминологическую базу по вашим препаратам. Системно-органные классы (SOC), высокоуровневые групповые термины (HLGT), предпочтительные термины (PT) и термины-синонимы (LLT) переводятся в соответствии с официальной русской локализацией MedDRA." }
         }
       ]
     }
@@ -65,7 +94,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="logo" aria-label="Ремарка">
-        <img src="assets/logo-dark.png" alt="Remarka" id="logo-img">
+        <img src="../assets/logo-dark.png" alt="Remarka" id="logo-img">
       </a>
       <nav class="main-nav" aria-label="Основное меню">
         <a href="/#services">Услуги</a>
@@ -114,7 +143,7 @@
     </div>
   </div>
 
-  <!-- ════════════ HERO ════════════ -->
+  <!-- ════════ HERO ════════ -->
   <div class="hero-bg-block">
   <div class="hero-page">
 
@@ -147,16 +176,17 @@
           <nav class="cw-breadcrumbs" aria-label="Хлебные крошки">
             <a href="/">Главная</a>
             <span class="cw-bc-sep" aria-hidden="true">›</span>
-            <span class="cw-bc-current" aria-current="page">Профессиональный перевод</span>
+            <a href="/meditsinskiy-perevod/">Медицинский перевод</a>
+            <span class="cw-bc-sep" aria-hidden="true">›</span>
+            <span class="cw-bc-current" aria-current="page">Отчёты по фармаконадзору</span>
           </nav>
           <button class="cw-close" aria-label="Закрыть"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
         </div>
 
         <div class="cw-body">
-          <!-- Панель Ольги -->
           <div class="cw-agent-panel">
             <div class="agent-avatar-wrap">
-              <div class="agent-avatar"><img src="assets/olga.jpg" alt="Ольга"></div>
+              <div class="agent-avatar"><img src="../assets/olga.jpg" alt="Ольга"></div>
               <div class="agent-online-dot"></div>
             </div>
             <div class="agent-name">Ольга</div>
@@ -186,20 +216,19 @@
             </button>
           </div>
 
-          <!-- Сообщения -->
           <div class="cw-right-col">
             <div class="cw-msgs-col">
               <div class="cw-msgs">
                 <div class="msg-bub" data-greeting="1">
-                  <p>Здравствуйте! 👋 Расскажите, какой вид профессионального перевода вас интересует?</p>
+                  <p>Здравствуйте! 👋 Нужен перевод PSUR, PBRER или ICSR?</p>
                   <span class="msg-ts">10:30</span>
                 </div>
                 <div class="msg-bub" data-greeting="2">
-                  <p>Наши переводчики — дипломированные специалисты с профильным образованием: юристы, медики, инженеры, IT-эксперты.</p>
+                  <p>Переводим отчёты по фармаконадзору для EMA и Минздрав РФ. Переводчики с опытом в pharmacovigilance знают MedDRA-терминологию.</p>
                   <span class="msg-ts">10:30</span>
                 </div>
                 <div class="msg-bub" data-greeting="3">
-                  <p>Пришлите файл или опишите задачу — назову точную стоимость и срок прямо сейчас.</p>
+                  <p>Пришлите файл — рассчитаю объём и срок прямо сейчас.</p>
                   <span class="msg-ts">10:30</span>
                 </div>
               </div>
@@ -226,27 +255,21 @@
   </div><!-- /hero-page -->
   </div><!-- /hero-bg-block -->
 
-  <!-- ════════ ЧТО ТАКОЕ ПРОФЕССИОНАЛЬНЫЙ ПЕРЕВОД ════════ -->
+  <!-- ════════ ВВЕДЕНИЕ ════════ -->
   <section class="sec sec-intro">
     <div class="container">
       <div class="intro-grid">
         <div class="intro-text">
           <p class="intro-label">Бюро переводов «Ремарка», Москва</p>
-          <h1 class="intro-title">Профессиональный перевод в Москве</h1>
-          <p class="intro-tagline">Точность, которую нельзя делегировать машине</p>
-          <p class="intro-body">За каждым профессиональным переводом стоит специалист с двойной квалификацией: лингвистической и профильной. Юридические документы переводят юристы, медицинские тексты — врачи и провизоры, техническую документацию — инженеры. Такая специализация исключает расплывчатость формулировок и ошибки в терминологии.</p>
-          <p class="intro-body">Машинный перевод мы не редактируем: профессиональный перевод в московском бюро создаётся с нуля. Переводчик работает с пониманием контекста и отраслевой терминологии, учитывает стиль и ожидания читателей. Именно поэтому результат не нужно «перечитывать» и исправлять после получения.</p>
-          <p class="intro-body">Заказать профессиональный перевод документов у нас означает получить конкретного специалиста под вашу задачу. Каждый переводчик в нашем пуле прошёл строгий отбор: тестовый перевод, проверку профессиональных знаний и только потом допуск к реальным проектам.</p>
+          <h1 class="intro-title">Перевод отчётов по фармаконадзору (PSUR/PBRER)</h1>
+          <p class="intro-tagline">PSUR, PBRER, SUSAR, ICSR для EMA и Минздрав РФ</p>
+          <p class="intro-body">Документация по фармаконадзору — один из наиболее терминологически насыщенных видов медицинских текстов. PSUR и PBRER содержат клинические описания нежелательных реакций, результаты анализа сигналов безопасности и оценку соотношения пользы и риска. Ошибка в кодировании термина MedDRA или неточная интерпретация профиля безопасности в Summary of Safety может повлечь запрос от регулятора или пересмотр условий регистрационного удостоверения.</p>
+          <p class="intro-body">Бюро «Ремарка» переводит все виды документации по фармаконадзору: периодические отчёты о безопасности (PSUR), отчёты об оценке пользы и риска (PBRER), отчёты о подозреваемых серьёзных непредвиденных нежелательных реакциях (SUSAR), индивидуальные отчёты о нежелательных реакциях (ICSR) и нарративы по безопасности для EMA и Минздрава РФ.</p>
+          <p class="intro-body">Наши переводчики-клинические фармакологи работают с официальной русской локализацией MedDRA, знают требования ICH E2C(R2) и EU GVP Module VII, понимают разницу между системно-органными классами, предпочтительными терминами и терминами нижнего уровня. Для каждого клиента ведётся терминологическая база по его препаратам — консистентность терминологии гарантирована во всех отчётных периодах.</p>
         </div>
         <div class="intro-visual">
-          <!-- Decorative illustration: translation flow -->
           <div class="intro-illus" aria-hidden="true">
             <svg viewBox="0 0 480 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="ip-g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#783CF0"/><stop offset="100%" stop-color="#00A0F0"/></linearGradient>
-                <linearGradient id="ip-g2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00A0F0"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient>
-              </defs>
-              <!-- left document -->
               <rect x="10" y="20" width="140" height="168" rx="12" fill="rgba(120,60,240,.10)" stroke="rgba(120,60,240,.35)" stroke-width="1.5"/>
               <rect x="10" y="20" width="140" height="38" rx="12" fill="rgba(120,60,240,.20)"/>
               <rect x="10" y="43" width="140" height="15" fill="rgba(120,60,240,.20)"/>
@@ -261,7 +284,6 @@
               <rect x="24" y="136" width="90" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
               <rect x="24" y="148" width="98" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
               <rect x="24" y="160" width="76" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
-              <!-- right document -->
               <rect x="330" y="20" width="140" height="168" rx="12" fill="rgba(0,160,240,.10)" stroke="rgba(0,160,240,.35)" stroke-width="1.5"/>
               <rect x="330" y="20" width="140" height="38" rx="12" fill="rgba(0,160,240,.20)"/>
               <rect x="330" y="43" width="140" height="15" fill="rgba(0,160,240,.20)"/>
@@ -276,33 +298,36 @@
               <rect x="344" y="136" width="106" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
               <rect x="344" y="148" width="88" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
               <rect x="344" y="160" width="100" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
-              <!-- central hub -->
               <circle cx="240" cy="104" r="46" fill="rgba(120,60,240,.12)" stroke="rgba(120,60,240,.30)" stroke-width="1.5"/>
               <circle cx="240" cy="104" r="30" fill="rgba(120,60,240,.18)"/>
               <path d="M152 104h56M288 104h40" stroke="rgba(120,60,240,.40)" stroke-width="1.5" stroke-dasharray="4 3"/>
               <path d="M224 104h32M246 96l10 8-10 8" stroke="rgba(167,139,250,.95)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <!-- quality badge -->
-              <circle cx="240" cy="186" r="0" fill="none"/>
-              <path d="M220 182h40M224 176l6 6-6 6" stroke="url(#ip-g1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity=".6"/>
             </svg>
           </div>
-          <!-- 2×2 feature cards -->
           <div class="intro-features">
             <div class="intro-feat">
-              <div class="intro-feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
-              <strong>Профильное образование</strong><span>Переводчик знает предмет, а не только язык</span>
+              <div class="intro-feat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </div>
+              <div><strong>ICH E2C(R2) и EU GVP Module VII</strong><span>Перевод в соответствии с международными требованиями к PBRER</span></div>
             </div>
             <div class="intro-feat">
-              <div class="intro-feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-              <strong>Корректура и вычитка</strong><span>Двухэтапный контроль качества перед сдачей</span>
+              <div class="intro-feat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              </div>
+              <div><strong>MedDRA-кодирование</strong><span>Актуальный русскоязычный словарь MedDRA, SOC и PT в норме</span></div>
             </div>
             <div class="intro-feat">
-              <div class="intro-feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-              <strong>Терминологическая точность</strong><span>Отраслевые глоссарии и базы терминов</span>
+              <div class="intro-feat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div><strong>Срочные SUSAR за 24–48 ч</strong><span>Принимаем SUSAR-заказы в любой день, включая выходные</span></div>
             </div>
             <div class="intro-feat">
-              <div class="intro-feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-              <strong>Сохранение форматирования</strong><span>Word, Excel, PowerPoint — структура сохраняется</span>
+              <div class="intro-feat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <div><strong>Строгое NDA</strong><span>Данные по безопасности пациентов защищены соглашением о конфиденциальности</span></div>
             </div>
           </div>
         </div>
@@ -314,22 +339,10 @@
   <section class="sec-stats">
     <div class="container">
       <div class="stats-row">
-        <div class="stat-item">
-          <span class="stat-num">25<span class="stat-suffix">+</span></span>
-          <span class="stat-label">лет на рынке</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">60<span class="stat-suffix">+</span></span>
-          <span class="stat-label">языков перевода</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">2 400<span class="stat-suffix">+</span></span>
-          <span class="stat-label">выполненных заказов</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">4.98<span class="stat-suffix">★</span></span>
-          <span class="stat-label">средний рейтинг</span>
-        </div>
+        <div class="stat-item"><span class="stat-num">25<span class="stat-suffix">+</span></span><span class="stat-label">лет на рынке</span></div>
+        <div class="stat-item"><span class="stat-num">60<span class="stat-suffix">+</span></span><span class="stat-label">языков перевода</span></div>
+        <div class="stat-item"><span class="stat-num">2 400<span class="stat-suffix">+</span></span><span class="stat-label">выполненных заказов</span></div>
+        <div class="stat-item"><span class="stat-num">4.98<span class="stat-suffix">★</span></span><span class="stat-label">средний рейтинг</span></div>
       </div>
     </div>
   </section>
@@ -339,89 +352,108 @@
     <div class="container">
       <div class="sec-head sec-head--center">
         <h2 class="sec-title">Какие документы мы переводим</h2>
-        <p class="sec-sub">Раскройте нужную категорию — посмотрите конкретные виды документов</p>
+        <p class="sec-sub">Полный спектр отчётной документации по фармаконадзору для международных регуляторов</p>
       </div>
       <div class="docs-accordion">
 
         <details class="doc-item" open>
           <summary class="doc-summary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Юридические документы</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            <span>PBRER (Periodic Benefit-Risk Evaluation Report)</span>
           </summary>
           <div class="doc-body">
-            <p>Договоры и контракты (купли-продажи, аренды, подряда, NDA), доверенности, уставы и учредительные документы, судебные решения и иски, лицензии и разрешения, корпоративные протоколы, апостили.</p>
+            <p>Периодические отчёты об оценке пользы и риска по формату ICH E2C(R2) и EU GVP Module VII для подачи в EMA и Минздрав РФ. Перевод всех разделов PBRER: Executive Summary, Worldwide Marketing Authorisation Status, сигналы безопасности, Summary of Safety Concerns, оценка соотношения польза/риск.</p>
+          </div>
+        </details>
+
+        <details class="doc-item">
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <span>PSUR (Periodic Safety Update Report)</span>
+          </summary>
+          <div class="doc-body">
+            <p>Периодические отчёты по безопасности в формате PSUR для препаратов, поданных до введения формата PBRER. Перевод с английского на русский и с русского на английский для национальных и международных регуляторов.</p>
+          </div>
+        </details>
+
+        <details class="doc-item">
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.9"/></svg>
+            <span>SUSAR (Suspected Unexpected Serious Adverse Reaction)</span>
+          </summary>
+          <div class="doc-body">
+            <p>Срочный перевод отчётов о подозреваемых серьёзных непредвиденных нежелательных реакциях для немедленной подачи в EMA, национальные регуляторные органы и этические комитеты. Срок выполнения — 24–48 часов. Принимаем заказы в любой день недели.</p>
+          </div>
+        </details>
+
+        <details class="doc-item">
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+            <span>ICSR и нарративы о нежелательных реакциях</span>
+          </summary>
+          <div class="doc-body">
+            <p>Индивидуальные отчёты о нежелательных реакциях (ICSR) для подачи в EudraVigilance, VigiBase и систему «Фармаконадзор» Минздрава РФ. Перевод нарративов с сохранением MedDRA-терминологии и клинической точности описания случая.</p>
           </div>
         </details>
 
         <details class="doc-item">
           <summary class="doc-summary">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
-            <span>Технические тексты</span>
+            <span>Risk Management Plan (RMP) и REMS</span>
           </summary>
           <div class="doc-body">
-            <p>Конструкторская документация (КД), руководства по эксплуатации, технические паспорта, патентная документация, ГОСТы и стандарты ISO, технические регламенты, спецификации на оборудование.</p>
+            <p>Планы управления рисками (RMP) для EMA и Минздрава РФ, стратегии управления рисками (REMS) для FDA. Перевод разделов по профилю безопасности, важным установленным и потенциальным рискам, мерам по минимизации рисков.</p>
           </div>
         </details>
 
-        <details class="doc-item">
-          <summary class="doc-summary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            <span>Медицина и фармацея</span>
-          </summary>
-          <div class="doc-body">
-            <p>Медицинские карты и выписки, инструкции к лекарственным препаратам, протоколы клинических исследований, медицинские справки и заключения, результаты анализов и обследований, медицинские свидетельства.</p>
-          </div>
-        </details>
+      </div>
+    </div>
+  </section>
 
-        <details class="doc-item">
-          <summary class="doc-summary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            <span>IT и разработка</span>
-          </summary>
-          <div class="doc-body">
-            <p>Документация к API и SDK, технические задания, интерфейсы приложений (UI strings), пользовательские руководства, справочные системы (help), политики конфиденциальности, локализация мобильных и веб-приложений.</p>
-          </div>
-        </details>
+  <!-- ════════ ДЛЯ КОГО ════════ -->
+  <section class="sec sec-audience">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Кому нужен перевод отчётов по фармаконадзору</h2>
+        <p class="sec-sub">Работаем только с юридическими лицами и ИП</p>
+      </div>
+      <div class="doc-ref-grid">
 
-        <details class="doc-item">
-          <summary class="doc-summary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            <span>Финансы и банки</span>
-          </summary>
-          <div class="doc-body">
-            <p>Финансовая отчётность (МСФО, РСБУ), аудиторские заключения, проспекты эмиссии, банковские гарантии и аккредитивы, инвестиционные меморандумы, налоговые документы и декларации.</p>
-          </div>
-        </details>
+        <div class="doc-ref-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          <strong>Фармпроизводители</strong>
+          <span>Перевод PSUR и PBRER для подачи в EMA, Минздрав РФ и другие национальные регуляторы в рамках обязательств по фармаконадзору</span>
+        </div>
 
-        <details class="doc-item">
-          <summary class="doc-summary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-            <span>Таможенные и ВЭД</span>
-          </summary>
-          <div class="doc-body">
-            <p>Таможенные декларации, сертификаты происхождения товаров, инвойсы и упаковочные листы, внешнеторговые контракты, карнеты АТА, паспорта сделок, разрешения на экспорт/импорт, фитосанитарные сертификаты.</p>
-          </div>
-        </details>
+        <div class="doc-ref-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+          <strong>Регуляторные отделы</strong>
+          <span>Перевод ответов на запросы регуляторов по вопросам безопасности, переписки с EMA и Минздравом по сигналам фармаконадзора</span>
+        </div>
 
-        <details class="doc-item">
-          <summary class="doc-summary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-            <span>Академические работы</span>
-          </summary>
-          <div class="doc-body">
-            <p>Научные статьи и монографии, диссертации и авторефераты, тезисы конференций, рецензии и аннотации, учебные пособия, академические резюме (CV) и сопроводительные письма.</p>
-          </div>
-        </details>
+        <div class="doc-ref-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <strong>Медицинские директора</strong>
+          <span>Перевод клинических нарративов и резюме по безопасности для внутреннего мониторинга и принятия решений</span>
+        </div>
 
-        <details class="doc-item">
-          <summary class="doc-summary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
-            <span>Маркетинг и реклама</span>
-          </summary>
-          <div class="doc-body">
-            <p>Сайты и лендинги (с SEO-адаптацией), презентации и pitchdeck, рекламные материалы и буклеты, пресс-релизы, корпоративные блоги, контент для социальных сетей, маркетинговые исследования.</p>
-          </div>
-        </details>
+        <div class="doc-ref-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          <strong>CRO с функцией фармаконадзора</strong>
+          <span>Перевод SUSAR-уведомлений, ICSR и отчётов о безопасности в рамках аутсорсинговых контрактов с MAH</span>
+        </div>
+
+        <div class="doc-ref-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+          <strong>Дистрибьюторы препаратов</strong>
+          <span>Перевод документации по фармаконадзору иностранных производителей для выполнения регуляторных обязательств на российском рынке</span>
+        </div>
+
+        <div class="doc-ref-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <strong>Регуляторные консультанты</strong>
+          <span>Перевод отчётов по фармаконадзору в рамках консультационных проектов для фармацевтических компаний</span>
+        </div>
 
       </div>
     </div>
@@ -431,83 +463,75 @@
   <section class="sec sec-translators">
     <div class="container">
       <div class="sec-head sec-head--center">
-        <h2 class="sec-title">Наши переводчики в Москве</h2>
-        <p class="sec-sub">Профессиональные переводчики московского бюро «Ремарка» не берутся за всё подряд — каждый специалист работает только в своей области</p>
+        <h2 class="sec-title">Переводчики с опытом в фармаконадзоре</h2>
+        <p class="sec-sub">Каждый специалист прошёл практику в отделах фармаконадзора или клинических исследований</p>
       </div>
       <div class="translators-grid">
         <div class="translator-card">
           <div class="translator-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
           </div>
-          <h3>Двойное образование</h3>
-          <p>Каждый переводчик имеет лингвистический диплом и второй диплом по специализации: юридический, медицинский, технический или IT.</p>
+          <h3>Клинико-фармакологическая подготовка</h3>
+          <p>Клинические фармакологи и провизоры, специализирующиеся на документации по безопасности лекарственных средств.</p>
         </div>
         <div class="translator-card">
           <div class="translator-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z"/></svg>
           </div>
-          <h3>Строгий отбор</h3>
-          <p>Перед допуском к заказам — тестовый перевод и проверка профессиональных знаний. К работе допускается менее 30% кандидатов.</p>
+          <h3>Опыт в Pharmacovigilance</h3>
+          <p>Реальная работа в отделах фармаконадзора — знание GVP-модулей, процессов обработки ICSR и подготовки PSUR изнутри.</p>
         </div>
         <div class="translator-card">
           <div class="translator-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><line x1="3" y1="12" x2="3" y2="20"/><line x1="1" y1="16" x2="5" y2="16"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           </div>
-          <h3>Опыт от 3 лет</h3>
-          <p>Работаем только с переводчиками, у которых минимум 3 года практики именно в своей отрасли — не просто языковой опыт, а отраслевой.</p>
+          <h3>Строжайшее NDA</h3>
+          <p>Данные о нежелательных реакциях и персональные данные пациентов защищены. Подписываем NDA, соблюдаем требования 152-ФЗ.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ════════ КОНТРОЛЬ КАЧЕСТВА — SPLIT SECTION ════════ -->
+  <!-- ════════ КОНТРОЛЬ КАЧЕСТВА ════════ -->
   <section class="sec sec-split">
     <div class="container">
       <div class="split-row split-row--rev">
         <div class="split-text">
-          <p class="sec-label">Стандарты качества</p>
-          <h2>Как мы гарантируем точность перевода</h2>
-          <p>Каждый перевод проходит двухэтапный контроль: сначала профильный специалист выполняет перевод с полным пониманием предмета, затем независимый редактор проверяет точность терминологии и соответствие оригиналу.</p>
-          <p>Мы не передаём задачу первому доступному переводчику. Подбор специалиста — это отдельный шаг: мы сверяем тематику документа с профилем переводчика и его опытом именно в этой отрасли.</p>
+          <p class="sec-label">Точность в фармаконадзоре</p>
+          <h2>Перевод PSUR/PBRER: терминология MedDRA и клинический смысл нарратива</h2>
+          <p>Документация по фармаконадзору — это не просто технический текст. Описание серьёзной нежелательной реакции, оценка причинно-следственной связи (causality), интерпретация данных из базы EudraVigilance — каждое предложение имеет клиническое и регуляторное значение. Переводчик без опыта в фармаконадзоре не знает, что «unexpected» и «unlisted» — разные понятия в контексте SUSAR, а «serious» определяется строгими критериями ICH E2A.</p>
+          <p>Наши специалисты знают структуру PBRER по ICH E2C(R2), понимают разницу между SOC и PT в MedDRA, умеют переводить нарративы так, чтобы клиническая картина случая была точно воспроизведена на целевом языке.</p>
           <ul class="split-checklist">
-            <li>Переводчик с профильным образованием (юрист, врач, инженер)</li>
-            <li>Независимая редакторская вычитка перед сдачей</li>
-            <li>Проверка по отраслевому глоссарию клиента</li>
-            <li>Бесплатная правка в течение 7 дней после получения</li>
+            <li>Переводчик с опытом в фармаконадзоре</li>
+            <li>Актуальный словарь MedDRA-терминологии</li>
+            <li>Единая терминологическая база по препаратам клиента</li>
+            <li>Редактура специалистом по фармаконадзору</li>
           </ul>
         </div>
         <div class="split-visual" aria-hidden="true">
           <svg viewBox="0 0 380 320" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="sq-g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#783CF0"/><stop offset="100%" stop-color="#00A0F0"/></linearGradient>
-              <linearGradient id="sq-g2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#783CF0" stop-opacity=".5"/><stop offset="100%" stop-color="#00A0F0" stop-opacity=".5"/></linearGradient>
+              <linearGradient id="sq-g1-psur" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#783CF0"/><stop offset="100%" stop-color="#00A0F0"/></linearGradient>
+              <linearGradient id="sq-g2-psur" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#783CF0" stop-opacity=".5"/><stop offset="100%" stop-color="#00A0F0" stop-opacity=".5"/></linearGradient>
             </defs>
-            <!-- background circle glow -->
             <circle cx="190" cy="160" r="130" fill="rgba(120,60,240,.07)"/>
-            <!-- steps connected vertically -->
             <rect x="60" y="30" width="260" height="64" rx="16" fill="rgba(120,60,240,.12)" stroke="rgba(120,60,240,.30)" stroke-width="1.5"/>
-            <circle cx="96" cy="62" r="20" fill="url(#sq-g1)" opacity=".85"/>
+            <circle cx="96" cy="62" r="20" fill="url(#sq-g1-psur)" opacity=".85"/>
             <path d="M88 62l6 6 10-12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <rect x="126" y="50" width="170" height="9" rx="4" fill="rgba(167,139,250,.55)"/>
             <rect x="126" y="66" width="120" height="7" rx="3" fill="rgba(167,139,250,.30)"/>
-
-            <line x1="190" y1="94" x2="190" y2="118" stroke="url(#sq-g2)" stroke-width="2" stroke-dasharray="4 3"/>
-
+            <line x1="190" y1="94" x2="190" y2="118" stroke="url(#sq-g2-psur)" stroke-width="2" stroke-dasharray="4 3"/>
             <rect x="60" y="118" width="260" height="64" rx="16" fill="rgba(0,160,240,.12)" stroke="rgba(0,160,240,.30)" stroke-width="1.5"/>
-            <circle cx="96" cy="150" r="20" fill="url(#sq-g1)" opacity=".85"/>
+            <circle cx="96" cy="150" r="20" fill="url(#sq-g1-psur)" opacity=".85"/>
             <path d="M88 150l6 6 10-12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <rect x="126" y="138" width="155" height="9" rx="4" fill="rgba(0,160,240,.55)"/>
             <rect x="126" y="154" width="110" height="7" rx="3" fill="rgba(0,160,240,.30)"/>
-
-            <line x1="190" y1="182" x2="190" y2="206" stroke="url(#sq-g2)" stroke-width="2" stroke-dasharray="4 3"/>
-
+            <line x1="190" y1="182" x2="190" y2="206" stroke="url(#sq-g2-psur)" stroke-width="2" stroke-dasharray="4 3"/>
             <rect x="60" y="206" width="260" height="64" rx="16" fill="rgba(120,60,240,.12)" stroke="rgba(120,60,240,.30)" stroke-width="1.5"/>
-            <circle cx="96" cy="238" r="20" fill="url(#sq-g1)" opacity=".85"/>
+            <circle cx="96" cy="238" r="20" fill="url(#sq-g1-psur)" opacity=".85"/>
             <path d="M88 238l6 6 10-12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <rect x="126" y="226" width="175" height="9" rx="4" fill="rgba(167,139,250,.55)"/>
             <rect x="126" y="242" width="130" height="7" rx="3" fill="rgba(167,139,250,.30)"/>
-
-            <!-- quality seal -->
             <circle cx="310" cy="290" r="26" fill="rgba(0,200,100,.12)" stroke="rgba(0,200,100,.35)" stroke-width="1.5"/>
             <path d="M300 290l8 8 14-16" stroke="rgba(0,200,100,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -516,7 +540,7 @@
     </div>
   </section>
 
-  <!-- ════════ КАК ПРОХОДИТ РАБОТА (6 шагов) ════════ -->
+  <!-- ════════ КАК ПРОХОДИТ РАБОТА ════════ -->
   <section class="sec sec--alt sec-how-pro">
     <div class="container">
       <div class="sec-head sec-head--center">
@@ -532,27 +556,27 @@
         <div class="step-item">
           <div class="step-num">02</div>
           <h3>Анализ документа</h3>
-          <p>Оцениваем объём, тематику и сложность — за несколько минут</p>
+          <p>Оцениваем тип отчёта, объём, срочность и языковую пару</p>
         </div>
         <div class="step-item">
           <div class="step-num">03</div>
           <h3>Подбор специалиста</h3>
-          <p>Выбираем переводчика с профильным образованием в вашей области</p>
+          <p>Назначаем переводчика с опытом в фармаконадзоре по вашей терапевтической области</p>
         </div>
         <div class="step-item">
           <div class="step-num">04</div>
-          <h3>Перевод</h3>
-          <p>Специалист работает с соблюдением терминологии и стиля оригинала</p>
+          <h3>Перевод с базой MedDRA</h3>
+          <p>Специалист работает с терминологической базой и актуальным словарём MedDRA</p>
         </div>
         <div class="step-item">
           <div class="step-num">05</div>
-          <h3>Корректура</h3>
-          <p>Редактор проверяет точность, стиль и соответствие заданию</p>
+          <h3>Редактура эксперта</h3>
+          <p>Редактор проверяет точность нарративов и соответствие MedDRA-терминологии</p>
         </div>
         <div class="step-item">
           <div class="step-num">06</div>
-          <h3>Готовый перевод</h3>
-          <p>Отправляем файл или вы забираете из офиса — точно в срок</p>
+          <h3>Готовый отчёт</h3>
+          <p>Передаём файлы в согласованном формате точно к дедлайну регулятора</p>
         </div>
       </div>
     </div>
@@ -578,21 +602,21 @@
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           </div>
           <h3>Конфиденциальность</h3>
-          <p>NDA по запросу. Ваши документы не передаются третьим лицам и не хранятся на внешних серверах</p>
+          <p>NDA по запросу. Данные о нежелательных реакциях и персональные данные пациентов не передаются третьим лицам</p>
         </div>
         <div class="guarantee-card">
           <div class="guarantee-icon">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
-          <h3>Соблюдение сроков</h3>
+          <h3>Соблюдение дедлайнов</h3>
           <p>Если не уложились в оговорённый срок по нашей вине — возвращаем предоплату или делаем скидку на следующий заказ</p>
         </div>
         <div class="guarantee-card">
           <div class="guarantee-icon">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           </div>
-          <h3>База терминологии</h3>
-          <p>Сохраняем глоссарий вашей компании — при повторных заказах терминология остаётся единой, перевод быстрее</p>
+          <h3>Единая терминологическая база</h3>
+          <p>Сохраняем терминологическую базу по вашим препаратам — в следующем отчётном периоде MedDRA-термины остаются консистентными</p>
         </div>
       </div>
     </div>
@@ -603,7 +627,7 @@
     <div class="container">
       <div class="sec-head sec-head--center">
         <h2 class="sec-title">Сроки и стоимость</h2>
-        <p class="sec-sub">Цена зависит от объёма. Точный расчёт — бесплатно, за несколько минут</p>
+        <p class="sec-sub">Цена зависит от типа отчёта и срочности. Точный расчёт — бесплатно, за несколько минут</p>
       </div>
       <div class="vol-table-wrap">
         <table class="vol-table">
@@ -617,33 +641,33 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>До 5 страниц</strong><span>до 9 000 знаков</span></td>
-              <td>1 рабочий день</td>
-              <td class="vol-price">от 2 500 ₽</td>
+              <td><strong>ICSR / SUSAR (до 10 стр.)</strong></td>
+              <td>24–48 часов</td>
+              <td class="vol-price">от 600 ₽/стр.</td>
               <td><a href="#" class="vol-btn">Заказать</a></td>
             </tr>
             <tr>
-              <td><strong>5–20 страниц</strong><span>9 000 – 36 000 знаков</span></td>
-              <td>2–3 рабочих дня</td>
-              <td class="vol-price">от 500 ₽/стр.</td>
-              <td><a href="#" class="vol-btn">Заказать</a></td>
-            </tr>
-            <tr>
-              <td><strong>20–50 страниц</strong><span>36 000 – 90 000 знаков</span></td>
+              <td><strong>PSUR / PBRER (до 50 стр.)</strong></td>
               <td>3–5 рабочих дней</td>
-              <td class="vol-price">от 480 ₽/стр.</td>
+              <td class="vol-price">от 550 ₽/стр.</td>
               <td><a href="#" class="vol-btn">Заказать</a></td>
             </tr>
             <tr>
-              <td><strong>Свыше 50 страниц</strong><span>от 90 000 знаков</span></td>
+              <td><strong>50–150 страниц</strong></td>
+              <td>6–10 рабочих дней</td>
+              <td class="vol-price">от 520 ₽/стр.</td>
+              <td><a href="#" class="vol-btn">Заказать</a></td>
+            </tr>
+            <tr>
+              <td><strong>Более 150 страниц</strong></td>
               <td>по договорённости</td>
-              <td class="vol-price">от 450 ₽/стр.</td>
+              <td class="vol-price">индивидуально</td>
               <td><a href="#" class="vol-btn">Заказать</a></td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p class="vol-note">Срочный перевод (менее 24 часов) — коэффициент ×1,5 к базовой стоимости. Точный расчёт сделаем после анализа вашего файла.</p>
+      <p class="vol-note">Срочный перевод — коэффициент ×1,5. SUSAR принимаются круглосуточно. Расчёт после анализа файлов.</p>
     </div>
   </section>
 
@@ -666,13 +690,13 @@
           </thead>
           <tbody>
             <tr><td>Перевод с нуля специалистом</td><td class="cmp-no">✗</td><td class="cmp-yes cmp-featured">✓</td><td class="cmp-yes">✓</td></tr>
-            <tr><td>Профильное образование переводчика</td><td class="cmp-no">✗</td><td class="cmp-yes cmp-featured">✓</td><td class="cmp-yes">✓</td></tr>
-            <tr><td>Корректура и вычитка</td><td class="cmp-part">частичная</td><td class="cmp-yes cmp-featured">✓</td><td class="cmp-yes">✓</td></tr>
-            <tr><td>Редактура профильным экспертом</td><td class="cmp-no">✗</td><td class="cmp-no cmp-featured">✗</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Опыт в фармаконадзоре</td><td class="cmp-no">✗</td><td class="cmp-yes cmp-featured">✓</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Актуальный словарь MedDRA</td><td class="cmp-no">✗</td><td class="cmp-yes cmp-featured">✓</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Редактура экспертом по фармаконадзору</td><td class="cmp-no">✗</td><td class="cmp-no cmp-featured">✗</td><td class="cmp-yes">✓</td></tr>
             <tr><td>Вычитка носителем языка</td><td class="cmp-no">✗</td><td class="cmp-no cmp-featured">✗</td><td class="cmp-yes">✓</td></tr>
-            <tr><td>Подходит для публикаций и тендеров</td><td class="cmp-no">✗</td><td class="cmp-part cmp-featured">условно</td><td class="cmp-yes">✓</td></tr>
-            <tr class="cmp-meta"><td>Срок</td><td>от 1 дня</td><td class="cmp-featured">1–3 дня</td><td>2–5 дней</td></tr>
-            <tr class="cmp-meta cmp-price-row"><td>Стоимость</td><td>от 250 ₽/стр.</td><td class="cmp-featured">от 500 ₽/стр.</td><td>от 800 ₽/стр.</td></tr>
+            <tr><td>Подходит для подачи регулятору</td><td class="cmp-no">✗</td><td class="cmp-part cmp-featured">условно</td><td class="cmp-yes">✓</td></tr>
+            <tr class="cmp-meta"><td>Срок</td><td>от 1 дня</td><td class="cmp-featured">1–7 дней</td><td>2–10 дней</td></tr>
+            <tr class="cmp-meta cmp-price-row"><td>Стоимость</td><td>от 200 ₽/стр.</td><td class="cmp-featured">от 550 ₽/стр.</td><td>от 850 ₽/стр.</td></tr>
           </tbody>
           <tfoot>
             <tr>
@@ -687,13 +711,73 @@
     </div>
   </section>
 
+  <!-- ════════ ПЕРЕЛИНКОВКА ════════ -->
+  <section class="sec sec--alt sec-related">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Другие медицинские переводы</h2>
+        <p class="sec-sub">Переводим все виды фармацевтической и медицинской документации</p>
+      </div>
+      <div class="related-grid">
+
+        <a href="farmatsevtika.html" class="related-card">
+          <div class="related-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div class="related-card-body">
+            <h3>Фармацевтика</h3>
+            <p>Регуляторные досье, SmPC, GMP-документация, клинические отчёты</p>
+          </div>
+          <svg class="related-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="klinicheskie-issledovaniya-cro.html" class="related-card">
+          <div class="related-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div class="related-card-body">
+            <h3>Клинические исследования</h3>
+            <p>Протоколы, ICF, отчёты CSR, IMPD для клинических исследований</p>
+          </div>
+          <svg class="related-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="regulyatornye-dosye.html" class="related-card">
+          <div class="related-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+          </div>
+          <div class="related-card-body">
+            <h3>Регуляторные досье</h3>
+            <p>CTD, NDA, ANDA, MAA для FDA, EMA и Минздрав РФ</p>
+          </div>
+          <svg class="related-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="instruktsii-k-preparatam.html" class="related-card">
+          <div class="related-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="related-card-body">
+            <h3>Инструкции к препаратам</h3>
+            <p>Листки-вкладыши, SmPC, инструкции для медицинского применения</p>
+          </div>
+          <svg class="related-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+
+      </div>
+      <div class="related-hub-link" style="text-align:center;margin-top:28px">
+        <a href="../meditsinskiy-perevod.html" class="btn-outline">Все виды медицинского перевода <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </section>
+
   <!-- ════════ ОТЗЫВЫ ════════ -->
-  <section class="sec sec--alt sec-reviews">
+  <section class="sec sec-reviews">
     <div class="container">
       <div class="reviews-head">
         <div>
           <h2 class="sec-title">Что говорят клиенты</h2>
-          <p class="sec-sub" style="margin-top:6px">Реальные отзывы о профессиональных переводах</p>
+          <p class="sec-sub" style="margin-top:6px">Реальные отзывы о переводах документации по фармаконадзору</p>
         </div>
         <div class="review-rating-block">
           <div class="review-rating-score">4.98</div>
@@ -709,40 +793,42 @@
         <div class="review-platform-links">
           <a href="https://yandex.ru/maps/org/remarka/51867347382/reviews/" class="review-platform-link" target="_blank" rel="noopener">Яндекс</a>
           <a href="https://maps.app.goo.gl/d8BKJYw81PqBHXvz7" class="review-platform-link" target="_blank" rel="noopener">Google</a>
-          <a href="https://2gis.ru/krasnodar/search/%D0%B1%D1%8E%D1%80%D0%BE%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4%D0%BE%D0%B2%20%D1%80%D0%B5%D0%BC%D0%B0%D1%80%D0%BA%D0%B0/firm/70000001041287881" class="review-platform-link" target="_blank" rel="noopener">2ГИС</a>
         </div>
       </div>
       <div class="reviews-grid" style="grid-template-columns:repeat(3,1fr)">
         <div class="review-card">
           <div class="review-card-top">
-            <div class="review-avatar">Ю</div>
-            <div class="review-meta"><div class="review-name">Юлия</div><div class="review-src">Яндекс · октябрь 2023</div></div>
+            <div class="review-avatar">М</div>
+            <div class="review-meta"><div class="review-name">Марина Ковалёва</div><div class="review-src">Яндекс · февраль 2025</div></div>
           </div>
           <div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-          <p class="review-text">Бюро переводов у нас на хорошем счету. Обращались уже несколько раз. Выполняют медицинские и технические переводы. Расценки нормальные, качество стабильно высокое.</p>
-        </div>
-        <div class="review-card">
-          <div class="review-card-top">
-            <div class="review-avatar">К</div>
-            <div class="review-meta"><div class="review-name">Карина Хдрян</div><div class="review-src">Google · 7 отзывов</div></div>
-          </div>
-          <div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-          <p class="review-text">Делали несколько раз перевод паспорта. Отличный сервис, чуткий сотрудник всё сделал быстро. При повторном обращении перевод уже был в базе — процедура прошла в 3 раза быстрее.</p>
+          <p class="review-text">Переводим PBRER ежегодно уже три года. Переводчики знают структуру по ICH E2C(R2) и MedDRA-терминологию нашей терапевтической области. Терминологическая база обновляется и хранится — в следующем периоде всё консистентно.</p>
+          <div class="review-role">Руководитель отдела фармаконадзора, ООО «ФармаСейфти»</div>
         </div>
         <div class="review-card">
           <div class="review-card-top">
             <div class="review-avatar">А</div>
-            <div class="review-meta"><div class="review-name">Анна Герасимович</div><div class="review-src">2ГИС · январь 2021</div></div>
+            <div class="review-meta"><div class="review-name">Андрей Соболев</div><div class="review-src">Google · декабрь 2024</div></div>
           </div>
           <div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-          <p class="review-text">Обращаюсь по работе довольно часто. Делают быстро, замечаний не было. Отдельно хочу отметить широкий выбор языков — берутся за арабский, который другие не делают.</p>
+          <p class="review-text">Понадобился срочный перевод SUSAR в пятницу вечером. Бюро приняло заказ немедленно, к утру понедельника перевод был готов. Все MedDRA-термины корректны, нарратив сохраняет клиническую картину случая точно.</p>
+          <div class="review-role">Медицинский директор, ЗАО «КлиникалРесёрч»</div>
+        </div>
+        <div class="review-card">
+          <div class="review-card-top">
+            <div class="review-avatar">И</div>
+            <div class="review-meta"><div class="review-name">Ирина Павлова</div><div class="review-src">Яндекс · октябрь 2024</div></div>
+          </div>
+          <div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p class="review-text">Переводим ICSR для подачи в систему «Фармаконадзор» Минздрава. Переводчики понимают разницу между PT и LLT в MedDRA, корректно передают степень серьёзности и причинно-следственные оценки. Рекомендую всем коллегам из PV-подразделений.</p>
+          <div class="review-role">Специалист по фармаконадзору, АО «МедРегистр»</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ════════ FAQ ════════ -->
-  <section class="sec sec-faq">
+  <section class="sec sec--alt sec-faq">
     <div class="container">
       <div class="sec-head sec-head--center">
         <h2 class="sec-title">Часто задаваемые вопросы</h2>
@@ -751,51 +837,37 @@
       <div class="faq-list">
 
         <details class="faq-item">
-          <summary class="faq-summary">Как вы обеспечиваете качество перевода?</summary>
+          <summary class="faq-summary">Что такое PSUR и чем он отличается от PBRER?</summary>
           <div class="faq-body">
-            <p>Двухэтапный контроль: сначала перевод выполняет специалист с профильным образованием, затем независимый редактор проверяет точность терминологии, стиль и соответствие оригиналу. Если вас что-то не устраивает — правим бесплатно в течение 7 дней.</p>
+            <p>PSUR (Periodic Safety Update Report) — периодический отчёт о безопасности, применявшийся до перехода на формат ICH E2C(R2). PBRER (Periodic Benefit-Risk Evaluation Report) — его преемник, принятый EMA и FDA. Основное отличие — PBRER включает комплексную оценку соотношения польза/риск, а не только накопленные данные по безопасности. Мы переводим оба формата.</p>
           </div>
         </details>
 
         <details class="faq-item">
-          <summary class="faq-summary">Сколько стоит срочный перевод?</summary>
+          <summary class="faq-summary">Переводите ли вы индивидуальные отчёты о нежелательных реакциях (ICSR)?</summary>
           <div class="faq-body">
-            <p>Срочный перевод с выполнением в течение 24 часов выполняется с коэффициентом ×1,5 к базовой стоимости. Перевод «день в день» в рабочее время — без доплаты, если объём не превышает 5–7 страниц. Уточните у менеджера по конкретному заказу.</p>
+            <p>Да. Переводим ICSR для подачи в EudraVigilance, VigiBase и систему «Фармаконадзор» Минздрава РФ. Переводчики знают MedDRA-кодирование и стандартные формулировки для описания нежелательных реакций различных типов.</p>
           </div>
         </details>
 
         <details class="faq-item">
-          <summary class="faq-summary">Вы сохраняете форматирование документа?</summary>
+          <summary class="faq-summary">Как быстро вы переводите SUSAR-уведомления?</summary>
           <div class="faq-body">
-            <p>Да. Для документов Word, Excel и PowerPoint мы сохраняем исходную структуру, таблицы, шрифты и оформление. PDF-документы переводим с сохранением макета — при необходимости вёрстки — по запросу. Скан или фотография документа не требует оригинального форматирования.</p>
+            <p>SUSAR требуют срочной подачи — 7 или 15 календарных дней в зависимости от исхода. Мы выполняем перевод SUSAR за 24–48 часов в режиме срочного заказа. Принимаем задачу в любой день недели, включая выходные и праздники.</p>
           </div>
         </details>
 
         <details class="faq-item">
-          <summary class="faq-summary">Нужен ли оригинал документа?</summary>
+          <summary class="faq-summary">Обеспечиваете ли единообразие терминологии MedDRA во всех отчётных периодах?</summary>
           <div class="faq-body">
-            <p>Нет, для перевода достаточно качественного скана или фотографии. Оригинал нужен только если требуется нотариальное заверение перевода — в этом случае его можно принести в офис или договориться о другом удобном способе.</p>
+            <p>Да. Для каждого клиента ведётся терминологическая база по его препаратам: MedDRA-термины, стандартные фразы для оценки причинно-следственной связи, кодировка нежелательных реакций. При поступлении нового PSUR или PBRER специалисты работают с той же базой — терминология остаётся консистентной во всех периодах.</p>
           </div>
         </details>
 
         <details class="faq-item">
-          <summary class="faq-summary">С какими языками вы работаете?</summary>
+          <summary class="faq-summary">Переводите ли вы Risk Management Plan (RMP)?</summary>
           <div class="faq-body">
-            <p>Работаем с 60+ языками: все основные европейские (английский, немецкий, французский, испанский, итальянский, португальский), азиатские (китайский, японский, корейский, арабский), а также украинский, белорусский, казахский, армянский, грузинский, иврит, персидский и другие. По редким языкам — уточняйте наличие специалиста.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-summary">Можно ли отправить заявку в нерабочее время?</summary>
-          <div class="faq-body">
-            <p>Да, заявки принимаем круглосуточно через сайт, мессенджеры и электронную почту. Ольга ответит в начале следующего рабочего дня и уточнит все детали. Срочные заказы — обсуждаем индивидуально, стараемся помочь даже в выходные.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-summary">Где заказать профессиональный перевод в Москве срочно?</summary>
-          <div class="faq-body">
-            <p>Бюро переводов «Ремарка» работает с заказами из Москвы дистанционно — получаем файлы онлайн, работаем без выходных. Профессиональный перевод в Москве срочно: до 5 страниц — за 1 рабочий день, для неотложных задач — обсуждаем отдельно. Отправьте файл через чат — Ольга назовёт точный срок и стоимость в течение нескольких минут.</p>
+            <p>Да. Переводим планы управления рисками (RMP) для EMA и Минздрава РФ, включая разделы по профилю безопасности, важным установленным и потенциальным рискам, отсутствующей информации и мерам по минимизации рисков. Также переводим стратегии REMS для FDA.</p>
           </div>
         </details>
 
@@ -806,8 +878,8 @@
   <!-- ════════ CTA ════════ -->
   <section class="sec sec-cta">
     <div class="container">
-      <h2 class="cta-title">Заказать профессиональный перевод в Москве</h2>
-      <p class="cta-sub">Загрузите файл — и через несколько минут получите точную стоимость и срок. Без предоплаты, без обязательств.</p>
+      <h2 class="cta-title">Нужен перевод PSUR, PBRER или SUSAR?</h2>
+      <p class="cta-sub">Пришлите файл — подберём специалиста с опытом в фармаконадзоре</p>
       <div class="cta-btns">
         <a href="#" class="btn btn-primary">Загрузить файл</a>
         <a href="#" class="btn btn-outline">Написать Ольге</a>
@@ -818,38 +890,34 @@
   <!-- ════════ COMMENTS ════════ -->
   <div id="comments" class="comments-area">
     <div class="container">
-
-      <h2 class="comments-title">Комментарии (4)</h2>
-
+      <h2 class="comments-title">Комментарии (3)</h2>
       <ol class="comment-list">
-
         <li class="comment even thread-even depth-1" id="comment-1">
           <article class="comment-body">
             <footer class="comment-meta">
               <div class="comment-author vcard">
-                <div class="wp-avatar">А</div>
-                <div class="fn"><b>Алексей Воронов</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">Project Manager, ООО «СтройГрупп»</span></div>
+                <div class="wp-avatar">Т</div>
+                <div class="fn"><b>Татьяна Белова</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">Руководитель PV-отдела, ООО «ФармТех»</span></div>
               </div>
-              <div class="comment-metadata"><time datetime="2024-11-12">12 ноября 2024</time></div>
+              <div class="comment-metadata"><time datetime="2025-02-10">10 февраля 2025</time></div>
             </footer>
             <div class="comment-content">
-              <p>Заказывали профессиональный перевод технической документации с немецкого — порядка 80 страниц по котельному оборудованию. Сроки выдержали точно, терминология без нареканий. Менеджер держал в курсе на каждом этапе.</p>
+              <p>Сотрудничаем с бюро по переводу PBRER уже второй год. Переводчики понимают структуру отчёта, MedDRA-терминология консистентна от периода к периоду. Особенно ценим, что терминологическую базу хранят и обновляют — не нужно каждый раз объяснять специфику препарата.</p>
             </div>
             <div class="reply"><a class="comment-reply-link" href="#">Ответить</a></div>
           </article>
         </li>
-
         <li class="comment odd alt thread-odd depth-1" id="comment-2">
           <article class="comment-body">
             <footer class="comment-meta">
               <div class="comment-author vcard">
-                <div class="wp-avatar">М</div>
-                <div class="fn"><b>Мария Соколова</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">Юрисконсульт</span></div>
+                <div class="wp-avatar">Д</div>
+                <div class="fn"><b>Дмитрий Ларин</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">Медицинский директор, АО «КлиникалПартнерс»</span></div>
               </div>
-              <div class="comment-metadata"><time datetime="2024-10-03">3 октября 2024</time></div>
+              <div class="comment-metadata"><time datetime="2024-12-05">5 декабря 2024</time></div>
             </footer>
             <div class="comment-content">
-              <p>Перевод договора с английского для сделки с иностранным партнёром. Сделали аккуратно, юридические формулировки точные. Буду обращаться снова — работать удобно, всё онлайн.</p>
+              <p>Обратились с срочным SUSAR в пятницу вечером. Бюро приняло заказ немедленно, перевод был готов к понедельнику утром. Нарративы переведены точно, клиническая картина случая сохранена. Буду рекомендовать коллегам.</p>
             </div>
             <div class="reply"><a class="comment-reply-link" href="#">Ответить</a></div>
           </article>
@@ -861,33 +929,16 @@
                     <div class="wp-avatar" style="width:36px;height:36px;font-size:15px">Р</div>
                     <div class="fn"><b>Ремарка</b><span style="font-size:12px;color:#783CF0;margin-top:1px">Администратор</span></div>
                   </div>
-                  <div class="comment-metadata"><time datetime="2024-10-04">4 октября 2024</time></div>
+                  <div class="comment-metadata"><time datetime="2024-12-06">6 декабря 2024</time></div>
                 </footer>
                 <div class="comment-content">
-                  <p>Мария, спасибо за отзыв! Рады, что сотрудничество прошло успешно. Ждём вас снова — при повторных обращениях ваши глоссарии уже сохранены.</p>
+                  <p>Дмитрий, спасибо за отзыв! SUSAR-заказы принимаем круглосуточно — дедлайны регулятора не ждут. Сохранили контакт для будущих проектов.</p>
                 </div>
               </article>
             </li>
           </ol>
         </li>
-
-        <li class="comment even thread-even depth-1" id="comment-4">
-          <article class="comment-body">
-            <footer class="comment-meta">
-              <div class="comment-author vcard">
-                <div class="wp-avatar">Е</div>
-                <div class="fn"><b>Евгений Кравцов</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">Менеджер по ВЭД</span></div>
-              </div>
-              <div class="comment-metadata"><time datetime="2024-08-19">19 августа 2024</time></div>
-            </footer>
-            <div class="comment-content">
-              <p>Регулярно переводим таможенные документы и контракты. Качество стабильное, цена разумная. Один раз воспользовались срочным тарифом — справились за день.</p>
-            </div>
-            <div class="reply"><a class="comment-reply-link" href="#">Ответить</a></div>
-          </article>
-        </li>
-
-      </ol><!-- /comment-list -->
+      </ol>
 
       <div id="respond" class="comment-respond">
         <h3 id="reply-title" class="comment-reply-title">Оставить комментарий</h3>
@@ -916,7 +967,6 @@
           </p>
         </form>
       </div>
-
     </div>
   </div><!-- /#comments -->
 
@@ -930,7 +980,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="assets/logo-light.png" alt="Remarka" id="footer-logo">
+          <img src="../assets/logo-light.png" alt="Remarka" id="footer-logo">
           <p>Профессиональные переводы и локализация для бизнеса. Работаем удалённо с клиентами по всей России и за её пределами.</p>
           <h5 class="social-title">Мы в соцсетях</h5>
           <div class="social-links">
@@ -975,14 +1025,14 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
-  <script src="js/hero.js"></script>
-  <script src="js/chat.js"></script>
-  <script src="js/animations.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/hero.js"></script>
+  <script src="../js/chat.js"></script>
+  <script src="../js/animations.js"></script>
   <script>
     function updateLogos() {
       const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      const src = isDark ? 'assets/logo-dark.png' : 'assets/logo-light.png';
+      const src = isDark ? '../assets/logo-dark.png' : '../assets/logo-light.png';
       document.querySelectorAll('#logo-img, #footer-logo').forEach(function(img){ img.src = src; });
     }
     updateLogos();

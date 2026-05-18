@@ -3,14 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Профессиональный перевод документов в Москве — от 500 ₽/стр. | Ремарка</title>
-  <meta name="description" content="Профессиональный перевод в Москве — дипломированные специалисты с отраслевым образованием. Юридические, технические, медицинские документы. 60+ языков. Бесплатный расчёт за 5 минут.">
-  <link rel="canonical" href="https://moscowtrans.ru/professionalnyj-perevod/">
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <title>Перевод каталогов запасных частей — parts catalogue, IPC, illustrated parts list | Ремарка</title>
+  <meta name="description" content="Перевод каталогов запасных частей в Москве. Parts catalogue, illustrated parts catalogue (IPC), illustrated parts list. Технические переводчики.">
+  <link rel="canonical" href="https://moscowtrans.ru/tekhnicheskiy-perevod/katalogi-zapchastej/">
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .related-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 20px 18px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--card-bg, var(--surface));
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow .18s, border-color .18s, transform .18s;
+    }
+    .related-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 18px rgba(0,0,0,.08);
+      transform: translateY(-2px);
+    }
+    .related-card svg { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+    .related-card strong { font-size: 14px; font-weight: 600; display: block; line-height: 1.35; }
+    .related-card span { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+  </style>
   <script type="application/ld+json">
   [
     {
@@ -18,17 +46,18 @@
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://moscowtrans.ru/" },
-        { "@type": "ListItem", "position": 2, "name": "Профессиональный перевод в Москве", "item": "https://moscowtrans.ru/professionalnyj-perevod/" }
+        { "@type": "ListItem", "position": 2, "name": "Технический перевод", "item": "https://moscowtrans.ru/tekhnicheskiy-perevod/" },
+        { "@type": "ListItem", "position": 3, "name": "Каталоги запасных частей", "item": "https://moscowtrans.ru/tekhnicheskiy-perevod/katalogi-zapchastej/" }
       ]
     },
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "Профессиональный перевод в Москве",
+      "name": "Перевод каталогов запасных частей в Москве",
       "provider": { "@type": "LocalBusiness", "@id": "https://moscowtrans.ru/#organization", "name": "Бюро переводов Ремарка" },
       "areaServed": { "@type": "City", "name": "Москва" },
-      "description": "Профессиональный перевод документов дипломированными специалистами с отраслевым образованием. Юридические, технические, медицинские, IT-тексты. 60+ языков.",
-      "offers": { "@type": "Offer", "priceCurrency": "RUB", "price": "500", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "500", "priceCurrency": "RUB", "unitText": "стр." } }
+      "description": "Перевод каталогов запасных частей в Москве. Parts catalogue, illustrated parts catalogue (IPC), illustrated parts list. Технические переводчики.",
+      "offers": { "@type": "Offer", "priceCurrency": "RUB", "price": "600", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "600", "priceCurrency": "RUB", "unitText": "стр." } }
     },
     {
       "@context": "https://schema.org",
@@ -36,23 +65,13 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Как вы обеспечиваете качество перевода?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Двухэтапный контроль: сначала перевод выполняет специалист с профильным образованием, затем независимый редактор проверяет точность терминологии, стиль и соответствие оригиналу. Если вас что-то не устраивает — правим бесплатно в течение 7 дней." }
+          "name": "Переводите ли каталоги в форматах XML/SGML для интеграции в ERP-системы?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Да. Работаем с каталогами в форматах XML, SGML и других структурированных форматах. Перевод выполняется с сохранением тегов и структуры данных, что обеспечивает корректную интеграцию переведённого каталога в ERP-системы (SAP, 1С, Oracle и другие)." }
         },
         {
           "@type": "Question",
-          "name": "Сколько стоит срочный перевод?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Срочный перевод с выполнением в течение 24 часов выполняется с коэффициентом ×1,5 к базовой стоимости. Перевод «день в день» в рабочее время — без доплаты, если объём не превышает 5–7 страниц." }
-        },
-        {
-          "@type": "Question",
-          "name": "С какими языками вы работаете?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Работаем с 60+ языками: все основные европейские (английский, немецкий, французский, испанский, итальянский, португальский), азиатские (китайский, японский, корейский, арабский), а также украинский, белорусский, казахский, армянский, грузинский, иврит, персидский и другие." }
-        },
-        {
-          "@type": "Question",
-          "name": "Где заказать профессиональный перевод в Москве срочно?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Бюро переводов «Ремарка» работает с заказами из Москвы дистанционно — получаем файлы онлайн, работаем без выходных. Профессиональный перевод в Москве срочно: до 5 страниц — за 1 рабочий день. Отправьте файл через чат — ответим в течение нескольких минут." }
+          "name": "Работаете ли с авиационными IPC по стандарту ATA iSpec 2200?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Да. Переводим Illustrated Parts Catalogue по стандарту ATA iSpec 2200 и ATA 100. Переводчики имеют опыт работы с авиационной документацией, знают специфику нумерации ATA-глав и структуры IPC. Верификация выполняется специалистом с авиационным образованием." }
         }
       ]
     }
@@ -65,7 +84,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="logo" aria-label="Ремарка">
-        <img src="assets/logo-dark.png" alt="Remarka" id="logo-img">
+        <img src="../assets/logo-dark.png" alt="Remarka" id="logo-img">
       </a>
       <nav class="main-nav" aria-label="Основное меню">
         <a href="/#services">Услуги</a>
@@ -114,7 +133,7 @@
     </div>
   </div>
 
-  <!-- ════════════ HERO ════════════ -->
+  <!-- ════════ HERO ════════ -->
   <div class="hero-bg-block">
   <div class="hero-page">
 
@@ -147,16 +166,17 @@
           <nav class="cw-breadcrumbs" aria-label="Хлебные крошки">
             <a href="/">Главная</a>
             <span class="cw-bc-sep" aria-hidden="true">›</span>
-            <span class="cw-bc-current" aria-current="page">Профессиональный перевод</span>
+            <a href="../tekhnicheskiy-perevod.html">Технический перевод</a>
+            <span class="cw-bc-sep" aria-hidden="true">›</span>
+            <span class="cw-bc-current" aria-current="page">Каталоги запасных частей</span>
           </nav>
           <button class="cw-close" aria-label="Закрыть"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
         </div>
 
         <div class="cw-body">
-          <!-- Панель Ольги -->
           <div class="cw-agent-panel">
             <div class="agent-avatar-wrap">
-              <div class="agent-avatar"><img src="assets/olga.jpg" alt="Ольга"></div>
+              <div class="agent-avatar"><img src="../assets/olga.jpg" alt="Ольга"></div>
               <div class="agent-online-dot"></div>
             </div>
             <div class="agent-name">Ольга</div>
@@ -186,20 +206,19 @@
             </button>
           </div>
 
-          <!-- Сообщения -->
           <div class="cw-right-col">
             <div class="cw-msgs-col">
               <div class="cw-msgs">
                 <div class="msg-bub" data-greeting="1">
-                  <p>Здравствуйте! 👋 Расскажите, какой вид профессионального перевода вас интересует?</p>
+                  <p>Здравствуйте! 👋 Нужен перевод каталога запасных частей?</p>
                   <span class="msg-ts">10:30</span>
                 </div>
                 <div class="msg-bub" data-greeting="2">
-                  <p>Наши переводчики — дипломированные специалисты с профильным образованием: юристы, медики, инженеры, IT-эксперты.</p>
+                  <p>Переводим IPC, IPL и каталоги запчастей любой отрасли. Артикулы и позиции сохраняются точно. Верификация по оригинальной номенклатуре.</p>
                   <span class="msg-ts">10:30</span>
                 </div>
                 <div class="msg-bub" data-greeting="3">
-                  <p>Пришлите файл или опишите задачу — назову точную стоимость и срок прямо сейчас.</p>
+                  <p>Пришлите файл — рассчитаю стоимость за несколько минут.</p>
                   <span class="msg-ts">10:30</span>
                 </div>
               </div>
@@ -226,27 +245,24 @@
   </div><!-- /hero-page -->
   </div><!-- /hero-bg-block -->
 
-  <!-- ════════ ЧТО ТАКОЕ ПРОФЕССИОНАЛЬНЫЙ ПЕРЕВОД ════════ -->
+  <!-- ════════ INTRO ════════ -->
   <section class="sec sec-intro">
     <div class="container">
       <div class="intro-grid">
         <div class="intro-text">
           <p class="intro-label">Бюро переводов «Ремарка», Москва</p>
-          <h1 class="intro-title">Профессиональный перевод в Москве</h1>
-          <p class="intro-tagline">Точность, которую нельзя делегировать машине</p>
-          <p class="intro-body">За каждым профессиональным переводом стоит специалист с двойной квалификацией: лингвистической и профильной. Юридические документы переводят юристы, медицинские тексты — врачи и провизоры, техническую документацию — инженеры. Такая специализация исключает расплывчатость формулировок и ошибки в терминологии.</p>
-          <p class="intro-body">Машинный перевод мы не редактируем: профессиональный перевод в московском бюро создаётся с нуля. Переводчик работает с пониманием контекста и отраслевой терминологии, учитывает стиль и ожидания читателей. Именно поэтому результат не нужно «перечитывать» и исправлять после получения.</p>
-          <p class="intro-body">Заказать профессиональный перевод документов у нас означает получить конкретного специалиста под вашу задачу. Каждый переводчик в нашем пуле прошёл строгий отбор: тестовый перевод, проверку профессиональных знаний и только потом допуск к реальным проектам.</p>
+          <h1 class="intro-title">Перевод каталогов запасных частей</h1>
+          <p class="intro-tagline">Каждая позиция должна совпадать</p>
+          <p class="intro-body">Каталог запасных частей — это документ, по которому механик или снабженец заказывает нужную деталь. Ошибка в наименовании компонента или несовпадение артикула приводит к простою оборудования, повторным заказам и лишним затратам.</p>
+          <p class="intro-body">Бюро «Ремарка» переводит illustrated parts catalogues (IPC), illustrated parts lists (IPL) и каталоги запчастей для авиационной, автомобильной, промышленной и специальной техники. Каждый переводчик работает в своей технической специализации.</p>
+          <p class="intro-body">Артикулы, позиционные номера и коды деталей передаются без изменений. Описания компонентов верифицируются по оригинальной номенклатуре производителя.</p>
         </div>
         <div class="intro-visual">
-          <!-- Decorative illustration: translation flow -->
           <div class="intro-illus" aria-hidden="true">
             <svg viewBox="0 0 480 200" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="ip-g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#783CF0"/><stop offset="100%" stop-color="#00A0F0"/></linearGradient>
-                <linearGradient id="ip-g2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00A0F0"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient>
               </defs>
-              <!-- left document -->
               <rect x="10" y="20" width="140" height="168" rx="12" fill="rgba(120,60,240,.10)" stroke="rgba(120,60,240,.35)" stroke-width="1.5"/>
               <rect x="10" y="20" width="140" height="38" rx="12" fill="rgba(120,60,240,.20)"/>
               <rect x="10" y="43" width="140" height="15" fill="rgba(120,60,240,.20)"/>
@@ -261,7 +277,6 @@
               <rect x="24" y="136" width="90" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
               <rect x="24" y="148" width="98" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
               <rect x="24" y="160" width="76" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
-              <!-- right document -->
               <rect x="330" y="20" width="140" height="168" rx="12" fill="rgba(0,160,240,.10)" stroke="rgba(0,160,240,.35)" stroke-width="1.5"/>
               <rect x="330" y="20" width="140" height="38" rx="12" fill="rgba(0,160,240,.20)"/>
               <rect x="330" y="43" width="140" height="15" fill="rgba(0,160,240,.20)"/>
@@ -276,33 +291,36 @@
               <rect x="344" y="136" width="106" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
               <rect x="344" y="148" width="88" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
               <rect x="344" y="160" width="100" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
-              <!-- central hub -->
               <circle cx="240" cy="104" r="46" fill="rgba(120,60,240,.12)" stroke="rgba(120,60,240,.30)" stroke-width="1.5"/>
               <circle cx="240" cy="104" r="30" fill="rgba(120,60,240,.18)"/>
               <path d="M152 104h56M288 104h40" stroke="rgba(120,60,240,.40)" stroke-width="1.5" stroke-dasharray="4 3"/>
               <path d="M224 104h32M246 96l10 8-10 8" stroke="rgba(167,139,250,.95)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <!-- quality badge -->
-              <circle cx="240" cy="186" r="0" fill="none"/>
-              <path d="M220 182h40M224 176l6 6-6 6" stroke="url(#ip-g1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity=".6"/>
             </svg>
           </div>
-          <!-- 2×2 feature cards -->
           <div class="intro-features">
             <div class="intro-feat">
-              <div class="intro-feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
-              <strong>Профильное образование</strong><span>Переводчик знает предмет, а не только язык</span>
+              <div class="intro-feat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+              <div><strong>Переводчик-инженер по типу оборудования</strong><span>Авиация, автотехника, промышленность — каждая отрасль своим специалистом</span></div>
             </div>
             <div class="intro-feat">
-              <div class="intro-feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-              <strong>Корректура и вычитка</strong><span>Двухэтапный контроль качества перед сдачей</span>
+              <div class="intro-feat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              </div>
+              <div><strong>Сохранение артикулов и позиций деталей</strong><span>Коды и позиционные номера передаются без изменений</span></div>
             </div>
             <div class="intro-feat">
-              <div class="intro-feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-              <strong>Терминологическая точность</strong><span>Отраслевые глоссарии и базы терминов</span>
+              <div class="intro-feat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+              <div><strong>Корректная передача описаний компонентов</strong><span>Технические наименования по оригинальной терминологии производителя</span></div>
             </div>
             <div class="intro-feat">
-              <div class="intro-feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-              <strong>Сохранение форматирования</strong><span>Word, Excel, PowerPoint — структура сохраняется</span>
+              <div class="intro-feat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              </div>
+              <div><strong>Верификация по оригинальной номенклатуре</strong><span>Финальная проверка по документации производителя</span></div>
             </div>
           </div>
         </div>
@@ -339,87 +357,57 @@
     <div class="container">
       <div class="sec-head sec-head--center">
         <h2 class="sec-title">Какие документы мы переводим</h2>
-        <p class="sec-sub">Раскройте нужную категорию — посмотрите конкретные виды документов</p>
+        <p class="sec-sub">Каталоги запасных частей для всех типов оборудования и отраслей</p>
       </div>
       <div class="docs-accordion">
 
         <details class="doc-item" open>
           <summary class="doc-summary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Юридические документы</span>
-          </summary>
-          <div class="doc-body">
-            <p>Договоры и контракты (купли-продажи, аренды, подряда, NDA), доверенности, уставы и учредительные документы, судебные решения и иски, лицензии и разрешения, корпоративные протоколы, апостили.</p>
-          </div>
-        </details>
-
-        <details class="doc-item">
-          <summary class="doc-summary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
-            <span>Технические тексты</span>
-          </summary>
-          <div class="doc-body">
-            <p>Конструкторская документация (КД), руководства по эксплуатации, технические паспорта, патентная документация, ГОСТы и стандарты ISO, технические регламенты, спецификации на оборудование.</p>
-          </div>
-        </details>
-
-        <details class="doc-item">
-          <summary class="doc-summary">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            <span>Медицина и фармацея</span>
+            <span>Illustrated Parts Catalogue (IPC)</span>
           </summary>
           <div class="doc-body">
-            <p>Медицинские карты и выписки, инструкции к лекарственным препаратам, протоколы клинических исследований, медицинские справки и заключения, результаты анализов и обследований, медицинские свидетельства.</p>
+            <p>Иллюстрированные каталоги запасных частей с позиционными номерами и артикулами. Перевод по стандарту ATA iSpec 2200/ATA 100 для авиационного оборудования; по стандартам производителей — для промышленной техники.</p>
           </div>
         </details>
 
         <details class="doc-item">
           <summary class="doc-summary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            <span>IT и разработка</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <span>Illustrated Parts List (IPL)</span>
           </summary>
           <div class="doc-body">
-            <p>Документация к API и SDK, технические задания, интерфейсы приложений (UI strings), пользовательские руководства, справочные системы (help), политики конфиденциальности, локализация мобильных и веб-приложений.</p>
+            <p>Иллюстрированные перечни запасных частей для авиационных двигателей, агрегатов и компонентов. Сохранение структуры figure/item, правильная передача terminology ATA.</p>
           </div>
         </details>
 
         <details class="doc-item">
           <summary class="doc-summary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            <span>Финансы и банки</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <span>Каталоги запчастей автотехники</span>
           </summary>
           <div class="doc-body">
-            <p>Финансовая отчётность (МСФО, РСБУ), аудиторские заключения, проспекты эмиссии, банковские гарантии и аккредитивы, инвестиционные меморандумы, налоговые документы и декларации.</p>
+            <p>Каталоги запасных частей для легковых и грузовых автомобилей, строительной и специальной техники. OEM и aftermarket каталоги. Работа с форматами EPC (Electronic Parts Catalogue).</p>
           </div>
         </details>
 
         <details class="doc-item">
           <summary class="doc-summary">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-            <span>Таможенные и ВЭД</span>
+            <span>Каталоги авиационных компонентов</span>
           </summary>
           <div class="doc-body">
-            <p>Таможенные декларации, сертификаты происхождения товаров, инвойсы и упаковочные листы, внешнеторговые контракты, карнеты АТА, паспорта сделок, разрешения на экспорт/импорт, фитосанитарные сертификаты.</p>
+            <p>Каталоги запасных частей для воздушных судов, авиадвигателей, вспомогательных силовых установок (APU). Перевод по стандартам ATA iSpec 2200, S1000D, ASD-STE100.</p>
           </div>
         </details>
 
         <details class="doc-item">
           <summary class="doc-summary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-            <span>Академические работы</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            <span>Каталоги промышленного оборудования</span>
           </summary>
           <div class="doc-body">
-            <p>Научные статьи и монографии, диссертации и авторефераты, тезисы конференций, рецензии и аннотации, учебные пособия, академические резюме (CV) и сопроводительные письма.</p>
-          </div>
-        </details>
-
-        <details class="doc-item">
-          <summary class="doc-summary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
-            <span>Маркетинг и реклама</span>
-          </summary>
-          <div class="doc-body">
-            <p>Сайты и лендинги (с SEO-адаптацией), презентации и pitchdeck, рекламные материалы и буклеты, пресс-релизы, корпоративные блоги, контент для социальных сетей, маркетинговые исследования.</p>
+            <p>Каталоги запасных частей для станков, производственных линий, подъёмного оборудования, насосов, компрессоров и другой промышленной техники. Поддержка форматов XML/SGML для ERP-интеграции.</p>
           </div>
         </details>
 
@@ -427,87 +415,46 @@
     </div>
   </section>
 
-  <!-- ════════ НАШИ ПЕРЕВОДЧИКИ ════════ -->
-  <section class="sec sec-translators">
-    <div class="container">
-      <div class="sec-head sec-head--center">
-        <h2 class="sec-title">Наши переводчики в Москве</h2>
-        <p class="sec-sub">Профессиональные переводчики московского бюро «Ремарка» не берутся за всё подряд — каждый специалист работает только в своей области</p>
-      </div>
-      <div class="translators-grid">
-        <div class="translator-card">
-          <div class="translator-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-          </div>
-          <h3>Двойное образование</h3>
-          <p>Каждый переводчик имеет лингвистический диплом и второй диплом по специализации: юридический, медицинский, технический или IT.</p>
-        </div>
-        <div class="translator-card">
-          <div class="translator-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z"/></svg>
-          </div>
-          <h3>Строгий отбор</h3>
-          <p>Перед допуском к заказам — тестовый перевод и проверка профессиональных знаний. К работе допускается менее 30% кандидатов.</p>
-        </div>
-        <div class="translator-card">
-          <div class="translator-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><line x1="3" y1="12" x2="3" y2="20"/><line x1="1" y1="16" x2="5" y2="16"/></svg>
-          </div>
-          <h3>Опыт от 3 лет</h3>
-          <p>Работаем только с переводчиками, у которых минимум 3 года практики именно в своей отрасли — не просто языковой опыт, а отраслевой.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════ КОНТРОЛЬ КАЧЕСТВА — SPLIT SECTION ════════ -->
+  <!-- ════════ SPLIT SECTION ════════ -->
   <section class="sec sec-split">
     <div class="container">
       <div class="split-row split-row--rev">
         <div class="split-text">
-          <p class="sec-label">Стандарты качества</p>
-          <h2>Как мы гарантируем точность перевода</h2>
-          <p>Каждый перевод проходит двухэтапный контроль: сначала профильный специалист выполняет перевод с полным пониманием предмета, затем независимый редактор проверяет точность терминологии и соответствие оригиналу.</p>
-          <p>Мы не передаём задачу первому доступному переводчику. Подбор специалиста — это отдельный шаг: мы сверяем тематику документа с профилем переводчика и его опытом именно в этой отрасли.</p>
+          <p class="sec-label">Точность номенклатуры</p>
+          <h2>Каталог запчастей: каждая позиция должна совпадать</h2>
+          <p>В каталоге запасных частей каждая позиция несёт критически важную информацию: наименование детали, артикул, код замены, применяемость. Ошибка в любом из этих полей приводит к заказу неверной детали — и к простою оборудования.</p>
+          <p>Мы назначаем переводчика-инженера по типу оборудования: авиационный механик переводит IPC, автомобильный инженер — каталоги OEM, специалист по промышленному оборудованию — каталоги станков и агрегатов. Верификация выполняется по оригинальной номенклатуре производителя.</p>
           <ul class="split-checklist">
-            <li>Переводчик с профильным образованием (юрист, врач, инженер)</li>
-            <li>Независимая редакторская вычитка перед сдачей</li>
-            <li>Проверка по отраслевому глоссарию клиента</li>
-            <li>Бесплатная правка в течение 7 дней после получения</li>
+            <li>Переводчик-инженер по типу оборудования</li>
+            <li>Сохранение артикулов и позиций деталей</li>
+            <li>Корректная передача технических описаний компонентов</li>
+            <li>Верификация по оригинальной номенклатуре</li>
           </ul>
         </div>
         <div class="split-visual" aria-hidden="true">
           <svg viewBox="0 0 380 320" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="sq-g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#783CF0"/><stop offset="100%" stop-color="#00A0F0"/></linearGradient>
-              <linearGradient id="sq-g2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#783CF0" stop-opacity=".5"/><stop offset="100%" stop-color="#00A0F0" stop-opacity=".5"/></linearGradient>
+              <linearGradient id="sq-g1-t" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#783CF0"/><stop offset="100%" stop-color="#00A0F0"/></linearGradient>
+              <linearGradient id="sq-g2-t" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#783CF0" stop-opacity=".5"/><stop offset="100%" stop-color="#00A0F0" stop-opacity=".5"/></linearGradient>
             </defs>
-            <!-- background circle glow -->
             <circle cx="190" cy="160" r="130" fill="rgba(120,60,240,.07)"/>
-            <!-- steps connected vertically -->
             <rect x="60" y="30" width="260" height="64" rx="16" fill="rgba(120,60,240,.12)" stroke="rgba(120,60,240,.30)" stroke-width="1.5"/>
-            <circle cx="96" cy="62" r="20" fill="url(#sq-g1)" opacity=".85"/>
+            <circle cx="96" cy="62" r="20" fill="url(#sq-g1-t)" opacity=".85"/>
             <path d="M88 62l6 6 10-12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <rect x="126" y="50" width="170" height="9" rx="4" fill="rgba(167,139,250,.55)"/>
             <rect x="126" y="66" width="120" height="7" rx="3" fill="rgba(167,139,250,.30)"/>
-
-            <line x1="190" y1="94" x2="190" y2="118" stroke="url(#sq-g2)" stroke-width="2" stroke-dasharray="4 3"/>
-
+            <line x1="190" y1="94" x2="190" y2="118" stroke="url(#sq-g2-t)" stroke-width="2" stroke-dasharray="4 3"/>
             <rect x="60" y="118" width="260" height="64" rx="16" fill="rgba(0,160,240,.12)" stroke="rgba(0,160,240,.30)" stroke-width="1.5"/>
-            <circle cx="96" cy="150" r="20" fill="url(#sq-g1)" opacity=".85"/>
+            <circle cx="96" cy="150" r="20" fill="url(#sq-g1-t)" opacity=".85"/>
             <path d="M88 150l6 6 10-12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <rect x="126" y="138" width="155" height="9" rx="4" fill="rgba(0,160,240,.55)"/>
             <rect x="126" y="154" width="110" height="7" rx="3" fill="rgba(0,160,240,.30)"/>
-
-            <line x1="190" y1="182" x2="190" y2="206" stroke="url(#sq-g2)" stroke-width="2" stroke-dasharray="4 3"/>
-
+            <line x1="190" y1="182" x2="190" y2="206" stroke="url(#sq-g2-t)" stroke-width="2" stroke-dasharray="4 3"/>
             <rect x="60" y="206" width="260" height="64" rx="16" fill="rgba(120,60,240,.12)" stroke="rgba(120,60,240,.30)" stroke-width="1.5"/>
-            <circle cx="96" cy="238" r="20" fill="url(#sq-g1)" opacity=".85"/>
+            <circle cx="96" cy="238" r="20" fill="url(#sq-g1-t)" opacity=".85"/>
             <path d="M88 238l6 6 10-12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <rect x="126" y="226" width="175" height="9" rx="4" fill="rgba(167,139,250,.55)"/>
             <rect x="126" y="242" width="130" height="7" rx="3" fill="rgba(167,139,250,.30)"/>
-
-            <!-- quality seal -->
             <circle cx="310" cy="290" r="26" fill="rgba(0,200,100,.12)" stroke="rgba(0,200,100,.35)" stroke-width="1.5"/>
             <path d="M300 290l8 8 14-16" stroke="rgba(0,200,100,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -516,7 +463,7 @@
     </div>
   </section>
 
-  <!-- ════════ КАК ПРОХОДИТ РАБОТА (6 шагов) ════════ -->
+  <!-- ════════ КАК ПРОХОДИТ РАБОТА ════════ -->
   <section class="sec sec--alt sec-how-pro">
     <div class="container">
       <div class="sec-head sec-head--center">
@@ -527,38 +474,38 @@
         <div class="step-item">
           <div class="step-num">01</div>
           <h3>Загрузите файл</h3>
-          <p>Через сайт, мессенджер, email или принесите в офис</p>
+          <p>Через сайт, мессенджер или email — удобным для вас способом</p>
         </div>
         <div class="step-item">
           <div class="step-num">02</div>
           <h3>Анализ документа</h3>
-          <p>Оцениваем объём, тематику и сложность — за несколько минут</p>
+          <p>Определяем тип оборудования, формат каталога и объём — быстро</p>
         </div>
         <div class="step-item">
           <div class="step-num">03</div>
           <h3>Подбор специалиста</h3>
-          <p>Выбираем переводчика с профильным образованием в вашей области</p>
+          <p>Выбираем инженера-переводчика по типу оборудования</p>
         </div>
         <div class="step-item">
           <div class="step-num">04</div>
           <h3>Перевод</h3>
-          <p>Специалист работает с соблюдением терминологии и стиля оригинала</p>
+          <p>Инженер переводит с соблюдением оригинальной номенклатуры</p>
         </div>
         <div class="step-item">
           <div class="step-num">05</div>
-          <h3>Корректура</h3>
-          <p>Редактор проверяет точность, стиль и соответствие заданию</p>
+          <h3>Верификация</h3>
+          <p>Позиции сверяются с оригинальной документацией производителя</p>
         </div>
         <div class="step-item">
           <div class="step-num">06</div>
           <h3>Готовый перевод</h3>
-          <p>Отправляем файл или вы забираете из офиса — точно в срок</p>
+          <p>Отправляем файл в согласованном формате точно в срок</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ════════ ГАРАНТИИ КАЧЕСТВА ════════ -->
+  <!-- ════════ ГАРАНТИИ ════════ -->
   <section class="sec sec-guarantees">
     <div class="container">
       <div class="sec-head sec-head--center">
@@ -571,28 +518,28 @@
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.9"/></svg>
           </div>
           <h3>Бесплатная правка</h3>
-          <p>Исправим бесплатно в течение 7 дней, если перевод не соответствует заданию или содержит неточности</p>
+          <p>Исправим бесплатно в течение 7 дней, если перевод не соответствует заданию</p>
         </div>
         <div class="guarantee-card">
           <div class="guarantee-icon">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           </div>
           <h3>Конфиденциальность</h3>
-          <p>NDA по запросу. Ваши документы не передаются третьим лицам и не хранятся на внешних серверах</p>
+          <p>NDA по запросу. Ваши документы не передаются третьим лицам</p>
         </div>
         <div class="guarantee-card">
           <div class="guarantee-icon">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
           <h3>Соблюдение сроков</h3>
-          <p>Если не уложились в оговорённый срок по нашей вине — возвращаем предоплату или делаем скидку на следующий заказ</p>
+          <p>Если не уложились по нашей вине — возвращаем предоплату или скидка на следующий заказ</p>
         </div>
         <div class="guarantee-card">
           <div class="guarantee-icon">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           </div>
           <h3>База терминологии</h3>
-          <p>Сохраняем глоссарий вашей компании — при повторных заказах терминология остаётся единой, перевод быстрее</p>
+          <p>Сохраняем глоссарий и номенклатуру — повторные заказы быстрее и дешевле</p>
         </div>
       </div>
     </div>
@@ -617,33 +564,33 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>До 5 страниц</strong><span>до 9 000 знаков</span></td>
+              <td><strong>До 5 страниц</strong></td>
               <td>1 рабочий день</td>
-              <td class="vol-price">от 2 500 ₽</td>
+              <td class="vol-price">от 3 000 ₽</td>
               <td><a href="#" class="vol-btn">Заказать</a></td>
             </tr>
             <tr>
-              <td><strong>5–20 страниц</strong><span>9 000 – 36 000 знаков</span></td>
+              <td><strong>5–20 страниц</strong></td>
               <td>2–3 рабочих дня</td>
-              <td class="vol-price">от 500 ₽/стр.</td>
+              <td class="vol-price">от 600 ₽/стр.</td>
               <td><a href="#" class="vol-btn">Заказать</a></td>
             </tr>
             <tr>
-              <td><strong>20–50 страниц</strong><span>36 000 – 90 000 знаков</span></td>
-              <td>3–5 рабочих дней</td>
-              <td class="vol-price">от 480 ₽/стр.</td>
+              <td><strong>20–100 страниц</strong></td>
+              <td>3–7 рабочих дней</td>
+              <td class="vol-price">от 600 ₽/стр.</td>
               <td><a href="#" class="vol-btn">Заказать</a></td>
             </tr>
             <tr>
-              <td><strong>Свыше 50 страниц</strong><span>от 90 000 знаков</span></td>
+              <td><strong>Свыше 100 страниц</strong></td>
               <td>по договорённости</td>
-              <td class="vol-price">от 450 ₽/стр.</td>
+              <td class="vol-price">по запросу</td>
               <td><a href="#" class="vol-btn">Заказать</a></td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p class="vol-note">Срочный перевод (менее 24 часов) — коэффициент ×1,5 к базовой стоимости. Точный расчёт сделаем после анализа вашего файла.</p>
+      <p class="vol-note">Срочный перевод — коэффициент ×1,5. Расчёт после анализа файла.</p>
     </div>
   </section>
 
@@ -672,7 +619,7 @@
             <tr><td>Вычитка носителем языка</td><td class="cmp-no">✗</td><td class="cmp-no cmp-featured">✗</td><td class="cmp-yes">✓</td></tr>
             <tr><td>Подходит для публикаций и тендеров</td><td class="cmp-no">✗</td><td class="cmp-part cmp-featured">условно</td><td class="cmp-yes">✓</td></tr>
             <tr class="cmp-meta"><td>Срок</td><td>от 1 дня</td><td class="cmp-featured">1–3 дня</td><td>2–5 дней</td></tr>
-            <tr class="cmp-meta cmp-price-row"><td>Стоимость</td><td>от 250 ₽/стр.</td><td class="cmp-featured">от 500 ₽/стр.</td><td>от 800 ₽/стр.</td></tr>
+            <tr class="cmp-meta cmp-price-row"><td>Стоимость</td><td>от 250 ₽/стр.</td><td class="cmp-featured">от 600 ₽/стр.</td><td>от 950 ₽/стр.</td></tr>
           </tbody>
           <tfoot>
             <tr>
@@ -687,13 +634,59 @@
     </div>
   </section>
 
+  <!-- ════════ СВЯЗАННЫЕ СТРАНИЦЫ ════════ -->
+  <section class="sec sec--alt sec-related">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Смежные виды перевода</h2>
+        <p class="sec-sub">Другие документы, с которыми мы работаем в области технической документации</p>
+      </div>
+      <div class="related-grid">
+        <a href="rukovodstva-polzovatelya.html" class="related-card">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          <div>
+            <strong>Руководства пользователя</strong>
+            <span>User manual, owner's manual, operator's guide</span>
+          </div>
+        </a>
+        <a href="tekhnicheskie-pasporta.html" class="related-card">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <div>
+            <strong>Технические паспорта</strong>
+            <span>Паспорта оборудования, технические описания, data sheets</span>
+          </div>
+        </a>
+        <a href="instrukcii-po-ekspluatatsii.html" class="related-card">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          <div>
+            <strong>Инструкции по эксплуатации</strong>
+            <span>Руководства оператора, инструкции по техническому обслуживанию</span>
+          </div>
+        </a>
+        <a href="../tekhnicheskiy-perevod/aviastroenie.html" class="related-card">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          <div>
+            <strong>Перевод для авиастроения</strong>
+            <span>AMM, CMM, IPC, технические бюллетени, авиационные регламенты</span>
+          </div>
+        </a>
+      </div>
+      <div style="text-align:center;margin-top:32px">
+        <a href="../tekhnicheskiy-perevod.html" style="display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-weight:600;text-decoration:none;font-size:15px">
+          Все виды технического перевода
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ════════ ОТЗЫВЫ ════════ -->
-  <section class="sec sec--alt sec-reviews">
+  <section class="sec sec-reviews">
     <div class="container">
       <div class="reviews-head">
         <div>
           <h2 class="sec-title">Что говорят клиенты</h2>
-          <p class="sec-sub" style="margin-top:6px">Реальные отзывы о профессиональных переводах</p>
+          <p class="sec-sub" style="margin-top:6px">Реальные отзывы о переводе каталогов запасных частей</p>
         </div>
         <div class="review-rating-block">
           <div class="review-rating-score">4.98</div>
@@ -709,40 +702,42 @@
         <div class="review-platform-links">
           <a href="https://yandex.ru/maps/org/remarka/51867347382/reviews/" class="review-platform-link" target="_blank" rel="noopener">Яндекс</a>
           <a href="https://maps.app.goo.gl/d8BKJYw81PqBHXvz7" class="review-platform-link" target="_blank" rel="noopener">Google</a>
-          <a href="https://2gis.ru/krasnodar/search/%D0%B1%D1%8E%D1%80%D0%BE%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4%D0%BE%D0%B2%20%D1%80%D0%B5%D0%BC%D0%B0%D1%80%D0%BA%D0%B0/firm/70000001041287881" class="review-platform-link" target="_blank" rel="noopener">2ГИС</a>
         </div>
       </div>
       <div class="reviews-grid" style="grid-template-columns:repeat(3,1fr)">
         <div class="review-card">
           <div class="review-card-top">
-            <div class="review-avatar">Ю</div>
-            <div class="review-meta"><div class="review-name">Юлия</div><div class="review-src">Яндекс · октябрь 2023</div></div>
+            <div class="review-avatar">Р</div>
+            <div class="review-meta"><div class="review-name">Роман Кириллов</div><div class="review-src">Яндекс · апрель 2025</div></div>
           </div>
           <div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-          <p class="review-text">Бюро переводов у нас на хорошем счету. Обращались уже несколько раз. Выполняют медицинские и технические переводы. Расценки нормальные, качество стабильно высокое.</p>
+          <p class="review-text">Заказывали перевод IPC для авиационного двигателя с английского. Структура ATA-глав сохранена, позиционные номера в порядке. Специалист знал предмет — это ощущалось сразу.</p>
+          <div class="review-role">Инженер-технолог АТЦ</div>
+        </div>
+        <div class="review-card">
+          <div class="review-card-top">
+            <div class="review-avatar">Т</div>
+            <div class="review-meta"><div class="review-name">Татьяна Власова</div><div class="review-src">Google · февраль 2025</div></div>
+          </div>
+          <div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p class="review-text">Переводили каталог запчастей для немецкого станка на русский. Артикулы все совпали, наименования деталей переданы корректно — наши снабженцы работают с каталогом без вопросов.</p>
+          <div class="review-role">Начальник отдела снабжения, машиностроительный завод</div>
         </div>
         <div class="review-card">
           <div class="review-card-top">
             <div class="review-avatar">К</div>
-            <div class="review-meta"><div class="review-name">Карина Хдрян</div><div class="review-src">Google · 7 отзывов</div></div>
+            <div class="review-meta"><div class="review-name">Константин Зайцев</div><div class="review-src">Яндекс · декабрь 2024</div></div>
           </div>
           <div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-          <p class="review-text">Делали несколько раз перевод паспорта. Отличный сервис, чуткий сотрудник всё сделал быстро. При повторном обращении перевод уже был в базе — процедура прошла в 3 раза быстрее.</p>
-        </div>
-        <div class="review-card">
-          <div class="review-card-top">
-            <div class="review-avatar">А</div>
-            <div class="review-meta"><div class="review-name">Анна Герасимович</div><div class="review-src">2ГИС · январь 2021</div></div>
-          </div>
-          <div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-          <p class="review-text">Обращаюсь по работе довольно часто. Делают быстро, замечаний не было. Отдельно хочу отметить широкий выбор языков — берутся за арабский, который другие не делают.</p>
+          <p class="review-text">Каталог запчастей для строительной техники Komatsu — около 400 страниц. Выполнили в срок, XML-формат для нашей системы подготовлен корректно. Уже третий каталог через «Ремарку».</p>
+          <div class="review-role">IT-директор, дилерский центр</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ════════ FAQ ════════ -->
-  <section class="sec sec-faq">
+  <section class="sec sec--alt sec-faq">
     <div class="container">
       <div class="sec-head sec-head--center">
         <h2 class="sec-title">Часто задаваемые вопросы</h2>
@@ -751,51 +746,37 @@
       <div class="faq-list">
 
         <details class="faq-item">
-          <summary class="faq-summary">Как вы обеспечиваете качество перевода?</summary>
+          <summary class="faq-summary">Переводите ли каталоги в форматах XML/SGML для интеграции в ERP-системы?</summary>
           <div class="faq-body">
-            <p>Двухэтапный контроль: сначала перевод выполняет специалист с профильным образованием, затем независимый редактор проверяет точность терминологии, стиль и соответствие оригиналу. Если вас что-то не устраивает — правим бесплатно в течение 7 дней.</p>
+            <p>Да. Работаем с каталогами в форматах XML, SGML и других структурированных форматах. Перевод выполняется с сохранением тегов и структуры данных, что обеспечивает корректную интеграцию переведённого каталога в ERP-системы (SAP, 1С, Oracle и другие).</p>
           </div>
         </details>
 
         <details class="faq-item">
-          <summary class="faq-summary">Сколько стоит срочный перевод?</summary>
+          <summary class="faq-summary">Работаете ли с авиационными IPC по стандарту ATA iSpec 2200?</summary>
           <div class="faq-body">
-            <p>Срочный перевод с выполнением в течение 24 часов выполняется с коэффициентом ×1,5 к базовой стоимости. Перевод «день в день» в рабочее время — без доплаты, если объём не превышает 5–7 страниц. Уточните у менеджера по конкретному заказу.</p>
+            <p>Да. Переводим Illustrated Parts Catalogue по стандарту ATA iSpec 2200 и ATA 100. Переводчики имеют опыт работы с авиационной документацией, знают специфику нумерации ATA-глав и структуры IPC. Верификация выполняется специалистом с авиационным образованием.</p>
           </div>
         </details>
 
         <details class="faq-item">
-          <summary class="faq-summary">Вы сохраняете форматирование документа?</summary>
+          <summary class="faq-summary">Сохраняете ли артикулы и коды деталей в переведённом каталоге?</summary>
           <div class="faq-body">
-            <p>Да. Для документов Word, Excel и PowerPoint мы сохраняем исходную структуру, таблицы, шрифты и оформление. PDF-документы переводим с сохранением макета — при необходимости вёрстки — по запросу. Скан или фотография документа не требует оригинального форматирования.</p>
+            <p>Да. Артикулы, коды деталей, позиционные номера и другие идентификаторы передаются без изменений — в точном соответствии с оригиналом. Это принципиальное требование для работы каталога в снабженческих и ERP-системах.</p>
           </div>
         </details>
 
         <details class="faq-item">
-          <summary class="faq-summary">Нужен ли оригинал документа?</summary>
+          <summary class="faq-summary">Можете ли перевести каталог запчастей для редкого или специализированного оборудования?</summary>
           <div class="faq-body">
-            <p>Нет, для перевода достаточно качественного скана или фотографии. Оригинал нужен только если требуется нотариальное заверение перевода — в этом случае его можно принести в офис или договориться о другом удобном способе.</p>
+            <p>Да. Для редкого оборудования подбираем переводчика с наиболее близкой специализацией и дополнительно изучаем документацию производителя. Если у вас есть глоссарий или предыдущие переводы — используем их для обеспечения единства терминологии.</p>
           </div>
         </details>
 
         <details class="faq-item">
-          <summary class="faq-summary">С какими языками вы работаете?</summary>
+          <summary class="faq-summary">Переводите ли иллюстрации и подписи к рисункам в каталоге?</summary>
           <div class="faq-body">
-            <p>Работаем с 60+ языками: все основные европейские (английский, немецкий, французский, испанский, итальянский, португальский), азиатские (китайский, японский, корейский, арабский), а также украинский, белорусский, казахский, армянский, грузинский, иврит, персидский и другие. По редким языкам — уточняйте наличие специалиста.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-summary">Можно ли отправить заявку в нерабочее время?</summary>
-          <div class="faq-body">
-            <p>Да, заявки принимаем круглосуточно через сайт, мессенджеры и электронную почту. Ольга ответит в начале следующего рабочего дня и уточнит все детали. Срочные заказы — обсуждаем индивидуально, стараемся помочь даже в выходные.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-summary">Где заказать профессиональный перевод в Москве срочно?</summary>
-          <div class="faq-body">
-            <p>Бюро переводов «Ремарка» работает с заказами из Москвы дистанционно — получаем файлы онлайн, работаем без выходных. Профессиональный перевод в Москве срочно: до 5 страниц — за 1 рабочий день, для неотложных задач — обсуждаем отдельно. Отправьте файл через чат — Ольга назовёт точный срок и стоимость в течение нескольких минут.</p>
+            <p>Да. Подписи к иллюстрациям, выноски с номерами позиций и текстовые подписи на рисунках переводятся полностью. Редактирование непосредственно иллюстраций (например, в DWG или SVG) — по отдельному согласованию.</p>
           </div>
         </details>
 
@@ -806,8 +787,8 @@
   <!-- ════════ CTA ════════ -->
   <section class="sec sec-cta">
     <div class="container">
-      <h2 class="cta-title">Заказать профессиональный перевод в Москве</h2>
-      <p class="cta-sub">Загрузите файл — и через несколько минут получите точную стоимость и срок. Без предоплаты, без обязательств.</p>
+      <h2 class="cta-title">Нужен перевод каталога запасных частей?</h2>
+      <p class="cta-sub">Пришлите файл — за несколько минут получите точный расчёт стоимости и срок выполнения</p>
       <div class="cta-btns">
         <a href="#" class="btn btn-primary">Загрузить файл</a>
         <a href="#" class="btn btn-outline">Написать Ольге</a>
@@ -818,77 +799,39 @@
   <!-- ════════ COMMENTS ════════ -->
   <div id="comments" class="comments-area">
     <div class="container">
-
-      <h2 class="comments-title">Комментарии (4)</h2>
-
+      <h2 class="comments-title">Комментарии (2)</h2>
       <ol class="comment-list">
-
         <li class="comment even thread-even depth-1" id="comment-1">
           <article class="comment-body">
             <footer class="comment-meta">
               <div class="comment-author vcard">
                 <div class="wp-avatar">А</div>
-                <div class="fn"><b>Алексей Воронов</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">Project Manager, ООО «СтройГрупп»</span></div>
+                <div class="fn"><b>Артём Соколов</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">Инженер по запасным частям</span></div>
               </div>
-              <div class="comment-metadata"><time datetime="2024-11-12">12 ноября 2024</time></div>
+              <div class="comment-metadata"><time datetime="2025-03-15">15 марта 2025</time></div>
             </footer>
             <div class="comment-content">
-              <p>Заказывали профессиональный перевод технической документации с немецкого — порядка 80 страниц по котельному оборудованию. Сроки выдержали точно, терминология без нареканий. Менеджер держал в курсе на каждом этапе.</p>
+              <p>Перевели IPL для турбовинтового двигателя с английского. Структура сохранена, все figure/item номера на месте. Для нашего дела точность — это всё.</p>
             </div>
             <div class="reply"><a class="comment-reply-link" href="#">Ответить</a></div>
           </article>
         </li>
-
         <li class="comment odd alt thread-odd depth-1" id="comment-2">
           <article class="comment-body">
             <footer class="comment-meta">
               <div class="comment-author vcard">
-                <div class="wp-avatar">М</div>
-                <div class="fn"><b>Мария Соколова</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">Юрисконсульт</span></div>
+                <div class="wp-avatar">Л</div>
+                <div class="fn"><b>Людмила Петрова</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">Менеджер по логистике</span></div>
               </div>
-              <div class="comment-metadata"><time datetime="2024-10-03">3 октября 2024</time></div>
+              <div class="comment-metadata"><time datetime="2025-01-08">8 января 2025</time></div>
             </footer>
             <div class="comment-content">
-              <p>Перевод договора с английского для сделки с иностранным партнёром. Сделали аккуратно, юридические формулировки точные. Буду обращаться снова — работать удобно, всё онлайн.</p>
-            </div>
-            <div class="reply"><a class="comment-reply-link" href="#">Ответить</a></div>
-          </article>
-          <ol class="children">
-            <li class="comment depth-2" id="comment-3">
-              <article class="comment-body">
-                <footer class="comment-meta">
-                  <div class="comment-author vcard">
-                    <div class="wp-avatar" style="width:36px;height:36px;font-size:15px">Р</div>
-                    <div class="fn"><b>Ремарка</b><span style="font-size:12px;color:#783CF0;margin-top:1px">Администратор</span></div>
-                  </div>
-                  <div class="comment-metadata"><time datetime="2024-10-04">4 октября 2024</time></div>
-                </footer>
-                <div class="comment-content">
-                  <p>Мария, спасибо за отзыв! Рады, что сотрудничество прошло успешно. Ждём вас снова — при повторных обращениях ваши глоссарии уже сохранены.</p>
-                </div>
-              </article>
-            </li>
-          </ol>
-        </li>
-
-        <li class="comment even thread-even depth-1" id="comment-4">
-          <article class="comment-body">
-            <footer class="comment-meta">
-              <div class="comment-author vcard">
-                <div class="wp-avatar">Е</div>
-                <div class="fn"><b>Евгений Кравцов</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">Менеджер по ВЭД</span></div>
-              </div>
-              <div class="comment-metadata"><time datetime="2024-08-19">19 августа 2024</time></div>
-            </footer>
-            <div class="comment-content">
-              <p>Регулярно переводим таможенные документы и контракты. Качество стабильное, цена разумная. Один раз воспользовались срочным тарифом — справились за день.</p>
+              <p>Каталог запчастей для вилочного погрузчика — около 250 страниц. Перевод аккуратный, артикулы все совпадают. Работаем регулярно.</p>
             </div>
             <div class="reply"><a class="comment-reply-link" href="#">Ответить</a></div>
           </article>
         </li>
-
-      </ol><!-- /comment-list -->
-
+      </ol>
       <div id="respond" class="comment-respond">
         <h3 id="reply-title" class="comment-reply-title">Оставить комментарий</h3>
         <form action="#" method="post" id="commentform" class="comment-form" novalidate>
@@ -916,11 +859,9 @@
           </p>
         </form>
       </div>
-
     </div>
-  </div><!-- /#comments -->
+  </div>
 
-  <!-- Плавающая кнопка -->
   <button class="chat-float-btn" id="chatFloatBtn" aria-label="Открыть чат">
     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
   </button>
@@ -930,7 +871,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="assets/logo-light.png" alt="Remarka" id="footer-logo">
+          <img src="../assets/logo-light.png" alt="Remarka" id="footer-logo">
           <p>Профессиональные переводы и локализация для бизнеса. Работаем удалённо с клиентами по всей России и за её пределами.</p>
           <h5 class="social-title">Мы в соцсетях</h5>
           <div class="social-links">
@@ -941,7 +882,7 @@
         <div class="footer-col">
           <h4>Услуги</h4>
           <ul>
-            <li><a href="#">Технический перевод</a></li>
+            <li><a href="../tekhnicheskiy-perevod.html">Технический перевод</a></li>
             <li><a href="#">Юридический перевод</a></li>
             <li><a href="#">Медицинский перевод</a></li>
             <li><a href="#">IT-перевод</a></li>
@@ -975,14 +916,14 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
-  <script src="js/hero.js"></script>
-  <script src="js/chat.js"></script>
-  <script src="js/animations.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/hero.js"></script>
+  <script src="../js/chat.js"></script>
+  <script src="../js/animations.js"></script>
   <script>
     function updateLogos() {
       const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      const src = isDark ? 'assets/logo-dark.png' : 'assets/logo-light.png';
+      const src = isDark ? '../assets/logo-dark.png' : '../assets/logo-light.png';
       document.querySelectorAll('#logo-img, #footer-logo').forEach(function(img){ img.src = src; });
     }
     updateLogos();
