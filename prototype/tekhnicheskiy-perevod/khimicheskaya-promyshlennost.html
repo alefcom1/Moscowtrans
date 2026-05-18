@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Перевод химической документации в Москве — SDS, MSDS, технологические регламенты | Ремарка</title>
+  <meta name="description" content="Технический перевод химической документации в Москве. SDS/MSDS, регламенты, REACH, GHS-этикетки. Переводчики-химики. Бесплатный расчёт за 5 минут.">
+  <link rel="canonical" href="https://moscowtrans.ru/tekhnicheskiy-perevod/khimicheskaya-promyshlennost/">
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .doc-ref-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .doc-ref-card {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 20px 18px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--card-bg, var(--surface));
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow .18s, border-color .18s, transform .18s;
+    }
+    .doc-ref-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 18px rgba(0,0,0,.08);
+      transform: translateY(-2px);
+    }
+    .doc-ref-card svg { color: var(--accent); flex-shrink: 0; }
+    .doc-ref-card strong { font-size: 15px; font-weight: 600; line-height: 1.3; }
+    .doc-ref-card span { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+  </style>
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://moscowtrans.ru/" },
+        { "@type": "ListItem", "position": 2, "name": "Технический перевод", "item": "https://moscowtrans.ru/tekhnicheskiy-perevod/" },
+        { "@type": "ListItem", "position": 3, "name": "Химическая промышленность", "item": "https://moscowtrans.ru/tekhnicheskiy-perevod/khimicheskaya-promyshlennost/" }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Перевод документации химической промышленности",
+      "provider": { "@type": "LocalBusiness", "@id": "https://moscowtrans.ru/#organization", "name": "Бюро переводов Ремарка" },
+      "areaServed": { "@type": "City", "name": "Москва" },
+      "description": "Технический перевод химической документации в Москве: SDS/MSDS, REACH, GHS-этикетки, технологические регламенты. Переводчики-химики.",
+      "offers": { "@type": "Offer", "priceCurrency": "RUB", "price": "600", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "600", "priceCurrency": "RUB", "unitText": "стр." } }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Переводите ли SDS-паспорта в соответствии с GHS Revision 9?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Да. Переводим SDS в соответствии с актуальным изданием GHS (Revision 9) и требованиями ГОСТ 30333-2007. Все 16 разделов паспорта безопасности оформляются в соответствии с действующими нормами. Химические названия, CAS-номера и классификация опасности верифицируются по базам данных ECHA и HSDB." }
+        },
+        {
+          "@type": "Question",
+          "name": "Обеспечиваете ли соответствие требованиям REACH при переводе регистрационных досье?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Да. Переводим регистрационные досье REACH с соблюдением структуры и требований ECHA. Переводчики-химики знакомы с форматом Chemical Safety Report (CSR), Substance Evaluation и требованиями к разделам DNEL/PNEC." }
+        },
+        {
+          "@type": "Question",
+          "name": "Переводите ли технологические регламенты химических производств?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Да. Переводим технологические регламенты химических производств — от общего регламента до отдельных разделов по стадиям синтеза. Переводчики-химики знают номенклатуру реагентов, аппаратуры и технологических параметров." }
+        },
+        {
+          "@type": "Question",
+          "name": "Как вы работаете с IUPAC-названиями и CAS-номерами?",
+          "acceptedAnswer": { "@type": "Answer", "text": "CAS-номера не переводятся — они остаются идентичными в оригинале и переводе. IUPAC-названия передаются в соответствии с российскими правилами IUPAC-номенклатуры и верифицируются по базам PubChem и ChemSpider." }
+        }
+      ]
+    }
+  ]
+  </script>
+</head>
+<body>
+
+  <!-- ════════════════ HEADER ════════════════ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="Ремарка">
+        <img src="../assets/logo-dark.png" alt="Remarka" id="logo-img">
+      </a>
+      <nav class="main-nav" aria-label="Основное меню">
+        <a href="/#services">Услуги</a>
+        <a href="/#industries">Отрасли</a>
+        <a href="/#languages">Языки</a>
+        <a href="/#pricing">Цены</a>
+        <a href="/#about">О нас</a>
+      </nav>
+      <div class="header-actions">
+        <a href="#login" class="btn-link">Войти</a>
+        <a href="#start" class="btn-primary">
+          Начать
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <div class="lang-switcher">
+          <button type="button" class="lang-switcher-btn" aria-haspopup="true" aria-expanded="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span>RU</span>
+            <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="lang-dropdown" role="menu">
+            <a href="#" class="is-active" role="menuitem">🇷🇺 Русский</a>
+            <a href="https://1russian.com" role="menuitem">🇬🇧 English</a>
+            <a href="https://traduzione.tech" role="menuitem">🇮🇹 Italiano</a>
+          </div>
+        </div>
+        <button class="theme-toggle" type="button" aria-label="Переключить тему">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="mobile-toggle" type="button" aria-label="Открыть меню">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-drawer" aria-hidden="true">
+    <nav aria-label="Мобильное меню">
+      <a href="/#services">Услуги</a><a href="/#industries">Отрасли</a>
+      <a href="/#languages">Языки</a><a href="/#pricing">Цены</a><a href="/#about">О нас</a>
+    </nav>
+    <div class="drawer-actions">
+      <a href="#login" class="btn-link">Войти</a>
+      <a href="#start" class="btn-primary">Начать <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+
+  <!-- ════════ HERO ════════ -->
+  <div class="hero-bg-block">
+  <div class="hero-page">
+
+    <aside class="chat-sidebar">
+      <button class="sb-item sb-active" title="Чат">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span>Чат</span>
+      </button>
+      <button class="sb-item" title="Загрузить файл">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
+        <span>Загрузить файл</span>
+      </button>
+      <button class="sb-item" title="Калькулятор стоимости">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
+        <span>Калькулятор стоимости</span>
+      </button>
+      <button class="sb-item" title="История заказов">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        <span>История заказов</span>
+      </button>
+      <button class="sb-item" title="Конфиденциальность">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Конфиден-циальность</span>
+      </button>
+    </aside>
+
+    <div class="hero-main">
+      <div class="chat-window">
+        <div class="cw-top-bar">
+          <nav class="cw-breadcrumbs" aria-label="Хлебные крошки">
+            <a href="/">Главная</a>
+            <span class="cw-bc-sep" aria-hidden="true">›</span>
+            <a href="/tekhnicheskiy-perevod/">Технический перевод</a>
+            <span class="cw-bc-sep" aria-hidden="true">›</span>
+            <span class="cw-bc-current" aria-current="page">Химическая промышленность</span>
+          </nav>
+          <button class="cw-close" aria-label="Закрыть"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+        </div>
+
+        <div class="cw-body">
+          <div class="cw-agent-panel">
+            <div class="agent-avatar-wrap">
+              <div class="agent-avatar"><img src="../assets/olga.jpg" alt="Ольга"></div>
+              <div class="agent-online-dot"></div>
+            </div>
+            <div class="agent-name">Ольга</div>
+            <div class="agent-role">Менеджер<br>бюро переводов</div>
+            <div class="agent-langs">
+              <button class="lang-flag lang-flag--active" data-lang="ru-RU" title="Русский">🇷🇺</button>
+              <button class="lang-flag" data-lang="en-US" title="English">🇬🇧</button>
+              <button class="lang-flag" data-lang="it-IT" title="Italiano">🇮🇹</button>
+            </div>
+            <hr class="agent-sep">
+            <ul class="agent-stats">
+              <li><span class="asl">Ответ</span><span class="asv">~1 мин</span></li>
+              <li><span class="asl">Рейтинг</span><span class="asv">4.98 ★</span></li>
+              <li><span class="asl">Заказов</span><span class="asv">2 400+</span></li>
+              <li><span class="asl">Языков</span><span class="asv">20+</span></li>
+            </ul>
+            <hr class="agent-sep">
+            <svg class="waveform-svg" id="waveformSvg" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="wg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#00A0F0" stop-opacity="0.6"/><stop offset="50%" stop-color="#783CF0"/><stop offset="100%" stop-color="#00A0F0" stop-opacity="0.6"/></linearGradient></defs>
+              <path class="wp wp1" stroke="url(#wg)" stroke-width="2.5" fill="none" d="M0,60 C18,35 36,85 54,60 C72,35 90,15 108,60 C126,105 144,25 162,60 C180,95 200,40 220,60"/>
+              <path class="wp wp2" stroke="url(#wg)" stroke-width="1.5" fill="none" opacity="0.45" d="M0,60 C20,45 40,75 60,60 C80,45 100,28 120,60 C140,92 160,32 180,60 C200,88 210,48 220,60"/>
+              <path class="wp wp3" stroke="url(#wg)" stroke-width="1" fill="none" opacity="0.25" d="M0,60 C15,50 30,70 45,60 C60,50 75,38 90,60 C105,82 120,42 135,60 C150,78 165,50 180,60 C195,70 208,54 220,60"/>
+            </svg>
+            <button class="cw-mic-btn" id="cwMicBtn" aria-label="Голосовой ввод">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+              <span class="mic-tooltip">Голосовой ввод</span>
+            </button>
+          </div>
+
+          <div class="cw-right-col">
+            <div class="cw-msgs-col">
+              <div class="cw-msgs">
+                <div class="msg-bub" data-greeting="1">
+                  <p>Здравствуйте! 👋 Нужен перевод химической документации — SDS, регламентов или материалов REACH?</p>
+                  <span class="msg-ts">10:30</span>
+                </div>
+                <div class="msg-bub" data-greeting="2">
+                  <p>Переводим паспорта безопасности SDS/MSDS, технологические регламенты, REACH-досье и GHS-этикетки. Переводчики — профессиональные химики.</p>
+                  <span class="msg-ts">10:30</span>
+                </div>
+                <div class="msg-bub" data-greeting="3">
+                  <p>Пришлите файл — рассчитаю стоимость за 5 минут.</p>
+                  <span class="msg-ts">10:30</span>
+                </div>
+              </div>
+            </div>
+            <div class="cw-input-bar">
+              <input class="cw-input" type="text" placeholder="Опишите задачу или загрузите файл..." id="cwInput">
+              <div class="cw-btns">
+                <button class="cw-btn-icon" title="Прикрепить файл">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                </button>
+                <button class="cw-btn-icon cw-btn-voice" id="cwVoiceBtn" title="Голосовой ввод">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+                </button>
+                <button class="cw-btn-send" title="Отправить">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /hero-page -->
+  </div><!-- /hero-bg-block -->
+
+  <!-- ════════ ВВЕДЕНИЕ ════════ -->
+  <section class="sec sec-intro">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-text">
+          <p class="intro-label">Бюро переводов «Ремарка», Москва</p>
+          <h1 class="intro-title">Перевод документации химической промышленности</h1>
+          <p class="intro-tagline">Химические документы: точность терминологии — вопрос безопасности</p>
+          <p class="intro-body">Паспорт безопасности химического вещества — это не просто документ, это инструкция по выживанию для всех, кто с ним работает. Неточный перевод класса опасности, первой помощи или мер по ликвидации разлива может привести к трагическим последствиям. Именно поэтому химическую документацию в бюро «Ремарка» переводят только специалисты с дипломом химика.</p>
+          <p class="intro-body">Наши переводчики-химики работают с номенклатурой IUPAC, знают правила классификации по GHS и REACH, понимают разницу между EC-числом и CAS-номером, между SVHC и PBT-веществом. Они проверяют химические названия по актуальным базам данных — PubChem, ChemSpider, ECHA — а не полагаются только на память.</p>
+          <p class="intro-body">Для каждого клиента ведётся терминологическая база: согласованные названия веществ, реагентов, аппаратуры и технологических операций фиксируются с первого заказа и применяются во всех последующих документах.</p>
+        </div>
+        <div class="intro-visual">
+          <div class="intro-illus" aria-hidden="true">
+            <svg viewBox="0 0 480 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="ch-g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#783CF0"/><stop offset="100%" stop-color="#00A0F0"/></linearGradient>
+              </defs>
+              <rect x="10" y="20" width="140" height="168" rx="12" fill="rgba(120,60,240,.10)" stroke="rgba(120,60,240,.35)" stroke-width="1.5"/>
+              <rect x="10" y="20" width="140" height="38" rx="12" fill="rgba(120,60,240,.20)"/>
+              <rect x="10" y="43" width="140" height="15" fill="rgba(120,60,240,.20)"/>
+              <!-- Molecular/chemical symbol -->
+              <circle cx="44" cy="100" r="10" fill="none" stroke="rgba(167,139,250,.55)" stroke-width="1.5"/>
+              <circle cx="70" cy="84" r="10" fill="none" stroke="rgba(167,139,250,.55)" stroke-width="1.5"/>
+              <circle cx="96" cy="100" r="10" fill="none" stroke="rgba(167,139,250,.55)" stroke-width="1.5"/>
+              <circle cx="70" cy="116" r="10" fill="none" stroke="rgba(167,139,250,.55)" stroke-width="1.5"/>
+              <line x1="54" y1="95" x2="60" y2="89" stroke="rgba(167,139,250,.70)" stroke-width="1.5"/>
+              <line x1="80" y1="89" x2="86" y2="95" stroke="rgba(167,139,250,.70)" stroke-width="1.5"/>
+              <line x1="86" y1="105" x2="80" y2="111" stroke="rgba(167,139,250,.70)" stroke-width="1.5"/>
+              <line x1="60" y1="111" x2="54" y2="105" stroke="rgba(167,139,250,.70)" stroke-width="1.5"/>
+              <rect x="24" y="148" width="112" height="5" rx="2.5" fill="rgba(167,139,250,.45)"/>
+              <rect x="24" y="160" width="76" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
+              <rect x="330" y="20" width="140" height="168" rx="12" fill="rgba(0,160,240,.10)" stroke="rgba(0,160,240,.35)" stroke-width="1.5"/>
+              <rect x="330" y="20" width="140" height="38" rx="12" fill="rgba(0,160,240,.20)"/>
+              <rect x="330" y="43" width="140" height="15" fill="rgba(0,160,240,.20)"/>
+              <circle cx="364" cy="100" r="10" fill="none" stroke="rgba(0,160,240,.55)" stroke-width="1.5"/>
+              <circle cx="390" cy="84" r="10" fill="none" stroke="rgba(0,160,240,.55)" stroke-width="1.5"/>
+              <circle cx="416" cy="100" r="10" fill="none" stroke="rgba(0,160,240,.55)" stroke-width="1.5"/>
+              <circle cx="390" cy="116" r="10" fill="none" stroke="rgba(0,160,240,.55)" stroke-width="1.5"/>
+              <line x1="374" y1="95" x2="380" y2="89" stroke="rgba(0,160,240,.70)" stroke-width="1.5"/>
+              <line x1="400" y1="89" x2="406" y2="95" stroke="rgba(0,160,240,.70)" stroke-width="1.5"/>
+              <line x1="406" y1="105" x2="400" y2="111" stroke="rgba(0,160,240,.70)" stroke-width="1.5"/>
+              <line x1="380" y1="111" x2="374" y2="105" stroke="rgba(0,160,240,.70)" stroke-width="1.5"/>
+              <rect x="344" y="148" width="112" height="5" rx="2.5" fill="rgba(0,160,240,.45)"/>
+              <rect x="344" y="160" width="76" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
+              <circle cx="240" cy="104" r="46" fill="rgba(120,60,240,.12)" stroke="rgba(120,60,240,.30)" stroke-width="1.5"/>
+              <circle cx="240" cy="104" r="30" fill="rgba(120,60,240,.18)"/>
+              <path d="M152 104h56M288 104h40" stroke="rgba(120,60,240,.40)" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <path d="M224 104h32M246 96l10 8-10 8" stroke="rgba(167,139,250,.95)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="intro-features">
+            <div class="intro-feat">
+              <div class="intro-feat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+              <div><strong>Химическое образование</strong><span>Переводчик с дипломом химика и лингвистическим дипломом</span></div>
+            </div>
+            <div class="intro-feat">
+              <div class="intro-feat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              </div>
+              <div><strong>Знание IUPAC, REACH, GHS</strong><span>Номенклатура и нормативы применяются как основа перевода</span></div>
+            </div>
+            <div class="intro-feat">
+              <div class="intro-feat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div><strong>SDS по ГОСТ и GHS</strong><span>Паспорта безопасности в соответствии с российскими и международными стандартами</span></div>
+            </div>
+            <div class="intro-feat">
+              <div class="intro-feat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </div>
+              <div><strong>Верификация CAS-номеров и формул</strong><span>Проверка по PubChem, ChemSpider, ECHA при каждом документе</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ ЦИФРЫ ════════ -->
+  <section class="sec-stats">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-item">
+          <span class="stat-num">25<span class="stat-suffix">+</span></span>
+          <span class="stat-label">лет на рынке</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">60<span class="stat-suffix">+</span></span>
+          <span class="stat-label">языков перевода</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">2 400<span class="stat-suffix">+</span></span>
+          <span class="stat-label">выполненных заказов</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">4.98<span class="stat-suffix">★</span></span>
+          <span class="stat-label">средний рейтинг</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ КАКИЕ ДОКУМЕНТЫ ════════ -->
+  <section class="sec sec--alt sec-docs">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Какие документы мы переводим</h2>
+        <p class="sec-sub">Вся техническая и нормативная документация химической промышленности</p>
+      </div>
+      <div class="docs-accordion">
+
+        <details class="doc-item" open>
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Паспорта безопасности SDS/MSDS</span>
+          </summary>
+          <div class="doc-body">
+            <p>Safety Data Sheets и Material Safety Data Sheets для химических веществ и смесей. Перевод с соблюдением структуры GHS (16 разделов), требований ГОСТ 30333-2007 и действующего российского законодательства. Верификация CAS-номеров и классификации опасности.</p>
+          </div>
+        </details>
+
+        <details class="doc-item">
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            <span>Технологические регламенты</span>
+          </summary>
+          <div class="doc-body">
+            <p>Технологические регламенты химических производств, инструкции по технике безопасности, описания синтезов, регламенты по работе с опасными веществами, процедуры ликвидации аварийных разливов.</p>
+          </div>
+        </details>
+
+        <details class="doc-item">
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            <span>Стандарты REACH и GHS</span>
+          </summary>
+          <div class="doc-body">
+            <p>Регистрационные досье REACH, материалы Chemical Safety Report (CSR), документы по авторизации SVHC-веществ, требования к маркировке GHS/CLP. Работаем с требованиями ECHA и российскими аналогами.</p>
+          </div>
+        </details>
+
+        <details class="doc-item">
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            <span>Спецификации химических продуктов</span>
+          </summary>
+          <div class="doc-body">
+            <p>Технические спецификации химических веществ, смесей и материалов, сертификаты анализа (CoA), карты технических данных (TDS), спецификации для поставщиков и производителей.</p>
+          </div>
+        </details>
+
+        <details class="doc-item">
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <span>Декларации соответствия</span>
+          </summary>
+          <div class="doc-body">
+            <p>Декларации соответствия и сертификаты для ввоза химической продукции на российский рынок, документы для Роспотребнадзора, Ростехнадзора и таможенных органов.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ ДЛЯ КОГО ════════ -->
+  <section class="sec sec-audience">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Кому нужен перевод химической документации</h2>
+        <p class="sec-sub">Работаем только с юридическими лицами и ИП</p>
+      </div>
+      <div class="doc-ref-grid">
+
+        <div class="doc-ref-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          <strong>Химические производственные предприятия</strong>
+          <span>Перевод технологических регламентов, инструкций по безопасности и документации на иностранное оборудование</span>
+        </div>
+
+        <div class="doc-ref-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <strong>Нефтехимические компании</strong>
+          <span>Перевод документации нефтехимических производств, регламентов крекинга, риформинга и других процессов</span>
+        </div>
+
+        <div class="doc-ref-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <strong>Импортёры и дистрибьюторы химических веществ</strong>
+          <span>Перевод SDS/MSDS, GHS-этикеток, деклараций соответствия и таможенной документации для ввоза химической продукции</span>
+        </div>
+
+        <div class="doc-ref-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          <strong>Производители специальных химикатов</strong>
+          <span>Перевод технических спецификаций, патентных заявок и документации по R&D для специальных химических продуктов</span>
+        </div>
+
+        <div class="doc-ref-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          <strong>Компании по охране труда и промышленной безопасности</strong>
+          <span>Перевод инструкций по работе с опасными веществами, планов ЛАРН, документов по производственному контролю</span>
+        </div>
+
+        <div class="doc-ref-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          <strong>Сертификационные органы REACH</strong>
+          <span>Перевод регистрационных досье REACH, CSR и документов по авторизации для веществ, вызывающих очень высокую озабоченность (SVHC)</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ НАШИ ПЕРЕВОДЧИКИ ════════ -->
+  <section class="sec sec-translators">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Переводчики-химики в Москве</h2>
+        <p class="sec-sub">Каждый переводчик работает только в своей технической специализации</p>
+      </div>
+      <div class="translators-grid">
+        <div class="translator-card">
+          <div class="translator-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <h3>Диплом химика</h3>
+          <p>Органические, неорганические, аналитические химики — выбираем специалиста под конкретную область химии.</p>
+        </div>
+        <div class="translator-card">
+          <div class="translator-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z"/></svg>
+          </div>
+          <h3>Верификация по базам данных</h3>
+          <p>CAS-номера, IUPAC-названия и классификация опасности проверяются по PubChem, ECHA и ChemSpider.</p>
+        </div>
+        <div class="translator-card">
+          <div class="translator-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Глоссарии IUPAC/GHS/REACH</h3>
+          <p>Наработанные терминологические базы по органической, неорганической и промышленной химии.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ КОНТРОЛЬ КАЧЕСТВА ════════ -->
+  <section class="sec sec-split">
+    <div class="container">
+      <div class="split-row split-row--rev">
+        <div class="split-text">
+          <p class="sec-label">Химическая экспертиза</p>
+          <h2>Химические документы: точность терминологии спасает жизни</h2>
+          <p>Неправильный перевод первой помощи при отравлении, неверная классификация класса опасности или ошибка в концентрации вещества могут привести к производственной травме. SDS — это нормативный документ, а не описательный текст.</p>
+          <p>Наш переводчик-химик знает, что IDLH — это не «опасная концентрация», а «Immediately Dangerous to Life or Health» с конкретным числовым значением; понимает разницу между LC50 и LD50; корректно переводит пиктограммы GHS и фразы риска H.</p>
+          <ul class="split-checklist">
+            <li>Знание IUPAC, REACH, GHS номенклатуры</li>
+            <li>Переводчик с химическим образованием</li>
+            <li>Паспорта безопасности по ГОСТ и GHS</li>
+            <li>Верификация химических формул и CAS-номеров</li>
+          </ul>
+        </div>
+        <div class="split-visual" aria-hidden="true">
+          <svg viewBox="0 0 380 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="sq-g1-ch" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#783CF0"/><stop offset="100%" stop-color="#00A0F0"/></linearGradient>
+              <linearGradient id="sq-g2-ch" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#783CF0" stop-opacity=".5"/><stop offset="100%" stop-color="#00A0F0" stop-opacity=".5"/></linearGradient>
+            </defs>
+            <circle cx="190" cy="160" r="130" fill="rgba(120,60,240,.07)"/>
+            <rect x="60" y="30" width="260" height="64" rx="16" fill="rgba(120,60,240,.12)" stroke="rgba(120,60,240,.30)" stroke-width="1.5"/>
+            <circle cx="96" cy="62" r="20" fill="url(#sq-g1-ch)" opacity=".85"/>
+            <path d="M88 62l6 6 10-12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="126" y="50" width="170" height="9" rx="4" fill="rgba(167,139,250,.55)"/>
+            <rect x="126" y="66" width="120" height="7" rx="3" fill="rgba(167,139,250,.30)"/>
+            <line x1="190" y1="94" x2="190" y2="118" stroke="url(#sq-g2-ch)" stroke-width="2" stroke-dasharray="4 3"/>
+            <rect x="60" y="118" width="260" height="64" rx="16" fill="rgba(0,160,240,.12)" stroke="rgba(0,160,240,.30)" stroke-width="1.5"/>
+            <circle cx="96" cy="150" r="20" fill="url(#sq-g1-ch)" opacity=".85"/>
+            <path d="M88 150l6 6 10-12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="126" y="138" width="155" height="9" rx="4" fill="rgba(0,160,240,.55)"/>
+            <rect x="126" y="154" width="110" height="7" rx="3" fill="rgba(0,160,240,.30)"/>
+            <line x1="190" y1="182" x2="190" y2="206" stroke="url(#sq-g2-ch)" stroke-width="2" stroke-dasharray="4 3"/>
+            <rect x="60" y="206" width="260" height="64" rx="16" fill="rgba(120,60,240,.12)" stroke="rgba(120,60,240,.30)" stroke-width="1.5"/>
+            <circle cx="96" cy="238" r="20" fill="url(#sq-g1-ch)" opacity=".85"/>
+            <path d="M88 238l6 6 10-12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="126" y="226" width="175" height="9" rx="4" fill="rgba(167,139,250,.55)"/>
+            <rect x="126" y="242" width="130" height="7" rx="3" fill="rgba(167,139,250,.30)"/>
+            <circle cx="310" cy="290" r="26" fill="rgba(0,200,100,.12)" stroke="rgba(0,200,100,.35)" stroke-width="1.5"/>
+            <path d="M300 290l8 8 14-16" stroke="rgba(0,200,100,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ КАК ПРОХОДИТ РАБОТА ════════ -->
+  <section class="sec sec--alt sec-how-pro">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Как проходит работа</h2>
+        <p class="sec-sub">Шесть шагов от файла до готового перевода — с контролем качества на каждом этапе</p>
+      </div>
+      <div class="steps-row steps-row--6">
+        <div class="step-item">
+          <div class="step-num">01</div>
+          <h3>Загрузите файл</h3>
+          <p>Через сайт, мессенджер, email или принесите в офис</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">02</div>
+          <h3>Анализ документа</h3>
+          <p>Оцениваем объём, тематику и сложность за несколько минут</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">03</div>
+          <h3>Подбор специалиста</h3>
+          <p>Выбираем переводчика-химика с профильным образованием</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">04</div>
+          <h3>Перевод</h3>
+          <p>Специалист работает с верификацией CAS-номеров и химических формул</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">05</div>
+          <h3>Корректура</h3>
+          <p>Редактор-химик проверяет техническую точность перед сдачей</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">06</div>
+          <h3>Готовый перевод</h3>
+          <p>Отправляем файл или забираете из офиса — точно в срок</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ ГАРАНТИИ КАЧЕСТВА ════════ -->
+  <section class="sec sec-guarantees">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Наши гарантии</h2>
+        <p class="sec-sub">Мы отвечаем за результат — не только словами</p>
+      </div>
+      <div class="guarantees-grid">
+        <div class="guarantee-card">
+          <div class="guarantee-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.9"/></svg>
+          </div>
+          <h3>Бесплатная правка</h3>
+          <p>Исправим бесплатно в течение 7 дней, если перевод не соответствует заданию или содержит неточности</p>
+        </div>
+        <div class="guarantee-card">
+          <div class="guarantee-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3>Конфиденциальность</h3>
+          <p>NDA по запросу. Ваши документы не передаются третьим лицам и не хранятся на внешних серверах</p>
+        </div>
+        <div class="guarantee-card">
+          <div class="guarantee-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Соблюдение сроков</h3>
+          <p>Если не уложились в оговорённый срок по нашей вине — возвращаем предоплату или делаем скидку на следующий заказ</p>
+        </div>
+        <div class="guarantee-card">
+          <div class="guarantee-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3>База терминологии</h3>
+          <p>Сохраняем химический глоссарий вашей компании для консистентного перевода всех последующих документов</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ СРОКИ И СТОИМОСТЬ ════════ -->
+  <section class="sec sec--alt sec-vol-pricing">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Сроки и стоимость</h2>
+        <p class="sec-sub">Цена зависит от объёма. Точный расчёт — бесплатно, за 5 минут</p>
+      </div>
+      <div class="vol-table-wrap">
+        <table class="vol-table">
+          <thead>
+            <tr>
+              <th>Объём</th>
+              <th>Срок</th>
+              <th>Стоимость</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>До 5 страниц</strong></td>
+              <td>1 рабочий день</td>
+              <td class="vol-price">от 3 000 ₽</td>
+              <td><a href="#" class="vol-btn">Заказать</a></td>
+            </tr>
+            <tr>
+              <td><strong>5–20 страниц</strong></td>
+              <td>2–3 рабочих дня</td>
+              <td class="vol-price">от 600 ₽/стр.</td>
+              <td><a href="#" class="vol-btn">Заказать</a></td>
+            </tr>
+            <tr>
+              <td><strong>20–50 страниц</strong></td>
+              <td>3–5 рабочих дней</td>
+              <td class="vol-price">от 600 ₽/стр.</td>
+              <td><a href="#" class="vol-btn">Заказать</a></td>
+            </tr>
+            <tr>
+              <td><strong>Свыше 50 страниц</strong></td>
+              <td>по договорённости</td>
+              <td class="vol-price">индивидуально</td>
+              <td><a href="#" class="vol-btn">Заказать</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="vol-note">Срочный перевод — коэффициент ×1,5. Расчёт после анализа файла.</p>
+    </div>
+  </section>
+
+  <!-- ════════ СРАВНЕНИЕ ФОРМАТОВ ════════ -->
+  <section class="sec sec-comparison">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Какой формат вам подходит</h2>
+        <p class="sec-sub">Сравните три уровня сервиса и выберите оптимальный для вашей задачи</p>
+      </div>
+      <div class="cmp-table-wrap">
+        <table class="cmp-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Постредактирование ИИ</th>
+              <th class="cmp-featured">Профессиональный перевод</th>
+              <th>Премиум-перевод</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Перевод с нуля специалистом</td><td class="cmp-no">✗</td><td class="cmp-yes cmp-featured">✓</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Профильное химическое образование</td><td class="cmp-no">✗</td><td class="cmp-yes cmp-featured">✓</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Корректура и вычитка</td><td class="cmp-part">частичная</td><td class="cmp-yes cmp-featured">✓</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Редактура профильным экспертом</td><td class="cmp-no">✗</td><td class="cmp-no cmp-featured">✗</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Вычитка носителем языка</td><td class="cmp-no">✗</td><td class="cmp-no cmp-featured">✗</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Подходит для публикаций и тендеров</td><td class="cmp-no">✗</td><td class="cmp-part cmp-featured">условно</td><td class="cmp-yes">✓</td></tr>
+            <tr class="cmp-meta"><td>Срок</td><td>от 1 дня</td><td class="cmp-featured">1–3 дня</td><td>2–5 дней</td></tr>
+            <tr class="cmp-meta cmp-price-row"><td>Стоимость</td><td>от 250 ₽/стр.</td><td class="cmp-featured">от 600 ₽/стр.</td><td>от 950 ₽/стр.</td></tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td></td>
+              <td><a href="#" class="price-btn price-btn--outline">Выбрать</a></td>
+              <td class="cmp-featured"><a href="#" class="price-btn price-btn--primary">Выбрать</a></td>
+              <td><a href="#" class="price-btn price-btn--outline">Выбрать</a></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ ПЕРЕЛИНКОВКА ════════ -->
+  <section class="sec sec--alt sec-related">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Другие технические переводы</h2>
+        <p class="sec-sub">Переводим техническую документацию для любой отрасли</p>
+      </div>
+      <div class="related-grid">
+
+        <a href="neft-gaz.html" class="related-card">
+          <div class="related-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div class="related-card-body">
+            <h3>Нефтегаз</h3>
+            <p>Стандарты API, SDS нефтепродуктов, проектная документация скважин</p>
+          </div>
+          <svg class="related-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="neftekhimiya.html" class="related-card">
+          <div class="related-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+          </div>
+          <div class="related-card-body">
+            <h3>Нефтехимия</h3>
+            <p>Технологические регламенты нефтехимических производств</p>
+          </div>
+          <svg class="related-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="mashinostroenie.html" class="related-card">
+          <div class="related-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <div class="related-card-body">
+            <h3>Машиностроение</h3>
+            <p>КД, технологические регламенты, стандарты ЕСКД/ISO/DIN</p>
+          </div>
+          <svg class="related-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="vodosnabzhenie-zhkkh.html" class="related-card">
+          <div class="related-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          </div>
+          <div class="related-card-body">
+            <h3>ЖКХ и водоснабжение</h3>
+            <p>Документация по водоподготовке, очистке и водоотведению</p>
+          </div>
+          <svg class="related-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+
+      </div>
+      <div class="related-hub-link" style="text-align:center;margin-top:28px">
+        <a href="../tekhnicheskiy-perevod.html" class="btn-outline">Все виды технического перевода <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ ОТЗЫВЫ ════════ -->
+  <section class="sec sec-reviews">
+    <div class="container">
+      <div class="reviews-head">
+        <div>
+          <h2 class="sec-title">Что говорят клиенты</h2>
+          <p class="sec-sub" style="margin-top:6px">Реальные отзывы о переводах химической документации</p>
+        </div>
+        <div class="review-rating-block">
+          <div class="review-rating-score">4.98</div>
+          <div class="review-stars-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="review-rating-label">средний рейтинг</div>
+        </div>
+        <div class="review-platform-links">
+          <a href="https://yandex.ru/maps/org/remarka/51867347382/reviews/" class="review-platform-link" target="_blank" rel="noopener">Яндекс</a>
+          <a href="https://maps.app.goo.gl/d8BKJYw81PqBHXvz7" class="review-platform-link" target="_blank" rel="noopener">Google</a>
+        </div>
+      </div>
+      <div class="reviews-grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="review-card">
+          <div class="review-card-top">
+            <div class="review-avatar">О</div>
+            <div class="review-meta"><div class="review-name">Ольга Тимченко</div><div class="review-src">Яндекс · сентябрь 2024</div></div>
+          </div>
+          <div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p class="review-text">Обращалась с переводом паспортов безопасности для химического оборудования. Специфичная тема, но переводчик разобрался быстро. Все SDS в правильном формате, CAS-номера проверены.</p>
+          <div class="review-role">Инженер-технолог, АО «ХимПром»</div>
+        </div>
+        <div class="review-card">
+          <div class="review-card-top">
+            <div class="review-avatar">А</div>
+            <div class="review-meta"><div class="review-name">Андрей Климов</div><div class="review-src">Google · ноябрь 2024</div></div>
+          </div>
+          <div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p class="review-text">Переводили регистрационные материалы REACH с немецкого. Сложный документ — CSR, оценки токсикологии. Переводчик явно знаком с требованиями ECHA. Рекомендую для химической тематики.</p>
+          <div class="review-role">Менеджер по регуляторным вопросам, ООО «ХимТрейд»</div>
+        </div>
+        <div class="review-card">
+          <div class="review-card-top">
+            <div class="review-avatar">И</div>
+            <div class="review-meta"><div class="review-name">Ирина Белоусова</div><div class="review-src">Яндекс · июль 2024</div></div>
+          </div>
+          <div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p class="review-text">Технологический регламент органического синтеза с английского. 70 страниц, много специфических названий реагентов и аппаратуры. Переводчик уточнил несколько терминов — результат безупречный.</p>
+          <div class="review-role">Начальник производства, АО «СинтезХим»</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ FAQ ════════ -->
+  <section class="sec sec--alt sec-faq">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Часто задаваемые вопросы</h2>
+        <p class="sec-sub">Не нашли ответа — напишите Ольге в чат, ответим за минуту</p>
+      </div>
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary class="faq-summary">Переводите ли SDS-паспорта в соответствии с GHS Revision 9?</summary>
+          <div class="faq-body">
+            <p>Да. Переводим SDS в соответствии с актуальным изданием GHS (Revision 9) и требованиями ГОСТ 30333-2007. Все 16 разделов паспорта безопасности оформляются в соответствии с действующими нормами. Химические названия, CAS-номера и классификация опасности верифицируются по базам ECHA, HSDB и PubChem.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">Обеспечиваете ли соответствие требованиям REACH при переводе регистрационных досье?</summary>
+          <div class="faq-body">
+            <p>Да. Переводим регистрационные досье REACH с соблюдением структуры и требований ECHA. Переводчики-химики знакомы с форматом Chemical Safety Report (CSR), Substance Evaluation и требованиями к разделам DNEL/PNEC. Работаем с документами как для Европейского агентства, так и с аналогами для российского рынка.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">Как вы работаете с IUPAC-названиями и CAS-номерами?</summary>
+          <div class="faq-body">
+            <p>CAS-номера не переводятся — они остаются идентичными в оригинале и переводе. IUPAC-названия передаются в соответствии с российскими правилами IUPAC-номенклатуры и верифицируются по базам PubChem, ChemSpider и ECHA. Систематические названия сложных соединений сверяются с первоисточниками.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">Переводите ли GHS-этикетки и маркировку опасных грузов?</summary>
+          <div class="faq-body">
+            <p>Да. Переводим этикетки GHS/CLP, включая пиктограммы опасности, сигнальные слова, H- и P-фразы. Также работаем с маркировкой для транспортировки опасных грузов по ADR/IMDG/IATA. Все фразы риска и предосторожности переводятся в соответствии с утверждёнными российскими аналогами.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">Сколько стоит срочный перевод химической документации?</summary>
+          <div class="faq-body">
+            <p>Срочность до 24 часов — коэффициент ×1,5 к базовой цене. При объёме до 5 страниц и заказе до полудня перевод готов в тот же день без надбавки. Базовая стоимость профессионального перевода — от 600 ₽/стр. Бесплатный расчёт — за 5 минут после получения файла.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ CTA ════════ -->
+  <section class="sec sec-cta">
+    <div class="container">
+      <h2 class="cta-title">Нужен перевод химической документации?</h2>
+      <p class="cta-sub">Пришлите файл — за несколько минут получите точный расчёт стоимости и срок выполнения</p>
+      <div class="cta-btns">
+        <a href="#" class="btn btn-primary">Загрузить файл</a>
+        <a href="#" class="btn btn-outline">Написать Ольге</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ COMMENTS ════════ -->
+  <div id="comments" class="comments-area">
+    <div class="container">
+      <h2 class="comments-title">Комментарии (3)</h2>
+      <ol class="comment-list">
+        <li class="comment even thread-even depth-1" id="comment-1">
+          <article class="comment-body">
+            <footer class="comment-meta">
+              <div class="comment-author vcard">
+                <div class="wp-avatar">Е</div>
+                <div class="fn"><b>Евгений Фролов</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">Специалист по ОТ, АО «ХимЗавод»</span></div>
+              </div>
+              <div class="comment-metadata"><time datetime="2024-12-10">10 декабря 2024</time></div>
+            </footer>
+            <div class="comment-content">
+              <p>Регулярно заказываем перевод SDS с немецкого и английского. Все паспорта оформлены корректно по ГОСТ, классификация опасности соответствует российским нормам. Не нужно проверять — сразу используем в производстве.</p>
+            </div>
+            <div class="reply"><a class="comment-reply-link" href="#">Ответить</a></div>
+          </article>
+        </li>
+        <li class="comment odd alt thread-odd depth-1" id="comment-2">
+          <article class="comment-body">
+            <footer class="comment-meta">
+              <div class="comment-author vcard">
+                <div class="wp-avatar">М</div>
+                <div class="fn"><b>Марина Захарова</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">Технолог-химик</span></div>
+              </div>
+              <div class="comment-metadata"><time datetime="2024-10-28">28 октября 2024</time></div>
+            </footer>
+            <div class="comment-content">
+              <p>Перевод технологического регламента по производству полимерных материалов с английского. Переводчик уточнил названия нескольких катализаторов, которые в разных источниках называются по-разному — это профессионально.</p>
+            </div>
+            <div class="reply"><a class="comment-reply-link" href="#">Ответить</a></div>
+          </article>
+          <ol class="children">
+            <li class="comment depth-2" id="comment-3">
+              <article class="comment-body">
+                <footer class="comment-meta">
+                  <div class="comment-author vcard">
+                    <div class="wp-avatar" style="width:36px;height:36px;font-size:15px">Р</div>
+                    <div class="fn"><b>Ремарка</b><span style="font-size:12px;color:#783CF0;margin-top:1px">Администратор</span></div>
+                  </div>
+                  <div class="comment-metadata"><time datetime="2024-10-29">29 октября 2024</time></div>
+                </footer>
+                <div class="comment-content">
+                  <p>Марина, спасибо за подробный отзыв! Такие уточнения — часть нашего процесса: лучше потратить время на верификацию, чем передать неверный термин. Ваш глоссарий сохранён в базе.</p>
+                </div>
+              </article>
+            </li>
+          </ol>
+        </li>
+      </ol>
+
+      <div id="respond" class="comment-respond">
+        <h3 id="reply-title" class="comment-reply-title">Оставить комментарий</h3>
+        <form action="#" method="post" id="commentform" class="comment-form" novalidate>
+          <p class="comment-notes">Ваш адрес email не будет опубликован. Обязательные поля помечены <span class="required">*</span></p>
+          <p class="comment-form-comment">
+            <label for="comment">Комментарий <span class="required">*</span></label>
+            <textarea id="comment" name="comment" cols="45" rows="6" required placeholder="Расскажите о вашем опыте работы с нами..."></textarea>
+          </p>
+          <div class="comment-form-fields">
+            <p class="comment-form-author">
+              <label for="author">Имя <span class="required">*</span></label>
+              <input id="author" name="author" type="text" size="30" required placeholder="Ваше имя">
+            </p>
+            <p class="comment-form-email">
+              <label for="email">Email <span class="required">*</span></label>
+              <input id="email" name="email" type="email" size="30" required placeholder="email@example.com">
+            </p>
+          </div>
+          <p class="comment-form-cookies-consent">
+            <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes">
+            <label for="wp-comment-cookies-consent">Сохранить моё имя и email для следующего комментария</label>
+          </p>
+          <p class="form-submit">
+            <input name="submit" type="submit" id="submit" class="submit" value="Отправить комментарий">
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <button class="chat-float-btn" id="chatFloatBtn" aria-label="Открыть чат">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+
+  <!-- ════════════════ FOOTER ════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/logo-light.png" alt="Remarka" id="footer-logo">
+          <p>Профессиональные переводы и локализация для бизнеса. Работаем удалённо с клиентами по всей России и за её пределами.</p>
+          <h5 class="social-title">Мы в соцсетях</h5>
+          <div class="social-links">
+            <a href="#" aria-label="ВКонтакте"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.785 16.241s.288-.032.435-.193c.135-.148.13-.426.13-.426s-.018-1.302.582-1.495c.592-.19 1.352 1.262 2.158 1.821.61.422 1.073.33 1.073.33l2.157-.031s1.128-.071.593-.964c-.044-.073-.312-.66-1.602-1.86-1.35-1.257-1.169-1.054.456-3.232.99-1.327 1.387-2.137 1.263-2.485-.118-.331-.85-.244-.85-.244l-2.434.015s-.18-.025-.314.056c-.13.079-.215.262-.215.262s-.385 1.029-.899 1.904c-1.083 1.846-1.517 1.944-1.694 1.829-.412-.267-.31-1.071-.31-1.643 0-1.787.27-2.531-.526-2.724-.265-.064-.46-.106-1.136-.113-.867-.009-1.601.003-2.016.207-.276.135-.49.435-.36.453.16.022.523.099.715.362.249.34.24 1.103.24 1.103s.143 2.097-.333 2.358c-.327.179-.775-.186-1.74-1.86-.494-.858-.868-1.807-.868-1.807s-.072-.176-.2-.27c-.155-.114-.372-.15-.372-.15l-2.314.014s-.347.01-.475.16c-.114.135-.009.413-.009.413s1.813 4.242 3.866 6.38c1.882 1.96 4.02 1.832 4.02 1.832h.967z"/></svg></a>
+            <a href="#" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.464.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Услуги</h4>
+          <ul>
+            <li><a href="#">Технический перевод</a></li>
+            <li><a href="#">Юридический перевод</a></li>
+            <li><a href="#">Медицинский перевод</a></li>
+            <li><a href="#">IT-перевод</a></li>
+            <li><a href="#">Локализация ПО</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Компания</h4>
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Цены</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Поддержка</h4>
+          <ul>
+            <li><a href="#">Связаться с нами</a></li>
+            <li><a href="#">Часто задаваемые вопросы</a></li>
+            <li><a href="#">Стать переводчиком</a></li>
+          </ul>
+          <a href="#start" class="btn-primary" style="margin-top:16px">Начать <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2001–2026 Бюро переводов «Ремарка»</p>
+        <nav class="footer-legal"><a href="#">Политика конфиденциальности</a><a href="#">Карта сайта</a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/hero.js"></script>
+  <script src="../js/chat.js"></script>
+  <script src="../js/animations.js"></script>
+  <script>
+    function updateLogos() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const src = isDark ? '../assets/logo-dark.png' : '../assets/logo-light.png';
+      document.querySelectorAll('#logo-img, #footer-logo').forEach(function(img){ img.src = src; });
+    }
+    updateLogos();
+    new MutationObserver(updateLogos).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  </script>
+
+</body>
+</html>
