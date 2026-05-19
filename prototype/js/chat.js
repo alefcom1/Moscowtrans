@@ -117,6 +117,15 @@
     if (msgsCol) msgsCol.scrollTop = msgsCol.scrollHeight;
   }
 
+  function getActiveLang() {
+    var active = document.querySelector('.lang-flag--active');
+    return active ? active.dataset.lang : 'ru-RU';
+  }
+
+  function sayOlga(text) {
+    if (typeof window.speakOlga === 'function') window.speakOlga(text, getActiveLang());
+  }
+
   function pulseLangFlags() {
     const flagsEl = document.querySelector('.agent-langs');
     if (!flagsEl) return;
@@ -153,6 +162,7 @@
         dot.remove();
         appendBub(reply, 'assistant');
         history.push({ role: 'assistant', content: reply });
+        if (typeof window.speakOlga === 'function') window.speakOlga(reply, langMismatch);
         pulseLangFlags();
         inputEl.disabled = false;
         sendBtn.disabled = false;
@@ -174,6 +184,7 @@
       dot.remove();
       appendBub(data.text, 'assistant');
       history.push({ role: 'assistant', content: data.text });
+      sayOlga(data.text);
     } catch {
       dot.remove();
       appendBub('Сервер недоступен. Запустите: python3 prototype/server.py', 'assistant');
@@ -254,7 +265,9 @@
       history.push({ role: 'assistant', content: data.text });
     } catch {
       dot.remove();
-      appendBub('Получила ваш файл! Уточните, пожалуйста, с какого языка нужен перевод и для каких целей.', 'assistant');
+      var fallback = 'Получила ваш файл! Уточните, пожалуйста, с какого языка нужен перевод и для каких целей.';
+      appendBub(fallback, 'assistant');
+      sayOlga(fallback);
     }
   }
 
