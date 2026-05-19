@@ -11,42 +11,84 @@
   let recognition    = null;
   let listening      = false;
   let currentLang    = 'ru-RU';
-  let manualStop     = false;  // true когда пользователь сам нажал стоп
-  let hasFinalResult = false;  // есть ли финальный результат для авто-отправки
+  let manualStop     = false;
+  let hasFinalResult = false;
 
   const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
 
+  /* ── Определение языка по тексту ─────────────────────────── */
+  function detectLang(text) {
+    if (!text || text.trim().length < 3) return null;
+    const t = ' ' + text.toLowerCase() + ' ';
+
+    // Кириллица → русский
+    const cyrillic = (t.match(/[а-яё]/g) || []).length;
+    const total    = t.replace(/\s/g, '').length;
+    if (total > 0 && cyrillic / total > 0.3) return 'ru-RU';
+
+    // Итальянский
+    const itWords = [
+      'ciao', 'salve', 'buongiorno', 'grazie', 'prego', 'voglio', 'bisogno',
+      'traduz', 'documento', 'per favore', 'italiano', 'tradurre',
+      ' il ', ' la ', ' lo ', ' un ', ' una ', ' mi ', ' si ',
+      ' di ', ' per ', ' con ', ' del ', ' ho ', ' non ', ' che '
+    ];
+    const itScore = itWords.filter(function (w) { return t.includes(w); }).length;
+
+    // Английский
+    const enWords = [
+      'hello', 'hi ', 'thank', 'please', 'need', 'want', 'translat',
+      'document', 'english', 'help', 'quote', 'price',
+      ' the ', ' is ', ' are ', ' you ', ' this ', ' that ',
+      ' have ', ' can ', ' my ', ' for ', ' with ', ' of ', ' i '
+    ];
+    const enScore = enWords.filter(function (w) { return t.includes(w); }).length;
+
+    if (itScore === 0 && enScore === 0) return null;
+    return itScore > enScore ? 'it-IT' : 'en-US';
+  }
+
   if (SpeechRec) {
     recognition = new SpeechRec();
-    recognition.continuous     = false; // остановится сам после паузы говорящего
+    recognition.continuous     = false;
     recognition.interimResults = true;
 
     recognition.onresult = function (e) {
       const results = Array.from(e.results);
       const transcript = results.map(function (r) { return r[0].transcript; }).join('');
       if (inputEl) inputEl.value = transcript;
-      // Фиксируем финальный результат (пауза распознана)
       hasFinalResult = results.some(function (r) { return r.isFinal; }) && !!transcript.trim();
     };
 
     recognition.onend = function () {
       setListening(false);
-      // Авто-отправка после паузы, если не было ручной остановки
       if (!manualStop && hasFinalResult && inputEl && inputEl.value.trim()) {
         hasFinalResult = false;
+
+        const transcript = inputEl.value.trim();
+        const detected   = detectLang(transcript);
+
+        if (detected) {
+          const currentGroup  = currentLang.split('-')[0];
+          const detectedGroup = detected.split('-')[0];
+          if (detectedGroup !== currentGroup) {
+            window._chatLangMismatch = detected;
+          }
+        }
+
         setTimeout(function () {
           const sendBtn = document.querySelector('.cw-btn-send');
           if (sendBtn && !sendBtn.disabled) sendBtn.click();
         }, 250);
       }
       hasFinalResult = false;
-      manualStop = false;
+      manualStop     = false;
     };
 
     recognition.onerror = function (e) {
       if (e.error !== 'no-speech') console.warn('[voice]', e.error);
       hasFinalResult = false;
-      manualStop = false;
+      manualStop     = false;
       setListening(false);
     };
   }
@@ -66,9 +108,9 @@
 
   function setListening(val) {
     listening = val;
-    if (waveformSvg) waveformSvg.classList.toggle('active',   val);
-    if (cwMicBtn)    cwMicBtn.classList.toggle('listening',    val);
-    if (cwVoiceBtn)  cwVoiceBtn.classList.toggle('listening',  val);
+    if (waveformSvg) waveformSvg.classList.toggle('active',  val);
+    if (cwMicBtn)    cwMicBtn.classList.toggle('listening',   val);
+    if (cwVoiceBtn)  cwVoiceBtn.classList.toggle('listening', val);
   }
 
   function toggleVoice() {
@@ -77,7 +119,7 @@
       return;
     }
     if (listening) {
-      manualStop = true; // не авто-отправлять при ручной остановке
+      manualStop = true;
       recognition.stop();
     } else {
       recognition.lang = currentLang;
@@ -111,4 +153,4 @@
     });
   }
 
-})();
+}());
