@@ -10,12 +10,17 @@
 
   const history = [];
 
+  /* Сообщения Ольги при обнаружении языка */
+  const LANG_PROMPTS = {
+    'en-US': "I can see you're speaking English 🇬🇧 To chat with me in English, please tap the 🇬🇧 flag in my panel.",
+    'it-IT': "Vedo che parli italiano 🇮🇹 Per chattare con me in italiano, clicca sulla bandiera 🇮🇹 nel mio pannello."
+  };
+
   /* ── Приветственные сообщения: появляются по одному ── */
   (function showGreetings() {
     const greetings = Array.from(msgsEl.querySelectorAll('.msg-bub[data-greeting]'));
     if (!greetings.length) return;
 
-    /* Скрываем все сразу */
     greetings.forEach(function (el) { el.style.visibility = 'hidden'; el.style.position = 'absolute'; });
 
     let idx = 0;
@@ -30,8 +35,7 @@
 
       setTimeout(function () {
         dot.remove();
-        /* Показываем сообщение */
-        el.style.position = '';
+        el.style.position   = '';
         el.style.visibility = '';
         el.removeAttribute('data-greeting');
         el.classList.add('msg-bub--entering');
@@ -41,7 +45,6 @@
       }, typingMs);
     }
 
-    /* Первое сообщение — после небольшой паузы */
     setTimeout(next, 500);
   }());
 
@@ -57,7 +60,7 @@
   function appendBub(text, role) {
     const div = document.createElement('div');
     div.className = 'msg-bub' + (role === 'user' ? ' msg-bub--user' : '');
-    div.innerHTML = `<p>${esc(text)}</p><span class="msg-ts">${ts()}</span>`;
+    div.innerHTML = '<p>' + esc(text) + '</p><span class="msg-ts">' + ts() + '</span>';
     msgsEl.appendChild(div);
     scrollBottom();
     return div;
@@ -76,17 +79,43 @@
     if (msgsCol) msgsCol.scrollTop = msgsCol.scrollHeight;
   }
 
+  /* Пульсирующая подсветка флагов */
+  function pulseLangFlags() {
+    const flagsEl = document.querySelector('.agent-langs');
+    if (!flagsEl) return;
+    flagsEl.classList.add('lang-flags--pulse');
+    setTimeout(function () { flagsEl.classList.remove('lang-flags--pulse'); }, 2400);
+  }
+
   /* ── Send ── */
   async function send() {
     const text = inputEl.value.trim();
     if (!text) return;
 
-    inputEl.value = '';
+    inputEl.value    = '';
     inputEl.disabled = true;
     sendBtn.disabled = true;
 
     appendBub(text, 'user');
     history.push({ role: 'user', content: text });
+
+    /* Проверяем флаг определения языка (ставится в hero.js) */
+    const langMismatch = window._chatLangMismatch;
+    if (langMismatch) {
+      window._chatLangMismatch = null;
+      const reply = LANG_PROMPTS[langMismatch] || LANG_PROMPTS['en-US'];
+      const dot   = appendTyping();
+      setTimeout(function () {
+        dot.remove();
+        appendBub(reply, 'assistant');
+        history.push({ role: 'assistant', content: reply });
+        pulseLangFlags();
+        inputEl.disabled = false;
+        sendBtn.disabled = false;
+        inputEl.focus();
+      }, 900);
+      return;
+    }
 
     const dot = appendTyping();
 
@@ -96,7 +125,7 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ messages: history }),
       });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      if (!res.ok) throw new Error('HTTP ' + res.status);
       const data = await res.json();
       dot.remove();
       appendBub(data.text, 'assistant');
@@ -166,7 +195,6 @@
     });
   }
 
-  /* Запрашиваем ответ Ольги на вложение */
   async function autoReply(userText) {
     const dot = appendTyping();
     try {
@@ -186,4 +214,4 @@
     }
   }
 
-})();
+}());

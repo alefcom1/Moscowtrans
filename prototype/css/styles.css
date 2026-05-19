@@ -1859,6 +1859,15 @@ img { max-width: 100%; display: block; }
 .lang-flag--active { opacity: 1; background: rgba(120,60,240,.20); transform: scale(1.1); }
 :root[data-theme="light"] .lang-flag--active { background: rgba(120,60,240,.12); }
 
+/* Пульсация флагов при определении языка */
+@keyframes langFlagsPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  40%       { opacity: 0.4; transform: scale(1.18); }
+}
+.lang-flags--pulse .lang-flag {
+  animation: langFlagsPulse 0.6s ease-in-out 4;
+}
+
 /* ================================================================
    PROFESSIONAL TRANSLATION PAGE — sec-intro
    ================================================================ */
