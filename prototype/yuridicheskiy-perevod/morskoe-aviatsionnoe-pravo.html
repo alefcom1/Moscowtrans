@@ -9,7 +9,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/calc-widget.css">
   <style>.doc-ref-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:32px}.doc-ref-card{display:flex;flex-direction:column;gap:8px;padding:20px 18px;border:1px solid var(--border);border-radius:12px;background:var(--card-bg,var(--surface));color:inherit;transition:box-shadow .18s,border-color .18s,transform .18s}.doc-ref-card:hover{border-color:var(--accent);box-shadow:0 4px 18px rgba(0,0,0,.08);transform:translateY(-2px)}.doc-ref-card svg{color:var(--accent);flex-shrink:0}.doc-ref-card strong{font-size:15px;font-weight:600;line-height:1.3}.doc-ref-card span{font-size:13px;color:var(--text-muted);line-height:1.5}</style>
+  <!-- Калькулятор: SDK-зависимости -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mammoth@1.6.0/mammoth.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/franc-min@6.2.0/index.min.js"></script>
 </head>
 <body>
   <header class="site-header"><div class="container header-inner">
@@ -112,6 +118,145 @@
   <section class="sec sec-reviews"><div class="container"><div class="reviews-head"><div><h2 class="sec-title">Что говорят клиенты</h2><p class="sec-sub" style="margin-top:6px">Отзывы судоходных компаний и морских юристов</p></div><div class="review-rating-block"><div class="review-rating-score">4.98</div><div class="review-stars-row"><svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div class="review-rating-label">средний рейтинг</div></div><div class="review-platform-links"><a href="https://yandex.ru/maps/org/remarka/51867347382/reviews/" class="review-platform-link" target="_blank" rel="noopener">Яндекс</a><a href="https://maps.app.goo.gl/d8BKJYw81PqBHXvz7" class="review-platform-link" target="_blank" rel="noopener">Google</a></div></div><div class="reviews-grid" style="grid-template-columns:repeat(3,1fr)"><div class="review-card"><div class="review-card-top"><div class="review-avatar">М</div><div class="review-meta"><div class="review-name">Михаил Крылов</div><div class="review-src">Яндекс · февраль 2025</div></div></div><div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p class="review-text">Переводили чартер-партию NYPE для спора в LMAA. Переводчик знает морскую терминологию — off-hire, deviation, laytime — всё передано точно. Арбитры вопросов по переводу не имели.</p><div class="review-role">Морской юрист, международная судоходная компания</div></div><div class="review-card"><div class="review-card-top"><div class="review-avatar">Н</div><div class="review-meta"><div class="review-name">Наталья Захарова</div><div class="review-src">Google · октябрь 2024</div></div></div><div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p class="review-text">Коносаменты для таможенного оформления груза — несколько десятков в месяц. Бюро работает быстро, терминология всегда точная. Отличный партнёр для морских ВЭД-операций.</p><div class="review-role">Директор по логистике, торговая компания</div></div><div class="review-card"><div class="review-card-top"><div class="review-avatar">С</div><div class="review-meta"><div class="review-name">Сергей Аверин</div><div class="review-src">Яндекс · июль 2024</div></div></div><div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p class="review-text">Переводили договор лизинга воздушного судна (Cape Town Convention). Переводчик понимает специфику авиационного финансирования — термины переданы точно, сроки соблюдены.</p><div class="review-role">Авиационный юрист, лизинговая компания</div></div></div></div></section>
 
   <section class="sec sec--alt sec-faq"><div class="container"><div class="sec-head sec-head--center"><h2 class="sec-title">Часто задаваемые вопросы</h2><p class="sec-sub">Не нашли ответа — напишите Ольге в чат, ответим за минуту</p></div><div class="faq-list"><details class="faq-item"><summary class="faq-summary">Переводите ли коносаменты и чартер-партии для морских споров?</summary><div class="faq-body"><p>Да. Работаем с коносаментами всех типов и проформами чартер-партий NYPE, BALTIME, GENCON, BIMCO. Переводчики — морские юристы с опытом участия в разбирательствах LMAA, SMA и МКАС.</p></div></details><details class="faq-item"><summary class="faq-summary">Работаете ли с договорами лизинга воздушных судов по Cape Town Convention?</summary><div class="faq-body"><p>Да. Переводим договоры операционного и финансового лизинга воздушных судов по стандартам Cape Town Convention, договоры мокрого и сухого фрахта. Знаем специфику авиационного финансирования.</p></div></details><details class="faq-item"><summary class="faq-summary">Как обеспечивается точность морских правовых терминов?</summary><div class="faq-body"><p>Переводчики — практикующие морские юристы с опытом работы с первоисточниками: Конвенцией ООН по морскому праву UNCLOS, правилами Гаага-Висби, Роттердамскими правилами. Ведём отраслевой глоссарий.</p></div></details><details class="faq-item"><summary class="faq-summary">Переводите ли страховые морские полисы и претензии по ущербу карго?</summary><div class="faq-body"><p>Да. Переводим морские страховые полисы (MIA 1906, Institute Clauses), претензии по ущербу карго, surveyor reports. Знаем специфику морского страхования.</p></div></details><details class="faq-item"><summary class="faq-summary">Работаете ли с материалами морского арбитража?</summary><div class="faq-body"><p>Да. Переводим исковые меморандумы, решения арбитражей LMAA и SMA, экспертные заключения для морских споров. Подбираем переводчиков с практикой в морских арбитражах.</p></div></details></div></div></section>
+  <!-- ════════ КАЛЬКУЛЯТОР СТОИМОСТИ ════════ -->
+  <section class="sec sec--alt sec-calculator" id="calc-section">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Рассчитайте стоимость перевода онлайн</h2>
+        <p class="sec-sub">Загрузите документ — автоматически определим объём, язык и дадим точную оценку за минуту</p>
+      </div>
+      <div id="calc-docs" class="rem-calc">
+        <div class="calc-head">
+          <h2>Расчёт по загруженному документу</h2>
+          <p class="sub">Перетащите файл или выберите с компьютера — подсчитаем объём, определим язык и рассчитаем стоимость автоматически.</p>
+        </div>
+        <div class="calc-body">
+          <div class="step" id="rem-step-upload">
+            <div class="step-title"><span class="step-num">1</span>Загрузка документа</div>
+            <div class="upload-zone" id="rem-uz">
+              <input type="file" id="rem-finp" multiple accept=".pdf,.doc,.docx,.txt,.rtf,.odt,.xls,.xlsx,.ppt,.pptx,.jpg,.jpeg,.png">
+              <span class="u-ico">📄</span>
+              <div class="u-main">Перетащите файлы сюда</div>
+              <div class="u-sub">или нажмите кнопку, чтобы выбрать с компьютера</div>
+              <span class="u-btn">Выбрать файлы</span>
+              <div class="u-formats">PDF · DOC · DOCX · TXT · RTF · ODT · XLS · XLSX · PPT · PPTX · JPG · PNG</div>
+            </div>
+          </div>
+          <div class="step hidden" id="rem-step-docs">
+            <div class="step-title"><span class="step-num">2</span>Ваши документы</div>
+            <div class="docs-list" id="rem-docs-list"></div>
+            <label class="upload-mini" id="rem-add-more">
+              <input type="file" id="rem-finp-more" multiple accept=".pdf,.doc,.docx,.txt,.rtf,.odt,.xls,.xlsx,.ppt,.pptx,.jpg,.jpeg,.png">
+              <span>＋</span><span>Добавить ещё документ</span>
+            </label>
+          </div>
+          <div class="step hidden" id="rem-step-urg">
+            <div class="step-title"><span class="step-num">3</span>Выберите срок готовности</div>
+            <div class="urg-row" id="rem-urg-row">
+              <button type="button" class="urg-btn sel" data-urg="standard" data-mult="1">
+                <div class="u-h">Стандарт</div>
+                <div class="u-d" id="rem-urg-d-standard">—</div>
+                <div class="u-p">без доплаты</div>
+              </button>
+              <button type="button" class="urg-btn" data-urg="urgent" data-mult="1">
+                <div class="u-h">Срочно</div>
+                <div class="u-d" id="rem-urg-d-urgent">—</div>
+                <div class="u-p" id="rem-urg-p-urgent">без доплаты</div>
+              </button>
+              <button type="button" class="urg-btn" data-urg="express" data-mult="2">
+                <div class="u-h">Экспресс</div>
+                <div class="u-d" id="rem-urg-d-express">—</div>
+                <div class="u-p">цена ×2</div>
+              </button>
+            </div>
+          </div>
+          <div class="step hidden" id="rem-step-total">
+            <div class="total-box">
+              <div>
+                <div class="tl">Итого к оплате</div>
+                <div class="tp"><span id="rem-tp-val">0</span><small>₽</small></div>
+                <div class="td" id="rem-tp-detail">—</div>
+              </div>
+              <div class="tr" id="rem-tp-right">—</div>
+            </div>
+            <p class="result-note">* Стоимость рассчитана автоматически и может быть скорректирована менеджером после проверки документов.</p>
+            <div class="btn-row">
+              <button type="button" class="btn btn-secondary" id="rem-btn-reset">Начать заново</button>
+              <button type="button" class="btn btn-primary" id="rem-btn-order">Оформить заказ</button>
+            </div>
+            <div class="trust-row">
+              <div class="trust-item"><span class="trust-dot"></span>Ответим за 30 минут</div>
+              <div class="trust-item"><span class="trust-dot"></span>Бесплатная оценка</div>
+              <div class="trust-item"><span class="trust-dot"></span>С 2001 года</div>
+              <div class="trust-item"><span class="trust-dot"></span>Конфиденциально</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="rem-notif" class="rem-notif"></div>
+  <div class="rem-modal-overlay" id="rem-modal">
+    <div class="rem-modal" role="dialog" aria-modal="true">
+      <div class="m-head">
+        <h3>Оформление заказа</h3>
+        <div class="m-sub">Проверьте состав заказа и заполните данные для связи</div>
+        <button type="button" class="m-close" id="rem-m-close" aria-label="Закрыть">×</button>
+      </div>
+      <div class="m-body">
+        <div class="step">
+          <div class="step-title"><span class="step-num">1</span>Ваш заказ</div>
+          <div class="m-summary" id="rem-m-summary"></div>
+          <div class="m-note">* Стоимость рассчитана автоматически и может быть изменена после проверки.</div>
+        </div>
+        <div class="step">
+          <div class="step-title"><span class="step-num">2</span>Контактные данные</div>
+          <div class="m-row">
+            <div class="field"><label>Ваше имя <span class="req">*</span></label>
+              <input type="text" id="rem-m-name" placeholder="Иван Петров"></div>
+            <div class="field"><label>Телефон <span class="req">*</span></label>
+              <input type="tel" id="rem-m-phone" placeholder="+7 (000) 000-00-00"></div>
+          </div>
+          <div class="m-row">
+            <div class="field"><label>E-mail <span class="req">*</span></label>
+              <input type="email" id="rem-m-email" placeholder="ivan@example.com"></div>
+            <div class="field"><label>Компания</label>
+              <input type="text" id="rem-m-company" placeholder="Название организации"></div>
+          </div>
+          <div class="m-row-full field" style="margin-bottom:0"><label>Комментарий</label>
+            <textarea id="rem-m-comment" placeholder="Особые требования, пожелания..."></textarea></div>
+        </div>
+        <div class="step">
+          <div class="step-title"><span class="step-num">3</span>Получение перевода</div>
+          <div class="field" style="margin-bottom:12px"><label>Город</label>
+            <input type="text" id="rem-m-city" placeholder="Москва"></div>
+          <div class="delivery-row" id="rem-m-delivery">
+            <div class="del-opt sel" data-del="none" data-price="0">
+              <div class="d-t">На e-mail (электронная версия)</div>
+              <div class="d-s">Бесплатно · мгновенно после готовности</div>
+            </div>
+            <div class="del-opt" data-del="courier" data-price="490">
+              <div class="d-t">Курьер (СДЭК, OZON, Яндекс)</div>
+              <div class="d-s">от 3 дней · от 490 ₽</div>
+            </div>
+          </div>
+          <div class="del-note">Сроки курьерской доставки указаны без учёта срока выполнения перевода.</div>
+        </div>
+        <div class="m-final">
+          <div>
+            <div class="mf-l">Итоговая сумма</div>
+            <div class="mf-p"><span id="rem-m-final">0</span><small> ₽</small></div>
+          </div>
+          <div class="mf-note" id="rem-m-final-note"></div>
+        </div>
+        <button type="button" class="btn btn-primary" id="rem-m-submit" style="width:100%">Отправить заявку</button>
+        <div class="m-agree">
+          Нажимая на кнопку, вы соглашаетесь с <a href="/politika-konfidenczialnosti" target="_blank">политикой конфиденциальности</a>.
+        </div>
+      </div>
+    </div>
+  </div>
 
   <section class="sec sec-cta"><div class="container"><h2 class="cta-title">Нужен перевод морской или авиационной документации?</h2><p class="cta-sub">Пришлите коносамент, чартер или авиаконтракт — рассчитаем стоимость и срок за несколько минут</p><div class="cta-btns"><a href="#" class="btn btn-primary">Загрузить файл</a><a href="#" class="btn btn-outline">Написать Ольге</a></div></div></section>
 
@@ -123,6 +268,7 @@
   <button class="chat-float-btn" id="chatFloatBtn" aria-label="Открыть чат"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></button>
 
   <footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../assets/logo-light.png" alt="Remarka" id="footer-logo"><p>Профессиональные переводы и локализация для бизнеса. Работаем удалённо с клиентами по всей России и за её пределами.</p><h5 class="social-title">Мы в соцсетях</h5><div class="social-links"><a href="#" aria-label="ВКонтакте"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.785 16.241s.288-.032.435-.193c.135-.148.13-.426.13-.426s-.018-1.302.582-1.495c.592-.19 1.352 1.262 2.158 1.821.61.422 1.073.33 1.073.33l2.157-.031s1.128-.071.593-.964c-.044-.073-.312-.66-1.602-1.86-1.35-1.257-1.169-1.054.456-3.232.99-1.327 1.387-2.137 1.263-2.485-.118-.331-.85-.244-.85-.244l-2.434.015s-.18-.025-.314.056c-.13.079-.215.262-.215.262s-.385 1.029-.899 1.904c-1.083 1.846-1.517 1.944-1.694 1.829-.412-.267-.31-1.071-.31-1.643 0-1.787.27-2.531-.526-2.724-.265-.064-.46-.106-1.136-.113-.867-.009-1.601.003-2.016.207-.276.135-.49.435-.36.453.16.022.523.099.715.362.249.34.24 1.103.24 1.103s.143 2.097-.333 2.358c-.327.179-.775-.186-1.74-1.86-.494-.858-.868-1.807-.868-1.807s-.072-.176-.2-.27c-.155-.114-.372-.15-.372-.15l-2.314.014s-.347.01-.475.16c-.114.135-.009.413-.009.413s1.813 4.242 3.866 6.38c1.882 1.96 4.02 1.832 4.02 1.832h.967z"/></svg></a><a href="#" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.464.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a></div></div><div class="footer-col"><h4>Услуги</h4><ul><li><a href="#">Технический перевод</a></li><li><a href="#">Юридический перевод</a></li><li><a href="#">Медицинский перевод</a></li><li><a href="#">IT-перевод</a></li><li><a href="#">Локализация ПО</a></li></ul></div><div class="footer-col"><h4>Компания</h4><ul><li><a href="/">Главная</a></li><li><a href="#">О нас</a></li><li><a href="#">Цены</a></li><li><a href="#">Блог</a></li><li><a href="#">Контакты</a></li></ul></div><div class="footer-col"><h4>Поддержка</h4><ul><li><a href="#">Связаться с нами</a></li><li><a href="#">Часто задаваемые вопросы</a></li><li><a href="#">Стать переводчиком</a></li></ul><a href="#start" class="btn-primary" style="margin-top:16px">Начать <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div></div><div class="footer-bottom"><p class="footer-copyright">© 2001–2026 Бюро переводов «Ремарка»</p><nav class="footer-legal"><a href="#">Политика конфиденциальности</a><a href="#">Карта сайта</a></nav></div></div></footer>
+  <script src="../js/calc-widget.js"></script>
   <script src="../js/main.js"></script><script src="../js/hero.js"></script><script src="../js/chat.js"></script><script src="../js/animations.js"></script>
   <script>function updateLogos(){const isDark=document.documentElement.getAttribute('data-theme')==='dark';const src=isDark?'../assets/logo-dark.png':'../assets/logo-light.png';document.querySelectorAll('#logo-img, #footer-logo').forEach(function(img){img.src=src;});}updateLogos();new MutationObserver(updateLogos).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});</script>
 </body>
