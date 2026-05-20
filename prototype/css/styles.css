@@ -2386,3 +2386,66 @@ body.js-loaded .anim-fade.is-visible {
   .fl-grid { grid-template-columns: 1fr; }
   .fl-divider { width: 100%; height: 1px; margin: 28px 0; }
 }
+
+/* ══ Regulatory process section ════════════════════════════════════ */
+.sec-reg-process { padding: 64px 0; }
+.reg-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 40px;
+}
+.reg-step {
+  padding: 24px 20px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  position: relative;
+}
+.rs-num {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent);
+  opacity: .25;
+  line-height: 1;
+  margin-bottom: 10px;
+  font-family: var(--font-head);
+}
+.reg-step h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.reg-step p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+.reg-vendor-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 32px;
+  padding: 16px 20px;
+  background: rgba(120,60,240,.06);
+  border: 1px solid rgba(120,60,240,.18);
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.reg-vendor-note svg { flex-shrink: 0; color: var(--accent); margin-top: 1px; }
+@media (max-width: 900px) {
+  .reg-steps { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .reg-steps { grid-template-columns: 1fr; }
+}
+
+/* ══ cmp-ai-note ═════════════════════════════════════════════════== */
+.cmp-ai-note {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
