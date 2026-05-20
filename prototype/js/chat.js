@@ -10,13 +10,51 @@
 
   const history = [];
 
+  /* ── Определение языка по тексту ─────────────────────────── */
+  function detectLang(text) {
+    if (!text || text.trim().length < 3) return null;
+    const t = ' ' + text.toLowerCase() + ' ';
+
+    // Кириллица → русский
+    const cyrillic = (t.match(/[а-яё]/g) || []).length;
+    const total    = t.replace(/\s/g, '').length;
+    if (total > 0 && cyrillic / total > 0.3) return 'ru-RU';
+
+    // Итальянский
+    const itWords = [
+      'ciao', 'salve', 'buongiorno', 'grazie', 'prego', 'voglio', 'bisogno',
+      'traduz', 'documento', 'per favore', 'italiano', 'tradurre', 'parla',
+      'parlo', 'parlate', 'vorrei', 'capisce', ' il ', ' la ', ' lo ',
+      ' un ', ' una ', ' mi ', ' si ', ' di ', ' per ', ' con ', ' ho ', ' che '
+    ];
+    const itScore = itWords.filter(function (w) { return t.includes(w); }).length;
+
+    // Английский
+    const enWords = [
+      'hello', ' hi ', 'thank', 'please', 'need', 'want', 'translat',
+      'document', 'english', 'help', 'quote', 'price', 'speak',
+      ' the ', ' is ', ' are ', ' you ', ' this ', ' that ',
+      ' have ', ' can ', ' my ', ' for ', ' with ', ' of ', ' i ', ' do '
+    ];
+    const enScore = enWords.filter(function (w) { return t.includes(w); }).length;
+
+    if (itScore === 0 && enScore === 0) return null;
+    return itScore >= enScore ? 'it-IT' : 'en-US';
+  }
+
+  /* Читаем текущий язык из активного флага */
+  function getCurrentLang() {
+    const active = document.querySelector('.lang-flag--active');
+    return active ? active.dataset.lang : 'ru-RU';
+  }
+
   /* Сообщения Ольги при обнаружении языка */
   const LANG_PROMPTS = {
-    'en-US': "I can see you're speaking English 🇬🇧 To chat with me in English, please tap the 🇬🇧 flag in my panel.",
-    'it-IT': "Vedo che parli italiano 🇮🇹 Per chattare con me in italiano, clicca sulla bandiera 🇮🇹 nel mio pannello."
+    'en-US': "I can see you're writing in English 🇬🇧 To chat with me in English, please tap the 🇬🇧 flag in my panel.",
+    'it-IT': "Vedo che scrivi in italiano 🇮🇹 Per chattare con me in italiano, clicca sulla bandiera 🇮🇹 nel mio pannello."
   };
 
-  /* ── Приветственные сообщения: появляются по одному ── */
+  /* ── Приветственные сообщения ── */
   (function showGreetings() {
     const greetings = Array.from(msgsEl.querySelectorAll('.msg-bub[data-greeting]'));
     if (!greetings.length) return;
@@ -79,7 +117,15 @@
     if (msgsCol) msgsCol.scrollTop = msgsCol.scrollHeight;
   }
 
-  /* Пульсирующая подсветка флагов */
+  function getActiveLang() {
+    var active = document.querySelector('.lang-flag--active');
+    return active ? active.dataset.lang : 'ru-RU';
+  }
+
+  function sayOlga(text) {
+    if (typeof window.speakOlga === 'function') window.speakOlga(text, getActiveLang());
+  }
+
   function pulseLangFlags() {
     const flagsEl = document.querySelector('.agent-langs');
     if (!flagsEl) return;
@@ -99,16 +145,24 @@
     appendBub(text, 'user');
     history.push({ role: 'user', content: text });
 
-    /* Проверяем флаг определения языка (ставится в hero.js) */
-    const langMismatch = window._chatLangMismatch;
+    /* Определяем язык сообщения (работает и для печатного и для голосового) */
+    const detected    = detectLang(text);
+    const currentLang = getCurrentLang();
+    const langMismatch =
+      detected &&
+      detected.split('-')[0] !== currentLang.split('-')[0]
+        ? detected
+        : (window._chatLangMismatch || null);
+    window._chatLangMismatch = null;
+
     if (langMismatch) {
-      window._chatLangMismatch = null;
       const reply = LANG_PROMPTS[langMismatch] || LANG_PROMPTS['en-US'];
       const dot   = appendTyping();
       setTimeout(function () {
         dot.remove();
         appendBub(reply, 'assistant');
         history.push({ role: 'assistant', content: reply });
+        if (typeof window.speakOlga === 'function') window.speakOlga(reply, langMismatch);
         pulseLangFlags();
         inputEl.disabled = false;
         sendBtn.disabled = false;
@@ -130,6 +184,7 @@
       dot.remove();
       appendBub(data.text, 'assistant');
       history.push({ role: 'assistant', content: data.text });
+      sayOlga(data.text);
     } catch {
       dot.remove();
       appendBub('Сервер недоступен. Запустите: python3 prototype/server.py', 'assistant');
@@ -210,7 +265,9 @@
       history.push({ role: 'assistant', content: data.text });
     } catch {
       dot.remove();
-      appendBub('Получила ваш файл! Уточните, пожалуйста, с какого языка нужен перевод и для каких целей.', 'assistant');
+      var fallback = 'Получила ваш файл! Уточните, пожалуйста, с какого языка нужен перевод и для каких целей.';
+      appendBub(fallback, 'assistant');
+      sayOlga(fallback);
     }
   }
 

@@ -30,3 +30,7 @@ backup*
 error_log
 *.log
 *.tmp
+!prototype/uploads/
+!prototype/uploads/calc/
+!prototype/uploads/calc/.htaccess
+!prototype/uploads/calc/.gitkeep
