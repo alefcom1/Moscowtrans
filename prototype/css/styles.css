@@ -676,8 +676,42 @@ img { max-width: 100%; display: block; }
   color: var(--text-secondary);
   font-size: 15px;
   line-height: 1.7;
-  margin: 0 0 32px;
+  margin: 0 0 20px;
   max-width: 320px;
+}
+
+.footer-address {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+.footer-address .fa-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.footer-address .fa-row svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  opacity: .65;
+  stroke: currentColor;
+  fill: none;
+}
+.footer-address .fa-row svg[fill="currentColor"] {
+  fill: currentColor;
+  stroke: none;
+}
+.footer-address a {
+  color: inherit;
+  text-decoration: none;
+}
+.footer-address a:hover {
+  color: var(--accent);
 }
 
 .social-title {
