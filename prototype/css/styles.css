@@ -2977,3 +2977,105 @@ body.js-loaded .anim-fade.is-visible {
 :root[data-theme="light"] .cf-icon {
   background: rgba(120,60,240,.07);
 }
+
+/* ============================================================
+   B2B FLOW — Работаем с юридическими лицами по договору
+   ============================================================ */
+.sec-b2b-flow { padding: 80px 0; }
+
+.b2b-flow-row {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin: 48px 0 40px;
+}
+
+.b2b-step {
+  flex: 1;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--r-md);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color var(--t-fast), box-shadow var(--t-fast);
+}
+.b2b-step:hover {
+  border-color: rgba(120,60,240,.35);
+  box-shadow: 0 4px 24px rgba(120,60,240,.08);
+}
+
+.b2b-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--brand-gradient);
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.b2b-label {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.b2b-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  flex: 1;
+}
+
+.b2b-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  color: var(--brand-violet);
+  font-size: 22px;
+  flex-shrink: 0;
+  opacity: .5;
+}
+
+.b2b-extras {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+  padding-top: 8px;
+}
+
+.b2b-extra-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+.b2b-extra-item svg {
+  flex-shrink: 0;
+  color: var(--brand-violet);
+  opacity: .8;
+}
+
+@media (max-width: 768px) {
+  .b2b-flow-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .b2b-arrow {
+    transform: rotate(90deg);
+    padding: 0;
+    height: 24px;
+  }
+  .b2b-extras {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
