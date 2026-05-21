@@ -1,6 +1,22 @@
 (function () {
   'use strict';
 
+  /* ══ Cloudflare Worker URL ══════════════════════════════════
+     Замените на адрес своего воркера, например:
+     const WORKER_URL = 'https://olga-chat.yourname.workers.dev';
+     Если пустая строка — работает локальный smartReply.
+  ══════════════════════════════════════════════════════════ */
+  const WORKER_URL = 'https://olga.alefcom1.workers.dev';
+
+  const SYSTEM_PROMPT = `Ты — Ольга, виртуальный ассистент бюро переводов «Ремарка» (moscowtrans.ru).
+Помогаешь корпоративным клиентам с вопросами о переводе документов.
+Отвечай кратко (2–4 предложения), по-деловому, на русском языке.
+Ключевые факты: работаем с 2012 года, 60+ языков, специализация — юридические, технические, медицинские переводы.
+Цены: от 250 ₽/стр (стандартный), от 300 ₽/стр (технический/медицинский), от 350 ₽/стр (юридический).
+Нотариальное заверение — от 250 ₽/стр. Адрес: Москва, Глинищевский пер., 6. Тел: +7 (495) 970-44-13.
+Если клиент спрашивает о конкретном заказе или цене — предложи загрузить файл в калькулятор или позвонить.
+Не выдумывай информацию, которой нет в этих данных.`;
+
   const EJS_PUBLIC_KEY  = 'qIHC--GaJ6MMVCOg5';
   const EJS_SERVICE_ID  = 'service_htuz6bm';
   const EJS_TEMPLATE_ID = 'template_zl1knyb';
@@ -360,11 +376,29 @@
 
     const dot = appendTyping();
 
-    const delay = Math.max(600, Math.min(text.length * 22, 2000));
-    await new Promise(function(resolve) { setTimeout(resolve, delay); });
+    let reply = null;
+
+    if (WORKER_URL) {
+      try {
+        const messages = [{ role: 'system', content: SYSTEM_PROMPT }].concat(history);
+        const res = await fetch(WORKER_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ messages })
+        });
+        if (res.ok) {
+          const data = await res.json();
+          reply = (data.reply) || (data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content) || null;
+        }
+      } catch (e) {
+        console.warn('Worker fetch error:', e);
+      }
+    }
+
+    if (!reply) reply = smartReply(history);
+
     dot.remove();
 
-    const reply = smartReply(history);
     if (reply) {
       appendBub(reply, 'assistant');
       history.push({ role: 'assistant', content: reply });
