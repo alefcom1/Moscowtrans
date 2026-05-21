@@ -54,7 +54,7 @@ img { max-width: 100%; display: block; }
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  gap: 32px;
+  gap: 16px;
 }
 
 /* Логотип */
@@ -72,16 +72,18 @@ img { max-width: 100%; display: block; }
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
   margin-left: auto;
+  flex-shrink: 0;
 }
 .main-nav a {
   display: inline-block;
-  padding: 8px 16px;
+  padding: 6px 11px;
   color: var(--text-secondary);
   font-weight: 500;
-  font-size: 15px;
+  font-size: 14px;
   border-radius: var(--r-md);
+  white-space: nowrap;
   transition: color var(--t-fast), background var(--t-fast);
 }
 .main-nav a:hover {
@@ -930,6 +932,9 @@ img { max-width: 100%; display: block; }
   color: rgba(255,255,255,.35);
   cursor: pointer;
   border-radius: 12px;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
   font-size: 11px;
   line-height: 1.3;
   text-align: center;
@@ -938,6 +943,7 @@ img { max-width: 100%; display: block; }
 }
 .sb-item:hover { background: rgba(255,255,255,.06); color: rgba(255,255,255,.7); }
 .sb-item.sb-active { background: rgba(120,60,240,.18); color: #a78bfa; }
+a.sb-item { text-decoration: none; }
 
 /* ── Hero main ── */
 .hero-main {
@@ -2313,20 +2319,25 @@ body.js-loaded .anim-fade.is-visible {
 
 /* ══ Header phone + WhatsApp ═════════════════════════════════════════ */
 .header-phone {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text-primary);
-  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(120,60,240,.10);
+  color: var(--brand-violet, #783CF0);
+  flex-shrink: 0;
   text-decoration: none;
-  letter-spacing: -.01em;
+  transition: background .2s;
 }
-.header-phone:hover { color: var(--accent); }
+.header-phone:hover { background: rgba(120,60,240,.20); color: var(--brand-violet, #783CF0); }
 .header-wa {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: rgba(37,211,102,.12);
   color: #25d366;
@@ -2702,3 +2713,375 @@ body.js-loaded .anim-fade.is-visible {
   letter-spacing: .02em;
 }
 :root[data-theme="light"] .iex-meta { color: rgba(10,14,39,.40); }
+
+/* ============================================================
+   HERO / CHAT WIDGET — СВЕТЛАЯ ТЕМА
+   ============================================================ */
+:root[data-theme="light"] .hero-page {
+  background: #EEF1FF;
+}
+:root[data-theme="light"] .chat-sidebar {
+  background: rgba(10,14,39,.04);
+  border-right-color: rgba(10,14,39,.08);
+}
+:root[data-theme="light"] .sb-item {
+  color: rgba(10,14,39,.45);
+}
+:root[data-theme="light"] .sb-item:hover {
+  background: rgba(10,14,39,.06);
+  color: rgba(10,14,39,.75);
+}
+:root[data-theme="light"] .sb-item.sb-active {
+  background: rgba(120,60,240,.10);
+  color: #5b21b6;
+}
+:root[data-theme="light"] .chat-window {
+  background: rgba(255,255,255,.82);
+  border-color: rgba(10,14,39,.10);
+  box-shadow: 0 8px 60px rgba(10,14,39,.12), 0 2px 12px rgba(10,14,39,.06);
+}
+:root[data-theme="light"] .cw-top-bar {
+  border-bottom-color: rgba(10,14,39,.08);
+}
+:root[data-theme="light"] .cw-close {
+  color: rgba(10,14,39,.38);
+}
+:root[data-theme="light"] .cw-close:hover {
+  color: rgba(10,14,39,.75);
+  background: rgba(10,14,39,.06);
+}
+:root[data-theme="light"] .agent-name {
+  color: #0A0E27;
+}
+:root[data-theme="light"] .agent-role {
+  color: rgba(10,14,39,.50);
+}
+:root[data-theme="light"] .msg-bub {
+  background: rgba(10,14,39,.05);
+  border-color: rgba(10,14,39,.08);
+  color: rgba(10,14,39,.88);
+}
+:root[data-theme="light"] .msg-ts {
+  color: rgba(10,14,39,.30);
+}
+:root[data-theme="light"] .msg-bub--user {
+  background: rgba(120,60,240,.10);
+  border-color: rgba(120,60,240,.18);
+  color: #2d1b69;
+}
+:root[data-theme="light"] .typing-dots {
+  background: rgba(10,14,39,.05);
+  border-color: rgba(10,14,39,.08);
+}
+:root[data-theme="light"] .cw-msgs-col::-webkit-scrollbar-track {
+  background: transparent;
+}
+:root[data-theme="light"] .cw-input-bar {
+  background: rgba(255,255,255,.7);
+  border-top-color: rgba(10,14,39,.08);
+}
+:root[data-theme="light"] .cw-input {
+  background: rgba(10,14,39,.04);
+  border-color: rgba(10,14,39,.10);
+  color: #0A0E27;
+}
+:root[data-theme="light"] .cw-input::placeholder {
+  color: rgba(10,14,39,.38);
+}
+:root[data-theme="light"] .cw-btn-icon {
+  color: rgba(10,14,39,.45);
+}
+:root[data-theme="light"] .cw-btn-icon:hover {
+  color: rgba(10,14,39,.80);
+  background: rgba(10,14,39,.06);
+}
+:root[data-theme="light"] .agent-online-dot {
+  border-color: #EEF1FF;
+}
+:root[data-theme="light"] .agent-stat-row {
+  color: rgba(10,14,39,.50);
+}
+:root[data-theme="light"] .agent-stat-row strong {
+  color: #0A0E27;
+}
+
+/* ============================================================
+   СЕКЦИИ САЙТА — СВЕТЛАЯ ТЕМА
+   ============================================================ */
+/* Секция услуг */
+:root[data-theme="light"] .services-section {
+  background: var(--bg-secondary);
+}
+:root[data-theme="light"] .srv-card {
+  background: #FFFFFF;
+  border-color: rgba(10,14,39,.08);
+}
+:root[data-theme="light"] .srv-card:hover {
+  border-color: rgba(120,60,240,.25);
+  box-shadow: 0 8px 32px rgba(120,60,240,.10);
+}
+
+/* Ценовые карточки */
+:root[data-theme="light"] .price-card {
+  background: #FFFFFF;
+  border-color: rgba(10,14,39,.08);
+}
+:root[data-theme="light"] .price-card.featured {
+  border-color: rgba(120,60,240,.35);
+}
+
+/* Footer */
+:root[data-theme="light"] .site-footer {
+  background: var(--bg-secondary);
+  border-top-color: rgba(10,14,39,.08);
+}
+:root[data-theme="light"] .footer-col-title {
+  color: #0A0E27;
+}
+:root[data-theme="light"] .footer-links a {
+  color: rgba(10,14,39,.60);
+}
+:root[data-theme="light"] .footer-links a:hover {
+  color: #0A0E27;
+}
+:root[data-theme="light"] .footer-bottom {
+  border-top-color: rgba(10,14,39,.07);
+  color: rgba(10,14,39,.45);
+}
+
+/* ============================================================
+   CALC HERO — 2-колоночный блок расчёта стоимости
+   ============================================================ */
+.sec-calculator-hero {
+  padding: 80px 0;
+  background: var(--bg-primary);
+}
+
+.calc-hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* ── Левая маркетинговая колонка ── */
+.calc-hero-left {
+  position: sticky;
+  top: calc(var(--header-h) + 24px);
+}
+
+.calc-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #783CF0;
+  background: rgba(120,60,240,.10);
+  border: 1px solid rgba(120,60,240,.20);
+  border-radius: 6px;
+  padding: 4px 10px;
+  margin-bottom: 18px;
+}
+
+.calc-hero-h {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin: 0 0 14px;
+}
+
+.calc-hero-sub {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0 0 28px;
+}
+
+.calc-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cf-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.cf-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(120,60,240,.10);
+  border: 1px solid rgba(120,60,240,.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #783CF0;
+}
+
+.cf-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cf-item strong {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cf-item span {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.calc-trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  padding-top: 20px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.calc-trust-row span {
+  color: var(--text-secondary);
+}
+
+/* ── Правая колонка ── */
+.calc-hero-right .rem-calc {
+  box-shadow: 0 8px 40px rgba(0,0,0,.12);
+}
+
+/* Адаптив */
+@media (max-width: 900px) {
+  .calc-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .calc-hero-left {
+    position: static;
+  }
+}
+
+/* Светлая тема */
+:root[data-theme="light"] .calc-badge {
+  background: rgba(120,60,240,.07);
+}
+:root[data-theme="light"] .cf-icon {
+  background: rgba(120,60,240,.07);
+}
+
+/* ============================================================
+   B2B FLOW — Работаем с юридическими лицами по договору
+   ============================================================ */
+.sec-b2b-flow { padding: 80px 0; }
+
+.b2b-flow-row {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin: 48px 0 40px;
+}
+
+.b2b-step {
+  flex: 1;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--r-md);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color var(--t-fast), box-shadow var(--t-fast);
+}
+.b2b-step:hover {
+  border-color: rgba(120,60,240,.35);
+  box-shadow: 0 4px 24px rgba(120,60,240,.08);
+}
+
+.b2b-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--brand-gradient);
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.b2b-label {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.b2b-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  flex: 1;
+}
+
+.b2b-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  color: var(--brand-violet);
+  font-size: 22px;
+  flex-shrink: 0;
+  opacity: .5;
+}
+
+.b2b-extras {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+  padding-top: 8px;
+}
+
+.b2b-extra-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+.b2b-extra-item svg {
+  flex-shrink: 0;
+  color: var(--brand-violet);
+  opacity: .8;
+}
+
+@media (max-width: 768px) {
+  .b2b-flow-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .b2b-arrow {
+    transform: rotate(90deg);
+    padding: 0;
+    height: 24px;
+  }
+  .b2b-extras {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

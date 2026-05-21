@@ -305,3 +305,184 @@
   .rem-modal .m-final .mf-note { text-align:left; max-width:none; }
   .rem-calc .upload-zone { padding:32px 16px; }
 }
+
+/* ===========================================================
+   ТЁМНАЯ ТЕМА
+   =========================================================== */
+:root[data-theme="dark"] .rem-calc,
+:root[data-theme="dark"] .rem-modal-overlay {
+  --text:   rgba(255,255,255,0.90);
+  --text-m: rgba(255,255,255,0.60);
+  --text-s: rgba(255,255,255,0.40);
+  --bg:     #1A1F44;
+  --bg2:    #131836;
+  --bg3:    #0A0E27;
+  --border: rgba(255,255,255,0.10);
+  --bord-s: rgba(255,255,255,0.18);
+  --red-ll: rgba(192,57,43,0.18);
+}
+
+:root[data-theme="dark"] .rem-calc {
+  background: #131836;
+  box-shadow: 0 4px 40px rgba(0,0,0,0.35);
+}
+
+:root[data-theme="dark"] .rem-calc .step,
+:root[data-theme="dark"] .rem-modal .step {
+  background: #1A1F44;
+  border-color: rgba(255,255,255,0.09);
+}
+
+:root[data-theme="dark"] .rem-calc .step-title,
+:root[data-theme="dark"] .rem-modal .step-title {
+  border-bottom-color: rgba(255,255,255,0.07);
+}
+
+:root[data-theme="dark"] .rem-calc .upload-zone {
+  background: #0A0E27;
+  border-color: rgba(255,255,255,0.15);
+}
+:root[data-theme="dark"] .rem-calc .upload-zone:hover,
+:root[data-theme="dark"] .rem-calc .upload-zone.drag {
+  background: rgba(192,57,43,0.12);
+}
+
+:root[data-theme="dark"] .rem-calc .doc-card {
+  background: #1A1F44;
+  border-color: rgba(255,255,255,0.09);
+}
+:root[data-theme="dark"] .rem-calc .doc-head {
+  background: #1A1F44;
+  border-bottom-color: rgba(255,255,255,0.07);
+}
+:root[data-theme="dark"] .rem-calc .doc-stats {
+  background: rgba(255,255,255,0.05);
+}
+
+:root[data-theme="dark"] .rem-calc .doc-error {
+  background: rgba(192,57,43,0.18);
+  color: #ff8a80;
+}
+
+:root[data-theme="dark"] .rem-calc .doc-subtotal {
+  background: rgba(255,255,255,0.05);
+}
+
+:root[data-theme="dark"] .rem-calc .cert-btn,
+:root[data-theme="dark"] .rem-calc .urg-btn {
+  background: #1A1F44;
+  border-color: rgba(255,255,255,0.12);
+}
+:root[data-theme="dark"] .rem-calc .cert-btn:hover,
+:root[data-theme="dark"] .rem-calc .urg-btn:hover,
+:root[data-theme="dark"] .rem-calc .cert-btn.sel,
+:root[data-theme="dark"] .rem-calc .urg-btn.sel {
+  background: rgba(192,57,43,0.15);
+}
+
+:root[data-theme="dark"] .rem-calc .btn-secondary {
+  background: #1A1F44;
+  border-color: rgba(255,255,255,0.15);
+}
+:root[data-theme="dark"] .rem-calc .btn-secondary:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+:root[data-theme="dark"] .rem-calc .upload-mini {
+  background: #0A0E27;
+  border-color: rgba(255,255,255,0.12);
+}
+:root[data-theme="dark"] .rem-calc .upload-mini:hover {
+  background: rgba(192,57,43,0.12);
+}
+
+/* Модалка — тёмная тема */
+:root[data-theme="dark"] .rem-modal {
+  background: #131836;
+  color: rgba(255,255,255,0.90);
+}
+:root[data-theme="dark"] .rem-modal .m-head {
+  background: #1A1F44;
+  border-bottom-color: rgba(255,255,255,0.09);
+}
+:root[data-theme="dark"] .rem-modal .m-summary .ms-item {
+  border-bottom-color: rgba(255,255,255,0.09);
+}
+:root[data-theme="dark"] .rem-modal .m-summary .ms-total {
+  border-top-color: rgba(255,255,255,0.12);
+}
+:root[data-theme="dark"] .rem-modal .del-opt {
+  background: #1A1F44;
+  border-color: rgba(255,255,255,0.12);
+}
+:root[data-theme="dark"] .rem-modal .del-opt:hover,
+:root[data-theme="dark"] .rem-modal .del-opt.sel {
+  background: rgba(192,57,43,0.15);
+}
+:root[data-theme="dark"] .rem-modal .m-final {
+  background: #1A1F44;
+}
+:root[data-theme="dark"] .rem-modal .m-agree a { color: #ff8a80; }
+
+/* Поля ввода — тёмная тема */
+:root[data-theme="dark"] .rem-calc .field select,
+:root[data-theme="dark"] .rem-calc .field input,
+:root[data-theme="dark"] .rem-calc .field textarea,
+:root[data-theme="dark"] .rem-modal .field select,
+:root[data-theme="dark"] .rem-modal .field input,
+:root[data-theme="dark"] .rem-modal .field textarea {
+  background: #0A0E27;
+  border-color: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.90);
+  color-scheme: dark;
+}
+:root[data-theme="dark"] .rem-calc .field select:focus,
+:root[data-theme="dark"] .rem-calc .field input:focus,
+:root[data-theme="dark"] .rem-calc .field textarea:focus,
+:root[data-theme="dark"] .rem-modal .field select:focus,
+:root[data-theme="dark"] .rem-modal .field input:focus,
+:root[data-theme="dark"] .rem-modal .field textarea:focus {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(192,57,43,0.20);
+}
+
+/* Уведомление */
+:root[data-theme="light"] .rem-notif {
+  background: #1A1A2E;
+  color: #fff;
+}
+
+/* ===========================================================
+   СВЕТЛАЯ ТЕМА — total-box адаптация
+   =========================================================== */
+:root[data-theme="light"] .rem-calc .total-box {
+  background: linear-gradient(135deg, #1A1A2E 0%, #2C1B1B 100%);
+}
+
+:root[data-theme="light"] .rem-calc .step,
+:root[data-theme="light"] .rem-modal .step {
+  background: #FFFFFF;
+  border-color: #E4E1DC;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+:root[data-theme="light"] .rem-calc .doc-card {
+  background: #FFFFFF;
+  border-color: #E4E1DC;
+}
+
+:root[data-theme="light"] .rem-calc .cert-btn,
+:root[data-theme="light"] .rem-calc .urg-btn {
+  background: #FFFFFF;
+}
+
+:root[data-theme="light"] .rem-calc .field select,
+:root[data-theme="light"] .rem-calc .field input,
+:root[data-theme="light"] .rem-calc .field textarea,
+:root[data-theme="light"] .rem-modal .field select,
+:root[data-theme="light"] .rem-modal .field input,
+:root[data-theme="light"] .rem-modal .field textarea {
+  background: #FFFFFF;
+  color: #1F1F1F;
+  color-scheme: light;
+}

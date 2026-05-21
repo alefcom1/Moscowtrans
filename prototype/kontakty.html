@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты — Бюро переводов Ремарка | Москва</title>
+  <meta name="description" content="Контакты бюро переводов Ремарка в Москве. Телефон, адрес, email. Глинищевский пер., д. 6, оф. 2. Ответим в течение 30 минут в рабочее время.">
+  <link rel="canonical" href="https://moscowtrans.ru/kontakty">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/calc-widget.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <style>
+    /* ── Page Hero ── */
+    .contacts-hero {
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 56px 0 48px;
+    }
+    .contacts-hero__breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .contacts-hero__breadcrumb a {
+      color: var(--text-muted);
+      transition: color var(--t-fast);
+    }
+    .contacts-hero__breadcrumb a:hover { color: var(--brand-cyan); }
+
+    .contacts-hero__label {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: var(--r-full);
+      background: var(--brand-gradient-soft);
+      border: 1px solid rgba(0,160,240,0.2);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--brand-cyan);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .contacts-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 0 0 16px;
+      background: var(--brand-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .contacts-hero__sub {
+      font-size: 18px;
+      color: var(--text-secondary);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* ── Contact Card ── */
+    .contact-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--r-lg);
+      padding: 20px 24px;
+      transition: border-color var(--t-fast), box-shadow var(--t-base);
+    }
+    .contact-card:hover {
+      border-color: rgba(0,160,240,0.25);
+      box-shadow: 0 4px 20px rgba(0,160,240,0.08);
+    }
+    .contact-card__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: var(--r-md);
+      background: var(--brand-gradient-soft);
+      flex-shrink: 0;
+    }
+    .contact-card__icon--green {
+      background: rgba(37,211,102,0.12);
+    }
+    .contact-card__body {
+      flex: 1;
+      min-width: 0;
+    }
+    .contact-card__label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .contact-card__value {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.4;
+    }
+    .contact-card__value a {
+      color: var(--text-primary);
+      transition: color var(--t-fast);
+    }
+    .contact-card__value a:hover { color: var(--brand-cyan); }
+    .contact-card__value--wa a:hover { color: #25D366; }
+    .contact-card__sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* ── Requisites Card ── */
+    .req-card {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--r-lg);
+      padding: 20px 24px;
+    }
+    .req-card__title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin: 0 0 14px;
+    }
+    .req-card__grid {
+      display: grid;
+      gap: 8px;
+    }
+    .req-card__row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+    }
+    .req-card__key {
+      color: var(--text-muted);
+      flex-shrink: 0;
+      width: 90px;
+    }
+    .req-card__val {
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    /* ── Contact Form ── */
+    .contact-form-wrap {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 36px;
+    }
+    .contact-form-title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0 0 6px;
+    }
+    .contact-form-sub {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin: 0 0 28px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      background: var(--bg-primary);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--r-md);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.5;
+      transition: border-color var(--t-fast), box-shadow var(--t-fast);
+      outline: none;
+      box-sizing: border-box;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: var(--text-muted);
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--brand-cyan);
+      box-shadow: 0 0 0 3px rgba(0,160,240,0.12);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-submit-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 14px 24px;
+      background: var(--brand-gradient);
+      color: #fff;
+      font-family: var(--font-sans);
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: var(--r-md);
+      cursor: pointer;
+      transition: transform var(--t-fast), box-shadow var(--t-base);
+      margin-top: 8px;
+    }
+    .form-submit-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-glow);
+    }
+    .form-submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .form-notice {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 12px;
+      line-height: 1.5;
+    }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 32px 0;
+    }
+    .form-success__icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(16,185,129,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .form-success__title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0 0 8px;
+    }
+    .form-success__text {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    /* ── Map ── */
+    .map-section {
+      margin-top: 56px;
+    }
+    .map-section__title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0 0 20px;
+    }
+    .map-container {
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      height: 340px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-secondary);
+      position: relative;
+    }
+    .map-container iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .map-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      gap: 12px;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    /* ── Contacts grid layout ── */
+    .contacts-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .contacts-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .contacts-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+    @media (max-width: 640px) {
+      .contact-form-wrap {
+        padding: 24px 20px;
+      }
+      .contacts-hero {
+        padding: 40px 0 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ════════════════ HEADER ════════════════ -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="index.html" class="logo" aria-label="Ремарка">
+        <img src="assets/logo-dark.png" alt="Remarka" id="logo-img">
+      </a>
+
+      <nav class="main-nav" aria-label="Основное меню">
+        <a href="index.html#services">Услуги</a>
+        <a href="index.html#industries">Отрасли</a>
+        <a href="index.html#languages">Языки</a>
+        <a href="index.html#pricing">Цены</a>
+        <a href="index.html#about">О нас</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+74959704413" class="header-phone" aria-label="Позвонить" title="+7 (495) 970-44-13">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </a>
+        <a href="https://wa.me/79859704413" class="header-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        </a>
+        <a href="https://tms.perevod4.ru/" target="_blank" rel="noopener" class="btn-link">Войти</a>
+        <a href="index.html#calc-section" class="btn-primary">
+          Получить расчёт
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <button class="theme-toggle" type="button" aria-label="Переключить тему">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="mobile-toggle" type="button" aria-label="Открыть меню">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Мобильное меню -->
+  <div class="mobile-drawer" aria-hidden="true">
+    <nav aria-label="Мобильное меню">
+      <a href="index.html#services">Услуги</a>
+      <a href="index.html#industries">Отрасли</a>
+      <a href="index.html#languages">Языки</a>
+      <a href="index.html#pricing">Цены</a>
+      <a href="index.html#about">О нас</a>
+    </nav>
+    <div class="drawer-actions">
+      <a href="tel:+74959704413" style="display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:inherit;text-decoration:none;padding:8px 0">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +7 (495) 970-44-13
+      </a>
+      <a href="https://wa.me/79859704413" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;font-size:14px;color:#25D366;text-decoration:none;padding:4px 0 12px">
+        WhatsApp: +7 (985) 970-44-13
+      </a>
+      <a href="index.html#calc-section" class="btn-primary">Получить расчёт <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+
+  <!-- ════════════════ PAGE HERO ════════════════ -->
+  <section class="contacts-hero">
+    <div class="container">
+      <nav class="contacts-hero__breadcrumb" aria-label="Хлебные крошки">
+        <a href="index.html">Главная</a>
+        <span aria-hidden="true">→</span>
+        <span aria-current="page">Контакты</span>
+      </nav>
+      <div class="contacts-hero__label">Контакты</div>
+      <h1 class="contacts-hero__title">Свяжитесь с нами</h1>
+      <p class="contacts-hero__sub">Ответим в течение 30 минут в рабочее время · Пн–Пт 9:00–18:00 МСК</p>
+    </div>
+  </section>
+
+  <!-- ════════════════ MAIN CONTENT ════════════════ -->
+  <main>
+    <section style="padding: 56px 0 80px; background: var(--bg-primary);">
+      <div class="container">
+
+        <div class="contacts-layout">
+
+          <!-- ── Left: Contact Cards ── -->
+          <div class="contacts-cards">
+
+            <!-- Phone -->
+            <div class="contact-card">
+              <div class="contact-card__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div class="contact-card__body">
+                <div class="contact-card__label">Телефон</div>
+                <div class="contact-card__value">
+                  <a href="tel:+74959704413">+7 (495) 970-44-13</a>
+                </div>
+                <div class="contact-card__sub">Москва, многоканальный</div>
+              </div>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="contact-card">
+              <div class="contact-card__icon contact-card__icon--green">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                </svg>
+              </div>
+              <div class="contact-card__body">
+                <div class="contact-card__label">WhatsApp</div>
+                <div class="contact-card__value contact-card__value--wa">
+                  <a href="https://wa.me/79859704413" target="_blank" rel="noopener">+7 (985) 970-44-13</a>
+                </div>
+                <div class="contact-card__sub">Пишите — ответим быстро</div>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="contact-card">
+              <div class="contact-card__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div class="contact-card__body">
+                <div class="contact-card__label">Электронная почта</div>
+                <div class="contact-card__value">
+                  <a href="mailto:info@moscowtrans.ru">info@moscowtrans.ru</a>
+                </div>
+                <div class="contact-card__sub">Для запросов и документов</div>
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="contact-card">
+              <div class="contact-card__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7z"/>
+                  <circle cx="12" cy="9" r="2.5"/>
+                </svg>
+              </div>
+              <div class="contact-card__body">
+                <div class="contact-card__label">Адрес офиса</div>
+                <div class="contact-card__value">
+                  125009, Москва,<br>Глинищевский пер., д. 6, оф. 2
+                </div>
+                <div class="contact-card__sub">м. Охотный Ряд / Тверская</div>
+              </div>
+            </div>
+
+            <!-- Hours -->
+            <div class="contact-card">
+              <div class="contact-card__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </div>
+              <div class="contact-card__body">
+                <div class="contact-card__label">Часы работы</div>
+                <div class="contact-card__value">Пн–Пт &nbsp;9:00–18:00 (МСК)</div>
+                <div class="contact-card__sub">В нерабочее время — WhatsApp</div>
+              </div>
+            </div>
+
+            <!-- Requisites -->
+            <div class="req-card">
+              <div class="req-card__title">Реквизиты</div>
+              <div class="req-card__grid">
+                <div class="req-card__row">
+                  <span class="req-card__key">Компания</span>
+                  <span class="req-card__val">ИП Климанова Юлия Анатольевна</span>
+                </div>
+                <div class="req-card__row">
+                  <span class="req-card__key">ИНН</span>
+                  <span class="req-card__val">233406925261</span>
+                </div>
+                <div class="req-card__row">
+                  <span class="req-card__key">ОГРНИП</span>
+                  <span class="req-card__val">312236329700014</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- /left -->
+
+          <!-- ── Right: Contact Form ── -->
+          <div class="contact-form-wrap">
+
+            <div id="formContent">
+              <h2 class="contact-form-title">Написать нам</h2>
+              <p class="contact-form-sub">Опишите задачу — ответим и рассчитаем стоимость</p>
+
+              <form id="contactForm" novalidate>
+
+                <div class="form-group">
+                  <label for="cf-name">Ваше имя <span style="color:var(--error)">*</span></label>
+                  <input
+                    type="text"
+                    id="cf-name"
+                    name="name"
+                    placeholder="Иван Петров"
+                    required
+                    autocomplete="name"
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="cf-contact">Телефон или e-mail <span style="color:var(--error)">*</span></label>
+                  <input
+                    type="text"
+                    id="cf-contact"
+                    name="contact"
+                    placeholder="+7 (999) 000-00-00 или ivan@example.com"
+                    required
+                    autocomplete="email"
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="cf-message">Сообщение <span style="color:var(--error)">*</span></label>
+                  <textarea
+                    id="cf-message"
+                    name="message"
+                    placeholder="Опишите, что нужно перевести: тип документа, языковая пара, сроки и объём..."
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="form-submit-btn" id="cfSubmitBtn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"/>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                  </svg>
+                  Отправить сообщение
+                </button>
+
+              </form>
+
+              <p class="form-notice">
+                Нажимая «Отправить», вы соглашаетесь с <a href="politika-konfidenczialnosti.html" style="color:var(--brand-cyan)">политикой конфиденциальности</a>.<br>
+                Отвечаем в течение 30 минут в рабочее время.
+              </p>
+            </div>
+
+            <!-- Success state -->
+            <div class="form-success" id="formSuccess">
+              <div class="form-success__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+              <h3 class="form-success__title">Сообщение отправлено!</h3>
+              <p class="form-success__text">Мы получили ваш запрос и ответим в течение 30 минут в рабочее время.<br>Проверьте также папку «Спам».</p>
+              <button
+                type="button"
+                onclick="document.getElementById('formContent').style.display='block';document.getElementById('formSuccess').style.display='none';"
+                style="margin-top:20px;background:transparent;border:1px solid var(--border-subtle);border-radius:var(--r-md);padding:10px 20px;color:var(--text-secondary);font-size:14px;cursor:pointer;"
+              >Отправить ещё одно сообщение</button>
+            </div>
+
+          </div>
+          <!-- /right -->
+
+        </div>
+        <!-- /contacts-layout -->
+
+        <!-- ── Map ── -->
+        <div class="map-section">
+          <h2 class="map-section__title">Как нас найти</h2>
+          <div class="map-container">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A&amp;source=constructor&amp;ll=37.611085%2C55.759561&amp;z=16&amp;pt=37.611085%2C55.759561"
+              title="Карта — Бюро переводов Ремарка, Глинищевский пер., д. 6, оф. 2"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <p style="margin-top:12px;font-size:13px;color:var(--text-muted);">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:4px"><path d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            125009, Москва, Глинищевский пер., д. 6, оф. 2 · Ближайшие метро: Охотный Ряд, Тверская, Театральная
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ════════════════ FOOTER ════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid footer-grid--5col">
+
+        <div class="footer-brand">
+          <img src="assets/logo-light.png" alt="Remarka" id="footer-logo">
+          <p>
+            Профессиональные переводы и локализация для бизнеса.
+            Работаем удалённо с клиентами по всей России и за её пределами.
+          </p>
+          <address class="footer-address">
+            <div class="fa-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              <span>125009, Москва,<br>Глинищевский пер., д.&nbsp;6, оф.&nbsp;2</span>
+            </div>
+            <div class="fa-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+74959704413">+7 (495) 970-44-13</a>
+            </div>
+            <div class="fa-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+              <a href="https://wa.me/79859704413" target="_blank" rel="noopener">WhatsApp: +7 (985) 970-44-13</a>
+            </div>
+          </address>
+        </div>
+
+        <div class="footer-col">
+          <h4>Услуги</h4>
+          <ul>
+            <li><a href="tekhnicheskiy-perevod.html">Технический перевод</a></li>
+            <li><a href="yuridicheskiy-perevod.html">Юридический перевод</a></li>
+            <li><a href="meditsinskiy-perevod.html">Медицинский перевод</a></li>
+            <li><a href="it-perevod.html">IT-перевод</a></li>
+            <li><a href="lokalizatsiya-po.html">Локализация ПО</a></li>
+            <li><a href="perevod-saytov.html">Перевод сайтов</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Решения</h4>
+          <ul>
+            <li><a href="index.html#industries">По отраслям</a></li>
+            <li><a href="index.html#industries">Корпоративным клиентам</a></li>
+            <li><a href="yazyki-perevoda.html">Языки</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Компания</h4>
+          <ul>
+            <li><a href="index.html#about">О нас</a></li>
+            <li><a href="keisy.html">Кейсы</a></li>
+            <li><a href="stoimost-perevoda.html">Цены</a></li>
+            <li><a href="blog.html">Блог</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Правовые документы</h4>
+          <ul>
+            <li><a href="politika-konfidenczialnosti.html" style="color:var(--brand-cyan)">Политика конфиденциальности</a></li>
+            <li><a href="sitemap.xml">Карта сайта</a></li>
+          </ul>
+          <a href="index.html#calc-section" class="btn-primary" style="margin-top:12px;font-size:14px">
+            Получить расчёт
+            <svg class="arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2012–2026 Бюро переводов «Ремарка» · ИП Климанова Ю.А. · ИНН&nbsp;233406925261 · ОГРНИП&nbsp;312236329700014</p>
+        <nav class="footer-legal" aria-label="Юридические ссылки">
+          <a href="politika-konfidenczialnosti.html">Политика конфиденциальности</a>
+          <a href="sitemap.xml">Карта сайта</a>
+        </nav>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ════════════════ SCRIPTS ════════════════ -->
+  <script src="js/main.js"></script>
+  <script>
+    /* ── Logo swap on theme change ── */
+    function updateLogos() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const src = isDark ? 'assets/logo-dark.png' : 'assets/logo-light.png';
+      document.querySelectorAll('#logo-img, #footer-logo').forEach(img => img.src = src);
+    }
+    updateLogos();
+    new MutationObserver(updateLogos).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme']
+    });
+
+    /* ── EmailJS Contact Form ── */
+    emailjs.init({ publicKey: 'qIHC--GaJ6MMVCOg5' });
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name    = document.getElementById('cf-name').value.trim();
+      const contact = document.getElementById('cf-contact').value.trim();
+      const message = document.getElementById('cf-message').value.trim();
+
+      if (!name || !contact || !message) {
+        alert('Пожалуйста, заполните все обязательные поля.');
+        return;
+      }
+
+      const btn = document.getElementById('cfSubmitBtn');
+      btn.disabled = true;
+      btn.textContent = 'Отправляем...';
+
+      emailjs.send('service_remarka', 'template_contact', {
+        from_name:    name,
+        from_contact: contact,
+        message:      message,
+        page_url:     window.location.href
+      }).then(function() {
+        document.getElementById('formContent').style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      }, function(error) {
+        console.error('EmailJS error:', error);
+        btn.disabled = false;
+        btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Отправить сообщение';
+        alert('Не удалось отправить сообщение. Пожалуйста, напишите нам напрямую на info@moscowtrans.ru или позвоните по телефону +7 (495) 970-44-13.');
+      });
+    });
+  </script>
+
+</body>
+</html>
