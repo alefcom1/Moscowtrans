@@ -24,9 +24,8 @@
       applyTheme(stored);
       return;
     }
-    // Первый визит: системная тема или по времени суток
-    const systemDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches;
-    applyTheme(systemDark ? 'dark' : getAutoTheme());
+    // Первый визит: тёмная тема по умолчанию
+    applyTheme('dark');
   }
 
   function toggleTheme() {
