@@ -54,7 +54,7 @@ img { max-width: 100%; display: block; }
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  gap: 32px;
+  gap: 16px;
 }
 
 /* Логотип */
@@ -72,16 +72,18 @@ img { max-width: 100%; display: block; }
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
   margin-left: auto;
+  flex-shrink: 0;
 }
 .main-nav a {
   display: inline-block;
-  padding: 8px 16px;
+  padding: 6px 11px;
   color: var(--text-secondary);
   font-weight: 500;
-  font-size: 15px;
+  font-size: 14px;
   border-radius: var(--r-md);
+  white-space: nowrap;
   transition: color var(--t-fast), background var(--t-fast);
 }
 .main-nav a:hover {
