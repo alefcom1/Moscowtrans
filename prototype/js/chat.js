@@ -1,6 +1,16 @@
 (function () {
   'use strict';
 
+  const EJS_PUBLIC_KEY  = 'qIHC--GaJ6MMVCOg5';
+  const EJS_SERVICE_ID  = 'service_htuz6bm';
+  const EJS_TEMPLATE_ID = 'template_zl1knyb';
+  let _ejsReady = false;
+  function ensureEjs() {
+    if (typeof emailjs === 'undefined') return false;
+    if (!_ejsReady) { emailjs.init({ publicKey: EJS_PUBLIC_KEY }); _ejsReady = true; }
+    return true;
+  }
+
   const msgsCol  = document.querySelector('.cw-msgs-col');
   const msgsEl   = document.querySelector('.cw-msgs');
   const inputEl  = document.getElementById('cwInput');
@@ -187,7 +197,7 @@
       sayOlga(data.text);
     } catch {
       dot.remove();
-      appendBub('Сервер недоступен. Запустите: python3 prototype/server.py', 'assistant');
+      showOfflineFallback(text);
     } finally {
       inputEl.disabled = false;
       sendBtn.disabled = false;
@@ -269,6 +279,65 @@
       appendBub(fallback, 'assistant');
       sayOlga(fallback);
     }
+  }
+
+  /* ── Офлайн-фолбэк: собираем контакт и шлём через EmailJS ── */
+  function showOfflineFallback(userMessage) {
+    const intro = 'Обрабатываю ваш запрос — дайте мне секунду. Чтобы я могла написать вам напрямую, оставьте e-mail или телефон:';
+    appendBub(intro, 'assistant');
+    sayOlga(intro);
+
+    const wrap = document.createElement('div');
+    wrap.className = 'chat-lead-form';
+    wrap.innerHTML =
+      '<input type="text" class="clf-input" placeholder="E-mail или телефон" />' +
+      '<button class="clf-btn">Отправить</button>' +
+      '<a href="https://wa.me/79859704413" class="clf-wa" target="_blank" rel="noopener">или написать в WhatsApp</a>';
+    msgsEl.appendChild(wrap);
+    scrollBottom();
+
+    const inp = wrap.querySelector('.clf-input');
+    const btn = wrap.querySelector('.clf-btn');
+
+    async function submitLead() {
+      const contact = inp.value.trim();
+      if (!contact) { inp.focus(); return; }
+      btn.disabled = true;
+      btn.textContent = '…';
+
+      const msgHistory = history
+        .filter(function(m){ return m.role === 'user'; })
+        .map(function(m){ return m.content; })
+        .join('\n');
+
+      if (ensureEjs()) {
+        try {
+          await emailjs.send(EJS_SERVICE_ID, EJS_TEMPLATE_ID, {
+            to_email:  'alefcom1@gmail.com',
+            from_name: contact,
+            from_email: contact.includes('@') ? contact : 'chat@moscowtrans.ru',
+            reply_to:  contact.includes('@') ? contact : 'chat@moscowtrans.ru',
+            phone:     contact.includes('@') ? '—' : contact,
+            company:   '—',
+            calc_type: 'Чат-сообщение с сайта',
+            price_est: '—',
+            details:   msgHistory || userMessage,
+            comment:   'Контакт для связи: ' + contact
+          });
+        } catch(e) { console.warn('Chat EmailJS error:', e); }
+      }
+
+      wrap.innerHTML = '';
+      const thanks = 'Спасибо! Свяжусь с вами в течение 30 минут в рабочее время.';
+      appendBub(thanks, 'assistant');
+      sayOlga(thanks);
+      history.push({ role: 'assistant', content: thanks });
+    }
+
+    btn.addEventListener('click', submitLead);
+    inp.addEventListener('keydown', function(e){
+      if (e.key === 'Enter') { e.preventDefault(); submitLead(); }
+    });
   }
 
 }());

@@ -1919,6 +1919,60 @@ img { max-width: 100%; display: block; }
 :root[data-theme="light"] .cw-msgs-col::-webkit-scrollbar-thumb { background: rgba(120,60,240,.25); }
 :root[data-theme="light"] .cw-msgs-col::-webkit-scrollbar-thumb:hover { background: rgba(120,60,240,.50); }
 
+/* ── Чат: офлайн-лид-форма ── */
+.chat-lead-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 16px;
+  background: rgba(120,60,240,.10);
+  border: 1px solid rgba(120,60,240,.25);
+  border-radius: 14px;
+  margin: 4px 0;
+  max-width: 320px;
+}
+.clf-input {
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.06);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #fff;
+  font-family: var(--font-sans);
+  outline: none;
+}
+.clf-input:focus { border-color: rgba(120,60,240,.55); }
+.clf-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: rgba(120,60,240,.75);
+  border: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: background .16s;
+}
+.clf-btn:hover { background: rgba(120,60,240,.95); }
+.clf-wa {
+  font-size: 12px;
+  color: rgba(255,255,255,.50);
+  text-decoration: none;
+  text-align: center;
+}
+.clf-wa:hover { color: rgba(255,255,255,.80); }
+:root[data-theme="light"] .chat-lead-form {
+  background: rgba(120,60,240,.07);
+  border-color: rgba(120,60,240,.20);
+}
+:root[data-theme="light"] .clf-input {
+  background: #fff;
+  border-color: rgba(10,14,39,.18);
+  color: #0A0E27;
+}
+:root[data-theme="light"] .clf-wa { color: rgba(10,14,39,.45); }
+
 /* ── Флаги языков (кнопки выбора языка распознавания) ── */
 .agent-langs { display: flex; gap: 6px; margin: 4px 0 2px; }
 .lang-flag {

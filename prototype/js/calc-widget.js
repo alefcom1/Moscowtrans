@@ -908,7 +908,7 @@ $('#rem-m-submit').addEventListener('click', async () => {
   const phone   = $('#rem-m-phone').value.trim();
   const email   = $('#rem-m-email').value.trim();
   const company = $('#rem-m-company').value.trim();
-  const fio     = $('#rem-m-fio').value.trim();
+  const fio     = $('#rem-m-fio')?.value.trim() ?? '';
   const city    = $('#rem-m-city').value.trim();
   const comment = $('#rem-m-comment').value.trim();
 
