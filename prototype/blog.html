@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Блог бюро переводов Ремарка — статьи о переводе и локализации</title>
+  <meta name="description" content="Экспертные статьи о переводе документов, локализации ПО, работе с иностранными партнёрами. Советы от практикующих переводчиков бюро «Ремарка».">
+  <link rel="canonical" href="https://moscowtrans.ru/blog/">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/calc-widget.css">
+
+  <style>
+    /* ── Page Hero (simple, no chat) ── */
+    .page-hero {
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 64px 0 56px;
+      text-align: center;
+    }
+    .page-hero__breadcrumb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .page-hero__breadcrumb a { color: var(--text-muted); }
+    .page-hero__breadcrumb a:hover { color: var(--brand-cyan); }
+    .page-hero__breadcrumb span { color: var(--text-muted); }
+    .page-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0 0 16px;
+      line-height: 1.15;
+    }
+    .page-hero__sub {
+      font-size: 17px;
+      color: var(--text-secondary);
+      max-width: 620px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+
+    /* ── Filter Tabs ── */
+    .blog-filters {
+      border-bottom: 1px solid var(--border-subtle);
+      background: var(--bg-primary);
+      position: sticky;
+      top: var(--header-h);
+      z-index: 50;
+    }
+    .blog-filters__inner {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 var(--container-pad);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .blog-filters__inner::-webkit-scrollbar { display: none; }
+    .filter-tab {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      padding: 14px 18px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: color var(--t-fast), border-color var(--t-fast);
+      margin-bottom: -1px;
+    }
+    .filter-tab:hover { color: var(--text-primary); }
+    .filter-tab.is-active {
+      color: var(--brand-cyan);
+      border-bottom-color: var(--brand-cyan);
+    }
+
+    /* ── Blog Layout ── */
+    .blog-layout {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 56px var(--container-pad);
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 48px;
+      align-items: start;
+    }
+    @media (max-width: 1024px) {
+      .blog-layout { grid-template-columns: 1fr; }
+      .blog-sidebar { display: none; }
+    }
+
+    /* ── Blog Grid ── */
+    .blog-grid-main {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    @media (max-width: 900px) {
+      .blog-grid-main { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .blog-grid-main { grid-template-columns: 1fr; }
+    }
+
+    /* ── Blog Card ── */
+    .blog-post-card {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--t-base), box-shadow var(--t-base);
+    }
+    .blog-post-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card);
+    }
+    .blog-post-card__thumb {
+      width: 100%;
+      aspect-ratio: 16/9;
+      position: relative;
+      overflow: hidden;
+    }
+    .blog-post-card__thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .blog-thumb-gradient {
+      width: 100%;
+      height: 100%;
+    }
+    .blog-post-card__cat {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 10px;
+      border-radius: var(--r-full);
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      color: #fff;
+    }
+    .blog-post-card__body {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-post-card__title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.45;
+      margin: 0 0 10px;
+    }
+    .blog-post-card__date {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .blog-post-card__excerpt {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      flex: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .blog-post-card__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--brand-cyan);
+    }
+    .blog-post-card__link:hover { color: var(--brand-violet); }
+
+    /* ── Skeleton Loading ── */
+    .skeleton {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+    }
+    .skeleton-thumb {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: linear-gradient(90deg,
+        var(--bg-secondary) 25%,
+        var(--bg-elevated) 50%,
+        var(--bg-secondary) 75%
+      );
+      background-size: 200% 100%;
+      animation: shimmer 1.4s infinite;
+    }
+    .skeleton-body { padding: 20px; }
+    .skeleton-line {
+      height: 12px;
+      border-radius: 6px;
+      background: linear-gradient(90deg,
+        var(--bg-secondary) 25%,
+        var(--bg-elevated) 50%,
+        var(--bg-secondary) 75%
+      );
+      background-size: 200% 100%;
+      animation: shimmer 1.4s infinite;
+      margin-bottom: 10px;
+    }
+    .skeleton-line--short { width: 60%; }
+    .skeleton-line--full  { width: 100%; }
+    .skeleton-line--med   { width: 80%; }
+    @keyframes shimmer {
+      0%   { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    /* ── Pagination ── */
+    .blog-pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .page-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 18px;
+      border-radius: var(--r-md);
+      font-size: 14px;
+      font-weight: 500;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all var(--t-fast);
+    }
+    .page-btn:hover:not(:disabled) {
+      background: var(--brand-cyan);
+      border-color: var(--brand-cyan);
+      color: #fff;
+    }
+    .page-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .page-btn.is-current {
+      background: var(--brand-gradient);
+      border-color: transparent;
+      color: #fff;
+    }
+    .page-sep {
+      font-size: 14px;
+      color: var(--text-muted);
+      padding: 0 4px;
+    }
+
+    /* ── Sidebar ── */
+    .blog-sidebar { position: sticky; top: calc(var(--header-h) + 60px); }
+    .sidebar-widget {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--r-lg);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .sidebar-widget__title {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin: 0 0 16px;
+    }
+    .sidebar-posts-list { list-style: none; margin: 0; padding: 0; }
+    .sidebar-posts-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .sidebar-posts-list li:last-child { border-bottom: none; }
+    .sidebar-posts-list a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+    .sidebar-posts-list a:hover { color: var(--brand-cyan); }
+    .sidebar-posts-list .sp-date {
+      display: block;
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    .tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag-pill {
+      display: inline-block;
+      padding: 5px 12px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      background: var(--bg-glass);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--r-full);
+      cursor: pointer;
+      transition: all var(--t-fast);
+    }
+    .tag-pill:hover {
+      background: var(--brand-gradient-soft);
+      border-color: var(--brand-cyan);
+      color: var(--brand-cyan);
+    }
+
+    .sidebar-cta {
+      background: var(--brand-gradient);
+      border-radius: var(--r-lg);
+      padding: 24px;
+      color: #fff;
+      text-align: center;
+    }
+    .sidebar-cta__title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0 0 10px;
+    }
+    .sidebar-cta__text {
+      font-size: 13px;
+      opacity: 0.9;
+      margin-bottom: 18px;
+      line-height: 1.55;
+    }
+    .sidebar-cta__btn {
+      display: inline-block;
+      padding: 10px 24px;
+      background: #fff;
+      color: var(--brand-violet);
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: var(--r-md);
+      text-decoration: none;
+      transition: opacity var(--t-fast);
+    }
+    .sidebar-cta__btn:hover { opacity: 0.9; }
+
+    /* ── Blog Count Banner ── */
+    .blog-count-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .blog-count-bar__text { font-size: 14px; color: var(--text-muted); }
+    .blog-count-bar__text strong { color: var(--text-primary); }
+
+    /* Gradient palette for fallback cards */
+    .g1 { background: linear-gradient(135deg, #00A0F0, #783CF0); }
+    .g2 { background: linear-gradient(135deg, #0078F0, #00A0F0); }
+    .g3 { background: linear-gradient(135deg, #783CF0, #ec4899); }
+    .g4 { background: linear-gradient(135deg, #059669, #0ea5e9); }
+    .g5 { background: linear-gradient(135deg, #f59e0b, #ef4444); }
+    .g6 { background: linear-gradient(135deg, #6366f1, #14b8a6); }
+    .g7 { background: linear-gradient(135deg, #8b5cf6, #0078F0); }
+    .g8 { background: linear-gradient(135deg, #10B981, #783CF0); }
+    .g9 { background: linear-gradient(135deg, #F59E0B, #00A0F0); }
+  </style>
+</head>
+<body>
+
+  <!-- ════════════════ HEADER ════════════════ -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="/" class="logo" aria-label="Ремарка">
+        <img src="assets/logo-dark.png" alt="Remarka" id="logo-img">
+      </a>
+
+      <nav class="main-nav" aria-label="Основное меню">
+        <a href="/#services">Услуги</a>
+        <a href="/#industries">Отрасли</a>
+        <a href="/#languages">Языки</a>
+        <a href="/#pricing">Цены</a>
+        <a href="/#about">О нас</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+74959704413" class="header-phone" aria-label="Позвонить">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +7 (495) 970-44-13
+        </a>
+        <a href="https://wa.me/79859704413" class="header-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          WhatsApp
+        </a>
+        <a href="#calc-section" class="btn-primary">
+          Получить расчёт
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 5l7 7-7 7"/>
+          </svg>
+        </a>
+
+        <div class="lang-switcher">
+          <button type="button" class="lang-switcher-btn" aria-haspopup="true" aria-expanded="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span>RU</span>
+            <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="lang-dropdown" role="menu">
+            <a href="#" class="is-active" role="menuitem">🇷🇺 Русский</a>
+            <a href="https://1russian.com" role="menuitem">🇬🇧 English</a>
+            <a href="https://traduzione.tech" role="menuitem">🇮🇹 Italiano</a>
+          </div>
+        </div>
+
+        <button class="theme-toggle" type="button" aria-label="Переключить тему">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <button class="mobile-toggle" type="button" aria-label="Открыть меню">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Мобильное меню -->
+  <div class="mobile-drawer" aria-hidden="true">
+    <nav aria-label="Мобильное меню">
+      <a href="/#services">Услуги</a>
+      <a href="/#industries">Отрасли</a>
+      <a href="/#languages">Языки</a>
+      <a href="/#pricing">Цены</a>
+      <a href="/#about">О нас</a>
+    </nav>
+    <div class="drawer-actions">
+      <a href="tel:+74959704413" style="display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:inherit;text-decoration:none;padding:8px 0">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +7 (495) 970-44-13
+      </a>
+      <a href="https://wa.me/79859704413" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;font-size:14px;color:#25D366;text-decoration:none;padding:4px 0 12px">
+        WhatsApp: +7 (985) 970-44-13
+      </a>
+      <a href="#calc-section" class="btn-primary">
+        Получить расчёт
+        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M13 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- ════════════════ PAGE HERO ════════════════ -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__breadcrumb">
+        <a href="/">Главная</a>
+        <span>→</span>
+        <span>Блог</span>
+      </div>
+      <h1 class="page-hero__title">Блог бюро переводов</h1>
+      <p class="page-hero__sub">Экспертные статьи о переводе, локализации и работе с иностранными партнёрами</p>
+    </div>
+  </section>
+
+  <!-- ════════════════ FILTER TABS ════════════════ -->
+  <div class="blog-filters">
+    <div class="blog-filters__inner">
+      <button class="filter-tab is-active" data-cat="all">Все</button>
+      <button class="filter-tab" data-cat="sovety">Советы</button>
+      <button class="filter-tab" data-cat="gid">Гид</button>
+      <button class="filter-tab" data-cat="yuridicheskiy">Юридический перевод</button>
+      <button class="filter-tab" data-cat="tekhnicheskiy">Технический перевод</button>
+      <button class="filter-tab" data-cat="meditsinskiy">Медицинский перевод</button>
+      <button class="filter-tab" data-cat="it">IT и локализация</button>
+    </div>
+  </div>
+
+  <!-- ════════════════ BLOG CONTENT ════════════════ -->
+  <div class="blog-layout">
+
+    <!-- Main Blog Column -->
+    <main>
+      <div class="blog-count-bar">
+        <div class="blog-count-bar__text" id="blog-count-text">Загружаем статьи…</div>
+      </div>
+
+      <!-- Grid (skeleton shown initially, replaced by real/fallback posts) -->
+      <div class="blog-grid-main" id="blog-grid">
+        <!-- Skeleton cards -->
+        <div class="skeleton">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line skeleton-line--short"></div>
+            <div class="skeleton-line skeleton-line--full"></div>
+            <div class="skeleton-line skeleton-line--med"></div>
+            <div class="skeleton-line skeleton-line--full"></div>
+            <div class="skeleton-line skeleton-line--short"></div>
+          </div>
+        </div>
+        <div class="skeleton">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line skeleton-line--short"></div>
+            <div class="skeleton-line skeleton-line--full"></div>
+            <div class="skeleton-line skeleton-line--med"></div>
+            <div class="skeleton-line skeleton-line--full"></div>
+            <div class="skeleton-line skeleton-line--short"></div>
+          </div>
+        </div>
+        <div class="skeleton">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line skeleton-line--short"></div>
+            <div class="skeleton-line skeleton-line--full"></div>
+            <div class="skeleton-line skeleton-line--med"></div>
+            <div class="skeleton-line skeleton-line--full"></div>
+            <div class="skeleton-line skeleton-line--short"></div>
+          </div>
+        </div>
+        <div class="skeleton">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line skeleton-line--short"></div>
+            <div class="skeleton-line skeleton-line--full"></div>
+            <div class="skeleton-line skeleton-line--med"></div>
+            <div class="skeleton-line skeleton-line--short"></div>
+          </div>
+        </div>
+        <div class="skeleton">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line skeleton-line--short"></div>
+            <div class="skeleton-line skeleton-line--full"></div>
+            <div class="skeleton-line skeleton-line--med"></div>
+            <div class="skeleton-line skeleton-line--short"></div>
+          </div>
+        </div>
+        <div class="skeleton">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line skeleton-line--short"></div>
+            <div class="skeleton-line skeleton-line--full"></div>
+            <div class="skeleton-line skeleton-line--med"></div>
+            <div class="skeleton-line skeleton-line--short"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <nav class="blog-pagination" id="blog-pagination" aria-label="Навигация по страницам" style="display:none">
+        <button class="page-btn" id="page-prev" aria-label="Предыдущая страница" disabled>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          Назад
+        </button>
+        <span id="page-indicator" class="page-btn is-current">1</span>
+        <button class="page-btn" id="page-next" aria-label="Следующая страница">
+          Вперёд
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </nav>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="blog-sidebar">
+      <div class="sidebar-widget">
+        <div class="sidebar-widget__title">Последние статьи</div>
+        <ul class="sidebar-posts-list">
+          <li>
+            <a href="#calc-section">Постредактирование ИИ-перевода: когда это оправданный выбор</a>
+            <span class="sp-date">15 апреля 2026</span>
+          </li>
+          <li>
+            <a href="#calc-section">Как подготовить документы к переводу: 6 правил</a>
+            <span class="sp-date">2 марта 2026</span>
+          </li>
+          <li>
+            <a href="#calc-section">Технический перевод: почему переводчик должен знать отрасль</a>
+            <span class="sp-date">18 февраля 2026</span>
+          </li>
+          <li>
+            <a href="#calc-section">Перевод договоров с английского права: ключевые отличия</a>
+            <span class="sp-date">5 февраля 2026</span>
+          </li>
+          <li>
+            <a href="#calc-section">Нотариальное заверение перевода: когда нужно и как оформить</a>
+            <span class="sp-date">10 января 2026</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-widget">
+        <div class="sidebar-widget__title">Популярные теги</div>
+        <div class="tag-cloud">
+          <span class="tag-pill">Юридический перевод</span>
+          <span class="tag-pill">Технический перевод</span>
+          <span class="tag-pill">Локализация</span>
+          <span class="tag-pill">ИИ-перевод</span>
+          <span class="tag-pill">Нотариус</span>
+          <span class="tag-pill">Договоры</span>
+          <span class="tag-pill">Медицина</span>
+          <span class="tag-pill">CAT-инструменты</span>
+          <span class="tag-pill">B2B</span>
+          <span class="tag-pill">Английский</span>
+          <span class="tag-pill">Немецкий</span>
+          <span class="tag-pill">Китайский</span>
+        </div>
+      </div>
+
+      <div class="sidebar-cta">
+        <div class="sidebar-cta__title">Нужен перевод?</div>
+        <div class="sidebar-cta__text">Получите расчёт стоимости за несколько минут — просто загрузите файл</div>
+        <a href="#calc-section" class="sidebar-cta__btn">Рассчитать стоимость</a>
+      </div>
+    </aside>
+
+  </div><!-- /blog-layout -->
+
+  <!-- ════════════════ FOOTER ════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid footer-grid--5col">
+
+        <div class="footer-brand">
+          <img src="assets/logo-light.png" alt="Remarka" id="footer-logo">
+          <p>
+            Профессиональные переводы и локализация для бизнеса.
+            Работаем удалённо с клиентами по всей России и за её пределами.
+          </p>
+          <address class="footer-address">
+            <div class="fa-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              <span>125009, Москва,<br>Глинищевский пер., д.&nbsp;6, оф.&nbsp;2</span>
+            </div>
+            <div class="fa-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+74959704413">+7 (495) 970-44-13</a>
+            </div>
+            <div class="fa-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+              <a href="https://wa.me/79859704413" target="_blank" rel="noopener">WhatsApp: +7 (985) 970-44-13</a>
+            </div>
+          </address>
+        </div>
+
+        <div class="footer-col">
+          <h4>Услуги</h4>
+          <ul>
+            <li><a href="/tekhnicheskiy-perevod/">Технический перевод</a></li>
+            <li><a href="/yuridicheskiy-perevod/">Юридический перевод</a></li>
+            <li><a href="/meditsinskiy-perevod/">Медицинский перевод</a></li>
+            <li><a href="/it-perevod/">IT-перевод</a></li>
+            <li><a href="/lokalizatsiya-po/">Локализация ПО</a></li>
+            <li><a href="/perevod-saytov/">Перевод сайтов</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Решения</h4>
+          <ul>
+            <li><a href="#calc-section">По отраслям</a></li>
+            <li><a href="#calc-section">Корпоративным клиентам</a></li>
+            <li><a href="/yazyki-perevoda/">Языки</a></li>
+            <li><a href="#calc-section">Для документов</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Компания</h4>
+          <ul>
+            <li><a href="/#about">О нас</a></li>
+            <li><a href="/keisy/">Кейсы</a></li>
+            <li><a href="/stoimost-perevoda/">Цены</a></li>
+            <li><a href="/blog/">Блог</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Поддержка</h4>
+          <ul>
+            <li><a href="tel:+74959704413">Связаться с нами</a></li>
+            <li><a href="#calc-section">Частые вопросы</a></li>
+            <li><a href="#calc-section">Стать переводчиком</a></li>
+          </ul>
+          <a href="#calc-section" class="btn-primary">
+            Получить расчёт
+            <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2001–2026 Бюро переводов «Ремарка» · ИП Капина О.Б. · ИНН&nbsp;233406925261 · ОГРНИП&nbsp;312236329700014</p>
+        <nav class="footer-legal" aria-label="Юридические ссылки">
+          <a href="/politika-konfidenczialnosti/">Политика конфиденциальности</a>
+          <a href="/sitemap.xml">Карта сайта</a>
+        </nav>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    // ─── Logo theme swap ───────────────────────────────────────
+    function updateLogos() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const src = isDark ? 'assets/logo-dark.png' : 'assets/logo-light.png';
+      document.querySelectorAll('#logo-img, #footer-logo').forEach(img => img.src = src);
+    }
+    updateLogos();
+    new MutationObserver(updateLogos).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+    // ─── Fallback article data ─────────────────────────────────
+    const FALLBACK_POSTS = [
+      {
+        id: 1,
+        title: 'Постредактирование ИИ-перевода: когда это оправданный выбор',
+        category: 'Советы',
+        catKey: 'sovety',
+        date: '15 апреля 2026',
+        excerpt: 'Машинный перевод становится всё точнее, но не заменяет человека там, где важна отраслевая специфика, юридическая точность или стилистика. Разбираем, когда постредактирование ИИ экономит бюджет, а когда ведёт к переработкам.',
+        gradient: 'g1',
+        link: '#calc-section'
+      },
+      {
+        id: 2,
+        title: 'Как подготовить документы к переводу: 6 правил',
+        category: 'Гид',
+        catKey: 'gid',
+        date: '2 марта 2026',
+        excerpt: 'Правильно подготовленный исходный файл — это половина работы переводчика. Делимся шестью практическими правилами, которые ускоряют работу и снижают стоимость перевода без потери качества.',
+        gradient: 'g2',
+        link: '#calc-section'
+      },
+      {
+        id: 3,
+        title: 'Технический перевод: почему переводчик должен знать отрасль',
+        category: 'Экспертиза',
+        catKey: 'tekhnicheskiy',
+        date: '18 февраля 2026',
+        excerpt: 'Ошибки в технической документации приводят к авариям, браку и финансовым потерям. Объясняем, почему для перевода инженерных, нефтегазовых и строительных текстов нужен специалист с профильным образованием.',
+        gradient: 'g3',
+        link: '#calc-section'
+      },
+      {
+        id: 4,
+        title: 'Перевод договоров с английского права: ключевые отличия от российского',
+        category: 'Юридический',
+        catKey: 'yuridicheskiy',
+        date: '5 февраля 2026',
+        excerpt: 'Contracts under English law differ fundamentally from Russian civil law instruments. Рассматриваем типичные ловушки при переводе SHA, SPA и NDA с английского права: representations, warranties, indemnities и другие конструкции без прямых аналогов.',
+        gradient: 'g4',
+        link: '#calc-section'
+      },
+      {
+        id: 5,
+        title: 'Локализация мобильных приложений: от строк до App Store',
+        category: 'IT',
+        catKey: 'it',
+        date: '20 января 2026',
+        excerpt: 'Локализация — это не просто перевод интерфейса. Разбираем полный цикл: работа с файлами .strings/.xml, context-скриншоты, pseudo-localization, тестирование на целевом устройстве и требования App Store/Google Play к метаданным.',
+        gradient: 'g5',
+        link: '#calc-section'
+      },
+      {
+        id: 6,
+        title: 'Нотариальное заверение перевода: когда нужно и как оформить',
+        category: 'Гид',
+        catKey: 'gid',
+        date: '10 января 2026',
+        excerpt: 'Не все переводы требуют нотариуса — а незнание этого правила ведёт к лишним расходам или отказу госоргана принять документ. Разъясняем, когда обязательно нотариальное заверение, апостиль, консульская легализация.',
+        gradient: 'g6',
+        link: '#calc-section'
+      }
+    ];
+
+    // ─── State ─────────────────────────────────────────────────
+    let allPosts = [];
+    let activeCat = 'all';
+    let currentPage = 1;
+    const PER_PAGE = 9;
+
+    // ─── Render ────────────────────────────────────────────────
+    function renderGrid(posts) {
+      const grid = document.getElementById('blog-grid');
+      const gradients = ['g1','g2','g3','g4','g5','g6','g7','g8','g9'];
+
+      if (!posts.length) {
+        grid.innerHTML = '<p style="grid-column:1/-1;color:var(--text-muted);text-align:center;padding:48px 0">Статьи не найдены</p>';
+        return;
+      }
+
+      grid.innerHTML = posts.map((post, i) => {
+        const grad = post.gradient || gradients[i % gradients.length];
+        const cat = post.category || 'Статья';
+        const title = post.title || '';
+        const date = post.date || '';
+        const excerpt = post.excerpt || '';
+        const link = post.link || '#calc-section';
+        return `
+          <article class="blog-post-card" data-cat="${post.catKey || 'all'}">
+            <div class="blog-post-card__thumb">
+              <div class="blog-thumb-gradient ${grad}"></div>
+              <span class="blog-post-card__cat">${cat}</span>
+            </div>
+            <div class="blog-post-card__body">
+              <h2 class="blog-post-card__title">${title}</h2>
+              <div class="blog-post-card__date">${date}</div>
+              <p class="blog-post-card__excerpt">${excerpt}</p>
+              <a href="${link}" class="blog-post-card__link">Читать →</a>
+            </div>
+          </article>`;
+      }).join('');
+    }
+
+    function updateCountText(total, filtered) {
+      const el = document.getElementById('blog-count-text');
+      if (filtered < total) {
+        el.innerHTML = `Показано <strong>${filtered}</strong> из <strong>${total}</strong> статей`;
+      } else {
+        el.innerHTML = `Всего <strong>${total}</strong> статей`;
+      }
+    }
+
+    function getFiltered() {
+      if (activeCat === 'all') return allPosts;
+      return allPosts.filter(p => p.catKey === activeCat);
+    }
+
+    function getPageSlice(posts) {
+      const start = (currentPage - 1) * PER_PAGE;
+      return posts.slice(start, start + PER_PAGE);
+    }
+
+    function renderPagination(total) {
+      const totalPages = Math.ceil(total / PER_PAGE);
+      const nav = document.getElementById('blog-pagination');
+      const prevBtn = document.getElementById('page-prev');
+      const nextBtn = document.getElementById('page-next');
+      const indicator = document.getElementById('page-indicator');
+
+      if (totalPages <= 1) { nav.style.display = 'none'; return; }
+      nav.style.display = 'flex';
+      prevBtn.disabled = currentPage === 1;
+      nextBtn.disabled = currentPage === totalPages;
+      indicator.textContent = `${currentPage} / ${totalPages}`;
+    }
+
+    function refresh() {
+      const filtered = getFiltered();
+      const slice = getPageSlice(filtered);
+      renderGrid(slice);
+      updateCountText(allPosts.length, filtered.length);
+      renderPagination(filtered.length);
+    }
+
+    // ─── WordPress API fetch ────────────────────────────────────
+    async function fetchPosts() {
+      try {
+        const res = await fetch('https://moscowtrans.ru/wp-json/wp/v2/posts?per_page=9&_embed', {
+          signal: AbortSignal.timeout(6000)
+        });
+        if (!res.ok) throw new Error('API error');
+        const data = await res.json();
+        if (!Array.isArray(data) || !data.length) throw new Error('empty');
+
+        const catMap = {
+          'sovety': 'Советы', 'gid': 'Гид',
+          'yuridicheskiy': 'Юридический', 'tekhnicheskiy': 'Технический',
+          'meditsinskiy': 'Медицинский', 'it': 'IT'
+        };
+        const gradients = ['g1','g2','g3','g4','g5','g6','g7','g8','g9'];
+
+        allPosts = data.map((post, i) => {
+          const cats = post._embedded?.['wp:term']?.[0] || [];
+          const firstCat = cats[0] || {};
+          const catSlug = firstCat.slug || 'all';
+          const catName = firstCat.name || catMap[catSlug] || 'Статья';
+          const rawExcerpt = post.excerpt?.rendered || '';
+          const excerpt = rawExcerpt.replace(/<[^>]*>/g, '').replace(/\[&hellip;\]/g,'…').trim();
+          const dateStr = new Date(post.date).toLocaleDateString('ru-RU', { day:'numeric', month:'long', year:'numeric' });
+          return {
+            id: post.id,
+            title: post.title?.rendered || 'Без названия',
+            category: catName,
+            catKey: catSlug,
+            date: dateStr,
+            excerpt,
+            gradient: gradients[i % gradients.length],
+            link: post.link || '#calc-section'
+          };
+        });
+        refresh();
+      } catch {
+        // Fallback to hardcoded posts
+        allPosts = FALLBACK_POSTS;
+        refresh();
+      }
+    }
+
+    // ─── Filter tab clicks ─────────────────────────────────────
+    document.querySelectorAll('.filter-tab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        activeCat = btn.dataset.cat;
+        currentPage = 1;
+        refresh();
+      });
+    });
+
+    // ─── Pagination ────────────────────────────────────────────
+    document.getElementById('page-prev').addEventListener('click', () => {
+      if (currentPage > 1) { currentPage--; refresh(); window.scrollTo({top: 0, behavior:'smooth'}); }
+    });
+    document.getElementById('page-next').addEventListener('click', () => {
+      const filtered = getFiltered();
+      const totalPages = Math.ceil(filtered.length / PER_PAGE);
+      if (currentPage < totalPages) { currentPage++; refresh(); window.scrollTo({top: 0, behavior:'smooth'}); }
+    });
+
+    // ─── Init ──────────────────────────────────────────────────
+    fetchPosts();
+  </script>
+
+</body>
+</html>
