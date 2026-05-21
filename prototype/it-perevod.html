@@ -320,6 +320,124 @@
     </div>
   </section>
 
+  <!-- ════════ ПРИМЕР ПЕРЕВОДА — КОД ════════ -->
+  <section class="sec sec--alt sec-code-ex">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Как это выглядит на практике</h2>
+        <p class="sec-sub">Реальные фрагменты файлов — структура и плейсхолдеры остаются нетронутыми</p>
+      </div>
+      <div class="code-ex-tabs" role="tablist">
+        <button class="code-ex-tab active" data-tab="cex-json" role="tab" aria-selected="true">JSON (i18n)</button>
+        <button class="code-ex-tab" data-tab="cex-xliff" role="tab" aria-selected="false">XLIFF</button>
+        <button class="code-ex-tab" data-tab="cex-api" role="tab" aria-selected="false">API Docs (Markdown)</button>
+      </div>
+      <div class="code-ex-panels">
+        <div class="code-ex-panel active" id="cex-json" role="tabpanel">
+          <div class="ba-grid">
+            <div class="ba-side">
+              <div class="ba-label ba-label--src">Исходный файл (RU)</div>
+              <pre class="ba-code"><code>{
+  "billing.upgrade": "Улучшить тариф",
+  "billing.trial":   "Пробный период: {days} дн.",
+  "billing.failed":  "Платёж не прошёл.",
+  "billing.card":    "Обновите способ оплаты",
+  "nav.settings":    "Настройки",
+  "nav.logout":      "Выйти из аккаунта"
+}</code></pre>
+            </div>
+            <div class="ba-arrow" aria-hidden="true">→</div>
+            <div class="ba-side">
+              <div class="ba-label ba-label--dst">Перевод (EN)</div>
+              <pre class="ba-code ba-code--translated"><code>{
+  "billing.upgrade": "Upgrade your plan",
+  "billing.trial":   "Trial: {days} days left",
+  "billing.failed":  "Payment failed.",
+  "billing.card":    "Update payment method",
+  "nav.settings":    "Settings",
+  "nav.logout":      "Sign out"
+}</code></pre>
+            </div>
+          </div>
+          <p class="ba-note">Плейсхолдер <code>{days}</code>, ключи и структура JSON сохранены. Строки адаптированы под типичную длину кнопок и плашек UI.</p>
+        </div>
+        <div class="code-ex-panel" id="cex-xliff" role="tabpanel">
+          <div class="ba-grid">
+            <div class="ba-side">
+              <div class="ba-label ba-label--src">XLIFF (source)</div>
+              <pre class="ba-code"><code>&lt;trans-unit id="login.error"&gt;
+  &lt;source&gt;Неверный логин или пароль&lt;/source&gt;
+  &lt;target state="needs-translation"/&gt;
+&lt;/trans-unit&gt;
+&lt;trans-unit id="logout.confirm"&gt;
+  &lt;source&gt;Выйти из аккаунта?&lt;/source&gt;
+  &lt;target state="needs-translation"/&gt;
+&lt;/trans-unit&gt;</code></pre>
+            </div>
+            <div class="ba-arrow" aria-hidden="true">→</div>
+            <div class="ba-side">
+              <div class="ba-label ba-label--dst">XLIFF (translated)</div>
+              <pre class="ba-code ba-code--translated"><code>&lt;trans-unit id="login.error"&gt;
+  &lt;source&gt;Неверный логин или пароль&lt;/source&gt;
+  &lt;target state="translated"&gt;
+    Invalid username or password&lt;/target&gt;
+&lt;/trans-unit&gt;
+&lt;trans-unit id="logout.confirm"&gt;
+  &lt;source&gt;Выйти из аккаунта?&lt;/source&gt;
+  &lt;target state="translated"&gt;
+    Sign out?&lt;/target&gt;
+&lt;/trans-unit&gt;</code></pre>
+            </div>
+          </div>
+          <p class="ba-note">Теги XML не тронуты. Атрибут <code>state</code> обновлён до <code>"translated"</code>. Возвращаем файл в исходном формате — загружаете обратно в Xcode или Android Studio.</p>
+        </div>
+        <div class="code-ex-panel" id="cex-api" role="tabpanel">
+          <div class="ba-grid">
+            <div class="ba-side">
+              <div class="ba-label ba-label--src">Документация (RU)</div>
+              <pre class="ba-code"><code>## POST /api/v2/payments
+
+Создаёт новую транзакцию.
+
+**Параметры тела запроса:**
+- `amount` (integer) — сумма в копейках
+- `currency` (string) — код валюты ISO 4217
+- `idempotency_key` (string) — ключ
+  идемпотентности</code></pre>
+            </div>
+            <div class="ba-arrow" aria-hidden="true">→</div>
+            <div class="ba-side">
+              <div class="ba-label ba-label--dst">Документация (EN)</div>
+              <pre class="ba-code ba-code--translated"><code>## POST /api/v2/payments
+
+Creates a new transaction.
+
+**Request body parameters:**
+- `amount` (integer) — amount in kopecks
+- `currency` (string) — currency code ISO 4217
+- `idempotency_key` (string) — idempotency
+  key</code></pre>
+            </div>
+          </div>
+          <p class="ba-note">Markdown-разметка, URL эндпойнтов и имена параметров (<code>idempotency_key</code>) не переводятся. Переводчик с API-background — понимает разницу между полем и описанием.</p>
+        </div>
+      </div>
+      <div class="ba-formats">
+        <span class="ba-fmt-label">Принимаем и возвращаем в исходном формате:</span>
+        <span class="ba-fmt-chip">.po / .pot</span>
+        <span class="ba-fmt-chip">.xliff / .xlf</span>
+        <span class="ba-fmt-chip">.json</span>
+        <span class="ba-fmt-chip">.strings</span>
+        <span class="ba-fmt-chip">.resx</span>
+        <span class="ba-fmt-chip">.arb</span>
+        <span class="ba-fmt-chip">.yaml</span>
+        <span class="ba-fmt-chip">.properties</span>
+        <span class="ba-fmt-chip">Markdown</span>
+        <span class="ba-fmt-chip">CSV / Excel</span>
+      </div>
+    </div>
+  </section>
+
   <!-- ════════ КАКИЕ ДОКУМЕНТЫ ════════ -->
   <section class="sec sec--alt sec-docs">
     <div class="container">
@@ -436,9 +554,11 @@
           <p>Наши IT-переводчики — разработчики и технические писатели. Они открывают XLIFF в том же инструменте, что и разработчик, понимают структуру JSON и не ломают плейсхолдеры.</p>
           <ul class="split-checklist">
             <li>Переводчики с IT-образованием (разработчики, аналитики)</li>
-            <li>Работа с XLIFF, PO, JSON, RESX, Markdown, YAML</li>
+            <li>Работа с XLIFF, PO, JSON, RESX, Markdown, YAML, .strings</li>
             <li>Localization QA — тест перевода в реальном интерфейсе</li>
             <li>Интеграция с Crowdin, Lokalise, Phrase, SDL Trados</li>
+            <li>Подключение к вашему CI/CD — через GitHub Actions, вебхуки TMS или прямую работу в платформе без ручного экспорта файлов</li>
+            <li>Возврат файлов в исходном формате — загружаете обратно в проект без конвертации</li>
           </ul>
         </div>
         <div class="split-visual" aria-hidden="true">
@@ -548,8 +668,15 @@
           <div class="guarantee-icon">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
-          <h3>Translation Memory</h3>
-          <p>Сохраняем глоссарий и TM вашего проекта — повторные строки переводятся быстрее и дешевле</p>
+          <h3>Единый глоссарий</h3>
+          <p>Ведём term base вашего проекта. «Endpoint» → «эндпойнт» — всегда одинаково во всех файлах. Translation Memory снижает стоимость повторных строк на 30–70%</p>
+        </div>
+        <div class="guarantee-card">
+          <div class="guarantee-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>Чат с переводчиком в TMS</h3>
+          <p>Задайте вопрос напрямую в задаче — переводчик объяснит, почему выбрал именно этот вариант, или уточнит контекст UI-строки без длинных переписок по email</p>
         </div>
       </div>
     </div>
@@ -577,25 +704,25 @@
               <td><strong>До 1 000 слов</strong></td>
               <td>1 рабочий день</td>
               <td class="vol-price">от 3 000 ₽</td>
-              <td><a href="#" class="vol-btn">Заказать</a></td>
+              <td><a href="#calc-section" class="vol-btn">Заказать</a></td>
             </tr>
             <tr>
               <td><strong>1 000–5 000 слов</strong></td>
               <td>2–3 рабочих дня</td>
               <td class="vol-price">от 3 ₽/слово</td>
-              <td><a href="#" class="vol-btn">Заказать</a></td>
+              <td><a href="#calc-section" class="vol-btn">Заказать</a></td>
             </tr>
             <tr>
               <td><strong>5 000–20 000 слов</strong></td>
               <td>3–7 рабочих дней</td>
               <td class="vol-price">от 2,8 ₽/слово</td>
-              <td><a href="#" class="vol-btn">Заказать</a></td>
+              <td><a href="#calc-section" class="vol-btn">Заказать</a></td>
             </tr>
             <tr>
               <td><strong>Свыше 20 000 слов</strong></td>
               <td>по договорённости</td>
               <td class="vol-price">от 2,5 ₽/слово</td>
-              <td><a href="#" class="vol-btn">Заказать</a></td>
+              <td><a href="#calc-section" class="vol-btn">Заказать</a></td>
             </tr>
           </tbody>
         </table>
@@ -634,9 +761,9 @@
           <tfoot>
             <tr>
               <td></td>
-              <td><a href="#" class="price-btn price-btn--outline">Выбрать</a></td>
-              <td class="cmp-featured"><a href="#" class="price-btn price-btn--primary">Выбрать</a></td>
-              <td><a href="#" class="price-btn price-btn--outline">Выбрать</a></td>
+              <td><a href="#calc-section" class="price-btn price-btn--outline">Выбрать</a></td>
+              <td class="cmp-featured"><a href="#calc-section" class="price-btn price-btn--primary">Выбрать</a></td>
+              <td><a href="#calc-section" class="price-btn price-btn--outline">Выбрать</a></td>
             </tr>
           </tfoot>
         </table>
@@ -652,53 +779,53 @@
         <p class="sec-sub">Выберите тип IT-документа — узнайте особенности перевода</p>
       </div>
       <div class="doc-ref-grid">
-        <a href="#" class="doc-ref-card">
+        <a href="it-perevod/api-dokumentatsiya.html" class="doc-ref-card">
           <strong>Перевод API-документации</strong>
           <span>REST API, GraphQL, Swagger, OpenAPI, Postman коллекции</span>
         </a>
-        <a href="#" class="doc-ref-card">
+        <a href="it-perevod/ui-stroki.html" class="doc-ref-card">
           <strong>Перевод UI-строк</strong>
-          <span>интерфейсные строки из XLIFF, PO, JSON, RESX, ARB файлов</span>
+          <span>Интерфейсные строки из XLIFF, PO, JSON, RESX, ARB файлов</span>
         </a>
-        <a href="#" class="doc-ref-card">
+        <a href="it-perevod/readme-wiki.html" class="doc-ref-card">
           <strong>Перевод README и Wiki</strong>
-          <span>документация на GitHub, Confluence, Notion</span>
+          <span>Документация на GitHub, Confluence, Notion</span>
         </a>
-        <a href="#" class="doc-ref-card">
+        <a href="it-perevod/polzovatelskie-rukovodstva.html" class="doc-ref-card">
           <strong>Перевод пользовательских руководств</strong>
-          <span>help-статьи, базы знаний, FAQ-разделы</span>
+          <span>Help-статьи, базы знаний, FAQ-разделы</span>
         </a>
-        <a href="#" class="doc-ref-card">
+        <a href="it-perevod/privacy-policy.html" class="doc-ref-card">
           <strong>Перевод Privacy Policy</strong>
-          <span>политики конфиденциальности для разных юрисдикций</span>
+          <span>Политики конфиденциальности для разных юрисдикций</span>
         </a>
-        <a href="#" class="doc-ref-card">
+        <a href="it-perevod/terms-of-service.html" class="doc-ref-card">
           <strong>Перевод Terms of Service</strong>
-          <span>пользовательские соглашения, SLA, условия использования</span>
+          <span>Пользовательские соглашения, SLA, условия использования</span>
         </a>
-        <a href="#" class="doc-ref-card">
-          <strong>Перевод App Store/Google Play</strong>
-          <span>описания приложений, ключевые слова, скриншоты</span>
+        <a href="it-perevod/app-store-google-play.html" class="doc-ref-card">
+          <strong>Перевод App Store / Google Play</strong>
+          <span>Описания приложений, ключевые слова, скриншоты</span>
         </a>
-        <a href="#" class="doc-ref-card">
+        <a href="it-perevod/sdk-dokumentatsiya.html" class="doc-ref-card">
           <strong>Перевод SDK документации</strong>
-          <span>интеграционные руководства, примеры кода</span>
+          <span>Интеграционные руководства, примеры кода</span>
         </a>
-        <a href="#" class="doc-ref-card">
-          <strong>Перевод release notes</strong>
-          <span>журналы изменений, анонсы обновлений, changelog</span>
+        <a href="it-perevod/release-notes.html" class="doc-ref-card">
+          <strong>Перевод Release Notes</strong>
+          <span>Журналы изменений, анонсы обновлений, changelog</span>
         </a>
-        <a href="#" class="doc-ref-card">
+        <a href="it-perevod/gdpr-dokumenty.html" class="doc-ref-card">
           <strong>Перевод GDPR документов</strong>
-          <span>уведомления об обработке данных, формы согласия</span>
+          <span>Уведомления об обработке данных, формы согласия</span>
         </a>
-        <a href="#" class="doc-ref-card">
+        <a href="it-perevod/tehnicheskie-zadaniya.html" class="doc-ref-card">
           <strong>Перевод технических заданий</strong>
-          <span>ТЗ на разработку, функциональные требования</span>
+          <span>ТЗ на разработку, функциональные требования, RFP/RFI</span>
         </a>
-        <a href="#" class="doc-ref-card">
+        <a href="it-perevod/igrovye-teksty.html" class="doc-ref-card">
           <strong>Перевод игровых текстов</strong>
-          <span>сюжеты, диалоги, описания предметов, системные сообщения</span>
+          <span>Сюжеты, диалоги, описания предметов, системные сообщения</span>
         </a>
       </div>
     </div>
@@ -712,42 +839,272 @@
         <p class="sec-sub">IT-перевод и локализация для разных технологических сегментов</p>
       </div>
       <div class="industries-grid">
-        <a href="#" class="industry-card">
+        <a href="it-perevod/saas-oblachnye-servisy.html" class="industry-card">
           <strong>SaaS и облачные сервисы</strong>
           <span>UI, онбординг, справка, API-документация</span>
         </a>
-        <a href="#" class="industry-card">
+        <a href="it-perevod/mobilnaya-razrabotka.html" class="industry-card">
           <strong>Мобильная разработка</strong>
           <span>App Store/Play листинги, системные строки, push-уведомления</span>
         </a>
-        <a href="#" class="industry-card">
+        <a href="it-perevod/igrovaya-industriya.html" class="industry-card">
           <strong>Игровая индустрия</strong>
-          <span>нарративы, диалоги, интерфейс, субтитры катсцен</span>
+          <span>Нарративы, диалоги, интерфейс, субтитры катсцен</span>
         </a>
-        <a href="#" class="industry-card">
+        <a href="it-perevod/kiberbezopasnost.html" class="industry-card">
           <strong>Кибербезопасность</strong>
-          <span>отчёты пентестов, технические описания, интерфейсы</span>
+          <span>Отчёты пентестов, технические описания, интерфейсы</span>
         </a>
-        <a href="#" class="industry-card">
+        <a href="it-perevod/e-commerce.html" class="industry-card">
           <strong>E-commerce</strong>
-          <span>карточки товаров, интерфейс магазина, email-рассылки</span>
+          <span>Карточки товаров, интерфейс магазина, email-рассылки</span>
         </a>
-        <a href="#" class="industry-card">
+        <a href="it-perevod/fintech-banking.html" class="industry-card">
           <strong>Финтех и банкинг</strong>
-          <span>интерфейсы приложений, политики, финансовые термины</span>
+          <span>Интерфейсы приложений, политики, финансовые термины</span>
         </a>
-        <a href="#" class="industry-card">
+        <a href="it-perevod/edtech.html" class="industry-card">
           <strong>EdTech</strong>
-          <span>курсы, тесты, платформы дистанционного обучения</span>
+          <span>Курсы, тесты, платформы дистанционного обучения</span>
         </a>
-        <a href="#" class="industry-card">
+        <a href="it-perevod/healthtech.html" class="industry-card">
           <strong>HealthTech</strong>
-          <span>медицинские приложения, интерфейс MIS, GDPR-документы</span>
+          <span>Медицинские приложения, интерфейс MIS, GDPR-документы</span>
         </a>
-        <a href="#" class="industry-card">
+        <a href="it-perevod/korporativnoe-po.html" class="industry-card">
           <strong>Корпоративное ПО</strong>
           <span>ERP, CRM, HRM — интерфейс и пользовательская документация</span>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ ПРИМЕРЫ ПО ОТРАСЛЯМ ════════ -->
+  <section class="sec sec--alt sec-ind-examples">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Примеры переводов по отраслям</h2>
+        <p class="sec-sub">Реальные фрагменты текстов — до и после</p>
+      </div>
+      <div class="ind-ex-tabs" role="tablist">
+        <button class="ind-ex-tab active" data-tab="iex-saas" role="tab">SaaS</button>
+        <button class="ind-ex-tab" data-tab="iex-mobile" role="tab">Мобайл</button>
+        <button class="ind-ex-tab" data-tab="iex-game" role="tab">Игры</button>
+        <button class="ind-ex-tab" data-tab="iex-sec" role="tab">Кибербез</button>
+        <button class="ind-ex-tab" data-tab="iex-ecom" role="tab">E-com</button>
+        <button class="ind-ex-tab" data-tab="iex-fin" role="tab">Финтех</button>
+        <button class="ind-ex-tab" data-tab="iex-edu" role="tab">EdTech</button>
+        <button class="ind-ex-tab" data-tab="iex-health" role="tab">HealthTech</button>
+        <button class="ind-ex-tab" data-tab="iex-erp" role="tab">Корп. ПО</button>
+      </div>
+      <div class="ind-ex-panels">
+
+        <div class="ind-ex-panel active" id="iex-saas">
+          <div class="iex-meta">Тип документа: UI-строки · JSON · RU → EN</div>
+          <div class="ba-grid">
+            <div class="ba-side">
+              <div class="ba-label ba-label--src">До</div>
+              <pre class="ba-code"><code>Добро пожаловать в {workspace}!
+Ваша пробная версия истекает
+  через {days} дн.
+Перейти на платный план →
+Отменить подписку</code></pre>
+            </div>
+            <div class="ba-arrow" aria-hidden="true">→</div>
+            <div class="ba-side">
+              <div class="ba-label ba-label--dst">После</div>
+              <pre class="ba-code ba-code--translated"><code>Welcome to {workspace}!
+Your trial expires
+  in {days} days.
+Upgrade to a paid plan →
+Cancel subscription</code></pre>
+            </div>
+          </div>
+          <p class="ba-note">«Перейти на платный план» → «Upgrade» — принятый SaaS-паттерн. «Истекает» → «expires» — без russianism «ends».</p>
+        </div>
+
+        <div class="ind-ex-panel" id="iex-mobile">
+          <div class="iex-meta">Тип документа: App Store / Google Play листинг · RU → EN</div>
+          <div class="ba-grid">
+            <div class="ba-side">
+              <div class="ba-label ba-label--src">До</div>
+              <pre class="ba-code"><code>Умный планировщик задач для
+команд. Создавайте задачи,
+назначайте исполнителей и
+отслеживайте прогресс в режиме
+реального времени.</code></pre>
+            </div>
+            <div class="ba-arrow" aria-hidden="true">→</div>
+            <div class="ba-side">
+              <div class="ba-label ba-label--dst">После</div>
+              <pre class="ba-code ba-code--translated"><code>Smart task planner for teams.
+Create tasks, assign members,
+and track progress
+in real time.</code></pre>
+            </div>
+          </div>
+          <p class="ba-note">Краткость критична — App Store обрезает текст на 170 символах. «В режиме реального времени» → «in real time» — без лишних слов.</p>
+        </div>
+
+        <div class="ind-ex-panel" id="iex-game">
+          <div class="iex-meta">Тип документа: игровые диалоги · RU → EN</div>
+          <div class="ba-grid">
+            <div class="ba-side">
+              <div class="ba-label ba-label--src">До</div>
+              <pre class="ba-code"><code>— Ты опоздал, охотник.
+  Руины уже охраняет
+  Страж Теней.
+— Тогда мне нужно торопиться.</code></pre>
+            </div>
+            <div class="ba-arrow" aria-hidden="true">→</div>
+            <div class="ba-side">
+              <div class="ba-label ba-label--dst">После</div>
+              <pre class="ba-code ba-code--translated"><code>— You're late, hunter.
+  The ruins are guarded
+  by the Shadow Warden now.
+— Then I need to hurry.</code></pre>
+            </div>
+          </div>
+          <p class="ba-note">«Страж Теней» — имя собственное, сохранено с заглавной. Переводчик проверяет длину строки под субтитровую разбивку (42 символа на строку).</p>
+        </div>
+
+        <div class="ind-ex-panel" id="iex-sec">
+          <div class="iex-meta">Тип документа: отчёт пентеста · RU → EN</div>
+          <div class="ba-grid">
+            <div class="ba-side">
+              <div class="ba-label ba-label--src">До</div>
+              <pre class="ba-code"><code>Уязвимость CVE-2024-1234 типа
+SQL-инъекция обнаружена в
+параметре user_id эндпойнта
+/api/v2/users.
+CVSS: 9.8 (Критический).</code></pre>
+            </div>
+            <div class="ba-arrow" aria-hidden="true">→</div>
+            <div class="ba-side">
+              <div class="ba-label ba-label--dst">После</div>
+              <pre class="ba-code ba-code--translated"><code>Vulnerability CVE-2024-1234
+(SQL Injection) identified
+in the user_id parameter of
+/api/v2/users endpoint.
+CVSS: 9.8 (Critical).</code></pre>
+            </div>
+          </div>
+          <p class="ba-note">CVE-идентификатор, параметр <code>user_id</code>, путь <code>/api/v2/users</code> и CVSS-оценка не переводятся — только дескриптивный текст.</p>
+        </div>
+
+        <div class="ind-ex-panel" id="iex-ecom">
+          <div class="iex-meta">Тип документа: карточка товара · RU → EN</div>
+          <div class="ba-grid">
+            <div class="ba-side">
+              <div class="ba-label ba-label--src">До</div>
+              <pre class="ba-code"><code>Умная колонка с голосовым
+управлением. Встроенный
+ИИ-ассистент. Поддержка
+Zigbee и Wi-Fi 6.
+В наличии: 14 шт.</code></pre>
+            </div>
+            <div class="ba-arrow" aria-hidden="true">→</div>
+            <div class="ba-side">
+              <div class="ba-label ba-label--dst">После</div>
+              <pre class="ba-code ba-code--translated"><code>Smart speaker with voice
+control. Built-in AI assistant.
+Supports Zigbee and Wi-Fi 6.
+In stock: 14 units.</code></pre>
+            </div>
+          </div>
+          <p class="ba-note">«ИИ» → «AI» (не «Artificial Intelligence» — в карточке). Zigbee и Wi-Fi 6 — технические бренды, без перевода.</p>
+        </div>
+
+        <div class="ind-ex-panel" id="iex-fin">
+          <div class="iex-meta">Тип документа: юридическое уведомление в финтех-приложении · RU → EN</div>
+          <div class="ba-grid">
+            <div class="ba-side">
+              <div class="ba-label ba-label--src">До</div>
+              <pre class="ba-code"><code>Перевод денежных средств
+на счёт контрагента будет
+выполнен в течение одного
+операционного дня с момента
+подтверждения операции.</code></pre>
+            </div>
+            <div class="ba-arrow" aria-hidden="true">→</div>
+            <div class="ba-side">
+              <div class="ba-label ba-label--dst">После</div>
+              <pre class="ba-code ba-code--translated"><code>Funds will be transferred
+to the counterparty's account
+within one business day
+of transaction
+confirmation.</code></pre>
+            </div>
+          </div>
+          <p class="ba-note">«Операционный день» → «business day» (принятый финансовый термин). «С момента подтверждения» → «of confirmation» — без кальки.</p>
+        </div>
+
+        <div class="ind-ex-panel" id="iex-edu">
+          <div class="iex-meta">Тип документа: задание к курсу по программированию · RU → EN</div>
+          <div class="ba-grid">
+            <div class="ba-side">
+              <div class="ba-label ba-label--src">До</div>
+              <pre class="ba-code"><code>Задание 3. Используя концепцию
+рекурсии, напишите функцию
+для вычисления числа Фибоначчи.
+Сложность: O(n).</code></pre>
+            </div>
+            <div class="ba-arrow" aria-hidden="true">→</div>
+            <div class="ba-side">
+              <div class="ba-label ba-label--dst">После</div>
+              <pre class="ba-code ba-code--translated"><code>Exercise 3. Using recursion,
+write a function to calculate
+a Fibonacci number.
+Time complexity: O(n).</code></pre>
+            </div>
+          </div>
+          <p class="ba-note">«Сложность» → «Time complexity» — в CS-контексте термин полный, не сокращённый. «Концепцию рекурсии» → просто «recursion» — без лишнего «концепцию».</p>
+        </div>
+
+        <div class="ind-ex-panel" id="iex-health">
+          <div class="iex-meta">Тип документа: push-уведомление медицинского приложения · RU → EN</div>
+          <div class="ba-grid">
+            <div class="ba-side">
+              <div class="ba-label ba-label--src">До</div>
+              <pre class="ba-code"><code>Ваш пульс 72 уд/мин.
+Это нормальный показатель
+для состояния покоя.
+Следующее измерение — 30 мин.</code></pre>
+            </div>
+            <div class="ba-arrow" aria-hidden="true">→</div>
+            <div class="ba-side">
+              <div class="ba-label ba-label--dst">После</div>
+              <pre class="ba-code ba-code--translated"><code>Your heart rate: 72 bpm.
+Normal resting rate.
+Next reading in 30 min.</code></pre>
+            </div>
+          </div>
+          <p class="ba-note">Push-уведомления ограничены ~50 символами. «Уд/мин» → «bpm» (международный стандарт). Без повторения «ваш» в каждой строке.</p>
+        </div>
+
+        <div class="ind-ex-panel" id="iex-erp">
+          <div class="iex-meta">Тип документа: системное сообщение ERP · RU → EN</div>
+          <div class="ba-grid">
+            <div class="ba-side">
+              <div class="ba-label ba-label--src">До</div>
+              <pre class="ba-code"><code>Документ отправлен на
+согласование руководителю
+подразделения. Ожидайте
+ответа в течение 2 рабочих
+дней.</code></pre>
+            </div>
+            <div class="ba-arrow" aria-hidden="true">→</div>
+            <div class="ba-side">
+              <div class="ba-label ba-label--dst">После</div>
+              <pre class="ba-code ba-code--translated"><code>Document submitted for
+approval by the department
+manager. Expect a response
+within 2 business days.</code></pre>
+            </div>
+          </div>
+          <p class="ba-note">«Согласование» → «approval» (ERP/workflow-термин). «Ожидайте ответа» → «Expect a response» — не «Wait for reply» (разговорное).</p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -1006,8 +1363,8 @@
       <h2 class="cta-title">Нужен IT-перевод в Москве?</h2>
       <p class="cta-sub">Пришлите файлы — работаем с любыми форматами локализации</p>
       <div class="cta-btns">
-        <a href="#" class="btn btn-primary">Загрузить файл</a>
-        <a href="#" class="btn btn-outline">Написать Ольге</a>
+        <a href="#calc-section" class="btn btn-primary">Загрузить файл</a>
+        <a href="https://wa.me/79859704413" class="btn btn-outline" target="_blank" rel="noopener">Написать Ольге</a>
       </div>
     </div>
   </section>
@@ -1185,6 +1542,22 @@
     }
     updateLogos();
     new MutationObserver(updateLogos).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+    function initTabGroup(tabSelector, panelSelector) {
+      document.querySelectorAll(tabSelector).forEach(function(tab) {
+        tab.addEventListener('click', function() {
+          const group = tab.closest('[class*="-tabs"]').parentElement;
+          group.querySelectorAll(tabSelector).forEach(function(t){ t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+          group.querySelectorAll(panelSelector).forEach(function(p){ p.classList.remove('active'); });
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected','true');
+          const target = group.querySelector('#' + tab.dataset.tab);
+          if (target) target.classList.add('active');
+        });
+      });
+    }
+    initTabGroup('.code-ex-tab', '.code-ex-panel');
+    initTabGroup('.ind-ex-tab', '.ind-ex-panel');
   </script>
 
 </body>

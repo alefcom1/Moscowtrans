@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Локализация ПО в Москве — интерфейсы, мобильные приложения, игры | Ремарка</title>
+  <meta name="description" content="Локализация программного обеспечения в Москве: UI-строки, мобильные приложения, игры, документация, help-центры. 60+ языков. Локализационные инженеры и переводчики.">
+  <link rel="canonical" href="https://moscowtrans.ru/lokalizatsiya-po/">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/calc-widget.css">
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://moscowtrans.ru/" },
+        { "@type": "ListItem", "position": 2, "name": "Локализация ПО в Москве", "item": "https://moscowtrans.ru/lokalizatsiya-po/" }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Локализация ПО в Москве",
+      "provider": { "@type": "LocalBusiness", "@id": "https://moscowtrans.ru/#organization", "name": "Бюро переводов Ремарка" },
+      "areaServed": { "@type": "City", "name": "Москва" },
+      "description": "Локализация программного обеспечения: UI-строки, мобильные приложения, игры, документация, help-центры. 60+ языков. Локализационные инженеры и переводчики.",
+      "offers": { "@type": "Offer", "priceCurrency": "RUB", "price": "3", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "3", "priceCurrency": "RUB", "unitText": "слово" } }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Какие форматы файлов вы принимаете для локализации ПО?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Принимаем .po/.pot, .strings (iOS), .resx (.NET), .xliff/.xlf, .json (i18next, React), .xml (Android), .arb (Flutter), .yaml, .properties и другие. Если ваш формат не указан — уточните, скорее всего работаем." }
+        },
+        {
+          "@type": "Question",
+          "name": "Как обрабатываются переменные и плейсхолдеры в строках?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Переводчики и инженеры знают синтаксис плейсхолдеров: %s, %d, {variable}, {{name}}, $(VAR) и другие. Плейсхолдеры сохраняются в неизменном виде, для неоднозначных строк добавляем комментарии." }
+        },
+        {
+          "@type": "Question",
+          "name": "Вы работаете с i18n-библиотеками — i18next, react-intl, GNU gettext?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Да, понимаем структуру проектов на i18next, react-intl, gettext, Android l10n, iOS NSLocalizedString. Можем принять файлы напрямую из репозитория или через Crowdin/Lokalise/Phrase." }
+        },
+        {
+          "@type": "Question",
+          "name": "Есть ли скидка на повторяющиеся строки (TM-скидка)?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Да. Строки, уже переведённые ранее в рамках вашего проекта (100% совпадение), оплачиваются по сниженной ставке. Нечёткие совпадения (fuzzy) — пропорционально степени совпадения. Экономия на больших объёмах может достигать 30–40%." }
+        }
+      ]
+    }
+  ]
+  </script>
+  <!-- Калькулятор: SDK-зависимости -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mammoth@1.6.0/mammoth.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/franc-min@6.2.0/index.min.js"></script>
+</head>
+<body>
+
+  <!-- ════════════════ HEADER ════════════════ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="Ремарка">
+        <img src="assets/logo-dark.png" alt="Remarka" id="logo-img">
+      </a>
+      <nav class="main-nav" aria-label="Основное меню">
+        <a href="/#services">Услуги</a>
+        <a href="/#industries">Отрасли</a>
+        <a href="/#languages">Языки</a>
+        <a href="/#pricing">Цены</a>
+        <a href="/#about">О нас</a>
+      </nav>
+      <div class="header-actions">
+        <a href="tel:+74959704413" class="header-phone">+7 (495) 970-44-13</a>
+        <a href="https://wa.me/79859704413" class="header-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        </a>
+        <a href="#login" class="btn-link">Войти</a>
+        <a href="#calc-section" class="btn-primary">
+          Получить расчёт
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <div class="lang-switcher">
+          <button type="button" class="lang-switcher-btn" aria-haspopup="true" aria-expanded="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span>RU</span>
+            <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="lang-dropdown" role="menu">
+            <a href="#" class="is-active" role="menuitem">🇷🇺 Русский</a>
+            <a href="https://1russian.com" role="menuitem">🇬🇧 English</a>
+            <a href="https://traduzione.tech" role="menuitem">🇮🇹 Italiano</a>
+          </div>
+        </div>
+        <button class="theme-toggle" type="button" aria-label="Переключить тему">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="mobile-toggle" type="button" aria-label="Открыть меню">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-drawer" aria-hidden="true">
+    <nav aria-label="Мобильное меню">
+      <a href="/#services">Услуги</a><a href="/#industries">Отрасли</a>
+      <a href="/#languages">Языки</a><a href="/#pricing">Цены</a><a href="/#about">О нас</a>
+    </nav>
+    <div class="drawer-actions">
+      <a href="tel:+74959704413" class="btn-link">+7 (495) 970-44-13</a>
+      <a href="#login" class="btn-link">Войти</a>
+      <a href="#calc-section" class="btn-primary">Получить расчёт <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+
+  <!-- ════════ HERO ════════ -->
+  <div class="hero-bg-block">
+  <div class="hero-page">
+
+    <aside class="chat-sidebar">
+      <button class="sb-item sb-active" title="Чат">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span>Чат</span>
+      </button>
+      <button class="sb-item" title="Загрузить файл">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
+        <span>Загрузить файл</span>
+      </button>
+      <button class="sb-item" title="Калькулятор стоимости">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
+        <span>Калькулятор стоимости</span>
+      </button>
+      <button class="sb-item" title="История заказов">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        <span>История заказов</span>
+      </button>
+      <button class="sb-item" title="Конфиденциальность">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Конфиден-циальность</span>
+      </button>
+    </aside>
+
+    <div class="hero-main">
+      <div class="chat-window">
+        <div class="cw-top-bar">
+          <nav class="cw-breadcrumbs" aria-label="Хлебные крошки">
+            <a href="/">Главная</a>
+            <span class="cw-bc-sep" aria-hidden="true">›</span>
+            <span class="cw-bc-current" aria-current="page">Локализация ПО</span>
+          </nav>
+          <button class="cw-close" aria-label="Закрыть"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+        </div>
+
+        <div class="cw-body">
+          <!-- Панель Ольги -->
+          <div class="cw-agent-panel">
+            <div class="agent-avatar-wrap">
+              <div class="agent-avatar"><img src="assets/olga.jpg" alt="Ольга"></div>
+              <div class="agent-online-dot"></div>
+            </div>
+            <div class="agent-name">Ольга</div>
+            <div class="agent-role">Менеджер<br>бюро переводов</div>
+            <div class="agent-langs">
+              <button class="lang-flag lang-flag--active" data-lang="ru-RU" title="Русский">🇷🇺</button>
+              <button class="lang-flag" data-lang="en-US" title="English">🇬🇧</button>
+              <button class="lang-flag" data-lang="it-IT" title="Italiano">🇮🇹</button>
+            </div>
+            <hr class="agent-sep">
+            <ul class="agent-stats">
+              <li><span class="asl">Ответ</span><span class="asv">~1 мин</span></li>
+              <li><span class="asl">Рейтинг</span><span class="asv">4.98 ★</span></li>
+              <li><span class="asl">Заказов</span><span class="asv">2 400+</span></li>
+              <li><span class="asl">Языков</span><span class="asv">60+</span></li>
+            </ul>
+            <hr class="agent-sep">
+            <svg class="waveform-svg" id="waveformSvg" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="wg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#00A0F0" stop-opacity="0.6"/><stop offset="50%" stop-color="#783CF0"/><stop offset="100%" stop-color="#00A0F0" stop-opacity="0.6"/></linearGradient></defs>
+              <path class="wp wp1" stroke="url(#wg)" stroke-width="2.5" fill="none" d="M0,60 C18,35 36,85 54,60 C72,35 90,15 108,60 C126,105 144,25 162,60 C180,95 200,40 220,60"/>
+              <path class="wp wp2" stroke="url(#wg)" stroke-width="1.5" fill="none" opacity="0.45" d="M0,60 C20,45 40,75 60,60 C80,45 100,28 120,60 C140,92 160,32 180,60 C200,88 210,48 220,60"/>
+              <path class="wp wp3" stroke="url(#wg)" stroke-width="1" fill="none" opacity="0.25" d="M0,60 C15,50 30,70 45,60 C60,50 75,38 90,60 C105,82 120,42 135,60 C150,78 165,50 180,60 C195,70 208,54 220,60"/>
+            </svg>
+            <button class="cw-mic-btn" id="cwMicBtn" aria-label="Голосовой ввод">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+              <span class="mic-tooltip">Голосовой ввод</span>
+            </button>
+          </div>
+
+          <!-- Сообщения -->
+          <div class="cw-right-col">
+            <div class="cw-msgs-col">
+              <div class="cw-msgs">
+                <div class="msg-bub" data-greeting="1">
+                  <p>Здравствуйте! 👋 Нужна локализация программного обеспечения — интерфейс, мобильное приложение или игра?</p>
+                  <span class="msg-ts">10:30</span>
+                </div>
+                <div class="msg-bub" data-greeting="2">
+                  <p>Мы работаем с .po, .strings, .resx, .xliff, .json, Android XML и другими форматами — строки с плейсхолдерами обрабатываем корректно.</p>
+                  <span class="msg-ts">10:30</span>
+                </div>
+                <div class="msg-bub" data-greeting="3">
+                  <p>Загрузите файлы локализации или пришлите ссылку на репозиторий — скажу стоимость и срок за несколько минут.</p>
+                  <span class="msg-ts">10:30</span>
+                </div>
+              </div>
+            </div>
+            <div class="cw-input-bar">
+              <input class="cw-input" type="text" placeholder="Опишите задачу или загрузите файл..." id="cwInput">
+              <div class="cw-btns">
+                <button class="cw-btn-icon" title="Прикрепить файл">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                </button>
+                <button class="cw-btn-icon cw-btn-voice" id="cwVoiceBtn" title="Голосовой ввод">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+                </button>
+                <button class="cw-btn-send" title="Отправить">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /hero-page -->
+  </div><!-- /hero-bg-block -->
+
+  <!-- ════════ INTRO ════════ -->
+  <section class="sec sec-intro">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-text">
+          <p class="intro-label">Бюро переводов «Ремарка», Москва</p>
+          <h1 class="intro-title">Локализация ПО в Москве</h1>
+          <p class="intro-tagline">Локализация — это не перевод строк, а адаптация продукта</p>
+          <p class="intro-body">Разница между переводом и локализацией ПО принципиальная. Перевод — это слова. Локализация — это продукт, который работает на другом языке так, будто был создан для этого рынка. Правильные падежи для числительных в русском, корректный порядок дат в немецком, арабский текст справа налево — всё это требует не только языковой компетенции, но и технической.</p>
+          <p class="intro-body">Локализация программного обеспечения в московском бюро «Ремарка» выполняется командой, в которую входят переводчики, локализационные инженеры и QA-специалисты. Мы работаем с нативными форматами разработки: .po/.pot, .strings, .resx, .xliff, .json, Android XML, .arb — и не требуем конвертации в Word.</p>
+          <p class="intro-body">Интегрируемся в ваш локализационный процесс: работаем напрямую в Crowdin, Lokalise, Phrase или получаем файлы из CI/CD-пайплайна. TM и глоссарий вашего проекта сохраняются — при каждом следующем релизе платите только за новые и изменённые строки.</p>
+        </div>
+        <div class="intro-visual">
+          <div class="intro-illus" aria-hidden="true">
+            <svg viewBox="0 0 480 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="20" width="140" height="168" rx="12" fill="rgba(120,60,240,.10)" stroke="rgba(120,60,240,.35)" stroke-width="1.5"/>
+              <rect x="10" y="20" width="140" height="38" rx="12" fill="rgba(120,60,240,.20)"/>
+              <rect x="10" y="43" width="140" height="15" fill="rgba(120,60,240,.20)"/>
+              <rect x="24" y="29" width="32" height="16" rx="8" fill="rgba(0,160,240,.40)"/>
+              <rect x="28" y="34" width="10" height="5" rx="2" fill="rgba(255,255,255,.6)"/>
+              <rect x="42" y="34" width="10" height="5" rx="2" fill="rgba(255,255,255,.6)"/>
+              <rect x="24" y="76" width="112" height="5" rx="2.5" fill="rgba(167,139,250,.45)"/>
+              <rect x="24" y="88" width="84" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
+              <rect x="24" y="100" width="102" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
+              <rect x="24" y="112" width="70" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
+              <rect x="24" y="124" width="110" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
+              <rect x="24" y="136" width="90" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
+              <rect x="24" y="148" width="98" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
+              <rect x="24" y="160" width="76" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
+              <rect x="330" y="20" width="140" height="168" rx="12" fill="rgba(0,160,240,.10)" stroke="rgba(0,160,240,.35)" stroke-width="1.5"/>
+              <rect x="330" y="20" width="140" height="38" rx="12" fill="rgba(0,160,240,.20)"/>
+              <rect x="330" y="43" width="140" height="15" fill="rgba(0,160,240,.20)"/>
+              <rect x="344" y="29" width="32" height="16" rx="8" fill="rgba(120,60,240,.40)"/>
+              <rect x="348" y="34" width="10" height="5" rx="2" fill="rgba(255,255,255,.6)"/>
+              <rect x="362" y="34" width="10" height="5" rx="2" fill="rgba(255,255,255,.6)"/>
+              <rect x="344" y="76" width="112" height="5" rx="2.5" fill="rgba(0,160,240,.45)"/>
+              <rect x="344" y="88" width="96" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
+              <rect x="344" y="100" width="86" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
+              <rect x="344" y="112" width="112" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
+              <rect x="344" y="124" width="74" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
+              <rect x="344" y="136" width="106" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
+              <rect x="344" y="148" width="88" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
+              <rect x="344" y="160" width="100" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
+              <circle cx="240" cy="104" r="46" fill="rgba(120,60,240,.12)" stroke="rgba(120,60,240,.30)" stroke-width="1.5"/>
+              <circle cx="240" cy="104" r="30" fill="rgba(120,60,240,.18)"/>
+              <path d="M152 104h56M288 104h40" stroke="rgba(120,60,240,.40)" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <path d="M224 104h32M246 96l10 8-10 8" stroke="rgba(167,139,250,.95)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="intro-features">
+            <div class="intro-feat">
+              <div class="intro-feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+              <div><strong>Нативные форматы</strong><span>.po, .strings, .resx, .xliff, .json, Android XML — без конвертации</span></div>
+            </div>
+            <div class="intro-feat">
+              <div class="intro-feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+              <div><strong>L10n-платформы</strong><span>Crowdin, Lokalise, Phrase, SDL Trados, memoQ</span></div>
+            </div>
+            <div class="intro-feat">
+              <div class="intro-feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+              <div><strong>Localization QA</strong><span>Тест в реальном интерфейсе, проверка усечений и RTL</span></div>
+            </div>
+            <div class="intro-feat">
+              <div class="intro-feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+              <div><strong>60+ языков</strong><span>Включая RTL (AR, HE) и CJK (ZH, JA, KO)</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-stats">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-item"><span class="stat-num">25<span class="stat-suffix">+</span></span><span class="stat-label">лет на рынке</span></div>
+        <div class="stat-item"><span class="stat-num">60<span class="stat-suffix">+</span></span><span class="stat-label">языков перевода</span></div>
+        <div class="stat-item"><span class="stat-num">2 400<span class="stat-suffix">+</span></span><span class="stat-label">выполненных заказов</span></div>
+        <div class="stat-item"><span class="stat-num">4.98<span class="stat-suffix">★</span></span><span class="stat-label">средний рейтинг</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ ЧТО МЫ ЛОКАЛИЗУЕМ ════════ -->
+  <section class="sec sec--alt sec-docs">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Что мы локализуем</h2>
+        <p class="sec-sub">От настольных приложений до AAA-игр — работаем с любым типом ПО</p>
+      </div>
+      <div class="docs-accordion">
+
+        <details class="doc-item" open>
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <span>Десктопные приложения</span>
+          </summary>
+          <div class="doc-body">
+            <p>Windows (.resx, .rc), macOS (.strings, .xib), Linux (PO/gettext) — интерфейс, справка, сообщения об ошибках</p>
+          </div>
+        </details>
+
+        <details class="doc-item">
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            <span>Мобильные приложения iOS и Android</span>
+          </summary>
+          <div class="doc-body">
+            <p>iOS — .strings, .stringsdict, Localizable.strings; Android — strings.xml, plurals. App Store и Google Play листинги</p>
+          </div>
+        </details>
+
+        <details class="doc-item">
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span>SaaS и веб-приложения</span>
+          </summary>
+          <div class="doc-body">
+            <p>JSON (i18next, react-intl), YAML (Rails i18n), PO (Django), XLIFF — UI-строки, онбординг, email-шаблоны, уведомления</p>
+          </div>
+        </details>
+
+        <details class="doc-item">
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <span>Игры</span>
+          </summary>
+          <div class="doc-body">
+            <p>Unity (.po, .csv, Google Sheets), Unreal Engine, GameMaker — диалоги, квесты, системные сообщения, субтитры катсцен</p>
+          </div>
+        </details>
+
+        <details class="doc-item">
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            <span>Help-центры и документация</span>
+          </summary>
+          <div class="doc-body">
+            <p>Статьи Zendesk, Confluence, Notion, GitHub Wiki, пользовательские руководства, FAQ, onboarding-тексты</p>
+          </div>
+        </details>
+
+        <details class="doc-item">
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span>API-документация и маркетинговые материалы</span>
+          </summary>
+          <div class="doc-body">
+            <p>Swagger/OpenAPI, README, release notes, описания для App Store/Google Play, лендинги продукта</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ ЯЗЫКИ ════════ -->
+  <section class="sec sec-translators">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Основные языки локализации</h2>
+        <p class="sec-sub">Покрываем основные рынки сбыта программного продукта</p>
+      </div>
+      <div class="translators-grid">
+        <div class="translator-card">
+          <div class="translator-icon" style="font-size:28px;line-height:1">🇬🇧</div>
+          <h3>Английский</h3>
+          <p>Основной язык международного релиза. Нейтральный EN-US и британский EN-GB.</p>
+        </div>
+        <div class="translator-card">
+          <div class="translator-icon" style="font-size:28px;line-height:1">🇩🇪</div>
+          <h3>Немецкий</h3>
+          <p>Один из крупнейших IT-рынков Европы. Учитываем длину строк — немецкие слова длиннее английских на 30%.</p>
+        </div>
+        <div class="translator-card">
+          <div class="translator-icon" style="font-size:28px;line-height:1">🇫🇷</div>
+          <h3>Французский</h3>
+          <p>Франция, Бельгия, Канада, Африка. FR-FR и FR-CA при необходимости.</p>
+        </div>
+        <div class="translator-card">
+          <div class="translator-icon" style="font-size:28px;line-height:1">🇨🇳</div>
+          <h3>Китайский</h3>
+          <p>Упрощённый (ZH-Hans) для материкового Китая и традиционный (ZH-Hant) для Тайваня и Гонконга.</p>
+        </div>
+        <div class="translator-card">
+          <div class="translator-icon" style="font-size:28px;line-height:1">🇯🇵</div>
+          <h3>Японский</h3>
+          <p>Специфика CJK-верстки, уважительные формы (keigo), адаптация пользовательских соглашений.</p>
+        </div>
+        <div class="translator-card">
+          <div class="translator-icon" style="font-size:28px;line-height:1">🇰🇷</div>
+          <h3>Корейский</h3>
+          <p>Агглютинативная грамматика требует особого подхода к строкам с переменными.</p>
+        </div>
+        <div class="translator-card">
+          <div class="translator-icon" style="font-size:28px;line-height:1">🇸🇦</div>
+          <h3>Арабский</h3>
+          <p>RTL-верстка, поддержка двунаправленного текста (BiDi), адаптация дат и цифр.</p>
+        </div>
+        <div class="translator-card">
+          <div class="translator-icon" style="font-size:28px;line-height:1">🇪🇸</div>
+          <h3>Испанский</h3>
+          <p>ES-ES для Испании и ES-LA для Латинской Америки с учётом региональных различий.</p>
+        </div>
+        <div class="translator-card">
+          <div class="translator-icon" style="font-size:28px;line-height:1">🇧🇷</div>
+          <h3>Португальский</h3>
+          <p>PT-BR (Бразилия) и PT-PT (Португалия) — самостоятельные локали с разной лексикой.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ ПРОЦЕСС ЛОКАЛИЗАЦИИ ════════ -->
+  <section class="sec sec--alt sec-how-pro">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Как проходит локализация ПО</h2>
+        <p class="sec-sub">Шесть шагов от получения файлов до интеграции готового перевода в продукт</p>
+      </div>
+      <div class="steps-row steps-row--6">
+        <div class="step-item">
+          <div class="step-num">01</div>
+          <h3>Анализ файлов</h3>
+          <p>Разбираем структуру, считаем уникальные строки, выявляем плейсхолдеры и контекстные зависимости</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">02</div>
+          <h3>Извлечение строк</h3>
+          <p>Разделяем переводимые строки от кода, настраиваем TM и глоссарий под ваш продукт</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">03</div>
+          <h3>Глоссарий терминов</h3>
+          <p>Согласуем ключевые термины продукта до начала работы — единообразие по всему интерфейсу</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">04</div>
+          <h3>Перевод</h3>
+          <p>Переводчик работает в контексте: знает, где строка появляется в интерфейсе и какие у неё ограничения</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">05</div>
+          <h3>Localization QA</h3>
+          <p>Проверяем длину строк, усечения, RTL-отображение, корректность числительных и форм множественного числа</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">06</div>
+          <h3>Интеграция</h3>
+          <p>Возвращаем файлы в исходном формате или загружаем напрямую в вашу L10n-платформу</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ ФОРМАТЫ ФАЙЛОВ ════════ -->
+  <section class="sec sec-split">
+    <div class="container">
+      <div class="split-row split-row--rev">
+        <div class="split-text">
+          <p class="sec-label">Технические возможности</p>
+          <h2>Форматы файлов локализации</h2>
+          <p>Мы принимаем файлы в нативных форматах разработки — не нужно конвертировать в Word или Excel. Это сохраняет структуру проекта и исключает ошибки при обратном импорте.</p>
+          <ul class="split-checklist">
+            <li><strong>.po / .pot</strong> — GNU gettext, используется в Python/Django, PHP, WordPress</li>
+            <li><strong>.strings / .stringsdict</strong> — iOS и macOS, NSLocalizedString</li>
+            <li><strong>.resx</strong> — .NET / C# / WPF / WinForms</li>
+            <li><strong>.xliff / .xlf</strong> — универсальный стандарт, Xcode, Qt</li>
+            <li><strong>.json</strong> — i18next, react-intl, Vue i18n, Angular i18n</li>
+            <li><strong>strings.xml</strong> — Android, включая plurals и string-array</li>
+            <li><strong>.arb</strong> — Flutter / Dart</li>
+            <li><strong>.yaml / .properties / .csv</strong> — Rails, Java, таблицы</li>
+          </ul>
+        </div>
+        <div class="split-visual" aria-hidden="true">
+          <svg viewBox="0 0 380 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="sq-g1-l" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#783CF0"/><stop offset="100%" stop-color="#00A0F0"/></linearGradient>
+              <linearGradient id="sq-g2-l" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#783CF0" stop-opacity=".5"/><stop offset="100%" stop-color="#00A0F0" stop-opacity=".5"/></linearGradient>
+            </defs>
+            <circle cx="190" cy="160" r="130" fill="rgba(120,60,240,.07)"/>
+            <rect x="60" y="20" width="260" height="52" rx="14" fill="rgba(120,60,240,.12)" stroke="rgba(120,60,240,.30)" stroke-width="1.5"/>
+            <rect x="80" y="34" width="60" height="8" rx="4" fill="rgba(167,139,250,.60)"/>
+            <rect x="150" y="34" width="40" height="8" rx="4" fill="rgba(167,139,250,.35)"/>
+            <rect x="200" y="34" width="50" height="8" rx="4" fill="rgba(0,160,240,.40)"/>
+            <rect x="80" y="48" width="80" height="6" rx="3" fill="rgba(167,139,250,.30)"/>
+            <line x1="190" y1="72" x2="190" y2="96" stroke="url(#sq-g2-l)" stroke-width="2" stroke-dasharray="4 3"/>
+            <rect x="60" y="96" width="260" height="52" rx="14" fill="rgba(0,160,240,.12)" stroke="rgba(0,160,240,.30)" stroke-width="1.5"/>
+            <circle cx="92" cy="122" r="16" fill="url(#sq-g1-l)" opacity=".85"/>
+            <path d="M85 122l5 5 9-10" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="118" y="112" width="140" height="8" rx="4" fill="rgba(0,160,240,.55)"/>
+            <rect x="118" y="126" width="100" height="6" rx="3" fill="rgba(0,160,240,.30)"/>
+            <line x1="190" y1="148" x2="190" y2="172" stroke="url(#sq-g2-l)" stroke-width="2" stroke-dasharray="4 3"/>
+            <rect x="60" y="172" width="260" height="52" rx="14" fill="rgba(120,60,240,.12)" stroke="rgba(120,60,240,.30)" stroke-width="1.5"/>
+            <circle cx="92" cy="198" r="16" fill="url(#sq-g1-l)" opacity=".85"/>
+            <path d="M85 198l5 5 9-10" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="118" y="188" width="155" height="8" rx="4" fill="rgba(167,139,250,.55)"/>
+            <rect x="118" y="202" width="115" height="6" rx="3" fill="rgba(167,139,250,.30)"/>
+            <line x1="190" y1="224" x2="190" y2="248" stroke="url(#sq-g2-l)" stroke-width="2" stroke-dasharray="4 3"/>
+            <rect x="60" y="248" width="260" height="52" rx="14" fill="rgba(0,160,240,.12)" stroke="rgba(0,160,240,.30)" stroke-width="1.5"/>
+            <circle cx="92" cy="274" r="16" fill="url(#sq-g1-l)" opacity=".85"/>
+            <path d="M85 274l5 5 9-10" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="118" y="264" width="130" height="8" rx="4" fill="rgba(0,160,240,.55)"/>
+            <rect x="118" y="278" width="90" height="6" rx="3" fill="rgba(0,160,240,.30)"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ ГАРАНТИИ КАЧЕСТВА ════════ -->
+  <section class="sec sec-guarantees">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Наши гарантии</h2>
+        <p class="sec-sub">Мы отвечаем за результат — не только словами</p>
+      </div>
+      <div class="guarantees-grid">
+        <div class="guarantee-card">
+          <div class="guarantee-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.9"/></svg>
+          </div>
+          <h3>Бесплатная правка</h3>
+          <p>Исправим бесплатно в течение 7 дней, если перевод не соответствует заданию или содержит неточности</p>
+        </div>
+        <div class="guarantee-card">
+          <div class="guarantee-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3>Конфиденциальность</h3>
+          <p>NDA по запросу. Ваши файлы, исходный код и строки локализации не передаются третьим лицам</p>
+        </div>
+        <div class="guarantee-card">
+          <div class="guarantee-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Соблюдение сроков</h3>
+          <p>Если не уложились в оговорённый срок по нашей вине — возвращаем предоплату или делаем скидку на следующий заказ</p>
+        </div>
+        <div class="guarantee-card">
+          <div class="guarantee-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Translation Memory</h3>
+          <p>Сохраняем TM и глоссарий вашего проекта — повторные строки переводятся быстрее и со скидкой</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ СРОКИ И СТОИМОСТЬ ════════ -->
+  <section class="sec sec--alt sec-vol-pricing">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Сроки и стоимость</h2>
+        <p class="sec-sub">Цена зависит от объёма. TM-скидки на повторяющиеся строки. Точный расчёт — бесплатно</p>
+      </div>
+      <div class="vol-table-wrap">
+        <table class="vol-table">
+          <thead>
+            <tr>
+              <th>Объём</th>
+              <th>Срок</th>
+              <th>Стоимость</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>До 5 000 слов</strong></td>
+              <td>1–2 рабочих дня</td>
+              <td class="vol-price">от 3 ₽/слово</td>
+              <td><a href="#calc-section" class="vol-btn">Заказать</a></td>
+            </tr>
+            <tr>
+              <td><strong>5 000–20 000 слов</strong></td>
+              <td>3–5 рабочих дней</td>
+              <td class="vol-price">от 2,8 ₽/слово</td>
+              <td><a href="#calc-section" class="vol-btn">Заказать</a></td>
+            </tr>
+            <tr>
+              <td><strong>20 000–50 000 слов</strong></td>
+              <td>5–10 рабочих дней</td>
+              <td class="vol-price">от 2,5 ₽/слово</td>
+              <td><a href="#calc-section" class="vol-btn">Заказать</a></td>
+            </tr>
+            <tr>
+              <td><strong>Свыше 50 000 слов</strong></td>
+              <td>по договорённости</td>
+              <td class="vol-price">индивидуально</td>
+              <td><a href="#calc-section" class="vol-btn">Заказать</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="vol-note">100% совпадения TM оплачиваются по сниженной ставке. Нечёткие совпадения (75–99%) — пропорционально. Возможна оплата за страницу (400 ₽).</p>
+    </div>
+  </section>
+
+  <!-- ════════ СРАВНЕНИЕ ФОРМАТОВ ════════ -->
+  <section class="sec sec-comparison">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Какой формат вам подходит</h2>
+        <p class="sec-sub">Сравните три уровня сервиса и выберите оптимальный для вашей задачи</p>
+      </div>
+      <div class="cmp-table-wrap">
+        <table class="cmp-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Постредактирование ИИ</th>
+              <th class="cmp-featured">Профессиональный перевод</th>
+              <th>Премиум-перевод</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Перевод с нуля IT-специалистом</td><td class="cmp-no">✗</td><td class="cmp-yes cmp-featured">✓</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Сохранение плейсхолдеров и переменных</td><td class="cmp-part">частично</td><td class="cmp-yes cmp-featured">✓</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Работа с нативными L10n-форматами</td><td class="cmp-part">частично</td><td class="cmp-yes cmp-featured">✓</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Localization QA в реальном интерфейсе</td><td class="cmp-no">✗</td><td class="cmp-no cmp-featured">✗</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Вычитка носителем языка</td><td class="cmp-no">✗</td><td class="cmp-no cmp-featured">✗</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Подходит для публичного релиза</td><td class="cmp-no">✗</td><td class="cmp-part cmp-featured">условно</td><td class="cmp-yes">✓</td></tr>
+            <tr class="cmp-meta"><td>Срок</td><td>от 1 дня</td><td class="cmp-featured">1–3 дня</td><td>2–5 дней</td></tr>
+            <tr class="cmp-meta cmp-price-row"><td>Стоимость</td><td>от 1,5 ₽/слово</td><td class="cmp-featured">от 3 ₽/слово</td><td>от 5 ₽/слово</td></tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td></td>
+              <td><a href="#calc-section" class="price-btn price-btn--outline">Выбрать</a></td>
+              <td class="cmp-featured"><a href="#calc-section" class="price-btn price-btn--primary">Выбрать</a></td>
+              <td><a href="#calc-section" class="price-btn price-btn--outline">Выбрать</a></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ ОТЗЫВЫ ════════ -->
+  <section class="sec sec--alt sec-reviews">
+    <div class="container">
+      <div class="reviews-head">
+        <div>
+          <h2 class="sec-title">Что говорят клиенты</h2>
+          <p class="sec-sub" style="margin-top:6px">Реальные отзывы о локализации ПО</p>
+        </div>
+        <div class="review-rating-block">
+          <div class="review-rating-score">4.98</div>
+          <div class="review-stars-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="review-rating-label">средний рейтинг</div>
+        </div>
+        <div class="review-platform-links">
+          <a href="https://yandex.ru/maps/org/remarka/51867347382/reviews/" class="review-platform-link" target="_blank" rel="noopener">Яндекс</a>
+          <a href="https://maps.app.goo.gl/d8BKJYw81PqBHXvz7" class="review-platform-link" target="_blank" rel="noopener">Google</a>
+          <a href="https://2gis.ru/moscow/search/%D0%B1%D1%8E%D1%80%D0%BE%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4%D0%BE%D0%B2%20%D1%80%D0%B5%D0%BC%D0%B0%D1%80%D0%BA%D0%B0" class="review-platform-link" target="_blank" rel="noopener">2ГИС</a>
+        </div>
+      </div>
+      <div class="reviews-grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="review-card">
+          <div class="review-card-top">
+            <div class="review-avatar">М</div>
+            <div class="review-meta"><div class="review-name">Максим Орлов, CTO, «StreamFlow»</div><div class="review-src">Яндекс · февраль 2025</div></div>
+          </div>
+          <div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p class="review-text">Локализовали SaaS-платформу на немецкий и французский. Ремарка работала напрямую в нашем Lokalise-проекте — нам не пришлось ничего экспортировать вручную. Строки с переменными обработали без ошибок, TM-скидка составила около 25%.</p>
+        </div>
+        <div class="review-card">
+          <div class="review-card-top">
+            <div class="review-avatar">Е</div>
+            <div class="review-meta"><div class="review-name">Елена Жукова, Product Manager, «GameLoft Moscow»</div><div class="review-src">Google · ноябрь 2024</div></div>
+          </div>
+          <div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p class="review-text">Переводили диалоги и системные сообщения мобильной игры на корейский и японский. Переводчики учли игровой стиль, адаптировали имена персонажей. Игровое сообщество приняло локализацию отлично.</p>
+        </div>
+        <div class="review-card">
+          <div class="review-card-top">
+            <div class="review-avatar">К</div>
+            <div class="review-meta"><div class="review-name">Кирилл Фёдоров, Lead Developer, «AppBridge»</div><div class="review-src">2ГИС · июль 2024</div></div>
+          </div>
+          <div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p class="review-text">Локализовали iOS-приложение на арабский язык — RTL-вёрстка, BiDi-текст, адаптация числовых форматов. Команда хорошо понимала технические требования, QA прошёл без критических замечаний.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ FAQ ════════ -->
+  <section class="sec sec-faq">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Часто задаваемые вопросы</h2>
+        <p class="sec-sub">Не нашли ответа — напишите Ольге в чат, ответим за минуту</p>
+      </div>
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary class="faq-summary">Какие форматы файлов вы принимаете для локализации ПО?</summary>
+          <div class="faq-body">
+            <p>Принимаем .po/.pot, .strings, .stringsdict (iOS), .resx (.NET), .xliff/.xlf, .json (i18next, react-intl, Angular), strings.xml (Android), .arb (Flutter), .yaml/.properties и другие. Если вашего формата нет в списке — уточните, скорее всего работаем.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">Как вы обрабатываете плейсхолдеры и переменные в строках?</summary>
+          <div class="faq-body">
+            <p>Переводчики знают синтаксис %s, %d, {variable}, {{name}}, $(VAR), #{ } и других форматов. Плейсхолдеры сохраняются в оригинальном виде. Для неоднозначных строк добавляем комментарии — чтобы переводчик понимал, что именно подставляется во время выполнения.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">Вы работаете с i18n-библиотеками — i18next, react-intl, GNU gettext?</summary>
+          <div class="faq-body">
+            <p>Да, понимаем структуру проектов на i18next, react-intl, vue-i18n, gettext, Android l10n, iOS NSLocalizedString, .NET ResourceManager. Можем принять файлы напрямую из вашего репозитория или через Crowdin, Lokalise, Phrase.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">Есть ли скидка на повторяющиеся строки (TM-скидка)?</summary>
+          <div class="faq-body">
+            <p>Да. Строки, уже переведённые ранее в рамках вашего проекта (100% совпадение), оплачиваются по сниженной ставке. Нечёткие совпадения 75–99% — пропорционально степени совпадения. Экономия на больших объёмах достигает 30–40%.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">Можете ли вы работать напрямую в Crowdin или Lokalise?</summary>
+          <div class="faq-body">
+            <p>Да, интегрируемся в ваш L10n-процесс. Принимаем приглашение в проект, работаем в платформе напрямую — без промежуточного экспорта. Поддерживаем Crowdin, Lokalise, Phrase, Transifex, POEditor.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">Где заказать локализацию ПО в Москве?</summary>
+          <div class="faq-body">
+            <p>Бюро переводов «Ремарка» специализируется на локализации программного обеспечения. Загрузите файлы локализации через форму выше или напишите в чат — скажем стоимость и срок за несколько минут.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ КАЛЬКУЛЯТОР СТОИМОСТИ ════════ -->
+  <section class="sec sec--alt sec-calculator" id="calc-section">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Рассчитайте стоимость локализации онлайн</h2>
+        <p class="sec-sub">Загрузите документ — автоматически определим объём, язык и дадим точную оценку за минуту</p>
+      </div>
+      <div id="calc-docs" class="rem-calc">
+        <div class="calc-head">
+          <h2>Расчёт по загруженному документу</h2>
+          <p class="sub">Перетащите файл или выберите с компьютера — подсчитаем объём, определим язык и рассчитаем стоимость автоматически.</p>
+        </div>
+        <div class="calc-body">
+          <div class="step" id="rem-step-upload">
+            <div class="step-title"><span class="step-num">1</span>Загрузка документа</div>
+            <div class="upload-zone" id="rem-uz">
+              <input type="file" id="rem-finp" multiple accept=".pdf,.doc,.docx,.txt,.rtf,.odt,.xls,.xlsx,.ppt,.pptx,.jpg,.jpeg,.png">
+              <span class="u-ico">📄</span>
+              <div class="u-main">Перетащите файлы сюда</div>
+              <div class="u-sub">или нажмите кнопку, чтобы выбрать с компьютера</div>
+              <span class="u-btn">Выбрать файлы</span>
+              <div class="u-formats">PDF · DOC · DOCX · TXT · RTF · ODT · XLS · XLSX · PPT · PPTX · JPG · PNG</div>
+            </div>
+          </div>
+          <div class="step hidden" id="rem-step-docs">
+            <div class="step-title"><span class="step-num">2</span>Ваши документы</div>
+            <div class="docs-list" id="rem-docs-list"></div>
+            <label class="upload-mini" id="rem-add-more">
+              <input type="file" id="rem-finp-more" multiple accept=".pdf,.doc,.docx,.txt,.rtf,.odt,.xls,.xlsx,.ppt,.pptx,.jpg,.jpeg,.png">
+              <span>＋</span><span>Добавить ещё документ</span>
+            </label>
+          </div>
+          <div class="step hidden" id="rem-step-urg">
+            <div class="step-title"><span class="step-num">3</span>Выберите срок готовности</div>
+            <div class="urg-row" id="rem-urg-row">
+              <button type="button" class="urg-btn sel" data-urg="standard" data-mult="1">
+                <div class="u-h">Стандарт</div>
+                <div class="u-d" id="rem-urg-d-standard">—</div>
+                <div class="u-p">без доплаты</div>
+              </button>
+              <button type="button" class="urg-btn" data-urg="urgent" data-mult="1">
+                <div class="u-h">Срочно</div>
+                <div class="u-d" id="rem-urg-d-urgent">—</div>
+                <div class="u-p" id="rem-urg-p-urgent">без доплаты</div>
+              </button>
+              <button type="button" class="urg-btn" data-urg="express" data-mult="2">
+                <div class="u-h">Экспресс</div>
+                <div class="u-d" id="rem-urg-d-express">—</div>
+                <div class="u-p">цена ×2</div>
+              </button>
+            </div>
+          </div>
+          <div class="step hidden" id="rem-step-total">
+            <div class="total-box">
+              <div>
+                <div class="tl">Итого к оплате</div>
+                <div class="tp"><span id="rem-tp-val">0</span><small>₽</small></div>
+                <div class="td" id="rem-tp-detail">—</div>
+              </div>
+              <div class="tr" id="rem-tp-right">—</div>
+            </div>
+            <p class="result-note">* Стоимость рассчитана автоматически и может быть скорректирована менеджером после проверки документов.</p>
+            <div class="btn-row">
+              <button type="button" class="btn btn-secondary" id="rem-btn-reset">Начать заново</button>
+              <button type="button" class="btn btn-primary" id="rem-btn-order">Оформить заказ</button>
+            </div>
+            <div class="trust-row">
+              <div class="trust-item"><span class="trust-dot"></span>Ответим за 30 минут</div>
+              <div class="trust-item"><span class="trust-dot"></span>Бесплатная оценка</div>
+              <div class="trust-item"><span class="trust-dot"></span>С 2001 года</div>
+              <div class="trust-item"><span class="trust-dot"></span>Конфиденциально</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="rem-notif" class="rem-notif"></div>
+  <div class="rem-modal-overlay" id="rem-modal">
+    <div class="rem-modal" role="dialog" aria-modal="true">
+      <div class="m-head">
+        <h3>Оформление заказа</h3>
+        <div class="m-sub">Проверьте состав заказа и заполните данные для связи</div>
+        <button type="button" class="m-close" id="rem-m-close" aria-label="Закрыть">×</button>
+      </div>
+      <div class="m-body">
+        <div class="step">
+          <div class="step-title"><span class="step-num">1</span>Ваш заказ</div>
+          <div class="m-summary" id="rem-m-summary"></div>
+          <div class="m-note">* Стоимость рассчитана автоматически и может быть изменена после проверки.</div>
+        </div>
+        <div class="step">
+          <div class="step-title"><span class="step-num">2</span>Контактные данные</div>
+          <div class="m-row">
+            <div class="field"><label>Ваше имя <span class="req">*</span></label>
+              <input type="text" id="rem-m-name" placeholder="Иван Петров"></div>
+            <div class="field"><label>Телефон <span class="req">*</span></label>
+              <input type="tel" id="rem-m-phone" placeholder="+7 (000) 000-00-00"></div>
+          </div>
+          <div class="m-row">
+            <div class="field"><label>E-mail <span class="req">*</span></label>
+              <input type="email" id="rem-m-email" placeholder="ivan@example.com"></div>
+            <div class="field"><label>Компания</label>
+              <input type="text" id="rem-m-company" placeholder="Название организации"></div>
+          </div>
+          <div class="m-row-full field" style="margin-bottom:0"><label>Комментарий</label>
+            <textarea id="rem-m-comment" placeholder="Особые требования, пожелания..."></textarea></div>
+        </div>
+        <div class="step">
+          <div class="step-title"><span class="step-num">3</span>Получение перевода</div>
+          <div class="field" style="margin-bottom:12px"><label>Город</label>
+            <input type="text" id="rem-m-city" placeholder="Москва"></div>
+          <div class="delivery-row" id="rem-m-delivery">
+            <div class="del-opt sel" data-del="none" data-price="0">
+              <div class="d-t">На e-mail (электронная версия)</div>
+              <div class="d-s">Бесплатно · мгновенно после готовности</div>
+            </div>
+            <div class="del-opt" data-del="courier" data-price="490">
+              <div class="d-t">Курьер (СДЭК, OZON, Яндекс)</div>
+              <div class="d-s">от 3 дней · от 490 ₽</div>
+            </div>
+          </div>
+          <div class="del-note">Сроки курьерской доставки указаны без учёта срока выполнения перевода.</div>
+        </div>
+        <div class="m-final">
+          <div>
+            <div class="mf-l">Итоговая сумма</div>
+            <div class="mf-p"><span id="rem-m-final">0</span><small> ₽</small></div>
+          </div>
+          <div class="mf-note" id="rem-m-final-note"></div>
+        </div>
+        <button type="button" class="btn btn-primary" id="rem-m-submit" style="width:100%">Отправить заявку</button>
+        <div class="m-agree">
+          Нажимая на кнопку, вы соглашаетесь с <a href="/politika-konfidenczialnosti" target="_blank">политикой конфиденциальности</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════ CTA ════════ -->
+  <section class="sec sec-cta">
+    <div class="container">
+      <h2 class="cta-title">Нужна локализация ПО в Москве?</h2>
+      <p class="cta-sub">Загрузите файлы локализации — работаем с .po, .strings, .resx, .xliff, .json и другими форматами</p>
+      <div class="cta-btns">
+        <a href="#calc-section" class="btn btn-primary">Загрузить файлы локализации</a>
+        <a href="https://wa.me/79859704413" class="btn btn-outline" target="_blank" rel="noopener">Написать в WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ COMMENTS ════════ -->
+  <div id="comments" class="comments-area">
+    <div class="container">
+
+      <h2 class="comments-title">Комментарии (3)</h2>
+
+      <ol class="comment-list">
+
+        <li class="comment even thread-even depth-1" id="comment-1">
+          <article class="comment-body">
+            <footer class="comment-meta">
+              <div class="comment-author vcard">
+                <div class="wp-avatar">П</div>
+                <div class="fn"><b>Павел Никитин</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">Dev Lead, «CloudCore»</span></div>
+              </div>
+              <div class="comment-metadata"><time datetime="2025-03-14">14 марта 2025</time></div>
+            </footer>
+            <div class="comment-content">
+              <p>Отдали на локализацию strings.xml для Android-приложения — немецкий и французский. Ремарка сама разобралась со всеми plurals и string-array. Вернули файл в тот же формат, без правок с нашей стороны.</p>
+            </div>
+            <div class="reply"><a class="comment-reply-link" href="#">Ответить</a></div>
+          </article>
+        </li>
+
+        <li class="comment odd alt thread-odd depth-1" id="comment-2">
+          <article class="comment-body">
+            <footer class="comment-meta">
+              <div class="comment-author vcard">
+                <div class="wp-avatar">Н</div>
+                <div class="fn"><b>Наталья Воронцова</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">Product Manager, «SoftBridge»</span></div>
+              </div>
+              <div class="comment-metadata"><time datetime="2025-01-22">22 января 2025</time></div>
+            </footer>
+            <div class="comment-content">
+              <p>Переводили JSON-файлы для i18next-проекта. Команда сразу поняла структуру ключей, предложила глоссарий для нашего продукта. При повторном заказе (обновлении) TM-скидка была ощутимой.</p>
+            </div>
+            <div class="reply"><a class="comment-reply-link" href="#">Ответить</a></div>
+          </article>
+          <ol class="children">
+            <li class="comment depth-2" id="comment-3">
+              <article class="comment-body">
+                <footer class="comment-meta">
+                  <div class="comment-author vcard">
+                    <div class="wp-avatar" style="width:36px;height:36px;font-size:15px">Р</div>
+                    <div class="fn"><b>Ремарка</b><span style="font-size:12px;color:#783CF0;margin-top:1px">Администратор</span></div>
+                  </div>
+                  <div class="comment-metadata"><time datetime="2025-01-23">23 января 2025</time></div>
+                </footer>
+                <div class="comment-content">
+                  <p>Наталья, спасибо! TM — это наш стандарт для всех долгосрочных проектов. При каждом следующем релизе платите только за новые и изменённые строки.</p>
+                </div>
+              </article>
+            </li>
+          </ol>
+        </li>
+
+      </ol><!-- /comment-list -->
+
+      <div id="respond" class="comment-respond">
+        <h3 id="reply-title" class="comment-reply-title">Оставить комментарий</h3>
+        <form action="#" method="post" id="commentform" class="comment-form" novalidate>
+          <p class="comment-notes">Ваш адрес email не будет опубликован. Обязательные поля помечены <span class="required">*</span></p>
+          <p class="comment-form-comment">
+            <label for="comment">Комментарий <span class="required">*</span></label>
+            <textarea id="comment" name="comment" cols="45" rows="6" required placeholder="Расскажите о вашем опыте работы с нами..."></textarea>
+          </p>
+          <div class="comment-form-fields">
+            <p class="comment-form-author">
+              <label for="author">Имя <span class="required">*</span></label>
+              <input id="author" name="author" type="text" size="30" required placeholder="Ваше имя">
+            </p>
+            <p class="comment-form-email">
+              <label for="email">Email <span class="required">*</span></label>
+              <input id="email" name="email" type="email" size="30" required placeholder="email@example.com">
+            </p>
+          </div>
+          <p class="comment-form-cookies-consent">
+            <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes">
+            <label for="wp-comment-cookies-consent">Сохранить моё имя и email для следующего комментария</label>
+          </p>
+          <p class="form-submit">
+            <input name="submit" type="submit" id="submit" class="submit" value="Отправить комментарий">
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div><!-- /#comments -->
+
+  <!-- Плавающая кнопка -->
+  <button class="chat-float-btn" id="chatFloatBtn" aria-label="Открыть чат">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+
+  <!-- ════════════════ FOOTER ════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo-light.png" alt="Remarka" id="footer-logo">
+          <p>Профессиональные переводы и локализация для бизнеса. Работаем удалённо с клиентами по всей России и за её пределами.</p>
+          <h5 class="social-title">Мы в соцсетях</h5>
+          <div class="social-links">
+            <a href="#" aria-label="ВКонтакте"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.785 16.241s.288-.032.435-.193c.135-.148.13-.426.13-.426s-.018-1.302.582-1.495c.592-.19 1.352 1.262 2.158 1.821.61.422 1.073.33 1.073.33l2.157-.031s1.128-.071.593-.964c-.044-.073-.312-.66-1.602-1.86-1.35-1.257-1.169-1.054.456-3.232.99-1.327 1.387-2.137 1.263-2.485-.118-.331-.85-.244-.85-.244l-2.434.015s-.18-.025-.314.056c-.13.079-.215.262-.215.262s-.385 1.029-.899 1.904c-1.083 1.846-1.517 1.944-1.694 1.829-.412-.267-.31-1.071-.31-1.643 0-1.787.27-2.531-.526-2.724-.265-.064-.46-.106-1.136-.113-.867-.009-1.601.003-2.016.207-.276.135-.49.435-.36.453.16.022.523.099.715.362.249.34.24 1.103.24 1.103s.143 2.097-.333 2.358c-.327.179-.775-.186-1.74-1.86-.494-.858-.868-1.807-.868-1.807s-.072-.176-.2-.27c-.155-.114-.372-.15-.372-.15l-2.314.014s-.347.01-.475.16c-.114.135-.009.413-.009.413s1.813 4.242 3.866 6.38c1.882 1.96 4.02 1.832 4.02 1.832h.967z"/></svg></a>
+            <a href="#" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.464.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Услуги</h4>
+          <ul>
+            <li><a href="#">Технический перевод</a></li>
+            <li><a href="#">Юридический перевод</a></li>
+            <li><a href="#">Медицинский перевод</a></li>
+            <li><a href="#">IT-перевод</a></li>
+            <li><a href="#">Локализация ПО</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Компания</h4>
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Цены</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Поддержка</h4>
+          <ul>
+            <li><a href="#">Связаться с нами</a></li>
+            <li><a href="#">Часто задаваемые вопросы</a></li>
+            <li><a href="#">Стать переводчиком</a></li>
+          </ul>
+          <a href="#calc-section" class="btn-primary" style="margin-top:16px">Начать <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2001–2026 Бюро переводов «Ремарка»</p>
+        <nav class="footer-legal"><a href="#">Политика конфиденциальности</a><a href="#">Карта сайта</a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/calc-widget.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    function updateLogos() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const src = isDark ? 'assets/logo-dark.png' : 'assets/logo-light.png';
+      document.querySelectorAll('#logo-img, #footer-logo').forEach(function(img){ img.src = src; });
+    }
+    updateLogos();
+    new MutationObserver(updateLogos).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  </script>
+
+</body>
+</html>

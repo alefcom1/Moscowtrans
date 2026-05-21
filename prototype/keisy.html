@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кейсы бюро переводов Ремарка — реальные проекты для бизнеса</title>
+  <meta name="description" content="Реальные проекты бюро переводов «Ремарка»: юридические, технические, медицинские, IT и финансовые переводы для крупных российских и международных компаний.">
+  <link rel="canonical" href="https://moscowtrans.ru/keisy/">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/calc-widget.css">
+
+  <style>
+    /* ── Page Hero ── */
+    .page-hero {
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 64px 0 56px;
+      text-align: center;
+    }
+    .page-hero__breadcrumb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .page-hero__breadcrumb a { color: var(--text-muted); }
+    .page-hero__breadcrumb a:hover { color: var(--brand-cyan); }
+    .page-hero__breadcrumb span { color: var(--text-muted); }
+    .page-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 5vw, 42px);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0 0 16px;
+      line-height: 1.15;
+    }
+    .page-hero__sub {
+      font-size: 17px;
+      color: var(--text-secondary);
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+
+    /* ── Stats strip ── */
+    .cases-stats {
+      background: var(--bg-primary);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 28px 0;
+    }
+    .cases-stats__row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .cases-stat-item {
+      text-align: center;
+    }
+    .cases-stat-item__num {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 800;
+      background: var(--brand-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .cases-stat-item__label {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* ── Filter Tabs ── */
+    .cases-filters {
+      border-bottom: 1px solid var(--border-subtle);
+      background: var(--bg-primary);
+      position: sticky;
+      top: var(--header-h);
+      z-index: 50;
+    }
+    .cases-filters__inner {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 var(--container-pad);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .cases-filters__inner::-webkit-scrollbar { display: none; }
+    .filter-tab {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      padding: 14px 18px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: color var(--t-fast), border-color var(--t-fast);
+      margin-bottom: -1px;
+    }
+    .filter-tab:hover { color: var(--text-primary); }
+    .filter-tab.is-active {
+      color: var(--brand-cyan);
+      border-bottom-color: var(--brand-cyan);
+    }
+
+    /* ── Cases Grid ── */
+    .cases-section {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 56px var(--container-pad) 80px;
+    }
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+    @media (max-width: 768px) {
+      .cases-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── Case Card ── */
+    .case-card {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--r-lg);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: transform var(--t-base), box-shadow var(--t-base), border-color var(--t-base);
+    }
+    .case-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card);
+      border-color: var(--brand-cyan);
+    }
+    .case-card__header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .case-card__client {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .case-card__badge {
+      flex-shrink: 0;
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: var(--r-full);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    .badge--legal    { background: rgba(99, 102, 241, 0.15); color: #818cf8; }
+    .badge--tech     { background: rgba(0, 160, 240, 0.15);  color: var(--brand-cyan); }
+    .badge--medical  { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+    .badge--it       { background: rgba(120, 60, 240, 0.15); color: #a78bfa; }
+    .badge--finance  { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
+
+    .case-card__title {
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      margin: 0;
+    }
+    .case-card__desc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .case-card__meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .case-meta-item {
+      background: var(--bg-glass);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--r-md);
+      padding: 12px 14px;
+    }
+    .case-meta-item__label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .case-meta-item__value {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.4;
+    }
+
+    .case-card__result {
+      background: var(--brand-gradient-soft);
+      border: 1px solid rgba(0, 160, 240, 0.2);
+      border-radius: var(--r-md);
+      padding: 14px 16px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .case-card__result-icon {
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .case-card__result-text {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+    .case-card__result-text strong { color: var(--brand-cyan); }
+
+    .case-card__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 4px;
+    }
+    .case-card__pair {
+      font-size: 13px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .case-card__pair svg { flex-shrink: 0; }
+    .case-card__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 20px;
+      background: var(--brand-gradient);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: var(--r-md);
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: opacity var(--t-fast);
+    }
+    .case-card__btn:hover { opacity: 0.88; }
+
+    /* ── CTA Banner ── */
+    .cases-cta {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-subtle);
+      padding: 64px 0;
+      text-align: center;
+    }
+    .cases-cta__title {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 4vw, 34px);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0 0 14px;
+    }
+    .cases-cta__sub {
+      font-size: 16px;
+      color: var(--text-secondary);
+      max-width: 560px;
+      margin: 0 auto 28px;
+      line-height: 1.65;
+    }
+    .cases-cta__btns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ════════════════ HEADER ════════════════ -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="/" class="logo" aria-label="Ремарка">
+        <img src="assets/logo-dark.png" alt="Remarka" id="logo-img">
+      </a>
+
+      <nav class="main-nav" aria-label="Основное меню">
+        <a href="/#services">Услуги</a>
+        <a href="/#industries">Отрасли</a>
+        <a href="/#languages">Языки</a>
+        <a href="/#pricing">Цены</a>
+        <a href="/#about">О нас</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+74959704413" class="header-phone" aria-label="Позвонить">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +7 (495) 970-44-13
+        </a>
+        <a href="https://wa.me/79859704413" class="header-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          WhatsApp
+        </a>
+        <a href="#calc-section" class="btn-primary">
+          Получить расчёт
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 5l7 7-7 7"/>
+          </svg>
+        </a>
+
+        <div class="lang-switcher">
+          <button type="button" class="lang-switcher-btn" aria-haspopup="true" aria-expanded="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span>RU</span>
+            <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="lang-dropdown" role="menu">
+            <a href="#" class="is-active" role="menuitem">🇷🇺 Русский</a>
+            <a href="https://1russian.com" role="menuitem">🇬🇧 English</a>
+            <a href="https://traduzione.tech" role="menuitem">🇮🇹 Italiano</a>
+          </div>
+        </div>
+
+        <button class="theme-toggle" type="button" aria-label="Переключить тему">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <button class="mobile-toggle" type="button" aria-label="Открыть меню">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Мобильное меню -->
+  <div class="mobile-drawer" aria-hidden="true">
+    <nav aria-label="Мобильное меню">
+      <a href="/#services">Услуги</a>
+      <a href="/#industries">Отрасли</a>
+      <a href="/#languages">Языки</a>
+      <a href="/#pricing">Цены</a>
+      <a href="/#about">О нас</a>
+    </nav>
+    <div class="drawer-actions">
+      <a href="tel:+74959704413" style="display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:inherit;text-decoration:none;padding:8px 0">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +7 (495) 970-44-13
+      </a>
+      <a href="https://wa.me/79859704413" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;font-size:14px;color:#25D366;text-decoration:none;padding:4px 0 12px">
+        WhatsApp: +7 (985) 970-44-13
+      </a>
+      <a href="#calc-section" class="btn-primary">
+        Получить расчёт
+        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M13 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- ════════════════ PAGE HERO ════════════════ -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__breadcrumb">
+        <a href="/">Главная</a>
+        <span>→</span>
+        <span>Кейсы</span>
+      </div>
+      <h1 class="page-hero__title">Кейсы: переводческие проекты бюро «Ремарка»</h1>
+      <p class="page-hero__sub">Реальные проекты для B2B-клиентов: юридические, технические, медицинские и IT-переводы с конкретными результатами</p>
+    </div>
+  </section>
+
+  <!-- ════════════════ STATS ════════════════ -->
+  <div class="cases-stats">
+    <div class="container">
+      <div class="cases-stats__row">
+        <div class="cases-stat-item">
+          <div class="cases-stat-item__num">2 400+</div>
+          <div class="cases-stat-item__label">завершённых проектов</div>
+        </div>
+        <div class="cases-stat-item">
+          <div class="cases-stat-item__num">60+</div>
+          <div class="cases-stat-item__label">языков перевода</div>
+        </div>
+        <div class="cases-stat-item">
+          <div class="cases-stat-item__num">25+</div>
+          <div class="cases-stat-item__label">лет в B2B-переводах</div>
+        </div>
+        <div class="cases-stat-item">
+          <div class="cases-stat-item__num">4.98★</div>
+          <div class="cases-stat-item__label">средний рейтинг</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════ FILTER TABS ════════════════ -->
+  <div class="cases-filters">
+    <div class="cases-filters__inner">
+      <button class="filter-tab is-active" data-cat="all">Все</button>
+      <button class="filter-tab" data-cat="legal">Юридические</button>
+      <button class="filter-tab" data-cat="tech">Технические</button>
+      <button class="filter-tab" data-cat="medical">Медицинские</button>
+      <button class="filter-tab" data-cat="it">IT</button>
+      <button class="filter-tab" data-cat="finance">Финансовые</button>
+    </div>
+  </div>
+
+  <!-- ════════════════ CASES GRID ════════════════ -->
+  <section class="cases-section">
+    <div class="cases-grid" id="cases-grid">
+
+      <!-- CASE 1: Legal — SHA -->
+      <article class="case-card" data-cat="legal">
+        <div class="case-card__header">
+          <div class="case-card__client">Крупная нефтегазовая холдинговая компания</div>
+          <span class="case-card__badge badge--legal">Юридический</span>
+        </div>
+        <h2 class="case-card__title">Перевод акционерного соглашения SHA для M&A-сделки</h2>
+        <p class="case-card__desc">Клиент проводил сделку по слиянию с зарубежным стратегическим партнёром. Потребовался полный перевод акционерного соглашения (SHA) на 200 страниц с английского права на русский — с сохранением юридической структуры, раздела representations & warranties, условий drag-along / tag-along и механизмов lock-up.</p>
+        <div class="case-card__meta">
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Объём</div>
+            <div class="case-meta-item__value">200 страниц SHA</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Языковая пара</div>
+            <div class="case-meta-item__value">EN → RU</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Срок</div>
+            <div class="case-meta-item__value">5 рабочих дней</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Формат сдачи</div>
+            <div class="case-meta-item__value">DOCX с форматированием</div>
+          </div>
+        </div>
+        <div class="case-card__result">
+          <span class="case-card__result-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A0F0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div class="case-card__result-text">
+            Перевод выполнен в срок, <strong>без замечаний от юридического советника</strong> клиента. Специалист с профильным образованием в области корпоративного права обеспечил точность конструкций английского права, не имеющих прямых аналогов в российском ГК.
+          </div>
+        </div>
+        <div class="case-card__footer">
+          <div class="case-card__pair">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            NDA подписан
+          </div>
+          <a href="#calc-section" class="case-card__btn">
+            Обсудить проект
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- CASE 2: Technical — DE→RU pump station -->
+      <article class="case-card" data-cat="tech">
+        <div class="case-card__header">
+          <div class="case-card__client">Крупная нефтедобывающая компания</div>
+          <span class="case-card__badge badge--tech">Технический</span>
+        </div>
+        <h2 class="case-card__title">Перевод технической документации на насосную станцию с немецкого</h2>
+        <p class="case-card__desc">Немецкий производитель промышленных насосных агрегатов поставил оборудование на нефтяное месторождение. Клиент получил 150 страниц технической документации (руководство по монтажу, техническому обслуживанию и эксплуатации) исключительно на немецком языке и нуждался в профессиональном переводе для инженерного персонала.</p>
+        <div class="case-card__meta">
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Объём</div>
+            <div class="case-meta-item__value">150 страниц, схемы</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Языковая пара</div>
+            <div class="case-meta-item__value">DE → RU</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Срок</div>
+            <div class="case-meta-item__value">7 рабочих дней</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Отрасль</div>
+            <div class="case-meta-item__value">Нефтегаз</div>
+          </div>
+        </div>
+        <div class="case-card__result">
+          <span class="case-card__result-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A0F0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div class="case-card__result-text">
+            Перевод с сохранением технических схем и таблиц. Инженер с <strong>профильным образованием в области машиностроения</strong> обеспечил корректную передачу терминологии насосного оборудования. Документация принята службой главного механика без доработок.
+          </div>
+        </div>
+        <div class="case-card__footer">
+          <div class="case-card__pair">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            NDA подписан
+          </div>
+          <a href="#calc-section" class="case-card__btn">
+            Обсудить проект
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- CASE 3: Medical — CTD dossier -->
+      <article class="case-card" data-cat="medical">
+        <div class="case-card__header">
+          <div class="case-card__client">Международная фармацевтическая компания</div>
+          <span class="case-card__badge badge--medical">Медицинский</span>
+        </div>
+        <h2 class="case-card__title">Перевод регуляторного досье CTD для регистрации препарата</h2>
+        <p class="case-card__desc">Задача: перевод регистрационного досье в формате Common Technical Document (CTD) для подачи заявки на государственную регистрацию лекарственного препарата в Минздрав России. Проект включал модули 2–5: клинические исследования, нежелательные явления, фармакокинетику и результаты доклинических изысканий.</p>
+        <div class="case-card__meta">
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Объём</div>
+            <div class="case-meta-item__value">~900 страниц, 3 месяца</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Языковая пара</div>
+            <div class="case-meta-item__value">EN → RU</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Срок</div>
+            <div class="case-meta-item__value">3 месяца (поэтапно)</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Отрасль</div>
+            <div class="case-meta-item__value">Фармацевтика, регуляторика</div>
+          </div>
+        </div>
+        <div class="case-card__result">
+          <span class="case-card__result-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A0F0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div class="case-card__result-text">
+            Перевод выполнен командой специализированных медицинских переводчиков с фармацевтическим образованием. <strong>Досье принято регулятором с первой подачи</strong> без замечаний по терминологии. Регистрационное удостоверение получено в плановые сроки.
+          </div>
+        </div>
+        <div class="case-card__footer">
+          <div class="case-card__pair">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            NDA подписан
+          </div>
+          <a href="#calc-section" class="case-card__btn">
+            Обсудить проект
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- CASE 4: IT — SaaS localization -->
+      <article class="case-card" data-cat="it">
+        <div class="case-card__header">
+          <div class="case-card__client">B2B SaaS-компания (управление проектами)</div>
+          <span class="case-card__badge badge--it">IT и локализация</span>
+        </div>
+        <h2 class="case-card__title">Локализация SaaS-интерфейса на три языка: RU, ZH, DE</h2>
+        <p class="case-card__desc">Стартап вышел на международный рынок и нуждался в локализации интерфейса своей платформы управления проектами на русский, китайский и немецкий языки. Работа включала 15 000 строк UI-текстов, onboarding-туры, email-шаблоны и тексты help-centre. Исходный язык — английский.</p>
+        <div class="case-card__meta">
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Объём</div>
+            <div class="case-meta-item__value">15 000 строк</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Языковые пары</div>
+            <div class="case-meta-item__value">EN → RU, ZH, DE</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Срок</div>
+            <div class="case-meta-item__value">4 недели</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Форматы</div>
+            <div class="case-meta-item__value">JSON, XLIFF, PO-файлы</div>
+          </div>
+        </div>
+        <div class="case-card__result">
+          <span class="case-card__result-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A0F0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div class="case-card__result-text">
+            Локализация выполнена с использованием CAT-инструментов и единого глоссария терминов продукта. <strong>Релиз состоялся в запланированную дату.</strong> Клиент впоследствии заказал локализацию мобильного приложения и маркетинговых материалов.
+          </div>
+        </div>
+        <div class="case-card__footer">
+          <div class="case-card__pair">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            NDA подписан
+          </div>
+          <a href="#calc-section" class="case-card__btn">
+            Обсудить проект
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- CASE 5: Finance — prospectus -->
+      <article class="case-card" data-cat="finance">
+        <div class="case-card__header">
+          <div class="case-card__client">Российский коммерческий банк</div>
+          <span class="case-card__badge badge--finance">Финансовый</span>
+        </div>
+        <h2 class="case-card__title">Перевод проспекта эмиссии облигаций для Euroclear</h2>
+        <p class="case-card__desc">Банк размещал еврооблигации на международном рынке и нуждался в профессиональном переводе проспекта эмиссии с русского на английский для предоставления европейским инвесторам и депозитарию Euroclear. Документ включал финансовую отчётность, раздел рисков, структуру обеспечения и условия выпуска.</p>
+        <div class="case-card__meta">
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Объём</div>
+            <div class="case-meta-item__value">80 страниц проспекта</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Языковая пара</div>
+            <div class="case-meta-item__value">RU → EN</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Срок</div>
+            <div class="case-meta-item__value">6 рабочих дней</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Отрасль</div>
+            <div class="case-meta-item__value">Банки, рынок капитала</div>
+          </div>
+        </div>
+        <div class="case-card__result">
+          <span class="case-card__result-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A0F0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div class="case-card__result-text">
+            Перевод выполнен специалистом с образованием в области финансов и международным опытом работы с проспектами. Документ прошёл проверку <strong>юридическим советником банка без существенных правок</strong>. Размещение состоялось в срок.
+          </div>
+        </div>
+        <div class="case-card__footer">
+          <div class="case-card__pair">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            NDA подписан
+          </div>
+          <a href="#calc-section" class="case-card__btn">
+            Обсудить проект
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- CASE 6: Legal — MKAS arbitration -->
+      <article class="case-card" data-cat="legal">
+        <div class="case-card__header">
+          <div class="case-card__client">Международная торговая компания</div>
+          <span class="case-card__badge badge--legal">Юридический</span>
+        </div>
+        <h2 class="case-card__title">Срочный перевод арбитражных материалов для МКАС за 48 часов</h2>
+        <p class="case-card__desc">Компания участвовала в разбирательстве в Международном коммерческом арбитражном суде при ТПП РФ. За двое суток потребовалось перевести 40 страниц арбитражных материалов: меморандум истца, возражения на иск и ключевые доказательства — с английского на русский.</p>
+        <div class="case-card__meta">
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Объём</div>
+            <div class="case-meta-item__value">40 страниц</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Языковая пара</div>
+            <div class="case-meta-item__value">EN → RU</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Срок</div>
+            <div class="case-meta-item__value">48 часов (срочный)</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Орган</div>
+            <div class="case-meta-item__value">МКАС при ТПП РФ</div>
+          </div>
+        </div>
+        <div class="case-card__result">
+          <span class="case-card__result-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A0F0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div class="case-card__result-text">
+            Перевод сдан <strong>точно в срок — через 47 часов после получения задания</strong>. Работа выполнена юридическим переводчиком со специализацией в международном коммерческом арбитраже. Клиент успел подать материалы в срок, установленный трибуналом.
+          </div>
+        </div>
+        <div class="case-card__footer">
+          <div class="case-card__pair">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            NDA подписан
+          </div>
+          <a href="#calc-section" class="case-card__btn">
+            Обсудить проект
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- CASE 7: Technical — construction equipment -->
+      <article class="case-card" data-cat="tech">
+        <div class="case-card__header">
+          <div class="case-card__client">Строительный девелопер (коммерческая недвижимость)</div>
+          <span class="case-card__badge badge--tech">Технический</span>
+        </div>
+        <h2 class="case-card__title">Локализация документации на промышленное строительное оборудование</h2>
+        <p class="case-card__desc">Немецкий производитель строительной техники поставил партию специализированного оборудования для строительства объекта. Клиент получил полный пакет технической документации на немецком — руководства по безопасности, монтажные схемы, паспорта на оборудование и регламенты технического обслуживания.</p>
+        <div class="case-card__meta">
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Объём</div>
+            <div class="case-meta-item__value">~280 страниц</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Языковая пара</div>
+            <div class="case-meta-item__value">DE → RU</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Срок</div>
+            <div class="case-meta-item__value">12 рабочих дней</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Отрасль</div>
+            <div class="case-meta-item__value">Строительство, девелопмент</div>
+          </div>
+        </div>
+        <div class="case-card__result">
+          <span class="case-card__result-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A0F0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div class="case-card__result-text">
+            Работа выполнена командой переводчиков с профильным образованием в области строительства и машиностроения. <strong>Сохранены все схемы и технические таблицы.</strong> Документация передана в службу эксплуатации объекта в полном объёме.
+          </div>
+        </div>
+        <div class="case-card__footer">
+          <div class="case-card__pair">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            NDA подписан
+          </div>
+          <a href="#calc-section" class="case-card__btn">
+            Обсудить проект
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- CASE 8: IT — corporate site -->
+      <article class="case-card" data-cat="it">
+        <div class="case-card__header">
+          <div class="case-card__client">Производственная компания (промышленное оборудование)</div>
+          <span class="case-card__badge badge--it">IT и локализация</span>
+        </div>
+        <h2 class="case-card__title">Локализация корпоративного сайта на английский язык — 500 страниц</h2>
+        <p class="case-card__desc">Производитель промышленного оборудования выходил на западные рынки и нуждался в полной локализации корпоративного сайта: 500 страниц контента, включая описания продуктов, технические характеристики, кейсы, новости и юридические документы. Ключевое требование — SEO-адаптация под английский рынок.</p>
+        <div class="case-card__meta">
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Объём</div>
+            <div class="case-meta-item__value">~500 страниц сайта</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Языковая пара</div>
+            <div class="case-meta-item__value">RU → EN</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Срок</div>
+            <div class="case-meta-item__value">8 недель (поэтапно)</div>
+          </div>
+          <div class="case-meta-item">
+            <div class="case-meta-item__label">Формат</div>
+            <div class="case-meta-item__value">CMS-экспорт / XLIFF</div>
+          </div>
+        </div>
+        <div class="case-card__result">
+          <span class="case-card__result-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A0F0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div class="case-card__result-text">
+            Работа выполнена с SEO-адаптацией: переводчик совместно с маркетинговой командой клиента согласовал ключевые слова для каждой категории продукции. <strong>Через 4 месяца после запуска сайт вышел в топ-5</strong> по профильным запросам на рынке UK и US.
+          </div>
+        </div>
+        <div class="case-card__footer">
+          <div class="case-card__pair">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            NDA подписан
+          </div>
+          <a href="#calc-section" class="case-card__btn">
+            Обсудить проект
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+    </div><!-- /cases-grid -->
+
+    <!-- Empty state (hidden by default) -->
+    <div id="cases-empty" style="display:none; text-align:center; padding:64px 0; color:var(--text-muted)">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 16px;opacity:.4"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <p style="font-size:16px">По выбранной категории кейсов не найдено</p>
+    </div>
+
+  </section>
+
+  <!-- ════════════════ CTA ════════════════ -->
+  <section class="cases-cta">
+    <div class="container">
+      <h2 class="cases-cta__title">Есть похожая задача?</h2>
+      <p class="cases-cta__sub">Расскажите о проекте — подберём специалиста и рассчитаем стоимость за 30 минут</p>
+      <div class="cases-cta__btns">
+        <a href="#calc-section" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:var(--brand-gradient);color:#fff;font-weight:600;border-radius:var(--r-md)">
+          Рассчитать стоимость
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="tel:+74959704413" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:var(--bg-elevated);border:1px solid var(--border-subtle);color:var(--text-primary);font-weight:600;border-radius:var(--r-md);text-decoration:none;font-size:15px">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +7 (495) 970-44-13
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ FOOTER ════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid footer-grid--5col">
+
+        <div class="footer-brand">
+          <img src="assets/logo-light.png" alt="Remarka" id="footer-logo">
+          <p>
+            Профессиональные переводы и локализация для бизнеса.
+            Работаем удалённо с клиентами по всей России и за её пределами.
+          </p>
+          <address class="footer-address">
+            <div class="fa-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              <span>125009, Москва,<br>Глинищевский пер., д.&nbsp;6, оф.&nbsp;2</span>
+            </div>
+            <div class="fa-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+74959704413">+7 (495) 970-44-13</a>
+            </div>
+            <div class="fa-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+              <a href="https://wa.me/79859704413" target="_blank" rel="noopener">WhatsApp: +7 (985) 970-44-13</a>
+            </div>
+          </address>
+        </div>
+
+        <div class="footer-col">
+          <h4>Услуги</h4>
+          <ul>
+            <li><a href="/tekhnicheskiy-perevod/">Технический перевод</a></li>
+            <li><a href="/yuridicheskiy-perevod/">Юридический перевод</a></li>
+            <li><a href="/meditsinskiy-perevod/">Медицинский перевод</a></li>
+            <li><a href="/it-perevod/">IT-перевод</a></li>
+            <li><a href="/lokalizatsiya-po/">Локализация ПО</a></li>
+            <li><a href="/perevod-saytov/">Перевод сайтов</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Решения</h4>
+          <ul>
+            <li><a href="#calc-section">По отраслям</a></li>
+            <li><a href="#calc-section">Корпоративным клиентам</a></li>
+            <li><a href="/yazyki-perevoda/">Языки</a></li>
+            <li><a href="/stoimost-perevoda/">Цены</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Компания</h4>
+          <ul>
+            <li><a href="/#about">О нас</a></li>
+            <li><a href="/keisy/">Кейсы</a></li>
+            <li><a href="/stoimost-perevoda/">Цены</a></li>
+            <li><a href="/blog/">Блог</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Поддержка</h4>
+          <ul>
+            <li><a href="tel:+74959704413">Связаться с нами</a></li>
+            <li><a href="#calc-section">Частые вопросы</a></li>
+            <li><a href="#calc-section">Стать переводчиком</a></li>
+          </ul>
+          <a href="#calc-section" class="btn-primary">
+            Получить расчёт
+            <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2001–2026 Бюро переводов «Ремарка» · ИП Капина О.Б. · ИНН&nbsp;233406925261 · ОГРНИП&nbsp;312236329700014</p>
+        <nav class="footer-legal" aria-label="Юридические ссылки">
+          <a href="/politika-konfidenczialnosti/">Политика конфиденциальности</a>
+          <a href="/sitemap.xml">Карта сайта</a>
+        </nav>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    // Logo theme swap
+    function updateLogos() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const src = isDark ? 'assets/logo-dark.png' : 'assets/logo-light.png';
+      document.querySelectorAll('#logo-img, #footer-logo').forEach(img => img.src = src);
+    }
+    updateLogos();
+    new MutationObserver(updateLogos).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+    // Filter logic
+    document.querySelectorAll('.filter-tab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        const cat = btn.dataset.cat;
+        const cards = document.querySelectorAll('.case-card');
+        let visible = 0;
+        cards.forEach(card => {
+          const match = cat === 'all' || card.dataset.cat === cat;
+          card.style.display = match ? '' : 'none';
+          if (match) visible++;
+        });
+        document.getElementById('cases-empty').style.display = visible === 0 ? 'block' : 'none';
+      });
+    });
+  </script>
+
+</body>
+</html>
