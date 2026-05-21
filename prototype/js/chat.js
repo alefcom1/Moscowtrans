@@ -380,15 +380,14 @@
 
     if (WORKER_URL) {
       try {
-        const messages = [{ role: 'system', content: SYSTEM_PROMPT }].concat(history);
         const res = await fetch(WORKER_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ messages })
+          body: JSON.stringify({ messages: history })
         });
         if (res.ok) {
           const data = await res.json();
-          reply = (data.reply) || (data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content) || null;
+          reply = data.text || data.reply || null;
         }
       } catch (e) {
         console.warn('Worker fetch error:', e);
