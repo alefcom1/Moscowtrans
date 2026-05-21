@@ -943,6 +943,7 @@ img { max-width: 100%; display: block; }
 }
 .sb-item:hover { background: rgba(255,255,255,.06); color: rgba(255,255,255,.7); }
 .sb-item.sb-active { background: rgba(120,60,240,.18); color: #a78bfa; }
+a.sb-item { text-decoration: none; }
 
 /* ── Hero main ── */
 .hero-main {
@@ -2318,20 +2319,25 @@ body.js-loaded .anim-fade.is-visible {
 
 /* ══ Header phone + WhatsApp ═════════════════════════════════════════ */
 .header-phone {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text-primary);
-  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(120,60,240,.10);
+  color: var(--brand-violet, #783CF0);
+  flex-shrink: 0;
   text-decoration: none;
-  letter-spacing: -.01em;
+  transition: background .2s;
 }
-.header-phone:hover { color: var(--accent); }
+.header-phone:hover { background: rgba(120,60,240,.20); color: var(--brand-violet, #783CF0); }
 .header-wa {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: rgba(37,211,102,.12);
   color: #25d366;
