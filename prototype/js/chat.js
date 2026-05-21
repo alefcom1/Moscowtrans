@@ -117,15 +117,23 @@
   function ts() {
     return new Date().toLocaleTimeString('ru', { hour: '2-digit', minute: '2-digit' });
   }
-  function esc(s) {
-    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-            .replace(/\n/g, '<br>');
+
+  function renderBubText(s) {
+    let t = s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    // markdown ссылки [Текст](URL) → кнопки-ссылки
+    t = t.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,
+      '<a href="$2" target="_blank" rel="noopener" class="msg-link">$1 →</a>');
+    t = t.replace(/\n/g, '<br>');
+    return t;
   }
 
   function appendBub(text, role) {
     const div = document.createElement('div');
     div.className = 'msg-bub' + (role === 'user' ? ' msg-bub--user' : '');
-    div.innerHTML = '<p>' + esc(text) + '</p><span class="msg-ts">' + ts() + '</span>';
+    const content = role === 'user'
+      ? text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, '<br>')
+      : renderBubText(text);
+    div.innerHTML = '<p>' + content + '</p><span class="msg-ts">' + ts() + '</span>';
     msgsEl.appendChild(div);
     scrollBottom();
     return div;

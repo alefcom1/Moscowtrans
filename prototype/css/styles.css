@@ -1054,6 +1054,21 @@ a.sb-item { text-decoration: none; }
   color: rgba(255,255,255,.28); text-align: right; margin-top: 5px;
 }
 
+/* Ссылки-кнопки внутри пузырей Ольги */
+.msg-link {
+  display: inline-flex; align-items: center; gap: 4px;
+  margin-top: 8px; padding: 6px 14px;
+  background: rgba(120,60,240,.18); border: 1px solid rgba(120,60,240,.35);
+  border-radius: 20px; color: #b89fff; font-size: 13px; font-weight: 500;
+  text-decoration: none; transition: background .18s, color .18s;
+}
+.msg-link:hover { background: rgba(120,60,240,.32); color: #fff; }
+:root[data-theme="light"] .msg-link {
+  background: rgba(120,60,240,.09); border-color: rgba(120,60,240,.25);
+  color: #6930c3;
+}
+:root[data-theme="light"] .msg-link:hover { background: rgba(120,60,240,.18); color: #4a1fa8; }
+
 /* Typing dots */
 .typing-dots {
   display: flex; gap: 5px; align-items: center;
