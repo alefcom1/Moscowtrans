@@ -387,7 +387,11 @@
         });
         if (res.ok) {
           const data = await res.json();
-          reply = data.text || data.reply || null;
+          const candidate = data.text || data.reply || null;
+          // Игнорируем пустышки от воркера
+          if (candidate && candidate !== 'Ответ недоступен' && candidate.trim().length > 2) {
+            reply = candidate;
+          }
         }
       } catch (e) {
         console.warn('Worker fetch error:', e);
