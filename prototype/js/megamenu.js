@@ -1,33 +1,32 @@
 (function () {
   'use strict';
 
-  /* ── Выпадающее меню ─────────────────────────── */
+  /* ── Выпадающее меню — открытие по наведению ─── */
   var navItems = document.querySelectorAll('.nav-item[data-dropdown]');
+  var hoverTimer = {};
 
   navItems.forEach(function (item) {
     var trigger = item.querySelector('.nav-trigger');
     if (!trigger) return;
 
-    trigger.addEventListener('click', function (e) {
-      e.stopPropagation();
-      var isOpen = item.classList.contains('is-open');
+    item.addEventListener('mouseenter', function () {
+      clearTimeout(hoverTimer[item.dataset.dropdown]);
       navItems.forEach(function (i) {
-        i.classList.remove('is-open');
-        var t = i.querySelector('.nav-trigger');
-        if (t) t.setAttribute('aria-expanded', 'false');
+        if (i !== item) {
+          i.classList.remove('is-open');
+          var t = i.querySelector('.nav-trigger');
+          if (t) t.setAttribute('aria-expanded', 'false');
+        }
       });
-      if (!isOpen) {
-        item.classList.add('is-open');
-        trigger.setAttribute('aria-expanded', 'true');
-      }
+      item.classList.add('is-open');
+      trigger.setAttribute('aria-expanded', 'true');
     });
-  });
 
-  document.addEventListener('click', function () {
-    navItems.forEach(function (i) {
-      i.classList.remove('is-open');
-      var t = i.querySelector('.nav-trigger');
-      if (t) t.setAttribute('aria-expanded', 'false');
+    item.addEventListener('mouseleave', function () {
+      hoverTimer[item.dataset.dropdown] = setTimeout(function () {
+        item.classList.remove('is-open');
+        trigger.setAttribute('aria-expanded', 'false');
+      }, 120);
     });
   });
 
