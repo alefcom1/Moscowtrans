@@ -2704,3 +2704,138 @@ body.js-loaded .anim-fade.is-visible {
   letter-spacing: .02em;
 }
 :root[data-theme="light"] .iex-meta { color: rgba(10,14,39,.40); }
+
+/* ============================================================
+   HERO / CHAT WIDGET — СВЕТЛАЯ ТЕМА
+   ============================================================ */
+:root[data-theme="light"] .hero-page {
+  background: #EEF1FF;
+}
+:root[data-theme="light"] .chat-sidebar {
+  background: rgba(10,14,39,.04);
+  border-right-color: rgba(10,14,39,.08);
+}
+:root[data-theme="light"] .sb-item {
+  color: rgba(10,14,39,.45);
+}
+:root[data-theme="light"] .sb-item:hover {
+  background: rgba(10,14,39,.06);
+  color: rgba(10,14,39,.75);
+}
+:root[data-theme="light"] .sb-item.sb-active {
+  background: rgba(120,60,240,.10);
+  color: #5b21b6;
+}
+:root[data-theme="light"] .chat-window {
+  background: rgba(255,255,255,.82);
+  border-color: rgba(10,14,39,.10);
+  box-shadow: 0 8px 60px rgba(10,14,39,.12), 0 2px 12px rgba(10,14,39,.06);
+}
+:root[data-theme="light"] .cw-top-bar {
+  border-bottom-color: rgba(10,14,39,.08);
+}
+:root[data-theme="light"] .cw-close {
+  color: rgba(10,14,39,.38);
+}
+:root[data-theme="light"] .cw-close:hover {
+  color: rgba(10,14,39,.75);
+  background: rgba(10,14,39,.06);
+}
+:root[data-theme="light"] .agent-name {
+  color: #0A0E27;
+}
+:root[data-theme="light"] .agent-role {
+  color: rgba(10,14,39,.50);
+}
+:root[data-theme="light"] .msg-bub {
+  background: rgba(10,14,39,.05);
+  border-color: rgba(10,14,39,.08);
+  color: rgba(10,14,39,.88);
+}
+:root[data-theme="light"] .msg-ts {
+  color: rgba(10,14,39,.30);
+}
+:root[data-theme="light"] .msg-bub--user {
+  background: rgba(120,60,240,.10);
+  border-color: rgba(120,60,240,.18);
+  color: #2d1b69;
+}
+:root[data-theme="light"] .typing-dots {
+  background: rgba(10,14,39,.05);
+  border-color: rgba(10,14,39,.08);
+}
+:root[data-theme="light"] .cw-msgs-col::-webkit-scrollbar-track {
+  background: transparent;
+}
+:root[data-theme="light"] .cw-input-bar {
+  background: rgba(255,255,255,.7);
+  border-top-color: rgba(10,14,39,.08);
+}
+:root[data-theme="light"] .cw-input {
+  background: rgba(10,14,39,.04);
+  border-color: rgba(10,14,39,.10);
+  color: #0A0E27;
+}
+:root[data-theme="light"] .cw-input::placeholder {
+  color: rgba(10,14,39,.38);
+}
+:root[data-theme="light"] .cw-btn-icon {
+  color: rgba(10,14,39,.45);
+}
+:root[data-theme="light"] .cw-btn-icon:hover {
+  color: rgba(10,14,39,.80);
+  background: rgba(10,14,39,.06);
+}
+:root[data-theme="light"] .agent-online-dot {
+  border-color: #EEF1FF;
+}
+:root[data-theme="light"] .agent-stat-row {
+  color: rgba(10,14,39,.50);
+}
+:root[data-theme="light"] .agent-stat-row strong {
+  color: #0A0E27;
+}
+
+/* ============================================================
+   СЕКЦИИ САЙТА — СВЕТЛАЯ ТЕМА
+   ============================================================ */
+/* Секция услуг */
+:root[data-theme="light"] .services-section {
+  background: var(--bg-secondary);
+}
+:root[data-theme="light"] .srv-card {
+  background: #FFFFFF;
+  border-color: rgba(10,14,39,.08);
+}
+:root[data-theme="light"] .srv-card:hover {
+  border-color: rgba(120,60,240,.25);
+  box-shadow: 0 8px 32px rgba(120,60,240,.10);
+}
+
+/* Ценовые карточки */
+:root[data-theme="light"] .price-card {
+  background: #FFFFFF;
+  border-color: rgba(10,14,39,.08);
+}
+:root[data-theme="light"] .price-card.featured {
+  border-color: rgba(120,60,240,.35);
+}
+
+/* Footer */
+:root[data-theme="light"] .site-footer {
+  background: var(--bg-secondary);
+  border-top-color: rgba(10,14,39,.08);
+}
+:root[data-theme="light"] .footer-col-title {
+  color: #0A0E27;
+}
+:root[data-theme="light"] .footer-links a {
+  color: rgba(10,14,39,.60);
+}
+:root[data-theme="light"] .footer-links a:hover {
+  color: #0A0E27;
+}
+:root[data-theme="light"] .footer-bottom {
+  border-top-color: rgba(10,14,39,.07);
+  color: rgba(10,14,39,.45);
+}
