@@ -1,1 +1,22 @@
 ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 301: /pismennyy-perevod.html → /pismennyy-perevod/
+  RewriteCond %{THE_REQUEST} \s/([a-z0-9_-]+)\.html[\s?]
+  RewriteRule ^ /%1/ [R=301,L]
+
+  # Internal rewrite: /pismennyy-perevod/ → /pismennyy-perevod.html
+  # Только если .html-файл реально существует (WordPress-посты не трогаем)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^([a-z0-9_-]+)/?$ $1.html [L]
+</IfModule>
+
+# ↓↓↓ Сюда вставить существующий блок WordPress ↓↓↓
+# BEGIN WordPress
+# ... (оставьте существующие правила WordPress без изменений)
+# END WordPress
