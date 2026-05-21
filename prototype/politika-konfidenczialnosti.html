@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Политика конфиденциальности — Бюро переводов Ремарка</title>
+  <meta name="description" content="Политика конфиденциальности бюро переводов «Ремарка» (ИП Капина О.Б.). Обработка персональных данных в соответствии с 152-ФЗ.">
+  <link rel="canonical" href="https://moscowtrans.ru/politika-konfidenczialnosti/">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/calc-widget.css">
+
+  <style>
+    /* ── Page Hero ── */
+    .page-hero {
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 56px 0 48px;
+    }
+    .page-hero__breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .page-hero__breadcrumb a { color: var(--text-muted); }
+    .page-hero__breadcrumb a:hover { color: var(--brand-cyan); }
+    .page-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0 0 12px;
+    }
+    .page-hero__meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .page-hero__updated {
+      font-size: 13px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .page-hero__badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: var(--r-full);
+      background: rgba(16,185,129,0.12);
+      color: #34d399;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    /* ── Privacy Content ── */
+    .privacy-layout {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 56px var(--container-pad) 80px;
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 56px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .privacy-layout { grid-template-columns: 1fr; }
+      .privacy-toc { display: none; }
+    }
+
+    /* Table of contents */
+    .privacy-toc {
+      position: sticky;
+      top: calc(var(--header-h) + 24px);
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--r-lg);
+      padding: 24px;
+    }
+    .privacy-toc__title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin: 0 0 14px;
+    }
+    .privacy-toc ol {
+      margin: 0;
+      padding: 0 0 0 18px;
+    }
+    .privacy-toc li {
+      margin-bottom: 8px;
+    }
+    .privacy-toc a {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.45;
+      transition: color var(--t-fast);
+    }
+    .privacy-toc a:hover { color: var(--brand-cyan); }
+
+    /* Privacy sections */
+    .privacy-content { min-width: 0; }
+
+    .privacy-section {
+      margin-bottom: 48px;
+      scroll-margin-top: calc(var(--header-h) + 24px);
+    }
+    .privacy-section:last-child { margin-bottom: 0; }
+
+    .privacy-section__title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0 0 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .privacy-section__num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--brand-gradient);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .privacy-section p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin: 0 0 14px;
+    }
+    .privacy-section p:last-child { margin-bottom: 0; }
+
+    .privacy-section ul,
+    .privacy-section ol {
+      margin: 0 0 14px;
+      padding-left: 22px;
+    }
+    .privacy-section li {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 6px;
+    }
+
+    .privacy-section strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* Info box */
+    .privacy-infobox {
+      background: var(--brand-gradient-soft);
+      border: 1px solid rgba(0, 160, 240, 0.2);
+      border-radius: var(--r-md);
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .privacy-infobox svg { flex-shrink: 0; margin-top: 1px; }
+    .privacy-infobox p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Contacts block */
+    .privacy-contacts {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--r-lg);
+      padding: 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .privacy-contact-item__label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .privacy-contact-item__value {
+      font-size: 15px;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+    .privacy-contact-item__value a {
+      color: var(--brand-cyan);
+    }
+    .privacy-contact-item__value a:hover { text-decoration: underline; }
+
+    /* Definition table */
+    .privacy-def-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    .privacy-def-table th {
+      text-align: left;
+      padding: 10px 14px;
+      background: var(--bg-secondary);
+      font-weight: 600;
+      color: var(--text-primary);
+      font-size: 13px;
+      border: 1px solid var(--border-subtle);
+    }
+    .privacy-def-table td {
+      padding: 10px 14px;
+      vertical-align: top;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      border: 1px solid var(--border-subtle);
+    }
+    .privacy-def-table tr:nth-child(even) td { background: var(--bg-secondary); }
+  </style>
+</head>
+<body>
+
+  <!-- ════════════════ HEADER ════════════════ -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="/" class="logo" aria-label="Ремарка">
+        <img src="assets/logo-dark.png" alt="Remarka" id="logo-img">
+      </a>
+
+      <nav class="main-nav" aria-label="Основное меню">
+        <a href="/#services">Услуги</a>
+        <a href="/#industries">Отрасли</a>
+        <a href="/#languages">Языки</a>
+        <a href="/#pricing">Цены</a>
+        <a href="/#about">О нас</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+74959704413" class="header-phone" aria-label="Позвонить">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +7 (495) 970-44-13
+        </a>
+        <a href="https://wa.me/79859704413" class="header-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          WhatsApp
+        </a>
+        <a href="#calc-section" class="btn-primary">
+          Получить расчёт
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 5l7 7-7 7"/>
+          </svg>
+        </a>
+
+        <button class="theme-toggle" type="button" aria-label="Переключить тему">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <button class="mobile-toggle" type="button" aria-label="Открыть меню">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Мобильное меню -->
+  <div class="mobile-drawer" aria-hidden="true">
+    <nav aria-label="Мобильное меню">
+      <a href="/#services">Услуги</a>
+      <a href="/#industries">Отрасли</a>
+      <a href="/#languages">Языки</a>
+      <a href="/#pricing">Цены</a>
+      <a href="/#about">О нас</a>
+    </nav>
+    <div class="drawer-actions">
+      <a href="tel:+74959704413" style="display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:inherit;text-decoration:none;padding:8px 0">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +7 (495) 970-44-13
+      </a>
+      <a href="https://wa.me/79859704413" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;font-size:14px;color:#25D366;text-decoration:none;padding:4px 0 12px">
+        WhatsApp: +7 (985) 970-44-13
+      </a>
+    </div>
+  </div>
+
+  <!-- ════════════════ PAGE HERO ════════════════ -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__breadcrumb">
+        <a href="/">Главная</a>
+        <span>→</span>
+        <span>Политика конфиденциальности</span>
+      </div>
+      <h1 class="page-hero__title">Политика конфиденциальности</h1>
+      <div class="page-hero__meta">
+        <div class="page-hero__updated">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Последнее обновление: 21 мая 2026 года
+        </div>
+        <span class="page-hero__badge">152-ФЗ</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ CONTENT ════════════════ -->
+  <div class="privacy-layout">
+
+    <!-- Main Content -->
+    <main class="privacy-content">
+
+      <!-- Section 1 -->
+      <section class="privacy-section" id="s1">
+        <h2 class="privacy-section__title">
+          <span class="privacy-section__num">1</span>
+          Общие положения
+        </h2>
+
+        <div class="privacy-infobox">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A0F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <p>Настоящая политика разработана в соответствии с требованиями Федерального закона от 27.07.2006 № 152-ФЗ «О персональных данных» и определяет порядок обработки и защиты персональных данных пользователей сайта moscowtrans.ru.</p>
+        </div>
+
+        <p>Оператором персональных данных является <strong>Индивидуальный предприниматель Капина Ольга Борисовна</strong> (далее — «Оператор», «Бюро», «мы»):</p>
+
+        <ul>
+          <li><strong>ИНН:</strong> 233406925261</li>
+          <li><strong>ОГРНИП:</strong> 312236329700014</li>
+          <li><strong>Адрес:</strong> 125009, г. Москва, Глинищевский пер., д. 6, оф. 2</li>
+          <li><strong>Телефон:</strong> +7 (495) 970-44-13</li>
+          <li><strong>E-mail:</strong> alefcom1@gmail.com</li>
+          <li><strong>Сайт:</strong> https://moscowtrans.ru</li>
+        </ul>
+
+        <p>Настоящая Политика конфиденциальности распространяется на все персональные данные, которые Оператор получает от субъектов персональных данных в процессе использования ими сайта, направления запросов, оформления заказов на переводческие услуги или иного взаимодействия с Бюро.</p>
+
+        <p>Используя сайт moscowtrans.ru или направляя нам свои данные, вы подтверждаете, что ознакомились с настоящей Политикой и даёте согласие на обработку персональных данных в порядке и на условиях, указанных в настоящем документе.</p>
+
+        <p>Обработка персональных данных осуществляется с соблюдением принципов и правил, предусмотренных Федеральным законом № 152-ФЗ «О персональных данных», иными применимыми нормативными актами Российской Федерации.</p>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="privacy-section" id="s2">
+        <h2 class="privacy-section__title">
+          <span class="privacy-section__num">2</span>
+          Какие данные мы собираем
+        </h2>
+
+        <p>В зависимости от способа взаимодействия с Бюро мы можем собирать следующие категории персональных данных:</p>
+
+        <table class="privacy-def-table">
+          <thead>
+            <tr>
+              <th>Категория данных</th>
+              <th>Состав</th>
+              <th>Основание сбора</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Контактные данные</strong></td>
+              <td>Фамилия, имя, отчество; номер телефона; адрес электронной почты</td>
+              <td>Форма заявки на сайте, звонок, электронное письмо</td>
+            </tr>
+            <tr>
+              <td><strong>Данные организации</strong></td>
+              <td>Наименование компании, должность контактного лица, ИНН / ОГРН (для B2B-договоров)</td>
+              <td>Форма заявки, заключение договора</td>
+            </tr>
+            <tr>
+              <td><strong>Документы для перевода</strong></td>
+              <td>Файлы и материалы, загружаемые клиентом для оказания переводческих услуг, которые могут содержать персональные данные третьих лиц</td>
+              <td>Загрузка файлов через форму на сайте, электронная почта</td>
+            </tr>
+            <tr>
+              <td><strong>Платёжные данные</strong></td>
+              <td>Реквизиты для выставления счёта (наименование, ИНН, банковские реквизиты для B2B)</td>
+              <td>Заключение договора, выставление счёта</td>
+            </tr>
+            <tr>
+              <td><strong>Технические данные</strong></td>
+              <td>IP-адрес, тип браузера, сведения о посещённых страницах, дата и время посещения (cookie)</td>
+              <td>Автоматически при посещении сайта</td>
+            </tr>
+            <tr>
+              <td><strong>Коммуникации</strong></td>
+              <td>История переписки, записи звонков (при наличии), комментарии к заказу</td>
+              <td>Обращение через форму, мессенджер, телефон</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Мы не собираем специальные категории персональных данных (сведения о расовой принадлежности, состоянии здоровья, политических взглядах и т.п.) целенаправленно. Если такие данные содержатся в документах, переданных на перевод, они обрабатываются исключительно в целях оказания переводческой услуги и не используются в иных целях.</p>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="privacy-section" id="s3">
+        <h2 class="privacy-section__title">
+          <span class="privacy-section__num">3</span>
+          Цели обработки данных
+        </h2>
+
+        <p>Оператор обрабатывает персональные данные в следующих целях:</p>
+
+        <ul>
+          <li><strong>Оказание переводческих услуг</strong> — приём, обработка и выполнение заказов на перевод документов, локализацию и смежные услуги.</li>
+          <li><strong>Коммуникация с клиентом</strong> — уточнение задачи, согласование сроков и стоимости, направление готовых переводов, ответы на запросы.</li>
+          <li><strong>Заключение и исполнение договора</strong> — оформление договора об оказании услуг, выставление счетов, подписание актов.</li>
+          <li><strong>Расчёты и бухгалтерский учёт</strong> — проведение платежей, формирование первичных учётных документов в соответствии с требованиями законодательства РФ.</li>
+          <li><strong>Защита конфиденциальной информации</strong> — соблюдение условий соглашения о неразглашении (NDA) при работе с документами клиента.</li>
+          <li><strong>Улучшение качества услуг</strong> — анализ агрегированных данных об использовании сайта (без идентификации конкретных пользователей) для совершенствования сервиса.</li>
+          <li><strong>Соблюдение требований законодательства</strong> — хранение данных в сроки, установленные налоговым и бухгалтерским законодательством.</li>
+          <li><strong>Маркетинговые коммуникации</strong> — направление информации о новых услугах, акциях и материалах блога (только при наличии явного согласия, с возможностью отписки в любой момент).</li>
+        </ul>
+
+        <p>Правовым основанием обработки персональных данных является: согласие субъекта персональных данных (ст. 6 ч. 1 п. 1 152-ФЗ); исполнение договора (ст. 6 ч. 1 п. 5 152-ФЗ); исполнение обязанностей, предусмотренных законодательством РФ (ст. 6 ч. 1 п. 2 152-ФЗ).</p>
+      </section>
+
+      <!-- Section 4 -->
+      <section class="privacy-section" id="s4">
+        <h2 class="privacy-section__title">
+          <span class="privacy-section__num">4</span>
+          Передача данных третьим лицам
+        </h2>
+
+        <p>Оператор не продаёт, не сдаёт в аренду и не передаёт персональные данные клиентов третьим лицам в коммерческих целях.</p>
+
+        <p>Персональные данные могут быть переданы следующим категориям третьих лиц:</p>
+
+        <ul>
+          <li><strong>Переводчики и редакторы</strong> — физические лица и организации, непосредственно выполняющие переводческие услуги. С каждым исполнителем заключается соглашение о неразглашении (NDA), обязывающее его сохранять конфиденциальность полученных материалов и не использовать их в иных целях.</li>
+          <li><strong>Платёжные сервисы</strong> — в объёме, необходимом для проведения платежей (только при наличии соответствующего основания).</li>
+          <li><strong>Государственные органы</strong> — в случаях, предусмотренных законодательством Российской Федерации (по законному запросу уполномоченных органов).</li>
+        </ul>
+
+        <p>Во всех иных случаях передача персональных данных третьим лицам осуществляется только с <strong>явного письменного согласия субъекта персональных данных</strong>.</p>
+
+        <p>При передаче данных исполнителям Оператор передаёт только тот минимальный объём сведений, который необходим для выполнения конкретного заказа.</p>
+      </section>
+
+      <!-- Section 5 -->
+      <section class="privacy-section" id="s5">
+        <h2 class="privacy-section__title">
+          <span class="privacy-section__num">5</span>
+          Конфиденциальность переводимых документов
+        </h2>
+
+        <div class="privacy-infobox">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A0F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <p>Конфиденциальность передаваемых документов — один из ключевых принципов работы бюро «Ремарка». Мы работаем с договорами, медицинскими документами, финансовой отчётностью и иными материалами, содержащими коммерческую и личную тайну.</p>
+        </div>
+
+        <p>В целях защиты конфиденциальности переводимых материалов Оператор принимает следующие меры:</p>
+
+        <ul>
+          <li>Со всеми переводчиками и редакторами заключается <strong>соглашение о неразглашении (NDA)</strong>, предусматривающее ответственность за разглашение информации клиента.</li>
+          <li>Документы клиентов передаются исполнителям <strong>в минимально необходимом объёме</strong> — только та часть материалов, которая требуется для выполнения конкретного задания.</li>
+          <li>Электронная передача файлов осуществляется по защищённым каналам связи.</li>
+          <li>По запросу клиента возможно заключение отдельного двустороннего соглашения о конфиденциальности в форме клиента.</li>
+          <li>Переведённые документы <strong>не используются в учебных, демонстрационных или иных целях</strong> без явного письменного согласия клиента.</li>
+        </ul>
+      </section>
+
+      <!-- Section 6 -->
+      <section class="privacy-section" id="s6">
+        <h2 class="privacy-section__title">
+          <span class="privacy-section__num">6</span>
+          Сроки хранения данных
+        </h2>
+
+        <p>Персональные данные хранятся в течение сроков, установленных применимым законодательством или необходимых для достижения целей обработки:</p>
+
+        <ul>
+          <li><strong>Данные о заказах и договорная документация</strong> — 5 лет с момента исполнения обязательств (в соответствии с требованиями налогового и бухгалтерского законодательства РФ).</li>
+          <li><strong>Документы, переданные на перевод</strong> — хранятся в течение срока выполнения заказа и 30 дней после его завершения, после чего безвозвратно удаляются с серверов Бюро. По истечении срока хранения документы уничтожаются таким образом, чтобы восстановление было невозможным.</li>
+          <li><strong>Финансовые документы</strong> (счета, акты, платёжные документы) — 5 лет согласно ст. 29 Федерального закона № 402-ФЗ «О бухгалтерском учёте».</li>
+          <li><strong>Данные о коммуникациях</strong> (переписка, запросы) — 3 года с момента последнего взаимодействия.</li>
+          <li><strong>Данные согласия на маркетинговые коммуникации</strong> — до момента отзыва согласия субъектом персональных данных.</li>
+          <li><strong>Cookie-файлы</strong> — сроки указаны в разделе 8 настоящей Политики.</li>
+        </ul>
+
+        <p>По истечении установленных сроков хранения персональные данные уничтожаются или обезличиваются, если иное не предусмотрено законодательством.</p>
+      </section>
+
+      <!-- Section 7 -->
+      <section class="privacy-section" id="s7">
+        <h2 class="privacy-section__title">
+          <span class="privacy-section__num">7</span>
+          Права субъекта персональных данных
+        </h2>
+
+        <p>В соответствии с Федеральным законом № 152-ФЗ вы, как субъект персональных данных, имеете следующие права:</p>
+
+        <ul>
+          <li><strong>Право на получение информации</strong> — узнать, какие ваши персональные данные хранит и обрабатывает Оператор, на каком основании и в каких целях.</li>
+          <li><strong>Право на доступ</strong> — получить копию ваших персональных данных, обрабатываемых Оператором.</li>
+          <li><strong>Право на исправление</strong> — потребовать исправления неточных или неполных персональных данных.</li>
+          <li><strong>Право на удаление</strong> — потребовать удаления ваших персональных данных, если основания для их обработки отпали или вы отзываете согласие (за исключением случаев, когда хранение предусмотрено законодательством).</li>
+          <li><strong>Право на отзыв согласия</strong> — в любой момент отозвать ранее предоставленное согласие на обработку персональных данных. Отзыв согласия не влияет на законность обработки, осуществлённой до его отзыва.</li>
+          <li><strong>Право на ограничение обработки</strong> — потребовать ограничить обработку данных в случаях, предусмотренных законодательством.</li>
+          <li><strong>Право на обжалование</strong> — обратиться с жалобой в уполномоченный орган — Федеральную службу по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор): rkn.gov.ru.</li>
+        </ul>
+
+        <p>Для реализации своих прав вы вправе направить письменный запрос по адресу электронной почты: <a href="mailto:alefcom1@gmail.com" style="color:var(--brand-cyan)">alefcom1@gmail.com</a> или по почтовому адресу Оператора.</p>
+
+        <p>Оператор обязан рассмотреть запрос и направить ответ в течение <strong>30 дней</strong> с момента его получения. Срок может быть продлён до 60 дней при наличии объективных причин.</p>
+      </section>
+
+      <!-- Section 8 -->
+      <section class="privacy-section" id="s8">
+        <h2 class="privacy-section__title">
+          <span class="privacy-section__num">8</span>
+          Файлы cookie
+        </h2>
+
+        <p>Сайт moscowtrans.ru использует файлы cookie — небольшие текстовые файлы, которые сохраняются в браузере при посещении сайта. Cookie помогают нам обеспечить корректную работу сайта и улучшить пользовательский опыт.</p>
+
+        <p>Мы используем следующие типы cookie:</p>
+
+        <ul>
+          <li><strong>Необходимые (технические) cookie</strong> — обеспечивают базовый функционал сайта (сохранение выбранной темы оформления, работу форм). Без них сайт не может работать корректно. Срок хранения: до закрытия браузера или до 1 года.</li>
+          <li><strong>Аналитические cookie</strong> — позволяют собирать обезличенные данные о посещаемости и поведении пользователей на сайте (Яндекс.Метрика). Срок хранения: до 1 года. Данные передаются только в обезличенном виде.</li>
+          <li><strong>Маркетинговые cookie</strong> — используются для показа рекламы и ретаргетинга (только при наличии согласия). Срок хранения: до 1 года.</li>
+        </ul>
+
+        <p>Вы можете настроить или отключить cookie через настройки вашего браузера. Обратите внимание, что отключение необходимых cookie может повлиять на корректность работы отдельных функций сайта.</p>
+
+        <p>Продолжая использовать сайт, вы соглашаетесь на использование cookie в объёме, предусмотренном настоящей Политикой.</p>
+      </section>
+
+      <!-- Section 9 -->
+      <section class="privacy-section" id="s9">
+        <h2 class="privacy-section__title">
+          <span class="privacy-section__num">9</span>
+          Контакты
+        </h2>
+
+        <p>По всем вопросам, связанным с обработкой персональных данных, вы можете обратиться к Оператору:</p>
+
+        <div class="privacy-contacts">
+          <div class="privacy-contact-item">
+            <div class="privacy-contact-item__label">Оператор</div>
+            <div class="privacy-contact-item__value">ИП Капина Ольга Борисовна</div>
+          </div>
+          <div class="privacy-contact-item">
+            <div class="privacy-contact-item__label">ИНН / ОГРНИП</div>
+            <div class="privacy-contact-item__value">233406925261 / 312236329700014</div>
+          </div>
+          <div class="privacy-contact-item">
+            <div class="privacy-contact-item__label">Адрес</div>
+            <div class="privacy-contact-item__value">125009, Москва, Глинищевский пер., д. 6, оф. 2</div>
+          </div>
+          <div class="privacy-contact-item">
+            <div class="privacy-contact-item__label">E-mail</div>
+            <div class="privacy-contact-item__value">
+              <a href="mailto:alefcom1@gmail.com">alefcom1@gmail.com</a>
+            </div>
+          </div>
+          <div class="privacy-contact-item">
+            <div class="privacy-contact-item__label">Телефон</div>
+            <div class="privacy-contact-item__value">
+              <a href="tel:+74959704413">+7 (495) 970-44-13</a>
+            </div>
+          </div>
+          <div class="privacy-contact-item">
+            <div class="privacy-contact-item__label">WhatsApp</div>
+            <div class="privacy-contact-item__value">
+              <a href="https://wa.me/79859704413">+7 (985) 970-44-13</a>
+            </div>
+          </div>
+        </div>
+
+        <p style="margin-top:20px">Роскомнадзор (уполномоченный орган по защите прав субъектов персональных данных): <a href="https://rkn.gov.ru" target="_blank" rel="noopener" style="color:var(--brand-cyan)">rkn.gov.ru</a></p>
+      </section>
+
+      <!-- Section 10 -->
+      <section class="privacy-section" id="s10">
+        <h2 class="privacy-section__title">
+          <span class="privacy-section__num">10</span>
+          Изменения в политике конфиденциальности
+        </h2>
+
+        <p>Оператор оставляет за собой право в любое время изменять настоящую Политику конфиденциальности без предварительного уведомления субъектов персональных данных.</p>
+
+        <p>Новая редакция Политики вступает в силу с момента её опубликования на сайте moscowtrans.ru, если иное не предусмотрено новой редакцией Политики.</p>
+
+        <p>Существенные изменения, затрагивающие основные принципы обработки данных, могут быть дополнительно доведены до сведения клиентов по электронной почте, если такая информация имеется у Оператора.</p>
+
+        <p>Дата последнего обновления настоящей Политики указана в верхней части страницы. Рекомендуем периодически обращаться к данной странице для ознакомления с актуальной редакцией.</p>
+
+        <p style="color:var(--text-muted);font-size:13px;border-top:1px solid var(--border-subtle);padding-top:16px;margin-top:24px">
+          Настоящая Политика конфиденциальности составлена в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных», Постановлением Правительства РФ от 01.11.2012 № 1119 «Об утверждении требований к защите персональных данных при их обработке в информационных системах персональных данных» и иными применимыми нормативными актами.
+        </p>
+      </section>
+
+    </main>
+
+    <!-- Table of Contents -->
+    <aside class="privacy-toc" aria-label="Содержание">
+      <div class="privacy-toc__title">Содержание</div>
+      <ol>
+        <li><a href="#s1">Общие положения</a></li>
+        <li><a href="#s2">Какие данные мы собираем</a></li>
+        <li><a href="#s3">Цели обработки данных</a></li>
+        <li><a href="#s4">Передача данных третьим лицам</a></li>
+        <li><a href="#s5">Конфиденциальность документов</a></li>
+        <li><a href="#s6">Сроки хранения данных</a></li>
+        <li><a href="#s7">Права субъекта данных</a></li>
+        <li><a href="#s8">Файлы cookie</a></li>
+        <li><a href="#s9">Контакты</a></li>
+        <li><a href="#s10">Изменения в политике</a></li>
+      </ol>
+    </aside>
+
+  </div><!-- /privacy-layout -->
+
+  <!-- ════════════════ FOOTER ════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid footer-grid--5col">
+
+        <div class="footer-brand">
+          <img src="assets/logo-light.png" alt="Remarka" id="footer-logo">
+          <p>
+            Профессиональные переводы и локализация для бизнеса.
+            Работаем удалённо с клиентами по всей России и за её пределами.
+          </p>
+          <address class="footer-address">
+            <div class="fa-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              <span>125009, Москва,<br>Глинищевский пер., д.&nbsp;6, оф.&nbsp;2</span>
+            </div>
+            <div class="fa-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+74959704413">+7 (495) 970-44-13</a>
+            </div>
+            <div class="fa-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+              <a href="https://wa.me/79859704413" target="_blank" rel="noopener">WhatsApp: +7 (985) 970-44-13</a>
+            </div>
+          </address>
+        </div>
+
+        <div class="footer-col">
+          <h4>Услуги</h4>
+          <ul>
+            <li><a href="/tekhnicheskiy-perevod/">Технический перевод</a></li>
+            <li><a href="/yuridicheskiy-perevod/">Юридический перевод</a></li>
+            <li><a href="/meditsinskiy-perevod/">Медицинский перевод</a></li>
+            <li><a href="/it-perevod/">IT-перевод</a></li>
+            <li><a href="/lokalizatsiya-po/">Локализация ПО</a></li>
+            <li><a href="/perevod-saytov/">Перевод сайтов</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Решения</h4>
+          <ul>
+            <li><a href="#calc-section">По отраслям</a></li>
+            <li><a href="#calc-section">Корпоративным клиентам</a></li>
+            <li><a href="/yazyki-perevoda/">Языки</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Компания</h4>
+          <ul>
+            <li><a href="/#about">О нас</a></li>
+            <li><a href="/keisy/">Кейсы</a></li>
+            <li><a href="/stoimost-perevoda/">Цены</a></li>
+            <li><a href="/blog/">Блог</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Правовые документы</h4>
+          <ul>
+            <li><a href="/politika-konfidenczialnosti/" style="color:var(--brand-cyan)">Политика конфиденциальности</a></li>
+            <li><a href="/sitemap.xml">Карта сайта</a></li>
+          </ul>
+          <a href="#" onclick="window.history.back();return false" class="btn-primary" style="margin-top:8px">
+            Вернуться назад
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2001–2026 Бюро переводов «Ремарка» · ИП Капина О.Б. · ИНН&nbsp;233406925261 · ОГРНИП&nbsp;312236329700014</p>
+        <nav class="footer-legal" aria-label="Юридические ссылки">
+          <a href="/politika-konfidenczialnosti/">Политика конфиденциальности</a>
+          <a href="/sitemap.xml">Карта сайта</a>
+        </nav>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function updateLogos() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const src = isDark ? 'assets/logo-dark.png' : 'assets/logo-light.png';
+      document.querySelectorAll('#logo-img, #footer-logo').forEach(img => img.src = src);
+    }
+    updateLogos();
+    new MutationObserver(updateLogos).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  </script>
+
+</body>
+</html>
