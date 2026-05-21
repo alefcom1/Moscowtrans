@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Перевод сайтов в Москве — SEO-локализация, CMS, интернет-магазины | Ремарка</title>
+  <meta name="description" content="Перевод сайтов с SEO-адаптацией в Москве: WordPress, Shopify, Tilda, 1C-Битрикс, интернет-магазины. Meta-теги, hreflang, адаптация контента. 60+ языков.">
+  <link rel="canonical" href="https://moscowtrans.ru/perevod-saytov/">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/calc-widget.css">
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://moscowtrans.ru/" },
+        { "@type": "ListItem", "position": 2, "name": "Перевод сайтов в Москве", "item": "https://moscowtrans.ru/perevod-saytov/" }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Перевод сайтов в Москве",
+      "provider": { "@type": "LocalBusiness", "@id": "https://moscowtrans.ru/#organization", "name": "Бюро переводов Ремарка" },
+      "areaServed": { "@type": "City", "name": "Москва" },
+      "description": "Перевод сайтов с SEO-адаптацией: WordPress, Shopify, Tilda, 1C-Битрикс, интернет-магазины. Meta-теги, hreflang, адаптация контента. 60+ языков.",
+      "offers": { "@type": "Offer", "priceCurrency": "RUB", "price": "400", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "400", "priceCurrency": "RUB", "unitText": "стр." } }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Вы настраиваете hreflang для переведённых страниц?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Да, предоставляем готовый код hreflang-тегов для каждой языковой версии страницы. Даём рекомендации по URL-структуре (поддомены, подпапки или параметры) с учётом требований Google и Яндекса." }
+        },
+        {
+          "@type": "Question",
+          "name": "Вы можете работать напрямую в CMS — WordPress, Tilda, Shopify?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Да, при наличии доступа работаем напрямую в CMS. Для WordPress интегрируемся с WPML, Polylang или вносим контент вручную. Для Tilda, Shopify, Bitrix — через редактор или экспорт/импорт контента." }
+        },
+        {
+          "@type": "Question",
+          "name": "Что делать с изображениями, на которых есть текст?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Выявляем все изображения с встроенным текстом, переводим надписи и передаём вам список для замены. Если у вас есть исходники (PSD, Figma, AI) — можем передать их дизайнеру или указать, что именно менять." }
+        },
+        {
+          "@type": "Question",
+          "name": "Как переводить динамический контент — отзывы, каталог, блог?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Для статического и часто обновляемого контента предлагаем разные стратегии: разовый перевод существующих страниц + договорённость на регулярные обновления, или постоянное сопровождение с фиксированным объёмом слов в месяц." }
+        }
+      ]
+    }
+  ]
+  </script>
+  <!-- Калькулятор: SDK-зависимости -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mammoth@1.6.0/mammoth.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/franc-min@6.2.0/index.min.js"></script>
+</head>
+<body>
+
+  <!-- ════════════════ HEADER ════════════════ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="Ремарка">
+        <img src="assets/logo-dark.png" alt="Remarka" id="logo-img">
+      </a>
+      <nav class="main-nav" aria-label="Основное меню">
+        <a href="/#services">Услуги</a>
+        <a href="/#industries">Отрасли</a>
+        <a href="/#languages">Языки</a>
+        <a href="/#pricing">Цены</a>
+        <a href="/#about">О нас</a>
+      </nav>
+      <div class="header-actions">
+        <a href="tel:+74959704413" class="header-phone">+7 (495) 970-44-13</a>
+        <a href="https://wa.me/79859704413" class="header-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        </a>
+        <a href="#login" class="btn-link">Войти</a>
+        <a href="#calc-section" class="btn-primary">
+          Получить расчёт
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <div class="lang-switcher">
+          <button type="button" class="lang-switcher-btn" aria-haspopup="true" aria-expanded="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span>RU</span>
+            <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="lang-dropdown" role="menu">
+            <a href="#" class="is-active" role="menuitem">🇷🇺 Русский</a>
+            <a href="https://1russian.com" role="menuitem">🇬🇧 English</a>
+            <a href="https://traduzione.tech" role="menuitem">🇮🇹 Italiano</a>
+          </div>
+        </div>
+        <button class="theme-toggle" type="button" aria-label="Переключить тему">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="mobile-toggle" type="button" aria-label="Открыть меню">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-drawer" aria-hidden="true">
+    <nav aria-label="Мобильное меню">
+      <a href="/#services">Услуги</a><a href="/#industries">Отрасли</a>
+      <a href="/#languages">Языки</a><a href="/#pricing">Цены</a><a href="/#about">О нас</a>
+    </nav>
+    <div class="drawer-actions">
+      <a href="tel:+74959704413" class="btn-link">+7 (495) 970-44-13</a>
+      <a href="#login" class="btn-link">Войти</a>
+      <a href="#calc-section" class="btn-primary">Получить расчёт <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+
+  <!-- ════════ HERO ════════ -->
+  <div class="hero-bg-block">
+  <div class="hero-page">
+
+    <aside class="chat-sidebar">
+      <button class="sb-item sb-active" title="Чат">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span>Чат</span>
+      </button>
+      <button class="sb-item" title="Загрузить файл">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
+        <span>Загрузить файл</span>
+      </button>
+      <button class="sb-item" title="Калькулятор стоимости">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
+        <span>Калькулятор стоимости</span>
+      </button>
+      <button class="sb-item" title="История заказов">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        <span>История заказов</span>
+      </button>
+      <button class="sb-item" title="Конфиденциальность">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Конфиден-циальность</span>
+      </button>
+    </aside>
+
+    <div class="hero-main">
+      <div class="chat-window">
+        <div class="cw-top-bar">
+          <nav class="cw-breadcrumbs" aria-label="Хлебные крошки">
+            <a href="/">Главная</a>
+            <span class="cw-bc-sep" aria-hidden="true">›</span>
+            <span class="cw-bc-current" aria-current="page">Перевод сайтов</span>
+          </nav>
+          <button class="cw-close" aria-label="Закрыть"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+        </div>
+
+        <div class="cw-body">
+          <!-- Панель Ольги -->
+          <div class="cw-agent-panel">
+            <div class="agent-avatar-wrap">
+              <div class="agent-avatar"><img src="assets/olga.jpg" alt="Ольга"></div>
+              <div class="agent-online-dot"></div>
+            </div>
+            <div class="agent-name">Ольга</div>
+            <div class="agent-role">Менеджер<br>бюро переводов</div>
+            <div class="agent-langs">
+              <button class="lang-flag lang-flag--active" data-lang="ru-RU" title="Русский">🇷🇺</button>
+              <button class="lang-flag" data-lang="en-US" title="English">🇬🇧</button>
+              <button class="lang-flag" data-lang="it-IT" title="Italiano">🇮🇹</button>
+            </div>
+            <hr class="agent-sep">
+            <ul class="agent-stats">
+              <li><span class="asl">Ответ</span><span class="asv">~1 мин</span></li>
+              <li><span class="asl">Рейтинг</span><span class="asv">4.98 ★</span></li>
+              <li><span class="asl">Заказов</span><span class="asv">2 400+</span></li>
+              <li><span class="asl">Языков</span><span class="asv">60+</span></li>
+            </ul>
+            <hr class="agent-sep">
+            <svg class="waveform-svg" id="waveformSvg" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="wg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#00A0F0" stop-opacity="0.6"/><stop offset="50%" stop-color="#783CF0"/><stop offset="100%" stop-color="#00A0F0" stop-opacity="0.6"/></linearGradient></defs>
+              <path class="wp wp1" stroke="url(#wg)" stroke-width="2.5" fill="none" d="M0,60 C18,35 36,85 54,60 C72,35 90,15 108,60 C126,105 144,25 162,60 C180,95 200,40 220,60"/>
+              <path class="wp wp2" stroke="url(#wg)" stroke-width="1.5" fill="none" opacity="0.45" d="M0,60 C20,45 40,75 60,60 C80,45 100,28 120,60 C140,92 160,32 180,60 C200,88 210,48 220,60"/>
+              <path class="wp wp3" stroke="url(#wg)" stroke-width="1" fill="none" opacity="0.25" d="M0,60 C15,50 30,70 45,60 C60,50 75,38 90,60 C105,82 120,42 135,60 C150,78 165,50 180,60 C195,70 208,54 220,60"/>
+            </svg>
+            <button class="cw-mic-btn" id="cwMicBtn" aria-label="Голосовой ввод">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+              <span class="mic-tooltip">Голосовой ввод</span>
+            </button>
+          </div>
+
+          <!-- Сообщения -->
+          <div class="cw-right-col">
+            <div class="cw-msgs-col">
+              <div class="cw-msgs">
+                <div class="msg-bub" data-greeting="1">
+                  <p>Здравствуйте! 👋 Хотите перевести сайт для выхода на зарубежный рынок или добавить языковую версию?</p>
+                  <span class="msg-ts">10:30</span>
+                </div>
+                <div class="msg-bub" data-greeting="2">
+                  <p>Переводим сайты с SEO-адаптацией: meta-теги, hreflang, ключевые слова под целевой рынок — не просто слова, а позиции в поиске.</p>
+                  <span class="msg-ts">10:30</span>
+                </div>
+                <div class="msg-bub" data-greeting="3">
+                  <p>Пришлите ссылку на сайт или выгрузку контента — рассчитаю стоимость и скажу, какая CMS у вас и как лучше организовать работу.</p>
+                  <span class="msg-ts">10:30</span>
+                </div>
+              </div>
+            </div>
+            <div class="cw-input-bar">
+              <input class="cw-input" type="text" placeholder="Вставьте ссылку на сайт или опишите задачу..." id="cwInput">
+              <div class="cw-btns">
+                <button class="cw-btn-icon" title="Прикрепить файл">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                </button>
+                <button class="cw-btn-icon cw-btn-voice" id="cwVoiceBtn" title="Голосовой ввод">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+                </button>
+                <button class="cw-btn-send" title="Отправить">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /hero-page -->
+  </div><!-- /hero-bg-block -->
+
+  <!-- ════════ INTRO ════════ -->
+  <section class="sec sec-intro">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-text">
+          <p class="intro-label">Бюро переводов «Ремарка», Москва</p>
+          <h1 class="intro-title">Перевод сайтов в Москве</h1>
+          <p class="intro-tagline">Перевод сайта — это не конвертация слов, а выход на рынок</p>
+          <p class="intro-body">Перевод сайта отличается от перевода документа тем, что результат должен работать в поиске. «Дословный» перевод title и description — это путь к нулевым позициям на зарубежном рынке. Нужны ключевые слова, которые реально ищет аудитория в Германии, Китае или США, — и они отличаются от прямого перевода русских запросов.</p>
+          <p class="intro-body">Перевод сайтов в московском бюро «Ремарка» включает: SEO-адаптацию мета-тегов и заголовков, корректную структуру hreflang, культурную адаптацию контента (тон, примеры, единицы измерения), перевод пользовательских соглашений и политики конфиденциальности под требования целевой юрисдикции.</p>
+          <p class="intro-body">Работаем с WordPress, Tilda, Shopify, OpenCart, 1C-Битрикс и кастомными HTML-сайтами. При наличии доступа вносим переводы напрямую в CMS — вам не нужно разбираться в файлах локализации.</p>
+        </div>
+        <div class="intro-visual">
+          <div class="intro-illus" aria-hidden="true">
+            <svg viewBox="0 0 480 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="20" width="200" height="168" rx="12" fill="rgba(120,60,240,.10)" stroke="rgba(120,60,240,.35)" stroke-width="1.5"/>
+              <rect x="10" y="20" width="200" height="38" rx="12" fill="rgba(120,60,240,.20)"/>
+              <rect x="10" y="43" width="200" height="15" fill="rgba(120,60,240,.20)"/>
+              <circle cx="30" cy="36" r="6" fill="rgba(255,100,100,.5)"/>
+              <circle cx="46" cy="36" r="6" fill="rgba(255,200,0,.5)"/>
+              <circle cx="62" cy="36" r="6" fill="rgba(0,200,100,.5)"/>
+              <rect x="80" y="31" width="120" height="10" rx="5" fill="rgba(255,255,255,.25)"/>
+              <rect x="24" y="72" width="168" height="7" rx="3.5" fill="rgba(167,139,250,.55)"/>
+              <rect x="24" y="86" width="130" height="5" rx="2.5" fill="rgba(167,139,250,.30)"/>
+              <rect x="24" y="100" width="150" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
+              <rect x="24" y="114" width="110" height="5" rx="2.5" fill="rgba(167,139,250,.27)"/>
+              <rect x="24" y="130" width="168" height="28" rx="8" fill="rgba(120,60,240,.30)"/>
+              <rect x="40" y="139" width="80" height="10" rx="5" fill="rgba(255,255,255,.5)"/>
+              <rect x="24" y="164" width="80" height="16" rx="6" fill="rgba(0,160,240,.40)"/>
+              <rect x="112" y="164" width="80" height="16" rx="6" fill="rgba(167,139,250,.30)"/>
+              <circle cx="270" cy="104" r="42" fill="rgba(0,160,240,.12)" stroke="rgba(0,160,240,.30)" stroke-width="1.5"/>
+              <circle cx="270" cy="104" r="26" fill="rgba(0,160,240,.18)"/>
+              <path d="M212 104h26M296 104h42" stroke="rgba(0,160,240,.40)" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <path d="M255 104h30M273 96l10 8-10 8" stroke="rgba(0,160,240,.95)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="340" y="20" width="130" height="168" rx="12" fill="rgba(0,160,240,.10)" stroke="rgba(0,160,240,.35)" stroke-width="1.5"/>
+              <rect x="340" y="20" width="130" height="38" rx="12" fill="rgba(0,160,240,.20)"/>
+              <rect x="340" y="43" width="130" height="15" fill="rgba(0,160,240,.20)"/>
+              <circle cx="358" cy="36" r="6" fill="rgba(255,100,100,.5)"/>
+              <circle cx="374" cy="36" r="6" fill="rgba(255,200,0,.5)"/>
+              <circle cx="390" cy="36" r="6" fill="rgba(0,200,100,.5)"/>
+              <rect x="354" y="72" width="102" height="7" rx="3.5" fill="rgba(0,160,240,.55)"/>
+              <rect x="354" y="86" width="80" height="5" rx="2.5" fill="rgba(0,160,240,.30)"/>
+              <rect x="354" y="100" width="95" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
+              <rect x="354" y="114" width="70" height="5" rx="2.5" fill="rgba(0,160,240,.27)"/>
+              <rect x="354" y="130" width="102" height="28" rx="8" fill="rgba(0,160,240,.30)"/>
+              <rect x="368" y="139" width="60" height="10" rx="5" fill="rgba(255,255,255,.5)"/>
+            </svg>
+          </div>
+          <div class="intro-features">
+            <div class="intro-feat">
+              <div class="intro-feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+              <div><strong>SEO-адаптация</strong><span>Title, description, H1-H6, alt-атрибуты, ключевые слова целевого рынка</span></div>
+            </div>
+            <div class="intro-feat">
+              <div class="intro-feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+              <div><strong>hreflang</strong><span>Готовый код тегов и рекомендации по URL-структуре</span></div>
+            </div>
+            <div class="intro-feat">
+              <div class="intro-feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+              <div><strong>CMS-интеграция</strong><span>WordPress, Tilda, Shopify, Bitrix, OpenCart, custom HTML</span></div>
+            </div>
+            <div class="intro-feat">
+              <div class="intro-feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+              <div><strong>Культурная адаптация</strong><span>Тон, образы, примеры, валюты, форматы дат под целевую аудиторию</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-stats">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-item"><span class="stat-num">25<span class="stat-suffix">+</span></span><span class="stat-label">лет на рынке</span></div>
+        <div class="stat-item"><span class="stat-num">60<span class="stat-suffix">+</span></span><span class="stat-label">языков перевода</span></div>
+        <div class="stat-item"><span class="stat-num">2 400<span class="stat-suffix">+</span></span><span class="stat-label">выполненных заказов</span></div>
+        <div class="stat-item"><span class="stat-num">4.98<span class="stat-suffix">★</span></span><span class="stat-label">средний рейтинг</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ ЧТО МЫ ПЕРЕВОДИМ ════════ -->
+  <section class="sec sec--alt sec-docs">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Какие сайты мы переводим</h2>
+        <p class="sec-sub">Раскройте нужную категорию — узнайте особенности перевода</p>
+      </div>
+      <div class="docs-accordion">
+
+        <details class="doc-item" open>
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <span>Лендинги и корпоративные сайты</span>
+          </summary>
+          <div class="doc-body">
+            <p>Главная страница, раздел «О компании», страницы услуг, контакты — с SEO-адаптацией заголовков и мета-тегов под целевой рынок</p>
+          </div>
+        </details>
+
+        <details class="doc-item">
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <span>Интернет-магазины и e-commerce</span>
+          </summary>
+          <div class="doc-body">
+            <p>Карточки товаров, категории, фильтры, корзина, checkout, email-уведомления, политика возврата — с учётом локального законодательства</p>
+          </div>
+        </details>
+
+        <details class="doc-item">
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            <span>Блоги и контентные сайты</span>
+          </summary>
+          <div class="doc-body">
+            <p>Статьи, гайды, кейсы — перевод с сохранением SEO-ценности: внутренние ссылки, анкоры, структура заголовков</p>
+          </div>
+        </details>
+
+        <details class="doc-item">
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span>Help-центры и базы знаний</span>
+          </summary>
+          <div class="doc-body">
+            <p>Zendesk, Intercom, Freshdesk, Confluence — статьи поддержки, FAQ, руководства пользователя</p>
+          </div>
+        </details>
+
+        <details class="doc-item">
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span>SaaS-продукты и маркетинговые страницы</span>
+          </summary>
+          <div class="doc-body">
+            <p>Pricing-страницы, функциональные описания, отзывы клиентов, интеграционные страницы — с учётом отраслевой терминологии</p>
+          </div>
+        </details>
+
+        <details class="doc-item">
+          <summary class="doc-summary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span>Юридические страницы</span>
+          </summary>
+          <div class="doc-body">
+            <p>Политика конфиденциальности, пользовательское соглашение, Cookie Policy, GDPR-уведомления, условия доставки и оплаты</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ ПОДДЕРЖИВАЕМЫЕ CMS ════════ -->
+  <section class="sec sec-translators">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Поддерживаемые CMS</h2>
+        <p class="sec-sub">Работаем с основными системами управления контентом</p>
+      </div>
+      <div class="translators-grid">
+        <div class="translator-card">
+          <div class="translator-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>WordPress</h3>
+          <p>WPML, Polylang, TranslatePress. Переводим через плагин или передаём готовый контент для ручного внесения.</p>
+        </div>
+        <div class="translator-card">
+          <div class="translator-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+          </div>
+          <h3>Tilda</h3>
+          <p>Экспорт текстов через Zero Block или ручная редактура — предоставляем готовые тексты для вставки.</p>
+        </div>
+        <div class="translator-card">
+          <div class="translator-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          </div>
+          <h3>Shopify</h3>
+          <p>Работаем с Shopify Translate & Adapt или через CSV-экспорт товаров и страниц.</p>
+        </div>
+        <div class="translator-card">
+          <div class="translator-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>OpenCart</h3>
+          <p>Языковые файлы PHP, переводы товаров и категорий через CSV или напрямую в административной панели.</p>
+        </div>
+        <div class="translator-card">
+          <div class="translator-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>1C-Битрикс</h3>
+          <p>Мультиязычные сайты на Битриксе — через встроенные языковые версии или экспорт контента.</p>
+        </div>
+        <div class="translator-card">
+          <div class="translator-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Custom HTML / React / Next.js</h3>
+          <p>Кастомные сайты — принимаем HTML-файлы, JSON для i18n, или работаем с выгрузкой текстов в Excel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ ПРОЦЕСС РАБОТЫ ════════ -->
+  <section class="sec sec--alt sec-how-pro">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Как проходит перевод сайта</h2>
+        <p class="sec-sub">Шесть шагов от аудита сайта до готовой языковой версии с настроенным SEO</p>
+      </div>
+      <div class="steps-row steps-row--6">
+        <div class="step-item">
+          <div class="step-num">01</div>
+          <h3>Аудит сайта</h3>
+          <p>Анализируем структуру, определяем объём контента, CMS, наличие мета-тегов и технические особенности</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">02</div>
+          <h3>Извлечение контента</h3>
+          <p>Выгружаем тексты через CMS, экспорт или парсинг — сохраняем структуру страниц и форматирование</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">03</div>
+          <h3>SEO-анализ</h3>
+          <p>Подбираем ключевые слова для целевого рынка: семантика отличается от прямого перевода русских запросов</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">04</div>
+          <h3>Перевод с SEO</h3>
+          <p>Переводим тексты, адаптируем title, description, H1-H6 и alt-атрибуты под целевые ключевые слова</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">05</div>
+          <h3>hreflang и URL</h3>
+          <p>Готовим код hreflang-тегов, рекомендации по URL-структуре и sitemap для языковой версии</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">06</div>
+          <h3>QA и внедрение</h3>
+          <p>Проверяем текст в контексте страниц, при необходимости вносим в CMS самостоятельно</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ SEO-ПРЕИМУЩЕСТВА ════════ -->
+  <section class="sec sec-split">
+    <div class="container">
+      <div class="split-row split-row--rev">
+        <div class="split-text">
+          <p class="sec-label">SEO-локализация сайтов</p>
+          <h2>Перевод, который работает в поиске</h2>
+          <p>Перевести сайт дословно — значит получить версию, которую не найдут в Google или Bing. Аудитория в Германии ищет иначе, чем в России. Мы исследуем реальные поисковые запросы целевого рынка и встраиваем их в тексты, заголовки и мета-теги.</p>
+          <p>hreflang — сигнал для Google о том, какая версия страницы предназначена для какой аудитории. Без него поисковик может показывать русскую версию немецким пользователям. Мы предоставляем готовый код тегов для вставки в &lt;head&gt;.</p>
+          <ul class="split-checklist">
+            <li>Локализованные title и meta description с целевыми ключевыми словами</li>
+            <li>Готовый код hreflang для всех языковых версий</li>
+            <li>Рекомендации по URL-структуре (поддомены vs. подпапки)</li>
+            <li>Адаптация alt-атрибутов изображений</li>
+            <li>Выявление изображений с встроенным текстом</li>
+            <li>Перевод и адаптация Schema.org-разметки</li>
+          </ul>
+        </div>
+        <div class="split-visual" aria-hidden="true">
+          <svg viewBox="0 0 380 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="sq-g1-s" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#783CF0"/><stop offset="100%" stop-color="#00A0F0"/></linearGradient>
+              <linearGradient id="sq-g2-s" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#783CF0" stop-opacity=".5"/><stop offset="100%" stop-color="#00A0F0" stop-opacity=".5"/></linearGradient>
+            </defs>
+            <circle cx="190" cy="160" r="130" fill="rgba(120,60,240,.07)"/>
+            <rect x="40" y="20" width="300" height="52" rx="14" fill="rgba(120,60,240,.12)" stroke="rgba(120,60,240,.30)" stroke-width="1.5"/>
+            <circle cx="72" cy="46" r="18" fill="url(#sq-g1-s)" opacity=".85"/>
+            <path d="M62 46c0-5.52 4.48-10 10-10s10 4.48 10 10" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="62" y1="46" x2="62" y2="56" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="82" y1="46" x2="82" y2="56" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+            <rect x="100" y="33" width="180" height="9" rx="4" fill="rgba(167,139,250,.55)"/>
+            <rect x="100" y="48" width="130" height="7" rx="3" fill="rgba(167,139,250,.30)"/>
+            <line x1="190" y1="72" x2="190" y2="96" stroke="url(#sq-g2-s)" stroke-width="2" stroke-dasharray="4 3"/>
+            <rect x="40" y="96" width="300" height="52" rx="14" fill="rgba(0,160,240,.12)" stroke="rgba(0,160,240,.30)" stroke-width="1.5"/>
+            <circle cx="72" cy="122" r="18" fill="url(#sq-g1-s)" opacity=".85"/>
+            <circle cx="72" cy="122" r="9" stroke="#fff" stroke-width="1.8" fill="none"/>
+            <line x1="79" y1="129" x2="86" y2="136" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            <rect x="100" y="109" width="200" height="9" rx="4" fill="rgba(0,160,240,.55)"/>
+            <rect x="100" y="124" width="150" height="7" rx="3" fill="rgba(0,160,240,.30)"/>
+            <line x1="190" y1="148" x2="190" y2="172" stroke="url(#sq-g2-s)" stroke-width="2" stroke-dasharray="4 3"/>
+            <rect x="40" y="172" width="300" height="52" rx="14" fill="rgba(120,60,240,.12)" stroke="rgba(120,60,240,.30)" stroke-width="1.5"/>
+            <circle cx="72" cy="198" r="18" fill="url(#sq-g1-s)" opacity=".85"/>
+            <path d="M64 198l8 8 14-14" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="100" y="185" width="220" height="9" rx="4" fill="rgba(167,139,250,.55)"/>
+            <rect x="100" y="200" width="170" height="7" rx="3" fill="rgba(167,139,250,.30)"/>
+            <line x1="190" y1="224" x2="190" y2="248" stroke="url(#sq-g2-s)" stroke-width="2" stroke-dasharray="4 3"/>
+            <circle cx="310" cy="270" r="28" fill="rgba(0,200,100,.12)" stroke="rgba(0,200,100,.35)" stroke-width="1.5"/>
+            <path d="M299 270l9 9 16-18" stroke="rgba(0,200,100,.9)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ ГАРАНТИИ КАЧЕСТВА ════════ -->
+  <section class="sec sec-guarantees">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Наши гарантии</h2>
+        <p class="sec-sub">Мы отвечаем за результат — не только словами</p>
+      </div>
+      <div class="guarantees-grid">
+        <div class="guarantee-card">
+          <div class="guarantee-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.9"/></svg>
+          </div>
+          <h3>Бесплатная правка</h3>
+          <p>Исправим бесплатно в течение 7 дней, если перевод не соответствует заданию или содержит неточности</p>
+        </div>
+        <div class="guarantee-card">
+          <div class="guarantee-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3>Конфиденциальность</h3>
+          <p>NDA по запросу. Доступ к CMS и контент сайта не передаются третьим лицам и не хранятся на внешних серверах</p>
+        </div>
+        <div class="guarantee-card">
+          <div class="guarantee-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Соблюдение сроков</h3>
+          <p>Если не уложились в оговорённый срок по нашей вине — возвращаем предоплату или делаем скидку на следующий заказ</p>
+        </div>
+        <div class="guarantee-card">
+          <div class="guarantee-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Translation Memory</h3>
+          <p>Сохраняем переводы вашего сайта — при обновлении контента платите только за новые и изменённые тексты</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ СРОКИ И СТОИМОСТЬ ════════ -->
+  <section class="sec sec--alt sec-vol-pricing">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Сроки и стоимость</h2>
+        <p class="sec-sub">Оплата по страницам, по словам или фиксированная цена на весь сайт. Точный расчёт — бесплатно</p>
+      </div>
+      <div class="vol-table-wrap">
+        <table class="vol-table">
+          <thead>
+            <tr>
+              <th>Объём</th>
+              <th>Срок</th>
+              <th>Стоимость</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>До 10 страниц (лендинг)</strong></td>
+              <td>2–3 рабочих дня</td>
+              <td class="vol-price">от 400 ₽/стр.</td>
+              <td><a href="#calc-section" class="vol-btn">Заказать</a></td>
+            </tr>
+            <tr>
+              <td><strong>10–50 страниц (сайт)</strong></td>
+              <td>4–7 рабочих дней</td>
+              <td class="vol-price">от 3 ₽/слово</td>
+              <td><a href="#calc-section" class="vol-btn">Заказать</a></td>
+            </tr>
+            <tr>
+              <td><strong>50–200 страниц (интернет-магазин)</strong></td>
+              <td>7–14 рабочих дней</td>
+              <td class="vol-price">от 2,8 ₽/слово</td>
+              <td><a href="#calc-section" class="vol-btn">Заказать</a></td>
+            </tr>
+            <tr>
+              <td><strong>Весь сайт (пакет)</strong></td>
+              <td>по договорённости</td>
+              <td class="vol-price">индивидуально</td>
+              <td><a href="#calc-section" class="vol-btn">Заказать</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="vol-note">SEO-адаптация мета-тегов и рекомендации по hreflang включены в стоимость. Внесение в CMS — по договорённости.</p>
+    </div>
+  </section>
+
+  <!-- ════════ СРАВНЕНИЕ ФОРМАТОВ ════════ -->
+  <section class="sec sec-comparison">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Какой формат вам подходит</h2>
+        <p class="sec-sub">Сравните три уровня сервиса и выберите оптимальный для вашей задачи</p>
+      </div>
+      <div class="cmp-table-wrap">
+        <table class="cmp-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Постредактирование ИИ</th>
+              <th class="cmp-featured">Профессиональный перевод</th>
+              <th>Премиум-перевод</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Перевод с нуля профессиональным переводчиком</td><td class="cmp-no">✗</td><td class="cmp-yes cmp-featured">✓</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>SEO-адаптация мета-тегов и заголовков</td><td class="cmp-no">✗</td><td class="cmp-yes cmp-featured">✓</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Рекомендации по hreflang</td><td class="cmp-no">✗</td><td class="cmp-yes cmp-featured">✓</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Культурная адаптация контента</td><td class="cmp-no">✗</td><td class="cmp-part cmp-featured">частично</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Вычитка носителем языка</td><td class="cmp-no">✗</td><td class="cmp-no cmp-featured">✗</td><td class="cmp-yes">✓</td></tr>
+            <tr><td>Подходит для публичного запуска</td><td class="cmp-no">✗</td><td class="cmp-part cmp-featured">условно</td><td class="cmp-yes">✓</td></tr>
+            <tr class="cmp-meta"><td>Срок</td><td>от 1 дня</td><td class="cmp-featured">2–5 дней</td><td>3–7 дней</td></tr>
+            <tr class="cmp-meta cmp-price-row"><td>Стоимость</td><td>от 1,5 ₽/слово</td><td class="cmp-featured">от 3 ₽/слово</td><td>от 5 ₽/слово</td></tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td></td>
+              <td><a href="#calc-section" class="price-btn price-btn--outline">Выбрать</a></td>
+              <td class="cmp-featured"><a href="#calc-section" class="price-btn price-btn--primary">Выбрать</a></td>
+              <td><a href="#calc-section" class="price-btn price-btn--outline">Выбрать</a></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ ОТЗЫВЫ ════════ -->
+  <section class="sec sec--alt sec-reviews">
+    <div class="container">
+      <div class="reviews-head">
+        <div>
+          <h2 class="sec-title">Что говорят клиенты</h2>
+          <p class="sec-sub" style="margin-top:6px">Реальные отзывы о переводе сайтов</p>
+        </div>
+        <div class="review-rating-block">
+          <div class="review-rating-score">4.98</div>
+          <div class="review-stars-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="review-rating-label">средний рейтинг</div>
+        </div>
+        <div class="review-platform-links">
+          <a href="https://yandex.ru/maps/org/remarka/51867347382/reviews/" class="review-platform-link" target="_blank" rel="noopener">Яндекс</a>
+          <a href="https://maps.app.goo.gl/d8BKJYw81PqBHXvz7" class="review-platform-link" target="_blank" rel="noopener">Google</a>
+          <a href="https://2gis.ru/moscow/search/%D0%B1%D1%8E%D1%80%D0%BE%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4%D0%BE%D0%B2%20%D1%80%D0%B5%D0%BC%D0%B0%D1%80%D0%BA%D0%B0" class="review-platform-link" target="_blank" rel="noopener">2ГИС</a>
+        </div>
+      </div>
+      <div class="reviews-grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="review-card">
+          <div class="review-card-top">
+            <div class="review-avatar">И</div>
+            <div class="review-meta"><div class="review-name">Ирина Соловьёва, Директор по маркетингу, «МеталлТрейд»</div><div class="review-src">Яндекс · март 2025</div></div>
+          </div>
+          <div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p class="review-text">Переводили корпоративный сайт на английский и немецкий для выхода на европейский рынок. Ремарка не только перевела тексты, но и адаптировала SEO-мета и дала рекомендации по hreflang. Через 3 месяца позиции в Google.de есть.</p>
+        </div>
+        <div class="review-card">
+          <div class="review-card-top">
+            <div class="review-avatar">А</div>
+            <div class="review-meta"><div class="review-name">Александр Чернов, владелец, интернет-магазин «TechGadgets»</div><div class="review-src">Google · январь 2025</div></div>
+          </div>
+          <div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p class="review-text">Перевели Shopify-магазин на польский и чешский — около 800 карточек товаров плюс страницы. Ремарка работала через CSV-экспорт, вернули готовый файл, я просто импортировал. Всё оформление и переменные сохранились.</p>
+        </div>
+        <div class="review-card">
+          <div class="review-card-top">
+            <div class="review-avatar">О</div>
+            <div class="review-meta"><div class="review-name">Ольга Рябова, SEO-специалист, «DigitalPromo»</div><div class="review-src">2ГИС · октябрь 2024</div></div>
+          </div>
+          <div class="review-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p class="review-text">Заказывала перевод блога клиента (около 60 статей) на английский. Переводчики понимают SEO-требования — title не просто перевели, а переписали под английскую семантику. Это заметно по CTR в Google Search Console.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ FAQ ════════ -->
+  <section class="sec sec-faq">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Часто задаваемые вопросы</h2>
+        <p class="sec-sub">Не нашли ответа — напишите Ольге в чат, ответим за минуту</p>
+      </div>
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary class="faq-summary">Вы настраиваете hreflang для переведённых страниц?</summary>
+          <div class="faq-body">
+            <p>Да, предоставляем готовый код hreflang-тегов для каждой языковой версии страницы. Даём рекомендации по URL-структуре (поддомены, подпапки или параметры) с учётом требований Google и Яндекса. Hreflang без ошибок — ключевое условие правильной индексации мультиязычного сайта.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">Вы можете работать напрямую в CMS — WordPress, Tilda, Shopify?</summary>
+          <div class="faq-body">
+            <p>Да, при наличии редакторского доступа работаем напрямую в CMS. Для WordPress интегрируемся с WPML, Polylang или TranslatePress. Для Tilda и Shopify — через экспорт/импорт или ручную редактуру. Для 1C-Битрикс — через встроенный мультиязычный модуль.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">Что делать с изображениями, на которых есть текст?</summary>
+          <div class="faq-body">
+            <p>В процессе работы выявляем все изображения с встроенным текстом и предоставляем полный список с переводами. Если у вас есть исходники (PSD, Figma, Illustrator) — указываем, что именно нужно заменить. Замену графики выполняет ваш дизайнер или мы можем организовать это отдельно.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">Как переводить динамический контент — отзывы, каталог, блог?</summary>
+          <div class="faq-body">
+            <p>Предлагаем две модели: разовый перевод текущего контента с последующим регулярным сопровождением (по заявкам), или абонентское обслуживание с фиксированным объёмом слов в месяц. TM сохраняется — повторяющийся контент переводится быстрее и дешевле.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">Адаптируете ли вы мета-теги под SEO целевого рынка?</summary>
+          <div class="faq-body">
+            <p>Да, это стандартная часть нашего сервиса при переводе сайтов. Исследуем реальные поисковые запросы целевого рынка (не прямой перевод русских ключевых слов) и встраиваем их в title, description и H1. Дополнительная плата за SEO-адаптацию мета-тегов не взимается.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">Где заказать перевод сайта в Москве?</summary>
+          <div class="faq-body">
+            <p>Бюро переводов «Ремарка» работает с сайтами любого масштаба — от одностраничных лендингов до крупных интернет-магазинов. Пришлите ссылку на сайт в чат — скажем стоимость, срок и предложим оптимальную схему работы.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ КАЛЬКУЛЯТОР СТОИМОСТИ ════════ -->
+  <section class="sec sec--alt sec-calculator" id="calc-section">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Рассчитайте стоимость перевода онлайн</h2>
+        <p class="sec-sub">Загрузите документ — автоматически определим объём, язык и дадим точную оценку за минуту</p>
+      </div>
+      <div id="calc-docs" class="rem-calc">
+        <div class="calc-head">
+          <h2>Расчёт по загруженному документу</h2>
+          <p class="sub">Перетащите файл или выберите с компьютера — подсчитаем объём, определим язык и рассчитаем стоимость автоматически.</p>
+        </div>
+        <div class="calc-body">
+          <div class="step" id="rem-step-upload">
+            <div class="step-title"><span class="step-num">1</span>Загрузка документа</div>
+            <div class="upload-zone" id="rem-uz">
+              <input type="file" id="rem-finp" multiple accept=".pdf,.doc,.docx,.txt,.rtf,.odt,.xls,.xlsx,.ppt,.pptx,.jpg,.jpeg,.png">
+              <span class="u-ico">📄</span>
+              <div class="u-main">Перетащите файлы сюда</div>
+              <div class="u-sub">или нажмите кнопку, чтобы выбрать с компьютера</div>
+              <span class="u-btn">Выбрать файлы</span>
+              <div class="u-formats">PDF · DOC · DOCX · TXT · RTF · ODT · XLS · XLSX · PPT · PPTX · JPG · PNG</div>
+            </div>
+          </div>
+          <div class="step hidden" id="rem-step-docs">
+            <div class="step-title"><span class="step-num">2</span>Ваши документы</div>
+            <div class="docs-list" id="rem-docs-list"></div>
+            <label class="upload-mini" id="rem-add-more">
+              <input type="file" id="rem-finp-more" multiple accept=".pdf,.doc,.docx,.txt,.rtf,.odt,.xls,.xlsx,.ppt,.pptx,.jpg,.jpeg,.png">
+              <span>＋</span><span>Добавить ещё документ</span>
+            </label>
+          </div>
+          <div class="step hidden" id="rem-step-urg">
+            <div class="step-title"><span class="step-num">3</span>Выберите срок готовности</div>
+            <div class="urg-row" id="rem-urg-row">
+              <button type="button" class="urg-btn sel" data-urg="standard" data-mult="1">
+                <div class="u-h">Стандарт</div>
+                <div class="u-d" id="rem-urg-d-standard">—</div>
+                <div class="u-p">без доплаты</div>
+              </button>
+              <button type="button" class="urg-btn" data-urg="urgent" data-mult="1">
+                <div class="u-h">Срочно</div>
+                <div class="u-d" id="rem-urg-d-urgent">—</div>
+                <div class="u-p" id="rem-urg-p-urgent">без доплаты</div>
+              </button>
+              <button type="button" class="urg-btn" data-urg="express" data-mult="2">
+                <div class="u-h">Экспресс</div>
+                <div class="u-d" id="rem-urg-d-express">—</div>
+                <div class="u-p">цена ×2</div>
+              </button>
+            </div>
+          </div>
+          <div class="step hidden" id="rem-step-total">
+            <div class="total-box">
+              <div>
+                <div class="tl">Итого к оплате</div>
+                <div class="tp"><span id="rem-tp-val">0</span><small>₽</small></div>
+                <div class="td" id="rem-tp-detail">—</div>
+              </div>
+              <div class="tr" id="rem-tp-right">—</div>
+            </div>
+            <p class="result-note">* Стоимость рассчитана автоматически и может быть скорректирована менеджером после проверки документов.</p>
+            <div class="btn-row">
+              <button type="button" class="btn btn-secondary" id="rem-btn-reset">Начать заново</button>
+              <button type="button" class="btn btn-primary" id="rem-btn-order">Оформить заказ</button>
+            </div>
+            <div class="trust-row">
+              <div class="trust-item"><span class="trust-dot"></span>Ответим за 30 минут</div>
+              <div class="trust-item"><span class="trust-dot"></span>Бесплатная оценка</div>
+              <div class="trust-item"><span class="trust-dot"></span>С 2001 года</div>
+              <div class="trust-item"><span class="trust-dot"></span>Конфиденциально</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="rem-notif" class="rem-notif"></div>
+  <div class="rem-modal-overlay" id="rem-modal">
+    <div class="rem-modal" role="dialog" aria-modal="true">
+      <div class="m-head">
+        <h3>Оформление заказа</h3>
+        <div class="m-sub">Проверьте состав заказа и заполните данные для связи</div>
+        <button type="button" class="m-close" id="rem-m-close" aria-label="Закрыть">×</button>
+      </div>
+      <div class="m-body">
+        <div class="step">
+          <div class="step-title"><span class="step-num">1</span>Ваш заказ</div>
+          <div class="m-summary" id="rem-m-summary"></div>
+          <div class="m-note">* Стоимость рассчитана автоматически и может быть изменена после проверки.</div>
+        </div>
+        <div class="step">
+          <div class="step-title"><span class="step-num">2</span>Контактные данные</div>
+          <div class="m-row">
+            <div class="field"><label>Ваше имя <span class="req">*</span></label>
+              <input type="text" id="rem-m-name" placeholder="Иван Петров"></div>
+            <div class="field"><label>Телефон <span class="req">*</span></label>
+              <input type="tel" id="rem-m-phone" placeholder="+7 (000) 000-00-00"></div>
+          </div>
+          <div class="m-row">
+            <div class="field"><label>E-mail <span class="req">*</span></label>
+              <input type="email" id="rem-m-email" placeholder="ivan@example.com"></div>
+            <div class="field"><label>Компания</label>
+              <input type="text" id="rem-m-company" placeholder="Название организации"></div>
+          </div>
+          <div class="m-row-full field" style="margin-bottom:0"><label>Комментарий</label>
+            <textarea id="rem-m-comment" placeholder="Особые требования, пожелания..."></textarea></div>
+        </div>
+        <div class="step">
+          <div class="step-title"><span class="step-num">3</span>Получение перевода</div>
+          <div class="field" style="margin-bottom:12px"><label>Город</label>
+            <input type="text" id="rem-m-city" placeholder="Москва"></div>
+          <div class="delivery-row" id="rem-m-delivery">
+            <div class="del-opt sel" data-del="none" data-price="0">
+              <div class="d-t">На e-mail (электронная версия)</div>
+              <div class="d-s">Бесплатно · мгновенно после готовности</div>
+            </div>
+            <div class="del-opt" data-del="courier" data-price="490">
+              <div class="d-t">Курьер (СДЭК, OZON, Яндекс)</div>
+              <div class="d-s">от 3 дней · от 490 ₽</div>
+            </div>
+          </div>
+          <div class="del-note">Сроки курьерской доставки указаны без учёта срока выполнения перевода.</div>
+        </div>
+        <div class="m-final">
+          <div>
+            <div class="mf-l">Итоговая сумма</div>
+            <div class="mf-p"><span id="rem-m-final">0</span><small> ₽</small></div>
+          </div>
+          <div class="mf-note" id="rem-m-final-note"></div>
+        </div>
+        <button type="button" class="btn btn-primary" id="rem-m-submit" style="width:100%">Отправить заявку</button>
+        <div class="m-agree">
+          Нажимая на кнопку, вы соглашаетесь с <a href="/politika-konfidenczialnosti" target="_blank">политикой конфиденциальности</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════ CTA ════════ -->
+  <section class="sec sec-cta">
+    <div class="container">
+      <h2 class="cta-title">Нужен перевод сайта в Москве?</h2>
+      <p class="cta-sub">Пришлите ссылку на сайт — оценим объём, CMS и предложим оптимальную схему работы</p>
+      <div class="cta-btns">
+        <a href="#calc-section" class="btn btn-primary">Прислать ссылку на сайт</a>
+        <a href="https://wa.me/79859704413" class="btn btn-outline" target="_blank" rel="noopener">Написать в WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ COMMENTS ════════ -->
+  <div id="comments" class="comments-area">
+    <div class="container">
+
+      <h2 class="comments-title">Комментарии (4)</h2>
+
+      <ol class="comment-list">
+
+        <li class="comment even thread-even depth-1" id="comment-1">
+          <article class="comment-body">
+            <footer class="comment-meta">
+              <div class="comment-author vcard">
+                <div class="wp-avatar">Т</div>
+                <div class="fn"><b>Тимур Насиров</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">SEO-специалист, «WebGrowth»</span></div>
+              </div>
+              <div class="comment-metadata"><time datetime="2025-04-10">10 апреля 2025</time></div>
+            </footer>
+            <div class="comment-content">
+              <p>Работали над переводом сайта производителя промышленного оборудования на немецкий. Ремарка адаптировала мета-теги под немецкую семантику — не просто перевела, а переписала с учётом того, как реально ищут на рынке Германии.</p>
+            </div>
+            <div class="reply"><a class="comment-reply-link" href="#">Ответить</a></div>
+          </article>
+        </li>
+
+        <li class="comment odd alt thread-odd depth-1" id="comment-2">
+          <article class="comment-body">
+            <footer class="comment-meta">
+              <div class="comment-author vcard">
+                <div class="wp-avatar">В</div>
+                <div class="fn"><b>Виктория Лебедева</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">Владелец, «HometextileShop»</span></div>
+              </div>
+              <div class="comment-metadata"><time datetime="2025-02-18">18 февраля 2025</time></div>
+            </footer>
+            <div class="comment-content">
+              <p>У нас интернет-магазин на WordPress с WPML. Ремарка зашла в проект через редакторский доступ и перевела все страницы прямо в CMS. Мне не пришлось разбираться в файлах, всё сделали сами.</p>
+            </div>
+            <div class="reply"><a class="comment-reply-link" href="#">Ответить</a></div>
+          </article>
+          <ol class="children">
+            <li class="comment depth-2" id="comment-3">
+              <article class="comment-body">
+                <footer class="comment-meta">
+                  <div class="comment-author vcard">
+                    <div class="wp-avatar" style="width:36px;height:36px;font-size:15px">Р</div>
+                    <div class="fn"><b>Ремарка</b><span style="font-size:12px;color:#783CF0;margin-top:1px">Администратор</span></div>
+                  </div>
+                  <div class="comment-metadata"><time datetime="2025-02-19">19 февраля 2025</time></div>
+                </footer>
+                <div class="comment-content">
+                  <p>Виктория, работа напрямую в CMS — наш стандарт для клиентов, которым не нужны лишние шаги. Рады, что всё прошло гладко!</p>
+                </div>
+              </article>
+            </li>
+          </ol>
+        </li>
+
+        <li class="comment even thread-even depth-1" id="comment-4">
+          <article class="comment-body">
+            <footer class="comment-meta">
+              <div class="comment-author vcard">
+                <div class="wp-avatar">Г</div>
+                <div class="fn"><b>Григорий Антонов</b><span style="font-size:12px;color:var(--text-muted);margin-top:1px">Директор по развитию, «TechExport»</span></div>
+              </div>
+              <div class="comment-metadata"><time datetime="2025-01-07">7 января 2025</time></div>
+            </footer>
+            <div class="comment-content">
+              <p>Переводили большой корпоративный сайт на китайский (упрощённый). Ремарка предупредила об особенностях работы с китайским поисковым рынком Baidu, адаптировала контент под местные реалии. Полезная экспертиза, выходящая за рамки просто «перевода».</p>
+            </div>
+            <div class="reply"><a class="comment-reply-link" href="#">Ответить</a></div>
+          </article>
+        </li>
+
+      </ol><!-- /comment-list -->
+
+      <div id="respond" class="comment-respond">
+        <h3 id="reply-title" class="comment-reply-title">Оставить комментарий</h3>
+        <form action="#" method="post" id="commentform" class="comment-form" novalidate>
+          <p class="comment-notes">Ваш адрес email не будет опубликован. Обязательные поля помечены <span class="required">*</span></p>
+          <p class="comment-form-comment">
+            <label for="comment">Комментарий <span class="required">*</span></label>
+            <textarea id="comment" name="comment" cols="45" rows="6" required placeholder="Расскажите о вашем опыте работы с нами..."></textarea>
+          </p>
+          <div class="comment-form-fields">
+            <p class="comment-form-author">
+              <label for="author">Имя <span class="required">*</span></label>
+              <input id="author" name="author" type="text" size="30" required placeholder="Ваше имя">
+            </p>
+            <p class="comment-form-email">
+              <label for="email">Email <span class="required">*</span></label>
+              <input id="email" name="email" type="email" size="30" required placeholder="email@example.com">
+            </p>
+          </div>
+          <p class="comment-form-cookies-consent">
+            <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes">
+            <label for="wp-comment-cookies-consent">Сохранить моё имя и email для следующего комментария</label>
+          </p>
+          <p class="form-submit">
+            <input name="submit" type="submit" id="submit" class="submit" value="Отправить комментарий">
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div><!-- /#comments -->
+
+  <!-- Плавающая кнопка -->
+  <button class="chat-float-btn" id="chatFloatBtn" aria-label="Открыть чат">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+
+  <!-- ════════════════ FOOTER ════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo-light.png" alt="Remarka" id="footer-logo">
+          <p>Профессиональные переводы и локализация для бизнеса. Работаем удалённо с клиентами по всей России и за её пределами.</p>
+          <h5 class="social-title">Мы в соцсетях</h5>
+          <div class="social-links">
+            <a href="#" aria-label="ВКонтакте"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.785 16.241s.288-.032.435-.193c.135-.148.13-.426.13-.426s-.018-1.302.582-1.495c.592-.19 1.352 1.262 2.158 1.821.61.422 1.073.33 1.073.33l2.157-.031s1.128-.071.593-.964c-.044-.073-.312-.66-1.602-1.86-1.35-1.257-1.169-1.054.456-3.232.99-1.327 1.387-2.137 1.263-2.485-.118-.331-.85-.244-.85-.244l-2.434.015s-.18-.025-.314.056c-.13.079-.215.262-.215.262s-.385 1.029-.899 1.904c-1.083 1.846-1.517 1.944-1.694 1.829-.412-.267-.31-1.071-.31-1.643 0-1.787.27-2.531-.526-2.724-.265-.064-.46-.106-1.136-.113-.867-.009-1.601.003-2.016.207-.276.135-.49.435-.36.453.16.022.523.099.715.362.249.34.24 1.103.24 1.103s.143 2.097-.333 2.358c-.327.179-.775-.186-1.74-1.86-.494-.858-.868-1.807-.868-1.807s-.072-.176-.2-.27c-.155-.114-.372-.15-.372-.15l-2.314.014s-.347.01-.475.16c-.114.135-.009.413-.009.413s1.813 4.242 3.866 6.38c1.882 1.96 4.02 1.832 4.02 1.832h.967z"/></svg></a>
+            <a href="#" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.464.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Услуги</h4>
+          <ul>
+            <li><a href="#">Технический перевод</a></li>
+            <li><a href="#">Юридический перевод</a></li>
+            <li><a href="#">Медицинский перевод</a></li>
+            <li><a href="#">IT-перевод</a></li>
+            <li><a href="#">Локализация ПО</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Компания</h4>
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Цены</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Поддержка</h4>
+          <ul>
+            <li><a href="#">Связаться с нами</a></li>
+            <li><a href="#">Часто задаваемые вопросы</a></li>
+            <li><a href="#">Стать переводчиком</a></li>
+          </ul>
+          <a href="#calc-section" class="btn-primary" style="margin-top:16px">Начать <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2001–2026 Бюро переводов «Ремарка»</p>
+        <nav class="footer-legal"><a href="#">Политика конфиденциальности</a><a href="#">Карта сайта</a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/calc-widget.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    function updateLogos() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const src = isDark ? 'assets/logo-dark.png' : 'assets/logo-light.png';
+      document.querySelectorAll('#logo-img, #footer-logo').forEach(function(img){ img.src = src; });
+    }
+    updateLogos();
+    new MutationObserver(updateLogos).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  </script>
+
+</body>
+</html>
