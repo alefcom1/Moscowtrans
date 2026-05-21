@@ -932,6 +932,9 @@ img { max-width: 100%; display: block; }
   color: rgba(255,255,255,.35);
   cursor: pointer;
   border-radius: 12px;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
   font-size: 11px;
   line-height: 1.3;
   text-align: center;
@@ -2838,4 +2841,139 @@ body.js-loaded .anim-fade.is-visible {
 :root[data-theme="light"] .footer-bottom {
   border-top-color: rgba(10,14,39,.07);
   color: rgba(10,14,39,.45);
+}
+
+/* ============================================================
+   CALC HERO — 2-колоночный блок расчёта стоимости
+   ============================================================ */
+.sec-calculator-hero {
+  padding: 80px 0;
+  background: var(--bg-primary);
+}
+
+.calc-hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* ── Левая маркетинговая колонка ── */
+.calc-hero-left {
+  position: sticky;
+  top: calc(var(--header-h) + 24px);
+}
+
+.calc-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #783CF0;
+  background: rgba(120,60,240,.10);
+  border: 1px solid rgba(120,60,240,.20);
+  border-radius: 6px;
+  padding: 4px 10px;
+  margin-bottom: 18px;
+}
+
+.calc-hero-h {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin: 0 0 14px;
+}
+
+.calc-hero-sub {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0 0 28px;
+}
+
+.calc-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cf-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.cf-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(120,60,240,.10);
+  border: 1px solid rgba(120,60,240,.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #783CF0;
+}
+
+.cf-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cf-item strong {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cf-item span {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.calc-trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  padding-top: 20px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.calc-trust-row span {
+  color: var(--text-secondary);
+}
+
+/* ── Правая колонка ── */
+.calc-hero-right .rem-calc {
+  box-shadow: 0 8px 40px rgba(0,0,0,.12);
+}
+
+/* Адаптив */
+@media (max-width: 900px) {
+  .calc-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .calc-hero-left {
+    position: static;
+  }
+}
+
+/* Светлая тема */
+:root[data-theme="light"] .calc-badge {
+  background: rgba(120,60,240,.07);
+}
+:root[data-theme="light"] .cf-icon {
+  background: rgba(120,60,240,.07);
 }
