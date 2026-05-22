@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+    ym(95836354, 'init', {webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/95836354" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Перевод маркетинговых материалов в Москве — реклама, сайты, презентации | Ремарка</title>
@@ -1100,7 +1113,7 @@
   <script>
     function updateLogos() {
       const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      const src = isDark ? 'assets/logo-dark.png' : 'assets/logo-light.png';
+      const src = isDark ? '/assets/logo-dark.png' : '/assets/logo-light.png';
       document.querySelectorAll('#logo-img, #footer-logo').forEach(function(img){ img.src = src; });
     }
     updateLogos();

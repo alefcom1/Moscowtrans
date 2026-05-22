@@ -1,0 +1,488 @@
+/* ===========================================================
+   БАЗА / ТОКЕНЫ
+   =========================================================== */
+.rem-calc *, .rem-calc *::before, .rem-calc *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.rem-modal *, .rem-modal *::before, .rem-modal *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Токены вынесены на оба корневых элемента */
+.rem-calc,
+.rem-modal-overlay {
+  --red:#C0392B; --red-d:#922B21; --red-ll:#FDEDEC;
+  --dark:#1A1A2E; --accent:#393185;
+  --text:#1F1F1F; --text-m:#555; --text-s:#888;
+  --bg:#FFFFFF; --bg2:#F7F6F3; --bg3:#EFEDE8;
+  --border:#E4E1DC; --bord-s:#CBC8C3;
+  --ok:#27AE60; --warn:#E67E22;
+  --rad:12px; --rad-s:8px;
+  --sh-s:0 1px 3px rgba(0,0,0,.05);
+  --sh:0 4px 16px rgba(0,0,0,.07);
+  --sh-l:0 10px 40px rgba(0,0,0,.15);
+  --font:'Segoe UI',Tahoma,Arial,sans-serif;
+}
+.rem-calc {
+  font-family:var(--font); font-size:15px; color:var(--text); line-height:1.55;
+  max-width:900px; margin:0 auto; background:var(--bg2);
+  border-radius:var(--rad); overflow:visible;
+  box-shadow:0 4px 30px rgba(0,0,0,.08);
+}
+.rem-calc .calc-body { padding:28px 32px; }
+
+/* Заголовок виджета */
+.rem-calc .calc-head { text-align:center; padding:28px 24px 10px; }
+.rem-calc .calc-head h2 { font-size:22px; font-weight:700; color:var(--text); margin-bottom:6px; }
+.rem-calc .calc-head .sub { font-size:14px; color:var(--text-m); max-width:520px; margin:0 auto; }
+
+/* Карточки-шаги */
+.rem-calc .step, .rem-modal .step { background:var(--bg); border:1px solid var(--border); border-radius:var(--rad);
+  padding:20px 22px; margin-bottom:14px; box-shadow:var(--sh-s);
+  animation:remFadeIn .35s ease-out; }
+.rem-calc .step.hidden { display:none; }
+.rem-calc .step-title, .rem-modal .step-title { font-size:11px; font-weight:700; letter-spacing:.09em;
+  text-transform:uppercase; color:var(--text-s); margin-bottom:14px;
+  padding-bottom:10px; border-bottom:1px solid var(--bg2);
+  display:flex; align-items:center; gap:8px; }
+.rem-calc .step-num, .rem-modal .step-num { display:inline-flex; align-items:center; justify-content:center;
+  width:20px; height:20px; border-radius:50%; background:var(--red); color:#fff;
+  font-size:11px; font-weight:700; letter-spacing:0; }
+
+@keyframes remFadeIn {
+  from { opacity:0; transform:translateY(6px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+/* ===========================================================
+   UPLOAD ZONE
+   =========================================================== */
+.rem-calc .upload-zone { border:2px dashed var(--bord-s); border-radius:var(--rad);
+  padding:44px 24px; text-align:center; cursor:pointer;
+  transition:all .2s; color:var(--text-m); background:var(--bg2); }
+.rem-calc .upload-zone:hover,
+.rem-calc .upload-zone.drag { border-color:var(--red); background:var(--red-ll); color:var(--red); }
+.rem-calc .upload-zone input { display:none; }
+.rem-calc .upload-zone .u-ico { font-size:42px; margin-bottom:10px; display:block; }
+.rem-calc .upload-zone .u-main { font-size:15px; font-weight:600; color:var(--text); margin-bottom:4px; }
+.rem-calc .upload-zone .u-sub { font-size:13px; color:var(--text-s); margin-bottom:14px; }
+.rem-calc .upload-zone .u-btn { display:inline-block; padding:10px 22px;
+  background:var(--red); color:#fff; border-radius:var(--rad-s);
+  font-size:13px; font-weight:600; }
+.rem-calc .upload-zone .u-formats { font-size:11px; color:var(--text-s);
+  margin-top:14px; letter-spacing:.04em; }
+
+/* Мини-зона загрузки (для добавления ещё документа) */
+.rem-calc .upload-mini { border:1.5px dashed var(--bord-s); border-radius:var(--rad-s);
+  padding:14px 16px; cursor:pointer; transition:all .18s;
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  font-size:13px; color:var(--text-m); background:var(--bg); }
+.rem-calc .upload-mini:hover { border-color:var(--red); background:var(--red-ll); color:var(--red); }
+.rem-calc .upload-mini input { display:none; }
+
+/* ===========================================================
+   КАРТОЧКИ ДОКУМЕНТОВ
+   =========================================================== */
+.rem-calc .docs-list { display:flex; flex-direction:column; gap:12px; margin-bottom:14px; }
+.rem-calc .doc-card { border:1px solid var(--border); border-radius:var(--rad);
+  background:var(--bg); box-shadow:var(--sh-s); overflow:hidden; }
+.rem-calc .doc-head { padding:14px 18px; display:flex; align-items:center;
+  justify-content:space-between; gap:12px; background:var(--bg); border-bottom:1px solid var(--bg2); }
+.rem-calc .doc-head .d-name { display:flex; align-items:center; gap:10px;
+  font-weight:600; font-size:14px; min-width:0; flex:1; }
+.rem-calc .doc-head .d-name .d-ico { font-size:20px; flex-shrink:0; }
+.rem-calc .doc-head .d-name .d-nm { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.rem-calc .doc-head .d-size { font-size:12px; color:var(--text-s); flex-shrink:0; }
+.rem-calc .doc-head .d-rm { border:none; background:none; cursor:pointer;
+  color:var(--text-s); font-size:18px; line-height:1; padding:4px 6px;
+  border-radius:4px; transition:all .15s; flex-shrink:0; }
+.rem-calc .doc-head .d-rm:hover { background:var(--red-ll); color:var(--red); }
+
+/* Loader внутри карточки */
+.rem-calc .doc-processing { padding:18px; display:flex; align-items:center; gap:12px;
+  font-size:13px; color:var(--text-m); }
+.rem-calc .spinner { width:18px; height:18px; border:2.5px solid var(--bg3);
+  border-top-color:var(--red); border-radius:50%; animation:remSpin .8s linear infinite;
+  flex-shrink:0; }
+@keyframes remSpin { to { transform:rotate(360deg); } }
+.rem-calc .doc-processing .p-progress { color:var(--text-s); font-size:12px; margin-left:auto; }
+
+/* Ошибка */
+.rem-calc .doc-error { padding:14px 18px; background:#FFF5F5; color:var(--red-d);
+  font-size:13px; display:flex; align-items:center; gap:8px; }
+
+/* Тело карточки (после анализа) */
+.rem-calc .doc-body { padding:16px 18px; }
+.rem-calc .doc-stats { background:var(--bg2); border-radius:var(--rad-s);
+  padding:12px 14px; margin-bottom:14px; font-size:13px; color:var(--text-m); }
+.rem-calc .doc-stats strong { color:var(--text); font-weight:600; }
+.rem-calc .doc-stats .st-note { font-size:11px; color:var(--text-s); margin-top:4px; }
+
+.rem-calc .doc-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px; }
+.rem-calc .field, .rem-modal .field { display:flex; flex-direction:column; gap:5px; }
+.rem-calc .field label, .rem-modal .field label { font-size:12px; color:var(--text-m); font-weight:500; }
+.rem-calc .field select, .rem-calc .field input, .rem-calc .field textarea,
+.rem-modal .field select, .rem-modal .field input, .rem-modal .field textarea {
+  padding:9px 12px; font-size:14px; border:1px solid var(--border);
+  border-radius:var(--rad-s); background:var(--bg); color:var(--text);
+  font-family:var(--font); transition:all .15s; outline:none; width:100%; }
+.rem-calc .field select:focus, .rem-calc .field input:focus, .rem-calc .field textarea:focus,
+.rem-modal .field select:focus, .rem-modal .field input:focus, .rem-modal .field textarea:focus {
+  border-color:var(--red); box-shadow:0 0 0 3px rgba(192,57,43,.1); }
+.rem-calc .field textarea, .rem-modal .field textarea { resize:vertical; min-height:74px; }
+.rem-calc .field .auto-mark { font-size:11px; color:var(--ok); font-weight:500; }
+.rem-modal .req { color:var(--red); }
+
+/* Тип заверения — 3 кнопки */
+.rem-calc .cert-row { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:14px; }
+.rem-calc .cert-btn { padding:12px 10px; border:1.5px solid var(--border);
+  border-radius:var(--rad-s); background:var(--bg); cursor:pointer;
+  text-align:center; transition:all .18s; font-family:var(--font); }
+.rem-calc .cert-btn:hover { border-color:var(--red); background:var(--red-ll); }
+.rem-calc .cert-btn.sel { border-color:var(--red); background:var(--red-ll);
+  box-shadow:0 0 0 2px rgba(192,57,43,.12); }
+.rem-calc .cert-btn .c-title { font-size:13px; font-weight:600; color:var(--text); margin-bottom:3px; }
+.rem-calc .cert-btn .c-price { font-size:12px; color:var(--text-s); }
+.rem-calc .cert-btn.sel .c-title { color:var(--red); }
+.rem-calc .cert-btn.sel .c-price { color:var(--red-d); }
+
+/* Мини-итог по документу */
+.rem-calc .doc-subtotal { background:var(--bg2); border-radius:var(--rad-s);
+  padding:10px 14px; display:flex; justify-content:space-between; align-items:center;
+  font-size:13px; color:var(--text-m); }
+.rem-calc .doc-subtotal strong { font-size:16px; color:var(--text); font-weight:700; }
+
+/* ===========================================================
+   СРОЧНОСТЬ (общий блок для всех документов)
+   =========================================================== */
+.rem-calc .urg-row { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.rem-calc .urg-btn { padding:14px 12px; border:1.5px solid var(--border);
+  border-radius:var(--rad-s); background:var(--bg); cursor:pointer;
+  text-align:left; transition:all .18s; font-family:var(--font); }
+.rem-calc .urg-btn:hover { border-color:var(--red); background:var(--red-ll); }
+.rem-calc .urg-btn.sel { border-color:var(--red); background:var(--red-ll);
+  box-shadow:0 0 0 2px rgba(192,57,43,.12); }
+.rem-calc .urg-btn .u-h { font-size:14px; font-weight:600; color:var(--text); margin-bottom:4px; }
+.rem-calc .urg-btn .u-d { font-size:12px; color:var(--text-m); }
+.rem-calc .urg-btn .u-p { font-size:11px; color:var(--text-s); margin-top:4px; font-weight:500; }
+.rem-calc .urg-btn.sel .u-h { color:var(--red); }
+.rem-calc .urg-btn.sel .u-p { color:var(--red-d); }
+
+/* ===========================================================
+   ИТОГО + КНОПКИ
+   =========================================================== */
+.rem-calc .total-box { background:linear-gradient(135deg,#1A1A2E 0%,#2C1B1B 100%);
+  border-radius:var(--rad); padding:22px 26px; margin-bottom:14px; color:#fff;
+  display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+.rem-calc .total-box .tl { font-size:13px; color:rgba(255,255,255,.55); margin-bottom:4px; }
+.rem-calc .total-box .tp { font-size:32px; font-weight:700; }
+.rem-calc .total-box .tp small { font-size:18px; font-weight:400; color:rgba(255,255,255,.55); margin-left:4px; }
+.rem-calc .total-box .td { font-size:12px; color:rgba(255,255,255,.4); margin-top:4px; }
+.rem-calc .total-box .tr { text-align:right; font-size:12px; color:rgba(255,255,255,.6); }
+
+.rem-calc .btn-row { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.rem-calc .btn { padding:14px; border:none; border-radius:var(--rad-s);
+  font-size:15px; font-weight:600; cursor:pointer; transition:all .15s;
+  font-family:var(--font); }
+.rem-calc .btn-primary { background:var(--red); color:#fff; }
+.rem-calc .btn-primary:hover { background:var(--red-d); }
+.rem-calc .btn-primary:disabled { background:var(--text-s); cursor:not-allowed; }
+.rem-calc .btn-secondary { background:var(--bg); color:var(--text-m); border:1px solid var(--border); }
+.rem-calc .btn-secondary:hover { border-color:var(--text-s); color:var(--text); }
+
+.rem-calc .result-note { font-size:12px; color:var(--text-s);
+  margin-bottom:14px; font-style:italic; text-align:center; }
+
+/* Trust-row */
+.rem-calc .trust-row { display:flex; gap:18px; flex-wrap:wrap; padding:14px 0 0;
+  justify-content:center; }
+.rem-calc .trust-item { display:flex; align-items:center; gap:6px;
+  font-size:12px; color:var(--text-m); }
+.rem-calc .trust-dot { width:6px; height:6px; border-radius:50%;
+  background:var(--red); flex-shrink:0; }
+
+/* ===========================================================
+   МОДАЛКА ОФОРМЛЕНИЯ ЗАКАЗА
+   Стилистика идентична основной форме: светлый фон, карточки-шаги
+   с номерами, светлый итоговый блок с красным акцентом.
+   =========================================================== */
+.rem-modal-overlay { position:fixed; inset:0; background:rgba(20,20,30,.55);
+  backdrop-filter:blur(4px); z-index:99990; display:none;
+  align-items:flex-start; justify-content:center; padding:24px 16px; overflow-y:auto; }
+.rem-modal-overlay.show { display:flex; animation:remFadeIn .2s ease-out; }
+
+/* Контейнер модалки копирует внешний вид .rem-calc:
+   такой же фон, тот же радиус, чуть крупнее тень */
+.rem-modal { background:var(--bg2); border-radius:var(--rad);
+  max-width:760px; width:100%; box-shadow:var(--sh-l);
+  overflow:hidden; font-family:var(--font); color:var(--text); margin:auto; }
+
+/* Шапка модалки — как .calc-head: по центру, крупный заголовок + подзаголовок */
+.rem-modal .m-head { background:var(--bg); padding:22px 28px;
+  border-bottom:1px solid var(--border); position:relative; text-align:center; }
+.rem-modal .m-head h3 { font-size:20px; font-weight:700; color:var(--text); margin-bottom:4px; }
+.rem-modal .m-head .m-sub { font-size:13px; color:var(--text-m); }
+.rem-modal .m-close { position:absolute; top:16px; right:18px;
+  border:none; background:none; cursor:pointer; color:var(--text-s);
+  font-size:24px; line-height:1; padding:4px 8px; border-radius:6px;
+  transition:all .15s; }
+.rem-modal .m-close:hover { background:var(--red-ll); color:var(--red); }
+
+.rem-modal .m-body { padding:22px 26px; }
+
+/* Сводка документов — как .step: белая карточка с заголовком-шагом */
+.rem-modal .m-summary { padding:6px 0 2px; font-size:14px; }
+.rem-modal .m-summary .ms-item { padding:12px 0; border-bottom:1px dashed var(--border); line-height:1.5; }
+.rem-modal .m-summary .ms-item:last-child { border-bottom:none; padding-bottom:4px; }
+.rem-modal .m-summary .ms-item strong { color:var(--text); font-weight:600; }
+.rem-modal .m-summary .ms-price { font-weight:700; color:var(--text); white-space:nowrap; font-size:15px; }
+.rem-modal .m-summary .ms-total { padding-top:14px; margin-top:8px;
+  border-top:1.5px solid var(--border); border-bottom:none;
+  display:flex; justify-content:space-between; align-items:center;
+  font-size:15px; font-weight:600; color:var(--text); }
+.rem-modal .m-summary .ms-total .ms-price { font-size:20px; color:var(--red-d); font-weight:700; }
+
+.rem-modal .m-note { font-size:12px; color:var(--text-s); font-style:italic;
+  margin-top:6px; line-height:1.5; }
+
+/* Строки полей — такая же сетка, как в .doc-row */
+.rem-modal .m-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px; }
+.rem-modal .m-row-full { margin-bottom:12px; }
+
+/* Варианты доставки — как .cert-btn / .urg-btn (карточки-кнопки) */
+.rem-modal .delivery-row { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px; }
+.rem-modal .del-opt { padding:14px 14px; border:1.5px solid var(--border);
+  border-radius:var(--rad-s); background:var(--bg); cursor:pointer;
+  transition:all .18s; text-align:left; }
+.rem-modal .del-opt:hover { border-color:var(--red); background:var(--red-ll); }
+.rem-modal .del-opt.sel { border-color:var(--red); background:var(--red-ll);
+  box-shadow:0 0 0 2px rgba(192,57,43,.12); }
+.rem-modal .del-opt .d-t { font-size:13px; font-weight:600; color:var(--text); margin-bottom:3px; }
+.rem-modal .del-opt.sel .d-t { color:var(--red); }
+.rem-modal .del-opt .d-s { font-size:12px; color:var(--text-s); }
+.rem-modal .del-opt.sel .d-s { color:var(--red-d); }
+.rem-modal .del-note { font-size:11px; color:var(--text-s); font-style:italic;
+  line-height:1.5; margin-top:4px; }
+
+/* Итоговый блок — светлая карточка с КРАСНОЙ крупной суммой (как total-box, но светлый) */
+.rem-modal .m-final { background:var(--bg); border:1.5px solid var(--red);
+  border-radius:var(--rad); padding:18px 22px; margin-bottom:16px;
+  display:flex; justify-content:space-between; align-items:center;
+  flex-wrap:wrap; gap:12px;
+  box-shadow:0 0 0 4px rgba(192,57,43,.08); }
+.rem-modal .m-final .mf-l { font-size:12px; font-weight:700;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--text-s);
+  margin-bottom:4px; }
+.rem-modal .m-final .mf-p { font-size:30px; font-weight:700; color:var(--red-d); line-height:1; }
+.rem-modal .m-final .mf-p small { font-size:18px; font-weight:400; color:var(--text-m); margin-left:4px; }
+.rem-modal .m-final .mf-note { font-size:11px; color:var(--text-s);
+  text-align:right; max-width:200px; line-height:1.4; }
+
+.rem-modal .m-agree { font-size:11px; color:var(--text-s); text-align:center;
+  margin-top:12px; line-height:1.5; padding:0 8px; }
+.rem-modal .m-agree a { color:var(--red-d); }
+
+/* ===========================================================
+   УВЕДОМЛЕНИЯ
+   =========================================================== */
+.rem-notif { position:fixed; top:20px; right:20px; z-index:99999;
+  background:#1A1A2E; color:#fff; padding:13px 18px; border-radius:10px;
+  font-size:14px; max-width:320px; box-shadow:0 4px 20px rgba(0,0,0,.22);
+  display:none; border-left:4px solid #C0392B; font-family:var(--font); }
+.rem-notif.show { display:block; animation:remFadeIn .22s ease-out; }
+.rem-notif.success { border-left-color:var(--ok); }
+.rem-notif.error   { border-left-color:var(--red); }
+
+/* ===========================================================
+   АДАПТИВ
+   =========================================================== */
+@media(max-width:640px){
+  .rem-calc .calc-body { padding:18px; }
+  .rem-calc .doc-row { grid-template-columns:1fr; }
+  .rem-calc .cert-row { grid-template-columns:1fr; }
+  .rem-calc .urg-row { grid-template-columns:1fr; }
+  .rem-calc .btn-row { grid-template-columns:1fr; }
+  .rem-modal .m-row { grid-template-columns:1fr; }
+  .rem-modal .delivery-row { grid-template-columns:1fr; }
+  .rem-modal .m-body { padding:18px; }
+  .rem-modal .m-final { flex-direction:column; align-items:flex-start; }
+  .rem-modal .m-final .mf-note { text-align:left; max-width:none; }
+  .rem-calc .upload-zone { padding:32px 16px; }
+}
+
+/* ===========================================================
+   ТЁМНАЯ ТЕМА
+   =========================================================== */
+:root[data-theme="dark"] .rem-calc,
+:root[data-theme="dark"] .rem-modal-overlay {
+  --text:   rgba(255,255,255,0.90);
+  --text-m: rgba(255,255,255,0.60);
+  --text-s: rgba(255,255,255,0.40);
+  --bg:     #1A1F44;
+  --bg2:    #131836;
+  --bg3:    #0A0E27;
+  --border: rgba(255,255,255,0.10);
+  --bord-s: rgba(255,255,255,0.18);
+  --red-ll: rgba(192,57,43,0.18);
+}
+
+:root[data-theme="dark"] .rem-calc {
+  background: #131836;
+  box-shadow: 0 4px 40px rgba(0,0,0,0.35);
+}
+
+:root[data-theme="dark"] .rem-calc .step,
+:root[data-theme="dark"] .rem-modal .step {
+  background: #1A1F44;
+  border-color: rgba(255,255,255,0.09);
+}
+
+:root[data-theme="dark"] .rem-calc .step-title,
+:root[data-theme="dark"] .rem-modal .step-title {
+  border-bottom-color: rgba(255,255,255,0.07);
+}
+
+:root[data-theme="dark"] .rem-calc .upload-zone {
+  background: #0A0E27;
+  border-color: rgba(255,255,255,0.15);
+}
+:root[data-theme="dark"] .rem-calc .upload-zone:hover,
+:root[data-theme="dark"] .rem-calc .upload-zone.drag {
+  background: rgba(192,57,43,0.12);
+}
+
+:root[data-theme="dark"] .rem-calc .doc-card {
+  background: #1A1F44;
+  border-color: rgba(255,255,255,0.09);
+}
+:root[data-theme="dark"] .rem-calc .doc-head {
+  background: #1A1F44;
+  border-bottom-color: rgba(255,255,255,0.07);
+}
+:root[data-theme="dark"] .rem-calc .doc-stats {
+  background: rgba(255,255,255,0.05);
+}
+
+:root[data-theme="dark"] .rem-calc .doc-error {
+  background: rgba(192,57,43,0.18);
+  color: #ff8a80;
+}
+
+:root[data-theme="dark"] .rem-calc .doc-subtotal {
+  background: rgba(255,255,255,0.05);
+}
+
+:root[data-theme="dark"] .rem-calc .cert-btn,
+:root[data-theme="dark"] .rem-calc .urg-btn {
+  background: #1A1F44;
+  border-color: rgba(255,255,255,0.12);
+}
+:root[data-theme="dark"] .rem-calc .cert-btn:hover,
+:root[data-theme="dark"] .rem-calc .urg-btn:hover,
+:root[data-theme="dark"] .rem-calc .cert-btn.sel,
+:root[data-theme="dark"] .rem-calc .urg-btn.sel {
+  background: rgba(192,57,43,0.15);
+}
+
+:root[data-theme="dark"] .rem-calc .btn-secondary {
+  background: #1A1F44;
+  border-color: rgba(255,255,255,0.15);
+}
+:root[data-theme="dark"] .rem-calc .btn-secondary:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+:root[data-theme="dark"] .rem-calc .upload-mini {
+  background: #0A0E27;
+  border-color: rgba(255,255,255,0.12);
+}
+:root[data-theme="dark"] .rem-calc .upload-mini:hover {
+  background: rgba(192,57,43,0.12);
+}
+
+/* Модалка — тёмная тема */
+:root[data-theme="dark"] .rem-modal {
+  background: #131836;
+  color: rgba(255,255,255,0.90);
+}
+:root[data-theme="dark"] .rem-modal .m-head {
+  background: #1A1F44;
+  border-bottom-color: rgba(255,255,255,0.09);
+}
+:root[data-theme="dark"] .rem-modal .m-summary .ms-item {
+  border-bottom-color: rgba(255,255,255,0.09);
+}
+:root[data-theme="dark"] .rem-modal .m-summary .ms-total {
+  border-top-color: rgba(255,255,255,0.12);
+}
+:root[data-theme="dark"] .rem-modal .del-opt {
+  background: #1A1F44;
+  border-color: rgba(255,255,255,0.12);
+}
+:root[data-theme="dark"] .rem-modal .del-opt:hover,
+:root[data-theme="dark"] .rem-modal .del-opt.sel {
+  background: rgba(192,57,43,0.15);
+}
+:root[data-theme="dark"] .rem-modal .m-final {
+  background: #1A1F44;
+}
+:root[data-theme="dark"] .rem-modal .m-agree a { color: #ff8a80; }
+
+/* Поля ввода — тёмная тема */
+:root[data-theme="dark"] .rem-calc .field select,
+:root[data-theme="dark"] .rem-calc .field input,
+:root[data-theme="dark"] .rem-calc .field textarea,
+:root[data-theme="dark"] .rem-modal .field select,
+:root[data-theme="dark"] .rem-modal .field input,
+:root[data-theme="dark"] .rem-modal .field textarea {
+  background: #0A0E27;
+  border-color: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.90);
+  color-scheme: dark;
+}
+:root[data-theme="dark"] .rem-calc .field select:focus,
+:root[data-theme="dark"] .rem-calc .field input:focus,
+:root[data-theme="dark"] .rem-calc .field textarea:focus,
+:root[data-theme="dark"] .rem-modal .field select:focus,
+:root[data-theme="dark"] .rem-modal .field input:focus,
+:root[data-theme="dark"] .rem-modal .field textarea:focus {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(192,57,43,0.20);
+}
+
+/* Уведомление */
+:root[data-theme="light"] .rem-notif {
+  background: #1A1A2E;
+  color: #fff;
+}
+
+/* ===========================================================
+   СВЕТЛАЯ ТЕМА — total-box адаптация
+   =========================================================== */
+:root[data-theme="light"] .rem-calc .total-box {
+  background: linear-gradient(135deg, #1A1A2E 0%, #2C1B1B 100%);
+}
+
+:root[data-theme="light"] .rem-calc .step,
+:root[data-theme="light"] .rem-modal .step {
+  background: #FFFFFF;
+  border-color: #E4E1DC;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+:root[data-theme="light"] .rem-calc .doc-card {
+  background: #FFFFFF;
+  border-color: #E4E1DC;
+}
+
+:root[data-theme="light"] .rem-calc .cert-btn,
+:root[data-theme="light"] .rem-calc .urg-btn {
+  background: #FFFFFF;
+}
+
+:root[data-theme="light"] .rem-calc .field select,
+:root[data-theme="light"] .rem-calc .field input,
+:root[data-theme="light"] .rem-calc .field textarea,
+:root[data-theme="light"] .rem-modal .field select,
+:root[data-theme="light"] .rem-modal .field input,
+:root[data-theme="light"] .rem-modal .field textarea {
+  background: #FFFFFF;
+  color: #1F1F1F;
+  color-scheme: light;
+}
