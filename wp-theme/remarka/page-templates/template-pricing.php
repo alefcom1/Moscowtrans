@@ -3,16 +3,223 @@
  * Template Name: Стоимость перевода
  */
 get_header();
-
-get_template_part('template-parts/hero-chat-window', null, [
-    'greeting_1' => 'Здравствуйте! 👋 Хотите узнать стоимость перевода?',
-    'greeting_2' => 'Вышлите файл — рассчитаю точную цену за 15 минут',
-    'greeting_3' => 'Стоимость фиксируется до начала работы и не меняется 📋',
-    'breadcrumb' => 'Стоимость перевода',
-    'home_dots'  => false,
-]);
 ?>
-  </div><!-- /hero-bg-block -->
+
+<div class="hero-bg-block">
+  <section class="pricing-calc-hero">
+    <div class="container">
+      <div class="pch-layout">
+
+        <!-- Left: marketing copy -->
+        <div class="pch-left">
+          <nav class="cw-breadcrumbs" aria-label="Хлебные крошки">
+            <a href="<?php echo esc_url(home_url('/')); ?>">Главная</a>
+            <span class="cw-bc-sep" aria-hidden="true">›</span>
+            <span class="cw-bc-current" aria-current="page">Стоимость перевода</span>
+          </nav>
+          <h1 class="pch-h1">Рассчитайте стоимость перевода онлайн</h1>
+          <p class="pch-tagline">Укажите языки, тип документа и объём — получите ориентировочную цену прямо сейчас. Точный расчёт — за 15 минут после отправки файла менеджеру.</p>
+          <ul class="pch-bullets">
+            <li class="pch-bullet"><span class="pch-bullet-dot"></span>Фиксированная цена до начала работы</li>
+            <li class="pch-bullet"><span class="pch-bullet-dot"></span>Скидки от 10 страниц</li>
+            <li class="pch-bullet"><span class="pch-bullet-dot"></span>Профильные переводчики по тематике</li>
+            <li class="pch-bullet"><span class="pch-bullet-dot"></span>Работа с юрлицами по договору</li>
+          </ul>
+        </div>
+
+        <!-- Right: inline pricing calculator -->
+        <div class="pch-right">
+          <div class="pch-card">
+            <div class="pch-card-label">Онлайн-калькулятор</div>
+            <p class="pch-card-title">Узнайте цену за секунды</p>
+
+            <div class="pch-fields">
+
+              <!-- Language pair -->
+              <div class="pch-lang-row">
+                <div class="pch-field">
+                  <label for="pch-from">Язык оригинала</label>
+                  <select id="pch-from"></select>
+                </div>
+                <button class="pch-swap-btn" id="pch-swap" type="button" title="Поменять языки">⇄</button>
+                <div class="pch-field">
+                  <label for="pch-to">Язык перевода</label>
+                  <select id="pch-to"></select>
+                </div>
+              </div>
+
+              <!-- Document type -->
+              <div class="pch-field">
+                <label for="pch-doctype">Тип документа</label>
+                <select id="pch-doctype">
+                  <option value="400">Технический — инструкции, руководства, КД</option>
+                  <option value="500">Юридический — договоры, контракты, уставы</option>
+                  <option value="500">Медицинский — протоколы, инструкции к препаратам</option>
+                  <option value="450">IT-документация — ПО, интерфейсы, локализация</option>
+                  <option value="550">Финансовый — МСФО/GAAP, аудиторские заключения</option>
+                  <option value="400">Маркетинговый — сайты, реклама, пресс-релизы</option>
+                  <option value="600">Патентный — описания изобретений, формулы</option>
+                  <option value="350">Деловая переписка — письма, коммерческие предложения</option>
+                  <option value="400" selected>Общий перевод</option>
+                </select>
+              </div>
+
+              <!-- Page count -->
+              <div class="pch-field">
+                <label for="pch-pages">Количество страниц&nbsp;<span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:10px">(1 стр. = 1 800 знаков)</span></label>
+                <input type="number" id="pch-pages" value="5" min="1" max="9999" step="1">
+              </div>
+
+              <!-- Urgency -->
+              <div class="pch-field">
+                <label>Срочность</label>
+                <div class="pch-urgency">
+                  <button class="pch-urg-btn active" data-urgency="1" type="button">Стандарт</button>
+                  <button class="pch-urg-btn" data-urgency="1.5" type="button">Срочно ×1.5</button>
+                </div>
+              </div>
+
+            </div><!-- /pch-fields -->
+
+            <!-- Price results -->
+            <div class="pch-results">
+              <div class="pch-tier">
+                <div class="pch-tier-name">Постред. ИИ</div>
+                <div class="pch-tier-price" id="pch-price-ai">—</div>
+                <div class="pch-tier-days"  id="pch-days-ai">—</div>
+              </div>
+              <div class="pch-tier pch-tier--featured">
+                <div class="pch-tier-badge">Популярный</div>
+                <div class="pch-tier-name">Профессиональный</div>
+                <div class="pch-tier-price" id="pch-price-pro">—</div>
+                <div class="pch-tier-days"  id="pch-days-pro">—</div>
+              </div>
+              <div class="pch-tier">
+                <div class="pch-tier-name">Премиум</div>
+                <div class="pch-tier-price" id="pch-price-prem">—</div>
+                <div class="pch-tier-days"  id="pch-days-prem">—</div>
+              </div>
+            </div>
+
+            <a href="#calc-section" class="pch-cta-btn">Получить точный расчёт бесплатно →</a>
+            <p class="pch-disclaimer">* Ориентировочная стоимость. Точная цена — после оценки файла менеджером</p>
+          </div>
+        </div><!-- /pch-right -->
+
+      </div><!-- /pch-layout -->
+    </div><!-- /container -->
+  </section>
+</div><!-- /hero-bg-block -->
+
+<script>
+(function () {
+  var LANGS = [
+    { name: 'Русский',         mult: 1.0  },
+    { name: 'Английский',      mult: 1.0  },
+    { name: 'Немецкий',        mult: 1.0  },
+    { name: 'Французский',     mult: 1.0  },
+    { name: 'Испанский',       mult: 1.0  },
+    { name: 'Итальянский',     mult: 1.0  },
+    { name: 'Нидерландский',   mult: 1.0  },
+    { name: 'Португальский',   mult: 1.0  },
+    { name: 'Польский',        mult: 1.05 },
+    { name: 'Чешский',         mult: 1.05 },
+    { name: 'Словацкий',       mult: 1.05 },
+    { name: 'Болгарский',      mult: 1.1  },
+    { name: 'Румынский',       mult: 1.1  },
+    { name: 'Венгерский',      mult: 1.1  },
+    { name: 'Украинский',      mult: 1.1  },
+    { name: 'Белорусский',     mult: 1.1  },
+    { name: 'Шведский',        mult: 1.15 },
+    { name: 'Норвежский',      mult: 1.15 },
+    { name: 'Датский',         mult: 1.15 },
+    { name: 'Финский',         mult: 1.2  },
+    { name: 'Казахский',       mult: 1.2  },
+    { name: 'Турецкий',        mult: 1.2  },
+    { name: 'Греческий',       mult: 1.2  },
+    { name: 'Грузинский',      mult: 1.3  },
+    { name: 'Армянский',       mult: 1.3  },
+    { name: 'Азербайджанский', mult: 1.3  },
+    { name: 'Хинди',           mult: 1.5  },
+    { name: 'Арабский',        mult: 1.6  },
+    { name: 'Иврит',           mult: 1.6  },
+    { name: 'Персидский (фарси)', mult: 1.6 },
+    { name: 'Корейский',       mult: 1.7  },
+    { name: 'Японский',        mult: 1.8  },
+    { name: 'Китайский',       mult: 1.8  },
+  ];
+
+  var fromSel = document.getElementById('pch-from');
+  var toSel   = document.getElementById('pch-to');
+  if (!fromSel || !toSel) return;
+
+  LANGS.forEach(function (lang, i) {
+    fromSel.add(new Option(lang.name, i));
+    toSel.add(new Option(lang.name, i));
+  });
+  fromSel.value = '0'; // Русский
+  toSel.value   = '1'; // Английский
+
+  document.getElementById('pch-swap').addEventListener('click', function () {
+    var tmp = fromSel.value;
+    fromSel.value = toSel.value;
+    toSel.value   = tmp;
+    recalc();
+  });
+
+  var urgency = 1;
+  document.querySelectorAll('.pch-urg-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.pch-urg-btn').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      urgency = parseFloat(btn.dataset.urgency);
+      recalc();
+    });
+  });
+
+  function fmtPrice(p) {
+    return 'от ' + (Math.round(p / 50) * 50).toLocaleString('ru-RU') + ' ₽';
+  }
+  function fmtDays(d) {
+    if (d === 1) return '1 день';
+    if (d >= 2 && d <= 4) return d + ' дня';
+    return d + ' дней';
+  }
+
+  function recalc() {
+    var fromMult  = LANGS[parseInt(fromSel.value)].mult;
+    var toMult    = LANGS[parseInt(toSel.value)].mult;
+    var langMult  = Math.max(fromMult, toMult);
+    var baseRate  = parseInt(document.getElementById('pch-doctype').value);
+    var pages     = Math.max(1, parseInt(document.getElementById('pch-pages').value) || 1);
+    var urg       = urgency;
+
+    var volDiscount = pages >= 50 ? 0.85 : pages >= 20 ? 0.92 : pages >= 10 ? 0.96 : 1;
+
+    var tiers = [
+      { id: 'ai',   mult: 0.55, pagesPerDay: 25, minDays: 1 },
+      { id: 'pro',  mult: 1.0,  pagesPerDay: 10, minDays: 2 },
+      { id: 'prem', mult: 1.6,  pagesPerDay: 7,  minDays: 3 },
+    ];
+
+    tiers.forEach(function (t) {
+      var price = pages * baseRate * langMult * urg * t.mult * volDiscount;
+      var days  = Math.max(t.minDays, Math.ceil(pages / t.pagesPerDay));
+      if (urg > 1) days = Math.max(1, Math.ceil(days / 1.5));
+
+      document.getElementById('pch-price-' + t.id).textContent = fmtPrice(price);
+      document.getElementById('pch-days-'  + t.id).textContent = fmtDays(days);
+    });
+  }
+
+  fromSel.addEventListener('change', recalc);
+  toSel.addEventListener('change', recalc);
+  document.getElementById('pch-doctype').addEventListener('change', recalc);
+  document.getElementById('pch-pages').addEventListener('input', recalc);
+
+  recalc();
+}());
+</script>
 
   <!-- Введение -->
   <section class="sec sec-intro">
@@ -51,6 +258,18 @@ get_template_part('template-parts/hero-chat-window', null, [
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
               </div>
               <div><strong>Срочность по запросу</strong><span>Экспресс-перевод с прозрачной наценкой</span></div>
+            </div>
+            <div class="intro-feat">
+              <div class="intro-feat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c1.3 0 2.54.28 3.65.77"/></svg>
+              </div>
+              <div><strong>Без предоплаты</strong><span>Начинаем работу после согласования цены</span></div>
+            </div>
+            <div class="intro-feat">
+              <div class="intro-feat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h.01M15 9h.01M9 15h6"/></svg>
+              </div>
+              <div><strong>NDA по запросу</strong><span>Конфиденциальность всех переданных материалов</span></div>
             </div>
           </div>
         </div>

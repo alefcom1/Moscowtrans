@@ -12,8 +12,9 @@
 $g1         = $args['greeting_1'] ?? 'Здравствуйте! 👋 Я Ольга, менеджер бюро переводов «Ремарка». Чем могу вам помочь сегодня?';
 $g2         = $args['greeting_2'] ?? 'Вы можете общаться со мной голосовыми сообщениями.';
 $g3         = $args['greeting_3'] ?? 'Кроме русского я понимаю английский и итальянский. 🇷🇺&nbsp;🇬🇧&nbsp;🇮🇹';
-$breadcrumb = $args['breadcrumb'] ?? '';
-$home_dots  = $args['home_dots']  ?? false;
+$breadcrumb        = $args['breadcrumb']        ?? '';
+$breadcrumb_parent = $args['breadcrumb_parent'] ?? null; // ['url'=>'...','label'=>'...']
+$home_dots         = $args['home_dots']         ?? false;
 $img_uri    = get_template_directory_uri() . '/assets/images/olga.jpg';
 ?>
 
@@ -35,6 +36,10 @@ $img_uri    = get_template_directory_uri() . '/assets/images/olga.jpg';
           <?php else: ?>
             <nav class="cw-breadcrumbs" aria-label="Хлебные крошки">
               <a href="<?php echo esc_url(home_url('/')); ?>">Главная</a>
+              <?php if ($breadcrumb_parent): ?>
+                <span class="cw-bc-sep" aria-hidden="true">›</span>
+                <a href="<?php echo esc_url($breadcrumb_parent['url']); ?>"><?php echo esc_html($breadcrumb_parent['label']); ?></a>
+              <?php endif; ?>
               <span class="cw-bc-sep" aria-hidden="true">›</span>
               <span class="cw-bc-current" aria-current="page"><?php echo esc_html($breadcrumb); ?></span>
             </nav>
