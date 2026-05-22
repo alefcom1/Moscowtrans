@@ -1310,7 +1310,6 @@ a.sb-item { text-decoration: none; }
   position: relative;
   display: flex;
   height: calc(100vh - var(--header-h));
-  overflow: hidden;
 }
 
 /* Тёмный overlay для читаемости чата */

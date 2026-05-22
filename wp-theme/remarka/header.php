@@ -3,6 +3,7 @@
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>(function(){var t=localStorage.getItem('remarka.theme');document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark');})();</script>
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
