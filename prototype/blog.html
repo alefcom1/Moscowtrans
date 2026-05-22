@@ -764,7 +764,7 @@
     // ─── Logo theme swap ───────────────────────────────────────
     function updateLogos() {
       const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      const src = isDark ? 'assets/logo-dark.png' : 'assets/logo-light.png';
+      const src = isDark ? '/assets/logo-dark.png' : '/assets/logo-light.png';
       document.querySelectorAll('#logo-img, #footer-logo').forEach(img => img.src = src);
     }
     updateLogos();
