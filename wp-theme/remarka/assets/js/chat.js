@@ -385,40 +385,46 @@
     const dot = appendTyping();
     let reply = null;
 
-    if (WORKER_URL) {
-      try {
-        const res = await fetch(WORKER_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ messages: history })
-        });
-        if (res.ok) {
-          const data = await res.json();
-          const candidate = (data.text || data.reply || '').trim();
-          if (candidate && candidate.toLowerCase() !== 'ответ недоступен' && candidate.length > 5) {
-            reply = candidate;
+    try {
+      if (WORKER_URL) {
+        try {
+          const ctrl = new AbortController();
+          const timer = setTimeout(() => ctrl.abort(), 8000);
+          const res = await fetch(WORKER_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ messages: history }),
+            signal: ctrl.signal
+          });
+          clearTimeout(timer);
+          if (res.ok) {
+            const data = await res.json();
+            const candidate = (data.text || data.reply || '').trim();
+            if (candidate && candidate.toLowerCase() !== 'ответ недоступен' && candidate.length > 5) {
+              reply = candidate;
+            }
           }
+        } catch (e) {
+          console.warn('Worker fetch error:', e);
         }
-      } catch (e) {
-        console.warn('Worker fetch error:', e);
       }
+
+      if (!reply) reply = smartReply(history);
+
+      dot.remove();
+
+      if (reply) {
+        appendBub(reply, 'assistant');
+        history.push({ role: 'assistant', content: reply });
+        sayOlga(reply);
+      } else {
+        showOfflineFallback(text);
+      }
+    } finally {
+      inputEl.disabled = false;
+      sendBtn.disabled = false;
+      inputEl.focus();
     }
-
-    if (!reply) reply = smartReply(history);
-
-    dot.remove();
-
-    if (reply) {
-      appendBub(reply, 'assistant');
-      history.push({ role: 'assistant', content: reply });
-      sayOlga(reply);
-    } else {
-      showOfflineFallback(text);
-    }
-
-    inputEl.disabled = false;
-    sendBtn.disabled = false;
-    inputEl.focus();
   }
 
   sendBtn.addEventListener('click', send);
