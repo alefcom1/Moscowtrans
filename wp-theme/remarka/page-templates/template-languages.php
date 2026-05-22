@@ -29,21 +29,43 @@ get_template_part('template-parts/hero-chat-window', null, [
           <div class="lang-pills-wrap">
             <?php
             $langs = [
-              ['🇬🇧', 'Английский'], ['🇩🇪', 'Немецкий'], ['🇫🇷', 'Французский'],
-              ['🇮🇹', 'Итальянский'], ['🇪🇸', 'Испанский'], ['🇵🇹', 'Португальский'],
-              ['🇨🇳', 'Китайский'], ['🇯🇵', 'Японский'], ['🇸🇦', 'Арабский'],
-              ['🇰🇷', 'Корейский'], ['🇳🇱', 'Нидерландский'], ['🇵🇱', 'Польский'],
-              ['🇨🇿', 'Чешский'], ['🇸🇰', 'Словацкий'], ['🇭🇺', 'Венгерский'],
-              ['🇷🇴', 'Румынский'], ['🇧🇬', 'Болгарский'], ['🇷🇸', 'Сербский'],
-              ['🇭🇷', 'Хорватский'], ['🇸🇮', 'Словенский'], ['🇬🇷', 'Греческий'],
-              ['🇫🇮', 'Финский'], ['🇸🇪', 'Шведский'], ['🇳🇴', 'Норвежский'],
-              ['🇩🇰', 'Датский'], ['🇪🇪', 'Эстонский'], ['🇱🇻', 'Латышский'],
-              ['🇱🇹', 'Литовский'], ['🇺🇦', 'Украинский'], ['🇧🇾', 'Белорусский'],
-              ['🇰🇿', 'Казахский'], ['🇦🇿', 'Азербайджанский'], ['🇦🇲', 'Армянский'],
-              ['🇬🇪', 'Грузинский'],
+              ['🇬🇧', 'Английский',      'perevod-na-angliyskiy'],
+              ['🇩🇪', 'Немецкий',         'perevod-na-nemetskiy'],
+              ['🇫🇷', 'Французский',      'perevod-na-frantsuzskiy'],
+              ['🇮🇹', 'Итальянский',      'perevod-na-italyanskiy'],
+              ['🇪🇸', 'Испанский',        'perevod-na-ispanskiy'],
+              ['🇵🇹', 'Португальский',    'perevod-na-portugalskiy'],
+              ['🇨🇳', 'Китайский',        'perevod-na-kitayskiy'],
+              ['🇯🇵', 'Японский',         'perevod-na-yaponskiy'],
+              ['🇸🇦', 'Арабский',         'perevod-na-arabskiy'],
+              ['🇰🇷', 'Корейский',        'perevod-na-koreyskiy'],
+              ['🇳🇱', 'Нидерландский',    'perevod-na-niderlandskiy'],
+              ['🇵🇱', 'Польский',         'perevod-na-polskiy'],
+              ['🇨🇿', 'Чешский',          'perevod-na-cheshskiy'],
+              ['🇸🇰', 'Словацкий',        'perevod-na-slovatskiy'],
+              ['🇭🇺', 'Венгерский',       'perevod-na-vengerskiy'],
+              ['🇷🇴', 'Румынский',        'perevod-na-rumynskiy'],
+              ['🇧🇬', 'Болгарский',       'perevod-na-bolgarskiy'],
+              ['🇷🇸', 'Сербский',         'perevod-na-serbskiy'],
+              ['🇭🇷', 'Хорватский',       'perevod-na-khorvatskiy'],
+              ['🇸🇮', 'Словенский',       'perevod-na-slovenskiy'],
+              ['🇬🇷', 'Греческий',        'perevod-na-grecheskiy'],
+              ['🇫🇮', 'Финский',          'perevod-na-finskiy'],
+              ['🇸🇪', 'Шведский',         'perevod-na-shvedskiy'],
+              ['🇳🇴', 'Норвежский',       'perevod-na-norvezhskiy'],
+              ['🇩🇰', 'Датский',          'perevod-na-datskiy'],
+              ['🇪🇪', 'Эстонский',        'perevod-na-estonskiy'],
+              ['🇱🇻', 'Латышский',        'perevod-na-latyshskiy'],
+              ['🇱🇹', 'Литовский',        'perevod-na-litovskiy'],
+              ['🇺🇦', 'Украинский',       'perevod-na-ukrainskiy'],
+              ['🇧🇾', 'Белорусский',      'perevod-na-belorusskiy'],
+              ['🇰🇿', 'Казахский',        'perevod-na-kazakhskiy'],
+              ['🇦🇿', 'Азербайджанский',  'perevod-na-azerbaydzhanskiy'],
+              ['🇦🇲', 'Армянский',        'perevod-na-armyanskiy'],
+              ['🇬🇪', 'Грузинский',       'perevod-na-gruzinskiy'],
             ];
             foreach ($langs as $l) {
-              echo '<span class="lang-pill">' . $l[0] . ' ' . esc_html($l[1]) . '</span>';
+              echo '<a href="/' . $l[2] . '/" class="lang-pill">' . $l[0] . ' ' . esc_html($l[1]) . '</a>';
             }
             ?>
           </div>
@@ -61,7 +83,7 @@ get_template_part('template-parts/hero-chat-window', null, [
       </div>
       <div class="fl-grid">
 
-        <div class="doc-ref-card">
+        <a href="/perevod-na-angliyskiy/" class="doc-ref-card">
           <span class="lang-flag-big">🇬🇧</span>
           <strong>Английский</strong>
           <ul class="lang-specs">
@@ -71,9 +93,9 @@ get_template_part('template-parts/hero-chat-window', null, [
             <li>Финансовая отчётность МСФО</li>
           </ul>
           <span class="lang-price">от 400 ₽/стр.</span>
-        </div>
+        </a>
 
-        <div class="doc-ref-card">
+        <a href="/perevod-na-nemetskiy/" class="doc-ref-card">
           <span class="lang-flag-big">🇩🇪</span>
           <strong>Немецкий</strong>
           <ul class="lang-specs">
@@ -83,9 +105,9 @@ get_template_part('template-parts/hero-chat-window', null, [
             <li>Стандарты DIN/VDE</li>
           </ul>
           <span class="lang-price">от 600 ₽/стр.</span>
-        </div>
+        </a>
 
-        <div class="doc-ref-card">
+        <a href="/perevod-na-frantsuzskiy/" class="doc-ref-card">
           <span class="lang-flag-big">🇫🇷</span>
           <strong>Французский</strong>
           <ul class="lang-specs">
@@ -95,9 +117,9 @@ get_template_part('template-parts/hero-chat-window', null, [
             <li>Корпоративная переписка</li>
           </ul>
           <span class="lang-price">от 600 ₽/стр.</span>
-        </div>
+        </a>
 
-        <div class="doc-ref-card">
+        <a href="/perevod-na-italyanskiy/" class="doc-ref-card">
           <span class="lang-flag-big">🇮🇹</span>
           <strong>Итальянский</strong>
           <ul class="lang-specs">
@@ -107,9 +129,9 @@ get_template_part('template-parts/hero-chat-window', null, [
             <li>Пищевая промышленность</li>
           </ul>
           <span class="lang-price">от 600 ₽/стр.</span>
-        </div>
+        </a>
 
-        <div class="doc-ref-card">
+        <a href="/perevod-na-kitayskiy/" class="doc-ref-card">
           <span class="lang-flag-big">🇨🇳</span>
           <strong>Китайский</strong>
           <ul class="lang-specs">
@@ -119,9 +141,9 @@ get_template_part('template-parts/hero-chat-window', null, [
             <li>Сертификаты соответствия</li>
           </ul>
           <span class="lang-price">от 1 000 ₽/стр.</span>
-        </div>
+        </a>
 
-        <div class="doc-ref-card">
+        <a href="/perevod-na-arabskiy/" class="doc-ref-card">
           <span class="lang-flag-big">🇸🇦</span>
           <strong>Арабский</strong>
           <ul class="lang-specs">
@@ -131,7 +153,7 @@ get_template_part('template-parts/hero-chat-window', null, [
             <li>Корпоративная отчётность</li>
           </ul>
           <span class="lang-price">от 800 ₽/стр.</span>
-        </div>
+        </a>
 
       </div>
     </div>
@@ -156,30 +178,30 @@ get_template_part('template-parts/hero-chat-window', null, [
           <div class="lang-body">
             <table class="lang-table">
               <tbody>
-                <tr><td>Английский</td><td>от 400 ₽/стр.</td></tr>
-                <tr><td>Болгарский</td><td>от 800 ₽/стр.</td></tr>
-                <tr><td>Венгерский</td><td>от 900 ₽/стр.</td></tr>
-                <tr><td>Греческий</td><td>от 800 ₽/стр.</td></tr>
-                <tr><td>Датский</td><td>от 1 000 ₽/стр.</td></tr>
-                <tr><td>Испанский</td><td>от 600 ₽/стр.</td></tr>
-                <tr><td>Итальянский</td><td>от 600 ₽/стр.</td></tr>
-                <tr><td>Латышский</td><td>от 800 ₽/стр.</td></tr>
-                <tr><td>Литовский</td><td>от 800 ₽/стр.</td></tr>
-                <tr><td>Немецкий</td><td>от 600 ₽/стр.</td></tr>
-                <tr><td>Нидерландский</td><td>от 800 ₽/стр.</td></tr>
-                <tr><td>Норвежский</td><td>от 1 000 ₽/стр.</td></tr>
-                <tr><td>Польский</td><td>от 600 ₽/стр.</td></tr>
-                <tr><td>Португальский</td><td>от 600 ₽/стр.</td></tr>
-                <tr><td>Румынский</td><td>от 600 ₽/стр.</td></tr>
-                <tr><td>Сербский</td><td>от 600 ₽/стр.</td></tr>
-                <tr><td>Словацкий</td><td>от 600 ₽/стр.</td></tr>
-                <tr><td>Словенский</td><td>от 800 ₽/стр.</td></tr>
-                <tr><td>Финский</td><td>от 1 000 ₽/стр.</td></tr>
-                <tr><td>Французский</td><td>от 600 ₽/стр.</td></tr>
-                <tr><td>Хорватский</td><td>от 600 ₽/стр.</td></tr>
-                <tr><td>Чешский</td><td>от 600 ₽/стр.</td></tr>
-                <tr><td>Шведский</td><td>от 1 000 ₽/стр.</td></tr>
-                <tr><td>Эстонский</td><td>от 800 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-angliyskiy/">Английский</a></td><td>от 400 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-bolgarskiy/">Болгарский</a></td><td>от 800 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-vengerskiy/">Венгерский</a></td><td>от 900 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-grecheskiy/">Греческий</a></td><td>от 800 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-datskiy/">Датский</a></td><td>от 1 000 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-ispanskiy/">Испанский</a></td><td>от 600 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-italyanskiy/">Итальянский</a></td><td>от 600 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-latyshskiy/">Латышский</a></td><td>от 800 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-litovskiy/">Литовский</a></td><td>от 800 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-nemetskiy/">Немецкий</a></td><td>от 600 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-niderlandskiy/">Нидерландский</a></td><td>от 800 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-norvezhskiy/">Норвежский</a></td><td>от 1 000 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-polskiy/">Польский</a></td><td>от 600 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-portugalskiy/">Португальский</a></td><td>от 600 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-rumynskiy/">Румынский</a></td><td>от 600 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-serbskiy/">Сербский</a></td><td>от 600 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-slovatskiy/">Словацкий</a></td><td>от 600 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-slovenskiy/">Словенский</a></td><td>от 800 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-finskiy/">Финский</a></td><td>от 1 000 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-frantsuzskiy/">Французский</a></td><td>от 600 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-khorvatskiy/">Хорватский</a></td><td>от 600 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-cheshskiy/">Чешский</a></td><td>от 600 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-shvedskiy/">Шведский</a></td><td>от 1 000 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-estonskiy/">Эстонский</a></td><td>от 800 ₽/стр.</td></tr>
               </tbody>
             </table>
           </div>
@@ -196,17 +218,17 @@ get_template_part('template-parts/hero-chat-window', null, [
             <table class="lang-table">
               <tbody>
                 <tr><td>Абхазский</td><td>от 600 ₽/стр.</td></tr>
-                <tr><td>Азербайджанский</td><td>от 500 ₽/стр.</td></tr>
-                <tr><td>Армянский</td><td>от 600 ₽/стр.</td></tr>
-                <tr><td>Белорусский</td><td>от 600 ₽/стр.</td></tr>
-                <tr><td>Грузинский</td><td>от 600 ₽/стр.</td></tr>
-                <tr><td>Казахский</td><td>от 600 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-azerbaydzhanskiy/">Азербайджанский</a></td><td>от 500 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-armyanskiy/">Армянский</a></td><td>от 600 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-belorusskiy/">Белорусский</a></td><td>от 600 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-gruzinskiy/">Грузинский</a></td><td>от 600 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-kazakhskiy/">Казахский</a></td><td>от 600 ₽/стр.</td></tr>
                 <tr><td>Киргизский</td><td>от 600 ₽/стр.</td></tr>
                 <tr><td>Молдавский</td><td>от 600 ₽/стр.</td></tr>
                 <tr><td>Таджикский</td><td>от 600 ₽/стр.</td></tr>
                 <tr><td>Туркменский</td><td>от 600 ₽/стр.</td></tr>
                 <tr><td>Узбекский</td><td>от 600 ₽/стр.</td></tr>
-                <tr><td>Украинский</td><td>от 400 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-ukrainskiy/">Украинский</a></td><td>от 400 ₽/стр.</td></tr>
               </tbody>
             </table>
           </div>
@@ -222,7 +244,7 @@ get_template_part('template-parts/hero-chat-window', null, [
           <div class="lang-body">
             <table class="lang-table">
               <tbody>
-                <tr><td>Арабский</td><td>от 800 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-arabskiy/">Арабский</a></td><td>от 800 ₽/стр.</td></tr>
                 <tr><td>Иврит</td><td>от 1 000 ₽/стр.</td></tr>
                 <tr><td>Персидский / Фарси</td><td>от 800 ₽/стр.</td></tr>
                 <tr><td>Турецкий</td><td>от 600 ₽/стр.</td></tr>
@@ -243,11 +265,11 @@ get_template_part('template-parts/hero-chat-window', null, [
               <tbody>
                 <tr><td>Вьетнамский</td><td>от 1 200 ₽/стр.</td></tr>
                 <tr><td>Индонезийский</td><td>от 1 000 ₽/стр.</td></tr>
-                <tr><td>Китайский</td><td>от 1 000 ₽/стр.</td></tr>
-                <tr><td>Корейский</td><td>от 1 000 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-kitayskiy/">Китайский</a></td><td>от 1 000 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-koreyskiy/">Корейский</a></td><td>от 1 000 ₽/стр.</td></tr>
                 <tr><td>Тайский</td><td>от 1 200 ₽/стр.</td></tr>
                 <tr><td>Хинди</td><td>от 1 000 ₽/стр.</td></tr>
-                <tr><td>Японский</td><td>от 1 200 ₽/стр.</td></tr>
+                <tr><td><a href="/perevod-na-yaponskiy/">Японский</a></td><td>от 1 200 ₽/стр.</td></tr>
               </tbody>
             </table>
           </div>

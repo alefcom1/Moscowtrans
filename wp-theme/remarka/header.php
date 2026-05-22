@@ -3,6 +3,7 @@
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>(function(){var t=localStorage.getItem('remarka.theme');document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark');})();</script>
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -81,26 +82,26 @@
             <div class="dd-lang-box">
               <div class="dd-lang-box-label">Топ языков</div>
               <div class="dd-lang-grid">
-                <a href="/yazyki-perevoda/" class="dd-lang-item">🇬🇧 Английский</a>
-                <a href="/yazyki-perevoda/" class="dd-lang-item">🇩🇪 Немецкий</a>
-                <a href="/yazyki-perevoda/" class="dd-lang-item">🇫🇷 Французский</a>
-                <a href="/yazyki-perevoda/" class="dd-lang-item">🇨🇳 Китайский</a>
-                <a href="/yazyki-perevoda/" class="dd-lang-item">🇯🇵 Японский</a>
-                <a href="/yazyki-perevoda/" class="dd-lang-item">🇰🇷 Корейский</a>
-                <a href="/yazyki-perevoda/" class="dd-lang-item">🇸🇦 Арабский</a>
-                <a href="/yazyki-perevoda/" class="dd-lang-item">🇪🇸 Испанский</a>
-                <a href="/yazyki-perevoda/" class="dd-lang-item">🇮🇹 Итальянский</a>
+                <a href="/perevod-na-angliyskiy/" class="dd-lang-item">🇬🇧 Английский</a>
+                <a href="/perevod-na-nemetskiy/" class="dd-lang-item">🇩🇪 Немецкий</a>
+                <a href="/perevod-na-frantsuzskiy/" class="dd-lang-item">🇫🇷 Французский</a>
+                <a href="/perevod-na-kitayskiy/" class="dd-lang-item">🇨🇳 Китайский</a>
+                <a href="/perevod-na-yaponskiy/" class="dd-lang-item">🇯🇵 Японский</a>
+                <a href="/perevod-na-koreyskiy/" class="dd-lang-item">🇰🇷 Корейский</a>
+                <a href="/perevod-na-arabskiy/" class="dd-lang-item">🇸🇦 Арабский</a>
+                <a href="/perevod-na-ispanskiy/" class="dd-lang-item">🇪🇸 Испанский</a>
+                <a href="/perevod-na-italyanskiy/" class="dd-lang-item">🇮🇹 Итальянский</a>
               </div>
             </div>
             <div class="dd-lang-more">
-              <a href="/yazyki-perevoda/" class="dd-lang-chip">🇦🇲 Армянский</a>
-              <a href="/yazyki-perevoda/" class="dd-lang-chip">🇦🇿 Азербайджанский</a>
-              <a href="/yazyki-perevoda/" class="dd-lang-chip">🇬🇪 Грузинский</a>
-              <a href="/yazyki-perevoda/" class="dd-lang-chip">🇺🇦 Украинский</a>
-              <a href="/yazyki-perevoda/" class="dd-lang-chip">🇧🇾 Белорусский</a>
+              <a href="/perevod-na-armyanskiy/" class="dd-lang-chip">🇦🇲 Армянский</a>
+              <a href="/perevod-na-azerbaydzhanskiy/" class="dd-lang-chip">🇦🇿 Азербайджанский</a>
+              <a href="/perevod-na-gruzinskiy/" class="dd-lang-chip">🇬🇪 Грузинский</a>
+              <a href="/perevod-na-ukrainskiy/" class="dd-lang-chip">🇺🇦 Украинский</a>
+              <a href="/perevod-na-belorusskiy/" class="dd-lang-chip">🇧🇾 Белорусский</a>
               <a href="/yazyki-perevoda/" class="dd-lang-chip">🇲🇩 Молдавский</a>
               <a href="/yazyki-perevoda/" class="dd-lang-chip">🇺🇿 Узбекский</a>
-              <a href="/yazyki-perevoda/" class="dd-lang-chip">🇰🇿 Казахский</a>
+              <a href="/perevod-na-kazakhskiy/" class="dd-lang-chip">🇰🇿 Казахский</a>
               <a href="/yazyki-perevoda/" class="dd-lang-chip">🇹🇯 Таджикский</a>
               <a href="/yazyki-perevoda/" class="dd-lang-chip">🇰🇬 Киргизский</a>
             </div>

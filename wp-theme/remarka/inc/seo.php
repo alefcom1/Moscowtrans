@@ -15,12 +15,12 @@ function remarka_seo_global_schema(): void {
         '@type'     => ['LocalBusiness', 'ProfessionalService'],
         '@id'       => $site_url . '#organization',
         'name'      => 'Бюро переводов «Ремарка»',
-        'legalName' => 'ИП Климанова Ю.А.',
-        'taxID'     => '233406925261',
+        'legalName' => 'ИП Волшина Елизавета Максимовна',
+        'taxID'     => '231149349191',
         'foundingDate' => '2001',
         'url'       => $site_url,
-        'logo'      => $site_url . 'wp-content/themes/remarka/assets/images/logo.svg',
-        'image'     => $site_url . 'wp-content/themes/remarka/assets/images/og-image.jpg',
+        'logo'      => $site_url . 'wp-content/themes/remarka/assets/images/logo-dark.png',
+        'image'     => $site_url . 'wp-content/themes/remarka/assets/images/logo-dark.png',
         'telephone' => '+74959704413',
         'email'     => 'info@moscowtrans.ru',
         'address'   => [
@@ -147,7 +147,7 @@ function remarka_seo_og_tags(): void {
 
     $title    = wp_get_document_title();
     $desc     = '';
-    $image    = home_url( '/wp-content/themes/remarka/assets/images/og-image.jpg' );
+    $image    = home_url( '/wp-content/themes/remarka/assets/images/logo-dark.png' );
     $url      = home_url( '/' );
     $type     = 'website';
 
@@ -240,8 +240,8 @@ function remarka_seo_contact_schema(): void {
         '@type'     => ['LocalBusiness', 'ProfessionalService'],
         '@id'       => $site_url . '#organization',
         'name'      => 'Бюро переводов «Ремарка»',
-        'legalName' => 'ИП Климанова Ю.А.',
-        'taxID'     => '233406925261',
+        'legalName' => 'ИП Волшина Елизавета Максимовна',
+        'taxID'     => '231149349191',
         'foundingDate' => '2001',
         'url'       => $site_url,
         'telephone' => '+74959704413',
