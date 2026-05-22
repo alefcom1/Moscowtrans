@@ -8,7 +8,7 @@
  * Safe to run multiple times — skips pages that already exist by slug.
  */
 
-add_action('admin_init', function () {
+add_action('init', function () {
     if (empty($_GET['remarka_setup_pages']) || !current_user_can('manage_options')) {
         return;
     }
