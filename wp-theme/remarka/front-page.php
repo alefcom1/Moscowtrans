@@ -13,6 +13,8 @@ get_header();
       'greeting_3' => 'Кроме русского я понимаю английский и итальянский. 🇷🇺&nbsp;🇬🇧&nbsp;🇮🇹',
   ]); ?>
 
+  </div><!-- /hero-bg-block -->
+
   <!-- ════════════════ SERVICES ════════════════ -->
   <section class="services-section" id="services">
     <div class="services-row">
@@ -44,8 +46,6 @@ get_header();
     </div>
   </section>
 
-  </div><!-- /hero-bg-block -->
-
   <!-- ════════════════ LANGUAGES ════════════════ -->
   <section class="sec sec-langs" id="languages">
     <div class="container">
@@ -56,8 +56,8 @@ get_header();
         </div>
       </div>
       <div class="langs-cloud">
-        <span class="lang-pill">🇬🇧 Английский</span><span class="lang-pill">🇩🇪 Немецкий</span><span class="lang-pill">🇫🇷 Французский</span><span class="lang-pill">🇪🇸 Испанский</span><span class="lang-pill">🇮🇹 Итальянский</span><span class="lang-pill">🇵🇹 Португальский</span><span class="lang-pill">🇨🇳 Китайский</span><span class="lang-pill">🇯🇵 Японский</span><span class="lang-pill">🇸🇦 Арабский</span><span class="lang-pill">🇰🇷 Корейский</span><span class="lang-pill">🇹🇷 Турецкий</span><span class="lang-pill">🇮🇷 Персидский</span><span class="lang-pill">🇮🇳 Хинди</span><span class="lang-pill">🇻🇳 Вьетнамский</span><span class="lang-pill">🇹🇭 Тайский</span><span class="lang-pill">🇮🇩 Индонезийский</span><span class="lang-pill">🇵🇱 Польский</span><span class="lang-pill">🇳🇱 Нидерландский</span><span class="lang-pill">🇸🇪 Шведский</span><span class="lang-pill">🇳🇴 Норвежский</span><span class="lang-pill">🇩🇰 Датский</span><span class="lang-pill">🇫🇮 Финский</span><span class="lang-pill">🇨🇿 Чешский</span><span class="lang-pill">🇷🇴 Румынский</span><span class="lang-pill">🇭🇺 Венгерский</span><span class="lang-pill">🇧🇬 Болгарский</span><span class="lang-pill">🇬🇷 Греческий</span><span class="lang-pill">🇺🇦 Украинский</span><span class="lang-pill">🇧🇾 Белорусский</span><span class="lang-pill">🇰🇿 Казахский</span><span class="lang-pill">🇦🇲 Армянский</span><span class="lang-pill">🇬🇪 Грузинский</span><span class="lang-pill">🇦🇿 Азербайджанский</span><span class="lang-pill">🇮🇱 Иврит</span>
-        <span class="lang-pill lang-pill--more">и другие…</span>
+        <a href="/perevod-na-angliyskiy/" class="lang-pill">🇬🇧 Английский</a><a href="/perevod-na-nemetskiy/" class="lang-pill">🇩🇪 Немецкий</a><a href="/perevod-na-frantsuzskiy/" class="lang-pill">🇫🇷 Французский</a><a href="/perevod-na-ispanskiy/" class="lang-pill">🇪🇸 Испанский</a><a href="/perevod-na-italyanskiy/" class="lang-pill">🇮🇹 Итальянский</a><a href="/perevod-na-portugalskiy/" class="lang-pill">🇵🇹 Португальский</a><a href="/perevod-na-kitayskiy/" class="lang-pill">🇨🇳 Китайский</a><a href="/perevod-na-yaponskiy/" class="lang-pill">🇯🇵 Японский</a><a href="/perevod-na-arabskiy/" class="lang-pill">🇸🇦 Арабский</a><a href="/perevod-na-koreyskiy/" class="lang-pill">🇰🇷 Корейский</a><span class="lang-pill">🇹🇷 Турецкий</span><span class="lang-pill">🇮🇷 Персидский</span><span class="lang-pill">🇮🇳 Хинди</span><span class="lang-pill">🇻🇳 Вьетнамский</span><span class="lang-pill">🇹🇭 Тайский</span><span class="lang-pill">🇮🇩 Индонезийский</span><a href="/perevod-na-polskiy/" class="lang-pill">🇵🇱 Польский</a><a href="/perevod-na-niderlandskiy/" class="lang-pill">🇳🇱 Нидерландский</a><a href="/perevod-na-shvedskiy/" class="lang-pill">🇸🇪 Шведский</a><a href="/perevod-na-norvezhskiy/" class="lang-pill">🇳🇴 Норвежский</a><a href="/perevod-na-datskiy/" class="lang-pill">🇩🇰 Датский</a><a href="/perevod-na-finskiy/" class="lang-pill">🇫🇮 Финский</a><a href="/perevod-na-cheshskiy/" class="lang-pill">🇨🇿 Чешский</a><a href="/perevod-na-rumynskiy/" class="lang-pill">🇷🇴 Румынский</a><a href="/perevod-na-vengerskiy/" class="lang-pill">🇭🇺 Венгерский</a><a href="/perevod-na-bolgarskiy/" class="lang-pill">🇧🇬 Болгарский</a><a href="/perevod-na-grecheskiy/" class="lang-pill">🇬🇷 Греческий</a><a href="/perevod-na-ukrainskiy/" class="lang-pill">🇺🇦 Украинский</a><a href="/perevod-na-belorusskiy/" class="lang-pill">🇧🇾 Белорусский</a><a href="/perevod-na-kazakhskiy/" class="lang-pill">🇰🇿 Казахский</a><a href="/perevod-na-armyanskiy/" class="lang-pill">🇦🇲 Армянский</a><a href="/perevod-na-gruzinskiy/" class="lang-pill">🇬🇪 Грузинский</a><a href="/perevod-na-azerbaydzhanskiy/" class="lang-pill">🇦🇿 Азербайджанский</a><span class="lang-pill">🇮🇱 Иврит</span>
+        <a href="/yazyki-perevoda/" class="lang-pill lang-pill--more">и другие…</a>
       </div>
     </div>
   </section>
