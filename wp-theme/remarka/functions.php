@@ -9,6 +9,14 @@ require_once get_template_directory() . '/inc/enqueue.php';
 require_once get_template_directory() . '/inc/post-types.php';
 require_once get_template_directory() . '/inc/ajax.php';
 require_once get_template_directory() . '/inc/seo.php';
+require_once get_template_directory() . '/inc/setup-pages.php';
+
+// setup-subpages.php is 6 MB — load only when explicitly triggered
+add_action('init', function () {
+    if (!empty($_GET['remarka_setup_subpages']) && current_user_can('manage_options')) {
+        require_once get_template_directory() . '/inc/setup-subpages.php';
+    }
+}, 1);
 
 /**
  * Helper: get custom field with fallback.
