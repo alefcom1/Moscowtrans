@@ -3387,3 +3387,83 @@ body.js-loaded .anim-fade.is-visible {
 :root[data-theme="light"] .pch-tier-name { color: var(--text-secondary); }
 :root[data-theme="light"] .pch-tier-days { color: var(--text-muted); }
 :root[data-theme="light"] .pch-disclaimer { color: var(--text-muted); }
+
+/* ============================================================
+   LANGUAGE PAGE BLOCKS — lang-intro, lang-doc-types,
+   lang-advantages, lang-faq, lang-links
+   ============================================================ */
+
+/* ── Block 2: lang-intro ── */
+.lang-intro { padding: 72px 0; background: var(--bg-elevated); }
+.lang-intro-grid { display: grid; grid-template-columns: 1fr 360px; gap: 56px; align-items: start; }
+.lang-intro-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--brand-cyan); margin: 0 0 10px; }
+.lang-intro-h2 { font-family: var(--font-display); font-size: clamp(26px, 3vw, 36px); font-weight: 700; color: var(--text-primary); margin: 0 0 14px; line-height: 1.2; }
+.lang-intro-tagline { font-size: 16px; font-weight: 600; color: var(--brand-violet); margin: 0 0 16px; }
+.lang-intro-body { font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin: 0 0 14px; }
+.lang-facts-card { background: var(--bg-primary); border: 1px solid var(--border-subtle); border-radius: var(--r-lg); padding: 24px 20px; position: sticky; top: calc(var(--header-h, 80px) + 24px); }
+.lang-facts-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); margin: 0 0 16px; }
+.lang-fact-item { display: flex; flex-direction: row; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--border-subtle); align-items: center; }
+.lang-fact-item:last-child { border-bottom: none; }
+.lang-fact-icon { flex-shrink: 0; width: 38px; height: 38px; background: var(--bg-glass); border: 1px solid var(--border-subtle); border-radius: var(--r-md); display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.lang-fact-body { display: flex; flex-direction: column; gap: 2px; }
+.lang-fact-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .06em; }
+.lang-fact-value { font-size: 15px; font-weight: 700; color: var(--text-primary); }
+@media (max-width: 900px) { .lang-intro-grid { grid-template-columns: 1fr; } .lang-facts-card { position: static; } }
+
+/* ── Block 3: lang-doc-types ── */
+.lang-doc-types { background: var(--bg-primary); padding: 72px 0; }
+.lang-doc-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+.lang-doc-card { background: var(--bg-elevated); border: 1px solid var(--border-subtle); border-radius: var(--r-md); padding: 22px 20px; display: flex; flex-direction: column; gap: 10px; transition: border-color var(--t-base), box-shadow var(--t-base), transform var(--t-base); }
+.lang-doc-card:hover { border-color: rgba(120,60,240,.35); box-shadow: 0 8px 28px rgba(120,60,240,.12); transform: translateY(-2px); }
+.lang-doc-icon { width: 40px; height: 40px; background: var(--bg-glass); border: 1px solid var(--border-subtle); border-radius: var(--r-md); display: flex; align-items: center; justify-content: center; color: var(--brand-violet); flex-shrink: 0; }
+.lang-doc-name { font-size: 14px; font-weight: 700; color: var(--text-primary); margin: 0; }
+.lang-doc-desc { font-size: 12.5px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+.lang-doc-price { font-size: 13px; font-weight: 600; color: var(--brand-cyan); margin-top: auto; }
+@media (max-width: 768px) { .lang-doc-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 480px) { .lang-doc-grid { grid-template-columns: 1fr; } }
+
+/* ── Block 4: lang-advantages ── */
+.lang-advantages { padding: 72px 0; background: var(--bg-elevated); }
+.lang-adv-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.lang-adv-card { background: var(--bg-primary); border: 1px solid var(--border-subtle); border-radius: var(--r-lg); padding: 26px 22px; display: flex; flex-direction: column; gap: 12px; transition: border-color var(--t-base), transform var(--t-base); }
+.lang-adv-card:hover { border-color: rgba(120,60,240,.30); transform: translateY(-2px); }
+.lang-adv-icon { width: 44px; height: 44px; background: rgba(120,60,240,.10); border: 1px solid rgba(120,60,240,.18); border-radius: var(--r-md); display: flex; align-items: center; justify-content: center; color: #a78bfa; flex-shrink: 0; }
+.lang-adv-title { font-size: 14.5px; font-weight: 700; color: var(--text-primary); margin: 0; }
+.lang-adv-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.55; margin: 0; }
+@media (max-width: 768px) { .lang-adv-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 480px) { .lang-adv-grid { grid-template-columns: 1fr; } }
+
+/* ── Block 9: lang-faq ── */
+.lang-faq { padding: 72px 0; background: var(--bg-elevated); }
+.lang-faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+.lang-faq-details { background: var(--bg-primary); border: 1px solid var(--border-subtle); border-radius: var(--r-md); overflow: hidden; transition: border-color var(--t-base); }
+.lang-faq-details[open] { border-color: rgba(120,60,240,.25); }
+.lang-faq-summary { padding: 18px 22px; cursor: pointer; font-size: 15px; font-weight: 600; color: var(--text-primary); display: flex; justify-content: space-between; align-items: center; gap: 12px; list-style: none; user-select: none; }
+.lang-faq-summary::-webkit-details-marker { display: none; }
+.lang-faq-summary::after { content: "+"; font-size: 20px; font-weight: 400; color: var(--brand-violet); line-height: 1; flex-shrink: 0; }
+.lang-faq-details[open] .lang-faq-summary::after { content: "−"; }
+.lang-faq-body { padding: 0 22px 18px; font-size: 14px; color: var(--text-secondary); line-height: 1.65; }
+
+/* ── Block 10: lang-links ── */
+.lang-links { padding: 48px 0; background: var(--bg-primary); }
+.lang-links-inner { max-width: 720px; margin: 0 auto; text-align: center; }
+.lang-links-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .1em; margin: 0 0 16px; }
+.lang-links-row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.lang-link-pill { display: inline-flex; align-items: center; padding: 9px 18px; border: 1px solid var(--border-subtle); border-radius: 50px; font-size: 13.5px; color: var(--text-secondary); text-decoration: none; transition: border-color var(--t-fast), color var(--t-fast), background var(--t-fast); }
+.lang-link-pill:hover { border-color: var(--brand-violet); color: var(--brand-violet); background: rgba(120,60,240,.06); }
+.lang-link-pill--current { background: rgba(120,60,240,.08); border-color: rgba(120,60,240,.30); color: var(--brand-violet); pointer-events: none; cursor: default; }
+
+/* Light theme */
+:root[data-theme="light"] .lang-intro-label { color: #0078c8; }
+:root[data-theme="light"] .lang-facts-card { background: #fff; border-color: rgba(10,14,39,.08); }
+:root[data-theme="light"] .lang-fact-icon { background: rgba(255,255,255,.7); border-color: rgba(10,14,39,.08); }
+:root[data-theme="light"] .lang-doc-card { background: #fff; border-color: rgba(10,14,39,.07); }
+:root[data-theme="light"] .lang-doc-card:hover { border-color: rgba(120,60,240,.30); box-shadow: 0 8px 24px rgba(120,60,240,.08); }
+:root[data-theme="light"] .lang-doc-icon { background: rgba(255,255,255,.7); border-color: rgba(10,14,39,.08); }
+:root[data-theme="light"] .lang-adv-card { background: #fff; border-color: rgba(10,14,39,.07); }
+:root[data-theme="light"] .lang-adv-card:hover { border-color: rgba(120,60,240,.25); }
+:root[data-theme="light"] .lang-faq-details { background: #fff; border-color: rgba(10,14,39,.07); }
+:root[data-theme="light"] .lang-faq-details[open] { border-color: rgba(120,60,240,.20); }
+:root[data-theme="light"] .lang-link-pill { border-color: rgba(10,14,39,.10); color: rgba(10,14,39,.65); }
+:root[data-theme="light"] .lang-link-pill:hover { border-color: #783CF0; color: #783CF0; background: rgba(120,60,240,.05); }
+:root[data-theme="light"] .lang-link-pill--current { background: rgba(120,60,240,.07); border-color: rgba(120,60,240,.25); color: #783CF0; }

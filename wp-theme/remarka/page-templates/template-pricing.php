@@ -259,6 +259,18 @@ get_header();
               </div>
               <div><strong>Срочность по запросу</strong><span>Экспресс-перевод с прозрачной наценкой</span></div>
             </div>
+            <div class="intro-feat">
+              <div class="intro-feat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c1.3 0 2.54.28 3.65.77"/></svg>
+              </div>
+              <div><strong>Без предоплаты</strong><span>Начинаем работу после согласования цены</span></div>
+            </div>
+            <div class="intro-feat">
+              <div class="intro-feat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h.01M15 9h.01M9 15h6"/></svg>
+              </div>
+              <div><strong>NDA по запросу</strong><span>Конфиденциальность всех переданных материалов</span></div>
+            </div>
           </div>
         </div>
       </div>
