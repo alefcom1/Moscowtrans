@@ -18,7 +18,7 @@ add_action('init', function () {
     echo '<pre style="margin:40px auto;max-width:900px;font-family:monospace;font-size:13px">';
     echo '<strong>Remarka — page setup complete</strong>' . "\n\n";
     foreach ($results as $r) {
-        $icon = $r['action'] === 'created' ? '✅' : ($r['action'] === 'skipped' ? '⏭' : '❌');
+        $icon = $r['action'] === 'created' ? '✅' : ($r['action'] === 'updated' ? '🔄' : ($r['action'] === 'skipped' ? '⏭' : '❌'));
         echo $icon . '  ' . str_pad($r['action'], 10) . ' /' . $r['slug'] . ' — ' . $r['title'] . "\n";
     }
     echo '</pre>';
@@ -216,10 +216,19 @@ function remarka_insert_page(array $args): array {
     $title    = $args['title'];
     $template = $args['template'] ?? '';
 
-    /* Check if page already exists */
     $existing = get_page_by_path($slug, OBJECT, 'page');
+
     if ($existing) {
-        return ['action' => 'skipped', 'slug' => $slug, 'title' => $title, 'id' => $existing->ID];
+        /* Update existing page: clear old content, assign correct template */
+        wp_update_post([
+            'ID'           => $existing->ID,
+            'post_content' => '',
+            'post_status'  => 'publish',
+        ]);
+        if ($template) {
+            update_post_meta($existing->ID, '_wp_page_template', $template);
+        }
+        return ['action' => 'updated', 'slug' => $slug, 'title' => $title, 'id' => $existing->ID];
     }
 
     $id = wp_insert_post([
