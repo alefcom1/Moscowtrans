@@ -1,0 +1,83 @@
+/* ============================================================
+   REMARKA — Design Tokens
+   Брендовые цвета извлечены из логотипа.
+   ============================================================ */
+
+:root {
+  /* Brand gradient (постоянный, не зависит от темы) */
+  --brand-cyan:   #00A0F0;
+  --brand-blue:   #0078F0;
+  --brand-violet: #783CF0;
+  --brand-gradient: linear-gradient(135deg, #00A0F0 0%, #783CF0 100%);
+  --brand-gradient-soft: linear-gradient(135deg, rgba(0,160,240,0.15), rgba(120,60,240,0.15));
+
+  /* Состояния */
+  --success: #10B981;
+  --warning: #F59E0B;
+  --error:   #EF4444;
+
+  /* Типографика */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Sora', 'Inter', sans-serif;
+
+  /* Радиусы */
+  --r-sm:  6px;
+  --r-md:  10px;
+  --r-lg:  16px;
+  --r-xl:  24px;
+  --r-full: 999px;
+
+  /* Тени */
+  --shadow-glow: 0 0 40px rgba(120, 60, 240, 0.25);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.15);
+
+  /* Анимации */
+  --t-fast: 150ms ease;
+  --t-base: 250ms ease;
+  --t-slow: 400ms ease;
+
+  /* Размеры */
+  --header-h: 80px;
+  --container-max: 1280px;
+  --container-pad: 32px;
+}
+
+/* ─── Тёмная тема ───────────────────────────────────────── */
+:root[data-theme="dark"] {
+  --bg-primary:    #0A0E27;
+  --bg-secondary:  #131836;
+  --bg-elevated:   #1A1F44;
+  --bg-glass:      rgba(255, 255, 255, 0.04);
+  --bg-glass-strong: rgba(255, 255, 255, 0.08);
+  --border-glass:  rgba(255, 255, 255, 0.10);
+  --border-subtle: rgba(255, 255, 255, 0.06);
+
+  --text-primary:   #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.75);
+  --text-muted:     rgba(255, 255, 255, 0.50);
+
+  --logo-img: url('../assets/logo-dark.png');
+
+  --hero-gradient: radial-gradient(ellipse at top, rgba(120,60,240,0.18) 0%, transparent 50%),
+                   radial-gradient(ellipse at bottom, rgba(0,160,240,0.12) 0%, transparent 50%);
+}
+
+/* ─── Светлая тема ──────────────────────────────────────── */
+:root[data-theme="light"] {
+  --bg-primary:    #FFFFFF;
+  --bg-secondary:  #F8FAFC;
+  --bg-elevated:   #FFFFFF;
+  --bg-glass:      rgba(255, 255, 255, 0.70);
+  --bg-glass-strong: rgba(255, 255, 255, 0.85);
+  --border-glass:  rgba(10, 14, 39, 0.08);
+  --border-subtle: rgba(10, 14, 39, 0.05);
+
+  --text-primary:   #0A0E27;
+  --text-secondary: rgba(10, 14, 39, 0.72);
+  --text-muted:     rgba(10, 14, 39, 0.50);
+
+  --logo-img: url('../assets/logo-light.png');
+
+  --hero-gradient: radial-gradient(ellipse at top, rgba(120,60,240,0.08) 0%, transparent 50%),
+                   radial-gradient(ellipse at bottom, rgba(0,160,240,0.05) 0%, transparent 50%);
+}
