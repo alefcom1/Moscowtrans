@@ -13,8 +13,6 @@ get_header();
       'greeting_3' => 'Кроме русского я понимаю английский и итальянский. 🇷🇺&nbsp;🇬🇧&nbsp;🇮🇹',
   ]); ?>
 
-  </div><!-- /hero-bg-block -->
-
   <!-- ════════════════ SERVICES ════════════════ -->
   <section class="services-section" id="services">
     <div class="services-row">
@@ -45,6 +43,8 @@ get_header();
       </a>
     </div>
   </section>
+
+  </div><!-- /hero-bg-block -->
 
   <!-- ════════════════ LANGUAGES ════════════════ -->
   <section class="sec sec-langs" id="languages">
@@ -183,7 +183,7 @@ get_header();
         <div class="b2b-extra-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>NDA по вашей форме или нашей стандартной</span></div>
         <div class="b2b-extra-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg><span>Работаем онлайн — документы и переводы по e-mail</span></div>
         <div class="b2b-extra-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Ответ менеджера в течение 30 минут в рабочее время</span></div>
-        <div class="b2b-extra-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>ИП Климанова Ю.А. · ИНН 233406925261 · ОГРНИП 312236329700014</span></div>
+        <div class="b2b-extra-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>ИП Волшина Елизавета Максимовна · ИНН 231149349191 · ОГРНИП 323237500359402</span></div>
       </div>
     </div>
   </section>

@@ -86,9 +86,9 @@ get_header();
             <div class="req-card">
               <div class="req-card__title">Реквизиты</div>
               <div class="req-card__grid">
-                <div class="req-card__row"><span class="req-card__key">Компания</span><span class="req-card__val">ИП Климанова Юлия Анатольевна</span></div>
-                <div class="req-card__row"><span class="req-card__key">ИНН</span><span class="req-card__val">233406925261</span></div>
-                <div class="req-card__row"><span class="req-card__key">ОГРНИП</span><span class="req-card__val">312236329700014</span></div>
+                <div class="req-card__row"><span class="req-card__key">Компания</span><span class="req-card__val">ИП Волшина Елизавета Максимовна</span></div>
+                <div class="req-card__row"><span class="req-card__key">ИНН</span><span class="req-card__val">231149349191</span></div>
+                <div class="req-card__row"><span class="req-card__key">ОГРНИП</span><span class="req-card__val">323237500359402</span></div>
               </div>
             </div>
 
@@ -137,7 +137,7 @@ get_header();
           <h2 class="map-section__title">Как нас найти</h2>
           <div class="map-container">
             <iframe
-              src="https://yandex.ru/map-widget/v1/?ll=37.615839%2C55.757978&z=16&pt=37.615839%2C55.757978,pm2rdm&text=%D0%93%D0%BB%D0%B8%D0%BD%D0%B8%D1%89%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D0%B5%D1%80.%206"
+              src="https://yandex.ru/map-widget/v1/?ol=biz&oid=51867347382"
               title="Карта: Глинищевский пер., д. 6"
               loading="lazy"
               allowfullscreen
