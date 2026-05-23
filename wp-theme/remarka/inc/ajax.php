@@ -17,18 +17,20 @@ function remarka_tg(string $text): bool {
     if (!defined('REMARKA_TG_TOKEN') || !defined('REMARKA_TG_CHAT_ID')) {
         return false;
     }
-    $url  = 'https://api.telegram.org/bot' . REMARKA_TG_TOKEN . '/sendMessage';
     $args = [
         'timeout'  => 5,
-        'blocking' => false, // fire-and-forget, не тормозим ответ
-        'body'     => [
-            'chat_id'                  => REMARKA_TG_CHAT_ID,
-            'text'                     => $text,
-            'parse_mode'               => 'HTML',
-            'disable_web_page_preview' => true,
+        'blocking' => false,
+        'headers'  => [
+            'Content-Type'   => 'application/json',
+            'X-Relay-Secret' => 'Enchain111!',
         ],
+        'body' => wp_json_encode([
+            'token'   => REMARKA_TG_TOKEN,
+            'chat_id' => REMARKA_TG_CHAT_ID,
+            'text'    => $text,
+        ]),
     ];
-    wp_remote_post($url, $args);
+    wp_remote_post('https://moscowtrans-notify.alefcom1.workers.dev', $args);
     return true;
 }
 
