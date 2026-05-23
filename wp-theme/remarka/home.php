@@ -5,60 +5,72 @@
 get_header();
 ?>
 
-<main class="site-main blog-archive">
+<main class="site-main">
   <div class="container">
 
-    <header class="archive-header">
+    <header class="blog-archive-header">
       <nav class="cw-breadcrumbs" aria-label="Хлебные крошки">
         <a href="<?php echo esc_url(home_url('/')); ?>">Главная</a>
         <span class="cw-bc-sep" aria-hidden="true">›</span>
         <span class="cw-bc-current" aria-current="page">Блог</span>
       </nav>
-      <h1 class="archive-title">Блог</h1>
+      <h1 class="blog-archive-title">Блог о переводе</h1>
+      <p class="blog-archive-sub">Разбираем сложные темы: юридический, медицинский, технический перевод и локализация</p>
     </header>
 
-    <?php if (have_posts()): ?>
-      <div class="blog-grid">
-        <?php while (have_posts()) : the_post(); ?>
-          <article id="post-<?php the_ID(); ?>" <?php post_class('blog-card'); ?>>
-            <?php if (has_post_thumbnail()): ?>
-              <a class="blog-card-thumb" href="<?php the_permalink(); ?>">
-                <?php the_post_thumbnail('blog-thumb', ['alt' => get_the_title()]); ?>
-              </a>
-            <?php endif; ?>
-            <div class="blog-card-body">
-              <?php
-              $cats = get_the_category();
-              if ($cats) {
-                echo '<a href="' . esc_url(get_category_link($cats[0]->term_id)) . '" class="blog-card-cat">' . esc_html($cats[0]->name) . '</a>';
-              }
-              ?>
-              <h2 class="blog-card-title">
-                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-              </h2>
-              <div class="blog-card-excerpt"><?php the_excerpt(); ?></div>
-              <div class="blog-card-meta">
-                <time datetime="<?php echo esc_attr(get_the_date('c')); ?>"><?php echo get_the_date('j F Y'); ?></time>
-              </div>
-              <a class="blog-card-link" href="<?php the_permalink(); ?>">Читать далее →</a>
-            </div>
-          </article>
-        <?php endwhile; ?>
-      </div>
+    <div class="blog-layout">
 
-      <nav class="pagination" aria-label="Навигация по страницам">
-        <?php
-        echo paginate_links([
-          'prev_text' => '← Назад',
-          'next_text' => 'Вперёд →',
-          'mid_size'  => 2,
-        ]);
-        ?>
-      </nav>
+      <div class="blog-main">
+        <?php if (have_posts()): ?>
+          <div class="blog-post-list">
+            <?php while (have_posts()) : the_post(); ?>
+              <article id="post-<?php the_ID(); ?>" <?php post_class('blog-row'); ?>>
+                <?php if (has_post_thumbnail()): ?>
+                  <a class="blog-row-thumb" href="<?php the_permalink(); ?>">
+                    <?php the_post_thumbnail('medium_large', ['alt' => get_the_title()]); ?>
+                  </a>
+                <?php else: ?>
+                  <a class="blog-row-thumb blog-row-thumb--placeholder" href="<?php the_permalink(); ?>">
+                    <?php
+                    $cats = get_the_category();
+                    echo '<span class="brt-icon">';
+                    echo $cats ? esc_html(mb_strtoupper(mb_substr($cats[0]->name, 0, 1))) : 'Б';
+                    echo '</span>';
+                    ?>
+                  </a>
+                <?php endif; ?>
+                <div class="blog-row-body">
+                  <?php
+                  $cats = get_the_category();
+                  if ($cats) {
+                    echo '<a href="' . esc_url(get_category_link($cats[0]->term_id)) . '" class="blog-cat-badge">' . esc_html($cats[0]->name) . '</a>';
+                  }
+                  ?>
+                  <h2 class="blog-row-title">
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                  </h2>
+                  <div class="blog-row-excerpt"><?php the_excerpt(); ?></div>
+                  <div class="blog-row-meta">
+                    <time datetime="<?php echo esc_attr(get_the_date('c')); ?>"><?php echo get_the_date('j F Y'); ?></time>
+                    <a class="blog-row-more" href="<?php the_permalink(); ?>">Читать →</a>
+                  </div>
+                </div>
+              </article>
+            <?php endwhile; ?>
+          </div>
 
-    <?php else: ?>
-      <p class="no-posts">Записей пока нет.</p>
-    <?php endif; ?>
+          <nav class="blog-pagination" aria-label="Навигация по страницам">
+            <?php echo paginate_links(['prev_text' => '← Назад', 'next_text' => 'Вперёд →', 'mid_size' => 2]); ?>
+          </nav>
+
+        <?php else: ?>
+          <p class="no-posts">Записей пока нет.</p>
+        <?php endif; ?>
+      </div><!-- /blog-main -->
+
+      <?php get_template_part('template-parts/blog-sidebar'); ?>
+
+    </div><!-- /blog-layout -->
 
   </div>
 </main>
