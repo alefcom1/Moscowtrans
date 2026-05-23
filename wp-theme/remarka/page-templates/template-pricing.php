@@ -290,120 +290,152 @@ get_header();
   </section>
 
   <!-- Форматы перевода -->
-  <section class="sec sec-pricing-tiers" id="pricing">
+  <section class="sec sec--alt sec-pricing" id="pricing">
     <div class="container">
       <div class="sec-head sec-head--center">
         <h2 class="sec-title">Форматы перевода</h2>
-        <p class="sec-sub">Три уровня качества для разных задач — выберите подходящий формат</p>
+        <p class="sec-sub">Три уровня сервиса — от бюджетного редактирования ИИ-перевода до премиального с экспертной проверкой</p>
       </div>
-      <div class="pricing-tiers">
-
-        <div class="pricing-tier">
-          <h3 class="tier-name">Постредактирование ИИ</h3>
-          <div class="tier-price">от 250 ₽<span> / стр. (1800 зн.)</span></div>
-          <p class="tier-desc">Машинный перевод с редактурой специалиста. Подходит для внутренней документации, черновиков и текстов с простой структурой.</p>
-          <ul class="tier-features">
-            <li>Машинный перевод (GPT / DeepL)</li>
-            <li>Редактура переводчиком</li>
-            <li>Исправление терминологии</li>
-            <li>Быстрый срок сдачи</li>
-          </ul>
-          <a href="#calc-section" class="tier-cta tier-cta--outline">Заказать</a>
+      <div class="pricing-row">
+        <div class="price-card">
+          <div class="price-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
+          <div class="price-name">Постредактирование ИИ</div>
+          <div class="price-desc">Правка машинного перевода профессиональным переводчиком</div>
+          <div class="price-amount">от 250 <span style="font-size:20px;font-weight:600">₽</span></div>
+          <span class="price-unit">за страницу (1800 зн.)</span>
+          <ul class="price-features"><li>Редактура машинного перевода</li><li>Исправление ошибок и смысловых несоответствий</li><li>Срок: от 1 рабочего дня</li><li>Форматы: DOC, PDF, TXT, XLSX</li></ul>
+          <a href="#calc-section" class="price-btn price-btn--outline">Заказать</a>
         </div>
-
-        <div class="pricing-tier pricing-tier--featured">
-          <div class="tier-badge">Популярный</div>
-          <h3 class="tier-name">Профессиональный</h3>
-          <div class="tier-price">от 500 ₽<span> / стр.</span></div>
-          <p class="tier-desc">Перевод с нуля профильным специалистом. Оптимальный выбор для договоров, технической документации и деловой переписки.</p>
-          <ul class="tier-features">
-            <li>Перевод с нуля специалистом</li>
-            <li>Профильное образование исполнителя</li>
-            <li>Работа с терминологической базой</li>
-            <li>Двухэтапная редакторская проверка</li>
-            <li>Сохранение структуры документа</li>
-          </ul>
-          <a href="#calc-section" class="tier-cta tier-cta--primary">Заказать</a>
+        <div class="price-card price-card--featured">
+          <div class="price-badge">Популярный выбор</div>
+          <div class="price-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+          <div class="price-name">Профессиональный</div>
+          <div class="price-desc">Перевод с нуля специалистом с профильным образованием</div>
+          <div class="price-amount">от 500 <span style="font-size:20px;font-weight:600">₽</span></div>
+          <span class="price-unit">за страницу (1800 зн.)</span>
+          <ul class="price-features"><li>Перевод профильным специалистом</li><li>Корректура и вычитка</li><li>Срок: 1–3 рабочих дня</li><li>Сохранение форматирования</li></ul>
+          <a href="#calc-section" class="price-btn price-btn--primary">Заказать</a>
         </div>
-
-        <div class="pricing-tier">
-          <h3 class="tier-name">Премиум</h3>
-          <div class="tier-price">от 800 ₽<span> / стр.</span></div>
-          <p class="tier-desc">Перевод + редактура + вычитка носителем языка. Для публикаций, тендерной документации и материалов высшего уровня точности.</p>
-          <ul class="tier-features">
-            <li>Перевод профильным экспертом</li>
-            <li>Редактура второго специалиста</li>
-            <li>Вычитка носителем языка</li>
-            <li>Сертификат качества по запросу</li>
-            <li>Приоритетная поддержка</li>
-          </ul>
-          <a href="#calc-section" class="tier-cta tier-cta--outline">Заказать</a>
+        <div class="price-card">
+          <div class="price-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <div class="price-name">Премиум</div>
+          <div class="price-desc">Перевод с дополнительной редактурой или вычиткой носителем</div>
+          <div class="price-amount">от 800 <span style="font-size:20px;font-weight:600">₽</span></div>
+          <span class="price-unit">за страницу (1800 зн.)</span>
+          <ul class="price-features"><li>Перевод + редактура профильным специалистом</li><li>Вычитка носителем языка</li><li>Срок: 2–5 рабочих дней</li><li>Идеально для публикаций и тендеров</li></ul>
+          <a href="#calc-section" class="price-btn price-btn--outline">Заказать</a>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- Стоимость по типам документов -->
-  <section class="sec sec--alt sec-doc-types">
+  <section class="sec sec-doc-types">
     <div class="container">
       <div class="sec-head sec-head--center">
         <h2 class="sec-title">Стоимость по типам документов</h2>
         <p class="sec-sub">Базовые тарифы для профессионального перевода с русского и на русский язык</p>
       </div>
-      <div class="doc-type-table-wrap">
-        <table class="doc-type-table">
-          <thead>
-            <tr><th>Тип документа</th><th>Стоимость от</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><strong>Технический перевод</strong> — инструкции, руководства по эксплуатации, спецификации, КД</td><td>400 ₽/стр.</td></tr>
-            <tr><td><strong>Юридический перевод</strong> — договоры, контракты, уставы, корпоративные документы</td><td>500 ₽/стр.</td></tr>
-            <tr><td><strong>Медицинский перевод</strong> — клинические протоколы, инструкции к препаратам, медицинская документация</td><td>500 ₽/стр.</td></tr>
-            <tr><td><strong>IT-перевод</strong> — документация ПО, интерфейсы, локализация, технические спецификации</td><td>450 ₽/стр.</td></tr>
-            <tr><td><strong>Финансовый перевод</strong> — отчётность МСФО/GAAP, аудиторские заключения, проспекты</td><td>550 ₽/стр.</td></tr>
-            <tr><td><strong>Маркетинговый перевод</strong> — сайты, рекламные материалы, пресс-релизы</td><td>400 ₽/стр.</td></tr>
-            <tr><td><strong>Патентный перевод</strong> — описания изобретений, формулы, патентная документация</td><td>600 ₽/стр.</td></tr>
-            <tr><td><strong>Деловая переписка</strong> — письма, коммерческие предложения, запросы</td><td>350 ₽/стр.</td></tr>
-          </tbody>
-        </table>
+      <div class="doc-types-grid">
+
+        <div class="doc-type-card">
+          <div class="dtc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
+          <div class="dtc-name">Технический перевод</div>
+          <div class="dtc-desc">Инструкции, руководства, спецификации, КД</div>
+          <div class="dtc-price">от 400 ₽/стр.</div>
+        </div>
+
+        <div class="doc-type-card">
+          <div class="dtc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg></div>
+          <div class="dtc-name">Юридический перевод</div>
+          <div class="dtc-desc">Договоры, контракты, уставы, корпоративные документы</div>
+          <div class="dtc-price">от 500 ₽/стр.</div>
+        </div>
+
+        <div class="doc-type-card">
+          <div class="dtc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-2"/><rect x="9" y="2" width="6" height="4" rx="1"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg></div>
+          <div class="dtc-name">Медицинский перевод</div>
+          <div class="dtc-desc">Клинические протоколы, инструкции к препаратам</div>
+          <div class="dtc-price">от 500 ₽/стр.</div>
+        </div>
+
+        <div class="doc-type-card">
+          <div class="dtc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          <div class="dtc-name">IT-перевод</div>
+          <div class="dtc-desc">Документация ПО, интерфейсы, локализация</div>
+          <div class="dtc-price">от 450 ₽/стр.</div>
+        </div>
+
+        <div class="doc-type-card">
+          <div class="dtc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <div class="dtc-name">Финансовый перевод</div>
+          <div class="dtc-desc">Отчётность МСФО/GAAP, аудиторские заключения</div>
+          <div class="dtc-price">от 550 ₽/стр.</div>
+        </div>
+
+        <div class="doc-type-card">
+          <div class="dtc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <div class="dtc-name">Маркетинговый перевод</div>
+          <div class="dtc-desc">Сайты, рекламные материалы, пресс-релизы</div>
+          <div class="dtc-price">от 400 ₽/стр.</div>
+        </div>
+
+        <div class="doc-type-card">
+          <div class="dtc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg></div>
+          <div class="dtc-name">Патентный перевод</div>
+          <div class="dtc-desc">Описания изобретений, формулы, патентная документация</div>
+          <div class="dtc-price">от 600 ₽/стр.</div>
+        </div>
+
+        <div class="doc-type-card">
+          <div class="dtc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div class="dtc-name">Деловая переписка</div>
+          <div class="dtc-desc">Письма, коммерческие предложения, запросы</div>
+          <div class="dtc-price">от 350 ₽/стр.</div>
+        </div>
+
       </div>
-      <p style="font-size:13px;color:var(--text-muted);margin-top:16px;text-align:center">* Цены указаны для языковой пары русский ↔ английский при стандартных сроках. Стоимость для других языковых пар уточняйте у менеджера.</p>
+      <p class="doc-types-note">* Цены для языковой пары русский ↔ английский при стандартных сроках. Для других языковых пар уточняйте у менеджера.</p>
     </div>
   </section>
 
   <!-- Примеры стоимости -->
-  <section class="sec sec-price-examples">
+  <section class="sec sec--alt sec-price-examples">
     <div class="container">
       <div class="sec-head sec-head--center">
         <h2 class="sec-title">Примеры стоимости</h2>
         <p class="sec-sub">Типичные заказы московских B2B-клиентов — ориентировочные цены при стандартных сроках</p>
       </div>
       <div class="price-examples-grid">
+
         <div class="price-example-card">
-          <div class="pe-emoji">📄</div>
+          <div class="pe-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></div>
           <p class="pe-title">Договор поставки<br>5 стр. (рус. → англ.)</p>
           <div class="pe-price">от 2 500 ₽</div>
           <div class="pe-meta">Срок: 2–3 рабочих дня</div>
         </div>
+
         <div class="price-example-card">
-          <div class="pe-emoji">📋</div>
+          <div class="pe-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
           <p class="pe-title">Техническая инструкция<br>15 стр. (нем. → рус.)</p>
           <div class="pe-price">от 6 000 ₽</div>
           <div class="pe-meta">Срок: 3–5 рабочих дней</div>
         </div>
+
         <div class="price-example-card">
-          <div class="pe-emoji">🌐</div>
+          <div class="pe-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
           <p class="pe-title">Веб-сайт компании<br>25 стр. (рус. → англ.)</p>
           <div class="pe-price">от 10 000 ₽</div>
           <div class="pe-meta">Срок: 5–7 рабочих дней</div>
         </div>
+
         <div class="price-example-card">
-          <div class="pe-emoji">💊</div>
+          <div class="pe-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-2"/><rect x="9" y="2" width="6" height="4" rx="1"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg></div>
           <p class="pe-title">Медицинский протокол<br>10 стр. (англ. → рус.)</p>
           <div class="pe-price">от 5 000 ₽</div>
           <div class="pe-meta">Срок: 3–4 рабочих дня</div>
         </div>
+
       </div>
     </div>
   </section>
