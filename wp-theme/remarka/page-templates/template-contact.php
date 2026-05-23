@@ -140,7 +140,7 @@ get_header();
             <div class="contact-map__label">Москва, Глинищевский пер., д.&nbsp;6</div>
             <div class="contact-map__frame">
               <iframe
-                src="https://yandex.ru/map-widget/v1/?ll=37.611%2C55.759&z=16&pt=37.611%2C55.759~Глинищевский+пер.+д.6&l=map"
+                src="https://yandex.ru/map-widget/v1/?ol=biz&oid=51867347382"
                 title="Карта: Глинищевский пер., д. 6, Москва"
                 loading="lazy"
                 allowfullscreen
@@ -178,12 +178,13 @@ get_header();
     btn.querySelector('.cf-btn-text').textContent = 'Отправляем…';
 
     var data = new FormData();
-    data.append('action',  'remarka_contact');
-    data.append('nonce',   document.querySelector('[name="contact_nonce"]').value);
-    data.append('name',    name);
-    data.append('phone',   phone);
-    data.append('email',   email);
-    data.append('message', document.getElementById('cf-message').value.trim());
+    data.append('action',   'remarka_contact');
+    data.append('nonce',    document.querySelector('[name="contact_nonce"]').value);
+    data.append('name',     name);
+    data.append('phone',    phone);
+    data.append('email',    email);
+    data.append('message',  document.getElementById('cf-message').value.trim());
+    data.append('page_url', window.location.href);
 
     fetch('<?php echo esc_url(admin_url("admin-ajax.php")); ?>', { method: 'POST', body: data })
       .then(function (r) { return r.json(); })
