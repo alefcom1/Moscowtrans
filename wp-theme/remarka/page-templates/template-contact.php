@@ -140,7 +140,7 @@ get_header();
             <div class="contact-map__label">Москва, Глинищевский пер., д.&nbsp;6</div>
             <div class="contact-map__frame">
               <iframe
-                src="https://yandex.ru/map-widget/v1/?ll=37.611%2C55.759&z=16&pt=37.611%2C55.759~Глинищевский+пер.+д.6&l=map"
+                src="https://yandex.ru/map-widget/v1/?ol=biz&oid=51867347382"
                 title="Карта: Глинищевский пер., д. 6, Москва"
                 loading="lazy"
                 allowfullscreen
