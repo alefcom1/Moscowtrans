@@ -95,3 +95,32 @@ function remarka_handle_upload() {
 
 add_action('wp_ajax_remarka_upload',        'remarka_handle_upload');
 add_action('wp_ajax_nopriv_remarka_upload', 'remarka_handle_upload');
+
+function remarka_handle_contact() {
+    if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'remarka_contact_nonce')) {
+        wp_send_json_error(['message' => 'Ошибка безопасности'], 403);
+    }
+
+    $name    = sanitize_text_field($_POST['name']    ?? '');
+    $phone   = sanitize_text_field($_POST['phone']   ?? '');
+    $email   = sanitize_email($_POST['email']        ?? '');
+    $message = sanitize_textarea_field($_POST['message'] ?? '');
+
+    if (!$name || !$phone || !is_email($email)) {
+        wp_send_json_error(['message' => 'Заполните обязательные поля']);
+    }
+
+    $to      = 'info@moscowtrans.ru';
+    $subject = 'Новая заявка с сайта — ' . $name;
+    $body    = "Имя: {$name}\nТелефон: {$phone}\nE-mail: {$email}\n\nСообщение:\n{$message}";
+    $headers = [
+        'Content-Type: text/plain; charset=UTF-8',
+        "Reply-To: {$name} <{$email}>",
+    ];
+
+    wp_mail($to, $subject, $body, $headers);
+    wp_send_json_success(['message' => 'Отправлено']);
+}
+
+add_action('wp_ajax_remarka_contact',        'remarka_handle_contact');
+add_action('wp_ajax_nopriv_remarka_contact', 'remarka_handle_contact');

@@ -52,15 +52,14 @@ get_header();
               <div class="pch-field">
                 <label for="pch-doctype">Тип документа</label>
                 <select id="pch-doctype">
-                  <option value="400">Технический — инструкции, руководства, КД</option>
-                  <option value="500">Юридический — договоры, контракты, уставы</option>
-                  <option value="500">Медицинский — протоколы, инструкции к препаратам</option>
-                  <option value="450">IT-документация — ПО, интерфейсы, локализация</option>
-                  <option value="550">Финансовый — МСФО/GAAP, аудиторские заключения</option>
-                  <option value="400">Маркетинговый — сайты, реклама, пресс-релизы</option>
-                  <option value="600">Патентный — описания изобретений, формулы</option>
-                  <option value="350">Деловая переписка — письма, коммерческие предложения</option>
-                  <option value="400" selected>Общий перевод</option>
+                  <option value="1.0" selected>Общий / деловая переписка</option>
+                  <option value="1.0">Маркетинговый — сайты, реклама, пресс-релизы</option>
+                  <option value="1.0">IT-документация — ПО, интерфейсы, локализация</option>
+                  <option value="1.1">Технический — инструкции, руководства, КД</option>
+                  <option value="1.2">Юридический — договоры, контракты, уставы</option>
+                  <option value="1.2">Медицинский — протоколы, инструкции к препаратам</option>
+                  <option value="1.2">Финансовый — МСФО/GAAP, аудиторские заключения</option>
+                  <option value="1.4">Патентный — описания изобретений, формулы</option>
                 </select>
               </div>
 
@@ -75,7 +74,7 @@ get_header();
                 <label>Срочность</label>
                 <div class="pch-urgency">
                   <button class="pch-urg-btn active" data-urgency="1" type="button">Стандарт</button>
-                  <button class="pch-urg-btn" data-urgency="1.5" type="button">Срочно ×1.5</button>
+                  <button class="pch-urg-btn" data-urgency="1.3" type="button">Срочно +30%</button>
                 </div>
               </div>
 
@@ -113,40 +112,52 @@ get_header();
 
 <script>
 (function () {
+  // base = цена за страницу (1800 зн.) для тарифа «Профессиональный», пара с русским
   var LANGS = [
-    { name: 'Русский',         mult: 1.0  },
-    { name: 'Английский',      mult: 1.0  },
-    { name: 'Немецкий',        mult: 1.0  },
-    { name: 'Французский',     mult: 1.0  },
-    { name: 'Испанский',       mult: 1.0  },
-    { name: 'Итальянский',     mult: 1.0  },
-    { name: 'Нидерландский',   mult: 1.0  },
-    { name: 'Португальский',   mult: 1.0  },
-    { name: 'Польский',        mult: 1.05 },
-    { name: 'Чешский',         mult: 1.05 },
-    { name: 'Словацкий',       mult: 1.05 },
-    { name: 'Болгарский',      mult: 1.1  },
-    { name: 'Румынский',       mult: 1.1  },
-    { name: 'Венгерский',      mult: 1.1  },
-    { name: 'Украинский',      mult: 1.1  },
-    { name: 'Белорусский',     mult: 1.1  },
-    { name: 'Шведский',        mult: 1.15 },
-    { name: 'Норвежский',      mult: 1.15 },
-    { name: 'Датский',         mult: 1.15 },
-    { name: 'Финский',         mult: 1.2  },
-    { name: 'Казахский',       mult: 1.2  },
-    { name: 'Турецкий',        mult: 1.2  },
-    { name: 'Греческий',       mult: 1.2  },
-    { name: 'Грузинский',      mult: 1.3  },
-    { name: 'Армянский',       mult: 1.3  },
-    { name: 'Азербайджанский', mult: 1.3  },
-    { name: 'Хинди',           mult: 1.5  },
-    { name: 'Арабский',        mult: 1.6  },
-    { name: 'Иврит',           mult: 1.6  },
-    { name: 'Персидский (фарси)', mult: 1.6 },
-    { name: 'Корейский',       mult: 1.7  },
-    { name: 'Японский',        mult: 1.8  },
-    { name: 'Китайский',       mult: 1.8  },
+    { name: 'Русский',               base: 500  },
+    { name: 'Английский',            base: 500  },
+    // Основные европейские
+    { name: 'Немецкий',              base: 600  },
+    { name: 'Французский',           base: 600  },
+    { name: 'Испанский',             base: 600  },
+    { name: 'Итальянский',           base: 600  },
+    // Менее распространённые европейские
+    { name: 'Нидерландский',         base: 800  },
+    { name: 'Португальский',         base: 800  },
+    { name: 'Польский',              base: 800  },
+    { name: 'Чешский',               base: 800  },
+    { name: 'Словацкий',             base: 800  },
+    { name: 'Болгарский',            base: 800  },
+    { name: 'Румынский',             base: 800  },
+    { name: 'Венгерский',            base: 800  },
+    { name: 'Греческий',             base: 800  },
+    { name: 'Хорватский',            base: 800  },
+    { name: 'Сербский',              base: 800  },
+    // Редкие европейские и скандинавские
+    { name: 'Шведский',              base: 1000 },
+    { name: 'Норвежский',            base: 1000 },
+    { name: 'Датский',               base: 1000 },
+    { name: 'Финский',               base: 1000 },
+    // СНГ и прибалтийские
+    { name: 'Украинский',            base: 900  },
+    { name: 'Белорусский',           base: 900  },
+    { name: 'Казахский',             base: 900  },
+    { name: 'Грузинский',            base: 900  },
+    { name: 'Армянский',             base: 900  },
+    { name: 'Азербайджанский',       base: 900  },
+    { name: 'Эстонский',             base: 900  },
+    { name: 'Латышский',             base: 900  },
+    { name: 'Литовский',             base: 900  },
+    // Турецкий
+    { name: 'Турецкий',              base: 900  },
+    // Восточные языки
+    { name: 'Хинди',                 base: 1200 },
+    { name: 'Арабский',              base: 1200 },
+    { name: 'Иврит',                 base: 1200 },
+    { name: 'Персидский (фарси)',    base: 1200 },
+    { name: 'Корейский',             base: 1200 },
+    { name: 'Японский',              base: 1200 },
+    { name: 'Китайский',             base: 1200 },
   ];
 
   var fromSel = document.getElementById('pch-from');
@@ -178,19 +189,19 @@ get_header();
   });
 
   function fmtPrice(p) {
-    return 'от ' + (Math.round(p / 50) * 50).toLocaleString('ru-RU') + ' ₽';
+    return 'от ' + (Math.round(p / 50) * 50).toLocaleString('ru-RU') + ' ₽';
   }
   function fmtDays(d) {
-    if (d === 1) return '1 день';
-    if (d >= 2 && d <= 4) return d + ' дня';
-    return d + ' дней';
+    if (d === 1) return '1 день';
+    if (d >= 2 && d <= 4) return d + ' дня';
+    return d + ' дней';
   }
 
   function recalc() {
-    var fromMult  = LANGS[parseInt(fromSel.value)].mult;
-    var toMult    = LANGS[parseInt(toSel.value)].mult;
-    var langMult  = Math.max(fromMult, toMult);
-    var baseRate  = parseInt(document.getElementById('pch-doctype').value);
+    var fromBase  = LANGS[parseInt(fromSel.value)].base;
+    var toBase    = LANGS[parseInt(toSel.value)].base;
+    var langBase  = Math.max(fromBase, toBase);
+    var docMult   = parseFloat(document.getElementById('pch-doctype').value);
     var pages     = Math.max(1, parseInt(document.getElementById('pch-pages').value) || 1);
     var urg       = urgency;
 
@@ -203,9 +214,9 @@ get_header();
     ];
 
     tiers.forEach(function (t) {
-      var price = pages * baseRate * langMult * urg * t.mult * volDiscount;
+      var price = pages * langBase * docMult * urg * t.mult * volDiscount;
       var days  = Math.max(t.minDays, Math.ceil(pages / t.pagesPerDay));
-      if (urg > 1) days = Math.max(1, Math.ceil(days / 1.5));
+      if (urg > 1) days = Math.max(1, Math.ceil(days * 0.75));
 
       document.getElementById('pch-price-' + t.id).textContent = fmtPrice(price);
       document.getElementById('pch-days-'  + t.id).textContent = fmtDays(days);
@@ -229,7 +240,7 @@ get_header();
           <p class="intro-label">Бюро переводов «Ремарка», Москва</p>
           <h1 class="intro-title">Стоимость профессионального перевода</h1>
           <p class="intro-tagline">Точная цена — за 15 минут, без предоплаты</p>
-          <p class="intro-body">Стоимость перевода складывается из нескольких переменных: языковая пара определяет базовый тариф — европейские языки дешевле, редкие восточные и азиатские дороже из-за узкого рынка специалистов. Тематика документа напрямую влияет на цену: стандартный деловой текст оценивается ниже, чем нефтегазовая документация, фармацевтические инструкции или патентные заявки.</p>
+          <p class="intro-body">Стоимость перевода складывается из нескольких переменных: языковая пара определяет базовый тариф — английский и основные европейские языки дешевле, редкие восточные и азиатские дороже из-за узкого рынка специалистов. Тематика документа влияет на цену: стандартный деловой текст оценивается ниже, чем фармацевтические инструкции или патентные заявки.</p>
           <p class="intro-body">Мы работаем с корпоративными клиентами: договорами, техническими регламентами, медицинскими протоколами, IT-документацией и финансовой отчётностью. Наши цены рассчитаны на B2B-сегмент — компании, которым важны точность терминологии и соблюдение отраслевых стандартов.</p>
           <p class="intro-body">Чтобы получить точный расчёт, достаточно прислать файл Ольге в чат. За 15 минут мы определим объём в страницах (1 стр. = 1800 знаков без пробелов), укажем точную стоимость и срок выполнения. Цена фиксируется до начала работы.</p>
         </div>
@@ -257,7 +268,7 @@ get_header();
               <div class="intro-feat-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
               </div>
-              <div><strong>Срочность по запросу</strong><span>Экспресс-перевод с прозрачной наценкой</span></div>
+              <div><strong>Срочность по запросу</strong><span>Экспресс-перевод с наценкой +30%</span></div>
             </div>
             <div class="intro-feat">
               <div class="intro-feat-icon">
@@ -301,7 +312,7 @@ get_header();
           <div class="price-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
           <div class="price-name">Постредактирование ИИ</div>
           <div class="price-desc">Правка машинного перевода профессиональным переводчиком</div>
-          <div class="price-amount">от 250 <span style="font-size:20px;font-weight:600">₽</span></div>
+          <div class="price-amount">от 275 <span style="font-size:20px;font-weight:600">₽</span></div>
           <span class="price-unit">за страницу (1800 зн.)</span>
           <ul class="price-features"><li>Редактура машинного перевода</li><li>Исправление ошибок и смысловых несоответствий</li><li>Срок: от 1 рабочего дня</li><li>Форматы: DOC, PDF, TXT, XLSX</li></ul>
           <a href="#calc-section" class="price-btn price-btn--outline">Заказать</a>
@@ -313,7 +324,7 @@ get_header();
           <div class="price-desc">Перевод с нуля специалистом с профильным образованием</div>
           <div class="price-amount">от 500 <span style="font-size:20px;font-weight:600">₽</span></div>
           <span class="price-unit">за страницу (1800 зн.)</span>
-          <ul class="price-features"><li>Перевод профильным специалистом</li><li>Корректура и вычитка</li><li>Срок: 1–3 рабочих дня</li><li>Сохранение форматирования</li></ul>
+          <ul class="price-features"><li>Перевод профильным специалистом</li><li>Корректура и вычитка</li><li>Срок: 2–5 рабочих дней</li><li>Сохранение форматирования</li></ul>
           <a href="#calc-section" class="price-btn price-btn--primary">Заказать</a>
         </div>
         <div class="price-card">
@@ -322,19 +333,75 @@ get_header();
           <div class="price-desc">Перевод с дополнительной редактурой или вычиткой носителем</div>
           <div class="price-amount">от 800 <span style="font-size:20px;font-weight:600">₽</span></div>
           <span class="price-unit">за страницу (1800 зн.)</span>
-          <ul class="price-features"><li>Перевод + редактура профильным специалистом</li><li>Вычитка носителем языка</li><li>Срок: 2–5 рабочих дней</li><li>Идеально для публикаций и тендеров</li></ul>
+          <ul class="price-features"><li>Перевод + редактура профильным специалистом</li><li>Вычитка носителем языка</li><li>Срок: 3–7 рабочих дней</li><li>Идеально для публикаций и тендеров</li></ul>
           <a href="#calc-section" class="price-btn price-btn--outline">Заказать</a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Тарифы по языковым парам -->
+  <section class="sec sec-lang-rates">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <h2 class="sec-title">Тарифы по языковым парам</h2>
+        <p class="sec-sub">Базовые тарифы профессионального перевода с русского / на русский язык. Наценка за срочность — +30%.</p>
+      </div>
+      <div class="lang-rates-grid">
+
+        <div class="lang-rate-card">
+          <div class="lrc-flag">🇬🇧</div>
+          <div class="lrc-name">Английский</div>
+          <div class="lrc-langs">en</div>
+          <div class="lrc-price">от 500 ₽/стр.</div>
+        </div>
+
+        <div class="lang-rate-card">
+          <div class="lrc-flag">🇪🇺</div>
+          <div class="lrc-name">Основные европейские</div>
+          <div class="lrc-langs">немецкий, французский, испанский, итальянский</div>
+          <div class="lrc-price">от 600 ₽/стр.</div>
+        </div>
+
+        <div class="lang-rate-card">
+          <div class="lrc-flag">🌍</div>
+          <div class="lrc-name">Европейские (прочие)</div>
+          <div class="lrc-langs">нидерл., португ., польск., чешск., греч., венг., болг., румын. и др.</div>
+          <div class="lrc-price">от 800 ₽/стр.</div>
+        </div>
+
+        <div class="lang-rate-card">
+          <div class="lrc-flag">🇹🇷</div>
+          <div class="lrc-name">СНГ, прибалтийские, турецкий</div>
+          <div class="lrc-langs">укр., бел., каз., груз., арм., азерб., эст., латыш., лит., тур.</div>
+          <div class="lrc-price">от 900 ₽/стр.</div>
+        </div>
+
+        <div class="lang-rate-card">
+          <div class="lrc-flag">🌿</div>
+          <div class="lrc-name">Скандинавские и редкие европейские</div>
+          <div class="lrc-langs">шведский, норвежский, датский, финский</div>
+          <div class="lrc-price">от 1 000 ₽/стр.</div>
+        </div>
+
+        <div class="lang-rate-card">
+          <div class="lrc-flag">🌏</div>
+          <div class="lrc-name">Восточные языки</div>
+          <div class="lrc-langs">арабский, китайский, японский, корейский, хинди, иврит, фарси</div>
+          <div class="lrc-price">от 1 200 ₽/стр.</div>
+        </div>
+
+      </div>
+      <p class="lang-rates-note">* Цены указаны для тарифа «Профессиональный» при стандартных сроках. Для тарифа «Постредактирование ИИ» — вдвое ниже, «Премиум» — в 1,6 раза выше. При объёме от 10 страниц — скидка до 15%.</p>
+    </div>
+  </section>
+
   <!-- Стоимость по типам документов -->
-  <section class="sec sec-doc-types">
+  <section class="sec sec--alt sec-doc-types">
     <div class="container">
       <div class="sec-head sec-head--center">
         <h2 class="sec-title">Стоимость по типам документов</h2>
-        <p class="sec-sub">Базовые тарифы для профессионального перевода с русского и на русский язык</p>
+        <p class="sec-sub">Тарифы для профессионального перевода на паре русский ↔ английский</p>
       </div>
       <div class="doc-types-grid">
 
@@ -342,65 +409,65 @@ get_header();
           <div class="dtc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
           <div class="dtc-name">Технический перевод</div>
           <div class="dtc-desc">Инструкции, руководства, спецификации, КД</div>
-          <div class="dtc-price">от 400 ₽/стр.</div>
+          <div class="dtc-price">от 550 ₽/стр.</div>
         </div>
 
         <div class="doc-type-card">
           <div class="dtc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg></div>
           <div class="dtc-name">Юридический перевод</div>
           <div class="dtc-desc">Договоры, контракты, уставы, корпоративные документы</div>
-          <div class="dtc-price">от 500 ₽/стр.</div>
+          <div class="dtc-price">от 600 ₽/стр.</div>
         </div>
 
         <div class="doc-type-card">
           <div class="dtc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-2"/><rect x="9" y="2" width="6" height="4" rx="1"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg></div>
           <div class="dtc-name">Медицинский перевод</div>
           <div class="dtc-desc">Клинические протоколы, инструкции к препаратам</div>
-          <div class="dtc-price">от 500 ₽/стр.</div>
+          <div class="dtc-price">от 600 ₽/стр.</div>
         </div>
 
         <div class="doc-type-card">
           <div class="dtc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
           <div class="dtc-name">IT-перевод</div>
           <div class="dtc-desc">Документация ПО, интерфейсы, локализация</div>
-          <div class="dtc-price">от 450 ₽/стр.</div>
+          <div class="dtc-price">от 500 ₽/стр.</div>
         </div>
 
         <div class="doc-type-card">
           <div class="dtc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
           <div class="dtc-name">Финансовый перевод</div>
           <div class="dtc-desc">Отчётность МСФО/GAAP, аудиторские заключения</div>
-          <div class="dtc-price">от 550 ₽/стр.</div>
+          <div class="dtc-price">от 600 ₽/стр.</div>
         </div>
 
         <div class="doc-type-card">
           <div class="dtc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
           <div class="dtc-name">Маркетинговый перевод</div>
           <div class="dtc-desc">Сайты, рекламные материалы, пресс-релизы</div>
-          <div class="dtc-price">от 400 ₽/стр.</div>
+          <div class="dtc-price">от 500 ₽/стр.</div>
         </div>
 
         <div class="doc-type-card">
           <div class="dtc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg></div>
           <div class="dtc-name">Патентный перевод</div>
           <div class="dtc-desc">Описания изобретений, формулы, патентная документация</div>
-          <div class="dtc-price">от 600 ₽/стр.</div>
+          <div class="dtc-price">от 700 ₽/стр.</div>
         </div>
 
         <div class="doc-type-card">
           <div class="dtc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
           <div class="dtc-name">Деловая переписка</div>
           <div class="dtc-desc">Письма, коммерческие предложения, запросы</div>
-          <div class="dtc-price">от 350 ₽/стр.</div>
+          <div class="dtc-price">от 500 ₽/стр.</div>
         </div>
 
       </div>
-      <p class="doc-types-note">* Цены для языковой пары русский ↔ английский при стандартных сроках. Для других языковых пар уточняйте у менеджера.</p>
+      <p class="doc-types-note">* Тарифы для профессионального перевода на языковой паре русский ↔ английский при стандартных сроках. Для других языковых пар стоимость выше — используйте калькулятор выше.</p>
     </div>
   </section>
 
   <!-- Примеры стоимости -->
-  <section class="sec sec--alt sec-price-examples">
+  <section class="sec sec-price-examples">
     <div class="container">
       <div class="sec-head sec-head--center">
         <h2 class="sec-title">Примеры стоимости</h2>
@@ -411,28 +478,28 @@ get_header();
         <div class="price-example-card">
           <div class="pe-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></div>
           <p class="pe-title">Договор поставки<br>5 стр. (рус. → англ.)</p>
-          <div class="pe-price">от 2 500 ₽</div>
+          <div class="pe-price">от 3 000 ₽</div>
           <div class="pe-meta">Срок: 2–3 рабочих дня</div>
         </div>
 
         <div class="price-example-card">
           <div class="pe-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
           <p class="pe-title">Техническая инструкция<br>15 стр. (нем. → рус.)</p>
-          <div class="pe-price">от 6 000 ₽</div>
+          <div class="pe-price">от 8 500 ₽</div>
           <div class="pe-meta">Срок: 3–5 рабочих дней</div>
         </div>
 
         <div class="price-example-card">
           <div class="pe-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
           <p class="pe-title">Веб-сайт компании<br>25 стр. (рус. → англ.)</p>
-          <div class="pe-price">от 10 000 ₽</div>
+          <div class="pe-price">от 11 500 ₽</div>
           <div class="pe-meta">Срок: 5–7 рабочих дней</div>
         </div>
 
         <div class="price-example-card">
           <div class="pe-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-2"/><rect x="9" y="2" width="6" height="4" rx="1"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg></div>
           <p class="pe-title">Медицинский протокол<br>10 стр. (англ. → рус.)</p>
-          <div class="pe-price">от 5 000 ₽</div>
+          <div class="pe-price">от 5 500 ₽</div>
           <div class="pe-meta">Срок: 3–4 рабочих дня</div>
         </div>
 
