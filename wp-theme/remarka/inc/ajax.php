@@ -94,14 +94,17 @@ function remarka_handle_upload() {
 
     // Telegram: уведомление о файле из калькулятора
     if (!empty($uploaded)) {
-        $names    = implode(', ', array_column($uploaded, 'name'));
         $referer  = isset($_SERVER['HTTP_REFERER']) ? esc_url_raw($_SERVER['HTTP_REFERER']) : site_url();
         $site     = parse_url(site_url(), PHP_URL_HOST);
+        $file_lines = '';
+        foreach ($uploaded as $f) {
+            $file_lines .= "\n📄 <a href=\"" . esc_url($f['url']) . "\">" . htmlspecialchars($f['name'], ENT_QUOTES) . "</a> ({$f['size_fmt']})";
+        }
         remarka_tg(
             "📎 <b>Новый файл из калькулятора</b>\n" .
             "🌐 <b>Сайт:</b> {$site}\n" .
-            "🔗 <b>Страница:</b> {$referer}\n" .
-            "📄 Файл(ы): <code>{$names}</code>"
+            "🔗 <b>Страница:</b> {$referer}" .
+            $file_lines
         );
     }
 
