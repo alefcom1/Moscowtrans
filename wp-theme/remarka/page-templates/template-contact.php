@@ -178,12 +178,13 @@ get_header();
     btn.querySelector('.cf-btn-text').textContent = 'Отправляем…';
 
     var data = new FormData();
-    data.append('action',  'remarka_contact');
-    data.append('nonce',   document.querySelector('[name="contact_nonce"]').value);
-    data.append('name',    name);
-    data.append('phone',   phone);
-    data.append('email',   email);
-    data.append('message', document.getElementById('cf-message').value.trim());
+    data.append('action',   'remarka_contact');
+    data.append('nonce',    document.querySelector('[name="contact_nonce"]').value);
+    data.append('name',     name);
+    data.append('phone',    phone);
+    data.append('email',    email);
+    data.append('message',  document.getElementById('cf-message').value.trim());
+    data.append('page_url', window.location.href);
 
     fetch('<?php echo esc_url(admin_url("admin-ajax.php")); ?>', { method: 'POST', body: data })
       .then(function (r) { return r.json(); })
