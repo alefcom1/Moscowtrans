@@ -166,3 +166,45 @@ function remarka_handle_contact() {
 
 add_action('wp_ajax_remarka_contact',        'remarka_handle_contact');
 add_action('wp_ajax_nopriv_remarka_contact', 'remarka_handle_contact');
+
+/* ── Калькулятор: заявка на перевод ───────────────────── */
+
+function remarka_handle_order() {
+    if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'remarka_order_nonce')) {
+        wp_send_json_error(['message' => 'Ошибка безопасности'], 403);
+    }
+
+    $name     = sanitize_text_field($_POST['name']     ?? '');
+    $phone    = sanitize_text_field($_POST['phone']    ?? '');
+    $email    = sanitize_email($_POST['email']         ?? '');
+    $company  = sanitize_text_field($_POST['company']  ?? '');
+    $details  = sanitize_textarea_field($_POST['details']  ?? '');
+    $comment  = sanitize_textarea_field($_POST['comment']  ?? '');
+    $page_url = esc_url_raw($_POST['page_url']         ?? '');
+
+    $site = parse_url(site_url(), PHP_URL_HOST);
+    if (!$page_url) $page_url = site_url('/stoimost-perevoda/');
+
+    $company_line = $company ? "\n🏢 {$company}" : '';
+    $comment_line = $comment ? "\n\n💬 <i>" . htmlspecialchars($comment, ENT_QUOTES) . "</i>" : '';
+    $details_block = $details
+        ? "\n━━━━━━━━━━━━\n<pre>" . htmlspecialchars($details, ENT_QUOTES) . "</pre>"
+        : '';
+
+    remarka_tg(
+        "🧾 <b>Новая заявка из калькулятора</b>\n" .
+        "🌐 <b>Сайт:</b> {$site}\n" .
+        "🔗 <b>Страница:</b> {$page_url}\n" .
+        "━━━━━━━━━━━━\n" .
+        "👤 <b>{$name}</b>" . $company_line . "\n" .
+        "📞 {$phone}\n" .
+        "✉️ {$email}" .
+        $comment_line .
+        $details_block
+    );
+
+    wp_send_json_success();
+}
+
+add_action('wp_ajax_remarka_order',        'remarka_handle_order');
+add_action('wp_ajax_nopriv_remarka_order', 'remarka_handle_order');

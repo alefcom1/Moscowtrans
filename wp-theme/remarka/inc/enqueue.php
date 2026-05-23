@@ -26,9 +26,10 @@ function remarka_enqueue_assets() {
 
     // Pass WP AJAX URL + nonce to calc-widget.js
     wp_localize_script('remarka-calc-widget', 'remarka_ajax', [
-        'url'    => admin_url('admin-ajax.php'),
-        'nonce'  => wp_create_nonce('remarka_upload_nonce'),
-        'action' => 'remarka_upload',
+        'url'         => admin_url('admin-ajax.php'),
+        'nonce'       => wp_create_nonce('remarka_upload_nonce'),
+        'action'      => 'remarka_upload',
+        'order_nonce' => wp_create_nonce('remarka_order_nonce'),
     ]);
 
     // Logo theme-switch script (inline, after DOM ready)

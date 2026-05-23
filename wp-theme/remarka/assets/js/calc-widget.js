@@ -935,6 +935,7 @@ $('#rem-m-submit').addEventListener('click', async () => {
   const finalTotal = subTotal + (orderDelivery.price || 0);
 
   const btn = $('#rem-m-submit');
+  const btnText = btn.querySelector('.rem-submit-text') || btn;
   btn.disabled = true;
 
   // Убираем старый errBox
@@ -945,7 +946,7 @@ $('#rem-m-submit').addEventListener('click', async () => {
   const allFiles = ready.flatMap(doc => doc.files);
 
   try {
-    btn.textContent = `Загружаем файлы (${allFiles.length})…`;
+    btnText.textContent = `Загружаем файлы (${allFiles.length})…`;
     const { files: uploaded, errors: upErrors } = await uploadFilesToServer(allFiles);
 
     if (uploaded.length) {
@@ -986,7 +987,23 @@ $('#rem-m-submit').addEventListener('click', async () => {
 
   /* ── ШАГ 3: отправка через EmailJS ── */
   try {
-    btn.textContent = 'Отправляем заявку…';
+    btnText.textContent = 'Отправляем заявку…';
+
+    // Уведомление в Telegram (fire-and-forget)
+    if (window.remarka_ajax && window.remarka_ajax.order_nonce) {
+      const od = new FormData();
+      od.append('action',   'remarka_order');
+      od.append('nonce',    window.remarka_ajax.order_nonce);
+      od.append('name',     name);
+      od.append('phone',    phone);
+      od.append('email',    email);
+      od.append('company',  company);
+      od.append('details',  details);
+      od.append('comment',  comment);
+      od.append('page_url', window.location.href);
+      fetch(UPLOAD_ENDPOINT, { method: 'POST', body: od }).catch(() => {});
+    }
+
     ensureEmailjs();
 
     // Используем sendForm со скрытой формой.
@@ -1020,11 +1037,11 @@ $('#rem-m-submit').addEventListener('click', async () => {
     }
 
     notif('✓ Заявка отправлена! Свяжемся в течение 30 минут.', 'success');
-    btn.textContent = '✓ Заявка отправлена';
+    btnText.textContent = '✓ Заявка отправлена';
     setTimeout(() => {
       closeOrderModal();
       btn.disabled = false;
-      btn.textContent = 'Отправить заявку';
+      btnText.textContent = 'Отправить заявку';
     }, 1800);
 
   } catch(err) {
@@ -1044,7 +1061,7 @@ $('#rem-m-submit').addEventListener('click', async () => {
       <span style="margin-left:10px;font-size:12px;color:#888;">или напишите на alefcom1@gmail.com</span>`;
     btn.insertAdjacentElement('afterend', errBox);
     btn.disabled = false;
-    btn.textContent = 'Повторить отправку';
+    btnText.textContent = 'Повторить отправку';
   }
 });
 
