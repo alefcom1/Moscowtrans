@@ -180,9 +180,16 @@
 .rem-calc .btn { padding:14px; border:none; border-radius:var(--rad-s);
   font-size:15px; font-weight:600; cursor:pointer; transition:all .15s;
   font-family:var(--font); }
-.rem-calc .btn-primary { background:var(--red); color:#fff; }
-.rem-calc .btn-primary:hover { background:var(--red-d); }
-.rem-calc .btn-primary:disabled { background:var(--text-s); cursor:not-allowed; }
+.rem-calc .btn-primary {
+  background: linear-gradient(135deg,#00A0F0,#783CF0);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  box-shadow: 0 4px 18px rgba(120,60,240,.35);
+}
+.rem-calc .btn-primary:hover { box-shadow:0 6px 24px rgba(120,60,240,.5); transform:translateY(-1px); }
+.rem-calc .btn-primary:disabled { opacity:.55; cursor:not-allowed; transform:none; box-shadow:none; }
 .rem-calc .btn-secondary { background:var(--bg); color:var(--text-m); border:1px solid var(--border); }
 .rem-calc .btn-secondary:hover { border-color:var(--text-s); color:var(--text); }
 
@@ -277,6 +284,28 @@
 .rem-modal .m-agree { font-size:11px; color:var(--text-s); text-align:center;
   margin-top:12px; line-height:1.5; padding:0 8px; }
 .rem-modal .m-agree a { color:var(--red-d); }
+
+#rem-m-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  padding: 16px 28px;
+  background: linear-gradient(135deg,#00A0F0,#783CF0);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: var(--font);
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(120,60,240,.4);
+  transition: box-shadow .2s, transform .2s, opacity .2s;
+  letter-spacing: .01em;
+}
+#rem-m-submit:hover { box-shadow:0 7px 28px rgba(120,60,240,.55); transform:translateY(-1px); }
+#rem-m-submit:disabled { opacity:.55; cursor:not-allowed; transform:none; box-shadow:none; }
 
 /* ===========================================================
    УВЕДОМЛЕНИЯ
