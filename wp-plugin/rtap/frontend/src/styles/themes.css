@@ -1,33 +1,50 @@
-:root,
-html[data-theme='light'],
-body[data-theme='light'],
-html:not([data-theme='dark']),
-body:not([data-theme='dark']) {
-  --rtap-bg:      #FFFFFF;
-  --rtap-surface: #F3F3F3;
-  --rtap-border:  #DDDDDD;
-  --rtap-text:    #1A1A2E;
-  --rtap-accent:  #1A3C6E;
-  --rtap-gold:    #C9A84C;
-  --rtap-green:   #5ECB8F;
-  --rtap-purple:  #A084E8;
-  --rtap-red:     #E85555;
-  --rtap-shadow:  rgba(0,0,0,0.08);
-  --rtap-timer-track: #e5e7eb;
+/* RTAP theme vars — applied via data-rtap-theme on .rtap-wrap */
+
+/* ── Light ── */
+.rtap-wrap,
+[data-rtap-theme="light"] {
+  --rtap-bg:           #F5F6FA;
+  --rtap-surface:      #FFFFFF;
+  --rtap-surface2:     #F0F2F8;
+  --rtap-border:       #E2E6EF;
+  --rtap-text:         #1A1D2E;
+  --rtap-text-muted:   #6B7280;
+  --rtap-accent:       #2A52A0;
+  --rtap-accent-light: rgba(42,82,160,0.10);
+  --rtap-gold:         #C9A84C;
+  --rtap-gold-light:   rgba(201,168,76,0.12);
+  --rtap-green:        #22C55E;
+  --rtap-green-light:  rgba(34,197,94,0.12);
+  --rtap-red:          #EF4444;
+  --rtap-red-light:    rgba(239,68,68,0.12);
+  --rtap-purple:       #7C3AED;
+  --rtap-shadow:       0 4px 24px rgba(26,29,46,0.10);
+  --rtap-shadow-sm:    0 2px 8px  rgba(26,29,46,0.06);
+  --rtap-timer-track:  #E2E6EF;
+  --rtap-radius:       20px;
+  --rtap-radius-sm:    12px;
 }
 
-html[data-theme='dark'],
-body[data-theme='dark'],
-.dark {
-  --rtap-bg:      #0D0D1A;
-  --rtap-surface: #111120;
-  --rtap-border:  #2A2A4E;
-  --rtap-text:    #E8E8E8;
-  --rtap-accent:  #A084E8;
-  --rtap-gold:    #C9A84C;
-  --rtap-green:   #5ECB8F;
-  --rtap-purple:  #A084E8;
-  --rtap-red:     #E85555;
-  --rtap-shadow:  rgba(0,0,0,0.3);
-  --rtap-timer-track: #2A2A4E;
+/* ── Dark ── */
+[data-rtap-theme="dark"] {
+  --rtap-bg:           #0E0F1C;
+  --rtap-surface:      #161728;
+  --rtap-surface2:     #1E2035;
+  --rtap-border:       #2C2E4A;
+  --rtap-text:         #E8EAF2;
+  --rtap-text-muted:   #8B90B0;
+  --rtap-accent:       #6B8EF0;
+  --rtap-accent-light: rgba(107,142,240,0.14);
+  --rtap-gold:         #E0B84C;
+  --rtap-gold-light:   rgba(224,184,76,0.14);
+  --rtap-green:        #4ADE80;
+  --rtap-green-light:  rgba(74,222,128,0.14);
+  --rtap-red:          #F87171;
+  --rtap-red-light:    rgba(248,113,113,0.14);
+  --rtap-purple:       #A78BFA;
+  --rtap-shadow:       0 4px 24px rgba(0,0,0,0.40);
+  --rtap-shadow-sm:    0 2px 8px  rgba(0,0,0,0.24);
+  --rtap-timer-track:  #2C2E4A;
+  --rtap-radius:       20px;
+  --rtap-radius-sm:    12px;
 }

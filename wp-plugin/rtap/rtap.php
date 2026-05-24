@@ -38,9 +38,10 @@ add_shortcode('rtap_quiz',    'rtap_quiz_shortcode');
 add_shortcode('rtap_qow',     'rtap_qow_shortcode');
 add_shortcode('rtap_verify',  'rtap_verify_shortcode');
 
-// Vite outputs ES modules — WordPress must emit type="module" on our scripts
+// Vite outputs ES modules — remove WP's default type="text/javascript" and set type="module"
 add_filter('script_loader_tag', function(string $tag, string $handle): string {
     if (strpos($handle, 'rtap-') === 0) {
+        $tag = preg_replace("/\s+type=['\"]text\/javascript['\"]/", '', $tag);
         $tag = str_replace(' src=', ' type="module" src=', $tag);
     }
     return $tag;
@@ -141,6 +142,9 @@ function rtap_enqueue_frontend(): void {
         'siteUrl'    => get_site_url(),
         'version'    => RTAP_VERSION,
         'certUrlBase'=> get_site_url() . '/verify/',
+        'minCert'    => (int) get_option('rtap_min_cert',  70),
+        'minInter'   => (int) get_option('rtap_min_inter', 60),
+        'minAdv'     => (int) get_option('rtap_min_adv',   70),
     ]);
 }
 
