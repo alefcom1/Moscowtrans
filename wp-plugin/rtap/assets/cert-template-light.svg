@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" width="1200" height="840">
+  <rect width="1200" height="840" fill="#FFFFFF"/>
+  <rect x="30" y="30" width="1140" height="780" fill="none" stroke="#C9A84C" stroke-width="6"/>
+  <rect x="44" y="44" width="1112" height="752" fill="none" stroke="#DDDDDD" stroke-width="2"/>
+  <rect x="0" y="0" width="1200" height="100" fill="#1A3C6E"/>
+  <text x="600" y="62" text-anchor="middle" fill="#FFFFFF" font-family="Georgia,serif" font-size="24" font-weight="bold">БЮРО ПЕРЕВОДОВ «РЕМАРКА»  ·  MOSCOWTRANS.RU</text>
+  <!-- Placeholder: generated at runtime via Canvas API -->
+</svg>

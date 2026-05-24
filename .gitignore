@@ -5,6 +5,8 @@
 wp-config.php
 .env
 .env.*
+deploy-config.php
+wp-plugin/rtap/deploy-config.php
 *.pem
 *.key
 *.crt

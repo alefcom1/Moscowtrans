@@ -1,0 +1,33 @@
+:root,
+html[data-theme='light'],
+body[data-theme='light'],
+html:not([data-theme='dark']),
+body:not([data-theme='dark']) {
+  --rtap-bg:      #FFFFFF;
+  --rtap-surface: #F3F3F3;
+  --rtap-border:  #DDDDDD;
+  --rtap-text:    #1A1A2E;
+  --rtap-accent:  #1A3C6E;
+  --rtap-gold:    #C9A84C;
+  --rtap-green:   #5ECB8F;
+  --rtap-purple:  #A084E8;
+  --rtap-red:     #E85555;
+  --rtap-shadow:  rgba(0,0,0,0.08);
+  --rtap-timer-track: #e5e7eb;
+}
+
+html[data-theme='dark'],
+body[data-theme='dark'],
+.dark {
+  --rtap-bg:      #0D0D1A;
+  --rtap-surface: #111120;
+  --rtap-border:  #2A2A4E;
+  --rtap-text:    #E8E8E8;
+  --rtap-accent:  #A084E8;
+  --rtap-gold:    #C9A84C;
+  --rtap-green:   #5ECB8F;
+  --rtap-purple:  #A084E8;
+  --rtap-red:     #E85555;
+  --rtap-shadow:  rgba(0,0,0,0.3);
+  --rtap-timer-track: #2A2A4E;
+}

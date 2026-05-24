@@ -1,0 +1,171 @@
+[
+  {
+    "topic": "technical", "level": "beginner", "type": "mc", "lang": "en",
+    "question": "Как правильно перевести 'tensile strength' в технической документации?",
+    "payload": {
+      "options": ["Растяжимость", "Предел прочности на растяжение", "Упругость", "Натяжение"],
+      "correct": 1
+    },
+    "explanation": "Tensile strength — стандартный технический термин, переводится как «предел прочности на растяжение».",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical", "level": "beginner", "type": "fb", "lang": "en",
+    "question": "Выберите правильный перевод термина в предложении: 'Установите ___ на корпус перед сборкой.'",
+    "payload": {
+      "sentence": "Установите ___ на корпус перед сборкой.",
+      "options": ["прокладку", "уплотнение", "вставку", "обкладку"],
+      "correct": 0,
+      "context": "gasket"
+    },
+    "explanation": "'Gasket' в машиностроении — прокладка (уплотнительная деталь между поверхностями).",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical", "level": "intermediate", "type": "bt", "lang": "en",
+    "question": "Выберите лучший перевод предложения:",
+    "payload": {
+      "source": "The hydraulic actuator converts fluid power into mechanical motion.",
+      "options": [
+        "Гидравлический привод превращает мощность жидкости в механическое движение.",
+        "Гидравлический исполнительный механизм преобразует энергию рабочей жидкости в механическое движение.",
+        "Гидропривод конвертирует жидкостную мощность в движение механизма."
+      ],
+      "correct": 1
+    },
+    "explanation": "Вариант 2 использует профессиональную терминологию: «исполнительный механизм», «энергия рабочей жидкости».",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical", "level": "intermediate", "type": "tm", "lang": "en",
+    "question": "Сопоставьте термины с их переводами:",
+    "payload": {
+      "left":  ["Torque wrench", "Ball bearing", "Tensile strength", "Hydraulic actuator", "Galvanization"],
+      "right": ["Шарикоподшипник", "Оцинковка / Гальванизация", "Динамометрический ключ", "Предел прочности на растяжение", "Гидравлический исполнительный механизм"],
+      "pairs": [[0,2],[1,0],[2,3],[3,4],[4,1]]
+    },
+    "explanation": "Стандартные технические термины согласно ГОСТ и отраслевым словарям.",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical", "level": "advanced", "type": "fe", "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The solenoid valve regulates coolant flow through the heat exchanger.",
+      "translation": "Электромагнитный клапан регулирует поток [теплоносителя] через [теплообменник] посредством [электрического тока] в [обмотке].",
+      "segments": ["теплоносителя", "теплообменник", "электрического тока", "обмотке"],
+      "correct": 2
+    },
+    "explanation": "Клапан управляется электрическим током (электромагнитным полем), но регулирует поток хладагента (coolant), а не посредством тока — лишний смысловой элемент.",
+    "difficulty": 4
+  },
+  {
+    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "question": "Как перевести юридический термин 'indemnification'?",
+    "payload": {
+      "options": ["Штраф", "Возмещение убытков / Индемнизация", "Арест имущества", "Судебное решение"],
+      "correct": 1
+    },
+    "explanation": "Indemnification — возмещение убытков или ущерба, компенсация потерь. Ключевой термин контрактного права.",
+    "difficulty": 2
+  },
+  {
+    "topic": "legal", "level": "intermediate", "type": "bt", "lang": "en",
+    "question": "Выберите профессионально точный перевод:",
+    "payload": {
+      "source": "The indemnifying party shall hold harmless the indemnitee from any third-party claims.",
+      "options": [
+        "Возмещающая сторона освобождает возмещаемое лицо от любых претензий третьих лиц.",
+        "Сторона, предоставляющая возмещение, обязуется оградить получателя возмещения от любых требований третьих лиц.",
+        "Компенсирующая сторона держит безвредной компенсируемую от третьих-сторонних исков."
+      ],
+      "correct": 1
+    },
+    "explanation": "Вариант 2 точно передаёт юридическую конструкцию: 'hold harmless' = 'оградить/освободить от ответственности'.",
+    "difficulty": 3
+  },
+  {
+    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The arbitral tribunal shall have jurisdiction over all disputes arising out of or in connection with this agreement.",
+      "translation": "Арбитражный [суд] обладает [юрисдикцией] в отношении всех [споров], возникающих из настоящего [договора] или в связи с ним.",
+      "segments": ["суд", "юрисдикцией", "споров", "договора"],
+      "correct": 0
+    },
+    "explanation": "'Arbitral tribunal' — арбитражный трибунал (не суд). Это международный коммерческий арбитраж, а не государственный суд.",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical", "level": "beginner", "type": "mc", "lang": "en",
+    "question": "Как правильно перевести 'myocardial infarction'?",
+    "payload": {
+      "options": ["Инфаркт головного мозга", "Инфаркт миокарда", "Сердечная недостаточность", "Стенокардия"],
+      "correct": 1
+    },
+    "explanation": "Myocardial — относящийся к миокарду (сердечной мышце). Infarction — инфаркт (некроз ткани).",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical", "level": "intermediate", "type": "tm", "lang": "en",
+    "question": "Сопоставьте медицинские термины с переводами:",
+    "payload": {
+      "left":  ["Myocardial infarction", "Tachycardia", "Thrombosis", "Hypertension", "Angioplasty"],
+      "right": ["Тахикардия", "Артериальная гипертензия", "Инфаркт миокарда", "Ангиопластика", "Тромбоз"],
+      "pairs": [[0,2],[1,0],[2,4],[3,1],[4,3]]
+    },
+    "explanation": "Внимание: hypertension = 'артериальная гипертензия' в официальных документах (не 'гипертония').",
+    "difficulty": 2
+  },
+  {
+    "topic": "medical", "level": "advanced", "type": "fe", "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The patient presented with acute myocardial infarction and was administered thrombolytic therapy.",
+      "translation": "Пациент поступил с острым [инфарктом миокарда] и получил [тромболитическую терапию] в виде [внутривенных] инъекций [антикоагулянтов].",
+      "segments": ["инфарктом миокарда", "тромболитическую терапию", "внутривенных", "антикоагулянтов"],
+      "correct": 3
+    },
+    "explanation": "Тромболитическая терапия предполагает введение тромболитиков (растворяют тромб), а не антикоагулянтов — принципиально разные препараты.",
+    "difficulty": 5
+  },
+  {
+    "topic": "it", "level": "beginner", "type": "fb", "lang": "en",
+    "question": "Переведите термин в предложении: 'Откройте ___ и выберите пункт «Настройки».'",
+    "payload": {
+      "sentence": "Откройте ___ и выберите пункт «Настройки».",
+      "options": ["выпадающее меню", "раскрывающийся список", "горизонтальное меню", "контекстное меню"],
+      "correct": 0,
+      "context": "dropdown menu"
+    },
+    "explanation": "Стандартный термин в русской локализации — «выпадающее меню». «Раскрывающийся список» — для select-элементов с данными.",
+    "difficulty": 1
+  },
+  {
+    "topic": "it", "level": "intermediate", "type": "tm", "lang": "en",
+    "question": "Сопоставьте IT-термины с переводами:",
+    "payload": {
+      "left":  ["Dependency injection", "Race condition", "Throttling", "Idempotent operation", "Dead letter queue"],
+      "right": ["Состояние гонки", "Очередь недоставленных сообщений", "Внедрение зависимостей", "Ограничение частоты запросов", "Идемпотентная операция"],
+      "pairs": [[0,2],[1,0],[2,3],[3,4],[4,1]]
+    },
+    "explanation": "Устоявшиеся переводы из официальных глоссариев Microsoft и русскоязычной IT-документации.",
+    "difficulty": 3
+  },
+  {
+    "topic": "it", "level": "advanced", "type": "ro", "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "The API gateway authenticates the request, applies rate limiting, and routes it to the appropriate microservice.",
+      "segments": [
+        "и направляет его в соответствующий микросервис.",
+        "API-шлюз аутентифицирует запрос,",
+        "и применяет ограничение частоты запросов",
+        "(rate limiting)"
+      ],
+      "correct_order": [1, 2, 3, 0]
+    },
+    "explanation": "Правильный порядок: шлюз аутентифицирует → применяет rate limiting (с уточнением) → направляет в микросервис.",
+    "difficulty": 4
+  }
+]
