@@ -66,12 +66,17 @@ export default function StartScreen({ defaultTopic, defaultLang, onStart }) {
       <div className="rtap-card max-w-3xl mx-auto">
 
         {/* Hero */}
-        <div className="text-center mb-8">
-          <div style={{ fontSize: 48, marginBottom: 10 }}>🎯</div>
-          <h1 className="text-2xl font-bold mb-2" style={{ color: 'var(--rtap-text)' }}>
-            Тест для переводчиков
-          </h1>
-          <p className="text-sm" style={{ color: 'var(--rtap-text-muted)' }}>
+        <div className="mb-8">
+          <div className="flex items-center gap-3 mb-2">
+            {window.rtapConfig?.siteIconUrl
+              ? <img src={window.rtapConfig.siteIconUrl} alt="" style={{ width: 36, height: 36, borderRadius: 6, flexShrink: 0 }} />
+              : <span style={{ fontSize: 32, lineHeight: 1 }}>🎯</span>
+            }
+            <h1 className="text-2xl font-bold" style={{ color: 'var(--rtap-text)', margin: 0 }}>
+              Тест для переводчиков
+            </h1>
+          </div>
+          <p className="text-sm" style={{ color: 'var(--rtap-text-muted)', marginLeft: 0 }}>
             Проверьте профессиональный уровень · Получите сертификат · Станьте партнёром Ремарка
           </p>
         </div>
@@ -142,19 +147,19 @@ export default function StartScreen({ defaultTopic, defaultLang, onStart }) {
         </section>
 
         {/* CTA */}
-        <div className="flex justify-center">
+        <div className="flex justify-start" style={{ marginTop: 32, marginBottom: 20 }}>
           <button
             className="rtap-btn rtap-btn--primary"
             disabled={!canStart}
             onClick={() => canStart && onStart(topic, lang)}
-            style={{ fontSize: 17, padding: '16px 48px' }}
+            style={{ fontSize: 16, padding: '14px 40px' }}
           >
             Начать тест →
           </button>
         </div>
 
         {/* Info pills */}
-        <div className="flex flex-wrap justify-center gap-3 mt-6">
+        <div className="flex flex-wrap gap-3" style={{ marginBottom: 8 }}>
           {[
             '10 вопросов',
             '30 сек/вопрос',

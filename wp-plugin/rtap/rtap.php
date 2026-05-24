@@ -110,6 +110,8 @@ function rtap_enqueue_frontend(): void {
         'minCert'    => (int) get_option('rtap_min_cert',  70),
         'minInter'   => (int) get_option('rtap_min_inter', 60),
         'minAdv'     => (int) get_option('rtap_min_adv',   70),
+        'siteIconUrl'=> get_site_icon_url(64) ?: '',
+        'siteName'   => get_bloginfo('name'),
     ]);
 }
 
