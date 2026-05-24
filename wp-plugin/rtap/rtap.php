@@ -108,12 +108,17 @@ function rtap_enqueue_frontend(): void {
     $ver      = file_exists($dist . 'index.js') ? filemtime($dist . 'index.js') : RTAP_VERSION;
 
     // IIFE bundle: CSS is injected by JS
-    wp_enqueue_script('rtap-app', $dist_url . 'index.js', [], $ver, true);
+    // Named rtap-bundle.js (not index.js) to avoid WP Fastest Cache renaming conflicts
+    wp_enqueue_script('rtap-app', $dist_url . 'rtap-bundle.js', [], $ver, true);
 
-    // Prevent caching/minification plugins from processing this script
+    // Add defer + exclusion attrs — WP Fastest Cache skips deferred scripts from combination
     add_filter('script_loader_tag', function(string $tag, string $handle): string {
         if ($handle === 'rtap-app') {
-            $tag = str_replace('<script ', '<script data-no-optimize="1" data-cfasync="false" data-noptimize="1" ', $tag);
+            $tag = str_replace(
+                '<script ',
+                '<script defer data-no-optimize="1" data-cfasync="false" data-noptimize="1" ',
+                $tag
+            );
         }
         return $tag;
     }, 20, 2);
