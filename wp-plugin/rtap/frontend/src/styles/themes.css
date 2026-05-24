@@ -1,9 +1,7 @@
-/* RTAP theme vars — applied via data-rtap-theme on .rtap-wrap */
+/* RTAP theme vars */
 
-/* ── Light ── */
-.rtap-wrap,
-[data-rtap-theme="light"] {
-  --rtap-bg:           #F5F6FA;
+/* ── Default = Light ── */
+:root {
   --rtap-surface:      #FFFFFF;
   --rtap-surface2:     #F0F2F8;
   --rtap-border:       #E2E6EF;
@@ -25,11 +23,10 @@
   --rtap-radius-sm:    10px;
 }
 
-/* ── Dark ── */
+/* ── Dark — triggered by data-rtap-theme="dark" on .rtap-wrap ── */
 [data-rtap-theme="dark"] {
-  --rtap-bg:           #0E0F1C;
-  --rtap-surface:      #161728;
-  --rtap-surface2:     #1E2035;
+  --rtap-surface:      #1C1F35;
+  --rtap-surface2:     #252840;
   --rtap-border:       #3A3D5C;
   --rtap-text:         #E8EAF2;
   --rtap-text-muted:   #8B90B0;
@@ -42,9 +39,7 @@
   --rtap-red:          #F87171;
   --rtap-red-light:    rgba(248,113,113,0.14);
   --rtap-purple:       #A78BFA;
-  --rtap-shadow:       0 4px 24px rgba(0,0,0,0.40);
-  --rtap-shadow-sm:    0 2px 8px  rgba(0,0,0,0.24);
+  --rtap-shadow:       0 4px 24px rgba(0,0,0,0.50);
+  --rtap-shadow-sm:    0 2px 8px  rgba(0,0,0,0.30);
   --rtap-timer-track:  #2C2E4A;
-  --rtap-radius:       16px;
-  --rtap-radius-sm:    10px;
 }

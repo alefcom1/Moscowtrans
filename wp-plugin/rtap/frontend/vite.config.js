@@ -10,7 +10,7 @@ export default defineConfig({
       output: {
         format: 'iife',
         inlineDynamicImports: true,
-        entryFileNames: 'assets/index.js',
+        entryFileNames: 'assets/rtap-bundle.js',
         assetFileNames: 'assets/[name].[ext]',
       },
     },

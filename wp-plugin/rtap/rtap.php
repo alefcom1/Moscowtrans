@@ -34,6 +34,7 @@ add_action('wp_enqueue_scripts', 'rtap_enqueue_frontend');
 add_action('admin_enqueue_scripts', 'rtap_enqueue_admin');
 add_action('rtap_sync_pending', ['RTAP_Candidate', 'sync_pending']);
 
+
 add_shortcode('rtap_quiz',    'rtap_quiz_shortcode');
 add_shortcode('rtap_qow',     'rtap_qow_shortcode');
 add_shortcode('rtap_verify',  'rtap_verify_shortcode');
@@ -99,7 +100,20 @@ function rtap_enqueue_frontend(): void {
     $ver      = file_exists($dist . 'index.js') ? filemtime($dist . 'index.js') : RTAP_VERSION;
 
     // IIFE bundle: CSS is injected by JS
-    wp_enqueue_script('rtap-app', $dist_url . 'index.js', [], $ver, true);
+    // Named rtap-bundle.js (not index.js) to avoid WP Fastest Cache renaming conflicts
+    wp_enqueue_script('rtap-app', $dist_url . 'rtap-bundle.js', [], $ver, true);
+
+    // Add defer + exclusion attrs — WP Fastest Cache skips deferred scripts from combination
+    add_filter('script_loader_tag', function(string $tag, string $handle): string {
+        if ($handle === 'rtap-app') {
+            $tag = str_replace(
+                '<script ',
+                '<script defer data-no-optimize="1" data-cfasync="false" data-noptimize="1" ',
+                $tag
+            );
+        }
+        return $tag;
+    }, 20, 2);
 
     wp_localize_script('rtap-app', 'rtapConfig', [
         'apiBase'    => rest_url('rtap/v1'),
@@ -110,6 +124,8 @@ function rtap_enqueue_frontend(): void {
         'minCert'    => (int) get_option('rtap_min_cert',  70),
         'minInter'   => (int) get_option('rtap_min_inter', 60),
         'minAdv'     => (int) get_option('rtap_min_adv',   70),
+        'siteIconUrl'=> get_site_icon_url(64) ?: '',
+        'siteName'   => get_bloginfo('name'),
     ]);
 }
 

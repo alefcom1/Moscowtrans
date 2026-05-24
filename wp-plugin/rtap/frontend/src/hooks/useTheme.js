@@ -1,42 +1,60 @@
 import { useState, useEffect } from 'react';
 
-export function detectTheme() {
-  const html  = document.documentElement;
-  const body  = document.body;
+function getBrightness(el) {
+  try {
+    const bg = window.getComputedStyle(el).backgroundColor;
+    const rgb = bg.match(/[\d.]+/g);
+    if (!rgb || rgb.length < 3) return null;
+    const r = parseInt(rgb[0]), g = parseInt(rgb[1]), b = parseInt(rgb[2]);
+    const a = rgb[3] !== undefined ? parseFloat(rgb[3]) : 1;
+    if (a < 0.05) return null; // transparent — ignore
+    return (r * 299 + g * 587 + b * 114) / 1000;
+  } catch { return null; }
+}
 
-  // Explicit attribute checks
-  if (html.getAttribute('data-theme') === 'dark') return 'dark';
-  if (body.getAttribute('data-theme') === 'dark')  return 'dark';
-  if (html.getAttribute('data-theme') === 'light') return 'light';
-  if (body.getAttribute('data-theme') === 'light') return 'light';
-
-  // Common dark-mode class names
-  const darkClasses = ['dark', 'dark-mode', 'theme-dark', 'night-mode', 'dark-theme'];
-  for (const cls of darkClasses) {
-    if (html.classList.contains(cls) || body.classList.contains(cls)) return 'dark';
+export function detectTheme(rootEl) {
+  // 1. Explicit data-theme attribute on html/body
+  for (const el of [document.documentElement, document.body]) {
+    const v = el.getAttribute('data-theme');
+    if (v === 'dark')  return 'dark';
+    if (v === 'light') return 'light';
   }
 
-  // Detect by computed background brightness of <body>
-  try {
-    const bg  = window.getComputedStyle(body).backgroundColor;
-    const rgb = bg.match(/\d+/g);
-    if (rgb && rgb.length >= 3) {
-      const brightness = (parseInt(rgb[0]) * 299 + parseInt(rgb[1]) * 587 + parseInt(rgb[2]) * 114) / 1000;
-      if (brightness < 100) return 'dark';
-    }
-  } catch (_) { /* ignore */ }
+  // 2. Common dark-mode class names
+  const darkClasses = ['dark', 'dark-mode', 'theme-dark', 'night-mode'];
+  for (const el of [document.documentElement, document.body]) {
+    if (darkClasses.some(c => el.classList.contains(c))) return 'dark';
+  }
 
-  // OS-level preference
+  // 3. Walk up from widget container to find a non-transparent background
+  const candidates = [
+    rootEl?.parentElement,
+    document.body,
+    document.documentElement,
+  ].filter(Boolean);
+
+  for (const el of candidates) {
+    let node = el;
+    let depth = 0;
+    while (node && node !== document && depth < 8) {
+      const b = getBrightness(node);
+      if (b !== null) return b < 128 ? 'dark' : 'light';
+      node = node.parentElement;
+      depth++;
+    }
+  }
+
+  // 4. OS preference
   if (window.matchMedia?.('(prefers-color-scheme: dark)').matches) return 'dark';
 
   return 'light';
 }
 
-export function useTheme() {
-  const [theme, setTheme] = useState(detectTheme);
+export function useTheme(rootEl) {
+  const [theme, setTheme] = useState(() => detectTheme(rootEl));
 
   useEffect(() => {
-    const refresh = () => setTheme(detectTheme());
+    const refresh = () => setTheme(detectTheme(rootEl));
 
     const obs = new MutationObserver(refresh);
     obs.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme', 'class', 'style'] });
@@ -45,8 +63,11 @@ export function useTheme() {
     const mq = window.matchMedia?.('(prefers-color-scheme: dark)');
     mq?.addEventListener('change', refresh);
 
-    return () => { obs.disconnect(); mq?.removeEventListener('change', refresh); };
-  }, []);
+    // Re-check once after styles settle
+    const tid = setTimeout(refresh, 200);
+
+    return () => { obs.disconnect(); mq?.removeEventListener('change', refresh); clearTimeout(tid); };
+  }, [rootEl]);
 
   return theme;
 }
