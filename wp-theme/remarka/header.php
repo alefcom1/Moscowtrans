@@ -188,15 +188,13 @@
 
   <!-- Мобильное выдвижное меню -->
   <div class="mobile-drawer" aria-hidden="true">
-    <nav aria-label="Мобильное меню">
-      <a href="/#services">Услуги</a>
-      <a href="/#industries">Отрасли</a>
-      <a href="/yazyki-perevoda/">Языки</a>
-      <a href="/stoimost-perevoda/">Цены</a>
-      <a href="/#about">О нас</a>
-      <a href="/blog/">Блог</a>
-      <a href="/test-perevodchika/" class="mobile-link--accent">Переводчикам</a>
-    </nav>
+    <?php wp_nav_menu([
+      'theme_location' => 'mobile',
+      'container'      => false,
+      'items_wrap'     => '<nav aria-label="Мобильное меню">%3$s</nav>',
+      'walker'         => new Remarka_Mobile_Nav_Walker(),
+      'fallback_cb'    => 'remarka_mobile_menu_fallback',
+    ]); ?>
     <div class="drawer-actions">
       <a href="tel:+74959704413" class="btn-link">+7 (495) 970-44-13</a>
       <a href="https://tms.perevod4.ru/" target="_blank" rel="noopener" class="btn-link">Войти</a>
