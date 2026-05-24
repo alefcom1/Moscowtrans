@@ -18,6 +18,13 @@ add_action('init', function () {
     }
 }, 1);
 
+// SEO descriptions setup — load only when explicitly triggered
+add_action('init', function () {
+    if (!empty($_GET['remarka_setup_seo']) && current_user_can('manage_options')) {
+        require_once get_template_directory() . '/inc/setup-seo-descriptions.php';
+    }
+}, 1);
+
 /**
  * Helper: get custom field with fallback.
  */
