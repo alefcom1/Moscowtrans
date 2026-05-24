@@ -6,7 +6,12 @@
  * conditionally on specific templates (FAQPage, AggregateRating, etc.).
  */
 
-/* ── 1. GLOBAL ORGANISATION + LOCAL BUSINESS SCHEMA ───────────────────────── */
+/* ── 0. REMOVE DUPLICATE SITE NAME FROM TITLE ────────────────────────────── */
+// Stored titles already contain "| Ремарка" — WordPress would add " - Ремарка" on top.
+add_filter('document_title_parts', function (array $parts): array {
+    unset($parts['site'], $parts['tagline']);
+    return $parts;
+});
 function remarka_seo_global_schema(): void {
     $site_url = home_url('/');
 
@@ -109,6 +114,20 @@ function remarka_seo_global_schema(): void {
 add_action( 'wp_head', 'remarka_seo_global_schema', 6 );
 
 /* ── 2. META DESCRIPTION (all pages) ──────────────────────────────────────── */
+
+/**
+ * Build a unique, ≤160-char description from a stored page title.
+ * Extracts the subject before the first "—" or "|", removes trailing
+ * "в Москве" to avoid duplication, then appends a brand suffix.
+ */
+function remarka_desc_from_title( int $post_id ): string {
+    $raw     = get_post_field( 'post_title', $post_id );
+    $subject = preg_split( '/\s*[|—]\s*/', $raw )[0];
+    $subject = trim( preg_replace( '/\s+(в\s+)?Москв[еа]\s*$/u', '', trim( $subject ) ) );
+    $desc    = $subject . ' в Москве — бюро «Ремарка». Профессиональные переводчики, NDA, двойная проверка качества. Расчёт стоимости бесплатно.';
+    return mb_strlen( $desc ) > 160 ? mb_substr( $desc, 0, 157 ) . '…' : $desc;
+}
+
 function remarka_seo_meta_description(): void {
     global $post;
     $desc = '';
@@ -119,19 +138,21 @@ function remarka_seo_meta_description(): void {
 
     if ( ! $desc ) {
         $tpl = $post ? get_page_template_slug( $post->ID ) : '';
-        $defaults = [
-            ''                                            => 'Бюро переводов «Ремарка» — профессиональный перевод на 60+ языков в Москве. Юридические, технические, медицинские документы. Дипломированные переводчики. От 400 ₽/стр.',
-            'page-templates/template-pricing.php'        => 'Стоимость перевода в Москве — от 400 ₽/страницу. Калькулятор цен онлайн. Три уровня качества: ИИ-постредактирование, профессиональный, премиальный. Расчёт за 30 минут.',
-            'page-templates/template-languages.php'      => 'Перевод на 60+ языков в бюро «Ремарка», Москва. Английский, немецкий, французский, китайский, японский и другие. Профильные переводчики. Цены от 400 ₽/стр.',
-            'page-templates/template-contact.php'        => 'Контакты бюро переводов «Ремарка», Москва — Глинищевский пер., 6, оф. 2. Тел. +7 (495) 970-44-13, WhatsApp +7 (985) 970-44-13. Режим работы: Пн–Пт 9:00–18:00.',
-            'page-templates/template-cases.php'          => 'Примеры переводов бюро «Ремарка» — реализованные проекты в юридической, технической, медицинской и финансовой сферах. Портфолио и кейсы.',
-            'page-templates/template-service.php'        => '',
-        ];
-
-        $desc = isset( $defaults[ $tpl ] ) ? $defaults[ $tpl ] : $defaults[''];
 
         if ( is_front_page() ) {
-            $desc = $defaults[''];
+            $desc = 'Бюро переводов «Ремарка», Москва — профессиональный письменный перевод на 60+ языков. Юридические, технические, медицинские документы. Дипломированные переводчики. От 400 ₽/стр.';
+        } elseif ( $tpl === 'page-templates/template-service.php' && $post ) {
+            $desc = remarka_desc_from_title( $post->ID );
+        } elseif ( $tpl === 'page-templates/template-subservice.php' && $post ) {
+            $desc = remarka_desc_from_title( $post->ID );
+        } else {
+            $static = [
+                'page-templates/template-pricing.php'   => 'Стоимость перевода в Москве — от 400 ₽/стр. Онлайн-калькулятор цен. Три уровня качества: ИИ-постредактирование, профессиональный, премиум. Расчёт за 30 минут.',
+                'page-templates/template-languages.php' => 'Перевод на 60+ языков в бюро «Ремарка». Английский, немецкий, французский, китайский, японский, арабский и другие. Профильные переводчики. Цены от 400 ₽/стр.',
+                'page-templates/template-contact.php'   => 'Контакты бюро переводов «Ремарка» — Москва, Глинищевский пер., 6, оф. 2. Тел. +7 (495) 970-44-13. WhatsApp +7 (985) 970-44-13. Пн–Пт 9:00–18:00.',
+                'page-templates/template-cases.php'     => 'Кейсы бюро переводов «Ремарка» — реальные проекты в юридической, технической, медицинской и финансовой сферах. Объёмы, сроки, языки.',
+            ];
+            $desc = $static[ $tpl ] ?? 'Бюро переводов «Ремарка», Москва — профессиональный письменный перевод на 60+ языков. Юридические, технические, медицинские документы. Дипломированные переводчики. От 400 ₽/стр.';
         }
     }
 
