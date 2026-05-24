@@ -767,7 +767,10 @@ add_action( 'wp_head', function() use ( $ld, $name_acc, $p, $page_url, $slug ) {
         . 'Дипломированные переводчики, двойная проверка. '
         . 'От ' . $p . ' ₽/страницу. Срок от 1 дня.';
 
-    echo '<meta name="description" content="' . esc_attr( $meta_desc ) . '">' . "\n";
+    // RankMath manages meta description when active (populated via rank_math_description meta)
+    if ( ! defined( 'RANK_MATH_VERSION' ) ) {
+        echo '<meta name="description" content="' . esc_attr( $meta_desc ) . '">' . "\n";
+    }
 
     $faq_items = [
         [ 'q' => 'Сколько стоит перевод на ' . $ld['name_acc'] . ' язык?',        'a' => $ld['faq_price_a'] ],

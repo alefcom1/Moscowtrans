@@ -166,6 +166,8 @@ function remarka_get_page_desc(): string {
 }
 
 function remarka_seo_meta_description(): void {
+    // RankMath handles meta description output when active
+    if ( defined( 'RANK_MATH_VERSION' ) ) return;
     // Language pages output their own meta description in template-language.php (priority 5)
     if ( is_page_template( 'page-templates/template-language.php' ) ) return;
 
@@ -178,6 +180,8 @@ add_action( 'wp_head', 'remarka_seo_meta_description', 7 );
 
 /* ── 3. OPEN GRAPH + TWITTER CARDS ──────────────────────────────────────────── */
 function remarka_seo_og_tags(): void {
+    // RankMath handles OG/Twitter tags when active
+    if ( defined( 'RANK_MATH_VERSION' ) ) return;
     global $post;
 
     $title = wp_get_document_title();
@@ -515,6 +519,8 @@ add_action( 'wp_head', 'remarka_seo_languages_schema', 9 );
 
 /* ── 9. CANONICAL TAG ────────────────────────────────────────────────────────── */
 function remarka_seo_canonical(): void {
+    // RankMath handles canonical when active
+    if ( defined( 'RANK_MATH_VERSION' ) ) return;
     global $post;
     if ( ! $post ) return;
 
