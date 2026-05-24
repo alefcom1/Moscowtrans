@@ -1270,21 +1270,7 @@ a.sb-item { text-decoration: none; }
 .srv-arr-blue   { background: linear-gradient(135deg, #0078F0, #00A0F0); }
 
 /* ── Адаптив ── */
-@media (max-width: 900px) {
-  /* На мобильном — только окно чата, без боковых панелей */
-  .cw-agent-panel { display: none; }
-  .chat-sidebar   { display: none; }
-  .waveform-svg   { display: none; }
-  .hero-main { padding: 16px 12px; }
-  /* Скругляем оба нижних угла строки ввода */
-  .cw-input-bar,
-  :root[data-theme="light"] .cw-input-bar { border-radius: 0 0 18px 18px; }
-  /* dvh: корректная высота для iOS Safari (адресная строка не обрезает чат) */
-  .hero-page { height: calc(100dvh - var(--header-h)); }
-}
-@media (max-width: 640px) {
-  .services-row { padding: 0 16px; }
-}
+/* Мобильные правила hero перенесены ниже glass-layout (см. конец секции) */
 
 /* ================================================================
    HERO + SERVICES — единый фоновый блок
@@ -1691,6 +1677,23 @@ a.sb-item { text-decoration: none; }
 /* Кнопки ввода крупнее */
 .cw-btn-icon { width: 44px; height: 44px; }
 .cw-btn-send { width: 48px; height: 48px; }
+
+/* ── Адаптив hero — ПОСЛЕ glass-layout чтобы не перебивалось ── */
+/* На мобильном (≤900px): только окно чата, sidebar и карточка Ольги скрыты  */
+@media (max-width: 900px) {
+  .cw-agent-panel { display: none; }
+  .chat-sidebar   { display: none; }
+  .waveform-svg   { display: none; }
+  .hero-main      { padding: 16px 12px; }
+  /* dvh — корректная высота для iOS Safari */
+  .hero-page      { height: calc(100dvh - var(--header-h)); }
+  /* Оба нижних угла строки ввода скруглены, т.к. левой панели нет */
+  .cw-input-bar,
+  :root[data-theme="light"] .cw-input-bar { border-radius: 0 0 18px 18px; }
+}
+@media (max-width: 640px) {
+  .services-row { padding: 0 16px; }
+}
 
 /* ================================================================
    SECTIONS — ОБЩИЕ
