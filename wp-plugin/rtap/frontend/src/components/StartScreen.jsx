@@ -68,10 +68,7 @@ export default function StartScreen({ defaultTopic, defaultLang, onStart }) {
         {/* Hero */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-2">
-            {window.rtapConfig?.siteIconUrl
-              ? <img src={window.rtapConfig.siteIconUrl} alt="" style={{ width: 36, height: 36, borderRadius: 6, flexShrink: 0 }} />
-              : <span style={{ fontSize: 32, lineHeight: 1 }}>🎯</span>
-            }
+            <span style={{ fontSize: 32, lineHeight: 1 }}>🎯</span>
             <h1 className="text-2xl font-bold" style={{ color: 'var(--rtap-text)', margin: 0 }}>
               Тест для переводчиков
             </h1>
