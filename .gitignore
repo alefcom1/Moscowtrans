@@ -28,6 +28,10 @@ wflogs/
 backup*
 *backup*
 
+# Node
+node_modules/
+wp-plugin/rtap/frontend/node_modules/
+
 # Logs / temp
 error_log
 *.log

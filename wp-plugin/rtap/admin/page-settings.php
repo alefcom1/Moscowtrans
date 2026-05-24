@@ -1,6 +1,17 @@
 <?php defined('ABSPATH') || exit;
+require_once RTAP_DIR . 'admin/setup-pages.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && check_admin_referer('rtap_settings')) {
+if (!empty($_POST['create_pages']) && check_admin_referer('rtap_settings')) {
+    $results = rtap_create_pages();
+    echo '<div class="notice notice-success"><p>Страницы обработаны:</p><ul>';
+    foreach ($results as $r) {
+        $icon = $r['status'] === 'created' ? '✅' : ($r['status'] === 'exists' ? '📄' : '❌');
+        echo "<li>$icon {$r['title']} — {$r['status']}" . ($r['url'] ? " <a href='{$r['url']}' target='_blank'>открыть</a>" : '') . '</li>';
+    }
+    echo '</ul></div>';
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && check_admin_referer('rtap_settings') && empty($_POST['create_pages'])) {
     update_option('rtap_tms_url', esc_url_raw($_POST['tms_url'] ?? ''));
     update_option('rtap_tms_key', sanitize_text_field($_POST['tms_key'] ?? ''));
     update_option('rtap_min_cert', absint($_POST['min_cert'] ?? 70));
@@ -51,5 +62,16 @@ $min_adv  = get_option('rtap_min_adv',  70);
     </table>
 
     <?php submit_button('Сохранить настройки'); ?>
+  </form>
+
+  <hr style="margin:30px 0">
+  <h2>Создать страницы тестов</h2>
+  <p>Автоматически создаёт страницы WordPress с нужными шорткодами и URL-структурой.</p>
+  <form method="post">
+    <?php wp_nonce_field('rtap_settings'); ?>
+    <input type="hidden" name="create_pages" value="1">
+    <button type="submit" class="button button-secondary">
+      🏗️ Создать страницы (/test-perevodchika/ и подстраницы)
+    </button>
   </form>
 </div>
