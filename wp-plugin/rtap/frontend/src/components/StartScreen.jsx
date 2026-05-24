@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
 const TOPICS = [
-  { id: 'technical', label: 'Технический',  icon: '⚙️', desc: 'Машиностроение, химия, стандарты' },
-  { id: 'legal',     label: 'Юридический',  icon: '⚖️', desc: 'Договоры, арбитраж, законодательство' },
-  { id: 'medical',   label: 'Медицинский',  icon: '🏥', desc: 'Клиническая документация, фармация' },
-  { id: 'it',        label: 'IT-перевод',   icon: '💻', desc: 'Документация, интерфейсы, API' },
+  { id: 'technical', label: 'Технический',  icon: '⚙️', desc: 'Машиностроение, химия, стандарты',    url: '/test-perevodchika/tekhnicheskiy/' },
+  { id: 'legal',     label: 'Юридический',  icon: '⚖️', desc: 'Договоры, арбитраж, законодательство', url: '/test-perevodchika/yuridicheskiy/' },
+  { id: 'medical',   label: 'Медицинский',  icon: '🏥', desc: 'Клиническая документация, фармация',   url: '/test-perevodchika/meditsinskiy/' },
+  { id: 'it',        label: 'IT-перевод',   icon: '💻', desc: 'Документация, интерфейсы, API',         url: '/test-perevodchika/it/' },
 ];
 
 // Языки: основные (активны) + вторичные (скоро)
@@ -123,37 +123,26 @@ export default function StartScreen({ defaultTopic, defaultLang, onStart }) {
           </div>
         </section>
 
-        {/* Step 2: Topic */}
+        {/* Step 2: Topic — cards are links to topic pages */}
         <section className="mb-8">
           <h2 className="text-base font-semibold mb-3" style={{ color: 'var(--rtap-text)' }}>
-            2. Тематика
+            2. Тематика — выберите тест
           </h2>
           <div className="rtap-topic-grid">
             {TOPICS.map(t => (
-              <button
+              <a
                 key={t.id}
-                className={`rtap-topic-card ${topic === t.id ? 'rtap-topic-card--active' : ''}`}
-                onClick={() => setTopic(t.id)}
+                href={t.url}
+                className="rtap-topic-card"
+                style={{ textDecoration: 'none' }}
               >
                 <div className="rtap-topic-card__icon">{t.icon}</div>
                 <div className="rtap-topic-card__title">{t.label}</div>
                 <div className="rtap-topic-card__count">{t.desc}</div>
-              </button>
+              </a>
             ))}
           </div>
         </section>
-
-        {/* CTA */}
-        <div className="flex justify-start" style={{ marginTop: 32, marginBottom: 20 }}>
-          <button
-            className="rtap-btn rtap-btn--primary"
-            disabled={!canStart}
-            onClick={() => canStart && onStart(topic, lang)}
-            style={{ fontSize: 16, padding: '14px 40px' }}
-          >
-            Начать тест →
-          </button>
-        </div>
 
         {/* Info pills */}
         <div className="flex flex-wrap gap-3" style={{ marginBottom: 8 }}>
