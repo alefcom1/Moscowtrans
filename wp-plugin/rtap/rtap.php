@@ -101,6 +101,14 @@ function rtap_enqueue_frontend(): void {
     // IIFE bundle: CSS is injected by JS
     wp_enqueue_script('rtap-app', $dist_url . 'index.js', [], $ver, true);
 
+    // Prevent caching/minification plugins from processing this script
+    add_filter('script_loader_tag', function(string $tag, string $handle): string {
+        if ($handle === 'rtap-app') {
+            $tag = str_replace('<script ', '<script data-no-optimize="1" data-cfasync="false" data-noptimize="1" ', $tag);
+        }
+        return $tag;
+    }, 20, 2);
+
     wp_localize_script('rtap-app', 'rtapConfig', [
         'apiBase'    => rest_url('rtap/v1'),
         'nonce'      => wp_create_nonce('wp_rest'),
