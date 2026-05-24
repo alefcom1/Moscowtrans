@@ -5,6 +5,8 @@
 wp-config.php
 .env
 .env.*
+deploy-config.php
+wp-plugin/rtap/deploy-config.php
 *.pem
 *.key
 *.crt
@@ -25,6 +27,10 @@ wflogs/
 *.7z
 backup*
 *backup*
+
+# Node
+node_modules/
+wp-plugin/rtap/frontend/node_modules/
 
 # Logs / temp
 error_log

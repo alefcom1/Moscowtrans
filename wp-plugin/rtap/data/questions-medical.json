@@ -1,0 +1,3057 @@
+[
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести термин 'hypertension' в официальных медицинских документах?",
+    "payload": {
+      "options": [
+        "Гипертония",
+        "Артериальная гипертензия",
+        "Повышенное давление",
+        "Гипертонус"
+      ],
+      "correct": 1
+    },
+    "explanation": "В официальных медицинских документах и МКБ-10 используется термин «артериальная гипертензия», а не разговорное «гипертония».",
+    "difficulty": 2
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'myocardial infarction' на русский язык?",
+    "payload": {
+      "options": [
+        "Инфаркт лёгкого",
+        "Инфаркт миокарда",
+        "Ишемия миокарда",
+        "Некроз сердца"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Myocardial infarction' — инфаркт миокарда; myocardium = миокард, infarction = инфаркт (некроз ткани вследствие ишемии).",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Каков правильный перевод термина 'tachycardia'?",
+    "payload": {
+      "options": [
+        "Брадикардия",
+        "Тахикардия",
+        "Аритмия",
+        "Кардиомегалия"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Tachycardia' — тахикардия (учащённое сердцебиение). Bradycardia — брадикардия (замедленный пульс).",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'informed consent' в контексте клинических испытаний?",
+    "payload": {
+      "options": [
+        "Устное согласие",
+        "Информированное согласие",
+        "Письменное разрешение",
+        "Согласие пациента"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Informed consent' — информированное согласие. Устойчивое юридическое и медицинское понятие, используемое в протоколах клинических исследований.",
+    "difficulty": 2
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите правильный перевод термина 'adverse event' в фармакологических документах.",
+    "payload": {
+      "options": [
+        "Нежелательное явление",
+        "Побочный эффект",
+        "Осложнение",
+        "Отрицательный результат"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Adverse event' в клинических исследованиях — нежелательное явление (НЯ). 'Side effect' (побочный эффект) — смежный, но не идентичный термин.",
+    "difficulty": 2
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "fb",
+    "lang": "en",
+    "question": "Выберите правильный перевод: 'The patient presented with acute ___ (dyspnea).'",
+    "payload": {
+      "sentence": "Пациент поступил с острой ___.",
+      "options": [
+        "диспноэ",
+        "одышкой",
+        "дисфагией",
+        "диспепсией"
+      ],
+      "correct": 1,
+      "context": "dyspnea"
+    },
+    "explanation": "'Dyspnea' — одышка. В клиническом тексте на русском предпочтительнее «одышка», хотя «диспноэ» тоже допустимо в узкоспециальных текстах.",
+    "difficulty": 2
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'contraindication' в инструкции к лекарственному препарату?",
+    "payload": {
+      "options": [
+        "Показание",
+        "Противопоказание",
+        "Предостережение",
+        "Ограничение"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Contraindication' — противопоказание. 'Indication' — показание. Важно не путать эти термины при переводе инструкций.",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'oncology' на русский язык?",
+    "payload": {
+      "options": [
+        "Гематология",
+        "Онкология",
+        "Радиология",
+        "Патология"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Oncology' — онкология, раздел медицины, изучающий опухоли.",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Каков правильный перевод термина 'biopsy'?",
+    "payload": {
+      "options": [
+        "Аутопсия",
+        "Биопсия",
+        "Цитология",
+        "Гистология"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Biopsy' — биопсия (прижизненное взятие ткани для исследования). 'Autopsy' — аутопсия (посмертное вскрытие).",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'The drug is administered ___ (intravenously).'",
+    "payload": {
+      "sentence": "Препарат вводится ___.",
+      "options": [
+        "внутримышечно",
+        "внутривенно",
+        "подкожно",
+        "перорально"
+      ],
+      "correct": 1,
+      "context": "intravenously"
+    },
+    "explanation": "'Intravenously' — внутривенно (в/в). Intramuscularly — внутримышечно (в/м). Subcutaneously — подкожно (п/к).",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'diagnosis' на русский язык?",
+    "payload": {
+      "options": [
+        "Прогноз",
+        "Диагноз",
+        "Анамнез",
+        "Симптом"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Diagnosis' — диагноз. 'Prognosis' — прогноз. 'Anamnesis' — анамнез.",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите правильный перевод 'surgical intervention'.",
+    "payload": {
+      "options": [
+        "Медикаментозное лечение",
+        "Хирургическое вмешательство",
+        "Лучевая терапия",
+        "Физиотерапия"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Surgical intervention' — хирургическое вмешательство. Устойчивый клинический термин.",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'patient history' или 'medical history'?",
+    "payload": {
+      "options": [
+        "История пациента",
+        "Анамнез",
+        "Медицинская карта",
+        "Эпикриз"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Medical history' — анамнез. 'Medical record' — медицинская карта. 'Epicrisis' — эпикриз (выписной документ).",
+    "difficulty": 2
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'The patient was discharged with a ___ (prescription).'",
+    "payload": {
+      "sentence": "Пациент был выписан с ___.",
+      "options": [
+        "рецептом",
+        "направлением",
+        "заключением",
+        "выпиской"
+      ],
+      "correct": 0,
+      "context": "prescription"
+    },
+    "explanation": "'Prescription' — рецепт (на лекарственный препарат). 'Referral' — направление. 'Discharge summary' — выписной эпикриз.",
+    "difficulty": 2
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'fracture' в ортопедическом тексте?",
+    "payload": {
+      "options": [
+        "Вывих",
+        "Перелом",
+        "Растяжение",
+        "Ушиб"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Fracture' — перелом. 'Dislocation' — вывих. 'Sprain' — растяжение. 'Contusion' — ушиб.",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Каков правильный перевод 'anesthesia'?",
+    "payload": {
+      "options": [
+        "Анальгезия",
+        "Анестезия",
+        "Седация",
+        "Наркоз"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Anesthesia' — анестезия (общий термин). 'General anesthesia' часто переводят как «общий наркоз» или «общая анестезия» в зависимости от контекста.",
+    "difficulty": 2
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите правильный перевод термина 'placebo'.",
+    "payload": {
+      "options": [
+        "Действующее вещество",
+        "Плацебо",
+        "Вспомогательное вещество",
+        "Носитель"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Placebo' — плацебо (инертное вещество, применяемое в контролируемых исследованиях). Термин не переводится, используется в оригинале.",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'clinical trial' в официальных документах?",
+    "payload": {
+      "options": [
+        "Клинический эксперимент",
+        "Клиническое испытание",
+        "Медицинское исследование",
+        "Клиническая проверка"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Clinical trial' — клиническое испытание (официальный термин в российском законодательстве об обращении лекарственных средств).",
+    "difficulty": 2
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'Hemoglobin levels were measured in ___ (grams per deciliter).'",
+    "payload": {
+      "sentence": "Уровень гемоглобина измерялся в ___.",
+      "options": [
+        "граммах на литр",
+        "граммах на децилитр",
+        "миллиграммах на литр",
+        "единицах на миллилитр"
+      ],
+      "correct": 1,
+      "context": "grams per deciliter"
+    },
+    "explanation": "Концентрация гемоглобина стандартно выражается в г/дл (граммах на децилитр).",
+    "difficulty": 2
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'pathology' в названии медицинской специальности?",
+    "payload": {
+      "options": [
+        "Патофизиология",
+        "Патологическая анатомия / патология",
+        "Гистология",
+        "Морфология"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Pathology' как специальность — патологическая анатомия (или патология). Не следует путать с 'pathophysiology' — патофизиологией.",
+    "difficulty": 2
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите правильный перевод 'antibiotic'.",
+    "payload": {
+      "options": [
+        "Антисептик",
+        "Антибиотик",
+        "Антивирусное средство",
+        "Антигрибковый препарат"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Antibiotic' — антибиотик (препарат, подавляющий рост бактерий). Не следует путать с антисептиком, антивирусным или антимикотиком.",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'inflammation' в медицинском тексте?",
+    "payload": {
+      "options": [
+        "Инфекция",
+        "Воспаление",
+        "Ишемия",
+        "Отёк"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Inflammation' — воспаление. 'Infection' — инфекция. Воспаление — реакция ткани, инфекция — причина, которая может её вызвать.",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'The tumor showed signs of ___ (metastasis).'",
+    "payload": {
+      "sentence": "Опухоль проявляла признаки ___.",
+      "options": [
+        "метастазирования",
+        "малигнизации",
+        "некроза",
+        "кальцификации"
+      ],
+      "correct": 0,
+      "context": "metastasis"
+    },
+    "explanation": "'Metastasis' — метастаз (noun), 'metastasizing' — метастазирование. В данном контексте «признаки метастазирования» наиболее точно.",
+    "difficulty": 2
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'dosage' в фармацевтическом тексте?",
+    "payload": {
+      "options": [
+        "Дозировка",
+        "Концентрация",
+        "Кратность",
+        "Курс лечения"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Dosage' — дозировка (режим дозирования). 'Dose' — доза (разовое количество). 'Dosage regimen' — режим дозирования.",
+    "difficulty": 2
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Каков правильный перевод 'prognosis'?",
+    "payload": {
+      "options": [
+        "Диагноз",
+        "Анамнез",
+        "Прогноз",
+        "Диагностика"
+      ],
+      "correct": 2
+    },
+    "explanation": "'Prognosis' — прогноз (предсказание течения и исхода болезни). Не путать с 'diagnosis' — диагнозом.",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'respiratory failure' в реанимационных протоколах?",
+    "payload": {
+      "options": [
+        "Сердечная недостаточность",
+        "Дыхательная недостаточность",
+        "Почечная недостаточность",
+        "Лёгочная эмболия"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Respiratory failure' — дыхательная недостаточность. 'Heart failure' — сердечная недостаточность. 'Renal failure' — почечная недостаточность.",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'The patient underwent ___ (angioplasty).'",
+    "payload": {
+      "sentence": "Пациенту была выполнена ___.",
+      "options": [
+        "ангиография",
+        "ангиопластика",
+        "аортокоронарное шунтирование",
+        "эндартерэктомия"
+      ],
+      "correct": 1,
+      "context": "angioplasty"
+    },
+    "explanation": "'Angioplasty' — ангиопластика (расширение суженного сосуда). 'Angiography' — ангиография (визуализация сосудов).",
+    "difficulty": 2
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'laboratory diagnostics'?",
+    "payload": {
+      "options": [
+        "Лабораторные испытания",
+        "Лабораторная диагностика",
+        "Клинические анализы",
+        "Биохимический скрининг"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Laboratory diagnostics' — лабораторная диагностика. Устойчивое сочетание в медицинской документации.",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите верный перевод 'immune response'.",
+    "payload": {
+      "options": [
+        "Иммунный ответ",
+        "Иммунная реакция",
+        "Иммунный ответ / иммунная реакция (оба верны)",
+        "Иммунодефицит"
+      ],
+      "correct": 2
+    },
+    "explanation": "'Immune response' переводится как «иммунный ответ» или «иммунная реакция» — оба варианта корректны в медицинских текстах.",
+    "difficulty": 2
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'chronic disease'?",
+    "payload": {
+      "options": [
+        "Острое заболевание",
+        "Хроническое заболевание",
+        "Хроническая болезнь (оба варианта верны)",
+        "Запущенное заболевание"
+      ],
+      "correct": 2
+    },
+    "explanation": "'Chronic disease' — хроническое заболевание или хроническая болезнь. Оба варианта приняты в клинической практике.",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести термин 'edema' (американский вариант написания)?",
+    "payload": {
+      "options": [
+        "Гематома",
+        "Отёк",
+        "Асцит",
+        "Экссудат"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Edema' (амер.) / 'oedema' (брит.) — отёк (накопление жидкости в тканях). Не путать с 'hematoma' — гематомой.",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'The ___ (platelets) count was below normal.'",
+    "payload": {
+      "sentence": "Количество ___ было ниже нормы.",
+      "options": [
+        "эритроцитов",
+        "лейкоцитов",
+        "тромбоцитов",
+        "нейтрофилов"
+      ],
+      "correct": 2,
+      "context": "platelets"
+    },
+    "explanation": "'Platelets' — тромбоциты (кровяные пластинки, участвующие в свёртывании). 'Red blood cells' — эритроциты. 'White blood cells' — лейкоциты.",
+    "difficulty": 2
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'WHO classification' в онкологическом тексте?",
+    "payload": {
+      "options": [
+        "Классификация ВАЗ",
+        "Классификация ВОЗ",
+        "Классификация МКБ",
+        "Международная классификация"
+      ],
+      "correct": 1
+    },
+    "explanation": "'WHO' (World Health Organization) — ВОЗ (Всемирная организация здравоохранения). Классификация ВОЗ широко применяется в онкологии.",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'urinalysis'?",
+    "payload": {
+      "options": [
+        "Анализ крови",
+        "Анализ мочи",
+        "Биохимия",
+        "Копрограмма"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Urinalysis' — анализ мочи (общий анализ мочи, ОАМ). 'Blood test' — анализ крови.",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Каков правильный перевод 'pharmacokinetics'?",
+    "payload": {
+      "options": [
+        "Фармакодинамика",
+        "Фармакокинетика",
+        "Биодоступность",
+        "Фармакология"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Pharmacokinetics' — фармакокинетика (изучает всасывание, распределение, метаболизм и выведение ЛС). 'Pharmacodynamics' — фармакодинамика (механизм действия).",
+    "difficulty": 2
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите правильный перевод 'patient records'.",
+    "payload": {
+      "options": [
+        "История болезни / медицинская документация",
+        "Протокол исследования",
+        "Медицинский журнал",
+        "Клинический регистр"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Patient records' — медицинская документация (история болезни, амбулаторная карта). Контекст определяет точный термин.",
+    "difficulty": 2
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'drug interaction'?",
+    "payload": {
+      "options": [
+        "Передозировка препарата",
+        "Взаимодействие лекарственных средств",
+        "Побочное действие",
+        "Лекарственная несовместимость"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Drug interaction' — взаимодействие лекарственных средств (лекарственное взаимодействие). Официальный термин в инструкциях к препаратам.",
+    "difficulty": 2
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Каков правильный перевод термина 'stent'?",
+    "payload": {
+      "options": [
+        "Катетер",
+        "Стент",
+        "Дренаж",
+        "Имплант"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Stent' — стент (трубчатый имплант для расширения просвета сосуда). Термин заимствован без перевода.",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'Blood pressure was measured at ___ mmHg.'",
+    "payload": {
+      "sentence": "Артериальное давление составило 120/80 ___.",
+      "options": [
+        "мм рт. ст.",
+        "кПа",
+        "атм",
+        "бар"
+      ],
+      "correct": 0,
+      "context": "mmHg"
+    },
+    "explanation": "'mmHg' (millimeters of mercury) — мм рт. ст. (миллиметры ртутного столба). Стандартная единица измерения АД.",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'remission' в онкологии?",
+    "payload": {
+      "options": [
+        "Рецидив",
+        "Ремиссия",
+        "Прогрессирование",
+        "Стабилизация"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Remission' — ремиссия (уменьшение или исчезновение симптомов заболевания). 'Relapse/recurrence' — рецидив.",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'endoscopy'?",
+    "payload": {
+      "options": [
+        "Эхоскопия",
+        "Эндоскопия",
+        "Лапароскопия",
+        "Бронхоскопия"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Endoscopy' — эндоскопия (общий термин для осмотра полостей тела). 'Laparoscopy' и 'bronchoscopy' — частные виды эндоскопии.",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите правильный перевод 'hemoglobin'.",
+    "payload": {
+      "options": [
+        "Гематокрит",
+        "Гемоглобин",
+        "Гемолизин",
+        "Гемостаз"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Hemoglobin' — гемоглобин (белок эритроцитов, переносящий кислород). 'Hematocrit' — гематокрит. 'Hemostasis' — гемостаз.",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'radiotherapy'?",
+    "payload": {
+      "options": [
+        "Химиотерапия",
+        "Лучевая терапия",
+        "Иммунотерапия",
+        "Таргетная терапия"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Radiotherapy' / 'radiation therapy' — лучевая терапия. 'Chemotherapy' — химиотерапия.",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'allergy'?",
+    "payload": {
+      "options": [
+        "Аллергия",
+        "Непереносимость",
+        "Анафилаксия",
+        "Идиосинкразия"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Allergy' — аллергия. 'Anaphylaxis' — анафилаксия (тяжёлая аллергическая реакция). 'Intolerance' — непереносимость (не иммунный механизм).",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'The patient was prescribed ___ (insulin) therapy.'",
+    "payload": {
+      "sentence": "Пациенту назначена терапия ___.",
+      "options": [
+        "инсулином",
+        "глюкозой",
+        "кортизолом",
+        "адреналином"
+      ],
+      "correct": 0,
+      "context": "insulin"
+    },
+    "explanation": "'Insulin' — инсулин (гормон поджелудочной железы, применяемый при сахарном диабете).",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'cardiology'?",
+    "payload": {
+      "options": [
+        "Пульмонология",
+        "Кардиология",
+        "Неврология",
+        "Нефрология"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Cardiology' — кардиология (раздел медицины, изучающий сердечно-сосудистые заболевания).",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Каков правильный перевод 'CT scan'?",
+    "payload": {
+      "options": [
+        "МРТ",
+        "КТ (компьютерная томография)",
+        "УЗИ",
+        "Рентгенография"
+      ],
+      "correct": 1
+    },
+    "explanation": "'CT scan' (computed tomography) — КТ или компьютерная томография. 'MRI' — МРТ (магнитно-резонансная томография).",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'pharmacology' как наука?",
+    "payload": {
+      "options": [
+        "Фармация",
+        "Фармакология",
+        "Фармакотерапия",
+        "Клиническая фармакология"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Pharmacology' — фармакология (наука о лекарственных веществах). 'Pharmacy' — фармация / аптека.",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "The patient was started on a beta-blocker to manage his hypertension and reduce cardiovascular risk.",
+      "options": [
+        "Пациенту начали бета-блокатор для управления его гипертонией и снижения сердечно-сосудистого риска.",
+        "Пациенту был назначен бета-адреноблокатор для лечения артериальной гипертензии и снижения сердечно-сосудистого риска.",
+        "Больному дали бета-блокатор, чтобы контролировать давление и уменьшить риск для сердца."
+      ],
+      "correct": 1
+    },
+    "explanation": "Вариант 2 использует официальные термины: «бета-адреноблокатор» (полная форма), «артериальная гипертензия» (а не «гипертония»), «назначен» (а не «начали»/«дали»). Стиль соответствует клинической документации.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "A randomized, double-blind, placebo-controlled trial was conducted to evaluate the efficacy of the new drug.",
+      "options": [
+        "Было проведено рандомизированное двойное слепое плацебо-контролируемое испытание для оценки эффективности нового препарата.",
+        "Проводилось случайное двойное слепое испытание с плацебо для проверки эффективности нового лекарства.",
+        "Организовали рандомизированное, двойное слепое, плацебо-контролируемое исследование с целью оценить действие нового препарата."
+      ],
+      "correct": 0
+    },
+    "explanation": "Вариант 1 точно воспроизводит стандартную терминологию: «рандомизированное двойное слепое плацебо-контролируемое испытание» без искажений. «Случайное» (вар. 2) — неверный перевод 'randomized'. «Исследование» (вар. 3) тоже допустимо, но «испытание» точнее для clinical trial.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Какой термин соответствует 'ejection fraction' в кардиологии?",
+    "payload": {
+      "options": [
+        "Фракция наполнения",
+        "Фракция выброса",
+        "Минутный объём",
+        "Ударный объём"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Ejection fraction' (EF) — фракция выброса (процент крови, выталкиваемой левым желудочком за одно сокращение). Ключевой показатель функции сердца.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "The histopathological examination revealed poorly differentiated adenocarcinoma with lymphovascular invasion.",
+      "options": [
+        "Гистопатологическое исследование показало плохо дифференцированную аденокарциному с лимфоваскулярной инвазией.",
+        "Гистологическое исследование выявило низкодифференцированную аденокарциному с лимфоваскулярной инвазией.",
+        "Патогистологическое обследование обнаружило слабодифференцированный рак железы с прорастанием в лимфатические сосуды."
+      ],
+      "correct": 1
+    },
+    "explanation": "Вариант 2: «гистологическое исследование» — принятый клинический термин; «выявило» — точнее «showed»; «низкодифференцированную» — стандартный онкоморфологический термин (а не «плохо дифференцированную»). Вариант 3 описателен, но нестандартен.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "tm",
+    "lang": "en",
+    "question": "Сопоставьте медицинские термины с их определениями:",
+    "payload": {
+      "left": [
+        "Atrial fibrillation",
+        "Angina pectoris",
+        "Aortic stenosis",
+        "Deep vein thrombosis",
+        "Pulmonary embolism"
+      ],
+      "right": [
+        "Сужение аортального клапана, препятствующее выбросу крови из левого желудочка",
+        "Фибрилляция предсердий — хаотичное сокращение предсердий",
+        "Тромбоз глубоких вен — образование тромба в глубоких венах, чаще нижних конечностей",
+        "Стенокардия — боль за грудиной вследствие ишемии миокарда",
+        "Тромбоэмболия лёгочной артерии — закупорка лёгочной артерии тромбом"
+      ],
+      "pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          4
+        ]
+      ]
+    },
+    "explanation": "Atrial fibrillation — фибрилляция предсердий; Angina pectoris — стенокардия; Aortic stenosis — стеноз аортального клапана; DVT — тромбоз глубоких вен; Pulmonary embolism — ТЭЛА.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "The primary endpoint of the study was overall survival at 24 months.",
+      "options": [
+        "Главным результатом исследования была общая выживаемость за 24 месяца.",
+        "Первичной конечной точкой исследования являлась общая выживаемость на протяжении 24 месяцев.",
+        "Основным показателем исследования стала выживаемость пациентов в течение двух лет."
+      ],
+      "correct": 1
+    },
+    "explanation": "«Первичная конечная точка» — устоявшийся термин клинических исследований для 'primary endpoint'. «Общая выживаемость» — стандартный перевод 'overall survival'. Вариант 1 — «главный результат» неточно. Вариант 3 — описательно, без точной терминологии.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'half-life' применительно к лекарственному средству?",
+    "payload": {
+      "options": [
+        "Период полувыведения",
+        "Время жизни препарата",
+        "Полупериод действия",
+        "Биологический период"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Half-life' (T½) — период полувыведения (время, за которое концентрация препарата в плазме снижается вдвое). Официальный термин фармакокинетики.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'The ___ (glomerular filtration rate) was 45 mL/min/1.73 m².'",
+    "payload": {
+      "sentence": "___ составила 45 мл/мин/1,73 м².",
+      "options": [
+        "Скорость клубочковой фильтрации (СКФ)",
+        "Скорость почечного кровотока",
+        "Концентрация креатинина",
+        "Клиренс мочевины"
+      ],
+      "correct": 0,
+      "context": "glomerular filtration rate"
+    },
+    "explanation": "'Glomerular filtration rate' (GFR) — скорость клубочковой фильтрации (СКФ). Основной показатель функции почек.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "Chronic kidney disease was staged according to the KDIGO guidelines based on GFR and albuminuria.",
+      "options": [
+        "Хроническая болезнь почек стадировалась по руководству KDIGO на основе СКФ и альбуминурии.",
+        "Хроническая болезнь почек была стадирована согласно рекомендациям KDIGO на основании СКФ и альбуминурии.",
+        "Стадию хронической болезни почек определяли по протоколу KDIGO, используя данные о СКФ и альбуминурии."
+      ],
+      "correct": 1
+    },
+    "explanation": "Вариант 2: «стадирована» — правильная форма причастия; «согласно рекомендациям» — точный перевод 'according to guidelines'; «на основании» — нормативная конструкция. Вариант 1 — «стадировалась» нестандартна. Вариант 3 — допустим, но менее формален.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "tm",
+    "lang": "en",
+    "question": "Сопоставьте медицинские термины с их определениями:",
+    "payload": {
+      "left": [
+        "Bioavailability",
+        "Volume of distribution",
+        "Clearance",
+        "First-pass effect",
+        "Therapeutic index"
+      ],
+      "right": [
+        "Терапевтический индекс — отношение токсической дозы к терапевтической",
+        "Биодоступность — доля введённой дозы, достигающей системного кровотока",
+        "Объём распределения — гипотетический объём, в котором распределён препарат",
+        "Клиренс — объём плазмы, очищаемый от препарата в единицу времени",
+        "Эффект первого прохождения — пресистемный метаболизм при первом прохождении через печень"
+      ],
+      "pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ]
+      ]
+    },
+    "explanation": "Bioavailability — биодоступность; Volume of distribution — объём распределения; Clearance — клиренс; First-pass effect — эффект первого прохождения; Therapeutic index — терапевтический индекс.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'investigational medicinal product' (IMP)?",
+    "payload": {
+      "options": [
+        "Исследуемый лекарственный препарат",
+        "Экспериментальное лекарство",
+        "Незарегистрированный препарат",
+        "Тестовый медикамент"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Investigational medicinal product' (IMP) — исследуемый лекарственный препарат (ИЛП). Официальный термин директивы ЕС и российского законодательства о клинических исследованиях.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "The patient developed grade 3 neutropenia following the second cycle of chemotherapy.",
+      "options": [
+        "У пациента развилась нейтропения 3 степени после второго курса химиотерапии.",
+        "Пациент перенёс тяжёлую нейтропению в ходе второго курса химиотерапии.",
+        "После второго цикла химиотерапии у больного возникла нейтропения третьей степени тяжести."
+      ],
+      "correct": 2
+    },
+    "explanation": "По стандарту NCI-CTCAE и клинической практике \"cycle\" = \"цикл\" (не \"курс\"). \"Курс\" в русской онкологии обозначает всю программу лечения, тогда как \"цикл\" — один повторяющийся временной блок. \"Нейтропения третьей степени тяжести\" — принятая формулировка по шкале токсичности CTCAE.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'surrogate endpoint' в клинических исследованиях?",
+    "payload": {
+      "options": [
+        "Конечная точка замещения / суррогатная конечная точка",
+        "Вторичная конечная точка",
+        "Промежуточная точка",
+        "Косвенный показатель"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Surrogate endpoint' — суррогатная конечная точка (биомаркер или лабораторный показатель, используемый вместо клинически значимого исхода).",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'The ___ (informed consent form) was signed before enrolment.'",
+    "payload": {
+      "sentence": "___ была подписана до включения в исследование.",
+      "options": [
+        "Форма информированного согласия",
+        "Анкета пациента",
+        "Регистрационная карта",
+        "Медицинская карта"
+      ],
+      "correct": 0,
+      "context": "informed consent form"
+    },
+    "explanation": "'Informed consent form' (ICF) — форма информированного согласия (ФИС). Ключевой документ клинических исследований.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'acute myocardial infarction with ST-elevation' (STEMI)?",
+    "payload": {
+      "options": [
+        "Инфаркт миокарда без подъёма ST",
+        "Инфаркт миокарда с подъёмом сегмента ST",
+        "Нестабильная стенокардия",
+        "Острый коронарный синдром"
+      ],
+      "correct": 1
+    },
+    "explanation": "STEMI (ST-elevation myocardial infarction) — инфаркт миокарда с подъёмом сегмента ST (ИМпST). NSTEMI — без подъёма ST (ИМбпST).",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "Metformin is the first-line pharmacological treatment for type 2 diabetes mellitus in the absence of contraindications.",
+      "options": [
+        "Метформин является препаратом первой линии фармакологического лечения сахарного диабета 2 типа при отсутствии противопоказаний.",
+        "Метформин — первый препарат для лечения диабета второго типа, если нет противопоказаний.",
+        "Метформин применяется как основное лекарство при сахарном диабете 2 типа, когда нет противопоказаний."
+      ],
+      "correct": 0
+    },
+    "explanation": "Вариант 1: «препарат первой линии» — стандартный клинический термин для 'first-line treatment'; «сахарный диабет 2 типа» — официальное название по МКБ; «при отсутствии противопоказаний» — точная формулировка.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "tm",
+    "lang": "en",
+    "question": "Сопоставьте термины клинических исследований с их определениями:",
+    "payload": {
+      "left": [
+        "Randomization",
+        "Blinding",
+        "Washout period",
+        "Crossover design",
+        "Stratification"
+      ],
+      "right": [
+        "Стратификация — разделение участников на подгруппы для равномерного распределения",
+        "Рандомизация — случайное распределение участников по группам лечения",
+        "Слепой метод — сокрытие информации о назначенном лечении",
+        "Отмывочный период — перерыв между фазами для исключения остаточного эффекта",
+        "Перекрёстный дизайн — схема, при которой участники последовательно получают несколько видов лечения"
+      ],
+      "pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ]
+      ]
+    },
+    "explanation": "Randomization — рандомизация; Blinding — слепой метод; Washout period — отмывочный период; Crossover design — перекрёстный дизайн; Stratification — стратификация.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'complete blood count' (CBC)?",
+    "payload": {
+      "options": [
+        "Биохимический анализ крови",
+        "Общий анализ крови",
+        "Коагулограмма",
+        "Иммунограмма"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Complete blood count' (CBC) — общий анализ крови (ОАК). Включает подсчёт эритроцитов, лейкоцитов, тромбоцитов, гемоглобина, гематокрита.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "The sponsor is responsible for initiating, managing, and financing the clinical trial.",
+      "options": [
+        "Спонсор несёт ответственность за инициирование, управление и финансирование клинического испытания.",
+        "Спонсор отвечает за начало, ведение и оплату клинического исследования.",
+        "Организатор отвечает за запуск, проведение и финансирование испытаний."
+      ],
+      "correct": 0
+    },
+    "explanation": "Вариант 1: «спонсор» — нормативный термин ICH GCP; «инициирование, управление и финансирование» — точный перевод triады 'initiating, managing, financing'; «клиническое испытание» — официальный термин.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'biomarker' в онкологическом контексте?",
+    "payload": {
+      "options": [
+        "Биологический маркёр / биомаркёр",
+        "Генетический маркёр",
+        "Клинический показатель",
+        "Лабораторный тест"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Biomarker' — биомаркёр (биологический маркёр) — измеримый показатель биологического состояния или заболевания. Термин используется без перевода или как «биомаркёр».",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'The ___ (pharmacovigilance) system monitors drug safety post-approval.'",
+    "payload": {
+      "sentence": "Система ___ осуществляет мониторинг безопасности препарата после регистрации.",
+      "options": [
+        "фармаконадзора",
+        "фармацевтического надзора",
+        "лекарственного контроля",
+        "клинического мониторинга"
+      ],
+      "correct": 0,
+      "context": "pharmacovigilance"
+    },
+    "explanation": "'Pharmacovigilance' — фармаконадзор (официальный термин ВОЗ и российского законодательства). Не «фармацевтический надзор».",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'sensitivity' применительно к диагностическому тесту?",
+    "payload": {
+      "options": [
+        "Специфичность",
+        "Чувствительность",
+        "Точность",
+        "Прогностическая ценность"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Sensitivity' — чувствительность (доля истинно положительных среди всех больных). 'Specificity' — специфичность (доля истинно отрицательных среди здоровых).",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "The patient's alanine aminotransferase levels were three times the upper limit of normal.",
+      "options": [
+        "Уровень аланинаминотрансферазы у пациента был в три раза выше верхней границы нормы.",
+        "Аланинаминотрансфераза пациента превысила норму в три раза.",
+        "Уровень АЛТ у пациента превышал верхний нормальный предел в 3 раза."
+      ],
+      "correct": 0
+    },
+    "explanation": "Вариант 1: «уровень АЛТ был в три раза выше верхней границы нормы» — точная формулировка, принятая в клинических текстах. «Верхняя граница нормы» = upper limit of normal (ULN). Варианты 2 и 3 менее точны.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'staging' применительно к онкологическому заболеванию?",
+    "payload": {
+      "options": [
+        "Классификация",
+        "Стадирование",
+        "Градация",
+        "Распространённость"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Staging' — стадирование (определение стадии онкологического заболевания по системе TNM или другим). 'Grading' — степень злокачественности.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "tm",
+    "lang": "en",
+    "question": "Сопоставьте анатомические термины с русскими эквивалентами:",
+    "payload": {
+      "left": [
+        "Femur",
+        "Tibia",
+        "Fibula",
+        "Patella",
+        "Calcaneus"
+      ],
+      "right": [
+        "Пяточная кость",
+        "Малоберцовая кость",
+        "Надколенник",
+        "Большеберцовая кость",
+        "Бедренная кость"
+      ],
+      "pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          0
+        ]
+      ]
+    },
+    "explanation": "Femur — бедренная кость; Tibia — большеберцовая кость; Fibula — малоберцовая кость; Patella — надколенник; Calcaneus — пяточная кость.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'drug-drug interaction'?",
+    "payload": {
+      "options": [
+        "Взаимодействие препарата с едой",
+        "Межлекарственное взаимодействие",
+        "Токсичность препарата",
+        "Лекарственная несовместимость"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Drug-drug interaction' — межлекарственное взаимодействие (взаимодействие лекарственных средств между собой). 'Food-drug interaction' — взаимодействие с пищей.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "Patients with an ECOG performance status of 0–1 were eligible for enrolment.",
+      "options": [
+        "Пациенты с функциональным статусом ECOG 0–1 могли быть включены в исследование.",
+        "Больные, имеющие статус ECOG 0–1, допускались к участию в исследовании.",
+        "К участию допускались пациенты с показателем физического состояния по ECOG 0–1."
+      ],
+      "correct": 0
+    },
+    "explanation": "«Функциональный статус ECOG» — устоявшийся термин. «Критерии включения» / «могли быть включены» точно передаёт 'eligible for enrolment'. Вариант 2 — «допускались» чуть менее формален. Вариант 3 — «показатель физического состояния» нестандартен.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'intention-to-treat analysis' (ITT)?",
+    "payload": {
+      "options": [
+        "Анализ по намерению лечить",
+        "Анализ фактически пролеченных пациентов",
+        "Анализ по протоколу",
+        "Полный набор анализов"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Intention-to-treat analysis' (ITT) — анализ по намерению лечить. Включает всех рандомизированных пациентов независимо от соблюдения протокола. 'Per-protocol analysis' — анализ по протоколу.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'The drug was metabolized primarily by ___ (CYP3A4).'",
+    "payload": {
+      "sentence": "Препарат метаболизировался преимущественно с участием ___.",
+      "options": [
+        "CYP3A4",
+        "глюкуронилтрансферазы",
+        "моноаминоксидазы",
+        "N-ацетилтрансферазы"
+      ],
+      "correct": 0,
+      "context": "CYP3A4"
+    },
+    "explanation": "'CYP3A4' — изофермент цитохрома P450 3A4 (CYP3A4). Термин не переводится, используется в оригинале в фармакокинетических текстах.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'sepsis' в реанимационном контексте?",
+    "payload": {
+      "options": [
+        "Заражение крови",
+        "Сепсис",
+        "Бактериемия",
+        "Токсемия"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Sepsis' — сепсис (жизнеугрожающая органная дисфункция вследствие нарушенного ответа на инфекцию, Sepsis-3). «Заражение крови» — устаревший разговорный термин.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "The drug carries a black box warning for an increased risk of suicidal ideation in pediatric patients.",
+      "options": [
+        "Препарат имеет чёрную рамочную предупреждение о повышенном риске суицидальных мыслей у педиатрических пациентов.",
+        "На препарат распространяется предупреждение в чёрной рамке о повышенном риске суицидальных идей у детей и подростков.",
+        "Препарат сопровождается предостережением об увеличенном риске мыслей о самоубийстве у малолетних."
+      ],
+      "correct": 1
+    },
+    "explanation": "«Предупреждение в чёрной рамке» — правильный перевод 'black box warning'; «суицидальные идеи» точнее 'suicidal ideation'; «у детей и подростков» — корректный клинический эквивалент 'pediatric patients'. Вариант 1 — грамматически неверен. Вариант 3 — «малолетних» некорректно.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'efficacy' в контексте клинических испытаний?",
+    "payload": {
+      "options": [
+        "Безопасность",
+        "Эффективность",
+        "Переносимость",
+        "Действенность"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Efficacy' — эффективность (в условиях испытания). 'Effectiveness' — эффективность в реальной практике. 'Safety' — безопасность. 'Tolerability' — переносимость.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The patient was initiated on ACE inhibitor therapy for left ventricular systolic dysfunction.",
+      "translation": "Пациенту была начата терапия [ингибиторами АПФ] по поводу [систолической дисфункции] [левого предсердия].",
+      "segments": [
+        "ингибиторами АПФ",
+        "систолической дисфункции",
+        "левого предсердия"
+      ],
+      "correct": 2
+    },
+    "explanation": "'Left ventricle' — левый желудочек, а не предсердие. 'Left atrium' — левое предсердие. Это анатомическая ошибка: систолическая дисфункция характерна именно для левого желудочка.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The patient received empirical broad-spectrum antibiotic therapy pending culture results.",
+      "translation": "Пациенту была назначена [профилактическая] антибиотикотерапия [широкого спектра] в ожидании [результатов посева].",
+      "segments": [
+        "профилактическая",
+        "широкого спектра",
+        "результатов посева"
+      ],
+      "correct": 0
+    },
+    "explanation": "\"Empirical\" в медицинском контексте = \"эмпирическая\" (терапия, назначенная до получения результатов посева на основе клинической картины). \"Профилактическая\" означает preventive и кардинально меняет смысл: антибиотик назначен не для профилактики, а как ответ на инфекцию с неизвестным возбудителем.",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "Ibuprofen is classified as a non-steroidal anti-inflammatory drug (NSAID).",
+      "translation": "Ибупрофен классифицируется как [нестероидный противовоспалительный препарат] ([НПВП]), относящийся к группе [ингибиторов ЦОГ-1].",
+      "segments": [
+        "нестероидный противовоспалительный препарат",
+        "НПВП",
+        "ингибиторов ЦОГ-1"
+      ],
+      "correct": 2
+    },
+    "explanation": "Ибупрофен является неселективным ингибитором ЦОГ (ЦОГ-1 и ЦОГ-2), а не исключительно ингибитором ЦОГ-1. Это важное фармакологическое уточнение. Селективные ингибиторы ЦОГ-2 — коксибы.",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "The TNM classification system stages cancer based on tumor size, lymph node involvement, and distant metastasis.",
+      "segments": [
+        "и наличия отдалённых метастазов.",
+        "Система классификации TNM стадирует рак",
+        "вовлечённости лимфатических узлов",
+        "на основе размера опухоли,"
+      ],
+      "correct_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    "explanation": "Правильный порядок: «Система классификации TNM стадирует рак» → «на основе размера опухоли,» → «вовлечённости лимфатических узлов» → «и наличия отдалённых метастазов.» Соответствует структуре исходного предложения.",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "Warfarin therapy requires regular monitoring of the international normalized ratio (INR).",
+      "translation": "Терапия варфарином требует регулярного мониторинга [международного нормализованного отношения] ([МНО]), которое отражает [протромбиновое время].",
+      "segments": [
+        "международного нормализованного отношения",
+        "МНО",
+        "протромбиновое время"
+      ],
+      "correct": 2
+    },
+    "explanation": "МНО не просто «протромбиновое время», а стандартизированное отношение протромбинового времени пациента к контрольному. МНО — это именно отношение, а не само время. Использование слова «отражает» в данном контексте создаёт терминологическую неточность.",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "Before initiating chemotherapy, a thorough assessment of renal and hepatic function is mandatory to guide dosage adjustments.",
+      "segments": [
+        "для обоснования коррекции доз.",
+        "Перед началом химиотерапии",
+        "обязательна тщательная оценка функции почек и печени",
+        "с целью минимизации риска органотоксичности"
+      ],
+      "correct_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    "explanation": "Правильный порядок: обстоятельство времени → подлежащее/сказуемое → цель (минимизации риска) → уточнение (коррекция доз).",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The drug exhibits linear pharmacokinetics across the therapeutic dose range.",
+      "translation": "Препарат демонстрирует [линейную фармакокинетику] в [диапазоне терапевтических доз], что означает [нелинейную зависимость] концентрации от дозы.",
+      "segments": [
+        "линейную фармакокинетику",
+        "диапазоне терапевтических доз",
+        "нелинейную зависимость"
+      ],
+      "correct": 2
+    },
+    "explanation": "Линейная фармакокинетика означает именно ЛИНЕЙНУЮ (а не нелинейную) зависимость концентрации от дозы — при удвоении дозы концентрация также удваивается. Это принципиальная ошибка в интерпретации термина.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "Patients who experience disease progression on first-line therapy should be evaluated for second-line treatment options.",
+      "segments": [
+        "следует рассмотреть варианты терапии второй линии.",
+        "У пациентов с прогрессированием заболевания",
+        "на фоне терапии первой линии",
+        "необходимо провести оценку и"
+      ],
+      "correct_order": [
+        1,
+        2,
+        0
+      ]
+    },
+    "explanation": "У пациентов с прогрессированием на терапии первой линии следует рассмотреть варианты терапии второй линии. Единый модальный предикат \"следует рассмотреть\" соответствует \"should be evaluated for\" из источника.",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The patient had a history of paroxysmal atrial fibrillation managed with flecainide.",
+      "translation": "У пациента в анамнезе имелась [пароксизмальная фибрилляция предсердий], контролируемая [флекаинидом], который относится к [антагонистам кальция].",
+      "segments": [
+        "пароксизмальная фибрилляция предсердий",
+        "флекаинидом",
+        "антагонистам кальция"
+      ],
+      "correct": 2
+    },
+    "explanation": "Флекаинид — антиаритмический препарат класса IC (блокатор натриевых каналов), а не антагонист кальция. Антагонисты кальция (верапамил, дилтиазем) — класс IV. Это грубая ошибка классификации.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "A tissue biopsy was performed to confirm the diagnosis of diffuse large B-cell lymphoma.",
+      "segments": [
+        "диффузной крупноклеточной B-клеточной лимфомы.",
+        "для подтверждения диагноза",
+        "Была выполнена биопсия ткани",
+        "взятие образца ткани для верификации"
+      ],
+      "correct_order": [
+        2,
+        1,
+        0
+      ]
+    },
+    "explanation": "Правильный порядок: \"Была выполнена биопсия ткани → для подтверждения диагноза → диффузной крупноклеточной B-клеточной лимфомы.\" Сегмент [3] — лишний дистрактор.",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "Statins reduce cardiovascular events by inhibiting HMG-CoA reductase and lowering LDL cholesterol.",
+      "translation": "Статины снижают риск сердечно-сосудистых событий, [ингибируя ГМГ-КоА-редуктазу] и снижая уровень [ЛПВП]-холестерина.",
+      "segments": [
+        "ингибируя ГМГ-КоА-редуктазу",
+        "ЛПВП",
+        "холестерина"
+      ],
+      "correct": 1
+    },
+    "explanation": "Статины снижают уровень ЛПНП (липопротеинов низкой плотности, LDL), а не ЛПВП (липопротеинов высокой плотности, HDL). Путаница LDL/HDL — типичная ошибка при переводе кардиологических текстов.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "Immune checkpoint inhibitors have revolutionized the treatment of advanced non-small cell lung cancer.",
+      "segments": [
+        "произвели революцию в лечении",
+        "Ингибиторы иммунных контрольных точек",
+        "немелкоклеточного рака лёгкого.",
+        "распространённого"
+      ],
+      "correct_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    "explanation": "Правильный порядок: «Ингибиторы иммунных контрольных точек» → «произвели революцию в лечении» → «распространённого» → «немелкоклеточного рака лёгкого.»",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The patient developed Stevens-Johnson syndrome as an adverse reaction to carbamazepine.",
+      "translation": "У пациента развился [синдром Стивенса–Джонсона] как [нежелательная реакция] на [карбамазепин], являющийся антидепрессантом.",
+      "segments": [
+        "синдром Стивенса–Джонсона",
+        "нежелательная реакция",
+        "карбамазепин"
+      ],
+      "correct": 2
+    },
+    "explanation": "Карбамазепин — противоэпилептический препарат (антиконвульсант), а не антидепрессант. Это грубая ошибка классификации. Карбамазепин применяется при эпилепсии, невралгии тройничного нерва и биполярном расстройстве.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "Dose-limiting toxicity was observed in two out of six patients at the highest dose level.",
+      "segments": [
+        "на уровне наиболее высокой дозы.",
+        "Дозолимитирующая токсичность",
+        "наблюдалась у двух из шести пациентов",
+        "при введении максимальной дозы"
+      ],
+      "correct_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    "explanation": "Правильный порядок: «Дозолимитирующая токсичность» → «наблюдалась у двух из шести пациентов» → «на уровне наиболее высокой дозы.» «при введении максимальной дозы» — менее точный вариант, не входящий в основной перевод.",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "BRCA1 and BRCA2 are tumour suppressor genes associated with hereditary breast and ovarian cancer.",
+      "translation": "BRCA1 и BRCA2 — [гены-супрессоры опухолей], связанные с [наследственным раком молочной железы] и [яичек].",
+      "segments": [
+        "гены-супрессоры опухолей",
+        "наследственным раком молочной железы",
+        "яичек"
+      ],
+      "correct": 2
+    },
+    "explanation": "BRCA1/2 ассоциированы с раком молочной железы и раком ЯИЧНИКОВ (ovarian cancer), а не яичек (testicular cancer). Это принципиальное онкогенетическое различие.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The drug is a selective serotonin reuptake inhibitor used in the treatment of major depressive disorder.",
+      "translation": "Препарат является [селективным ингибитором обратного захвата серотонина], применяемым при лечении [большого депрессивного расстройства], относящегося к классу [трициклических антидепрессантов].",
+      "segments": [
+        "селективным ингибитором обратного захвата серотонина",
+        "большого депрессивного расстройства",
+        "трициклических антидепрессантов"
+      ],
+      "correct": 2
+    },
+    "explanation": "СИОЗС (селективные ингибиторы обратного захвата серотонина) — это отдельный класс антидепрессантов, не относящийся к трициклическим антидепрессантам (ТЦА). ТЦА (амитриптилин, имипрамин) — другой класс. Путаница этих классов — серьёзная фармакологическая ошибка.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "Renal dosage adjustment is required for patients with creatinine clearance below 30 mL/min.",
+      "segments": [
+        "ниже 30 мл/мин.",
+        "Коррекция дозы с учётом функции почек",
+        "при клиренсе креатинина",
+        "необходима пациентам"
+      ],
+      "correct_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    "explanation": "Правильный порядок: «Коррекция дозы с учётом функции почек» → «необходима пациентам» → «при клиренсе креатинина» → «ниже 30 мл/мин.»",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The echocardiogram revealed severe mitral regurgitation with a regurgitant fraction of 55%.",
+      "translation": "Эхокардиограмма выявила [выраженную митральную регургитацию] с [фракцией регургитации] 55%, что соответствует [стенозу митрального клапана].",
+      "segments": [
+        "выраженную митральную регургитацию",
+        "фракцией регургитации",
+        "стенозу митрального клапана"
+      ],
+      "correct": 2
+    },
+    "explanation": "Митральная регургитация и митральный стеноз — разные патологии митрального клапана. Регургитация — недостаточность (обратный ток крови), стеноз — сужение. Перевод ошибочно подменяет одно другим.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The patient underwent allogeneic hematopoietic stem cell transplantation from a matched unrelated donor.",
+      "translation": "Пациенту была выполнена [аллогенная трансплантация гемопоэтических стволовых клеток] от [совместимого неродственного донора], что является методом [аутологичной трансплантации].",
+      "segments": [
+        "аллогенная трансплантация гемопоэтических стволовых клеток",
+        "совместимого неродственного донора",
+        "аутологичной трансплантации"
+      ],
+      "correct": 2
+    },
+    "explanation": "Аллогенная трансплантация — от донора (родственного или неродственного), аутологичная — от самого пациента. Это принципиально разные виды трансплантации с разными показаниями и осложнениями.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "The protocol requires documentation of all serious adverse events within 24 hours of the investigator becoming aware.",
+      "segments": [
+        "в течение 24 часов с момента осведомления исследователя.",
+        "всех серьёзных нежелательных явлений",
+        "Протокол требует документирования",
+        "о факте их возникновения"
+      ],
+      "correct_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    "explanation": "Правильный порядок: \"Протокол требует → документирования всех СНЯ → в течение 24 часов с момента осведомления исследователя → о факте их возникновения.\" Так сегмент [3] органично завершает предложение.",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "HER2-positive breast cancer is treated with trastuzumab, a monoclonal antibody targeting the HER2 receptor.",
+      "translation": "[HER2-положительный рак молочной железы] лечится трастузумабом — [моноклональным антителом], воздействующим на [рецептор EGFR].",
+      "segments": [
+        "HER2-положительный рак молочной железы",
+        "моноклональным антителом",
+        "рецептор EGFR"
+      ],
+      "correct": 2
+    },
+    "explanation": "Трастузумаб таргетирует рецептор HER2 (ErbB2), а не EGFR (рецептор эпидермального фактора роста, HER1/ErbB1). Это разные рецепторы семейства ErbB. Цетуксимаб и панитумумаб — примеры препаратов, воздействующих на EGFR.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The patient was in septic shock, requiring vasopressor support to maintain mean arterial pressure above 65 mmHg.",
+      "translation": "Пациент находился в [септическом шоке], требуя поддержки [вазопрессорами] для поддержания [систолического] артериального давления выше 65 мм рт. ст.",
+      "segments": [
+        "септическом шоке",
+        "вазопрессорами",
+        "систолического"
+      ],
+      "correct": 2
+    },
+    "explanation": "Критерий Sepsis-3 для шока — среднее артериальное давление (САД/MAP) выше 65 мм рт. ст., а не систолическое АД. MAP = (АДс + 2×АДд) / 3. Это принципиальное клиническое различие.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "Patients with impaired hepatic function should be closely monitored for signs of drug accumulation and toxicity.",
+      "segments": [
+        "за признаками кумуляции препарата и токсичности.",
+        "следует тщательно наблюдать",
+        "За пациентами с нарушенной функцией печени",
+        "в связи с возможным накоплением"
+      ],
+      "correct_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    "explanation": "Правильный порядок: «Пациенты с нарушенной функцией печени» → «следует тщательно наблюдать» → «за признаками кумуляции препарата и токсичности.» Сегмент 3 — дополнение.",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The WHO classification of CNS tumours uses molecular markers alongside histological criteria.",
+      "translation": "Классификация ВОЗ опухолей [ЦНС] использует [молекулярные маркёры] наряду с [иммунофлюоресцентными] критериями.",
+      "segments": [
+        "ЦНС",
+        "молекулярные маркёры",
+        "иммунофлюоресцентными"
+      ],
+      "correct": 2
+    },
+    "explanation": "'Histological criteria' — гистологические критерии (основанные на микроскопическом строении ткани). «Иммунофлюоресцентные» — другой метод, не эквивалентный гистологии. В классификации ВОЗ ЦНС 2021 года используются именно гистологические и молекулярные критерии.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "The maximum tolerated dose was determined through a phase I dose-escalation study.",
+      "segments": [
+        "в ходе исследования I фазы с эскалацией дозы.",
+        "Максимально переносимая доза",
+        "методом постепенного повышения дозы",
+        "была определена"
+      ],
+      "correct_order": [
+        1,
+        3,
+        0
+      ]
+    },
+    "explanation": "Правильный порядок: \"Максимально переносимая доза → была определена → в ходе исследования I фазы с эскалацией дозы.\" Сегмент [2] — дистрактор (синонимичная формулировка).",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "Digoxin toxicity can cause visual disturbances including xanthopsia — a yellow tinge to vision.",
+      "translation": "Токсичность [дигоксина] может вызывать зрительные нарушения, включая [ксантопсию] — [синее] окрашивание видимых предметов.",
+      "segments": [
+        "дигоксина",
+        "ксантопсию",
+        "синее"
+      ],
+      "correct": 2
+    },
+    "explanation": "Ксантопсия (xanthopsia) — ЖЁЛТОЕ окрашивание (от греч. xanthos — жёлтый), а не синее. Синее окрашивание — цианопсия (cyanopsia). Путаница цветовых нарушений зрения — типичная терминологическая ошибка.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "Clopidogrel is a prodrug that requires hepatic activation to exert its antiplatelet effect.",
+      "translation": "[Клопидогрел] является [пролекарством], которое требует [почечной] активации для проявления своего антиагрегантного действия.",
+      "segments": [
+        "Клопидогрел",
+        "пролекарством",
+        "почечной"
+      ],
+      "correct": 2
+    },
+    "explanation": "Клопидогрел активируется в ПЕЧЕНИ (посредством изоферментов CYP2C19 и других), а не в почках. «Почечная активация» — грубая фармакологическая ошибка.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "Progression-free survival was significantly longer in the treatment arm compared with placebo.",
+      "segments": [
+        "по сравнению с группой плацебо.",
+        "была значимо продолжительнее в группе лечения",
+        "Выживаемость без прогрессирования",
+        "статистически значимо превышала таковую"
+      ],
+      "correct_order": [
+        2,
+        1,
+        0
+      ]
+    },
+    "explanation": "Правильный порядок: \"Выживаемость без прогрессирования → была значимо продолжительнее → в группе лечения по сравнению с группой плацебо.\" Сегмент [3] — дистрактор.",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The drug has a narrow therapeutic window, requiring therapeutic drug monitoring.",
+      "translation": "Препарат имеет [узкое терапевтическое окно], требуя [терапевтического лекарственного мониторинга], особенно в связи с [широким терапевтическим индексом].",
+      "segments": [
+        "узкое терапевтическое окно",
+        "терапевтического лекарственного мониторинга",
+        "широким терапевтическим индексом"
+      ],
+      "correct": 2
+    },
+    "explanation": "Узкое терапевтическое окно означает УЗКИЙ (а не широкий) терапевтический индекс. Противоречие между «узким окном» и «широким индексом» — принципиальная логическая и терминологическая ошибка.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "The investigator must report all suspected unexpected serious adverse reactions to the regulatory authority.",
+      "segments": [
+        "в регуляторный орган.",
+        "обо всех подозреваемых непредвиденных серьёзных нежелательных реакциях",
+        "должен сообщать",
+        "Исследователь"
+      ],
+      "correct_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    "explanation": "Правильный порядок: «Исследователь» → «должен сообщать» → «обо всех подозреваемых непредвиденных серьёзных нежелательных реакциях» → «в регуляторный орган.»",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "Type 1 diabetes mellitus results from autoimmune destruction of pancreatic beta cells.",
+      "translation": "Сахарный диабет 1 типа является следствием [аутоиммунного разрушения] [бета-клеток поджелудочной железы], приводящего к [избытку инсулина].",
+      "segments": [
+        "аутоиммунного разрушения",
+        "бета-клеток поджелудочной железы",
+        "избытку инсулина"
+      ],
+      "correct": 2
+    },
+    "explanation": "Аутоиммунное разрушение бета-клеток приводит к ДЕФИЦИТУ (абсолютной недостаточности) инсулина, а не к его избытку. Избыток инсулина характерен для инсулиномы. Это ключевое патофизиологическое понятие.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "Off-label use of the drug for anxiety disorders was documented in the patient's medical record.",
+      "segments": [
+        "было задокументировано в медицинской карте пациента.",
+        "Применение препарата вне зарегистрированных показаний",
+        "при тревожных расстройствах",
+        "в рамках анксиолитической терапии"
+      ],
+      "correct_order": [
+        1,
+        2,
+        0
+      ]
+    },
+    "explanation": "Правильный порядок: \"Применение препарата вне зарегистрированных показаний → при тревожных расстройствах → было задокументировано в медицинской карте пациента.\" Сегмент [3] — дистрактор.",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The patient was started on prophylactic low-molecular-weight heparin following major orthopaedic surgery.",
+      "translation": "Пациенту был назначен профилактический [низкомолекулярный гепарин] после [планового] ортопедического хирургического вмешательства.",
+      "segments": [
+        "низкомолекулярный гепарин",
+        "планового",
+        "ортопедического хирургического вмешательства"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Major orthopaedic surgery' — обширное (крупное) ортопедическое вмешательство, а не плановое. «Плановый» (elective) — иная характеристика вмешательства. «Major» = обширное/крупное, относится к масштабу операции.",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "Good Clinical Practice guidelines require that source documents be retained for a minimum of 15 years.",
+      "segments": [
+        "на срок не менее 15 лет.",
+        "первичная документация должна храниться",
+        "Согласно руководящим принципам Надлежащей клинической практики,",
+        "в архиве учреждения"
+      ],
+      "correct_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    "explanation": "Правильный порядок: \"Согласно принципам НКП → первичная документация должна храниться → в архиве учреждения → на срок не менее 15 лет.\" Сегмент [3] уточняет место хранения и стоит перед сроком.",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'nausea' в описании симптомов?",
+    "payload": {
+      "options": [
+        "Рвота",
+        "Тошнота",
+        "Изжога",
+        "Отрыжка"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Nausea' — тошнота (неприятное ощущение в желудке, предшествующее рвоте). 'Vomiting' — рвота. 'Heartburn' — изжога.",
+    "difficulty": 1
+  },
+  {
+    "topic": "medical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'hypokalemia'?",
+    "payload": {
+      "options": [
+        "Гиперкалиемия",
+        "Гипокалиемия",
+        "Гипонатриемия",
+        "Гипокальциемия"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Hypokalemia' — гипокалиемия (сниженный уровень калия в крови). 'Hyperkalemia' — гиперкалиемия. Приставки hypo-/hyper- обозначают снижение/повышение.",
+    "difficulty": 2
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "The study demonstrated a statistically significant reduction in the incidence of major adverse cardiovascular events.",
+      "options": [
+        "Исследование показало статистически значимое снижение частоты больших нежелательных сердечно-сосудистых событий.",
+        "Исследование доказало значительное уменьшение числа серьёзных сердечно-сосудистых осложнений.",
+        "В ходе исследования было продемонстрировано статистически значимое снижение частоты больших нежелательных сердечно-сосудистых событий (MACE)."
+      ],
+      "correct": 2
+    },
+    "explanation": "Вариант 3 наиболее полон: «продемонстрировано» точнее «показало»; «снижение частоты» точнее «уменьшение числа»; аббревиатура MACE в скобках — профессиональная практика в медицинских переводах.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'absolute risk reduction' (ARR) в эпидемиологии?",
+    "payload": {
+      "options": [
+        "Относительное снижение риска",
+        "Абсолютное снижение риска",
+        "Число нужных для лечения",
+        "Отношение шансов"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Absolute risk reduction' (ARR) — абсолютное снижение риска (разница в частоте событий между группами). 'Relative risk reduction' (RRR) — относительное снижение риска. 'NNT' — число нужных для лечения.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'The ___ (confidence interval) was 95% CI 1.2–3.4.'",
+    "payload": {
+      "sentence": "___ составлял 95% ДИ 1,2–3,4.",
+      "options": [
+        "Доверительный интервал (ДИ)",
+        "Стандартное отклонение",
+        "Межквартильный размах",
+        "Стандартная ошибка"
+      ],
+      "correct": 0,
+      "context": "confidence interval"
+    },
+    "explanation": "'Confidence interval' (CI) — доверительный интервал (ДИ). Стандартный статистический термин клинических исследований.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'off-label use' применительно к лекарственному препарату?",
+    "payload": {
+      "options": [
+        "Незаконное применение",
+        "Применение вне зарегистрированных показаний",
+        "Экспериментальное применение",
+        "Альтернативное лечение"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Off-label use' — применение вне зарегистрированных показаний (применение препарата в дозах, по показаниям или у групп пациентов, не указанных в инструкции).",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "The investigational site must maintain adequate and accurate source documents and trial records.",
+      "options": [
+        "Исследовательский центр должен вести надлежащую и точную первичную документацию и записи по испытанию.",
+        "Клиника, проводящая испытание, должна поддерживать соответствующую документацию и записи исследования.",
+        "Исследовательский центр обязан вести полную документацию и файлы клинического испытания."
+      ],
+      "correct": 0
+    },
+    "explanation": "Вариант 1: «исследовательский центр» — стандартный термин ICH GCP; «первичная документация» — точный перевод 'source documents'; «надлежащую и точную» — буквальный перевод 'adequate and accurate' из GCP.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'hazard ratio' (HR) в статистике выживаемости?",
+    "payload": {
+      "options": [
+        "Относительный риск",
+        "Отношение рисков",
+        "Отношение шансов",
+        "Коэффициент опасности"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Hazard ratio' (HR) — отношение рисков (показатель скорости наступления события в одной группе относительно другой). 'Odds ratio' — отношение шансов. 'Relative risk' — относительный риск.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'The ___ (number needed to treat) was 8.'",
+    "payload": {
+      "sentence": "___ составило 8.",
+      "options": [
+        "Число необходимых для лечения (ЧНЛ)",
+        "Число нежелательных явлений",
+        "Доля ответивших на лечение",
+        "Число выбывших из исследования"
+      ],
+      "correct": 0,
+      "context": "number needed to treat"
+    },
+    "explanation": "'Number needed to treat' (NNT) — число необходимых для лечения (ЧНЛ): количество пациентов, которых нужно пролечить для предотвращения одного неблагоприятного исхода.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "tm",
+    "lang": "en",
+    "question": "Сопоставьте лабораторные показатели с их нормальными значениями/описаниями:",
+    "payload": {
+      "left": [
+        "INR (healthy adult)",
+        "eGFR (normal)",
+        "HbA1c (target in diabetes)",
+        "LDL cholesterol (optimal)",
+        "Systolic blood pressure (normal)"
+      ],
+      "right": [
+        "Оптимальный уровень ЛПНП — менее 2,6 ммоль/л (100 мг/дл) для пациентов из группы высокого риска",
+        "МНО у здорового взрослого — 0,8–1,2",
+        "Целевой уровень HbA1c при СД — менее 7% (53 ммоль/моль)",
+        "Нормальная рСКФ — более 60 мл/мин/1,73 м²",
+        "Нормальное систолическое АД — менее 120 мм рт. ст."
+      ],
+      "pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          4
+        ]
+      ]
+    },
+    "explanation": "INR — МНО; eGFR — рСКФ; HbA1c — гликированный гемоглобин; LDL — ЛПНП; систолическое АД — верхнее АД.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'comorbidity' в клинической документации?",
+    "payload": {
+      "options": [
+        "Основное заболевание",
+        "Сопутствующее заболевание / коморбидность",
+        "Осложнение",
+        "Фоновое заболевание"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Comorbidity' — коморбидность (сопутствующее заболевание). В русскоязычной медицине используется как «коморбидность», так и «сопутствующая патология».",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "The patient provided written informed consent prior to any study-related procedures.",
+      "options": [
+        "Пациент подписал письменное информированное согласие до выполнения каких-либо процедур, связанных с исследованием.",
+        "Больной дал письменное согласие перед проведением исследовательских процедур.",
+        "Пациент подтвердил согласие на участие в исследовании в письменном виде до начала процедур."
+      ],
+      "correct": 0
+    },
+    "explanation": "Вариант 1: «подписал письменное информированное согласие» — точный перевод с сохранением всех компонентов 'written informed consent'; «до выполнения каких-либо процедур, связанных с исследованием» — точная передача 'prior to any study-related procedures'.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'perioperative' в хирургическом контексте?",
+    "payload": {
+      "options": [
+        "Послеоперационный",
+        "Периоперационный",
+        "Предоперационный",
+        "Интраоперационный"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Perioperative' — периоперационный (охватывает пред-, интра- и послеоперационный периоды). 'Postoperative' — послеоперационный. 'Preoperative' — предоперационный. 'Intraoperative' — интраоперационный.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'The ___ (protocol amendment) was submitted to the IRB.'",
+    "payload": {
+      "sentence": "___ была представлена в Независимый этический комитет.",
+      "options": [
+        "Поправка к протоколу",
+        "Исходная версия протокола",
+        "Брошюра исследователя",
+        "Индивидуальная регистрационная карта"
+      ],
+      "correct": 0,
+      "context": "protocol amendment"
+    },
+    "explanation": "'Protocol amendment' — поправка к протоколу (изменение, вносимое в протокол клинического исследования). 'Investigator's brochure' — брошюра исследователя. 'IRB' — независимый этический комитет (НЭК).",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'serious adverse event' (SAE)?",
+    "payload": {
+      "options": [
+        "Тяжёлое нежелательное явление",
+        "Серьёзное нежелательное явление",
+        "Опасное побочное действие",
+        "Критическое осложнение"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Serious adverse event' (SAE) — серьёзное нежелательное явление (СНЯ). В ICH GCP «serious» переводится как «серьёзное» (угрожающее жизни, требующее госпитализации и т.д.), а не «тяжёлое». 'Severe' = тяжёлое (степень выраженности).",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "Left ventricular ejection fraction was preserved at 65%, ruling out systolic heart failure.",
+      "options": [
+        "Фракция выброса левого желудочка была сохранной — 65%, что исключало систолическую сердечную недостаточность.",
+        "Выброс левого желудочка составил 65%, исключив систолическую недостаточность сердца.",
+        "Сократимость левого желудочка оставалась нормальной (65%), что позволило исключить систолическую дисфункцию."
+      ],
+      "correct": 0
+    },
+    "explanation": "Вариант 1: «фракция выброса левого желудочка» — стандартный термин; «была сохранной» — правильный перевод 'preserved'; «исключала систолическую сердечную недостаточность» — точно передаёт 'ruling out'. Вариант 3 использует нестандартные замены.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "tm",
+    "lang": "en",
+    "question": "Сопоставьте классы антиаритмических препаратов с их механизмом действия:",
+    "payload": {
+      "left": [
+        "Class I (e.g. lidocaine)",
+        "Class II (e.g. metoprolol)",
+        "Class III (e.g. amiodarone)",
+        "Class IV (e.g. verapamil)",
+        "Class V (e.g. digoxin)"
+      ],
+      "right": [
+        "Блокаторы кальциевых каналов — замедляют проведение в АВ-узле",
+        "Блокаторы натриевых каналов — стабилизируют мембрану",
+        "Сердечные гликозиды — усиливают вагусный тонус",
+        "Блокаторы калиевых каналов — удлиняют потенциал действия",
+        "Бета-адреноблокаторы — снижают автоматизм синусового узла"
+      ],
+      "pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          2
+        ]
+      ]
+    },
+    "explanation": "Класс I — блокаторы Na-каналов (лидокаин); Класс II — бета-блокаторы (метопролол); Класс III — блокаторы K-каналов (амиодарон); Класс IV — блокаторы Ca-каналов (верапамил); Класс V — дигоксин.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The drug inhibits dihydrofolate reductase, thereby blocking DNA synthesis in rapidly dividing cells.",
+      "translation": "Препарат ингибирует [дигидрофолатредуктазу], блокируя тем самым синтез [РНК] в быстро делящихся клетках.",
+      "segments": [
+        "дигидрофолатредуктазу",
+        "РНК",
+        "быстро делящихся клетках"
+      ],
+      "correct": 1
+    },
+    "explanation": "Ингибирование дигидрофолатредуктазы блокирует синтез ДНК (а не РНК), поскольку нарушается синтез тимидилата — предшественника ДНК. Метотрексат — классический пример такого препарата.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "Nephrotic syndrome is characterised by massive proteinuria, hypoalbuminaemia, oedema, and hyperlipidaemia.",
+      "translation": "Нефротический синдром характеризуется [массивной протеинурией], [гипоальбуминемией], отёками и [гиполипидемией].",
+      "segments": [
+        "массивной протеинурией",
+        "гипоальбуминемией",
+        "гиполипидемией"
+      ],
+      "correct": 2
+    },
+    "explanation": "'Hyperlipidaemia' — гиперлипидемия (повышенный уровень липидов), а не гиполипидемия (сниженный уровень). При нефротическом синдроме развивается ГИПЕРЛИПИДЕМИЯ вследствие компенсаторного усиления синтеза липопротеинов печенью.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "Therapeutic drug monitoring is recommended for vancomycin to optimize efficacy and minimize nephrotoxicity.",
+      "segments": [
+        "для оптимизации эффективности и минимизации нефротоксичности.",
+        "Терапевтический лекарственный мониторинг",
+        "для ванкомицина",
+        "рекомендован"
+      ],
+      "correct_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    "explanation": "Правильный порядок: «Терапевтический лекарственный мониторинг» → «рекомендован» → «для ванкомицина» → «для оптимизации эффективности и минимизации нефротоксичности.»",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "Crohn's disease is a transmural inflammatory condition that can affect any segment of the gastrointestinal tract.",
+      "translation": "Болезнь Крона — [трансмуральное] воспалительное заболевание, поражающее [только толстую кишку].",
+      "segments": [
+        "трансмуральное",
+        "только толстую кишку",
+        "воспалительное заболевание"
+      ],
+      "correct": 1
+    },
+    "explanation": "Болезнь Крона может поражать ЛЮБОЙ отдел желудочно-кишечного тракта — от полости рта до прямой кишки. «Только толстая кишка» — описание язвенного колита, а не болезни Крона.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "Multidrug resistance in oncology may arise through overexpression of P-glycoprotein, an efflux pump encoded by the MDR1 gene.",
+      "segments": [
+        "кодируемого геном MDR1.",
+        "Множественная лекарственная устойчивость в онкологии",
+        "Р-гликопротеина — эффлюксного насоса,",
+        "может возникать вследствие гиперэкспрессии"
+      ],
+      "correct_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    "explanation": "Правильный порядок: «Множественная лекарственная устойчивость в онкологии» → «может возникать вследствие гиперэкспрессии» → «Р-гликопротеина — эффлюксного насоса,» → «кодируемого геном MDR1.»",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The Gleason score is used to grade prostate cancer based on the histological pattern of tumour cells.",
+      "translation": "Шкала Глисона используется для оценки степени злокачественности [рака предстательной железы] на основе [иммуногистохимического] паттерна опухолевых клеток.",
+      "segments": [
+        "рака предстательной железы",
+        "иммуногистохимического",
+        "паттерна опухолевых клеток"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Histological pattern' — гистологический паттерн (морфологическое строение ткани при световой микроскопии). Шкала Глисона основана на гистологических, а не иммуногистохимических критериях.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "Concomitant use of MAO inhibitors and serotonergic drugs can precipitate serotonin syndrome.",
+      "segments": [
+        "способно спровоцировать серотониновый синдром.",
+        "Одновременное применение",
+        "и серотонинергических препаратов",
+        "ингибиторов МАО"
+      ],
+      "correct_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    "explanation": "Правильный порядок: «Одновременное применение» → «ингибиторов МАО» → «и серотонинергических препаратов» → «способно спровоцировать серотониновый синдром.»",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The patient had an anaphylactic reaction to penicillin and was given epinephrine intramuscularly.",
+      "translation": "У пациента развилась анафилактическая реакция на пенициллин, и ему был введён [эпинефрин] [внутривенно].",
+      "segments": [
+        "эпинефрин",
+        "внутривенно",
+        "анафилактическая реакция"
+      ],
+      "correct": 1
+    },
+    "explanation": "При анафилаксии эпинефрин (адреналин) вводится ВНУТРИМЫШЕЧНО (в/м) в латеральную поверхность бедра — это стандарт лечения. Внутривенное введение применяется только в условиях реанимации при рефрактерной анафилаксии.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "Cytochrome P450 enzyme induction by rifampicin significantly reduces plasma concentrations of co-administered drugs.",
+      "segments": [
+        "значимо снижает плазменные концентрации совместно вводимых препаратов.",
+        "Индукция ферментов цитохрома P450",
+        "рифампицином",
+        "под воздействием рифампицина"
+      ],
+      "correct_order": [
+        1,
+        2,
+        0
+      ]
+    },
+    "explanation": "Правильный порядок: \"Индукция ферментов CYP450 рифампицином → значимо снижает → плазменные концентрации совместно вводимых препаратов.\" Сегмент [3] — синоним-дистрактор.",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "Anti-VEGF therapy inhibits tumour angiogenesis by blocking vascular endothelial growth factor signalling.",
+      "translation": "Анти-VEGF-терапия ингибирует [ангиогенез опухоли], блокируя передачу сигналов [фактора роста эндотелия сосудов], что [стимулирует] рост новых сосудов.",
+      "segments": [
+        "ангиогенез опухоли",
+        "фактора роста эндотелия сосудов",
+        "стимулирует"
+      ],
+      "correct": 2
+    },
+    "explanation": "Блокирование VEGF-сигнализации ПОДАВЛЯЕТ (а не стимулирует) рост новых сосудов — именно это является целью анти-VEGF-терапии (бевацизумаб и др.). Логическая ошибка принципиальна.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "A pathological complete response after neoadjuvant chemotherapy is associated with improved long-term outcomes.",
+      "segments": [
+        "ассоциирован с улучшением долгосрочных результатов лечения.",
+        "после неоадъювантной химиотерапии",
+        "Патологически полный ответ",
+        "при проведении неоадъювантного лечения"
+      ],
+      "correct_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    "explanation": "Правильный порядок: «Патологически полный ответ» → «после неоадъювантной химиотерапии» → «ассоциирован с улучшением долгосрочных результатов лечения.» Сегмент 3 — синоним сегмента 1.",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'placebo run-in period' в протоколе клинического исследования?",
+    "payload": {
+      "options": [
+        "Вводный период плацебо",
+        "Период вымывания",
+        "Период наблюдения",
+        "Скрининговый период"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Placebo run-in period' — вводный период на плацебо (период до рандомизации, когда все участники получают плацебо для оценки комплаентности и исходных показателей). Отличается от 'washout period' — периода вымывания.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "The open-label extension study allowed patients to continue receiving the active drug after the double-blind phase.",
+      "options": [
+        "Открытое расширенное исследование позволяло пациентам продолжать получать активный препарат после двойной слепой фазы.",
+        "Расширение с открытым дизайном позволило пациентам продолжить приём активного препарата после завершения двойной слепой фазы.",
+        "Больные могли получать лекарство дополнительно после окончания слепой фазы в рамках открытого продолжения."
+      ],
+      "correct": 1
+    },
+    "explanation": "Вариант 2: «открытый дизайн» точно передаёт 'open-label'; «расширенное исследование» = 'extension study'; «завершения» добавляет смысловую точность. Вариант 1 — «открытое расширенное» менее точно. Вариант 3 — разговорный стиль.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'adverse drug reaction' (ADR) в инструкции к препарату?",
+    "payload": {
+      "options": [
+        "Нежелательное явление",
+        "Нежелательная реакция на лекарственный препарат",
+        "Побочный эффект",
+        "Передозировка"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Adverse drug reaction' (ADR) — нежелательная реакция на лекарственный препарат (НЛР). В отличие от 'adverse event' (АЕ) — нежелательного явления, НЛР подразумевает причинно-следственную связь с препаратом.",
+    "difficulty": 3
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "Acute respiratory distress syndrome (ARDS) is defined by bilateral infiltrates on chest imaging and a PaO2/FiO2 ratio below 300 mmHg.",
+      "translation": "Острый респираторный дистресс-синдром (ОРДС) характеризуется двусторонними инфильтратами на [рентгенограмме грудной клетки] и соотношением [PaO2/FiO2] ниже [200] мм рт. ст.",
+      "segments": [
+        "рентгенограмме грудной клетки",
+        "PaO2/FiO2",
+        "200"
+      ],
+      "correct": 2
+    },
+    "explanation": "По Берлинским критериям ARDS (2012), диагностический порог PaO2/FiO2 составляет менее 300 мм рт. ст. (а не 200). Значение 200 ммHg соответствует умеренному ARDS, а 100 — тяжёлому. Пороговое значение для диагноза именно 300.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "Pharmacogenomics studies how genetic variation influences individual responses to drugs, guiding personalized medicine.",
+      "segments": [
+        "направляя развитие персонализированной медицины.",
+        "как генетические вариации влияют",
+        "Фармакогеномика изучает,",
+        "на индивидуальный ответ на лекарственные препараты,"
+      ],
+      "correct_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    "explanation": "Правильный порядок: «Фармакогеномика изучает,» → «как генетические вариации влияют» → «на индивидуальный ответ на лекарственные препараты,» → «направляя развитие персонализированной медицины.»",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "Hereditary haemochromatosis is most commonly caused by mutations in the HFE gene, leading to iron overload.",
+      "translation": "Наследственный гемохроматоз чаще всего обусловлен мутациями в гене [HFE], приводящими к [перегрузке железом], что вызывает [дефицит ферритина].",
+      "segments": [
+        "HFE",
+        "перегрузке железом",
+        "дефицит ферритина"
+      ],
+      "correct": 2
+    },
+    "explanation": "При гемохроматозе происходит ИЗБЫТОЧНОЕ накопление железа, что проявляется ПОВЫШЕННЫМ уровнем ферритина и трансферрина в крови. «Дефицит ферритина» — прямо противоположное состояние, характерное для железодефицитной анемии.",
+    "difficulty": 5
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "The bioequivalence study demonstrated that the generic product meets the regulatory standards for substitution of the reference product.",
+      "segments": [
+        "соответствует регуляторным требованиям для замены референтного препарата.",
+        "что дженерик",
+        "Исследование биоэквивалентности продемонстрировало,",
+        "с точки зрения безопасности и эффективности"
+      ],
+      "correct_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    "explanation": "Правильный порядок: «Исследование биоэквивалентности продемонстрировало,» → «что дженерик» → «соответствует регуляторным требованиям для замены референтного препарата.» Сегмент 3 — дополнительное уточнение.",
+    "difficulty": 4
+  },
+  {
+    "topic": "medical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "Prolonged QT interval increases the risk of torsades de pointes, a potentially fatal ventricular arrhythmia.",
+      "translation": "Удлинение [интервала QT] повышает риск [пируэтной тахикардии] — потенциально летальной [предсердной] аритмии.",
+      "segments": [
+        "интервала QT",
+        "пируэтной тахикардии",
+        "предсердной"
+      ],
+      "correct": 2
+    },
+    "explanation": "Torsades de pointes — это ЖЕЛУДОЧКОВАЯ (ventricular) аритмия, а не предсердная. Именно желудочковое происхождение обусловливает её жизнеугрожающий характер и возможность перехода в фибрилляцию желудочков.",
+    "difficulty": 5
+  }
+]

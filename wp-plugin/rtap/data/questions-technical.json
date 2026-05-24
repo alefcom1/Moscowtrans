@@ -1,0 +1,2903 @@
+[
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести термин 'tensile strength' в технической документации?",
+    "payload": {
+      "options": [
+        "Растяжимость",
+        "Предел прочности на растяжение",
+        "Коэффициент упругости",
+        "Натяжение материала"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Tensile strength' — предел прочности на растяжение, стандартный термин в механике материалов.",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Какой перевод термина 'torque' наиболее точен в контексте машиностроения?",
+    "payload": {
+      "options": [
+        "Скорость вращения",
+        "Крутящий момент",
+        "Угловое ускорение",
+        "Момент инерции"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Torque' в машиностроении — крутящий момент (вращающий момент силы относительно оси).",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите правильный перевод 'compressive strength':",
+    "payload": {
+      "options": [
+        "Прочность на сжатие",
+        "Модуль упругости",
+        "Твёрдость по Бринеллю",
+        "Предел текучести"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Compressive strength' — предел прочности на сжатие; не путать с 'tensile strength' (растяжение).",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'bearing' в контексте описания подшипниковых узлов?",
+    "payload": {
+      "options": [
+        "Опора",
+        "Подшипник",
+        "Втулка",
+        "Вкладыш"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Bearing' в машиностроении — подшипник (опора, воспринимающая нагрузки вала).",
+    "difficulty": 1
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите точный перевод термина 'yield strength':",
+    "payload": {
+      "options": [
+        "Прочность на разрыв",
+        "Предел текучести",
+        "Предел выносливости",
+        "Твёрдость по Роквеллу"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Yield strength' — предел текучести (напряжение, при котором начинается пластическая деформация).",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'heat treatment' в технологической документации?",
+    "payload": {
+      "options": [
+        "Термическая обработка",
+        "Нагрев детали",
+        "Тепловая закалка",
+        "Термоусадка"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Heat treatment' — термическая обработка, стандартный термин металлообработки и материаловедения.",
+    "difficulty": 1
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'Нанесите ___ на резьбовые соединения перед затяжкой.' (gasket sealant)",
+    "payload": {
+      "options": [
+        "герметик",
+        "смазку",
+        "праймер",
+        "грунтовку"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Gasket sealant' — герметик для прокладок; не путать с lubricant (смазка).",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Переведите термин 'coolant' в контексте двигателя внутреннего сгорания:",
+    "payload": {
+      "options": [
+        "Хладагент",
+        "Охлаждающая жидкость",
+        "Антифриз",
+        "Тосол"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Coolant' — охлаждающая жидкость (нейтральный технический термин; антифриз — лишь один из видов).",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'weld seam' в сварочной документации?",
+    "payload": {
+      "options": [
+        "Место сварки",
+        "Сварочный шов",
+        "Линия плавления",
+        "Зона термовлияния"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Weld seam' — сварной шов; 'weld zone' или 'HAZ' — зона термического влияния.",
+    "difficulty": 1
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите правильный перевод 'rated load' в документации на подъёмное оборудование:",
+    "payload": {
+      "options": [
+        "Допустимая нагрузка",
+        "Номинальная нагрузка",
+        "Расчётная масса",
+        "Максимальный вес"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Rated load' — номинальная нагрузка (паспортное значение, а не просто допустимое).",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'circuit breaker' в электротехнической документации?",
+    "payload": {
+      "options": [
+        "Плавкий предохранитель",
+        "Автоматический выключатель",
+        "Разрядник",
+        "Контактор"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Circuit breaker' — автоматический выключатель; 'fuse' — плавкий предохранитель.",
+    "difficulty": 1
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: '___ регулирует давление в гидравлической системе.' (pressure relief valve)",
+    "payload": {
+      "options": [
+        "Предохранительный клапан",
+        "Обратный клапан",
+        "Редукционный клапан",
+        "Дроссельный клапан"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Pressure relief valve' — предохранительный клапан; 'pressure reducing valve' — редукционный клапан.",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Переведите 'drilling jig' в контексте механической обработки:",
+    "payload": {
+      "options": [
+        "Сверлильный патрон",
+        "Сверлильный кондуктор",
+        "Сверлильная головка",
+        "Направляющая втулка"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Drilling jig' — сверлильный кондуктор (приспособление для точного направления инструмента).",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'safety data sheet' (SDS)?",
+    "payload": {
+      "options": [
+        "Лист технических данных",
+        "Паспорт безопасности",
+        "Инструкция по охране труда",
+        "Технический паспорт"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Safety data sheet' (SDS/MSDS) — паспорт безопасности вещества (согласно ГОСТ 30333).",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите точный перевод 'load cell' в измерительной технике:",
+    "payload": {
+      "options": [
+        "Нагрузочная ячейка",
+        "Тензодатчик",
+        "Датчик давления",
+        "Измерительный преобразователь"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Load cell' — тензодатчик (датчик силы на основе тензоэффекта); 'pressure sensor' — датчик давления.",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'cross-section' в строительных чертежах?",
+    "payload": {
+      "options": [
+        "Разрез",
+        "Сечение",
+        "Поперечный разрез",
+        "Профиль"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Cross-section' на чертежах — сечение (поперечный вид); 'section' — разрез.",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'Проверьте ___ перед началом эксплуатации оборудования.' (clearance)",
+    "payload": {
+      "options": [
+        "зазор",
+        "допуск",
+        "отклонение",
+        "посадку"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Clearance' — зазор (расстояние между сопрягаемыми деталями); 'tolerance' — допуск.",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Переведите 'shaft' в машиностроительном контексте:",
+    "payload": {
+      "options": [
+        "Шток",
+        "Вал",
+        "Ось",
+        "Стержень"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Shaft' — вал (вращающийся элемент передачи); 'rod/stem' — шток; 'axle' — ось.",
+    "difficulty": 1
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'power supply unit' (PSU)?",
+    "payload": {
+      "options": [
+        "Источник питания",
+        "Блок питания",
+        "Силовой агрегат",
+        "Энергоузел"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Power supply unit' — блок питания (стандартное обозначение в электротехнике и IT).",
+    "difficulty": 1
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите правильный перевод 'hardness' в материаловедении:",
+    "payload": {
+      "options": [
+        "Прочность",
+        "Жёсткость",
+        "Твёрдость",
+        "Вязкость"
+      ],
+      "correct": 2
+    },
+    "explanation": "'Hardness' — твёрдость; 'stiffness' — жёсткость; 'strength' — прочность; 'toughness' — вязкость разрушения.",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'flange' в трубопроводной арматуре?",
+    "payload": {
+      "options": [
+        "Муфта",
+        "Ниппель",
+        "Фланец",
+        "Патрубок"
+      ],
+      "correct": 2
+    },
+    "explanation": "'Flange' — фланец (плоский присоединительный элемент с отверстиями для болтов).",
+    "difficulty": 1
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'Замените ___ масла согласно регламенту ТО.' (oil filter)",
+    "payload": {
+      "options": [
+        "фильтр",
+        "щуп",
+        "пробку",
+        "поддон"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Oil filter' — масляный фильтр; контекст технического обслуживания требует точного термина.",
+    "difficulty": 1
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Переведите 'thermal conductivity' в физике материалов:",
+    "payload": {
+      "options": [
+        "Теплоёмкость",
+        "Теплопроводность",
+        "Температуропроводность",
+        "Коэффициент расширения"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Thermal conductivity' — теплопроводность (λ); 'thermal diffusivity' — температуропроводность.",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'actuator' в автоматике и пневматике?",
+    "payload": {
+      "options": [
+        "Датчик",
+        "Исполнительный механизм",
+        "Регулятор",
+        "Контроллер"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Actuator' — исполнительный механизм (привод, преобразующий сигнал в механическое действие).",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите правильный перевод 'fatigue limit' в прочностных расчётах:",
+    "payload": {
+      "options": [
+        "Усталостный предел",
+        "Предел выносливости",
+        "Циклическая прочность",
+        "Предел усталости"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Fatigue limit' — предел выносливости (нормированный термин по ГОСТ; иногда 'усталостный предел').",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'conduit' в электромонтажной документации?",
+    "payload": {
+      "options": [
+        "Кабельный канал",
+        "Кабелепровод",
+        "Лоток",
+        "Кабельная трасса"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Conduit' — кабелепровод (защитная труба или канал для прокладки проводов).",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Переведите 'bill of materials' (BOM) в контексте производственной документации:",
+    "payload": {
+      "options": [
+        "Смета затрат",
+        "Спецификация материалов",
+        "Ведомость покупных изделий",
+        "Технологическая карта"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Bill of materials' — спецификация материалов (перечень всех компонентов изделия).",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'dead load' в строительных нормах?",
+    "payload": {
+      "options": [
+        "Мёртвый груз",
+        "Постоянная нагрузка",
+        "Собственный вес",
+        "Статическая нагрузка"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Dead load' — постоянная нагрузка (от веса конструкции); 'live load' — временная нагрузка.",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'Проверьте ___ на предмет трещин и износа.' (bushing)",
+    "payload": {
+      "options": [
+        "втулку",
+        "подшипник",
+        "прокладку",
+        "манжету"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Bushing' — втулка (направляющая или опорная деталь); отличается от 'bearing' (подшипник).",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'pitch' в контексте резьбы?",
+    "payload": {
+      "options": [
+        "Шаг",
+        "Угол профиля",
+        "Глубина резьбы",
+        "Диаметр резьбы"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Thread pitch' — шаг резьбы (расстояние между соседними витками).",
+    "difficulty": 1
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите точный перевод 'flow rate' в гидравлике:",
+    "payload": {
+      "options": [
+        "Скорость потока",
+        "Расход",
+        "Пропускная способность",
+        "Дебит"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Flow rate' — расход (объём или масса в единицу времени); 'flow velocity' — скорость потока.",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'insulation resistance' в электротехнике?",
+    "payload": {
+      "options": [
+        "Электрическое сопротивление",
+        "Сопротивление изоляции",
+        "Диэлектрическая прочность",
+        "Удельное сопротивление"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Insulation resistance' — сопротивление изоляции; 'dielectric strength' — электрическая прочность изоляции.",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Переведите 'assembly drawing' в конструкторской документации:",
+    "payload": {
+      "options": [
+        "Рабочий чертёж",
+        "Сборочный чертёж",
+        "Схема соединений",
+        "Спецификация"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Assembly drawing' — сборочный чертёж (по ГОСТ 2.102); 'detail drawing' — рабочий чертёж.",
+    "difficulty": 1
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'grounding' в электромонтаже?",
+    "payload": {
+      "options": [
+        "Нулевой провод",
+        "Заземление",
+        "Зануление",
+        "Защитное отключение"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Grounding' — заземление (соединение с землёй); 'neutral' — нулевой провод.",
+    "difficulty": 1
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'Установите ___ в соответствии с чертежом.' (dowel pin)",
+    "payload": {
+      "options": [
+        "штифт",
+        "болт",
+        "шпонку",
+        "заклёпку"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Dowel pin' — штифт (цилиндрический крепёжный элемент для точного позиционирования).",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'ambient temperature' в технических условиях?",
+    "payload": {
+      "options": [
+        "Рабочая температура",
+        "Температура окружающей среды",
+        "Температура корпуса",
+        "Максимальная температура"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Ambient temperature' — температура окружающей среды (условия эксплуатации).",
+    "difficulty": 1
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите правильный перевод 'stroke' применительно к цилиндру:",
+    "payload": {
+      "options": [
+        "Удар",
+        "Ход поршня",
+        "Такт",
+        "Рабочий объём"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Stroke' в гидро/пневмоцилиндрах — ход поршня (расстояние перемещения).",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'specifications' в контексте технического задания?",
+    "payload": {
+      "options": [
+        "Технические требования",
+        "Технические условия",
+        "Спецификация",
+        "Стандарты"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Specifications' — технические условия (ТУ); 'requirements' — технические требования.",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Переведите 'corrosion resistance' в химии и материаловедении:",
+    "payload": {
+      "options": [
+        "Коррозионная стойкость",
+        "Антикоррозийная защита",
+        "Нержавеющесть",
+        "Стойкость к окислению"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Corrosion resistance' — коррозионная стойкость (нормированный термин по ГОСТ).",
+    "difficulty": 1
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'hydraulic pressure' в технической документации?",
+    "payload": {
+      "options": [
+        "Гидродинамическое давление",
+        "Давление гидравлической жидкости",
+        "Гидравлическое давление",
+        "Напор жидкости"
+      ],
+      "correct": 2
+    },
+    "explanation": "'Hydraulic pressure' — гидравлическое давление (стандартный термин гидравлики).",
+    "difficulty": 1
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'Момент затяжки ___ составляет 25 Н·м.' (bolt)",
+    "payload": {
+      "options": [
+        "болта",
+        "гайки",
+        "шпильки",
+        "винта"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Bolt' — болт (крепёжный элемент с головкой и резьбой); 'stud' — шпилька.",
+    "difficulty": 1
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'elongation' в механических испытаниях материалов?",
+    "payload": {
+      "options": [
+        "Удлинение",
+        "Деформация",
+        "Растяжение",
+        "Относительное удлинение"
+      ],
+      "correct": 3
+    },
+    "explanation": "'Elongation' в испытаниях — относительное удлинение (выражается в %); 'extension' — абсолютное удлинение.",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите правильный перевод 'inspection' в системах контроля качества:",
+    "payload": {
+      "options": [
+        "Инспекция",
+        "Контроль",
+        "Технический осмотр",
+        "Проверка"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Inspection' в ОТК — контроль (технический контроль качества по ГОСТ ISO 9001).",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'thermal expansion coefficient' в инженерных расчётах?",
+    "payload": {
+      "options": [
+        "Коэффициент теплового расширения",
+        "Термическое расширение",
+        "Тепловой коэффициент",
+        "Коэффициент дилатации"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Thermal expansion coefficient' — коэффициент теплового расширения (КЛТР в точных формулировках).",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Переведите 'gauge pressure' в системах измерения давления:",
+    "payload": {
+      "options": [
+        "Абсолютное давление",
+        "Избыточное давление",
+        "Манометрическое давление",
+        "Статическое давление"
+      ],
+      "correct": 1
+    },
+    "explanation": "\"Gauge pressure\" = \"избыточное давление\" (разность между абсолютным давлением и атмосферным). Оба варианта — \"избыточное давление\" и \"манометрическое давление\" — встречаются в нормативных документах, однако \"избыточное давление\" является более широко используемым термином в ГОСТ Р 8.000.",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'gearbox' в трансмиссии?",
+    "payload": {
+      "options": [
+        "Редуктор",
+        "Коробка передач",
+        "Дифференциал",
+        "Раздаточная коробка"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Gearbox' — коробка передач; 'reducer/gearhead' — редуктор (понижающая передача).",
+    "difficulty": 1
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите точный перевод 'operating manual' в технической документации:",
+    "payload": {
+      "options": [
+        "Технический паспорт",
+        "Руководство по эксплуатации",
+        "Инструкция по монтажу",
+        "Регламент обслуживания"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Operating manual' — руководство по эксплуатации (основной эксплуатационный документ по ГОСТ 2.601).",
+    "difficulty": 1
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'wiring diagram' в электромонтажной документации?",
+    "payload": {
+      "options": [
+        "Принципиальная схема",
+        "Монтажная схема",
+        "Схема подключения",
+        "Кабельный журнал"
+      ],
+      "correct": 2
+    },
+    "explanation": "'Wiring diagram' — схема подключения (монтажная); 'schematic diagram' — принципиальная схема.",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Переведите 'rpm' (revolutions per minute) в технических характеристиках:",
+    "payload": {
+      "options": [
+        "Рад/с",
+        "Об/мин",
+        "Цикл/мин",
+        "Частота вращения"
+      ],
+      "correct": 1
+    },
+    "explanation": "'RPM' — об/мин (оборотов в минуту); единица частоты вращения в технических характеристиках.",
+    "difficulty": 1
+  },
+  {
+    "topic": "technical",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'commissioning' в промышленной автоматизации?",
+    "payload": {
+      "options": [
+        "Запуск",
+        "Ввод в эксплуатацию",
+        "Наладка",
+        "Пуско-наладочные работы"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Commissioning' — ввод в эксплуатацию (официальный термин; включает наладку, испытания, передачу заказчику).",
+    "difficulty": 2
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "The hydraulic actuator converts fluid power into linear mechanical motion.",
+      "options": [
+        "Гидравлический привод превращает мощность жидкости в линейное механическое движение.",
+        "Гидравлический исполнительный механизм преобразует энергию рабочей жидкости в линейное механическое перемещение.",
+        "Гидроцилиндр трансформирует гидравлическую мощность в линейное движение."
+      ],
+      "correct": 1
+    },
+    "explanation": "Вариант 2 точен: 'actuator' — исполнительный механизм; 'fluid power' — энергия рабочей жидкости; 'motion' → перемещение (линейное).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "Prior to assembly, ensure all mating surfaces are free from burrs and contaminants.",
+      "options": [
+        "Перед сборкой убедитесь, что все соединяемые поверхности свободны от заусенцев и загрязнений.",
+        "До начала монтажа проверьте, чтобы контактные поверхности не имели заусенцев и посторонних частиц.",
+        "Перед сборкой все контактные поверхности должны быть очищены от заусенцев и загрязнений."
+      ],
+      "correct": 2
+    },
+    "explanation": "Вариант 3 наиболее профессионален: безличная конструкция ('должны быть') соответствует нормативному стилю; 'mating surfaces' — контактные поверхности.",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "Tighten the fasteners in a cross pattern to the specified torque value.",
+      "options": [
+        "Затяните крепёжные элементы крест-накрест до указанного значения крутящего момента.",
+        "Затяните крепёж по диагонали до заданного момента затяжки.",
+        "Затяните болты крест-накрест до нормируемого момента затяжки."
+      ],
+      "correct": 0
+    },
+    "explanation": "\"Fasteners\" — крепёжные элементы (родовой термин: болты, винты, шпильки). Перевод \"болты\" ошибочно сужает понятие. \"Указанного значения крутящего момента\" точнее \"нормируемого\" для инструкции по эксплуатации.",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "The rated power output of the motor is 15 kW at 1450 rpm.",
+      "options": [
+        "Номинальная выходная мощность двигателя составляет 15 кВт при 1450 об/мин.",
+        "Паспортная мощность мотора равна 15 кВт при скорости 1450 оборотов в минуту.",
+        "Рейтинговая мощность на выходе двигателя: 15 кВт, частота вращения 1450 об/мин."
+      ],
+      "correct": 0
+    },
+    "explanation": "Вариант 1: 'rated power output' — номинальная выходная мощность; 'rpm' — об/мин. Профессиональный стиль без избыточных слов.",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "The pipeline must be hydrostatically tested at 1.5 times the design pressure.",
+      "payload_note": "construction/piping",
+      "options": [
+        "Трубопровод должен быть испытан гидростатическим способом при давлении, в 1,5 раза превышающем рабочее давление.",
+        "Трубопровод необходимо подвергнуть гидравлическому испытанию при давлении 1,5 × расчётное давление.",
+        "Трубопровод должен пройти гидроиспытание при давлении, равном 1,5 расчётного."
+      ],
+      "correct": 2
+    },
+    "explanation": "Вариант 3: 'hydrostatically tested' — гидроиспытание (принятый отраслевой термин); 'design pressure' — расчётное давление по ГОСТ.",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "The control unit features built-in overload and short-circuit protection.",
+      "options": [
+        "Блок управления оснащён встроенной защитой от перегрузки и короткого замыкания.",
+        "Управляющий блок обеспечивает защиту от перегруза и КЗ.",
+        "Устройство управления имеет вграждённую защиту против перегрузок и коротких замыканий."
+      ],
+      "correct": 0
+    },
+    "explanation": "Вариант 1 корректен: 'control unit' — блок управления; 'built-in' — встроенный; 'overload' — перегрузка; 'short-circuit' — короткое замыкание.",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "Ensure adequate ventilation to prevent accumulation of explosive vapours.",
+      "options": [
+        "Обеспечьте достаточную вентиляцию для предотвращения скопления взрывоопасных паров.",
+        "Убедитесь в достаточном проветривании, чтобы не накапливались опасные испарения.",
+        "Обеспечьте вентилирование помещения во избежание образования взрывчатых паров."
+      ],
+      "correct": 0
+    },
+    "explanation": "Вариант 1 точен: 'adequate ventilation' — достаточная вентиляция; 'explosive vapours' — взрывоопасные пары (технический термин охраны труда).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "tm",
+    "lang": "en",
+    "question": "Сопоставьте термины с их определениями:",
+    "payload": {
+      "left": [
+        "Tensile strength",
+        "Yield strength",
+        "Hardness",
+        "Fatigue limit",
+        "Creep"
+      ],
+      "right": [
+        "Сопротивление материала медленной пластической деформации при постоянной нагрузке",
+        "Максимальное напряжение до разрушения при растяжении",
+        "Напряжение начала пластической деформации",
+        "Сопротивление поверхностному проникновению",
+        "Максимальное циклическое напряжение без усталостного разрушения"
+      ],
+      "pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ]
+      ]
+    },
+    "explanation": "Ключевые термины механики материалов: tensile strength — разрушение при растяжении; creep — ползучесть (деформация под нагрузкой).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "tm",
+    "lang": "en",
+    "question": "Сопоставьте электротехнические термины с переводами:",
+    "payload": {
+      "left": [
+        "Contactor",
+        "Relay",
+        "Circuit breaker",
+        "Fuse",
+        "Disconnect switch"
+      ],
+      "right": [
+        "Разъединитель",
+        "Плавкий предохранитель",
+        "Автоматический выключатель",
+        "Реле",
+        "Контактор"
+      ],
+      "pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          0
+        ]
+      ]
+    },
+    "explanation": "Контактор vs реле: контактор — для силовых цепей; реле — для управления. Разъединитель — ручной коммутационный аппарат.",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите наиболее точный перевод 'stress concentration factor' в прочностных расчётах:",
+    "payload": {
+      "options": [
+        "Коэффициент концентрации напряжений",
+        "Фактор напряжённости",
+        "Коэффициент нагрузки",
+        "Показатель концентрации усилий"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Stress concentration factor' (Kt) — коэффициент концентрации напряжений (стандартный термин сопромата).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'non-destructive testing' (NDT)?",
+    "payload": {
+      "options": [
+        "Неразрушающий контроль",
+        "Бесконтактное тестирование",
+        "Внешний осмотр",
+        "Пассивный контроль качества"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Non-destructive testing' — неразрушающий контроль (НК) — официальный термин ГОСТ Р EN ISO 9712.",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Переведите 'tolerance stack-up' в точном машиностроении:",
+    "payload": {
+      "options": [
+        "Суммирование допусков",
+        "Накопление погрешностей допусков",
+        "Суммарный допуск",
+        "Цепочка допусков"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Tolerance stack-up' — накопление погрешностей допусков (задача цепочки размеров в ГОСТ 16319).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'viscosity index' в описании масел?",
+    "payload": {
+      "options": [
+        "Коэффициент вязкости",
+        "Индекс вязкости",
+        "Класс вязкости",
+        "Число вязкости"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Viscosity index' (VI) — индекс вязкости (показывает зависимость вязкости масла от температуры).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите точный перевод 'anchor bolt' в строительстве:",
+    "payload": {
+      "options": [
+        "Болт-анкер",
+        "Анкерный болт",
+        "Фундаментный болт",
+        "Закладной болт"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Anchor bolt' — анкерный болт (крепёж для связи конструкции с фундаментом по ГОСТ 24379.1).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'Система ___ обеспечивает постоянный мониторинг параметров производства.' (SCADA)",
+    "payload": {
+      "options": [
+        "диспетчерского управления и сбора данных",
+        "автоматического управления",
+        "производственного контроля",
+        "промышленной автоматизации"
+      ],
+      "correct": 0
+    },
+    "explanation": "SCADA — Supervisory Control and Data Acquisition: система диспетчерского управления и сбора данных.",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'proof load' в документации на крепёж?",
+    "payload": {
+      "options": [
+        "Пробная нагрузка",
+        "Нагрузка испытания",
+        "Расчётная нагрузка",
+        "Испытательная нагрузка"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Proof load' — пробная нагрузка (нагрузка для испытания крепежа по ISO 898).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "The compressor shall be equipped with a pressure relief valve set to open at 110% of the maximum allowable working pressure.",
+      "options": [
+        "Компрессор должен быть оборудован предохранительным клапаном, настроенным на открытие при давлении 110% от максимально допустимого рабочего давления.",
+        "На компрессоре нужно установить клапан сброса давления, который открывается при 110% рабочего давления.",
+        "Компрессор следует снабдить клапаном давления, срабатывающим при превышении 110% максимально допустимого давления."
+      ],
+      "correct": 0
+    },
+    "explanation": "Вариант 1 точен: 'shall be equipped' — должен быть оборудован (предписание); 'maximum allowable working pressure' — максимально допустимое рабочее давление (МДРД).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "Structural steel members shall comply with ASTM A36 or equivalent national standard.",
+      "options": [
+        "Стальные конструктивные элементы должны соответствовать ASTM A36 или эквивалентному национальному стандарту.",
+        "Металлоконструкции обязаны отвечать требованиям ASTM A36 или аналогичного отечественного стандарта.",
+        "Стальные несущие элементы должны соответствовать ASTM A36 или равнозначному национальному стандарту."
+      ],
+      "correct": 0
+    },
+    "explanation": "\"Structural members\" — конструктивные элементы (не \"несущие\": не все конструктивные элементы являются несущими). \"Эквивалентному\" точнее \"равнозначному\" в нормативном контексте.",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "tm",
+    "lang": "en",
+    "question": "Сопоставьте строительные термины с русскими эквивалентами:",
+    "payload": {
+      "left": [
+        "Dead load",
+        "Live load",
+        "Wind load",
+        "Seismic load",
+        "Snow load"
+      ],
+      "right": [
+        "Снеговая нагрузка",
+        "Сейсмическая нагрузка",
+        "Ветровая нагрузка",
+        "Временная нагрузка",
+        "Постоянная нагрузка"
+      ],
+      "pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          0
+        ]
+      ]
+    },
+    "explanation": "Нагрузки по СП 20.13330: постоянные (собственный вес) и временные (люди, ветер, снег, сейсмика).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'passivation' в химической обработке металлов?",
+    "payload": {
+      "options": [
+        "Пассивирование",
+        "Пассивация",
+        "Нейтрализация",
+        "Анодирование"
+      ],
+      "correct": 0
+    },
+    "explanation": "По ГОСТ 9.305-84 нормативный термин для данного процесса — \"пассивирование\". \"Пассивация\" встречается в разговорной профессиональной речи, но не является нормативным термином стандарта.",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите точный перевод 'weld throat' в сварочных стандартах:",
+    "payload": {
+      "options": [
+        "Толщина шва",
+        "Катет шва",
+        "Расчётная высота шва",
+        "Ширина сварного соединения"
+      ],
+      "correct": 2
+    },
+    "explanation": "'Weld throat' — расчётная высота шва (наименьшее расстояние от корня до лицевой поверхности шва).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'impedance' в электротехнике?",
+    "payload": {
+      "options": [
+        "Сопротивление",
+        "Полное сопротивление",
+        "Реактивное сопротивление",
+        "Импеданс"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Impedance' — полное (комплексное) сопротивление; 'resistance' — активное; 'reactance' — реактивное.",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'Установите ___ для компенсации теплового расширения трубопровода.' (expansion joint)",
+    "payload": {
+      "options": [
+        "компенсатор",
+        "муфту",
+        "фланец",
+        "сильфон"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Expansion joint' — компенсатор теплового расширения (обобщённый термин; сильфон — один из видов).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Переведите 'backlash' в зубчатых передачах:",
+    "payload": {
+      "options": [
+        "Обратный ход",
+        "Боковой зазор",
+        "Мёртвый ход",
+        "Угловой люфт"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Backlash' в зубчатых передачах — боковой зазор в зацеплении (ГОСТ 1643); 'dead band' — зона нечувствительности.",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "Apply a thin, even coat of anti-seize compound to the thread flanks before assembly.",
+      "options": [
+        "Нанесите тонкий равномерный слой противозадирного состава на боковые поверхности резьбы перед сборкой.",
+        "Смажьте резьбу тонким слоем антипригарного вещества перед монтажом.",
+        "Покройте витки резьбы тонким ровным слоем средства против заедания перед сборкой."
+      ],
+      "correct": 0
+    },
+    "explanation": "Вариант 1 точен: 'anti-seize compound' — противозадирный состав; 'thread flanks' — боковые поверхности резьбы (профессиональная терминология).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'interlock' в системах промышленной безопасности?",
+    "payload": {
+      "options": [
+        "Блокировка",
+        "Межсетевое соединение",
+        "Защитное отключение",
+        "Логическая блокировка"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Interlock' — блокировка (система предотвращения несанкционированного действия; ГОСТ Р МЭК 61508).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите точный перевод 'overhauling' применительно к технике:",
+    "payload": {
+      "options": [
+        "Техническое обслуживание",
+        "Капитальный ремонт",
+        "Плановый ремонт",
+        "Переборка"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Overhauling' — капитальный ремонт (полная разборка, дефектовка и восстановление).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'Сварное соединение должно пройти ___ согласно AWS D1.1.' (visual inspection)",
+    "payload": {
+      "options": [
+        "визуальный контроль",
+        "внешний осмотр",
+        "визуальную инспекцию",
+        "контроль внешним видом"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Visual inspection' в сварке — визуальный контроль (нормированный термин НК по ГОСТ Р ИСО 17637).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'centrifugal pump' в насосной технике?",
+    "payload": {
+      "options": [
+        "Вихревой насос",
+        "Центробежный насос",
+        "Осевой насос",
+        "Ротационный насос"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Centrifugal pump' — центробежный насос (принцип работы — центробежная сила рабочего колеса).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "tm",
+    "lang": "en",
+    "question": "Сопоставьте термины ТО с определениями:",
+    "payload": {
+      "left": [
+        "Overhaul",
+        "Preventive maintenance",
+        "Corrective maintenance",
+        "Predictive maintenance",
+        "Condition monitoring"
+      ],
+      "right": [
+        "Мониторинг состояния оборудования",
+        "Техническое обслуживание по состоянию с прогнозированием",
+        "Плановое (предупредительное) техническое обслуживание",
+        "Капитальный ремонт",
+        "Аварийный (корректирующий) ремонт"
+      ],
+      "pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          0
+        ]
+      ]
+    },
+    "explanation": "Стратегии ТО: preventive — по регламенту; predictive — по прогнозу; corrective — после отказа; overhaul — полный капремонт.",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "The pump impeller shall be dynamically balanced to ISO 1940-1 Grade G6.3.",
+      "options": [
+        "Рабочее колесо насоса должно быть динамически сбалансировано до степени G6,3 по ISO 1940-1.",
+        "Крыльчатка насоса проходит динамическую балансировку согласно классу точности G6.3 стандарта ISO 1940-1.",
+        "Импеллер насоса должен быть динамически отбалансирован в соответствии с классом G6,3 по ISO 1940-1."
+      ],
+      "correct": 0
+    },
+    "explanation": "Вариант 1: 'impeller' — рабочее колесо (стандартный термин насосостроения); 'dynamically balanced' — динамически сбалансировано; 'Grade' — степень (класс точности).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Переведите 'thermal bridge' в строительной физике:",
+    "payload": {
+      "options": [
+        "Тепловой мост",
+        "Тепловой переход",
+        "Температурный мост",
+        "Зона теплопотерь"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Thermal bridge' — тепловой мост (зона повышенных теплопотерь по ГОСТ Р 54853).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'mean time between failures' (MTBF)?",
+    "payload": {
+      "options": [
+        "Среднее время безотказной работы",
+        "Средняя наработка на отказ",
+        "Вероятность безотказной работы",
+        "Коэффициент готовности"
+      ],
+      "correct": 1
+    },
+    "explanation": "'MTBF' — средняя наработка на отказ (ГОСТ Р 27.002); не путать с 'MTTF' — до первого отказа.",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "The coating shall have a minimum dry film thickness of 80 µm as measured by magnetic induction.",
+      "options": [
+        "Покрытие должно иметь минимальную толщину сухой плёнки 80 мкм, измеренную методом магнитной индукции.",
+        "Толщина высохшего слоя краски должна составлять не менее 80 микрон по методу магнитной индукции.",
+        "Покрытие должно обеспечивать минимальную толщину в сухом состоянии 80 мкм при измерении методом магнитной индукции."
+      ],
+      "correct": 0
+    },
+    "explanation": "Вариант 1: 'dry film thickness' — толщина сухой плёнки (стандартный ЛКМ-термин); 'magnetic induction' — магнитная индукция (метод толщинометрии).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'plug valve' в трубопроводной арматуре?",
+    "payload": {
+      "options": [
+        "Шаровой кран",
+        "Пробковый кран",
+        "Вентиль",
+        "Клапан-заглушка"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Plug valve' — пробковый кран (коническая или цилиндрическая пробка); 'ball valve' — шаровой кран.",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите точный перевод 'surface roughness' в машиностроении:",
+    "payload": {
+      "options": [
+        "Шероховатость поверхности",
+        "Чистота обработки",
+        "Параметр поверхности",
+        "Качество поверхности"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Surface roughness' — шероховатость поверхности (ГОСТ 2789); характеризуется параметрами Ra, Rz.",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'Используйте ___ для измерения внутреннего диаметра отверстия.' (bore gauge)",
+    "payload": {
+      "options": [
+        "нутромер",
+        "штангенциркуль",
+        "микрометр",
+        "глубиномер"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Bore gauge' — нутромер (инструмент для измерения внутренних диаметров).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Переведите 'flare fitting' в системах трубопроводов высокого давления:",
+    "payload": {
+      "options": [
+        "Раструбное соединение",
+        "Развальцованное соединение",
+        "Конусное соединение",
+        "Стопорное соединение"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Flare fitting' — развальцованное соединение (конец трубы расширяется конусом, зажимаясь гайкой).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'earthing resistance' в электробезопасности?",
+    "payload": {
+      "options": [
+        "Сопротивление изоляции",
+        "Сопротивление заземляющего устройства",
+        "Переходное сопротивление",
+        "Контурное сопротивление"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Earthing resistance' — сопротивление заземляющего устройства (ГОСТ Р 50571.5.54).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Переведите 'duty cycle' применительно к электродвигателям:",
+    "payload": {
+      "options": [
+        "Цикл работы",
+        "Режим работы",
+        "Коэффициент загрузки",
+        "Скважность"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Duty cycle' для двигателей — режим работы (S1-S9 по ГОСТ Р МЭК 60034-1); скважность — для импульсных сигналов.",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'work hardening' в технологии металлообработки?",
+    "payload": {
+      "options": [
+        "Рабочее упрочнение",
+        "Наклёп",
+        "Деформационное упрочнение",
+        "Холодное упрочнение"
+      ],
+      "correct": 1
+    },
+    "explanation": "\"Work hardening\" = \"наклёп\" (поверхностное упрочнение при холодной обработке). Также принят термин \"деформационное упрочнение\" — более широкое понятие, применяется в контексте международных стандартов. В зависимости от контекста оба варианта допустимы; \"наклёп\" предпочтительнее для описания поверхностной обработки.",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите правильный перевод 'angle of attack' в аэродинамике:",
+    "payload": {
+      "options": [
+        "Угол крена",
+        "Угол атаки",
+        "Угол набегания потока",
+        "Угол подъёма"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Angle of attack' (α) — угол атаки (угол между хордой крыла и направлением набегающего потока по ГОСТ Р ИСО 1151).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "The exhaust gas recirculation valve controls the amount of exhaust gas returned to the intake manifold.",
+      "options": [
+        "Клапан рециркуляции отработавших газов управляет количеством выхлопных газов, возвращаемых во впускной коллектор.",
+        "Клапан ЕГР регулирует объём отработавших газов, поступающих обратно во впускной коллектор.",
+        "Клапан возврата выхлопных газов контролирует долю газов, направляемых в коллектор впуска."
+      ],
+      "correct": 1
+    },
+    "explanation": "Вариант 2: 'exhaust gas recirculation' сокращается до ЕГР (стандартная аббревиатура); 'регулирует объём' точнее, чем 'управляет количеством'.",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'tensioning device' применительно к ленточному конвейеру?",
+    "payload": {
+      "options": [
+        "Натяжное устройство",
+        "Тормозное устройство",
+        "Натяжной механизм",
+        "Приспособление для натяжения"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Tensioning device' — натяжное устройство (стандартный термин конвейерной техники по ГОСТ 22644).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "fb",
+    "lang": "en",
+    "question": "Заполните пропуск: 'Сварка производилась в ___ среде.' (inert gas shielding)",
+    "payload": {
+      "options": [
+        "защитной газовой",
+        "вакуумной",
+        "нейтральной газовой",
+        "восстановительной"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Inert gas shielding' — сварка в защитной газовой среде (или 'в среде защитных газов'); инертный газ — частный случай.",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Переведите 'pressure drop' в системах трубопроводов:",
+    "payload": {
+      "options": [
+        "Перепад давления",
+        "Потеря давления",
+        "Падение давления",
+        "Гидравлическое сопротивление"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Pressure drop' — перепад давления (разность давлений на входе и выходе участка; ГОСТ 28338).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'chip formation' в процессах механической обработки?",
+    "payload": {
+      "options": [
+        "Образование стружки",
+        "Чипообразование",
+        "Стружкообразование",
+        "Отделение материала"
+      ],
+      "correct": 2
+    },
+    "explanation": "'Chip formation' — стружкообразование (процесс образования стружки при резании металла; ГОСТ 25762).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
+    "question": "Выберите лучший перевод:",
+    "payload": {
+      "source": "The mixing valve blends hot and cold water streams to maintain a constant outlet temperature.",
+      "options": [
+        "Смесительный клапан смешивает горячий и холодный потоки воды для поддержания постоянной температуры на выходе.",
+        "Клапан-смеситель соединяет потоки горячей и холодной воды, обеспечивая стабильную температуру на выходе.",
+        "Регулирующий клапан подмешивает холодную воду к горячей для поддержания постоянной выходной температуры."
+      ],
+      "correct": 1
+    },
+    "explanation": "Вариант 2: 'mixing valve' — клапан-смеситель (составной термин); 'blends' — соединяет/смешивает; 'constant outlet temperature' — стабильная температура на выходе.",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите точный перевод 'draft angle' в литейном производстве:",
+    "payload": {
+      "options": [
+        "Угол литейного уклона",
+        "Угол формовочного уклона",
+        "Угол снятия фаски",
+        "Уклон разъёма формы"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Draft angle' — угол формовочного уклона (уклон стенок формы для лёгкого извлечения отливки; ГОСТ 3212).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'vibration damper' в машиностроении?",
+    "payload": {
+      "options": [
+        "Вибрационный гаситель",
+        "Виброгаситель",
+        "Антивибрационная опора",
+        "Амортизатор вибраций"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Vibration damper' — виброгаситель (устройство для поглощения вибрационной энергии; ГОСТ 16350).",
+    "difficulty": 3
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The fatigue crack propagation rate was determined using a compact tension specimen in accordance with ASTM E647.",
+      "translation": "Скорость [распространения усталостной трещины] была определена с использованием [образца с компактным растяжением] в соответствии с [ASTM E647].",
+      "segments": [
+        "распространения усталостной трещины",
+        "образца с компактным растяжением",
+        "ASTM E647",
+        "была определена"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Compact tension specimen' — образец CT (образец компактного растяжения) — устоявшийся термин; перевод 'с компактным растяжением' искажает тип образца.",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The austenitic stainless steel underwent sensitization due to carbide precipitation at grain boundaries.",
+      "translation": "Аустенитная нержавеющая сталь подверглась [сенсибилизации] вследствие [выделения карбидов] по [границам зерна].",
+      "segments": [
+        "сенсибилизации",
+        "выделения карбидов",
+        "границам зерна",
+        "подверглась"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Sensitization' в металловедении — сенсибилизация нержавеющей стали (верный термин), НО по-русски правильно: «сенсибилизация» — ошибочный перевод. Нормированный термин — «межкристаллитная коррозия» или «склонность к МКК». Следует: «склонность к межкристаллитной коррозии».",
+    "difficulty": 5
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The PLC ladder logic implements a latch circuit to maintain the conveyor running state.",
+      "translation": "Лестничная логика ПЛК реализует [триггерную схему] для поддержания [состояния работы] конвейера в [рабочем режиме].",
+      "segments": [
+        "триггерную схему",
+        "состояния работы",
+        "рабочем режиме",
+        "Лестничная логика"
+      ],
+      "correct": 2
+    },
+    "explanation": "\"Рабочем режиме\" — добавление, отсутствующее в источнике (\"to maintain the conveyor running state\"). Переводчик добавил избыточный элемент \"в рабочем режиме\", дублирующий смысл уже переведённого \"состояния работы\". Добавление текста без основания в источнике — грубая переводческая ошибка.",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "Apply shim stock to correct for misalignment between the motor and gearbox flanges.",
+      "translation": "Используйте [прокладки-щупы] для устранения [несоосности] между фланцами [двигателя и редуктора].",
+      "segments": [
+        "прокладки-щупы",
+        "несоосности",
+        "двигателя и редуктора",
+        "для устранения"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Shim stock' — регулировочные прокладки (подкладки), а не 'прокладки-щупы'. Щупы — измерительный инструмент. Shim — металлическая подкладка для выравнивания.",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The relief valve cracking pressure shall not exceed 10% above the set pressure.",
+      "translation": "Давление [начала открытия] предохранительного клапана не должно превышать [10% от установочного давления].",
+      "segments": [
+        "начала открытия",
+        "10% от установочного давления",
+        "предохранительного клапана",
+        "не должно превышать"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Shall not exceed 10% above the set pressure' — не должно превышать установочное давление более чем на 10% (т.е. set pressure + 10%). Перевод '10% от' математически неверен: это разные значения.",
+    "difficulty": 5
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "Before energizing the panel, verify that all terminal block connections are torqued to specification and that no bare conductors are exposed.",
+      "segments": [
+        "убедитесь, что все подключения клеммных блоков затянуты согласно техническим условиям",
+        "Перед подачей напряжения на щит",
+        "и что открытые токоведущие проводники отсутствуют.",
+        "а также"
+      ],
+      "correct_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    "explanation": "Правильный порядок: обстоятельство времени → главное действие → союз → следствие. Структура: 'Перед подачей... убедитесь... а также... проводников отсутствуют.'",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "Failure to follow proper lockout/tagout procedures may result in serious injury or death.",
+      "segments": [
+        "может привести к серьёзной травме или гибели людей.",
+        "Несоблюдение установленных процедур",
+        "блокировки и маркировки оборудования",
+        "находящегося под напряжением или давлением,"
+      ],
+      "correct_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    "explanation": "Правильный порядок: субъект → определение → уточнение → следствие. 'Несоблюдение процедур блокировки... под напряжением... может привести...'",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The welder qualification test shall be conducted per AWS D1.1 Clause 4 for structural applications.",
+      "translation": "Квалификационное испытание [сварщика] должно проводиться согласно разделу 4 [AWS D1.1] для [конструкционных применений].",
+      "segments": [
+        "сварщика",
+        "AWS D1.1",
+        "конструкционных применений",
+        "Квалификационное испытание"
+      ],
+      "correct": 2
+    },
+    "explanation": "'Structural applications' — область применения несущих конструкций; перевод 'конструкционных применений' — буквализм. Правильно: 'несущих металлоконструкций' или 'строительных стальных конструкций'.",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите точный перевод 'coefficient of variation' в статистическом контроле качества:",
+    "payload": {
+      "options": [
+        "Коэффициент корреляции",
+        "Коэффициент вариации",
+        "Среднеквадратическое отклонение",
+        "Дисперсия"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Coefficient of variation' (CV) — коэффициент вариации (отношение СКО к среднему; ГОСТ Р ИСО 3534).",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The heat exchanger fouling resistance shall not exceed 0.0002 m²·K/W on the shell side.",
+      "translation": "Термическое сопротивление [загрязнения теплообменника] не должно превышать 0,0002 м²·К/Вт на [стороне межтрубного пространства].",
+      "segments": [
+        "загрязнения теплообменника",
+        "стороне межтрубного пространства",
+        "0,0002 м²·К/Вт",
+        "Термическое сопротивление"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Fouling resistance' — термическое сопротивление загрязнения (правильно), но 'загрязнения теплообменника' — неточно. Правильно: 'сопротивление отложений' или 'термическое сопротивление загрязнений' (загрязнения относятся к поверхности, не к аппарату в целом).",
+    "difficulty": 5
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "The cathodic protection system must be inspected annually to ensure continued effectiveness against corrosion.",
+      "segments": [
+        "для обеспечения сохранения эффективности защиты от коррозии.",
+        "Система катодной защиты",
+        "в целях ежегодного технического осмотра",
+        "должна подвергаться периодическому обследованию"
+      ],
+      "correct_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    "explanation": "Правильный порядок: начало предложения с подлежащим → сказуемое с обстоятельством времени → указание цели (для обеспечения) → результат (эффективности против коррозии).",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The O-ring groove dimensions shall conform to AS 568 standard for dynamic sealing applications.",
+      "translation": "Размеры [канавки под уплотнительное кольцо] должны соответствовать стандарту AS 568 для применений [динамического уплотнения].",
+      "segments": [
+        "канавки под уплотнительное кольцо",
+        "динамического уплотнения",
+        "AS 568",
+        "должны соответствовать"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Dynamic sealing applications' — области применения с динамическими уплотнениями (в движущихся узлах). Правильно: 'для узлов с подвижным уплотнением' или 'для динамических уплотнительных соединений'. 'Применений динамического уплотнения' — неестественная конструкция.",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Переведите 'pitting corrosion' в коррозионной химии:",
+    "payload": {
+      "options": [
+        "Точечная коррозия",
+        "Питтинговая коррозия",
+        "Ямочная коррозия",
+        "Локальная коррозия"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Pitting corrosion' — точечная коррозия (питтинг) по ГОСТ Р ИСО 8044; 'питтинговая' — разговорный вариант.",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'fracture toughness' (K₁c) в механике разрушения?",
+    "payload": {
+      "options": [
+        "Предел прочности при разрушении",
+        "Трещиностойкость",
+        "Вязкость разрушения",
+        "Коэффициент интенсивности напряжений"
+      ],
+      "correct": 2
+    },
+    "explanation": "'Fracture toughness' — вязкость разрушения (K₁c); характеристика сопротивления трещинообразованию (ГОСТ 25.506).",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите точный перевод 'stoichiometric mixture' в технологии сжигания:",
+    "payload": {
+      "options": [
+        "Стехиометрическая смесь",
+        "Оптимальная горючая смесь",
+        "Нормативная смесь топлива",
+        "Расчётное соотношение топлива"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Stoichiometric mixture' — стехиометрическая смесь (теоретически необходимое соотношение топлива и окислителя).",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The turbine blades are manufactured from single-crystal nickel superalloy to withstand creep at elevated temperatures.",
+      "translation": "Лопатки турбины изготовлены из [монокристаллического никелевого суперсплава] для обеспечения стойкости к [ползучести] при [повышенных температурах].",
+      "segments": [
+        "монокристаллического никелевого суперсплава",
+        "ползучести",
+        "повышенных температурах",
+        "для обеспечения стойкости к"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Nickel superalloy' — жаропрочный никелевый сплав (суперсплав). Слово 'суперсплав' используется в профессиональной литературе, но нормированный термин по ГОСТ — 'жаропрочный никелевый сплав'. В документации предпочтителен ГОСТ-термин.",
+    "difficulty": 5
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "Non-conforming material shall be segregated, tagged, and held in a designated quarantine area pending disposition.",
+      "segments": [
+        "и помещена в специально отведённую карантинную зону",
+        "до принятия решения об утилизации.",
+        "Несоответствующая продукция должна быть отделена, промаркирована"
+      ],
+      "correct_order": [
+        2,
+        0,
+        1
+      ]
+    },
+    "explanation": "Несоответствующая продукция должна быть: 1) отделена и промаркирована, 2) помещена в карантинную зону, 3) удерживаться там до принятия решения о дальнейшей судьбе. Термин \"disposition\" = \"решение о судьбе/утилизации продукции\".",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Переведите 'design basis threat' (DBT) в ядерной безопасности:",
+    "payload": {
+      "options": [
+        "Базовая угроза проектирования",
+        "Проектная угроза безопасности",
+        "Базовая угроза для проекта",
+        "Нормативная угроза"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Design basis threat' — проектная угроза безопасности (термин МАГАТЭ, ГОСТ Р 55085): угроза, учитываемая при проектировании системы защиты.",
+    "difficulty": 5
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'acoustic emission testing' в НК?",
+    "payload": {
+      "options": [
+        "Акустическая эмиссия",
+        "Контроль акустической эмиссией",
+        "Акустический контроль",
+        "Ультразвуковой контроль"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Acoustic emission testing' — контроль методом акустической эмиссии (АЭ-контроль по ГОСТ Р 52728); отличается от 'ultrasonic testing'.",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "Hydrogen embrittlement is a primary concern when electroplating high-strength steel fasteners.",
+      "translation": "Водородное охрупчивание является основной [проблемой] при [гальваническом покрытии] крепёжных деталей из [высокопрочной стали].",
+      "segments": [
+        "проблемой",
+        "гальваническом покрытии",
+        "высокопрочной стали",
+        "Водородное охрупчивание"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Electroplating' — гальваническое нанесение покрытия (электролитическое осаждение); 'гальваническое покрытие' — это результат процесса, а не сам процесс. Точнее: 'при электролитическом нанесении покрытия' или 'при гальванировании'.",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "The finite element analysis confirmed that maximum stress occurs at the fillet radius transition under combined bending and torsional loading.",
+      "segments": [
+        "при совместном изгибе и кручении.",
+        "что максимальное напряжение возникает в зоне перехода галтельного радиуса",
+        "Анализ методом конечных элементов подтвердил,",
+        "при действии комбинированных нагрузок —"
+      ],
+      "correct_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    "explanation": "Правильный порядок: вводная часть → придаточное → уточнение нагрузок → их вид. 'МКЭ подтвердил, что максимальное напряжение... при комбинированных нагрузках — изгиб и кручение.'",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'hazardous area classification' в промышленной безопасности?",
+    "payload": {
+      "options": [
+        "Классификация опасных территорий",
+        "Классификация взрывоопасных зон",
+        "Разграничение опасных зон",
+        "Категорирование пожароопасных помещений"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Hazardous area classification' — классификация взрывоопасных зон по ГОСТ IEC 60079-10 (Зоны 0, 1, 2 для газов; 20, 21, 22 для пыли).",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите точный перевод 'derating factor' в электронике и энергетике:",
+    "payload": {
+      "options": [
+        "Коэффициент снижения мощности",
+        "Коэффициент запаса",
+        "Понижающий коэффициент",
+        "Коэффициент нагрузки"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Derating factor' — коэффициент снижения нагрузки (деградирования): отношение допустимой нагрузки к номинальной при неблагоприятных условиях.",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The pressure vessel shall be post-weld heat treated to relieve residual stresses in accordance with ASME VIII Div. 1.",
+      "translation": "Сосуд давления должен пройти [термообработку после сварки] для снятия [остаточных напряжений] в соответствии с [ASME VIII Раздел 1].",
+      "segments": [
+        "термообработку после сварки",
+        "остаточных напряжений",
+        "ASME VIII Раздел 1",
+        "Сосуд давления"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Post-weld heat treatment' (PWHT) — термическая обработка после сварки (ТОАС). В нормативной документации применяется аббревиатура ТОАС или полный термин. 'Термообработка после сварки' — бытовой вариант; точнее: 'термическая обработка сварных швов' или 'отпуск сварных соединений'.",
+    "difficulty": 5
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Переведите 'cavitation erosion' применительно к насосному оборудованию:",
+    "payload": {
+      "options": [
+        "Кавитационная эрозия",
+        "Гидроударный износ",
+        "Абразивный износ",
+        "Кавитационное разрушение"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Cavitation erosion' — кавитационная эрозия (ГОСТ Р 55080) — разрушение поверхности при схлопывании кавитационных пузырьков.",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как правильно перевести 'proof pressure test' в аэрокосмической технике?",
+    "payload": {
+      "options": [
+        "Контрольное испытание давлением",
+        "Испытание пробным давлением",
+        "Гидравлическое испытание",
+        "Квалификационное испытание давлением"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Proof pressure test' — испытание пробным давлением (давление выше рабочего, но ниже разрушающего; ГОСТ Р 57546).",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The galvanic corrosion between aluminium and carbon steel is accelerated in the presence of an electrolyte.",
+      "translation": "Гальваническая коррозия [между алюминием и углеродистой сталью] [ускоряется] в присутствии [электрода].",
+      "segments": [
+        "между алюминием и углеродистой сталью",
+        "ускоряется",
+        "электрода",
+        "Гальваническая коррозия"
+      ],
+      "correct": 2
+    },
+    "explanation": "'Electrolyte' — электролит (токопроводящая среда); 'электрод' — electrode. Грубая терминологическая ошибка в химии коррозии.",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "Prior to initial start-up, the lubrication system must be flushed to remove any residual machining debris from the oil passages.",
+      "segments": [
+        "До первого пуска",
+        "система смазки должна быть промыта",
+        "для удаления остатков механической обработки",
+        "из масляных каналов."
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "explanation": "Правильный порядок передаёт структуру оригинала: обстоятельство времени (\"до первого пуска\") + сказуемое (\"должна быть промыта\") + цель (\"для удаления...\") + место (\"из масляных каналов\").",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите точный перевод 'specific impulse' в ракетной технике:",
+    "payload": {
+      "options": [
+        "Удельный импульс",
+        "Специфический импульс",
+        "Удельная тяга",
+        "Импульс тяги"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Specific impulse' (Isp) — удельный импульс тяги (фундаментальная характеристика ракетного двигателя по ГОСТ 17520).",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как переводится 'microstructure' в контексте металлографии?",
+    "payload": {
+      "options": [
+        "Микроструктура",
+        "Мелкозернистая структура",
+        "Тонкая структура",
+        "Субструктура"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Microstructure' — микроструктура (структура, наблюдаемая при увеличении; ГОСТ 5639).",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The stator windings were vacuum pressure impregnated with epoxy resin to enhance dielectric strength.",
+      "translation": "Обмотки статора были [пропитаны давлением под вакуумом] эпоксидной смолой для улучшения [электрической прочности] изоляции.",
+      "segments": [
+        "пропитаны давлением под вакуумом",
+        "электрической прочности",
+        "эпоксидной смолой",
+        "для улучшения"
+      ],
+      "correct": 0
+    },
+    "explanation": "Стандартное русское название процесса VPI (vacuum pressure impregnation) — \"пропитка под вакуумом и давлением\" или \"вакуумно-нагнетательная пропитка\". Порядок \"давлением под вакуумом\" переставляет акценты. \"Электрическая прочность\" — принятый перевод \"dielectric strength\" по ГОСТ IEC 60243-1.",
+    "difficulty": 5
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Переведите 'fretting corrosion' в трибологии:",
+    "payload": {
+      "options": [
+        "Контактная коррозия",
+        "Фреттинг-коррозия",
+        "Коррозия от вибрации",
+        "Коррозионный износ"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Fretting corrosion' — фреттинг-коррозия (коррозионно-механическое разрушение при малоамплитудном скольжении по ГОСТ 27674).",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "The safety integrity level (SIL) assessment shall be performed by a competent person using a quantitative risk analysis methodology.",
+      "segments": [
+        "с применением методологии количественного анализа риска.",
+        "оценка уровня полноты безопасности (УПБ)",
+        "компетентным специалистом",
+        "должна выполняться"
+      ],
+      "correct_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    "explanation": "Правильный порядок: субъект → предикат → агент → инструмент. 'Оценка УПБ должна выполняться компетентным специалистом с применением...'",
+    "difficulty": 5
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'intermetallic compound' в материаловедении?",
+    "payload": {
+      "options": [
+        "Интерметаллическое соединение",
+        "Интерметаллид",
+        "Металлическое соединение",
+        "Бинарное соединение"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Intermetallic compound' — интерметаллическое соединение (химическое соединение двух или более металлов с кристаллической структурой).",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите точный перевод 'mean aerodynamic chord' (MAC) в авиации:",
+    "payload": {
+      "options": [
+        "Средняя аэродинамическая хорда",
+        "Аэродинамический фокус",
+        "Средняя линия крыла",
+        "Хорда несущей поверхности"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Mean aerodynamic chord' — средняя аэродинамическая хорда (САХ) — стандартный авиационный термин ГОСТ Р ИСО 1151.",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The isolation valve must be locked open during normal operation to ensure continuous process flow.",
+      "translation": "Запорный клапан должен быть [заблокирован в открытом положении] в ходе [нормальной работы] для обеспечения [непрерывного технологического потока].",
+      "segments": [
+        "заблокирован в открытом положении",
+        "нормальной работы",
+        "непрерывного технологического потока",
+        "Запорный клапан"
+      ],
+      "correct": 2
+    },
+    "explanation": "'Continuous process flow' — непрерывный поток технологической среды (или непрерывность технологического процесса). 'Технологический поток' — допустимо, но 'непрерывного технологического потока' звучит как «поток, который технологический», а не «поток в технологическом процессе». Точнее: 'непрерывности технологического процесса'.",
+    "difficulty": 5
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'service life' в нормативной документации на оборудование?",
+    "payload": {
+      "options": [
+        "Срок службы",
+        "Назначенный срок",
+        "Ресурс",
+        "Наработка до списания"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Service life' — срок службы (календарная продолжительность эксплуатации по ГОСТ 27.002); 'service life in hours' — ресурс.",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Переведите 'quenching and tempering' (Q&T) как термообработку стали:",
+    "payload": {
+      "options": [
+        "Нормализация и отпуск",
+        "Закалка и отпуск",
+        "Отжиг и нормализация",
+        "Цементация и закалка"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Quenching and tempering' — закалка и отпуск (Q&T сталь — термоулучшенная сталь; ГОСТ 4543).",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "Weld discontinuities exceeding the acceptance criteria defined in AWS D1.1 Table 6.1 shall be repaired or the component shall be rejected.",
+      "segments": [
+        "или компонент подлежит отбраковке.",
+        "указанные в таблице 6.1 AWS D1.1,",
+        "Сварочные несплошности, превышающие критерии приёмки,",
+        "должны быть устранены"
+      ],
+      "correct_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    "explanation": "Правильный порядок: субъект с определением → уточнение источника → предикат → альтернатива. 'Несплошности, превышающие критерии... таблицы 6.1... должны быть устранены или... отбраковке.'",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как точно перевести 'intergranular corrosion' в металловедении?",
+    "payload": {
+      "options": [
+        "Межзерновая коррозия",
+        "Межкристаллитная коррозия",
+        "Структурная коррозия",
+        "Диффузионная коррозия"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Intergranular corrosion' — межкристаллитная коррозия (МКК) — нормированный термин по ГОСТ Р ИСО 8044.",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "The thermoplastic composite was processed by resin transfer moulding at a cure temperature of 180°C.",
+      "translation": "Термопластичный [композит] был обработан методом [литья с переносом смолы] при температуре отверждения [180°C].",
+      "segments": [
+        "композит",
+        "литья с переносом смолы",
+        "180°C",
+        "был обработан методом"
+      ],
+      "correct": 0
+    },
+    "explanation": "Если материал обрабатывается методом RTM (Resin Transfer Moulding) при температуре отверждения — он термореактивный, а не термопластичный. 'Thermoplastic composite' здесь — либо ошибка в задании, либо перевод должен сохранить 'термопластичный' как есть, но ошибка: 'композит' без уточнения — потеря смысла. Точнее: 'термопластичный композиционный материал'.",
+    "difficulty": 5
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите точный перевод 'strain gauge' в тензометрии:",
+    "payload": {
+      "options": [
+        "Датчик деформации",
+        "Тензорезистор",
+        "Тензодатчик",
+        "Прибор для измерения деформаций"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Strain gauge' — тензорезистор (резистивный датчик деформации; ГОСТ 21616). 'Тензодатчик' — более широкое понятие (любой датчик силы/деформации).",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Переведите 'critical path method' (CPM) в управлении проектами технического строительства:",
+    "payload": {
+      "options": [
+        "Метод критического пути",
+        "Методология критических работ",
+        "Метод сетевого планирования",
+        "Способ последовательного планирования"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Critical path method' — метод критического пути (МКП) — инструмент планирования по ГОСТ Р 54869.",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
+    "question": "Расставьте части перевода в правильном порядке:",
+    "payload": {
+      "source": "The material certificate shall include chemical composition, mechanical properties, and heat treatment records traceable to the original heat number.",
+      "segments": [
+        "прослеживаемые до исходного номера плавки.",
+        "и данные о термообработке,",
+        "Сертификат материала должен включать химический состав, механические свойства",
+        "а также результаты испытаний,"
+      ],
+      "correct_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    "explanation": "Правильный порядок: субъект + перечень → дополнение → уточнение → трассируемость. 'Сертификат... химический состав... а также... данные о термообработке, прослеживаемые до номера плавки.'",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'flammability limit' в пожарной безопасности?",
+    "payload": {
+      "options": [
+        "Предел горючести",
+        "Концентрационный предел воспламенения",
+        "Температурный предел вспышки",
+        "Порог воспламенения"
+      ],
+      "correct": 1
+    },
+    "explanation": "'Flammability limit' — концентрационный предел распространения пламени (КПРП) по ГОСТ 12.1.044.",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите точный перевод 'proof of concept' (PoC) в НИОКР:",
+    "payload": {
+      "options": [
+        "Доказательство концепции",
+        "Подтверждение осуществимости",
+        "Опытный образец",
+        "Технико-экономическое обоснование"
+      ],
+      "correct": 0
+    },
+    "explanation": "\"Proof of concept\" (PoC) в контексте НИОКР переводится как \"доказательство концепции\". Вариант \"подтверждение осуществимости\" ближе к \"proof of feasibility\". \"Подтверждение концепции\" — тоже допустимо, но \"доказательство концепции\" закрепилось как стандарт в технической литературе.",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
+    "question": "Найдите ошибку в переводе:",
+    "payload": {
+      "source": "Austenite grain size was evaluated using the McQuaid-Ehn test in accordance with ASTM E112.",
+      "translation": "Размер зерна аустенита оценивался с помощью [пробы Мак-Куэйда-Эна] в соответствии с [ASTM E112].",
+      "segments": [
+        "пробы Мак-Куэйда-Эна",
+        "ASTM E112",
+        "Размер зерна аустенита",
+        "оценивался с помощью"
+      ],
+      "correct": 0
+    },
+    "explanation": "'McQuaid-Ehn test' — метод Мак-Куэйда-Эна (не 'проба', а 'метод' или 'испытание'). В металлографии: 'метод Мак-Куэйда-Эна' — насыщение углеродом для выявления аустенитного зерна.",
+    "difficulty": 5
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Переведите 'stress corrosion cracking' (SCC) в коррозионной механике:",
+    "payload": {
+      "options": [
+        "Коррозионное растрескивание под напряжением",
+        "Стресс-коррозия",
+        "Коррозионная усталость",
+        "Водородное растрескивание"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Stress corrosion cracking' — коррозионное растрескивание под напряжением (КРН) по ГОСТ Р ИСО 8044.",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Как перевести 'parametric design' в авиакосмическом проектировании?",
+    "payload": {
+      "options": [
+        "Параметрическое проектирование",
+        "Вариантное проектирование",
+        "Автоматизированное проектирование",
+        "Модульное проектирование"
+      ],
+      "correct": 0
+    },
+    "explanation": "'Parametric design' — параметрическое проектирование (метод САПР, в котором геометрия управляется параметрами).",
+    "difficulty": 4
+  },
+  {
+    "topic": "technical",
+    "level": "advanced",
+    "type": "mc",
+    "lang": "en",
+    "question": "Выберите точный перевод 'debonding' применительно к композитным конструкциям:",
+    "payload": {
+      "options": [
+        "Расслоение",
+        "Разрушение адгезионного соединения",
+        "Отслоение",
+        "Декогезия"
+      ],
+      "correct": 2
+    },
+    "explanation": "'Debonding' в композитах — отслоение (нарушение клеевого или смоляного соединения между слоями); 'delamination' — расслоение (между слоями ламината).",
+    "difficulty": 5
+  }
+]
