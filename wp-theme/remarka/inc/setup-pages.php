@@ -609,25 +609,25 @@ function remarka_service_pages_content(): array {
               <td><strong>До 5 страниц</strong></td>
               <td>1 рабочий день</td>
               <td class="vol-price">от 1 250 ₽</td>
-              <td><a href="#" class="vol-btn">Заказать</a></td>
+              <td><a href="/stoimost-perevoda/" class="vol-btn">Заказать</a></td>
             </tr>
             <tr>
               <td><strong>5–20 страниц</strong></td>
               <td>2–3 рабочих дня</td>
               <td class="vol-price">от 250 ₽/стр.</td>
-              <td><a href="#" class="vol-btn">Заказать</a></td>
+              <td><a href="/stoimost-perevoda/" class="vol-btn">Заказать</a></td>
             </tr>
             <tr>
               <td><strong>20–50 страниц</strong></td>
               <td>3–5 рабочих дней</td>
               <td class="vol-price">от 230 ₽/стр.</td>
-              <td><a href="#" class="vol-btn">Заказать</a></td>
+              <td><a href="/stoimost-perevoda/" class="vol-btn">Заказать</a></td>
             </tr>
             <tr>
               <td><strong>Свыше 50 стр.</strong></td>
               <td>по договорённости</td>
               <td class="vol-price">от 200 ₽/стр.</td>
-              <td><a href="#" class="vol-btn">Заказать</a></td>
+              <td><a href="/stoimost-perevoda/" class="vol-btn">Заказать</a></td>
             </tr>
           </tbody>
         </table>
@@ -666,9 +666,9 @@ function remarka_service_pages_content(): array {
           <tfoot>
             <tr>
               <td></td>
-              <td><a href="#" class="price-btn price-btn--outline">Выбрать</a></td>
-              <td class="cmp-featured"><a href="#" class="price-btn price-btn--primary">Выбрать</a></td>
-              <td><a href="#" class="price-btn price-btn--outline">Выбрать</a></td>
+              <td><a href="/stoimost-perevoda/" class="price-btn price-btn--outline">Выбрать</a></td>
+              <td class="cmp-featured"><a href="/stoimost-perevoda/" class="price-btn price-btn--primary">Выбрать</a></td>
+              <td><a href="/stoimost-perevoda/" class="price-btn price-btn--outline">Выбрать</a></td>
             </tr>
           </tfoot>
         </table>
@@ -1550,51 +1550,51 @@ function remarka_service_pages_content(): array {
         <p class="sec-sub">Выберите тип документа — узнайте особенности юридического перевода</p>
       </div>
       <div class="doc-ref-grid">
-        <a href="yuridicheskiy-perevod/dogovory.html" class="doc-ref-card">
+        <a href="/yuridicheskiy-perevod/dogovory/" class="doc-ref-card">
           <strong>Перевод договоров</strong>
           <span>Любые договоры и соглашения для сделок, партнёрств и ВЭД</span>
         </a>
-        <a href="yuridicheskiy-perevod/kontrakty.html" class="doc-ref-card">
+        <a href="/yuridicheskiy-perevod/kontrakty/" class="doc-ref-card">
           <strong>Перевод контрактов</strong>
           <span>Международные контракты с иностранными компаниями</span>
         </a>
-        <a href="yuridicheskiy-perevod/ustavy.html" class="doc-ref-card">
+        <a href="/yuridicheskiy-perevod/ustavy/" class="doc-ref-card">
           <strong>Перевод уставов</strong>
           <span>Учредительные документы компаний для регистрации и аккредитации</span>
         </a>
-        <a href="yuridicheskiy-perevod/doverennosti.html" class="doc-ref-card">
+        <a href="/yuridicheskiy-perevod/doverennosti/" class="doc-ref-card">
           <strong>Перевод доверенностей</strong>
           <span>Генеральные и специальные доверенности для корпоративных целей</span>
         </a>
-        <a href="yuridicheskiy-perevod/sudebnye-resheniya.html" class="doc-ref-card">
+        <a href="/yuridicheskiy-perevod/sudebnye-resheniya/" class="doc-ref-card">
           <strong>Перевод судебных решений</strong>
           <span>Решения, определения, постановления для иностранных судов</span>
         </a>
-        <a href="yuridicheskiy-perevod/soglasheniya-nda.html" class="doc-ref-card">
+        <a href="/yuridicheskiy-perevod/soglasheniya-nda/" class="doc-ref-card">
           <strong>Перевод соглашений NDA</strong>
           <span>Соглашения о неразглашении для международных проектов</span>
         </a>
-        <a href="yuridicheskiy-perevod/korporativnye-protokoly.html" class="doc-ref-card">
+        <a href="/yuridicheskiy-perevod/korporativnye-protokoly/" class="doc-ref-card">
           <strong>Перевод корпоративных протоколов</strong>
           <span>Протоколы собраний, решения участников, меморандумы</span>
         </a>
-        <a href="yuridicheskiy-perevod/bankovskie-garantii.html" class="doc-ref-card">
+        <a href="/yuridicheskiy-perevod/bankovskie-garantii/" class="doc-ref-card">
           <strong>Перевод банковских гарантий</strong>
           <span>Гарантийные письма, аккредитивы, поручительства</span>
         </a>
-        <a href="yuridicheskiy-perevod/arbitrazhnye-materialy.html" class="doc-ref-card">
+        <a href="/yuridicheskiy-perevod/arbitrazhnye-materialy/" class="doc-ref-card">
           <strong>Перевод арбитражных материалов</strong>
           <span>Иски, ответы, решения МКАС, ICC, LCIA, SCC</span>
         </a>
-        <a href="yuridicheskiy-perevod/litsenzionnye-soglasheniya.html" class="doc-ref-card">
+        <a href="/yuridicheskiy-perevod/litsenzionnye-soglasheniya/" class="doc-ref-card">
           <strong>Перевод лицензионных соглашений</strong>
           <span>Лицензии на ПО, торговые марки, изобретения и франшизы</span>
         </a>
-        <a href="yuridicheskiy-perevod/sha-spa-term-sheets.html" class="doc-ref-card">
+        <a href="/yuridicheskiy-perevod/sha-spa-term-sheets/" class="doc-ref-card">
           <strong>Перевод SHA / SPA / Term Sheets</strong>
           <span>Сделки M&amp;A, акционерные и инвестиционные соглашения</span>
         </a>
-        <a href="yuridicheskiy-perevod/sudoproizvodstvennye-dokumenty.html" class="doc-ref-card">
+        <a href="/yuridicheskiy-perevod/sudoproizvodstvennye-dokumenty/" class="doc-ref-card">
           <strong>Судопроизводственные документы</strong>
           <span>Апелляции, ходатайства, экспертные заключения для суда</span>
         </a>
@@ -1610,39 +1610,39 @@ function remarka_service_pages_content(): array {
         <p class="sec-sub">Юридический перевод для разных сфер бизнеса</p>
       </div>
       <div class="industry-grid">
-        <a href="yuridicheskiy-perevod/mezhdunarodnaya-torgovlya.html" class="industry-card">
+        <a href="/yuridicheskiy-perevod/mezhdunarodnaya-torgovlya/" class="industry-card">
           <strong>Международная торговля</strong>
           <span>Внешнеторговые контракты, инвойсы, условия Incoterms</span>
         </a>
-        <a href="yuridicheskiy-perevod/banki-finansy.html" class="industry-card">
+        <a href="/yuridicheskiy-perevod/banki-finansy/" class="industry-card">
           <strong>Банки и финансы</strong>
           <span>Кредитные договоры, банковские гарантии, проспекты эмиссии</span>
         </a>
-        <a href="yuridicheskiy-perevod/stroitelstvo-development.html" class="industry-card">
+        <a href="/yuridicheskiy-perevod/stroitelstvo-development/" class="industry-card">
           <strong>Строительство и девелопмент</strong>
           <span>Договоры подряда, проектная документация, разрешения</span>
         </a>
-        <a href="yuridicheskiy-perevod/neftegaz-energetika.html" class="industry-card">
+        <a href="/yuridicheskiy-perevod/neftegaz-energetika/" class="industry-card">
           <strong>Нефтегаз и энергетика</strong>
           <span>Концессионные соглашения, СРП, контракты на бурение</span>
         </a>
-        <a href="yuridicheskiy-perevod/it-tekhnologii.html" class="industry-card">
+        <a href="/yuridicheskiy-perevod/it-tekhnologii/" class="industry-card">
           <strong>IT и технологии</strong>
           <span>Лицензионные соглашения на ПО, пользовательские договоры, SLA</span>
         </a>
-        <a href="yuridicheskiy-perevod/farmatsevtika.html" class="industry-card">
+        <a href="/yuridicheskiy-perevod/farmatsevtika/" class="industry-card">
           <strong>Фармацевтика</strong>
           <span>Лицензионные договоры, регуляторные соглашения, договоры GMP</span>
         </a>
-        <a href="yuridicheskiy-perevod/transport-logistika.html" class="industry-card">
+        <a href="/yuridicheskiy-perevod/transport-logistika/" class="industry-card">
           <strong>Транспорт и логистика</strong>
           <span>Договоры перевозки, коносаменты, транспортные соглашения</span>
         </a>
-        <a href="yuridicheskiy-perevod/nedvizhimost.html" class="industry-card">
+        <a href="/yuridicheskiy-perevod/nedvizhimost/" class="industry-card">
           <strong>Недвижимость</strong>
           <span>Договоры купли-продажи, аренды, ипотечные соглашения</span>
         </a>
-        <a href="yuridicheskiy-perevod/media-is.html" class="industry-card">
+        <a href="/yuridicheskiy-perevod/media-is/" class="industry-card">
           <strong>Медиа и ИС</strong>
           <span>Авторские договоры, договоры на торговые марки, лицензии</span>
         </a>
@@ -2249,9 +2249,9 @@ function remarka_service_pages_content(): array {
           <tfoot>
             <tr>
               <td></td>
-              <td><a href="#" class="price-btn price-btn--outline">Выбрать</a></td>
-              <td class="cmp-featured"><a href="#" class="price-btn price-btn--primary">Выбрать</a></td>
-              <td><a href="#" class="price-btn price-btn--outline">Выбрать</a></td>
+              <td><a href="/stoimost-perevoda/" class="price-btn price-btn--outline">Выбрать</a></td>
+              <td class="cmp-featured"><a href="/stoimost-perevoda/" class="price-btn price-btn--primary">Выбрать</a></td>
+              <td><a href="/stoimost-perevoda/" class="price-btn price-btn--outline">Выбрать</a></td>
             </tr>
           </tfoot>
         </table>
@@ -2268,73 +2268,73 @@ function remarka_service_pages_content(): array {
       </div>
       <div class="doc-ref-grid">
 
-        <a href="tekhnicheskiy-perevod/instrukcii-po-ekspluatatsii.html" class="doc-ref-card">
+        <a href="/tekhnicheskiy-perevod/instrukcii-po-ekspluatatsii/" class="doc-ref-card">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
           <strong>Перевод инструкций</strong>
           <span>Технические инструкции к оборудованию, приборам и производственным линиям</span>
         </a>
 
-        <a href="tekhnicheskiy-perevod/konstruktorskaya-dokumentatsiya.html" class="doc-ref-card">
+        <a href="/tekhnicheskiy-perevod/konstruktorskaya-dokumentatsiya/" class="doc-ref-card">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
           <strong>Конструкторская документация</strong>
           <span>КД, ЕСКД, сборочные чертежи, спецификации, BOM</span>
         </a>
 
-        <a href="tekhnicheskiy-perevod/chertezhi-skhemy-autocad.html" class="doc-ref-card">
+        <a href="/tekhnicheskiy-perevod/chertezhi-skhemy-autocad/" class="doc-ref-card">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
           <strong>Перевод чертежей AutoCAD</strong>
           <span>Чертежи, схемы, аксонометрии с сохранением условных обозначений</span>
         </a>
 
-        <a href="tekhnicheskiy-perevod/tendernaya-dokumentatsiya.html" class="doc-ref-card">
+        <a href="/tekhnicheskiy-perevod/tendernaya-dokumentatsiya/" class="doc-ref-card">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
           <strong>Технические спецификации</strong>
           <span>Спецификации к проектам, поставкам и тендерным документам</span>
         </a>
 
-        <a href="tekhnicheskiy-perevod/sds-msds.html" class="doc-ref-card">
+        <a href="/tekhnicheskiy-perevod/sds-msds/" class="doc-ref-card">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           <strong>Паспорта безопасности (SDS/MSDS)</strong>
           <span>Листы данных по безопасности химических веществ</span>
         </a>
 
-        <a href="tekhnicheskiy-perevod/instruktsii-montazha.html" class="doc-ref-card">
+        <a href="/tekhnicheskiy-perevod/instruktsii-montazha/" class="doc-ref-card">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           <strong>Инструкции по монтажу</strong>
           <span>Монтажные инструкции, схемы подключения, commissioning guide</span>
         </a>
 
-        <a href="tekhnicheskiy-perevod/rukovodstva-polzovatelya.html" class="doc-ref-card">
+        <a href="/tekhnicheskiy-perevod/rukovodstva-polzovatelya/" class="doc-ref-card">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
           <strong>Руководства по эксплуатации</strong>
           <span>Пошаговые инструкции для операторов и обслуживающего персонала</span>
         </a>
 
-        <a href="tekhnicheskiy-perevod/avarijno-eho-procedury.html" class="doc-ref-card">
+        <a href="/tekhnicheskiy-perevod/avarijno-eho-procedury/" class="doc-ref-card">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
           <strong>Руководства по безопасности</strong>
           <span>Нормативные требования, инструктажи, правила охраны труда</span>
         </a>
 
-        <a href="tekhnicheskiy-perevod/tekhnicheskie-pasporta.html" class="doc-ref-card">
+        <a href="/tekhnicheskiy-perevod/tekhnicheskie-pasporta/" class="doc-ref-card">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           <strong>Технические паспорта</strong>
           <span>Data sheet, machine passport, паспорта материалов и оборудования</span>
         </a>
 
-        <a href="tekhnicheskiy-perevod/nauchnye-otchety.html" class="doc-ref-card">
+        <a href="/tekhnicheskiy-perevod/nauchnye-otchety/" class="doc-ref-card">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
           <strong>Технические отчёты</strong>
           <span>Feasibility study, engineering report, FEED, HAZOP-анализ</span>
         </a>
 
-        <a href="tekhnicheskiy-perevod/katalogi-zapchastej.html" class="doc-ref-card">
+        <a href="/tekhnicheskiy-perevod/katalogi-zapchastej/" class="doc-ref-card">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
           <strong>Перевод технических каталогов</strong>
           <span>Каталоги оборудования, запчастей, материалов</span>
         </a>
 
-        <a href="tekhnicheskiy-perevod/protokoly-ispytanij.html" class="doc-ref-card">
+        <a href="/tekhnicheskiy-perevod/protokoly-ispytanij/" class="doc-ref-card">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
           <strong>Протоколы испытаний</strong>
           <span>FAT/SAT, test reports, commissioning, протоколы НК</span>
@@ -2353,7 +2353,7 @@ function remarka_service_pages_content(): array {
       </div>
       <div class="industries-grid">
 
-        <a href="tekhnicheskiy-perevod/mashinostroenie.html" class="industry-card">
+        <a href="/tekhnicheskiy-perevod/mashinostroenie/" class="industry-card">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
           <h3>Машиностроение</h3>
           <p>КД, спецификации, технологические карты, инструкции по сборке.</p>
@@ -2364,7 +2364,7 @@ function remarka_service_pages_content(): array {
           </ul>
         </a>
 
-        <a href="tekhnicheskiy-perevod/aviastroenie.html" class="industry-card">
+        <a href="/tekhnicheskiy-perevod/aviastroenie/" class="industry-card">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
           <h3>Авиастроение</h3>
           <p>Авиационные регламенты, технические бюллетени, руководства AMM/CMM.</p>
@@ -2375,7 +2375,7 @@ function remarka_service_pages_content(): array {
           </ul>
         </a>
 
-        <a href="tekhnicheskiy-perevod/neft-gaz.html" class="industry-card">
+        <a href="/tekhnicheskiy-perevod/neft-gaz/" class="industry-card">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           <h3>Нефтегаз</h3>
           <p>Технологические регламенты, SDS, контракты на бурение, стандарты API.</p>
@@ -2386,7 +2386,7 @@ function remarka_service_pages_content(): array {
           </ul>
         </a>
 
-        <a href="tekhnicheskiy-perevod/energetika.html" class="industry-card">
+        <a href="/tekhnicheskiy-perevod/energetika/" class="industry-card">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
           <h3>Энергетика</h3>
           <p>Технические регламенты электростанций, инструкции к турбинам, ПТЭ.</p>
@@ -2397,7 +2397,7 @@ function remarka_service_pages_content(): array {
           </ul>
         </a>
 
-        <a href="tekhnicheskiy-perevod/khimicheskaya-promyshlennost.html" class="industry-card">
+        <a href="/tekhnicheskiy-perevod/khimicheskaya-promyshlennost/" class="industry-card">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           <h3>Химическая промышленность</h3>
           <p>Паспорта безопасности, технологические инструкции, регламенты.</p>
@@ -2408,7 +2408,7 @@ function remarka_service_pages_content(): array {
           </ul>
         </a>
 
-        <a href="tekhnicheskiy-perevod/metallurgiya.html" class="industry-card">
+        <a href="/tekhnicheskiy-perevod/metallurgiya/" class="industry-card">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
           <h3>Металлургия</h3>
           <p>Технологические инструкции, стандарты ГОСТ, ТУ на металлопродукцию.</p>
@@ -2419,7 +2419,7 @@ function remarka_service_pages_content(): array {
           </ul>
         </a>
 
-        <a href="tekhnicheskiy-perevod/sudostroenie.html" class="industry-card">
+        <a href="/tekhnicheskiy-perevod/sudostroenie/" class="industry-card">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M4 20V10l8-6 8 6v10"/><path d="M10 20v-6h4v6"/></svg>
           <h3>Судостроение</h3>
           <p>Конструкторская документация, регламенты классификационных обществ.</p>
@@ -2430,7 +2430,7 @@ function remarka_service_pages_content(): array {
           </ul>
         </a>
 
-        <a href="tekhnicheskiy-perevod/avtomobilnaya-promyshlennost.html" class="industry-card">
+        <a href="/tekhnicheskiy-perevod/avtomobilnaya-promyshlennost/" class="industry-card">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
           <h3>Автомобилестроение</h3>
           <p>КД, руководства по ремонту, технические бюллетени OEM.</p>
@@ -2441,7 +2441,7 @@ function remarka_service_pages_content(): array {
           </ul>
         </a>
 
-        <a href="tekhnicheskiy-perevod/elektronika-priborostroenie.html" class="industry-card">
+        <a href="/tekhnicheskiy-perevod/elektronika-priborostroenie/" class="industry-card">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           <h3>Компьютерное оборудование</h3>
           <p>Технические описания, руководства, спецификации серверов.</p>
@@ -3053,51 +3053,51 @@ function remarka_service_pages_content(): array {
         <p class="sec-sub">Выберите тип медицинского документа — узнайте особенности перевода</p>
       </div>
       <div class="doc-ref-grid">
-        <a href="meditsinskiy-perevod/instruktsii-k-preparatam.html" class="doc-ref-card">
+        <a href="/meditsinskiy-perevod/instruktsii-k-preparatam/" class="doc-ref-card">
           <strong>Перевод инструкций к препаратам</strong>
           <span>Листки-вкладыши, SmPC, инструкции на все языки ЕС</span>
         </a>
-        <a href="meditsinskiy-perevod/protokoly-klinicheskih-issledovaniy.html" class="doc-ref-card">
+        <a href="/meditsinskiy-perevod/protokoly-klinicheskih-issledovaniy/" class="doc-ref-card">
           <strong>Перевод протоколов клинических исследований</strong>
           <span>Полные протоколы согласно ICH E6(R2)</span>
         </a>
-        <a href="meditsinskiy-perevod/informirovannye-soglasiya-icf.html" class="doc-ref-card">
+        <a href="/meditsinskiy-perevod/informirovannye-soglasiya-icf/" class="doc-ref-card">
           <strong>Перевод информированных согласий (ICF)</strong>
           <span>Документы для участников клинических исследований</span>
         </a>
-        <a href="meditsinskiy-perevod/farmakopeynyye-stati.html" class="doc-ref-card">
+        <a href="/meditsinskiy-perevod/farmakopeynyye-stati/" class="doc-ref-card">
           <strong>Перевод фармакопейных статей</strong>
           <span>Стандарты качества и методы контроля препаратов</span>
         </a>
-        <a href="meditsinskiy-perevod/regulyatornye-dosye.html" class="doc-ref-card">
+        <a href="/meditsinskiy-perevod/regulyatornye-dosye/" class="doc-ref-card">
           <strong>Перевод регуляторных досье</strong>
           <span>NDA, ANDA, MAA для регистрации лекарственных средств</span>
         </a>
-        <a href="meditsinskiy-perevod/ifu-medoborudovaniya.html" class="doc-ref-card">
+        <a href="/meditsinskiy-perevod/ifu-medoborudovaniya/" class="doc-ref-card">
           <strong>Перевод IFU медоборудования</strong>
           <span>Инструкции по применению медицинских устройств и приборов</span>
         </a>
-        <a href="meditsinskiy-perevod/psur-otchety.html" class="doc-ref-card">
+        <a href="/meditsinskiy-perevod/psur-otchety/" class="doc-ref-card">
           <strong>Перевод PSUR и отчётов фармаконадзора</strong>
           <span>Периодические отчёты по безопасности препаратов</span>
         </a>
-        <a href="meditsinskiy-perevod/otchyoty-klinicheskikh-issledovanij.html" class="doc-ref-card">
+        <a href="/meditsinskiy-perevod/otchyoty-klinicheskikh-issledovanij/" class="doc-ref-card">
           <strong>Перевод клинических отчётов (CSR)</strong>
           <span>Итоговые отчёты по ICH E3, синопсисы, DSUR</span>
         </a>
-        <a href="meditsinskiy-perevod/gmp-gcp-glp-dokumenty.html" class="doc-ref-card">
+        <a href="/meditsinskiy-perevod/gmp-gcp-glp-dokumenty/" class="doc-ref-card">
           <strong>Перевод документации GMP/GCP/GLP</strong>
           <span>SOPs, валидационные протоколы, аудиторские отчёты</span>
         </a>
-        <a href="meditsinskiy-perevod/tehnicheskie-fajly-medoborudovaniya.html" class="doc-ref-card">
+        <a href="/meditsinskiy-perevod/tehnicheskie-fajly-medoborudovaniya/" class="doc-ref-card">
           <strong>Перевод технических файлов MDR</strong>
           <span>MDR technical file, FDA 510k, DHF для медустройств</span>
         </a>
-        <a href="meditsinskiy-perevod/etiketki-upakovka-farma.html" class="doc-ref-card">
+        <a href="/meditsinskiy-perevod/etiketki-upakovka-farma/" class="doc-ref-card">
           <strong>Перевод этикеток и упаковки</strong>
           <span>Artwork, PIL, маркировка для регистрации в ЕАЭС</span>
         </a>
-        <a href="meditsinskiy-perevod/kliniceskie-rukovodstva.html" class="doc-ref-card">
+        <a href="/meditsinskiy-perevod/kliniceskie-rukovodstva/" class="doc-ref-card">
           <strong>Перевод клинических руководств</strong>
           <span>Guidelines WHO, ESMO, ESC, AHA для внедрения в практику</span>
         </a>
@@ -3113,39 +3113,39 @@ function remarka_service_pages_content(): array {
         <p class="sec-sub">Медицинский перевод для клиник, фарм-компаний и исследовательских организаций</p>
       </div>
       <div class="industries-grid">
-        <a href="meditsinskiy-perevod/farmatsevtika.html" class="industry-card">
+        <a href="/meditsinskiy-perevod/farmatsevtika/" class="industry-card">
           <strong>Фармацевтика</strong>
           <span>Регуляторные досье, инструкции SmPC, GMP-документация, клинические отчёты</span>
         </a>
-        <a href="meditsinskiy-perevod/klinicheskie-issledovaniya-cro.html" class="industry-card">
+        <a href="/meditsinskiy-perevod/klinicheskie-issledovaniya-cro/" class="industry-card">
           <strong>Клинические исследования (CRO)</strong>
           <span>Протоколы, ICF, отчёты CSR, PSUR для мультицентровых исследований</span>
         </a>
-        <a href="meditsinskiy-perevod/medicinskie-ustroystva.html" class="industry-card">
+        <a href="/meditsinskiy-perevod/medicinskie-ustroystva/" class="industry-card">
           <strong>Медицинские устройства</strong>
           <span>IFU, MDR-технические файлы, документы CE-маркировки</span>
         </a>
-        <a href="meditsinskiy-perevod/strakhovye-kompanii.html" class="industry-card">
+        <a href="/meditsinskiy-perevod/strakhovye-kompanii/" class="industry-card">
           <strong>Страховые компании</strong>
           <span>Медицинские заключения, полисы, аналитика страховых случаев</span>
         </a>
-        <a href="meditsinskiy-perevod/stomatologiya.html" class="industry-card">
+        <a href="/meditsinskiy-perevod/stomatologiya/" class="industry-card">
           <strong>Стоматология</strong>
           <span>Документация имплантатов, материалов, клинические руководства</span>
         </a>
-        <a href="meditsinskiy-perevod/veterinariya.html" class="industry-card">
+        <a href="/meditsinskiy-perevod/veterinariya/" class="industry-card">
           <strong>Ветеринария</strong>
           <span>Ветпрепараты, регистрационные досье, клинические протоколы</span>
         </a>
-        <a href="meditsinskiy-perevod/biotekhnologii-genetika.html" class="industry-card">
+        <a href="/meditsinskiy-perevod/biotekhnologii-genetika/" class="industry-card">
           <strong>Биотехнологии и геномика</strong>
           <span>CRISPR-протоколы, геномные исследования, биоинформатика</span>
         </a>
-        <a href="meditsinskiy-perevod/onkologiya.html" class="industry-card">
+        <a href="/meditsinskiy-perevod/onkologiya/" class="industry-card">
           <strong>Онкология</strong>
           <span>Протоколы химиотерапии, иммунотерапии, guidelines ESMO, NCCN</span>
         </a>
-        <a href="meditsinskiy-perevod/kardiologiya.html" class="industry-card">
+        <a href="/meditsinskiy-perevod/kardiologiya/" class="industry-card">
           <strong>Кардиология</strong>
           <span>Клинические руководства ESC, AHA, протоколы исследований</span>
         </a>
@@ -3834,51 +3834,51 @@ Creates a new transaction.
         <p class="sec-sub">Выберите тип IT-документа — узнайте особенности перевода</p>
       </div>
       <div class="doc-ref-grid">
-        <a href="it-perevod/api-dokumentatsiya.html" class="doc-ref-card">
+        <a href="/it-perevod/api-dokumentatsiya/" class="doc-ref-card">
           <strong>Перевод API-документации</strong>
           <span>REST API, GraphQL, Swagger, OpenAPI, Postman коллекции</span>
         </a>
-        <a href="it-perevod/ui-stroki.html" class="doc-ref-card">
+        <a href="/it-perevod/ui-stroki/" class="doc-ref-card">
           <strong>Перевод UI-строк</strong>
           <span>Интерфейсные строки из XLIFF, PO, JSON, RESX, ARB файлов</span>
         </a>
-        <a href="it-perevod/readme-wiki.html" class="doc-ref-card">
+        <a href="/it-perevod/readme-wiki/" class="doc-ref-card">
           <strong>Перевод README и Wiki</strong>
           <span>Документация на GitHub, Confluence, Notion</span>
         </a>
-        <a href="it-perevod/polzovatelskie-rukovodstva.html" class="doc-ref-card">
+        <a href="/it-perevod/polzovatelskie-rukovodstva/" class="doc-ref-card">
           <strong>Перевод пользовательских руководств</strong>
           <span>Help-статьи, базы знаний, FAQ-разделы</span>
         </a>
-        <a href="it-perevod/privacy-policy.html" class="doc-ref-card">
+        <a href="/it-perevod/privacy-policy/" class="doc-ref-card">
           <strong>Перевод Privacy Policy</strong>
           <span>Политики конфиденциальности для разных юрисдикций</span>
         </a>
-        <a href="it-perevod/terms-of-service.html" class="doc-ref-card">
+        <a href="/it-perevod/terms-of-service/" class="doc-ref-card">
           <strong>Перевод Terms of Service</strong>
           <span>Пользовательские соглашения, SLA, условия использования</span>
         </a>
-        <a href="it-perevod/app-store-google-play.html" class="doc-ref-card">
+        <a href="/it-perevod/app-store-google-play/" class="doc-ref-card">
           <strong>Перевод App Store / Google Play</strong>
           <span>Описания приложений, ключевые слова, скриншоты</span>
         </a>
-        <a href="it-perevod/sdk-dokumentatsiya.html" class="doc-ref-card">
+        <a href="/it-perevod/sdk-dokumentatsiya/" class="doc-ref-card">
           <strong>Перевод SDK документации</strong>
           <span>Интеграционные руководства, примеры кода</span>
         </a>
-        <a href="it-perevod/release-notes.html" class="doc-ref-card">
+        <a href="/it-perevod/release-notes/" class="doc-ref-card">
           <strong>Перевод Release Notes</strong>
           <span>Журналы изменений, анонсы обновлений, changelog</span>
         </a>
-        <a href="it-perevod/gdpr-dokumenty.html" class="doc-ref-card">
+        <a href="/it-perevod/gdpr-dokumenty/" class="doc-ref-card">
           <strong>Перевод GDPR документов</strong>
           <span>Уведомления об обработке данных, формы согласия</span>
         </a>
-        <a href="it-perevod/tehnicheskie-zadaniya.html" class="doc-ref-card">
+        <a href="/it-perevod/tehnicheskie-zadaniya/" class="doc-ref-card">
           <strong>Перевод технических заданий</strong>
           <span>ТЗ на разработку, функциональные требования, RFP/RFI</span>
         </a>
-        <a href="it-perevod/igrovye-teksty.html" class="doc-ref-card">
+        <a href="/it-perevod/igrovye-teksty/" class="doc-ref-card">
           <strong>Перевод игровых текстов</strong>
           <span>Сюжеты, диалоги, описания предметов, системные сообщения</span>
         </a>
@@ -3894,39 +3894,39 @@ Creates a new transaction.
         <p class="sec-sub">IT-перевод и локализация для разных технологических сегментов</p>
       </div>
       <div class="industries-grid">
-        <a href="it-perevod/saas-oblachnye-servisy.html" class="industry-card">
+        <a href="/it-perevod/saas-oblachnye-servisy/" class="industry-card">
           <strong>SaaS и облачные сервисы</strong>
           <span>UI, онбординг, справка, API-документация</span>
         </a>
-        <a href="it-perevod/mobilnaya-razrabotka.html" class="industry-card">
+        <a href="/it-perevod/mobilnaya-razrabotka/" class="industry-card">
           <strong>Мобильная разработка</strong>
           <span>App Store/Play листинги, системные строки, push-уведомления</span>
         </a>
-        <a href="it-perevod/igrovaya-industriya.html" class="industry-card">
+        <a href="/it-perevod/igrovaya-industriya/" class="industry-card">
           <strong>Игровая индустрия</strong>
           <span>Нарративы, диалоги, интерфейс, субтитры катсцен</span>
         </a>
-        <a href="it-perevod/kiberbezopasnost.html" class="industry-card">
+        <a href="/it-perevod/kiberbezopasnost/" class="industry-card">
           <strong>Кибербезопасность</strong>
           <span>Отчёты пентестов, технические описания, интерфейсы</span>
         </a>
-        <a href="it-perevod/e-commerce.html" class="industry-card">
+        <a href="/it-perevod/e-commerce/" class="industry-card">
           <strong>E-commerce</strong>
           <span>Карточки товаров, интерфейс магазина, email-рассылки</span>
         </a>
-        <a href="it-perevod/fintech-banking.html" class="industry-card">
+        <a href="/it-perevod/fintech-banking/" class="industry-card">
           <strong>Финтех и банкинг</strong>
           <span>Интерфейсы приложений, политики, финансовые термины</span>
         </a>
-        <a href="it-perevod/edtech.html" class="industry-card">
+        <a href="/it-perevod/edtech/" class="industry-card">
           <strong>EdTech</strong>
           <span>Курсы, тесты, платформы дистанционного обучения</span>
         </a>
-        <a href="it-perevod/healthtech.html" class="industry-card">
+        <a href="/it-perevod/healthtech/" class="industry-card">
           <strong>HealthTech</strong>
           <span>Медицинские приложения, интерфейс MIS, GDPR-документы</span>
         </a>
-        <a href="it-perevod/korporativnoe-po.html" class="industry-card">
+        <a href="/it-perevod/korporativnoe-po/" class="industry-card">
           <strong>Корпоративное ПО</strong>
           <span>ERP, CRM, HRM — интерфейс и пользовательская документация</span>
         </a>
@@ -8875,31 +8875,31 @@ within 2 business days.</code></pre>
               <td><strong>1–2 страницы</strong></td>
               <td>от 3 часов</td>
               <td class="vol-price">от 750 ₽</td>
-              <td><a href="#" class="vol-btn">Заказать</a></td>
+              <td><a href="/stoimost-perevoda/" class="vol-btn">Заказать</a></td>
             </tr>
             <tr>
               <td><strong>До 5 страниц</strong></td>
               <td>1 рабочий день</td>
               <td class="vol-price">от 3 750 ₽</td>
-              <td><a href="#" class="vol-btn">Заказать</a></td>
+              <td><a href="/stoimost-perevoda/" class="vol-btn">Заказать</a></td>
             </tr>
             <tr>
               <td><strong>5–15 страниц</strong></td>
               <td>1–2 дня</td>
               <td class="vol-price">от 375 ₽/стр.</td>
-              <td><a href="#" class="vol-btn">Заказать</a></td>
+              <td><a href="/stoimost-perevoda/" class="vol-btn">Заказать</a></td>
             </tr>
             <tr>
               <td><strong>15–30 страниц</strong></td>
               <td>2–3 дня</td>
               <td class="vol-price">от 360 ₽/стр.</td>
-              <td><a href="#" class="vol-btn">Заказать</a></td>
+              <td><a href="/stoimost-perevoda/" class="vol-btn">Заказать</a></td>
             </tr>
             <tr>
               <td><strong>Свыше 30 страниц</strong></td>
               <td>по договорённости</td>
               <td class="vol-price">от 350 ₽/стр.</td>
-              <td><a href="#" class="vol-btn">Заказать</a></td>
+              <td><a href="/stoimost-perevoda/" class="vol-btn">Заказать</a></td>
             </tr>
           </tbody>
         </table>
@@ -8938,9 +8938,9 @@ within 2 business days.</code></pre>
           <tfoot>
             <tr>
               <td></td>
-              <td><a href="#" class="price-btn price-btn--outline">Выбрать</a></td>
-              <td class="cmp-featured"><a href="#" class="price-btn price-btn--primary">Выбрать</a></td>
-              <td><a href="#" class="price-btn price-btn--outline">Выбрать</a></td>
+              <td><a href="/stoimost-perevoda/" class="price-btn price-btn--outline">Выбрать</a></td>
+              <td class="cmp-featured"><a href="/stoimost-perevoda/" class="price-btn price-btn--primary">Выбрать</a></td>
+              <td><a href="/stoimost-perevoda/" class="price-btn price-btn--outline">Выбрать</a></td>
             </tr>
           </tfoot>
         </table>
@@ -9575,25 +9575,25 @@ within 2 business days.</code></pre>
               <td><strong>До 5 страниц</strong><span>~2 500 слов</span></td>
               <td>2 рабочих дня</td>
               <td class="vol-price">от 3 000 ₽</td>
-              <td><a href="#" class="vol-btn">Заказать</a></td>
+              <td><a href="/stoimost-perevoda/" class="vol-btn">Заказать</a></td>
             </tr>
             <tr>
               <td><strong>5–30 страниц</strong><span></span></td>
               <td>3–7 рабочих дней</td>
               <td class="vol-price">от 600 ₽/стр.</td>
-              <td><a href="#" class="vol-btn">Заказать</a></td>
+              <td><a href="/stoimost-perevoda/" class="vol-btn">Заказать</a></td>
             </tr>
             <tr>
               <td><strong>30–100 страниц</strong><span></span></td>
               <td>1–3 недели</td>
               <td class="vol-price">от 550 ₽/стр.</td>
-              <td><a href="#" class="vol-btn">Заказать</a></td>
+              <td><a href="/stoimost-perevoda/" class="vol-btn">Заказать</a></td>
             </tr>
             <tr>
               <td><strong>Полная книга (100+ стр.)</strong><span></span></td>
               <td>по договорённости</td>
               <td class="vol-price">от 500 ₽/стр.</td>
-              <td><a href="#" class="vol-btn">Заказать</a></td>
+              <td><a href="/stoimost-perevoda/" class="vol-btn">Заказать</a></td>
             </tr>
           </tbody>
         </table>
