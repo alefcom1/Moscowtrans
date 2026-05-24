@@ -10,6 +10,7 @@ require_once get_template_directory() . '/inc/post-types.php';
 require_once get_template_directory() . '/inc/ajax.php';
 require_once get_template_directory() . '/inc/seo.php';
 require_once get_template_directory() . '/inc/setup-pages.php';
+require_once get_template_directory() . '/inc/subservice-visuals.php';
 
 // setup-subpages.php is 6 MB — load only when explicitly triggered
 add_action('init', function () {
