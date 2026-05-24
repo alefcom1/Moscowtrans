@@ -38,6 +38,7 @@ add_shortcode('rtap_quiz',    'rtap_quiz_shortcode');
 add_shortcode('rtap_qow',     'rtap_qow_shortcode');
 add_shortcode('rtap_verify',  'rtap_verify_shortcode');
 
+
 if (!wp_next_scheduled('rtap_sync_pending')) {
     wp_schedule_event(time(), 'hourly', 'rtap_sync_pending');
 }
@@ -86,46 +87,19 @@ function rtap_enqueue_frontend(): void {
     if (!is_page() && !is_singular()) return;
 
     global $post;
-    $content = $post ? $post->post_content . ($post->post_status ?? '') : '';
+    $content = $post ? $post->post_content : '';
     $has_rtap = has_shortcode($content, 'rtap_quiz')
              || has_shortcode($content, 'rtap_qow')
              || has_shortcode($content, 'rtap_verify');
 
     if (!$has_rtap) return;
 
-    $dist     = RTAP_DIR . 'frontend/dist/';
-    $dist_url = RTAP_URL . 'frontend/dist/';
+    $dist     = RTAP_DIR . 'frontend/dist/assets/';
+    $dist_url = RTAP_URL . 'frontend/dist/assets/';
+    $ver      = file_exists($dist . 'index.js') ? filemtime($dist . 'index.js') : RTAP_VERSION;
 
-    // Load all assets via Vite manifest
-    $manifest_path = $dist . '.vite/manifest.json';
-    if (file_exists($manifest_path)) {
-        $manifest = json_decode(file_get_contents($manifest_path), true);
-        foreach ($manifest as $entry) {
-            $ver = filemtime($dist . ($entry['file'] ?? '')) ?: RTAP_VERSION;
-            if (!empty($entry['isEntry'])) {
-                wp_enqueue_script('rtap-app', $dist_url . $entry['file'], [], $ver, true);
-            }
-            foreach ($entry['css'] ?? [] as $css) {
-                wp_enqueue_style('rtap-' . md5($css), $dist_url . $css, [], $ver);
-            }
-            foreach ($entry['imports'] ?? [] as $chunk_key) {
-                if (!empty($manifest[$chunk_key]['file'])) {
-                    $cv = filemtime($dist . $manifest[$chunk_key]['file']) ?: RTAP_VERSION;
-                    wp_enqueue_script('rtap-chunk-' . md5($chunk_key), $dist_url . $manifest[$chunk_key]['file'], ['rtap-app'], $cv, true);
-                }
-            }
-        }
-    } else {
-        // Fallback: load known files directly
-        $ver = filemtime($dist . 'assets/index.js') ?: RTAP_VERSION;
-        wp_enqueue_style('rtap-app',  $dist_url . 'assets/main.css',  [], $ver);
-        wp_enqueue_script('rtap-app', $dist_url . 'assets/index.js',  [], $ver, true);
-        foreach (['index.es.js','html2canvas.esm.js','jspdf.es.min.js','purify.es.js'] as $chunk) {
-            if (file_exists($dist . "assets/$chunk")) {
-                wp_enqueue_script('rtap-' . $chunk, $dist_url . "assets/$chunk", ['rtap-app'], $ver, true);
-            }
-        }
-    }
+    // IIFE bundle: CSS is injected by JS
+    wp_enqueue_script('rtap-app', $dist_url . 'index.js', [], $ver, true);
 
     wp_localize_script('rtap-app', 'rtapConfig', [
         'apiBase'    => rest_url('rtap/v1'),
@@ -133,6 +107,9 @@ function rtap_enqueue_frontend(): void {
         'siteUrl'    => get_site_url(),
         'version'    => RTAP_VERSION,
         'certUrlBase'=> get_site_url() . '/verify/',
+        'minCert'    => (int) get_option('rtap_min_cert',  70),
+        'minInter'   => (int) get_option('rtap_min_inter', 60),
+        'minAdv'     => (int) get_option('rtap_min_adv',   70),
     ]);
 }
 

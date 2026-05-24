@@ -5,12 +5,12 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    manifest: true,
     rollupOptions: {
       input: 'src/main.jsx',
       output: {
+        format: 'iife',
+        inlineDynamicImports: true,
         entryFileNames: 'assets/index.js',
-        chunkFileNames: 'assets/[name].js',
         assetFileNames: 'assets/[name].[ext]',
       },
     },

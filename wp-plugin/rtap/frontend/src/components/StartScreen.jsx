@@ -67,10 +67,11 @@ export default function StartScreen({ defaultTopic, defaultLang, onStart }) {
 
         {/* Hero */}
         <div className="text-center mb-8">
+          <div style={{ fontSize: 48, marginBottom: 10 }}>🎯</div>
           <h1 className="text-2xl font-bold mb-2" style={{ color: 'var(--rtap-text)' }}>
             Тест для переводчиков
           </h1>
-          <p className="text-sm" style={{ color: 'var(--rtap-text)', opacity: 0.65 }}>
+          <p className="text-sm" style={{ color: 'var(--rtap-text-muted)' }}>
             Проверьте профессиональный уровень · Получите сертификат · Станьте партнёром Ремарка
           </p>
         </div>
@@ -143,22 +144,24 @@ export default function StartScreen({ defaultTopic, defaultLang, onStart }) {
         {/* CTA */}
         <div className="flex justify-center">
           <button
-            className="rtap-btn rtap-btn--primary text-lg px-10 py-4"
+            className="rtap-btn rtap-btn--primary"
             disabled={!canStart}
             onClick={() => canStart && onStart(topic, lang)}
-            style={{ opacity: canStart ? 1 : 0.4 }}
+            style={{ fontSize: 17, padding: '16px 48px' }}
           >
             Начать тест →
           </button>
         </div>
 
         {/* Info pills */}
-        <div className="flex flex-wrap justify-center gap-4 mt-6">
-          {['10 вопросов', '30 сек/вопрос', 'Сертификат при 70%+', 'Бесплатно'].map(item => (
-            <span key={item} className="text-xs px-3 py-1 rounded-full"
-              style={{ background: 'var(--rtap-border)', color: 'var(--rtap-text)' }}>
-              ✓ {item}
-            </span>
+        <div className="flex flex-wrap justify-center gap-3 mt-6">
+          {[
+            '10 вопросов',
+            '30 сек/вопрос',
+            `Сертификат при ${window.rtapConfig?.minCert ?? 70}%+`,
+            'Бесплатно',
+          ].map(item => (
+            <span key={item} className="rtap-pill">✓ {item}</span>
           ))}
         </div>
       </div>

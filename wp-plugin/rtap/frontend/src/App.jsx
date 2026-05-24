@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import { useTheme }  from './hooks/useTheme';
 import StartScreen   from './components/StartScreen';
 import LevelSelect   from './components/LevelSelect';
 import QuizEngine    from './components/QuizEngine';
@@ -23,6 +24,7 @@ export default function App({ defaultTopic, defaultLang }) {
   const [error,     setError]     = useState('');
 
   const { setScore, recordAttempt } = useProgress();
+  const theme = useTheme();
   const base = window.rtapConfig?.apiBase || '/wp-json/rtap/v1';
 
   const handleStart = useCallback(async (t, l) => {
@@ -119,7 +121,7 @@ export default function App({ defaultTopic, defaultLang }) {
   }, []);
 
   return (
-    <div className="rtap-wrap">
+    <div className="rtap-wrap" data-rtap-theme={theme}>
       {error && (
         <div className="p-4 mb-4 rounded-lg text-sm text-center"
           style={{ background: 'color-mix(in srgb, var(--rtap-red) 10%, transparent)', border: '1px solid var(--rtap-red)', color: 'var(--rtap-red)' }}>
