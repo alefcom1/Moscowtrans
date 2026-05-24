@@ -138,6 +138,86 @@ export default function Certificate({ name, topic, level, lang = 'en', scorePct,
     ctx.fillStyle = gold;
     ctx.font = '10px sans-serif';
     ctx.fillText('QR', W / 2, H - 94);
+
+    // Official stamp
+    drawStamp(ctx, 940, 660, navy, gold, text);
+  }
+
+  function drawStamp(ctx, cx, cy, navy, gold, text) {
+    const R = 105;
+    ctx.save();
+    ctx.globalAlpha = 0.82;
+
+    // Outer ring
+    ctx.beginPath();
+    ctx.arc(cx, cy, R, 0, Math.PI * 2);
+    ctx.strokeStyle = navy;
+    ctx.lineWidth = 4;
+    ctx.stroke();
+
+    // Inner ring
+    ctx.beginPath();
+    ctx.arc(cx, cy, R - 14, 0, Math.PI * 2);
+    ctx.strokeStyle = navy;
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+
+    // Top arc text: «БЮРО ПЕРЕВОДОВ РЕМАРКА»
+    const topText   = 'БЮРО ПЕРЕВОДОВ «РЕМАРКА»';
+    const botText   = 'ПОДТВЕРЖДАЕТ ПРОХОЖДЕНИЕ ТЕСТА';
+    const arcR      = R - 8;
+
+    ctx.font = 'bold 13px Georgia, serif';
+    ctx.fillStyle = navy;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    drawArcText(ctx, topText, cx, cy, arcR, -Math.PI * 0.92, -Math.PI * 0.08, false);
+
+    ctx.font = '11px Georgia, serif';
+    drawArcText(ctx, botText, cx, cy, arcR,  Math.PI * 0.12,  Math.PI * 0.88, true);
+
+    // Star separators
+    ctx.font = 'bold 13px sans-serif';
+    ctx.fillStyle = gold;
+    ctx.textBaseline = 'middle';
+    for (const a of [-Math.PI * 0.03, Math.PI * 1.03]) {
+      ctx.fillText('★', cx + arcR * Math.cos(a), cy + arcR * Math.sin(a));
+    }
+
+    // Centre checkmark circle
+    ctx.beginPath();
+    ctx.arc(cx, cy, 36, 0, Math.PI * 2);
+    ctx.fillStyle = navy;
+    ctx.globalAlpha = 0.10;
+    ctx.fill();
+    ctx.globalAlpha = 0.82;
+
+    // Centre check
+    ctx.strokeStyle = gold;
+    ctx.lineWidth = 5;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.beginPath();
+    ctx.moveTo(cx - 16, cy + 2);
+    ctx.lineTo(cx - 4,  cy + 16);
+    ctx.lineTo(cx + 18, cy - 16);
+    ctx.stroke();
+
+    ctx.restore();
+  }
+
+  function drawArcText(ctx, text, cx, cy, radius, startAngle, endAngle, reversed) {
+    const chars = [...text];
+    const total = chars.length;
+    for (let i = 0; i < total; i++) {
+      const t     = total > 1 ? i / (total - 1) : 0.5;
+      const angle = startAngle + t * (endAngle - startAngle);
+      ctx.save();
+      ctx.translate(cx + radius * Math.cos(angle), cy + radius * Math.sin(angle));
+      ctx.rotate(angle + (reversed ? -Math.PI / 2 : Math.PI / 2));
+      ctx.fillText(chars[i], 0, 0);
+      ctx.restore();
+    }
   }
 
   function drawCorner(ctx, x, y, color, sx, sy) {
