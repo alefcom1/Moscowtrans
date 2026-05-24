@@ -1,59 +1,107 @@
 [
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как правильно перевести термин 'plaintiff' в судебном контексте?",
     "payload": {
-      "options": ["Ответчик", "Истец", "Свидетель", "Судья"],
+      "options": [
+        "Ответчик",
+        "Истец",
+        "Свидетель",
+        "Судья"
+      ],
       "correct": 1
     },
     "explanation": "'Plaintiff' — сторона, подающая иск в суд, то есть истец. 'Defendant' — ответчик.",
     "difficulty": 1
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Какой перевод термина 'contract' является наиболее точным в юридическом документе?",
     "payload": {
-      "options": ["Соглашение", "Договор", "Протокол", "Устав"],
+      "options": [
+        "Соглашение",
+        "Договор",
+        "Протокол",
+        "Устав"
+      ],
       "correct": 1
     },
     "explanation": "'Contract' в формальном юридическом контексте переводится как «договор». «Соглашение» соответствует 'agreement', «протокол» — 'protocol/minutes', «устав» — 'charter/articles'.",
     "difficulty": 1
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'jurisdiction' применительно к суду?",
     "payload": {
-      "options": ["Судопроизводство", "Юрисдикция", "Подведомственность", "Подсудность"],
+      "options": [
+        "Судопроизводство",
+        "Юрисдикция",
+        "Подведомственность",
+        "Подсудность"
+      ],
       "correct": 1
     },
     "explanation": "'Jurisdiction' в общем значении — «юрисдикция». «Подведомственность» и «подсудность» — более узкие термины российского процессуального права.",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает термин 'force majeure' в договорном праве?",
     "payload": {
-      "options": ["Нарушение договора", "Форс-мажор", "Существенное условие", "Обязательный платёж"],
+      "options": [
+        "Нарушение договора",
+        "Форс-мажор",
+        "Существенное условие",
+        "Обязательный платёж"
+      ],
       "correct": 1
     },
     "explanation": "'Force majeure' — обстоятельства непреодолимой силы (форс-мажор). Это устоявшийся термин, заимствованный из французского права.",
     "difficulty": 1
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как правильно перевести 'indemnification' в тексте договора?",
     "payload": {
-      "options": ["Штраф", "Возмещение убытков", "Неустойка", "Залог"],
+      "options": [
+        "Штраф",
+        "Возмещение убытков",
+        "Неустойка",
+        "Залог"
+      ],
       "correct": 1
     },
     "explanation": "'Indemnification' — обязательство возместить убытки или ущерб другой стороне. Не следует путать с 'penalty' (штраф) или 'liquidated damages' (неустойка).",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "fb", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "fb",
+    "lang": "en",
     "question": "Выберите правильный перевод: 'The parties agree to submit disputes to ___.' → 'Стороны соглашаются передавать споры в ___.'",
     "payload": {
-      "options": ["арбитраж", "прокуратуру", "нотариат", "регистратуру"],
+      "options": [
+        "арбитраж",
+        "прокуратуру",
+        "нотариат",
+        "регистратуру"
+      ],
       "correct": 0,
       "context": "arbitration"
     },
@@ -61,50 +109,90 @@
     "difficulty": 1
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'tort' в системе общего права?",
     "payload": {
-      "options": ["Преступление", "Деликт", "Правонарушение", "Проступок"],
+      "options": [
+        "Преступление",
+        "Деликт",
+        "Правонарушение",
+        "Проступок"
+      ],
       "correct": 1
     },
     "explanation": "'Tort' — деликт (гражданско-правовой деликт), то есть гражданское правонарушение, влекущее обязанность возмещения вреда. Не следует путать с уголовным преступлением.",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'breach of contract'?",
     "payload": {
-      "options": ["Заключение договора", "Нарушение договора", "Расторжение договора", "Изменение договора"],
+      "options": [
+        "Заключение договора",
+        "Нарушение договора",
+        "Расторжение договора",
+        "Изменение договора"
+      ],
       "correct": 1
     },
     "explanation": "'Breach of contract' — нарушение договора (неисполнение или ненадлежащее исполнение договорных обязательств).",
     "difficulty": 1
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как перевести 'arbitration clause'?",
     "payload": {
-      "options": ["Арбитражная оговорка", "Третейская запись", "Арбитражное соглашение", "Оговорка о подсудности"],
+      "options": [
+        "Арбитражная оговорка",
+        "Третейская запись",
+        "Арбитражное соглашение",
+        "Оговорка о подсудности"
+      ],
       "correct": 0
     },
     "explanation": "'Arbitration clause' — арбитражная оговорка: положение договора, предусматривающее передачу споров в арбитраж.",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'intellectual property' в юридическом тексте?",
     "payload": {
-      "options": ["Промышленная собственность", "Интеллектуальная собственность", "Авторское право", "Патентное право"],
+      "options": [
+        "Промышленная собственность",
+        "Интеллектуальная собственность",
+        "Авторское право",
+        "Патентное право"
+      ],
       "correct": 1
     },
     "explanation": "'Intellectual property' — интеллектуальная собственность (общий термин, включающий авторское право, патенты, товарные знаки и др.).",
     "difficulty": 1
   },
   {
-    "topic": "legal", "level": "beginner", "type": "fb", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "fb",
+    "lang": "en",
     "question": "Переведите пропущенный термин: 'The ___ of the agreement shall be two years.' → 'Срок ___ договора составляет два года.'",
     "payload": {
-      "options": ["действия", "заключения", "регистрации", "расторжения"],
+      "options": [
+        "действия",
+        "заключения",
+        "регистрации",
+        "расторжения"
+      ],
       "correct": 0,
       "context": "term/duration"
     },
@@ -112,40 +200,72 @@
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'warranty' применительно к товарам?",
     "payload": {
-      "options": ["Страховка", "Гарантия", "Поручительство", "Залог"],
+      "options": [
+        "Страховка",
+        "Гарантия",
+        "Поручительство",
+        "Залог"
+      ],
       "correct": 1
     },
     "explanation": "'Warranty' в контексте товаров — гарантия (обязательство продавца или производителя об устранении дефектов). 'Guarantee' в более широком смысле тоже «гарантия», но 'warranty' специфичен для товаров.",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'power of attorney'?",
     "payload": {
-      "options": ["Договор поручения", "Доверенность", "Ордер на арест", "Судебный приказ"],
+      "options": [
+        "Договор поручения",
+        "Доверенность",
+        "Ордер на арест",
+        "Судебный приказ"
+      ],
       "correct": 1
     },
     "explanation": "'Power of attorney' — доверенность: документ, уполномочивающий одно лицо действовать от имени другого.",
     "difficulty": 1
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'defendant'?",
     "payload": {
-      "options": ["Истец", "Заявитель", "Ответчик", "Обвинитель"],
+      "options": [
+        "Истец",
+        "Заявитель",
+        "Ответчик",
+        "Обвинитель"
+      ],
       "correct": 2
     },
     "explanation": "'Defendant' — ответчик (в гражданском деле) или подсудимый/обвиняемый (в уголовном деле). В гражданском контексте — ответчик.",
     "difficulty": 1
   },
   {
-    "topic": "legal", "level": "beginner", "type": "fb", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "fb",
+    "lang": "en",
     "question": "Выберите точный перевод: 'The court issued an ___ restraining the defendant.' → 'Суд выдал ___, ограничивающий действия ответчика.'",
     "payload": {
-      "options": ["судебный запрет", "приговор", "предписание", "постановление"],
+      "options": [
+        "судебный запрет",
+        "приговор",
+        "предписание",
+        "постановление"
+      ],
       "correct": 0,
       "context": "injunction"
     },
@@ -153,50 +273,90 @@
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как правильно перевести 'governing law'?",
     "payload": {
-      "options": ["Применимое право", "Местное законодательство", "Регуляторное право", "Управляющее законодательство"],
+      "options": [
+        "Применимое право",
+        "Местное законодательство",
+        "Регуляторное право",
+        "Управляющее законодательство"
+      ],
       "correct": 0
     },
     "explanation": "'Governing law' — применимое право: право, которым регулируется договор. Стандартное сочетание в международных контрактах.",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'consideration' в договорном праве общего права?",
     "payload": {
-      "options": ["Рассмотрение дела", "Встречное предоставление", "Существенное условие", "Вознаграждение"],
+      "options": [
+        "Рассмотрение дела",
+        "Встречное предоставление",
+        "Существенное условие",
+        "Вознаграждение"
+      ],
       "correct": 1
     },
     "explanation": "'Consideration' в договорном праве — встречное предоставление: то, что каждая сторона передаёт другой в обмен на обязательства. Это специфическая концепция общего права.",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'affidavit'?",
     "payload": {
-      "options": ["Свидетельские показания", "Аффидавит", "Нотариально заверенное заявление", "Апелляционная жалоба"],
+      "options": [
+        "Свидетельские показания",
+        "Аффидавит",
+        "Нотариально заверенное заявление",
+        "Апелляционная жалоба"
+      ],
       "correct": 1
     },
     "explanation": "'Affidavit' — аффидавит: письменное показание под присягой, используемое в странах общего права. Допустим также перевод «письменные показания под присягой».",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'liability' в договорном контексте?",
     "payload": {
-      "options": ["Обязанность", "Ответственность", "Обязательство", "Долг"],
+      "options": [
+        "Обязанность",
+        "Ответственность",
+        "Обязательство",
+        "Долг"
+      ],
       "correct": 1
     },
     "explanation": "'Liability' — ответственность (в первую очередь имущественная). 'Obligation' — обязательство, 'duty' — обязанность.",
     "difficulty": 1
   },
   {
-    "topic": "legal", "level": "beginner", "type": "fb", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "fb",
+    "lang": "en",
     "question": "Переведите пропуск: 'All disputes shall be resolved by ___ arbitration.' → 'Все споры подлежат урегулированию путём ___ арбитража.'",
     "payload": {
-      "options": ["международного коммерческого", "государственного", "обязательного судебного", "принудительного"],
+      "options": [
+        "международного коммерческого",
+        "государственного",
+        "обязательного судебного",
+        "принудительного"
+      ],
       "correct": 0,
       "context": "international commercial"
     },
@@ -204,50 +364,90 @@
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'due diligence' в корпоративном праве?",
     "payload": {
-      "options": ["Должная осмотрительность", "Надлежащая правовая проверка", "Добросовестность", "Деловая репутация"],
+      "options": [
+        "Должная осмотрительность",
+        "Надлежащая правовая проверка",
+        "Добросовестность",
+        "Деловая репутация"
+      ],
       "correct": 1
     },
     "explanation": "'Due diligence' в корпоративном контексте — надлежащая правовая проверка (комплексная проверка перед сделкой). «Должная осмотрительность» — допустимый, но менее точный вариант в данном контексте.",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'statute of limitations'?",
     "payload": {
-      "options": ["Законодательное ограничение", "Срок исковой давности", "Ограничительный закон", "Пресекательный срок"],
+      "options": [
+        "Законодательное ограничение",
+        "Срок исковой давности",
+        "Ограничительный закон",
+        "Пресекательный срок"
+      ],
       "correct": 1
     },
     "explanation": "'Statute of limitations' — срок исковой давности: период, в течение которого может быть подан иск.",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'pro rata' в финансово-правовом контексте?",
     "payload": {
-      "options": ["Пропорционально", "Предварительно", "Автоматически", "По умолчанию"],
+      "options": [
+        "Пропорционально",
+        "Предварительно",
+        "Автоматически",
+        "По умолчанию"
+      ],
       "correct": 0
     },
     "explanation": "'Pro rata' (лат.) — пропорционально, соразмерно. Используется для описания распределения пропорционально доле участия.",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'shareholder' в корпоративном праве?",
     "payload": {
-      "options": ["Пайщик", "Акционер", "Участник", "Вкладчик"],
+      "options": [
+        "Пайщик",
+        "Акционер",
+        "Участник",
+        "Вкладчик"
+      ],
       "correct": 1
     },
     "explanation": "'Shareholder' — акционер (владелец акций в акционерном обществе). 'Member' — участник (в ООО), 'partner' — партнёр.",
     "difficulty": 1
   },
   {
-    "topic": "legal", "level": "beginner", "type": "fb", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "fb",
+    "lang": "en",
     "question": "Выберите правильный перевод: 'The ___ clause limits liability to direct damages.' → '___ оговорка ограничивает ответственность прямыми убытками.'",
     "payload": {
-      "options": ["Ограничительная", "Эксклюзивная", "Защитная", "Исключительная"],
+      "options": [
+        "Ограничительная",
+        "Эксклюзивная",
+        "Защитная",
+        "Исключительная"
+      ],
       "correct": 0,
       "context": "limitation of liability"
     },
@@ -255,60 +455,108 @@
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'notarize' применительно к документу?",
     "payload": {
-      "options": ["Зарегистрировать", "Нотариально заверить", "Апостилировать", "Легализовать"],
+      "options": [
+        "Зарегистрировать",
+        "Нотариально заверить",
+        "Апостилировать",
+        "Легализовать"
+      ],
       "correct": 1
     },
     "explanation": "'Notarize' — нотариально заверить (удостоверить подлинность подписи или документа у нотариуса).",
     "difficulty": 1
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'comply with' в контексте нормативных требований?",
     "payload": {
-      "options": ["Нарушить", "Соблюдать", "Обходить", "Согласовывать"],
+      "options": [
+        "Нарушить",
+        "Соблюдать",
+        "Обходить",
+        "Согласовывать"
+      ],
       "correct": 1
     },
     "explanation": "'Comply with' — соблюдать, выполнять (требования, нормы, условия). 'Compliance' — соблюдение, комплаенс.",
     "difficulty": 1
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как правильно перевести 'arbitral award'?",
     "payload": {
-      "options": ["Арбитражное вознаграждение", "Арбитражное решение", "Третейский приговор", "Решение апелляции"],
+      "options": [
+        "Арбитражное вознаграждение",
+        "Арбитражное решение",
+        "Третейский приговор",
+        "Решение апелляции"
+      ],
       "correct": 1
     },
     "explanation": "'Arbitral award' — арбитражное решение: окончательный акт арбитражного трибунала по существу спора.",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'in witness whereof' в конце договора?",
     "payload": {
-      "options": ["В подтверждение вышеизложенного", "В подтверждение чему нижеподписавшиеся", "Во исполнение настоящего", "В соответствии с чем"],
+      "options": [
+        "В подтверждение вышеизложенного",
+        "В подтверждение чему нижеподписавшиеся",
+        "Во исполнение настоящего",
+        "В соответствии с чем"
+      ],
       "correct": 1
     },
     "explanation": "'In witness whereof' — традиционная заключительная формула договора: «в подтверждение чего нижеподписавшиеся уполномоченные лица подписали настоящий договор».",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'termination for convenience'?",
     "payload": {
-      "options": ["Расторжение по соглашению сторон", "Расторжение по усмотрению стороны", "Расторжение в связи с нарушением", "Досрочное прекращение договора"],
+      "options": [
+        "Расторжение по соглашению сторон",
+        "Расторжение по усмотрению стороны",
+        "Расторжение в связи с нарушением",
+        "Досрочное прекращение договора"
+      ],
       "correct": 1
     },
     "explanation": "'Termination for convenience' — расторжение договора по усмотрению стороны (без указания причин). Отличается от 'termination for cause' (расторжение вследствие нарушения).",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "fb", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "fb",
+    "lang": "en",
     "question": "Заполните пропуск: 'This Agreement shall be construed in accordance with the ___ of England and Wales.' → 'Настоящий договор толкуется в соответствии с ___ Англии и Уэльса.'",
     "payload": {
-      "options": ["законодательством", "правом", "нормами", "судебной практикой"],
+      "options": [
+        "законодательством",
+        "правом",
+        "нормами",
+        "судебной практикой"
+      ],
       "correct": 1,
       "context": "laws"
     },
@@ -316,90 +564,162 @@
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'severability clause'?",
     "payload": {
-      "options": ["Оговорка о конфиденциальности", "Оговорка о делимости", "Оговорка о применимом праве", "Оговорка об изменении"],
+      "options": [
+        "Оговорка о конфиденциальности",
+        "Оговорка о делимости",
+        "Оговорка о применимом праве",
+        "Оговорка об изменении"
+      ],
       "correct": 1
     },
     "explanation": "'Severability clause' — оговорка о делимости: положение, согласно которому признание недействительной одной части договора не влечёт недействительности всего договора.",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'copyright' в сфере интеллектуальной собственности?",
     "payload": {
-      "options": ["Патентное право", "Авторское право", "Право на товарный знак", "Смежное право"],
+      "options": [
+        "Патентное право",
+        "Авторское право",
+        "Право на товарный знак",
+        "Смежное право"
+      ],
       "correct": 1
     },
     "explanation": "'Copyright' — авторское право: исключительное право автора на произведение.",
     "difficulty": 1
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как правильно перевести 'binding agreement'?",
     "payload": {
-      "options": ["Предварительный договор", "Обязательное соглашение", "Юридически обязывающее соглашение", "Рамочный договор"],
+      "options": [
+        "Предварительный договор",
+        "Обязательное соглашение",
+        "Юридически обязывающее соглашение",
+        "Рамочный договор"
+      ],
       "correct": 2
     },
     "explanation": "'Binding agreement' — юридически обязывающее соглашение. «Binding» означает, что соглашение имеет юридическую силу и обязательно для исполнения.",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'subpoena' в судебном производстве?",
     "payload": {
-      "options": ["Судебный запрет", "Повестка о явке", "Обвинительное заключение", "Судебный приказ"],
+      "options": [
+        "Судебный запрет",
+        "Повестка о явке",
+        "Обвинительное заключение",
+        "Судебный приказ"
+      ],
       "correct": 1
     },
     "explanation": "'Subpoena' — повестка о явке в суд или о представлении документов под угрозой санкций.",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'liquidated damages'?",
     "payload": {
-      "options": ["Компенсация убытков", "Заранее исчисленные убытки", "Неустойка", "Штрафные санкции"],
+      "options": [
+        "Компенсация убытков",
+        "Заранее исчисленные убытки",
+        "Неустойка",
+        "Штрафные санкции"
+      ],
       "correct": 1
     },
     "explanation": "'Liquidated damages' — заранее исчисленные убытки: сумма ущерба, согласованная сторонами в договоре. В российском праве ближайший аналог — неустойка, но перевод «неустойка» не вполне точен.",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'memorandum of understanding' (MOU)?",
     "payload": {
-      "options": ["Протокол о намерениях", "Рамочное соглашение", "Договор о конфиденциальности", "Корпоративный устав"],
+      "options": [
+        "Протокол о намерениях",
+        "Рамочное соглашение",
+        "Договор о конфиденциальности",
+        "Корпоративный устав"
+      ],
       "correct": 0
     },
     "explanation": "'Memorandum of understanding' — протокол о намерениях (меморандум о взаимопонимании): предварительный документ, фиксирующий намерения сторон.",
     "difficulty": 1
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'venue' в контексте судебного разбирательства?",
     "payload": {
-      "options": ["Место проведения слушания", "Юрисдикция", "Место нахождения ответчика", "Судебная инстанция"],
+      "options": [
+        "Место проведения слушания",
+        "Юрисдикция",
+        "Место нахождения ответчика",
+        "Судебная инстанция"
+      ],
       "correct": 0
     },
     "explanation": "'Venue' — место проведения судебного разбирательства (конкретный суд или место). Отличается от 'jurisdiction' (юрисдикция — полномочия суда).",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'null and void'?",
     "payload": {
-      "options": ["Действительный и обязывающий", "Недействительный и не имеющий силы", "Ограниченный в применении", "Спорный и оспоримый"],
+      "options": [
+        "Действительный и обязывающий",
+        "Недействительный и не имеющий силы",
+        "Ограниченный в применении",
+        "Спорный и оспоримый"
+      ],
       "correct": 1
     },
     "explanation": "'Null and void' — недействительный и не имеющий юридической силы. Это юридическая формула, означающая полное отсутствие правовых последствий.",
     "difficulty": 1
   },
   {
-    "topic": "legal", "level": "beginner", "type": "fb", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "fb",
+    "lang": "en",
     "question": "Заполните пропуск: 'The ___ shall bear the burden of proof.' → '___ несёт бремя доказывания.'",
     "payload": {
-      "options": ["Истец", "Ответчик", "Суд", "Свидетель"],
+      "options": [
+        "Истец",
+        "Ответчик",
+        "Суд",
+        "Свидетель"
+      ],
       "correct": 0,
       "context": "claimant/plaintiff"
     },
@@ -407,107 +727,190 @@
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'trademark' в сфере интеллектуальной собственности?",
     "payload": {
-      "options": ["Торговое наименование", "Товарный знак", "Знак обслуживания", "Фирменное наименование"],
+      "options": [
+        "Торговое наименование",
+        "Товарный знак",
+        "Знак обслуживания",
+        "Фирменное наименование"
+      ],
       "correct": 1
     },
     "explanation": "'Trademark' — товарный знак: обозначение, служащее для индивидуализации товаров.",
     "difficulty": 1
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'deed' в английском праве?",
     "payload": {
-      "options": ["Сделка", "Документ за печатью", "Дарственная", "Правоустанавливающий документ"],
+      "options": [
+        "Сделка",
+        "Документ за печатью",
+        "Дарственная",
+        "Правоустанавливающий документ"
+      ],
       "correct": 1
     },
     "explanation": "'Deed' в английском праве — документ за печатью (торжественный документ, исполненный в установленной форме). Контекстно может переводиться как «акт» или «документ».",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'confidentiality agreement'?",
     "payload": {
-      "options": ["Договор о неразглашении", "Соглашение о конфиденциальности", "Договор об эксклюзивности", "Лицензионное соглашение"],
+      "options": [
+        "Договор о неразглашении",
+        "Соглашение о конфиденциальности",
+        "Договор об эксклюзивности",
+        "Лицензионное соглашение"
+      ],
       "correct": 1
     },
     "explanation": "'Confidentiality agreement' — соглашение о конфиденциальности (или договор о неразглашении). Оба варианта приемлемы; «соглашение о конфиденциальности» более точно соответствует исходному термину.",
     "difficulty": 1
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'corporate veil' в корпоративном праве?",
     "payload": {
-      "options": ["Корпоративный устав", "Корпоративная тайна", "Корпоративный щит", "Корпоративная вуаль"],
+      "options": [
+        "Корпоративный устав",
+        "Корпоративная тайна",
+        "Корпоративный щит",
+        "Корпоративная вуаль"
+      ],
       "correct": 3
     },
     "explanation": "'Corporate veil' — корпоративная вуаль: принцип, разграничивающий ответственность компании и её участников. «Прокол корпоративной вуали» — lifting/piercing the corporate veil.",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'subrogation' в страховом и договорном праве?",
     "payload": {
-      "options": ["Суброгация", "Регресс", "Зачёт требований", "Уступка права"],
+      "options": [
+        "Суброгация",
+        "Регресс",
+        "Зачёт требований",
+        "Уступка права"
+      ],
       "correct": 0
     },
     "explanation": "'Subrogation' — суброгация: переход к страховщику прав страхователя в отношении лиц, ответственных за убыток.",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'entire agreement clause'?",
     "payload": {
-      "options": ["Оговорка о полноте договора", "Условие об обязательности договора", "Положение о вступлении в силу", "Оговорка о применимом праве"],
+      "options": [
+        "Оговорка о полноте договора",
+        "Условие об обязательности договора",
+        "Положение о вступлении в силу",
+        "Оговорка о применимом праве"
+      ],
       "correct": 0
     },
     "explanation": "'Entire agreement clause' — оговорка о полноте договора (интеграционная оговорка): положение, согласно которому договор содержит все договорённости сторон и отменяет предыдущие соглашения.",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'patent' в сфере ИС?",
     "payload": {
-      "options": ["Авторское свидетельство", "Патент", "Лицензия", "Свидетельство о регистрации"],
+      "options": [
+        "Авторское свидетельство",
+        "Патент",
+        "Лицензия",
+        "Свидетельство о регистрации"
+      ],
       "correct": 1
     },
     "explanation": "'Patent' — патент: охранный документ, удостоверяющий исключительное право на изобретение.",
     "difficulty": 1
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'pleadings' в гражданском судопроизводстве?",
     "payload": {
-      "options": ["Прения сторон", "Процессуальные документы", "Доказательства", "Судебные решения"],
+      "options": [
+        "Прения сторон",
+        "Процессуальные документы",
+        "Доказательства",
+        "Судебные решения"
+      ],
       "correct": 1
     },
     "explanation": "'Pleadings' — процессуальные документы (состязательные бумаги): исковое заявление, возражение и иные письменные заявления сторон.",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'good faith' в договорном контексте?",
     "payload": {
-      "options": ["Надлежащая форма", "Добросовестность", "Разумность", "Справедливость"],
+      "options": [
+        "Надлежащая форма",
+        "Добросовестность",
+        "Разумность",
+        "Справедливость"
+      ],
       "correct": 1
     },
     "explanation": "'Good faith' — добросовестность: принцип честного и лояльного поведения при исполнении обязательств.",
     "difficulty": 1
   },
   {
-    "topic": "legal", "level": "beginner", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "beginner",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'sovereign immunity' в международном праве?",
     "payload": {
-      "options": ["Государственный суверенитет", "Иммунитет государства", "Дипломатический иммунитет", "Юрисдикционный иммунитет"],
+      "options": [
+        "Государственный суверенитет",
+        "Иммунитет государства",
+        "Дипломатический иммунитет",
+        "Юрисдикционный иммунитет"
+      ],
       "correct": 1
     },
     "explanation": "'Sovereign immunity' — иммунитет государства: принцип, по которому государство не может быть привлечено к суду иностранного государства без своего согласия.",
     "difficulty": 2
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "bt", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
     "question": "Выберите лучший перевод:",
     "payload": {
       "source": "The arbitral tribunal shall have the power to grant interim measures of protection.",
@@ -522,7 +925,10 @@
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "bt", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
     "question": "Выберите лучший перевод:",
     "payload": {
       "source": "Each party shall indemnify and hold harmless the other party from any claims arising out of its breach.",
@@ -537,12 +943,15 @@
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "bt", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
     "question": "Выберите лучший перевод:",
     "payload": {
       "source": "The agreement shall be construed in accordance with the laws of England and Wales, excluding its conflict of laws provisions.",
       "options": [
-        "Соглашение толкуется в соответствии с законодательством Англии и Уэльса, за исключением его коллизионных норм.",
+        "Соглашение толкуется в соответствии с правом Англии и Уэльса, за исключением его коллизионных норм.",
         "Договор истолковывается по законам Англии и Уэльса, исключая нормы о конфликте законов.",
         "Данное соглашение регулируется английским и уэльским правом без учёта его коллизионных положений."
       ],
@@ -552,7 +961,10 @@
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "bt", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
     "question": "Выберите лучший перевод:",
     "payload": {
       "source": "The licensor grants the licensee a non-exclusive, royalty-free, worldwide license to use the intellectual property.",
@@ -567,7 +979,10 @@
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "bt", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
     "question": "Выберите лучший перевод:",
     "payload": {
       "source": "The claimant seeks specific performance of the contract and damages in the alternative.",
@@ -582,27 +997,66 @@
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "tm", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "tm",
+    "lang": "en",
     "question": "Сопоставьте юридические термины с их определениями:",
     "payload": {
-      "left": ["Force majeure", "Indemnity", "Arbitration", "Injunction", "Waiver"],
+      "left": [
+        "Force majeure",
+        "Indemnity",
+        "Arbitration",
+        "Injunction",
+        "Waiver"
+      ],
       "right": [
         "Судебный запрет или предписание совершить определённые действия",
         "Отказ от права, которым сторона могла бы воспользоваться",
         "Обстоятельства непреодолимой силы, освобождающие от ответственности",
-        "Внесудебное урегулирование спора нейтральным третьим лицом",
+        "Внесудебное разрешение спора нейтральным третьим лицом (арбитром), чьё решение обязательно для сторон",
         "Обязательство одной стороны возместить убытки другой"
       ],
-      "pairs": [[0,2],[1,4],[2,3],[3,0],[4,1]]
+      "pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          1
+        ]
+      ]
     },
     "explanation": "Force majeure — обстоятельства непреодолимой силы; Indemnity — возмещение убытков; Arbitration — арбитражное урегулирование; Injunction — судебный запрет; Waiver — отказ от права.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "tm", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "tm",
+    "lang": "en",
     "question": "Сопоставьте термины корпоративного права с их определениями:",
     "payload": {
-      "left": ["Shareholder", "Board of directors", "Quorum", "Dividend", "Articles of association"],
+      "left": [
+        "Shareholder",
+        "Board of directors",
+        "Quorum",
+        "Dividend",
+        "Articles of association"
+      ],
       "right": [
         "Устав компании, регулирующий её внутреннюю деятельность",
         "Минимальное число участников, необходимое для правомочности собрания",
@@ -610,13 +1064,37 @@
         "Владелец акций компании",
         "Часть прибыли, выплачиваемая акционерам"
       ],
-      "pairs": [[0,3],[1,2],[2,1],[3,4],[4,0]]
+      "pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ]
+      ]
     },
     "explanation": "Shareholder — акционер; Board of directors — совет директоров; Quorum — кворум (минимальное число); Dividend — дивиденд; Articles of association — устав компании.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "bt", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
     "question": "Выберите лучший перевод:",
     "payload": {
       "source": "Any amendment to this Agreement shall be made in writing and signed by duly authorised representatives of both parties.",
@@ -631,7 +1109,10 @@
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "bt", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
     "question": "Выберите лучший перевод:",
     "payload": {
       "source": "The sanctions imposed by the Security Council are binding on all Member States.",
@@ -646,37 +1127,64 @@
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
     "question": "Как правильно перевести 'res judicata' в процессуальном контексте?",
     "payload": {
-      "options": ["Судебный прецедент", "Преюдиция", "Обязательная сила судебного решения", "Окончательно разрешённое дело"],
+      "options": [
+        "Судебный прецедент",
+        "Преюдиция",
+        "Обязательная сила судебного решения",
+        "Окончательно разрешённое дело"
+      ],
       "correct": 2
     },
     "explanation": "'Res judicata' (лат.) — принцип обязательной силы вступившего в законную силу судебного решения. Запрещает повторное рассмотрение уже разрешённого спора.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'locus standi' в процессуальном праве?",
     "payload": {
-      "options": ["Место рассмотрения дела", "Процессуальная правоспособность", "Надлежащая юрисдикция", "Право на судебную защиту"],
+      "options": [
+        "Место рассмотрения дела",
+        "Процессуальная правоспособность",
+        "Надлежащая юрисдикция",
+        "Право на судебную защиту"
+      ],
       "correct": 1
     },
     "explanation": "'Locus standi' (лат.) — процессуальная правоспособность (право на обращение в суд). Означает наличие у лица достаточного интереса для возбуждения дела.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'privity of contract' в английском договорном праве?",
     "payload": {
-      "options": ["Конфиденциальность договора", "Относительность договора", "Обязательность договора", "Исполнимость договора"],
+      "options": [
+        "Конфиденциальность договора",
+        "Относительность договора",
+        "Обязательность договора",
+        "Исполнимость договора"
+      ],
       "correct": 1
     },
     "explanation": "'Privity of contract' — относительность договора: принцип, по которому договор создаёт права и обязанности только для его сторон.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "bt", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
     "question": "Выберите лучший перевод:",
     "payload": {
       "source": "The tribunal shall apply the UNCITRAL Rules as amended and in force at the date of commencement of arbitral proceedings.",
@@ -691,20 +1199,37 @@
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
     "question": "Как перевести 'estoppel' в контексте процессуального права?",
     "payload": {
-      "options": ["Эстоппель", "Отказ от права", "Запрет противоречивого поведения", "Процессуальная преклюзия"],
+      "options": [
+        "Эстоппель",
+        "Отказ от права",
+        "Запрет противоречивого поведения",
+        "Процессуальная преклюзия"
+      ],
       "correct": 0
     },
     "explanation": "'Estoppel' — эстоппель: принцип недопустимости противоречивого поведения. Термин обычно транслитерируется в юридических текстах.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "tm", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "tm",
+    "lang": "en",
     "question": "Сопоставьте термины международного договорного права с их переводами:",
     "payload": {
-      "left": ["Ratification", "Accession", "Reservation", "Denunciation", "Entry into force"],
+      "left": [
+        "Ratification",
+        "Accession",
+        "Reservation",
+        "Denunciation",
+        "Entry into force"
+      ],
       "right": [
         "Оговорка к международному договору",
         "Присоединение к международному договору",
@@ -712,13 +1237,37 @@
         "Ратификация",
         "Денонсация"
       ],
-      "pairs": [[0,3],[1,1],[2,0],[3,4],[4,2]]
+      "pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          2
+        ]
+      ]
     },
     "explanation": "Ratification — ратификация; Accession — присоединение; Reservation — оговорка; Denunciation — денонсация (выход из договора); Entry into force — вступление в силу.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "bt", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
     "question": "Выберите лучший перевод:",
     "payload": {
       "source": "The Company shall maintain adequate records to demonstrate compliance with applicable anti-corruption legislation.",
@@ -733,27 +1282,46 @@
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'lex mercatoria' в международном коммерческом праве?",
     "payload": {
-      "options": ["Право страны продавца", "Международное торговое право", "Транснациональное коммерческое право", "Право места исполнения"],
+      "options": [
+        "Право страны продавца",
+        "Международное торговое право",
+        "Транснациональное коммерческое право",
+        "Право места исполнения"
+      ],
       "correct": 2
     },
     "explanation": "'Lex mercatoria' — транснациональное коммерческое право: свод обычаев и принципов, применяемых в международной торговле вне зависимости от национального законодательства.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
     "question": "Как правильно перевести 'material breach' в договорном праве?",
     "payload": {
-      "options": ["Существенное нарушение", "Физическое нарушение", "Фактическое нарушение", "Имущественный ущерб"],
+      "options": [
+        "Существенное нарушение",
+        "Физическое нарушение",
+        "Фактическое нарушение",
+        "Имущественный ущерб"
+      ],
       "correct": 0
     },
     "explanation": "'Material breach' — существенное нарушение договора: нарушение, которое лишает пострадавшую сторону того, на что она была вправе рассчитывать по договору.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "bt", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
     "question": "Выберите лучший перевод:",
     "payload": {
       "source": "The Award shall be final and binding upon the parties and shall not be subject to any appeal.",
@@ -768,20 +1336,37 @@
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'causa' применительно к основаниям иска?",
     "payload": {
-      "options": ["Причина", "Основание иска", "Повод", "Предмет спора"],
+      "options": [
+        "Причина",
+        "Основание иска",
+        "Повод",
+        "Предмет спора"
+      ],
       "correct": 1
     },
     "explanation": "'Causa' (лат.) / 'cause of action' — основание иска: совокупность фактов, дающих право на судебную защиту.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "tm", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "tm",
+    "lang": "en",
     "question": "Сопоставьте термины корпоративного права:",
     "payload": {
-      "left": ["Merger", "Acquisition", "Spin-off", "Joint venture", "Due diligence"],
+      "left": [
+        "Merger",
+        "Acquisition",
+        "Spin-off",
+        "Joint venture",
+        "Due diligence"
+      ],
       "right": [
         "Надлежащая правовая проверка перед сделкой",
         "Выделение дочерней компании в самостоятельное юридическое лицо",
@@ -789,13 +1374,37 @@
         "Слияние двух компаний в одну",
         "Приобретение контрольного пакета акций или активов"
       ],
-      "pairs": [[0,3],[1,4],[2,1],[3,2],[4,0]]
+      "pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          0
+        ]
+      ]
     },
     "explanation": "Merger — слияние; Acquisition — поглощение/приобретение; Spin-off — выделение; Joint venture — совместное предприятие; Due diligence — надлежащая правовая проверка.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "bt", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
     "question": "Выберите лучший перевод:",
     "payload": {
       "source": "The counterparty failed to mitigate its losses following the breach.",
@@ -810,27 +1419,46 @@
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'tortfeasor' в деликтном праве?",
     "payload": {
-      "options": ["Потерпевший", "Делинквент", "Причинитель вреда", "Ответчик по иску"],
+      "options": [
+        "Потерпевший",
+        "Делинквент",
+        "Причинитель вреда",
+        "Ответчик по иску"
+      ],
       "correct": 2
     },
     "explanation": "'Tortfeasor' — причинитель вреда: лицо, совершившее деликт (гражданское правонарушение).",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'novation' в договорном праве?",
     "payload": {
-      "options": ["Изменение договора", "Новация", "Расторжение договора", "Дополнительное соглашение"],
+      "options": [
+        "Изменение договора",
+        "Новация",
+        "Расторжение договора",
+        "Дополнительное соглашение"
+      ],
       "correct": 1
     },
     "explanation": "'Novation' — новация: замена первоначального обязательства новым, с участием как прежних, так и/или новых сторон.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "bt", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
     "question": "Выберите лучший перевод:",
     "payload": {
       "source": "The licensor retains all rights, title, and interest in and to the licensed technology.",
@@ -845,30 +1473,55 @@
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
     "question": "Как правильно перевести 'without prejudice' в переписке сторон?",
     "payload": {
-      "options": ["Без предрассудков", "Без ущерба для прав сторон", "Конфиденциально", "Не для использования в суде"],
+      "options": [
+        "Без предрассудков",
+        "Без ущерба для прав сторон",
+        "Конфиденциально",
+        "Не для использования в суде"
+      ],
       "correct": 1
     },
     "explanation": "'Without prejudice' — без ущерба для прав сторон: обозначение, защищающее переписку от использования в суде. В российской практике часто используют аналог «без ущерба для прав».",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'lis pendens' в процессуальном праве?",
     "payload": {
-      "options": ["Исполнительное производство", "Нахождение дела в производстве суда", "Арест активов", "Обеспечительный запрет"],
+      "options": [
+        "Исполнительное производство",
+        "Нахождение дела в производстве суда",
+        "Арест активов",
+        "Обеспечительный запрет"
+      ],
       "correct": 1
     },
     "explanation": "'Lis pendens' (лат.) — нахождение дела в производстве суда (буквально «висящий иск»). Означает, что дело уже рассматривается судом.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "tm", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "tm",
+    "lang": "en",
     "question": "Сопоставьте санкционно-правовые термины с их определениями:",
     "payload": {
-      "left": ["Sanctions list", "Designated person", "Derogation", "Asset freeze", "Sectoral sanctions"],
+      "left": [
+        "Sanctions list",
+        "Designated person",
+        "Derogation",
+        "Asset freeze",
+        "Sectoral sanctions"
+      ],
       "right": [
         "Санкции, направленные против определённых секторов экономики",
         "Лицо, внесённое в санкционный список",
@@ -876,13 +1529,37 @@
         "Перечень лиц и организаций, подпадающих под санкции",
         "Исключение из санкционного режима"
       ],
-      "pairs": [[0,3],[1,1],[2,4],[3,2],[4,0]]
+      "pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          0
+        ]
+      ]
     },
     "explanation": "Sanctions list — санкционный список; Designated person — лицо, включённое в список; Derogation — исключение/изъятие; Asset freeze — замораживание активов; Sectoral sanctions — секторальные санкции.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "bt", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
     "question": "Выберите лучший перевод:",
     "payload": {
       "source": "The parties waive any objection to the jurisdiction of the courts of England on grounds of inconvenient forum.",
@@ -897,17 +1574,28 @@
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'piercing the corporate veil'?",
     "payload": {
-      "options": ["Раскрытие корпоративной тайны", "Снятие корпоративного иммунитета", "Прокол корпоративной вуали", "Отмена ограниченной ответственности"],
+      "options": [
+        "Раскрытие корпоративной тайны",
+        "Снятие корпоративного иммунитета",
+        "Прокол корпоративной вуали",
+        "Отмена ограниченной ответственности"
+      ],
       "correct": 2
     },
     "explanation": "'Piercing the corporate veil' — прокол корпоративной вуали: судебный механизм привлечения участников к ответственности по обязательствам компании.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "bt", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
     "question": "Выберите лучший перевод:",
     "payload": {
       "source": "Time is of the essence with respect to all obligations under this Agreement.",
@@ -922,63 +1610,106 @@
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'letter of credit' в торговом финансировании?",
     "payload": {
-      "options": ["Кредитное письмо", "Аккредитив", "Гарантийное письмо", "Долговое обязательство"],
+      "options": [
+        "Кредитное письмо",
+        "Аккредитив",
+        "Гарантийное письмо",
+        "Долговое обязательство"
+      ],
       "correct": 1
     },
     "explanation": "'Letter of credit' — аккредитив: банковский инструмент, гарантирующий оплату продавцу при выполнении условий поставки.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'anti-suit injunction'?",
     "payload": {
-      "options": ["Судебный запрет разбирательства", "Запрет на подачу иска в иностранный суд", "Антиарбитражный запрет", "Обеспечительная мера против иска"],
+      "options": [
+        "Судебный запрет разбирательства",
+        "Запрет на подачу иска в иностранный суд",
+        "Антиарбитражный запрет",
+        "Обеспечительная мера против иска"
+      ],
       "correct": 1
     },
     "explanation": "'Anti-suit injunction' — запрет на возбуждение или продолжение разбирательства в иностранном суде, выданный судом по месту соглашения сторон.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The tribunal held that the respondent's failure to perform constituted a fundamental breach entitling the claimant to terminate the contract and claim damages.",
       "translation": "Трибунал постановил, что [неисполнение ответчиком обязательств] представляло собой [существенное нарушение], [предоставляющее истцу право расторгнуть договор] и [требовать компенсацию].",
-      "segments": ["неисполнение ответчиком обязательств", "существенное нарушение", "предоставляющее истцу право расторгнуть договор", "требовать компенсацию"],
+      "segments": [
+        "неисполнение ответчиком обязательств",
+        "существенное нарушение",
+        "предоставляющее истцу право расторгнуть договор",
+        "требовать компенсацию"
+      ],
       "correct": 3
     },
     "explanation": "'Claim damages' — требовать возмещения убытков. «Компенсация» в юридическом контексте неточна: 'damages' обозначает именно убытки (возмещение вреда), а не компенсацию в широком смысле.",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The award was rendered by a tribunal constituted under the auspices of the International Chamber of Commerce.",
       "translation": "Решение было вынесено трибуналом, [образованным под эгидой] [Международной торговой палаты] и являющимся [постоянно действующим] [арбитражным органом].",
-      "segments": ["образованным под эгидой", "Международной торговой палаты", "постоянно действующим", "арбитражным органом"],
+      "segments": [
+        "образованным под эгидой",
+        "Международной торговой палаты",
+        "постоянно действующим",
+        "арбитражным органом"
+      ],
       "correct": 2
     },
     "explanation": "В оригинале нет указания на «постоянно действующий» характер трибунала. МТП — арбитражный институт, но трибунал формируется ad hoc для каждого дела. Добавление «постоянно действующим» является ошибочным добавлением.",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The parent company shall be jointly and severally liable for the obligations of its subsidiaries under this Agreement.",
-      "translation": "[Материнская компания] несёт [солидарную ответственность] по обязательствам [дочерних обществ] по [данному договору].",
-      "segments": ["Материнская компания", "солидарную ответственность", "дочерних обществ", "данному договору"],
+      "translation": "[Материнская компания] несёт [солидарную и субсидиарную ответственность] по обязательствам [дочерних обществ] по [данному договору].",
+      "segments": [
+        "Материнская компания",
+        "солидарную и субсидиарную ответственность",
+        "дочерних обществ",
+        "данному договору"
+      ],
       "correct": 1
     },
-    "explanation": "'Jointly and severally liable' — солидарная и субсидиарная ответственность (или просто «солидарно»). В русском праве «солидарная ответственность» означает, что каждый должник несёт ответственность в полном объёме. Перевод должен звучать «несёт солидарную ответственность», однако пропущен элемент 'severally' — раздельная ответственность. Точный перевод: «несёт солидарную ответственность» (что охватывает оба аспекта в российском праве).",
+    "explanation": "«Jointly and severally liable» = «несёт солидарную ответственность» (ГК РФ ст. 322–325: каждый должник отвечает за обязательство в целом). Добавление «субсидиарную» — грубая ошибка: субсидиарная ответственность (ст. 399 ГК РФ) наступает лишь при невозможности исполнения основным должником и не является частью «jointly and severally».",
     "difficulty": 5
   },
   {
-    "topic": "legal", "level": "advanced", "type": "ro", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
     "question": "Расставьте части перевода в правильном порядке:",
     "payload": {
       "source": "In the event that any provision of this Agreement is held by a court of competent jurisdiction to be invalid or unenforceable, such provision shall be modified to the minimum extent necessary to make it valid and enforceable.",
@@ -988,25 +1719,40 @@
         "будет признано судом компетентной юрисдикции недействительным или неисполнимым,",
         "такое положение подлежит изменению в минимально необходимой степени"
       ],
-      "correct_order": [1, 2, 3, 0]
+      "correct_order": [
+        1,
+        2,
+        0
+      ]
     },
-    "explanation": "Правильный порядок: (1) вводная конструкция 'В случае если…', (2) 'будет признано…', (3) повтор начала следствия, (0) окончание. Логика: придаточное условия → главная часть со следствием.",
+    "explanation": "Правильный порядок: «В случае если какое-либо положение настоящего Соглашения → признано недействительным или неисполнимым судом → такое положение подлежит изменению в минимально необходимой степени для обеспечения его действительности и исполнимости.» Сегмент [3] — усечённый вариант-дистрактор сегмента [0].",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The claimant seeks to enforce the arbitral award pursuant to the New York Convention on the Recognition and Enforcement of Foreign Arbitral Awards.",
       "translation": "Истец добивается [принудительного исполнения арбитражного решения] на основании [Нью-Йоркской конвенции] о [признании и исполнении иностранных арбитражных решений] [1958 года].",
-      "segments": ["принудительного исполнения арбитражного решения", "Нью-Йоркской конвенции", "признании и исполнении иностранных арбитражных решений", "1958 года"],
+      "segments": [
+        "принудительного исполнения арбитражного решения",
+        "Нью-Йоркской конвенции",
+        "признании и исполнении иностранных арбитражных решений",
+        "1958 года"
+      ],
       "correct": 3
     },
     "explanation": "В оригинале год (1958) не упомянут. Хотя год является частью полного официального названия конвенции, его добавление в перевод без оснований в исходном тексте является переводческой ошибкой (добавление).",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "ro", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
     "question": "Расставьте части перевода в правильном порядке:",
     "payload": {
       "source": "Notwithstanding any other provision of this Agreement, neither party shall be liable to the other for any indirect, incidental, or consequential damages arising out of or related to this Agreement.",
@@ -1016,37 +1762,61 @@
         "возникающие в связи с настоящим договором или вытекающие из него.",
         "понесённые вследствие нарушения обязательств."
       ],
-      "correct_order": [1, 0, 2, 3]
+      "correct_order": [
+        1,
+        0,
+        2,
+        3
+      ]
     },
     "explanation": "Правильный порядок: (1) вводная оговорка 'Невзирая на…', (0) основное правило об ответственности, (2) 'возникающие в связи с…' — уточнение источника. Сегмент (3) отсутствует в оригинале и является ошибочным добавлением.",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The confidentiality obligations shall survive the termination or expiration of this Agreement for a period of five years.",
       "translation": "Обязательства [о конфиденциальности] сохраняют [силу после прекращения] или [истечения срока действия] настоящего договора в течение [пяти лет с даты заключения].",
-      "segments": ["о конфиденциальности", "силу после прекращения", "истечения срока действия", "пяти лет с даты заключения"],
+      "segments": [
+        "о конфиденциальности",
+        "силу после прекращения",
+        "истечения срока действия",
+        "пяти лет с даты заключения"
+      ],
       "correct": 3
     },
     "explanation": "В оригинале: «в течение пяти лет» после прекращения/истечения срока договора. Перевод ошибочно добавляет «с даты заключения» вместо «с даты прекращения/истечения срока». Это принципиально меняет точку отсчёта срока.",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The parties agree that equitable relief may be sought in any court of competent jurisdiction without the requirement to post bond or other security.",
       "translation": "Стороны договариваются о том, что [судебная защита по праву справедливости] может быть испрошена [в любом суде компетентной юрисдикции] без необходимости [внесения залога] или [иного обеспечения иска].",
-      "segments": ["судебная защита по праву справедливости", "в любом суде компетентной юрисдикции", "внесения залога", "иного обеспечения иска"],
+      "segments": [
+        "судебная защита по праву справедливости",
+        "в любом суде компетентной юрисдикции",
+        "внесения залога",
+        "иного обеспечения иска"
+      ],
       "correct": 0
     },
     "explanation": "'Equitable relief' — средство защиты в форме судебного предписания (прежде всего инджанкшн). Перевод «судебная защита по праву справедливости» — слишком широкая калька. Правильно: «судебный запрет» или «средства защиты по праву справедливости» (инджанкшн и иные неденежные средства защиты).",
     "difficulty": 5
   },
   {
-    "topic": "legal", "level": "advanced", "type": "ro", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
     "question": "Расставьте части перевода в правильном порядке:",
     "payload": {
       "source": "Where a party fails to comply with an award, the other party may apply to a court of competent jurisdiction for enforcement of the award.",
@@ -1056,25 +1826,41 @@
         "за принудительным исполнением решения.",
         "в течение установленного законом срока"
       ],
-      "correct_order": [1, 0, 2, 3]
+      "correct_order": [
+        1,
+        0,
+        2,
+        3
+      ]
     },
     "explanation": "Правильный порядок: (1) условие 'В случае если…', (0) 'другая сторона вправе обратиться…', (2) 'за принудительным исполнением'. Сегмент (3) отсутствует в оригинале и является ошибочным добавлением.",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The governing law of this agreement is English law, and all disputes shall be submitted to the exclusive jurisdiction of the English courts.",
       "translation": "Применимым правом настоящего договора является [английское право], и все споры [передаются на рассмотрение] [исключительно в] [лондонские суды].",
-      "segments": ["английское право", "передаются на рассмотрение", "исключительно в", "лондонские суды"],
+      "segments": [
+        "английское право",
+        "передаются на рассмотрение",
+        "исключительно в",
+        "лондонские суды"
+      ],
       "correct": 3
     },
     "explanation": "'English courts' — суды Англии (и Уэльса), а не «лондонские суды». Лондон — лишь один город, тогда как суды Англии охватывают всю юрисдикцию Англии и Уэльса.",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "ro", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
     "question": "Расставьте части перевода в правильном порядке:",
     "payload": {
       "source": "The obligation to indemnify shall not apply to losses caused by the gross negligence or wilful misconduct of the indemnified party.",
@@ -1084,37 +1870,61 @@
         "Обязательство по возмещению убытков",
         "в ходе исполнения настоящего договора"
       ],
-      "correct_order": [2, 0, 1, 3]
+      "correct_order": [
+        2,
+        0,
+        1,
+        3
+      ]
     },
     "explanation": "Правильный порядок: (2) подлежащее 'Обязательство…', (0) 'не применяется к убыткам, причинённым', (1) 'грубой небрежностью…'. Сегмент (3) отсутствует в оригинале.",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The Seller warrants that the goods are free from encumbrances and that good title will pass to the Buyer on delivery.",
       "translation": "Продавец [гарантирует], что товар [не обременён] правами третьих лиц и что [право собственности] перейдёт к Покупателю [при подписании акта приёма-передачи].",
-      "segments": ["гарантирует", "не обременён", "право собственности", "при подписании акта приёма-передачи"],
+      "segments": [
+        "гарантирует",
+        "не обременён",
+        "право собственности",
+        "при подписании акта приёма-передачи"
+      ],
       "correct": 3
     },
     "explanation": "'On delivery' — при поставке (при передаче товара), а не «при подписании акта приёма-передачи». Акт приёма-передачи — это российская процедура; в оригинале речь идёт о физической передаче товара (delivery).",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The parties shall attempt to resolve disputes through good faith negotiation before initiating arbitration proceedings.",
       "translation": "Стороны предпринимают попытки урегулировать споры посредством [переговоров, основанных на принципе добросовестности,] [до инициирования] [арбитражного разбирательства], [при содействии посредника].",
-      "segments": ["переговоров, основанных на принципе добросовестности,", "до инициирования", "арбитражного разбирательства", "при содействии посредника"],
+      "segments": [
+        "переговоров, основанных на принципе добросовестности,",
+        "до инициирования",
+        "арбитражного разбирательства",
+        "при содействии посредника"
+      ],
       "correct": 3
     },
     "explanation": "В оригинале нет упоминания посредника. 'Good faith negotiation' — переговоры добросовестно, без участия посредника. Добавление «при содействии посредника» является ошибочным добавлением, изменяющим смысл.",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "ro", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
     "question": "Расставьте части перевода в правильном порядке:",
     "payload": {
       "source": "A state may not invoke the provisions of its internal law as justification for its failure to perform a treaty.",
@@ -1124,37 +1934,61 @@
         "при условии соблюдения положений настоящей Конвенции",
         "в качестве оправдания неисполнения обязательств по международному договору."
       ],
-      "correct_order": [1, 3, 0, 2]
+      "correct_order": [
+        1,
+        3,
+        0,
+        2
+      ]
     },
-    "explanation": "Правильный порядок по смыслу Венской конвенции о праве международных договоров (ст. 27): (1) субъект + запрет, затем (3) или (0) — уточнение. Сегмент (2) отсутствует в данной норме.",
+    "explanation": "Правильный порядок: «Государство не вправе → ссылаться на положения своего внутреннего законодательства → в качестве оправдания неисполнения обязательств по международному договору.» (ст. 27 Венской конвенции о праве международных договоров). Сегмент [0] («как основание для невыполнения договора») — устаревший/неполный дубль сегмента [3], его включение создало бы повтор. Сегмент [2] отражает смысл, отсутствующий в источнике.",
     "difficulty": 5
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The patent confers on its proprietor the exclusive right to exploit the invention within the territory of the granting state.",
       "translation": "Патент предоставляет [его правообладателю] исключительное право [эксплуатировать изобретение] [на территории государства,] [выдавшего патент].",
-      "segments": ["его правообладателю", "эксплуатировать изобретение", "на территории государства,", "выдавшего патент"],
+      "segments": [
+        "его правообладателю",
+        "эксплуатировать изобретение",
+        "на территории государства,",
+        "выдавшего патент"
+      ],
       "correct": 1
     },
     "explanation": "'Exploit the invention' в патентном праве переводится как «использовать изобретение», а не «эксплуатировать». «Эксплуатировать» имеет отрицательную коннотацию и неточно отражает патентно-правовой термин «использование».",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The doctrine of promissory estoppel prevents a party from reneging on a promise upon which the other party has relied to its detriment.",
       "translation": "Доктрина [промиссорного эстоппеля] не позволяет стороне [отказаться от обещания], [на которое другая сторона полагалась] [в ущерб своим интересам].",
-      "segments": ["промиссорного эстоппеля", "отказаться от обещания", "на которое другая сторона полагалась", "в ущерб своим интересам"],
+      "segments": [
+        "промиссорного эстоппеля",
+        "отказаться от обещания",
+        "на которое другая сторона полагалась",
+        "в ущерб своим интересам"
+      ],
       "correct": 1
     },
     "explanation": "'Renege on a promise' — отречься от обещания / нарушить данное обещание. «Отказаться от обещания» — слишком мягко и неточно: слово 'renege' подчёркивает одностороннее нарушение данного слова.",
     "difficulty": 5
   },
   {
-    "topic": "legal", "level": "advanced", "type": "ro", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
     "question": "Расставьте части перевода в правильном порядке:",
     "payload": {
       "source": "The Host State shall accord fair and equitable treatment to investments and shall not impair by unreasonable measures their management, maintenance, use, enjoyment or disposal.",
@@ -1164,37 +1998,61 @@
         "Государство пребывания обеспечивает справедливый и равноправный режим в отношении инвестиций",
         "со стороны иностранных инвесторов на своей территории."
       ],
-      "correct_order": [2, 0, 1, 3]
+      "correct_order": [
+        2,
+        0,
+        1,
+        3
+      ]
     },
     "explanation": "Правильный порядок: (2) главная часть об обязательстве государства, (0) «и не будет препятствовать…», (1) перечень прав. Сегмент (3) отсутствует в оригинале и является ошибочным добавлением.",
     "difficulty": 5
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The court of appeals affirmed the lower court's decision dismissing the claims on grounds of lack of personal jurisdiction.",
       "translation": "Апелляционный суд [подтвердил решение суда первой инстанции] об [отклонении исков] по основанию [отсутствия личной юрисдикции] [над ответчиком].",
-      "segments": ["подтвердил решение суда первой инстанции", "отклонении исков", "отсутствия личной юрисдикции", "над ответчиком"],
+      "segments": [
+        "подтвердил решение суда первой инстанции",
+        "отклонении исков",
+        "отсутствия личной юрисдикции",
+        "над ответчиком"
+      ],
       "correct": 3
     },
     "explanation": "Добавление «над ответчиком» не содержится в оригинале. Хотя это логически вытекает из контекста, переводчик не должен добавлять смысловые элементы без основания в исходном тексте.",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The treaty shall enter into force thirty days after the date of deposit of the second instrument of ratification.",
       "translation": "Договор [вступает в силу] через тридцать дней [после] [даты сдачи на хранение] [второго ратификационного акта].",
-      "segments": ["вступает в силу", "после", "даты сдачи на хранение", "второго ратификационного акта"],
+      "segments": [
+        "вступает в силу",
+        "после",
+        "даты сдачи на хранение",
+        "второго ратификационного акта"
+      ],
       "correct": 3
     },
     "explanation": "'Instrument of ratification' — ратификационная грамота, а не «ратификационный акт». «Ратификационная грамота» — официальный дипломатический термин для документа, удостоверяющего ратификацию.",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "ro", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
     "question": "Расставьте части перевода в правильном порядке:",
     "payload": {
       "source": "The investor may choose to submit the dispute either to the domestic courts of the Host State or to international arbitration.",
@@ -1204,37 +2062,61 @@
         "либо во внутренние суды Государства пребывания,",
         "в зависимости от характера нарушения."
       ],
-      "correct_order": [1, 2, 0, 3]
+      "correct_order": [
+        1,
+        2,
+        0,
+        3
+      ]
     },
     "explanation": "Правильный порядок: (1) субъект и право выбора, (2) первый вариант «либо во внутренние суды», (0) второй вариант «либо в международный арбитраж». Сегмент (3) отсутствует в оригинале.",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The arbitral proceedings shall be conducted in English, and all pleadings, evidence and submissions shall be in English or accompanied by a certified translation.",
       "translation": "Арбитражное разбирательство ведётся на английском языке, и все [состязательные бумаги,] [доказательства и заявления] должны быть [на английском языке] или [сопровождаться нотариально заверенным переводом].",
-      "segments": ["состязательные бумаги,", "доказательства и заявления", "на английском языке", "сопровождаться нотариально заверенным переводом"],
+      "segments": [
+        "состязательные бумаги,",
+        "доказательства и заявления",
+        "на английском языке",
+        "сопровождаться нотариально заверенным переводом"
+      ],
       "correct": 3
     },
     "explanation": "'Certified translation' — заверенный перевод (перевод, удостоверенный переводчиком или бюро переводов). «Нотариально заверенный перевод» ('notarially certified/notarised translation') — более узкое и неточное понятие.",
     "difficulty": 5
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "Punitive damages are not available for breach of contract claims under English law.",
       "translation": "[Штрафные убытки] не взыскиваются [по требованиям о нарушении договора] [согласно английскому праву] [при наличии умысла ответчика].",
-      "segments": ["Штрафные убытки", "по требованиям о нарушении договора", "согласно английскому праву", "при наличии умысла ответчика"],
+      "segments": [
+        "Штрафные убытки",
+        "по требованиям о нарушении договора",
+        "согласно английскому праву",
+        "при наличии умысла ответчика"
+      ],
       "correct": 3
     },
     "explanation": "В оригинале нет условия «при наличии умысла ответчика». Английское право действительно не допускает штрафных убытков за нарушение договора — безусловно, а не в зависимости от умысла. Добавление этого условия искажает норму.",
     "difficulty": 5
   },
   {
-    "topic": "legal", "level": "advanced", "type": "ro", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
     "question": "Расставьте части перевода в правильном порядке:",
     "payload": {
       "source": "A party invoking force majeure must notify the other party promptly and take all reasonable steps to overcome the impediment.",
@@ -1244,37 +2126,61 @@
         "Сторона, ссылающаяся на форс-мажор,",
         "с указанием срока действия обстоятельств."
       ],
-      "correct_order": [2, 1, 0, 3]
+      "correct_order": [
+        2,
+        1,
+        0,
+        3
+      ]
     },
     "explanation": "Правильный порядок: (2) «Сторона, ссылающаяся на форс-мажор,», (1) «должна незамедлительно уведомить…», (0) «и принять все разумные меры…». Сегмент (3) отсутствует в оригинале.",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The contract was vitiated by misrepresentation, and the innocent party is entitled to rescind the agreement.",
       "translation": "Договор был [опорочен] [введением в заблуждение], и [добросовестная сторона] вправе [расторгнуть] соглашение.",
-      "segments": ["опорочен", "введением в заблуждение", "добросовестная сторона", "расторгнуть"],
+      "segments": [
+        "опорочен",
+        "введением в заблуждение",
+        "добросовестная сторона",
+        "расторгнуть"
+      ],
       "correct": 3
     },
     "explanation": "'Rescind' — аннулировать, признать недействительным (с возвратом сторон в первоначальное положение). Это не то же самое, что «расторгнуть» ('terminate'). «Расторжение» действует на будущее, тогда как 'rescission' аннулирует договор с момента его заключения.",
     "difficulty": 5
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The court granted a Mareva injunction freezing the defendant's assets pending the outcome of the proceedings.",
       "translation": "Суд выдал [инджанкшн Марева,] [замораживающий активы ответчика] [до завершения разбирательства] [по ходатайству истца].",
-      "segments": ["инджанкшн Марева,", "замораживающий активы ответчика", "до завершения разбирательства", "по ходатайству истца"],
+      "segments": [
+        "инджанкшн Марева,",
+        "замораживающий активы ответчика",
+        "до завершения разбирательства",
+        "по ходатайству истца"
+      ],
       "correct": 3
     },
     "explanation": "Оригинал не содержит «по ходатайству истца». Хотя процессуально инджанкшн выдаётся по заявлению стороны, добавление этой фразы является переводческим добавлением без основания в тексте.",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "ro", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
     "question": "Расставьте части перевода в правильном порядке:",
     "payload": {
       "source": "Under the principle of pacta sunt servanda, treaties in force are binding upon the parties thereto and must be performed by them in good faith.",
@@ -1284,37 +2190,61 @@
         "и должны ими добросовестно исполняться.",
         "при условии их регистрации в Секретариате ООН."
       ],
-      "correct_order": [1, 0, 2, 3]
+      "correct_order": [
+        1,
+        0,
+        2,
+        3
+      ]
     },
     "explanation": "Правильный порядок: (1) «согласно принципу…», (0) главное утверждение, (2) «и должны исполняться». Сегмент (3) отсутствует в оригинале и является ошибочным добавлением.",
     "difficulty": 5
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The choice of forum clause shall be exclusive and the parties submit to the personal jurisdiction of the chosen court.",
       "translation": "Оговорка о выборе [форума является исключительной,] и стороны [подчиняются персональной юрисдикции] [избранного суда] [в отношении всех споров].",
-      "segments": ["форума является исключительной,", "подчиняются персональной юрисдикции", "избранного суда", "в отношении всех споров"],
+      "segments": [
+        "форума является исключительной,",
+        "подчиняются персональной юрисдикции",
+        "избранного суда",
+        "в отношении всех споров"
+      ],
       "correct": 3
     },
     "explanation": "В оригинале нет ограничения «в отношении всех споров». Оговорка относится к юрисдикции как таковой. Добавление «в отношении всех споров» является ошибочным расширением смысла.",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The assignor represents and warrants that it has full power and authority to assign all of its rights and obligations under this Agreement.",
       "translation": "[Цедент] заверяет и гарантирует, что [обладает полной правоспособностью и полномочиями] для [переуступки всех своих прав и обязанностей] по [данному договору].",
-      "segments": ["Цедент", "обладает полной правоспособностью и полномочиями", "переуступки всех своих прав и обязанностей", "данному договору"],
+      "segments": [
+        "Цедент",
+        "обладает полной правоспособностью и полномочиями",
+        "переуступки всех своих прав и обязанностей",
+        "данному договору"
+      ],
       "correct": 2
     },
     "explanation": "'Assign rights and obligations' — уступить права и перевести обязанности. «Переуступка» — это повторная уступка (уступка уже уступленного права), что является неточным термином. Правильно: «уступки прав и перевода обязанностей».",
     "difficulty": 5
   },
   {
-    "topic": "legal", "level": "advanced", "type": "ro", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
     "question": "Расставьте части перевода в правильном порядке:",
     "payload": {
       "source": "Any dispute arising out of or in connection with this contract, including any question regarding its existence, validity or termination, shall be referred to and finally resolved by arbitration under the LCIA Rules.",
@@ -1324,58 +2254,93 @@
         "подлежит передаче на рассмотрение и окончательное разрешение в арбитраж в соответствии с Регламентом ЛМАС.",
         "по взаимному согласию сторон."
       ],
-      "correct_order": [1, 0, 2, 3]
+      "correct_order": [
+        1,
+        0,
+        2,
+        3
+      ]
     },
     "explanation": "Правильный порядок: (1) главная часть с определением спора, (0) уточняющее включение, (2) следствие — передача в арбитраж. Сегмент (3) отсутствует в оригинале.",
     "difficulty": 5
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'force majeure event' в договоре?",
     "payload": {
-      "options": ["Событие непреодолимой силы", "Чрезвычайное происшествие", "Непредвиденное обстоятельство", "Форс-мажорный случай"],
+      "options": [
+        "Событие непреодолимой силы",
+        "Чрезвычайное происшествие",
+        "Непредвиденное обстоятельство",
+        "Форс-мажорный случай"
+      ],
       "correct": 0
     },
     "explanation": "'Force majeure event' — событие непреодолимой силы (форс-мажорное событие). Термин «обстоятельства непреодолимой силы» используется в более широком смысле.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'umbrella clause' в инвестиционном праве?",
     "payload": {
-      "options": ["Общая оговорка", "Зонтичная оговорка", "Оговорка о наибольшем благоприятствовании", "Защитная оговорка"],
+      "options": [
+        "Общая оговорка",
+        "Зонтичная оговорка",
+        "Оговорка о наибольшем благоприятствовании",
+        "Защитная оговорка"
+      ],
       "correct": 1
     },
     "explanation": "'Umbrella clause' — зонтичная оговорка: положение международного инвестиционного договора, переводящее нарушение контракта в нарушение международного договора.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "bt", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
     "question": "Выберите лучший перевод:",
     "payload": {
       "source": "The respondent denies all allegations and counterclaims for damages in the amount of USD 2 million.",
       "options": [
         "Ответчик отрицает все обвинения и подаёт встречный иск о возмещении убытков в размере 2 миллионов долларов США.",
-        "Ответная сторона опровергает все утверждения и предъявляет встречные требования о взыскании убытков на сумму 2 000 000 долларов США.",
+        "Ответчик опровергает все утверждения и предъявляет встречные требования о взыскании убытков на сумму 2 000 000 долларов США.",
         "Ответчик отклоняет все претензии и выдвигает контртребование о компенсации в 2 миллиона долларов."
       ],
       "correct": 1
     },
-    "explanation": "Вариант 2 точен: «опровергает» точнее для 'denies'; «предъявляет встречные требования» — юридически точная формулировка; сумма прописана формально. Вариант 1 — «обвинения» (accusations) вместо «утверждений» (allegations). Вариант 3 — «контртребование» — устаревшее слово.",
+    "explanation": "«Respondent» в международном арбитраже и судопроизводстве = «ответчик» (используется в ICC, LCIA, МКАС, ППТРФ). «Ответная сторона» не является устоявшимся юридическим термином. «Allegations» = «утверждения» (в правовом контексте), не «обвинения» (которые относятся к уголовному праву).",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'letter of intent' в корпоративном праве?",
     "payload": {
-      "options": ["Намеренное письмо", "Письмо о намерениях", "Протокол о намерениях", "Уведомление о намерении"],
+      "options": [
+        "Намеренное письмо",
+        "Письмо о намерениях",
+        "Протокол о намерениях",
+        "Уведомление о намерении"
+      ],
       "correct": 1
     },
     "explanation": "'Letter of intent' — письмо о намерениях: документ, фиксирующий намерение стороны заключить сделку. Отличается от 'MOU' (протокол о взаимопонимании) тем, что исходит от одной стороны.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "bt", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
     "question": "Выберите лучший перевод:",
     "payload": {
       "source": "The non-disclosure agreement prohibits the receiving party from disclosing confidential information to third parties.",
@@ -1390,17 +2355,28 @@
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'most favoured nation' (MFN) в международном торговом праве?",
     "payload": {
-      "options": ["Наиболее любимая нация", "Режим наибольшего благоприятствования", "Приоритетный торговый партнёр", "Преференциальный торговый режим"],
+      "options": [
+        "Наиболее любимая нация",
+        "Режим наибольшего благоприятствования",
+        "Приоритетный торговый партнёр",
+        "Преференциальный торговый режим"
+      ],
       "correct": 1
     },
     "explanation": "'Most favoured nation' — режим наибольшего благоприятствования: обязательство предоставлять другой стране не менее благоприятные условия, чем любой третьей стране.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "bt", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
     "question": "Выберите лучший перевод:",
     "payload": {
       "source": "The tribunal found that the state breached its obligation of fair and equitable treatment under the bilateral investment treaty.",
@@ -1415,20 +2391,37 @@
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'full protection and security' в инвестиционных договорах?",
     "payload": {
-      "options": ["Полная безопасность и охрана", "Полная защита и безопасность", "Максимальная правовая защита", "Физическая защита инвестиций"],
+      "options": [
+        "Полная безопасность и охрана",
+        "Полная защита и безопасность",
+        "Максимальная правовая защита",
+        "Физическая защита инвестиций"
+      ],
       "correct": 1
     },
     "explanation": "'Full protection and security' — полная защита и безопасность: стандартный стандарт защиты в международных инвестиционных договорах.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "tm", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "tm",
+    "lang": "en",
     "question": "Сопоставьте термины деликтного права:",
     "payload": {
-      "left": ["Negligence", "Strict liability", "Duty of care", "Causation", "Remoteness of damage"],
+      "left": [
+        "Negligence",
+        "Strict liability",
+        "Duty of care",
+        "Causation",
+        "Remoteness of damage"
+      ],
       "right": [
         "Отдалённость ущерба (разрыв причинно-следственной связи)",
         "Обязанность проявлять должную осмотрительность",
@@ -1436,13 +2429,37 @@
         "Причинно-следственная связь",
         "Небрежность"
       ],
-      "pairs": [[0,4],[1,2],[2,1],[3,3],[4,0]]
+      "pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          0
+        ]
+      ]
     },
     "explanation": "Negligence — небрежность; Strict liability — ответственность без вины; Duty of care — обязанность осмотрительности; Causation — причинность; Remoteness — отдалённость ущерба.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "bt", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
     "question": "Выберите лучший перевод:",
     "payload": {
       "source": "The parties acknowledge that damages would be an inadequate remedy and that injunctive relief may be sought.",
@@ -1457,17 +2474,28 @@
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'set-off' в договорном праве?",
     "payload": {
-      "options": ["Отступное", "Зачёт требований", "Освобождение от долга", "Уступка права требования"],
+      "options": [
+        "Отступное",
+        "Зачёт требований",
+        "Освобождение от долга",
+        "Уступка права требования"
+      ],
       "correct": 1
     },
     "explanation": "'Set-off' — зачёт требований: погашение встречных однородных требований в части, соответствующей наименьшему из них.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "bt", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
     "question": "Выберите лучший перевод:",
     "payload": {
       "source": "The company must register its trade mark in each jurisdiction where it seeks protection.",
@@ -1482,17 +2510,28 @@
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
     "question": "Что означает 'choice of law clause'?",
     "payload": {
-      "options": ["Оговорка о применимом праве", "Арбитражная оговорка", "Оговорка о форуме", "Юрисдикционная оговорка"],
+      "options": [
+        "Оговорка о применимом праве",
+        "Арбитражная оговорка",
+        "Оговорка о форуме",
+        "Юрисдикционная оговорка"
+      ],
       "correct": 0
     },
     "explanation": "'Choice of law clause' — оговорка о применимом праве (выборе права): положение договора, определяющее, право какого государства регулирует договор.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "bt", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "bt",
+    "lang": "en",
     "question": "Выберите лучший перевод:",
     "payload": {
       "source": "The UN Security Council Resolution imposes an arms embargo on all parties to the conflict.",
@@ -1507,20 +2546,37 @@
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'frustration of contract' в английском договорном праве?",
     "payload": {
-      "options": ["Нарушение договора", "Тщетность договора", "Неисполнение договора", "Расторжение договора"],
+      "options": [
+        "Нарушение договора",
+        "Тщетность договора",
+        "Неисполнение договора",
+        "Расторжение договора"
+      ],
       "correct": 1
     },
     "explanation": "'Frustration of contract' — тщетность договора: доктрина английского права, позволяющая освободить стороны от обязательств при наступлении непредвиденных обстоятельств, делающих исполнение невозможным.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "tm", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "tm",
+    "lang": "en",
     "question": "Сопоставьте термины IP-права с их определениями:",
     "payload": {
-      "left": ["Patent", "Trade mark", "Copyright", "Trade secret", "Licence"],
+      "left": [
+        "Patent",
+        "Trade mark",
+        "Copyright",
+        "Trade secret",
+        "Licence"
+      ],
       "right": [
         "Разрешение правообладателя использовать объект ИС на определённых условиях",
         "Исключительное право на изобретение, выданное государством",
@@ -1528,37 +2584,77 @@
         "Исключительное право автора на произведение науки, литературы или искусства",
         "Обозначение, служащее для индивидуализации товаров или услуг"
       ],
-      "pairs": [[0,1],[1,4],[2,3],[3,2],[4,0]]
+      "pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          0
+        ]
+      ]
     },
     "explanation": "Patent — патент; Trade mark — товарный знак; Copyright — авторское право; Trade secret — коммерческая тайна; Licence — лицензия.",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The arbitrators shall decide ex aequo et bono only if the parties have expressly authorised them to do so.",
       "translation": "Арбитры вправе принимать решение [ex aequo et bono] только в том случае, если [стороны прямо уполномочили их] на [это] [в соответствии с применимым правом].",
-      "segments": ["ex aequo et bono", "стороны прямо уполномочили их", "это", "в соответствии с применимым правом"],
+      "segments": [
+        "ex aequo et bono",
+        "стороны прямо уполномочили их",
+        "это",
+        "в соответствии с применимым правом"
+      ],
       "correct": 3
     },
     "explanation": "В оригинале нет условия «в соответствии с применимым правом». Добавление этой фразы искажает смысл: решение ex aequo et bono принимается именно вне рамок применимого права — по справедливости, а не по правовым нормам.",
     "difficulty": 5
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The court may pierce the corporate veil where it is satisfied that the subsidiary is a mere facade concealing the true facts.",
       "translation": "Суд вправе [проколоть корпоративную вуаль,] если убеждён, что дочерняя компания является [лишь фасадом,] скрывающим [истинное положение дел] [и злоупотреблением корпоративной формой].",
-      "segments": ["проколоть корпоративную вуаль,", "лишь фасадом,", "истинное положение дел", "и злоупотреблением корпоративной формой"],
+      "segments": [
+        "проколоть корпоративную вуаль,",
+        "лишь фасадом,",
+        "истинное положение дел",
+        "и злоупотреблением корпоративной формой"
+      ],
       "correct": 3
     },
     "explanation": "В оригинале нет «злоупотребления корпоративной формой». Это концептуально связанное, но отдельное основание. Оригинал ограничивается «сокрытием истинных фактов», добавление изменяет правовой критерий.",
     "difficulty": 5
   },
   {
-    "topic": "legal", "level": "advanced", "type": "ro", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
     "question": "Расставьте части перевода в правильном порядке:",
     "payload": {
       "source": "The obligation to pay compensation shall arise upon the date on which the expropriation takes effect, whether or not the amount has been determined.",
@@ -1568,37 +2664,61 @@
         "с даты вступления в силу экспроприации,",
         "при условии предварительного уведомления собственника."
       ],
-      "correct_order": [1, 2, 0, 3]
+      "correct_order": [
+        1,
+        2,
+        0,
+        3
+      ]
     },
     "explanation": "Правильный порядок: (1) «Обязательство…возникает», (2) «с даты…», (0) «независимо от…». Сегмент (3) отсутствует в оригинале.",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The principle of non-refoulement prohibits the expulsion or return of a refugee to a territory where they may face persecution.",
       "translation": "Принцип [невысылки] запрещает [высылку или возвращение] беженца [на территорию,] где ему [может грозить уголовное преследование].",
-      "segments": ["невысылки", "высылку или возвращение", "на территорию,", "может грозить уголовное преследование"],
+      "segments": [
+        "невысылки",
+        "высылку или возвращение",
+        "на территорию,",
+        "может грозить уголовное преследование"
+      ],
       "correct": 3
     },
     "explanation": "'Persecution' — преследование (политическое, расовое, религиозное и т.д.), а не «уголовное преследование» ('prosecution'). Это типичная «ложная пара»: persecution ≠ prosecution.",
     "difficulty": 5
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The company is required to file annual returns with the Registrar of Companies within 28 days of its annual general meeting.",
       "translation": "Компания обязана [подавать ежегодные отчёты] в [Регистрационную палату] [в течение 28 дней] [после проведения очередного общего собрания].",
-      "segments": ["подавать ежегодные отчёты", "Регистрационную палату", "в течение 28 дней", "после проведения очередного общего собрания"],
+      "segments": [
+        "подавать ежегодные отчёты",
+        "Регистрационную палату",
+        "в течение 28 дней",
+        "после проведения очередного общего собрания"
+      ],
       "correct": 1
     },
     "explanation": "'Registrar of Companies' — Регистратор компаний (должностное лицо), а не «Регистрационная палата» (Companies House — это само ведомство). В британской системе Registrar of Companies — конкретный орган/должность.",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "ro", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
     "question": "Расставьте части перевода в правильном порядке:",
     "payload": {
       "source": "An offer may be revoked at any time before acceptance, provided that the revocation reaches the offeree before they have dispatched their acceptance.",
@@ -1608,37 +2728,61 @@
         "если оферент направит письменное уведомление об отзыве.",
         "в соответствии с нормами договорного права."
       ],
-      "correct_order": [1, 0, 2, 3]
+      "correct_order": [
+        1,
+        0,
+        2,
+        3
+      ]
     },
     "explanation": "Правильный порядок: (1) «Оферта может быть отозвана…», (0) условие об отзыве. Сегменты (2) и (3) отсутствуют в оригинале.",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The tribunal has jurisdiction ratione materiae over claims arising under the treaty.",
       "translation": "Трибунал обладает юрисдикцией [ratione materiae] в отношении [требований, вытекающих из] [международного договора] [по выбору истца].",
-      "segments": ["ratione materiae", "требований, вытекающих из", "международного договора", "по выбору истца"],
+      "segments": [
+        "ratione materiae",
+        "требований, вытекающих из",
+        "международного договора",
+        "по выбору истца"
+      ],
       "correct": 3
     },
     "explanation": "В оригинале нет «по выбору истца». Юрисдикция ratione materiae определяется предметом спора, а не усмотрением истца. Добавление меняет правовой смысл нормы.",
     "difficulty": 5
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The contract contains an entire agreement clause which supersedes all prior representations and warranties.",
       "translation": "Договор содержит [оговорку о полноте договора,] которая [отменяет все предшествующие] [заверения и гарантии] [относительно предмета договора].",
-      "segments": ["оговорку о полноте договора,", "отменяет все предшествующие", "заверения и гарантии", "относительно предмета договора"],
+      "segments": [
+        "оговорку о полноте договора,",
+        "отменяет все предшествующие",
+        "заверения и гарантии",
+        "относительно предмета договора"
+      ],
       "correct": 3
     },
     "explanation": "В оригинале нет «относительно предмета договора». Оговорка о полноте договора отменяет все предшествующие заверения без ограничения предметом. Добавление сужает сферу действия оговорки.",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "ro", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
     "question": "Расставьте части перевода в правильном порядке:",
     "payload": {
       "source": "Sanctions designations may be challenged by way of judicial review before the competent national courts or before the Court of Justice of the European Union.",
@@ -1648,37 +2792,61 @@
         "путём подачи заявления о судебном контроле",
         "в течение трёхмесячного срока с момента уведомления."
       ],
-      "correct_order": [1, 2, 0, 3]
+      "correct_order": [
+        1,
+        2,
+        0,
+        3
+      ]
     },
     "explanation": "Правильный порядок: (1) «Включение…может быть оспорено», (2) «путём подачи заявления…», (0) «перед компетентным судом…». Сегмент (3) отсутствует в оригинале.",
     "difficulty": 5
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The doctrine of abuse of process prevents a party from relitigating an issue already decided by a court.",
       "translation": "Доктрина [злоупотребления процессом] не позволяет стороне [повторно рассматривать] в суде вопрос, [уже разрешённый судом,] [за исключением случаев появления новых доказательств].",
-      "segments": ["злоупотребления процессом", "повторно рассматривать", "уже разрешённый судом,", "за исключением случаев появления новых доказательств"],
+      "segments": [
+        "злоупотребления процессом",
+        "повторно рассматривать",
+        "уже разрешённый судом,",
+        "за исключением случаев появления новых доказательств"
+      ],
       "correct": 3
     },
     "explanation": "В оригинале нет исключения для «новых доказательств». Доктрина abuse of process не допускает повторного рассмотрения как такового; добавление исключения искажает содержание доктрины.",
     "difficulty": 5
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The term 'confidential information' shall not include information that is or becomes publicly available through no fault of the receiving party.",
       "translation": "Термин «конфиденциальная информация» [не включает] информацию, которая [является или становится] общедоступной [не по вине] [получающей стороны в момент раскрытия].",
-      "segments": ["не включает", "является или становится", "не по вине", "получающей стороны в момент раскрытия"],
+      "segments": [
+        "не включает",
+        "является или становится",
+        "не по вине",
+        "получающей стороны в момент раскрытия"
+      ],
       "correct": 3
     },
     "explanation": "В оригинале нет уточнения «в момент раскрытия». Добавление этого временного ограничения сужает исключение: по оригиналу оно действует постоянно, а не только в момент раскрытия.",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "ro", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
     "question": "Расставьте части перевода в правильном порядке:",
     "payload": {
       "source": "Where a tribunal lacks jurisdiction, any award rendered shall be void and unenforceable.",
@@ -1688,47 +2856,79 @@
         "если иное не предусмотрено применимым правом.",
         "при условии надлежащего уведомления сторон."
       ],
-      "correct_order": [1, 0, 2, 3]
+      "correct_order": [
+        1,
+        0,
+        2,
+        3
+      ]
     },
     "explanation": "Правильный порядок: (1) «В случае отсутствия…», (0) следствие «любое решение является ничтожным». Сегменты (2) и (3) отсутствуют в оригинале.",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The claimant bears the burden of proving its loss on the balance of probabilities.",
       "translation": "Истец несёт бремя доказывания своих [убытков] [по стандарту] [равновесия вероятностей] [по каждому из предъявленных требований].",
-      "segments": ["убытков", "по стандарту", "равновесия вероятностей", "по каждому из предъявленных требований"],
+      "segments": [
+        "убытков",
+        "по стандарту",
+        "равновесия вероятностей",
+        "по каждому из предъявленных требований"
+      ],
       "correct": 2
     },
     "explanation": "'Balance of probabilities' — перевес доказательств (в гражданском процессе). «Равновесие вероятностей» — неточная калька: под этим стандартом имеется в виду перевес вероятности одного факта над другим, а не их равенство.",
     "difficulty": 5
   },
   {
-    "topic": "legal", "level": "intermediate", "type": "mc", "lang": "en",
+    "topic": "legal",
+    "level": "intermediate",
+    "type": "mc",
+    "lang": "en",
     "question": "Как переводится 'force of law' применительно к судебному решению?",
     "payload": {
-      "options": ["Законная сила", "Принудительная сила", "Обязательная сила", "Юридическая сила"],
-      "correct": 3
+      "options": [
+        "Законная сила",
+        "Принудительная сила",
+        "Обязательная сила",
+        "Юридическая сила"
+      ],
+      "correct": 0
     },
-    "explanation": "'Force of law' — юридическая сила: свойство нормативного или судебного акта быть обязательным и влечь правовые последствия.",
+    "explanation": "Применительно к судебному решению используется термин «законная сила» (ГПК РФ ст. 209, АПК РФ ст. 180): «решение вступает в законную силу». «Юридическая сила» — общий термин для любых правовых актов (законов, договоров). В процессуальном контексте корректен только термин «законная сила».",
     "difficulty": 3
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The expropriation of foreign investment must be accompanied by prompt, adequate and effective compensation.",
       "translation": "Экспроприация иностранных инвестиций должна сопровождаться [своевременной,] [достаточной] и [эффективной компенсацией] [в конвертируемой валюте].",
-      "segments": ["своевременной,", "достаточной", "эффективной компенсацией", "в конвертируемой валюте"],
+      "segments": [
+        "своевременной,",
+        "достаточной",
+        "эффективной компенсацией",
+        "в конвертируемой валюте"
+      ],
       "correct": 3
     },
     "explanation": "В оригинале не упоминается конвертируемая валюта. Добавление «в конвертируемой валюте» — переводческое добавление, изменяющее стандарт Hull Formula ('prompt, adequate and effective'), закреплённый в международном инвестиционном праве.",
     "difficulty": 5
   },
   {
-    "topic": "legal", "level": "advanced", "type": "ro", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
     "question": "Расставьте части перевода в правильном порядке:",
     "payload": {
       "source": "The winding up of a company may be ordered by the court where it is just and equitable to do so.",
@@ -1738,37 +2938,61 @@
         "после погашения всех долгов компании.",
         "по заявлению любого кредитора."
       ],
-      "correct_order": [1, 0, 2, 3]
+      "correct_order": [
+        1,
+        0,
+        2,
+        3
+      ]
     },
     "explanation": "Правильный порядок: (1) «Ликвидация…может быть назначена судом», (0) условие «если суд сочтёт…». Сегменты (2) и (3) отсутствуют в оригинале.",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The right of first refusal grants the holder the opportunity to match any offer made by a third party before the asset is sold.",
       "translation": "Право [преимущественного выкупа] предоставляет его обладателю возможность [сравняться с любым предложением] третьей стороны до [продажи актива] [в течение 30 дней].",
-      "segments": ["преимущественного выкупа", "сравняться с любым предложением", "продажи актива", "в течение 30 дней"],
+      "segments": [
+        "преимущественного выкупа",
+        "сравняться с любым предложением",
+        "продажи актива",
+        "в течение 30 дней"
+      ],
       "correct": 3
     },
     "explanation": "В оригинале нет «в течение 30 дней». Срок реализации права преимущественного выкупа устанавливается договором, но в данном предложении он не указан. Добавление конкретного срока — переводческая ошибка.",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "A unilateral declaration by a state may create binding obligations under international law if the declaration is made publicly and with an intent to be bound.",
       "translation": "Одностороннее заявление государства может порождать [обязывающие обязательства] [по международному праву,] если заявление сделано [публично] и [с намерением связать себя обязательствами].",
-      "segments": ["обязывающие обязательства", "по международному праву,", "публично", "с намерением связать себя обязательствами"],
+      "segments": [
+        "обязывающие обязательства",
+        "по международному праву,",
+        "публично",
+        "с намерением связать себя обязательствами"
+      ],
       "correct": 0
     },
     "explanation": "'Binding obligations' — обязательства, имеющие обязывающую силу (или просто «обязательные обязательства» — тавтология). Правильно: «юридически обязывающие обязательства» или просто «обязательства». «Обязывающие обязательства» — тавтологичная калька.",
     "difficulty": 5
   },
   {
-    "topic": "legal", "level": "advanced", "type": "ro", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "ro",
+    "lang": "en",
     "question": "Расставьте части перевода в правильном порядке:",
     "payload": {
       "source": "Indirect expropriation occurs where measures adopted by the state substantially deprive the investor of the use or economic benefit of the investment.",
@@ -1778,42 +3002,71 @@
         "когда принятые государством меры",
         "без формальной передачи права собственности."
       ],
-      "correct_order": [1, 2, 0, 3]
+      "correct_order": [
+        1,
+        2,
+        0,
+        3
+      ]
     },
     "explanation": "Правильный порядок: (1) «Косвенная экспроприация имеет место,», (2) «когда принятые государством меры», (0) «существенно лишают инвестора…». Сегмент (3) отсутствует в оригинале.",
     "difficulty": 5
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The notice of arbitration shall include a brief description of the claim and the relief sought.",
       "translation": "Уведомление об арбитраже должно содержать краткое [изложение требований] и [испрашиваемых средств правовой защиты,] [включая расчёт суммы иска] [и обоснование юрисдикции].",
-      "segments": ["изложение требований", "испрашиваемых средств правовой защиты,", "включая расчёт суммы иска", "и обоснование юрисдикции"],
+      "segments": [
+        "изложение требований",
+        "испрашиваемых средств правовой защиты,",
+        "включая расчёт суммы иска",
+        "и обоснование юрисдикции"
+      ],
       "correct": 2
     },
     "explanation": "В оригинале нет «расчёта суммы иска» — это добавление переводчика. Оригинал ограничивается «кратким описанием требований и испрашиваемой защиты».",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The seat of arbitration shall be London, England, but hearings may be conducted at any location agreed by the parties.",
       "translation": "[Местом арбитража] является Лондон, Англия, однако слушания могут проводиться [в любом месте,] [согласованном сторонами,] [при условии согласия арбитров].",
-      "segments": ["Местом арбитража", "в любом месте,", "согласованном сторонами,", "при условии согласия арбитров"],
+      "segments": [
+        "Местом арбитража",
+        "в любом месте,",
+        "согласованном сторонами,",
+        "при условии согласия арбитров"
+      ],
       "correct": 3
     },
     "explanation": "В оригинале нет «при условии согласия арбитров». Стороны сами определяют место слушаний; согласие арбитров оригиналом не требуется. Добавление изменяет правило о выборе места слушаний.",
     "difficulty": 4
   },
   {
-    "topic": "legal", "level": "advanced", "type": "fe", "lang": "en",
+    "topic": "legal",
+    "level": "advanced",
+    "type": "fe",
+    "lang": "en",
     "question": "Найдите ошибку в переводе:",
     "payload": {
       "source": "The tribunal shall issue a reasoned award unless the parties agree that no reasons need be given.",
       "translation": "Трибунал выносит [мотивированное решение,] если только стороны не договорились о том, что [обоснование] [не требуется] [в упрощённом порядке].",
-      "segments": ["мотивированное решение,", "обоснование", "не требуется", "в упрощённом порядке"],
+      "segments": [
+        "мотивированное решение,",
+        "обоснование",
+        "не требуется",
+        "в упрощённом порядке"
+      ],
       "correct": 3
     },
     "explanation": "В оригинале нет «в упрощённом порядке». Освобождение от мотивировки не связано с каким-либо процессуальным режимом — это просто соглашение сторон. Добавление «в упрощённом порядке» является ошибочным расширением смысла.",
