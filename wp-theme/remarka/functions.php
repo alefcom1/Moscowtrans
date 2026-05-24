@@ -93,17 +93,5 @@ function remarka_google_fonts(): void {
 }
 add_action('wp_head', 'remarka_google_fonts', 2);
 
-/**
- * Add favicon from WordPress site icon settings.
- */
-function remarka_favicon(): void {
-    if (has_site_icon()) {
-        echo '<link rel="icon" href="' . esc_url(get_site_icon_url(32))  . '" sizes="32x32" />' . "\n";
-        echo '<link rel="icon" href="' . esc_url(get_site_icon_url(192)) . '" sizes="192x192" />' . "\n";
-        echo '<link rel="apple-touch-icon" href="' . esc_url(get_site_icon_url(180)) . '" />' . "\n";
-    } else {
-        $uri = get_template_directory_uri();
-        echo '<link rel="icon" type="image/x-icon" href="' . $uri . '/assets/images/favicon.ico">' . "\n";
-    }
-}
-add_action('wp_head', 'remarka_favicon', 3);
+// Favicon managed by WordPress (Settings → General → Site Icon).
+// wp_site_icon() is called automatically via wp_head.
