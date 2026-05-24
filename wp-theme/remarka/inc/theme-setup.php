@@ -54,6 +54,8 @@ function remarka_mobile_menu_fallback(): void {
     echo '<a href="/yazyki-perevoda/">Языки</a>';
     echo '<a href="/stoimost-perevoda/">Цены</a>';
     echo '<a href="/#about">О нас</a>';
+    echo '<a href="/blog/">Блог</a>';
+    echo '<a href="/test-perevodchika/" class="mobile-link--accent">Переводчикам</a>';
     echo '</nav>';
 }
 
