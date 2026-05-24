@@ -881,6 +881,8 @@ img { max-width: 100%; display: block; }
   color: var(--text-primary);
 }
 .mobile-drawer nav a:hover { background: var(--bg-glass); }
+.mobile-drawer nav a.mobile-link--accent { color: #783CF0; font-weight: 600; }
+.mobile-drawer nav a.mobile-link--accent:hover { background: rgba(120,60,240,.08); }
 .mobile-drawer .drawer-actions {
   display: flex;
   flex-direction: column;

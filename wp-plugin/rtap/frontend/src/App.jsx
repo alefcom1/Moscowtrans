@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import { useTheme }  from './hooks/useTheme';
 import StartScreen   from './components/StartScreen';
 import LevelSelect   from './components/LevelSelect';
@@ -12,7 +12,8 @@ import { useProgress } from './hooks/useProgress';
 const SCREENS = { START:'start', LEVEL:'level', QUIZ:'quiz', RESULT:'result', CERT:'cert', FORM:'form', SHARE:'share' };
 
 export default function App({ defaultTopic, defaultLang }) {
-  const [screen,    setScreen]    = useState(SCREENS.START);
+  // If topic is pre-set from shortcode, skip StartScreen and go straight to level select
+  const [screen,    setScreen]    = useState(defaultTopic ? SCREENS.LEVEL : SCREENS.START);
   const [topic,     setTopic]     = useState(defaultTopic || '');
   const [level,     setLevel]     = useState('');
   const [lang,      setLang]      = useState(defaultLang  || 'en');
@@ -25,6 +26,12 @@ export default function App({ defaultTopic, defaultLang }) {
 
   const { setScore, recordAttempt } = useProgress();
   const theme = useTheme();
+
+  // Scroll widget into view on every screen transition
+  useEffect(() => {
+    const el = document.getElementById('rtap-root');
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, [screen]);
   const base = window.rtapConfig?.apiBase || '/wp-json/rtap/v1';
 
   const handleStart = useCallback(async (t, l) => {

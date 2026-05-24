@@ -140,6 +140,16 @@
 }
 .dd-item:hover .dd-item-text .dd-sub { color: var(--text-secondary); }
 
+/* Accent item — Переводчикам */
+.dd-item--accent { color: #783CF0; }
+.dd-item--accent .dd-icon {
+  background: rgba(120,60,240,.10);
+  border-color: rgba(120,60,240,.25);
+  color: #783CF0;
+}
+.dd-item--accent:hover { background: rgba(120,60,240,.08); color: #5a22d0; }
+.dd-item--accent:hover .dd-icon { background: rgba(120,60,240,.18); border-color: rgba(120,60,240,.35); }
+
 /* Заголовки секций */
 .dd-section-label {
   font-size: 10px;

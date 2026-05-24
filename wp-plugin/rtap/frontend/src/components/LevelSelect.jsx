@@ -36,7 +36,7 @@ export default function LevelSelect({ topic, lang, onSelect, onBack }) {
           Выберите уровень сложности
         </p>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-4">
           {LEVELS.map(lvl => {
             const unlocked = isUnlocked(topic, lvl.id, lang);
             const score    = getScore(topic, lvl.id, lang);
