@@ -38,6 +38,14 @@ add_shortcode('rtap_quiz',    'rtap_quiz_shortcode');
 add_shortcode('rtap_qow',     'rtap_qow_shortcode');
 add_shortcode('rtap_verify',  'rtap_verify_shortcode');
 
+// Vite outputs ES modules — WordPress must emit type="module" on our scripts
+add_filter('script_loader_tag', function(string $tag, string $handle): string {
+    if (strpos($handle, 'rtap-') === 0) {
+        $tag = str_replace(' src=', ' type="module" src=', $tag);
+    }
+    return $tag;
+}, 10, 2);
+
 if (!wp_next_scheduled('rtap_sync_pending')) {
     wp_schedule_event(time(), 'hourly', 'rtap_sync_pending');
 }
