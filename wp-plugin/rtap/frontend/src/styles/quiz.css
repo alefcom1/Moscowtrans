@@ -93,6 +93,8 @@
 }
 
 /* ── Answer options ── */
+.rtap-option + .rtap-option { margin-top: 10px; }
+
 .rtap-option {
   display: flex;
   align-items: flex-start;
@@ -230,7 +232,7 @@
 .rtap-topic-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
-  gap: 14px;
+  gap: 20px;
 }
 .rtap-topic-card {
   padding: 24px 16px;
@@ -257,6 +259,8 @@
 .rtap-topic-card__count  { font-size: 11px; color: var(--rtap-text-muted); margin-top: 4px; line-height: 1.4; }
 
 /* ── Level cards ── */
+.rtap-level-card + .rtap-level-card { margin-top: 16px; }
+
 .rtap-level-card {
   padding: 20px 22px;
   border-radius: var(--rtap-radius);
