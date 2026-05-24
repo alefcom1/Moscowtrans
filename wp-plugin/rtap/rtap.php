@@ -34,14 +34,6 @@ add_action('wp_enqueue_scripts', 'rtap_enqueue_frontend');
 add_action('admin_enqueue_scripts', 'rtap_enqueue_admin');
 add_action('rtap_sync_pending', ['RTAP_Candidate', 'sync_pending']);
 
-// Force WordPress site icon on all frontend pages (overrides theme's hardcoded favicon)
-add_action('wp_head', function(): void {
-    if (!function_exists('has_site_icon') || !has_site_icon()) return;
-    echo '<link rel="icon" href="' . esc_url(get_site_icon_url(32))  . '" sizes="32x32" />' . "\n";
-    echo '<link rel="icon" href="' . esc_url(get_site_icon_url(192)) . '" sizes="192x192" />' . "\n";
-    echo '<link rel="apple-touch-icon" href="' . esc_url(get_site_icon_url(180)) . '" />' . "\n";
-    echo '<link rel="shortcut icon" href="' . esc_url(get_site_icon_url(32)) . '" />' . "\n";
-}, 99);
 
 add_shortcode('rtap_quiz',    'rtap_quiz_shortcode');
 add_shortcode('rtap_qow',     'rtap_qow_shortcode');
