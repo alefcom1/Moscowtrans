@@ -1684,6 +1684,7 @@ a.sb-item { text-decoration: none; }
   .cw-agent-panel { display: none; }
   .chat-sidebar   { display: none; }
   .waveform-svg   { display: none; }
+  .cw-breadcrumbs { display: none; }
   .hero-main      { padding: 16px 12px; }
   /* dvh — корректная высота для iOS Safari */
   .hero-page      { height: calc(100dvh - var(--header-h)); }
