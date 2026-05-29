@@ -1281,14 +1281,14 @@ a.sb-item { text-decoration: none; }
 /* ── Общий фон: hero-bg.png покрывает и чат, и карточки ── */
 .hero-bg-block {
   background-color: #020c1e;
-  background-image: url('../assets/hero-bg.png');
+  background-image: url('../images/hero-bg.png');
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
 }
 :root[data-theme="light"] .hero-bg-block {
   background-color: #ddeeff;
-  background-image: url('../assets/hero-bg-light.png');
+  background-image: url('../images/hero-bg-light.png');
   background-size: cover;
   background-position: center center;
 }
@@ -1686,6 +1686,7 @@ a.sb-item { text-decoration: none; }
   .cw-agent-panel { display: none; }
   .chat-sidebar   { display: none; }
   .waveform-svg   { display: none; }
+  .cw-breadcrumbs { display: none; }
   .hero-main      { padding: 16px 12px; }
   /* dvh — корректная высота для iOS Safari */
   .hero-page      { height: calc(100dvh - var(--header-h)); }
