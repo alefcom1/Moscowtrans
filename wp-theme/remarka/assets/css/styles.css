@@ -1279,14 +1279,14 @@ a.sb-item { text-decoration: none; }
 /* ── Общий фон: hero-bg.png покрывает и чат, и карточки ── */
 .hero-bg-block {
   background-color: #020c1e;
-  background-image: url('../assets/hero-bg.png');
+  background-image: url('../images/hero-bg.png');
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
 }
 :root[data-theme="light"] .hero-bg-block {
   background-color: #ddeeff;
-  background-image: url('../assets/hero-bg-light.png');
+  background-image: url('../images/hero-bg-light.png');
   background-size: cover;
   background-position: center center;
 }
